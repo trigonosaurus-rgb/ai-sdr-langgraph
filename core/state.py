@@ -10,6 +10,7 @@ class SDRState(TypedDict):
     company_info: str
     search_queries: list[str]
     research_iterations: int
+    is_valid_company: bool
     
     # Sales strategy (Strategist)
     strategy: str

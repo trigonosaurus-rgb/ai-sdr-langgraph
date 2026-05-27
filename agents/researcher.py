@@ -38,22 +38,28 @@ def researcher_node(state: SDRState):
         
     # Ask LLM to summarize the findings
     prompt = ChatPromptTemplate.from_messages([
-        ("system", "You are an experienced research analyst. Your task is to review the information found on the internet about a company and create a concise but comprehensive report: what the company does, what products it sells, and who its target audience is."),
+        ("system", "You are an experienced research analyst. Your task is to review the information found on the internet about a company and create a concise but comprehensive report: what the company does, what products it sells, and who its target audience is. If the provided information does not contain meaningful data about the company (e.g., if the URL is invalid or the company cannot be found), you must reply EXACTLY with 'INVALID' and nothing else."),
         ("user", "Here is the raw data from the internet about the company {company_name} ({company_url}):\n\n{content}\n\nProvide a summary.")
     ])
     
+    is_valid = True
     try:
         chain = prompt | llm
         summary = chain.invoke({"company_name": name, "company_url": url, "content": content})
-        summary_content = summary.content
+        summary_content = summary.content.strip()
+        if summary_content == "INVALID" or summary_content.startswith("INVALID"):
+            is_valid = False
+            summary_content = "Could not find valid information about this company."
     except Exception as e:
         print(f"[Researcher] LLM error: {e}")
         traceback.print_exc()
         summary_content = f"Error generating summary: {e}"
+        is_valid = False
     
     # Update the state
     return {
         "company_info": summary_content,
         "research_iterations": iterations + 1,
-        "search_queries": state.get("search_queries", []) + [query]
+        "search_queries": state.get("search_queries", []) + [query],
+        "is_valid_company": is_valid
     }

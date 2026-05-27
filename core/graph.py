@@ -30,8 +30,27 @@ builder.add_node("spam_checker", spam_checker_node)
 # 2. Define standard edges (strict sequence)
 # START always leads to the Researcher
 builder.add_edge(START, "researcher")
-# Researcher passes data to the Strategist
-builder.add_edge("researcher", "strategist")
+
+def route_after_researcher(state: SDRState) -> str:
+    """
+    Check if the researcher found valid company information.
+    If not, terminate the workflow early.
+    """
+    if not state.get("is_valid_company", True):
+        print("[Router] Invalid company or no information found. Terminating workflow.")
+        return END
+    return "strategist"
+
+# Researcher conditionally passes data to the Strategist or ends
+builder.add_conditional_edges(
+    "researcher",
+    route_after_researcher,
+    {
+        "strategist": "strategist",
+        END: END
+    }
+)
+
 # Strategist passes strategy to the Copywriter
 builder.add_edge("strategist", "copywriter")
 # Copywriter always proceeds to the Spam Checker
