@@ -1,8 +1,9 @@
 import os
 from langchain_core.prompts import ChatPromptTemplate
-from langchain_community.tools.tavily_search import TavilySearchResults
+from langchain_tavily import TavilySearchResults
 from core.state import SDRState
 from core.llm import get_llm
+import traceback
 
 def researcher_node(state: SDRState):
     """
@@ -32,6 +33,7 @@ def researcher_node(state: SDRState):
             content = str(search_results)
     except Exception as e:
         print(f"[Researcher] Search error: {e}")
+        traceback.print_exc()
         content = f"Search error occurred: {e}"
         
     # Ask LLM to summarize the findings
@@ -46,6 +48,7 @@ def researcher_node(state: SDRState):
         summary_content = summary.content
     except Exception as e:
         print(f"[Researcher] LLM error: {e}")
+        traceback.print_exc()
         summary_content = f"Error generating summary: {e}"
     
     # Update the state

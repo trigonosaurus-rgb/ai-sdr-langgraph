@@ -1,6 +1,7 @@
 from langchain_core.prompts import ChatPromptTemplate
 from core.state import SDRState
 from core.llm import get_llm
+import traceback
 
 def strategist_node(state: SDRState):
     """
@@ -26,6 +27,7 @@ def strategist_node(state: SDRState):
         print(f"[Strategist] Strategy formulated successfully.")
     except Exception as e:
         print(f"[Strategist] LLM error: {e}")
+        traceback.print_exc()
         strategy_content = f"Error generating strategy: {e}"
     
     return {

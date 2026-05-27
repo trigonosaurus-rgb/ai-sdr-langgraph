@@ -2,6 +2,7 @@ from langchain_core.prompts import ChatPromptTemplate
 from core.state import SDRState
 from core.llm import get_llm
 import json
+import traceback
 
 def copywriter_node(state: SDRState):
     """
@@ -38,6 +39,7 @@ def copywriter_node(state: SDRState):
         print(f"[Copywriter] Email written (attempt {iterations + 1}).")
     except Exception as e:
         print(f"[Copywriter] LLM error: {e}")
+        traceback.print_exc()
         email_content = f"Error generating email: {e}"
     
     return {
@@ -76,6 +78,7 @@ def spam_checker_node(state: SDRState):
         feedback = data.get("feedback", "")
     except Exception as e:
         print(f"[Spam Checker] Parsing error: {e}")
+        traceback.print_exc()
         # Default to not spam if parsing fails
         is_spam = False
         feedback = ""
