@@ -1,6 +1,6 @@
 import os
 from langchain_core.prompts import ChatPromptTemplate
-from langchain_tavily import TavilySearchResults
+from langchain_community.tools.tavily_search import TavilySearchResults
 from core.state import SDRState
 from core.llm import get_llm
 import traceback
