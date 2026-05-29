@@ -29,7 +29,7 @@ The workflow is managed by a `StateGraph` that passes a typed state dictionary (
 - **[LangGraph](https://python.langchain.com/)**: For stateful, multi-actor LLM orchestration.
 - **[LangChain](https://www.langchain.com/)**: For LLM interactions, prompts, and tool integration.
 - **[Streamlit](https://streamlit.io/)**: For the interactive web application front-end.
-- **[OpenAI API](https://openai.com/)**: Core LLM engine (default: `gpt-5.4-mini` with fallback to `gpt-4o-mini`).
+- **[OpenAI API](https://openai.com/)**: Core LLM engine (default: `gpt-5.4-mini`).
 - **[Tavily API](https://tavily.com/)**: Optimized internet search for AI agents.
 
 ## 🚀 Setup and Installation
@@ -59,7 +59,7 @@ The workflow is managed by a `StateGraph` that passes a typed state dictionary (
    ```env
    OPENAI_API_KEY=your_openai_api_key_here
    TAVILY_API_KEY=your_tavily_api_key_here
-   OPENAI_MODEL_NAME=gpt-4o-mini  # Optional: customize your preferred OpenAI model
+   OPENAI_MODEL_NAME=gpt-5.4-mini  # Optional: customize your preferred OpenAI model
    ```
 
 5. **Run the Application**
