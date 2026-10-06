@@ -1,5 +1,7 @@
 # AI SDR (Sales Development Representative) 🤖
 
+> **New frontend:** a React + TypeScript workspace is available in [`frontend/`](frontend/README.md). From the repository root, run `cd frontend`, `npm.cmd ci`, then `npm.cmd run dev` and open http://127.0.0.1:5173. Compose starts with an empty brief; Examples contains two inline video walkthroughs with fictional data. Run costs opens a separate dialog. Live generation, actual usage and trial access are not connected yet. To run the existing Python agents, use Streamlit as described below.
+
 An advanced multi-agent system built with **LangGraph**, **LangChain**, and **Streamlit** that automates the process of researching companies, formulating sales strategies, and drafting highly personalized cold emails.
 
 ## 🌟 Features

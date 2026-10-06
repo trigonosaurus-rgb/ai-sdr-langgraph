@@ -1,0 +1,59 @@
+body {
+  background: var(--canvas);
+  padding: 18px 26px;
+}
+.capture-label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: var(--faint);
+}
+.result-column {
+  border-radius: 26px;
+}
+.workflow-card {
+  padding: 18px 26px;
+}
+.workflow-steps {
+  margin-top: 16px;
+}
+.activity-feed {
+  margin-top: 12px;
+  padding-top: 10px;
+}
+.activity-feed details {
+  display: none;
+}
+.activity-feed p {
+  margin-bottom: 0;
+}
+.result-header {
+  padding: 18px 26px;
+}
+.result-panel {
+  min-height: 305px;
+  padding: 20px 26px;
+}
+.empty-state {
+  min-height: 260px;
+}
+.streaming-draft,
+.email-editor textarea {
+  min-height: 145px;
+  height: 145px;
+  resize: none;
+}
+.result-footer {
+  padding-block: 13px;
+}
+.editor-actions {
+  padding-top: 8px;
+}
+.source-detail {
+  padding: 12px 0;
+}
+.source-detail blockquote {
+  margin-top: 10px;
+}

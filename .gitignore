@@ -15,6 +15,16 @@ __pycache__/
 # Streamlit
 .streamlit/
 
+# Frontend
+node_modules/
+frontend/dist/
+*.tsbuildinfo
+frontend/.env*
+.playwright-mcp/
+frontend/.recordings/
+frontend/test-results/
+frontend/playwright-report/
+
 # OS generated files
 .DS_Store
 .DS_Store?
