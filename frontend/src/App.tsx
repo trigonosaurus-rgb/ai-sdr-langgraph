@@ -2,9 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import {
   ArrowRight,
   BookOpen,
-  ChevronRight,
   CircleHelp,
-  Command,
   ExternalLink,
   LayoutDashboard,
   PanelLeftClose,
@@ -17,8 +15,24 @@ import { Modal } from './components/Modal'
 import { Metrics } from './components/Metrics'
 import { BriefForm } from './components/BriefForm'
 import { RunPanel } from './components/RunPanel'
+import { RunTimeline } from './components/RunTimeline'
 import { Examples } from './components/Examples'
 import { emptyBrief, emptyRun } from './run'
+
+function BrandMark() {
+  return (
+    <svg className="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
+      <rect width="40" height="40" rx="9" />
+      <path
+        d="m11 27 9-16 9 16M15 22h10"
+        fill="none"
+        strokeWidth="3.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  )
+}
 
 function currentPage() {
   return location.hash === '#examples' ? 'examples' : 'compose'
@@ -104,10 +118,8 @@ export default function App() {
           href="#compose"
           onClick={() => navigate('compose')}
         >
-          <span className="brand-mark">
-            <Command size={21} />
-          </span>
-          Outreach
+          <BrandMark />
+          AI SDR
         </a>
         <button
           className="mobile-close icon-button"
@@ -117,10 +129,9 @@ export default function App() {
           <X size={20} />
         </button>
         <button className="new-button" onClick={newBrief}>
-          <Plus size={17} />
-          New outreach<span>↗</span>
+          <Plus size={16} />
+          New outreach
         </button>
-        <span className="nav-label">WORKSPACE</span>
         <nav>
           <a
             className={`nav-item ${page === 'compose' ? 'active' : ''}`}
@@ -129,7 +140,7 @@ export default function App() {
             onClick={() => navigate('compose')}
           >
             <LayoutDashboard size={18} />
-            Compose{page === 'compose' && <span className="active-dot" />}
+            Compose
           </a>
           <a
             className={`nav-item ${page === 'examples' ? 'active' : ''}`}
@@ -138,7 +149,7 @@ export default function App() {
             onClick={() => navigate('examples')}
           >
             <BookOpen size={18} />
-            Examples{page === 'examples' && <span className="active-dot" />}
+            Examples
           </a>
           <button
             className="nav-item"
@@ -161,7 +172,7 @@ export default function App() {
             }}
           >
             <CircleHelp size={16} />
-            About this workspace
+            About
           </button>
           <a
             className="repo-link"
@@ -169,20 +180,17 @@ export default function App() {
             target="_blank"
             rel="noreferrer"
           >
-            View project on GitHub
-            <ExternalLink size={13} />
+            <ExternalLink size={16} />
+            Source on GitHub
           </a>
-          <div className="sidebar-footer">
-            <span className="user-avatar">Y</span>
-            <div>
-              Local workspace<small>AI SDR · Development</small>
-            </div>
+          <div className="sidebar-theme">
+            <ThemeControl />
           </div>
         </div>
       </aside>
       <div className="main-shell" inert={mobileNav}>
         <header className="topbar">
-          <div className="breadcrumbs">
+          <div className="topbar-start">
             <button
               ref={menuRef}
               className="icon-button mobile-menu"
@@ -192,46 +200,26 @@ export default function App() {
             >
               <PanelLeftClose size={20} />
             </button>
-            <span>Workspace</span>
-            <ChevronRight size={14} />
-            <strong>{page === 'compose' ? 'Compose' : 'Examples'}</strong>
-          </div>
-          <div className="topbar-actions">
-            <ThemeControl />
-            <button
-              className="icon-button help-button"
-              aria-label="About this workspace"
-              onClick={() => setModal('guide')}
-            >
-              <CircleHelp size={19} />
-            </button>
+            <span className="brand">
+              <BrandMark />
+              AI SDR
+            </span>
           </div>
         </header>
         <main id="main" tabIndex={-1} ref={mainRef}>
           {page === 'examples' ? (
             <Examples />
           ) : (
-            <>
-              <div className="page-heading">
-                <div>
-                  <span className="eyebrow">NEW OUTREACH</span>
-                  <h1>Compose outreach</h1>
-                  <p>Research a company and prepare a message worth sending.</p>
-                </div>
-              </div>
-              <div className="studio-grid">
-                <BriefForm brief={brief} onChange={setBrief} />
-                <RunPanel
-                  run={emptyRun}
-                  onExamples={() => navigate('examples')}
-                />
-              </div>
-            </>
+            <div className="workspace">
+              <h1 className="sr-only">Compose outreach</h1>
+              <BriefForm brief={brief} onChange={setBrief} />
+              <RunPanel
+                run={emptyRun}
+                onExamples={() => navigate('examples')}
+              />
+              <RunTimeline run={emptyRun} onCosts={() => setModal('costs')} />
+            </div>
           )}
-          <footer className="page-footer">
-            <span>Outreach workspace</span>
-            <span>Nothing is sent automatically.</span>
-          </footer>
         </main>
       </div>
       {modal === 'costs' && (

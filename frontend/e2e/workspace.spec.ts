@@ -4,14 +4,16 @@ for (const width of [1440, 1024, 390, 360]) {
   test(`costs dialog and responsive layout at ${width}px`, async ({ page }) => {
     await page.setViewportSize({ width, height: 900 })
     await page.goto('/')
+    // The theme control lives in the sidebar, which is a drawer on phones.
+    const openNav = () =>
+      page.getByRole('button', { name: 'Open navigation' }).click()
+    if (width < 700) await openNav()
     await page.getByRole('button', { name: 'Dark theme' }).click()
     expect(
       await page.evaluate(
         () => document.documentElement.scrollWidth <= innerWidth,
       ),
     ).toBe(true)
-    if (width < 700)
-      await page.getByRole('button', { name: 'Open navigation' }).click()
     await page.getByRole('button', { name: 'Run costs' }).click()
     const dialog = page.getByRole('dialog', { name: 'Run costs' })
     await expect(dialog).toBeVisible()
@@ -37,6 +39,7 @@ for (const width of [1440, 1024, 390, 360]) {
         name: width < 700 ? 'Open navigation' : 'Run costs',
       }),
     ).toBeFocused()
+    if (width < 700) await openNav()
     await page.getByRole('button', { name: 'Light theme' }).click()
     await page.screenshot({
       path: `test-results/workspace-${width}.png`,
@@ -57,7 +60,7 @@ test('examples autoplay, pause, preserve the brief and load on a direct link', a
   await expect(video).toHaveJSProperty('muted', true)
   await expect(video).toHaveJSProperty('loop', true)
   await page
-    .getByRole('button', { name: 'Pause From context to a first draft.' })
+    .getByRole('button', { name: 'Pause Research to first draft' })
     .click()
   await expect(video).toHaveJSProperty('paused', true)
   // Media time can advance while the recording still contains blank startup frames.
@@ -84,9 +87,7 @@ test('examples autoplay, pause, preserve the brief and load on a direct link', a
   await page.getByRole('link', { name: 'Compose', exact: true }).click()
   await expect(page.getByLabel('Company name')).toHaveValue('My company')
   await page.goto('/#examples')
-  await expect(page.getByRole('heading', { level: 1 })).toHaveText(
-    'Small details. Better outreach.',
-  )
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('Examples')
 })
 test('reduced motion leaves videos paused with a manual play control', async ({
   page,
@@ -95,7 +96,7 @@ test('reduced motion leaves videos paused with a manual play control', async ({
   await page.goto('/#examples')
   await expect(page.locator('video').first()).toHaveJSProperty('paused', true)
   await page
-    .getByRole('button', { name: 'Play From context to a first draft.' })
+    .getByRole('button', { name: 'Play Research to first draft' })
     .click()
   await expect
     .poll(() =>

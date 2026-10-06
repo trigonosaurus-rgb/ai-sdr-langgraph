@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { emptyRun, reduceRun } from './run'
+import { emptyRun, reduceRun, stageDurations } from './run'
 import type { RunEvent } from './run'
 const started: RunEvent = {
   type: 'started',
@@ -45,5 +45,39 @@ describe('stream view state', () => {
     const state = reduceRun(reduceRun(emptyRun, started), delta)
     expect(reduceRun(state, started)).toBe(state)
     expect(reduceRun(state, { ...started, runId: 'r2' }).draft.body).toBe('')
+  })
+  it('derives stage durations from server timings and leaves the active stage open', () => {
+    let state = reduceRun(emptyRun, started)
+    const stage = (
+      sequence: number,
+      name: 'Research' | 'Strategy',
+      elapsedMs: number,
+    ): RunEvent => ({
+      type: 'stage',
+      stage: name,
+      message: name,
+      elapsedMs,
+      runId: 'r1',
+      sequence,
+    })
+    state = reduceRun(state, stage(1, 'Research', 0))
+    state = reduceRun(state, stage(2, 'Strategy', 3100))
+    expect(stageDurations(state)).toMatchObject({
+      Research: 3.1,
+      Strategy: null,
+    })
+    state = reduceRun(state, {
+      type: 'completed',
+      usage: null,
+      elapsedMs: 4500,
+      runId: 'r1',
+      sequence: 3,
+    })
+    expect(stageDurations(state)).toMatchObject({
+      Research: 3.1,
+      Strategy: 1.4,
+      Writing: null,
+      Review: null,
+    })
   })
 })

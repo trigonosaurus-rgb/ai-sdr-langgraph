@@ -1,0 +1,126 @@
+import {
+  CircleAlert,
+  Check,
+  FileText,
+  LoaderCircle,
+  Search,
+  ShieldCheck,
+  Target,
+} from 'lucide-react'
+import { stageDurations, steps } from '../run'
+import type { RunState } from '../run'
+
+const icons = [Search, Target, FileText, ShieldCheck]
+const seconds = (value: number | null | undefined) =>
+  value == null
+    ? '—'
+    : `${new Intl.NumberFormat('en-US', { maximumFractionDigits: 1, minimumFractionDigits: 1 }).format(value)} s`
+
+export function RunTimeline({
+  run,
+  onCosts,
+}: {
+  run: RunState
+  onCosts?: () => void
+}) {
+  const running = run.status === 'running',
+    ready = run.status === 'ready',
+    failed = run.status === 'error'
+  const stageIndex = run.stage ? steps.indexOf(run.stage) : -1
+  const durations = stageDurations(run)
+  return (
+    <section className="run-rail" aria-labelledby="run-title">
+      <header className="column-header">
+        <h2 id="run-title">Run</h2>
+        <span
+          className={`status-badge ${ready ? 'success' : running ? 'working' : failed ? 'failed' : ''}`}
+        >
+          {ready
+            ? 'Ready for review'
+            : running
+              ? 'In progress'
+              : failed
+                ? 'Needs attention'
+                : 'Not started'}
+        </span>
+      </header>
+      <ol className="timeline" aria-label="Workflow progress">
+        {steps.map((label, index) => {
+          const done = ready || index < stageIndex,
+            current = running && index === stageIndex,
+            broken = failed && index === stageIndex
+          const Icon = icons[index]
+          const state = broken
+            ? 'failed'
+            : done
+              ? 'complete'
+              : current
+                ? 'current'
+                : 'pending'
+          return (
+            <li
+              key={label}
+              className={`timeline-step ${state}`}
+              aria-current={current ? 'step' : undefined}
+            >
+              <span className="timeline-marker">
+                {broken ? (
+                  <CircleAlert size={15} />
+                ) : done ? (
+                  <Check size={15} strokeWidth={2.5} />
+                ) : current ? (
+                  <LoaderCircle size={15} className="spin" />
+                ) : (
+                  <Icon size={15} />
+                )}
+              </span>
+              <span className="timeline-label">{label}</span>
+              <span className="timeline-time">
+                {done || broken ? seconds(durations[label]) : ''}
+              </span>
+            </li>
+          )
+        })}
+      </ol>
+      {run.activity.length > 0 && (
+        <div className="activity-feed">
+          <span className="label-small">Activity</span>
+          <p role="status" aria-live="polite">
+            {run.activity.at(-1)}
+          </p>
+          {run.activity.length > 1 && (
+            <details>
+              <summary>Earlier activity</summary>
+              <ol>
+                {run.activity.slice(0, -1).map((message, index) => (
+                  <li key={index}>{message}</li>
+                ))}
+              </ol>
+            </details>
+          )}
+        </div>
+      )}
+      <div className="run-summary">
+        <dl>
+          <div>
+            <dt>Total time</dt>
+            <dd>{seconds(run.usage?.durationSeconds)}</dd>
+          </div>
+          <div>
+            <dt>Estimated cost</dt>
+            <dd>
+              {run.usage?.modelUsd != null && run.usage.searchUsd != null
+                ? `$${(run.usage.modelUsd + run.usage.searchUsd).toFixed(4)}`
+                : '—'}
+            </dd>
+          </div>
+        </dl>
+        {onCosts && (
+          <button className="text-button" onClick={onCosts}>
+            Usage details
+          </button>
+        )}
+      </div>
+    </section>
+  )
+}

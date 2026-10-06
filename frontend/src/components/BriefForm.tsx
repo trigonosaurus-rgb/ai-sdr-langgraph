@@ -12,68 +12,67 @@ export function BriefForm({
     onChange({ ...brief, [key]: value })
   }
   return (
-    <section className="brief-card" aria-labelledby="brief-title">
-      <div className="card-heading">
-        <h2 id="brief-title">Your brief</h2>
-        <span className="label-small">01</span>
-      </div>
+    <section className="brief-column" aria-labelledby="brief-title">
+      <header className="column-header">
+        <h2 id="brief-title">Brief</h2>
+      </header>
       <form onSubmit={(event) => event.preventDefault()}>
         <fieldset>
           <legend className="sr-only">Outreach brief</legend>
-          <div className="field-group-label">
-            <span>PROSPECT</span>
-            <span className="small-line" />
-          </div>
-          <label htmlFor="company">Company name</label>
-          <input
-            id="company"
-            value={brief.company}
-            onChange={(e) => update('company', e.target.value)}
-            placeholder="Who would you like to reach?"
-            maxLength={100}
-            autoComplete="organization"
-          />
-          <label htmlFor="website">Company website</label>
-          <div className="input-wrap">
-            <Globe2 size={16} />
+          <div className="field">
+            <label htmlFor="company">Company name</label>
             <input
-              id="website"
-              type="url"
-              value={brief.website}
-              onChange={(e) => update('website', e.target.value)}
-              placeholder="https://company.com"
-              maxLength={500}
+              id="company"
+              value={brief.company}
+              onChange={(e) => update('company', e.target.value)}
+              placeholder="Acme Inc."
+              maxLength={100}
+              autoComplete="organization"
             />
           </div>
-          <label htmlFor="recipient">Recipient role</label>
-          <input
-            id="recipient"
-            value={brief.recipient}
-            onChange={(e) => update('recipient', e.target.value)}
-            placeholder="e.g. Head of Customer Success"
-            maxLength={150}
-          />
-          <div className="field-group-label offer-label">
-            <span>YOUR OFFER</span>
-            <span className="small-line" />
+          <div className="field">
+            <label htmlFor="website">Company website</label>
+            <div className="input-wrap">
+              <Globe2 size={16} />
+              <input
+                id="website"
+                type="url"
+                value={brief.website}
+                onChange={(e) => update('website', e.target.value)}
+                placeholder="https://company.com"
+                maxLength={500}
+              />
+            </div>
           </div>
-          <label htmlFor="offer">How can you help?</label>
-          <textarea
-            id="offer"
-            className="offer-input"
-            value={brief.offer}
-            onChange={(e) => update('offer', e.target.value)}
-            placeholder="What you offer, who it helps, and the problem it solves."
-            maxLength={1500}
-            rows={4}
-            aria-describedby="offer-hint"
-          />
-          <p className="field-hint" id="offer-hint">
-            Specific, verifiable value makes a stronger message.
-          </p>
+          <div className="field">
+            <label htmlFor="recipient">Recipient role</label>
+            <input
+              id="recipient"
+              value={brief.recipient}
+              onChange={(e) => update('recipient', e.target.value)}
+              placeholder="Head of Customer Success"
+              maxLength={150}
+            />
+          </div>
+          <div className="field">
+            <label htmlFor="offer">Your offer</label>
+            <textarea
+              id="offer"
+              className="offer-input"
+              value={brief.offer}
+              onChange={(e) => update('offer', e.target.value)}
+              placeholder="What you offer, who it helps and the problem it solves."
+              maxLength={1500}
+              rows={4}
+              aria-describedby="offer-hint"
+            />
+            <p className="field-hint" id="offer-hint">
+              Concrete, checkable claims make a stronger email.
+            </p>
+          </div>
           <div className="field-row">
-            <div>
-              <label htmlFor="language">Email language</label>
+            <div className="field">
+              <label htmlFor="language">Language</label>
               <select
                 id="language"
                 value={brief.language}
@@ -85,8 +84,8 @@ export function BriefForm({
                 <option>Russian</option>
               </select>
             </div>
-            <div>
-              <label htmlFor="tone">Tone of voice</label>
+            <div className="field">
+              <label htmlFor="tone">Tone</label>
               <select
                 id="tone"
                 value={brief.tone}
@@ -106,7 +105,7 @@ export function BriefForm({
           aria-describedby="service-status"
         >
           Generate outreach
-          <ArrowRight size={17} />
+          <ArrowRight size={16} />
         </button>
         <p className="run-disclaimer" id="service-status">
           <span className="connection-dot" />

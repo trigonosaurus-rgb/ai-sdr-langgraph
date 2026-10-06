@@ -2,7 +2,8 @@
 import { useEffect, useReducer } from 'react'
 import { createRoot } from 'react-dom/client'
 import { RunPanel } from '../src/components/RunPanel'
-import { emptyRun, reduceRun } from '../src/run'
+import { RunTimeline } from '../src/components/RunTimeline'
+import { emptyRun, reduceRun, steps } from '../src/run'
 import type { RunEvent } from '../src/run'
 import { sampleBrief, draft, sources, sampleUsage } from './fixtures'
 import '../src/styles.css'
@@ -11,6 +12,14 @@ import './capture.css'
 const strategy =
   'Start with Northstar’s guided onboarding. Connect it to your ability to carry customer context from sales into onboarding. Ask whether manual steps exist: this is a hypothesis to explore, not a confirmed pain point.'
 const id = 'recorded-fictional-example'
+// Illustrative server timings in ms since the run started; the animation runs faster.
+const timing = {
+  Research: 0,
+  Strategy: 4300,
+  Writing: 6200,
+  Review: 10600,
+  end: 12400,
+}
 const started: RunEvent = {
   type: 'started',
   runId: id,
@@ -40,17 +49,20 @@ function Capture() {
         type: 'stage',
         stage: 'Research',
         message: 'Reading company product and onboarding pages.',
+        elapsedMs: timing.Research,
       })
       later(1700, {
         type: 'stage',
         stage: 'Strategy',
         message: 'Connecting guided onboarding to your offer.',
+        elapsedMs: timing.Strategy,
       })
       later(2100, { type: 'evidence', sources, strategy })
       later(3100, {
         type: 'stage',
         stage: 'Writing',
         message: 'Writing a short, grounded first message.',
+        elapsedMs: timing.Writing,
       })
       later(3300, {
         type: 'draft_delta',
@@ -66,31 +78,47 @@ function Capture() {
         type: 'stage',
         stage: 'Review',
         message: 'Checking claims, tone and the final question.',
+        elapsedMs: timing.Review,
       })
-      later(end + 1800, { type: 'completed', usage: sampleUsage })
+      later(end + 1800, {
+        type: 'completed',
+        usage: sampleUsage,
+        elapsedMs: timing.end,
+      })
     }
     if (new URLSearchParams(location.search).get('scene') === 'evidence') {
       dispatch(started)
-      dispatch({ type: 'evidence', sources, strategy, runId: id, sequence: 1 })
+      steps.forEach((stage, index) =>
+        dispatch({
+          type: 'stage',
+          stage,
+          message: 'Checking claims, tone and the final question.',
+          elapsedMs: timing[stage],
+          runId: id,
+          sequence: 10 + index,
+        }),
+      )
+      dispatch({ type: 'evidence', sources, strategy, runId: id, sequence: 20 })
       dispatch({
         type: 'draft_delta',
         field: 'subject',
         delta: draft.subject,
         runId: id,
-        sequence: 2,
+        sequence: 21,
       })
       dispatch({
         type: 'draft_delta',
         field: 'body',
         delta: draft.body,
         runId: id,
-        sequence: 3,
+        sequence: 22,
       })
       dispatch({
         type: 'completed',
         usage: sampleUsage,
+        elapsedMs: timing.end,
         runId: id,
-        sequence: 4,
+        sequence: 23,
       })
     }
     window.addEventListener('recording:start', start, { once: true })
@@ -103,10 +131,13 @@ function Capture() {
   return (
     <>
       <div className="capture-label">
-        <span>OUTREACH / NORTHSTAR</span>
-        <span>ILLUSTRATIVE RECORDING</span>
+        <span>Northstar</span>
+        <span>Illustrative recording · fictional data</span>
       </div>
-      <RunPanel run={run} />
+      <div className="capture-frame">
+        <RunPanel run={run} />
+        <RunTimeline run={run} />
+      </div>
     </>
   )
 }
