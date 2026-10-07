@@ -16,7 +16,7 @@ export type FailureReason =
   | 'insufficient_data'
   | 'website_mismatch'
   | 'cancelled'
-  | 'daily_limit'
+  | 'budget_exhausted'
   | 'error'
 export interface RunState {
   id: string | null

@@ -18,6 +18,8 @@ import type { FormStatus } from './components/BriefForm'
 import { RunPanel } from './components/RunPanel'
 import { RunTimeline } from './components/RunTimeline'
 import { Examples } from './components/Examples'
+import { ServicePaused } from './components/ServicePaused'
+import { when } from './format'
 import { emptyBrief } from './run'
 import { validateBrief } from './api'
 import type { BriefErrors } from './api'
@@ -53,9 +55,26 @@ function formStatus(session: RunSession): FormStatus {
       tone: 'offline',
       text: 'The service is unavailable, so generation is off.',
     }
+  const status = session.status
+  if (status?.paused)
+    return { tone: 'offline', text: 'Paused by the developer.' }
+  const visitor = status?.visitor
+  if (visitor?.nextRunAt) {
+    const period =
+      visitor.runsToday >= visitor.runsPerDay
+        ? `your ${visitor.runsPerDay} runs for today`
+        : `your ${visitor.runsPerMonth} runs for this month`
+    return {
+      tone: 'offline',
+      text: `You have used ${period}. The next run is available ${when(visitor.nextRunAt)}.`,
+    }
+  }
+  const left = visitor
+    ? ` Runs left: ${Math.min(visitor.runsPerDay - visitor.runsToday, visitor.runsPerMonth - visitor.runsThisMonth)} today, ${visitor.runsPerMonth - visitor.runsThisMonth} this month.`
+    : ''
   return {
     tone: 'online',
-    text: 'Each run makes real model and search calls.',
+    text: `Each run makes real model and search calls.${left}`,
   }
 }
 
@@ -278,13 +297,27 @@ export default function App() {
                 running={session.running}
                 starting={session.starting}
                 cancelling={session.cancelling}
-                canGenerate={session.service === 'online'}
+                canGenerate={
+                  session.service === 'online' &&
+                  !session.status?.paused &&
+                  !session.status?.visitor.nextRunAt
+                }
                 status={formStatus(session)}
+                notice={
+                  session.status?.paused &&
+                  session.service === 'online' && (
+                    <ServicePaused
+                      resumesAt={session.status.resumesAt}
+                      onExamples={() => navigate('examples')}
+                    />
+                  )
+                }
                 onGenerate={generate}
                 onCancel={session.cancel}
               />
               <RunPanel
                 run={session.run}
+                paused={session.status?.paused}
                 onExamples={() => navigate('examples')}
               />
               <RunTimeline
@@ -315,8 +348,11 @@ export default function App() {
               <CircleHelp size={18} />
               <p>
                 <strong>Live generation</strong>Generate researches the company
-                with real web search and model calls on the server. One run at a
-                time per visitor, with an hourly limit. Nothing is sent for you.
+                with real web search and model calls on the server.{' '}
+                {session.status
+                  ? `Each visitor gets ${session.status.visitor.runsPerDay} runs a day and ${session.status.visitor.runsPerMonth} a month, one at a time.`
+                  : 'Each visitor gets a few runs a day, one at a time.'}{' '}
+                Nothing is sent for you.
               </p>
             </div>
             <div>
@@ -333,7 +369,8 @@ export default function App() {
                 <strong>Usage</strong>Token counts come from the provider's
                 response metadata; costs are estimated from list prices when
                 each call is recorded. Anything not reported shows as unknown,
-                not zero. The service has a daily spending limit.
+                not zero. The service has a monthly budget; when it is used up,
+                generation pauses until the next month.
               </p>
             </div>
           </div>

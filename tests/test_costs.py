@@ -1,9 +1,9 @@
-"""Prices and costs: tariff arithmetic, no double counting, unknown usage, the daily-limit stop."""
+"""Prices and costs: tariff arithmetic, no double counting, unknown usage, the budget stop."""
 
 import pytest
 
 from core.config import Settings
-from core.context import DailyLimitReached, RunContext
+from core.context import BudgetExhausted, RunContext
 from core.llm import LLMError
 from core.pricing import PRICES, ModelPrice, PriceTable
 from core.runner import run_sdr
@@ -92,20 +92,20 @@ def test_failed_call_keeps_the_usage_the_api_reported(brief, search):
     assert result.llm_calls[0].error and result.llm_calls[0].cost_usd == pytest.approx(100 / 1_000_000)
 
 
-def test_daily_limit_stops_before_the_next_paid_call(brief, search):
+def test_spent_budget_stops_before_the_next_paid_call(brief, search):
     llm = FakeLLM(happy_script())
     seen = []
 
     def before_call(kind):
         seen.append(kind)
         if len(seen) > 4:  # three searches and the Research call pass
-            raise DailyLimitReached
+            raise BudgetExhausted
 
     events = []
     result = run_sdr(brief, make_ctx(llm, search, before_call=before_call), on_event=events.append)
 
     assert seen == ["search", "search", "search", "llm", "llm"]
     assert llm.stages() == ["Research"]
-    assert result.status == "failed" and result.reason == "daily_limit"
-    assert events[-1]["type"] == "failed" and events[-1]["reason"] == "daily_limit"
+    assert result.status == "failed" and result.reason == "budget_exhausted"
+    assert events[-1]["type"] == "failed" and events[-1]["reason"] == "budget_exhausted"
     assert events[-1]["stage"] == "Strategy"

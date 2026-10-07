@@ -11,7 +11,7 @@ from dataclasses import dataclass
 from datetime import datetime, timedelta
 from uuid import uuid4
 
-from core.context import CallKind, DailyLimitReached, RunContext
+from core.context import BudgetExhausted, CallKind, RunContext
 from core.events import Failed, Started, to_wire
 from core.runner import run_sdr
 from core.schemas import Brief, LLMCall, SearchCall
@@ -22,30 +22,66 @@ ContextFactory = Callable[[Brief, threading.Event], RunContext]
 Listener = tuple[asyncio.AbstractEventLoop, asyncio.Event]
 
 PUBLIC_CRASH_MESSAGE = "The run stopped unexpectedly. Nothing was finished."
-LIMIT_WINDOW = timedelta(hours=1)
 
 
 @dataclass(frozen=True)
-class DailyBudget:
-    """Service-wide spending per UTC day, all visitors together. A new run starts only if it fits
-    with a reserve for itself and for every run in progress; each paid call is checked again."""
+class MonthlyBudget:
+    """Service-wide spending per calendar month in UTC, all visitors together; Tavily's free credits
+    reset on the 1st too. Model spending is real money; web search is counted in provider credits.
+    A new run starts only if it fits with a reserve for itself and for every run in progress;
+    each paid call is checked again."""
 
-    usd: float = 1.0
-    search_credits: float = 25
-    run_usd: float = 0.10  # reserve per run: a run with every rewrite stays below it
+    model_usd: float = 5.0
+    search_credits: float = 750
+    run_model_usd: float = 0.05  # reserve per run: a run with every rewrite stays below it
     run_search_credits: float = 3  # searches per run, one credit each
 
 
+@dataclass(frozen=True)
+class VisitorQuota:
+    """Runs per client address over rolling windows, so one visitor cannot use up the month."""
+
+    per_day: int = 3  # 24 hours
+    per_month: int = 10  # 30 days
+
+
 class BudgetStatus(CamelModel):
-    usd: float
-    spent_usd: float
+    model_usd: float
+    spent_model_usd: float
     search_credits: float
     spent_search_credits: float
-    resets_at: str  # next 00:00 UTC
+    paused: bool  # a new run does not fit until the month resets
+    resets_at: str  # the 1st of next month, 00:00 UTC
 
 
-def day_start(moment: datetime) -> datetime:
-    return moment.replace(hour=0, minute=0, second=0, microsecond=0)
+class VisitorStatus(CamelModel):
+    runs_per_day: int
+    runs_today: int  # last 24 hours
+    runs_per_month: int
+    runs_this_month: int  # last 30 days
+    running: bool
+    next_run_at: str | None  # when the quota frees up again, if it is used up
+
+
+def month_start(moment: datetime) -> datetime:
+    return moment.replace(day=1, hour=0, minute=0, second=0, microsecond=0)
+
+
+def next_month(moment: datetime) -> datetime:
+    start = month_start(moment)
+    return start.replace(year=start.year + 1, month=1) if start.month == 12 else start.replace(month=start.month + 1)
+
+
+def wait_text(seconds: float) -> str:
+    minutes = math.ceil(seconds / 60)
+    if minutes < 60:
+        return f"{minutes} min"
+    hours = math.ceil(seconds / 3600)
+    return f"{hours} h" if hours < 48 else f"{math.ceil(seconds / 86400)} days"
+
+
+def month_day(moment: datetime) -> str:
+    return f"{moment:%B} {moment.day}"
 
 
 class RunLimitError(Exception):
@@ -63,11 +99,11 @@ class RunManager:
         make_context: ContextFactory,
         *,
         max_workers: int = 4,
-        runs_per_hour: int = 5,
-        budget: DailyBudget = DailyBudget(),
+        quota: VisitorQuota = VisitorQuota(),
+        budget: MonthlyBudget = MonthlyBudget(),
     ):
         self.store = store
-        self.runs_per_hour = runs_per_hour
+        self.quota = quota
         self.budget = budget
         self._make_context = make_context
         self._start_lock = threading.Lock()  # the limit check and the insert are one step
@@ -95,67 +131,81 @@ class RunManager:
             self._cancels.clear()  # what is left was queued and never started
         self.fail_interrupted("The server stopped before the run started.")
 
-    # --- daily budget
+    # --- monthly budget and visitor quota
 
-    def budget_status(self) -> BudgetStatus:
-        start = day_start(self.store.now())
-        spent = self.store.spent_since(start)
-        return BudgetStatus(
-            usd=self.budget.usd,
-            spent_usd=spent.usd,
-            search_credits=self.budget.search_credits,
-            spent_search_credits=spent.search_credits,
-            resets_at=(start + timedelta(days=1)).isoformat(timespec="seconds"),
+    def _fits(self, runs: int) -> bool:
+        """Would this many new runs fit this month's budget with their reserves?"""
+        b = self.budget
+        spent = self.store.spent_since(month_start(self.store.now()))
+        return (
+            spent.model_usd + b.run_model_usd * runs <= b.model_usd
+            and spent.search_credits + b.run_search_credits * runs <= b.search_credits
         )
 
-    def _check_budget(self) -> None:
-        """Admit a run only if it fits today's budget with a reserve for every run in progress."""
-        b, now = self.budget, self.store.now()
-        spent = self.store.spent_since(day_start(now))
+    def budget_status(self) -> BudgetStatus:
+        now = self.store.now()
+        spent = self.store.spent_since(month_start(now))
+        return BudgetStatus(
+            model_usd=self.budget.model_usd,
+            spent_model_usd=spent.model_usd,
+            search_credits=self.budget.search_credits,
+            spent_search_credits=spent.search_credits,
+            paused=not self._fits(1),
+            resets_at=next_month(now).isoformat(timespec="seconds"),
+        )
 
-        def fits(runs: int) -> bool:
-            return (
-                spent.usd + b.run_usd * runs <= b.usd
-                and spent.search_credits + b.run_search_credits * runs <= b.search_credits
-            )
+    def _quota_windows(self, client: str) -> list[tuple[int, timedelta, list[datetime]]]:
+        """(limit, window, start times of the client's runs within it) for each quota window."""
+        now = self.store.now()
+        windows = [(self.quota.per_day, timedelta(days=1)), (self.quota.per_month, timedelta(days=30))]
+        return [(limit, window, self.store.run_times(client, since=now - window)) for limit, window in windows]
 
-        if fits(self.store.count_all_running() + 1):
-            return
-        if fits(1):  # only the reserves of runs in progress are in the way
-            raise RunLimitError("The service is near its daily budget. Try again in a few minutes.", retry_after=60)
-        reset = day_start(now) + timedelta(days=1)
-        raise RunLimitError(
-            "The service has used its daily budget. New runs open at 00:00 UTC.",
-            retry_after=max(1, math.ceil((reset - now).total_seconds())),
+    def visitor_status(self, client: str) -> VisitorStatus:
+        (per_day, _, today), (per_month, _, month) = windows = self._quota_windows(client)
+        frees = [times[-limit] + window for limit, window, times in windows if len(times) >= limit]
+        return VisitorStatus(
+            runs_per_day=per_day,
+            runs_today=len(today),
+            runs_per_month=per_month,
+            runs_this_month=len(month),
+            running=self.store.count_running(client) > 0,
+            next_run_at=max(frees).isoformat(timespec="seconds") if frees else None,
         )
 
     def _check_call(self, kind: CallKind) -> None:
-        """Before each paid call: stop the run once today's budget is spent."""
-        spent = self.store.spent_since(day_start(self.store.now()))
-        if spent.usd >= self.budget.usd:
-            raise DailyLimitReached
+        """Before each paid call: stop the run once this month's budget is spent."""
+        spent = self.store.spent_since(month_start(self.store.now()))
+        if spent.model_usd >= self.budget.model_usd:
+            raise BudgetExhausted
         if kind == "search" and spent.search_credits + 1 > self.budget.search_credits:
-            raise DailyLimitReached
-
-    # --- runs
+            raise BudgetExhausted
 
     def _check_limits(self, client: str) -> None:
         if self.store.count_running(client) > 0:
             raise RunLimitError("A run from your address is already in progress. Wait for it or cancel it.")
         now = self.store.now()
-        recent = self.store.run_times(client, since=now - LIMIT_WINDOW)
-        if len(recent) >= self.runs_per_hour:
-            frees_at = recent[-self.runs_per_hour] + LIMIT_WINDOW
-            retry_after = max(1, math.ceil((frees_at - now).total_seconds()))
+        if not self._fits(1):
+            resume = next_month(now)
             raise RunLimitError(
-                f"Limit reached: {self.runs_per_hour} runs per hour. Try again in {math.ceil(retry_after / 60)} min.",
-                retry_after=retry_after,
+                f"The service is paused by the developer until {month_day(resume)}: "
+                "this month's demo budget is used up.",
+                retry_after=max(1, math.ceil((resume - now).total_seconds())),
             )
-        self._check_budget()
+        for (limit, window, times), period in zip(self._quota_windows(client), ("today", "this month")):
+            if len(times) >= limit:
+                wait = (times[-limit] + window - now).total_seconds()
+                raise RunLimitError(
+                    f"You have used your {limit} runs for {period}. The next one is available in {wait_text(wait)}.",
+                    retry_after=max(1, math.ceil(wait)),
+                )
+        if not self._fits(self.store.count_all_running() + 1):  # only runs in progress are in the way
+            raise RunLimitError("The service is busy right now. Try again in a few minutes.", retry_after=60)
+
+    # --- runs
 
     def start(self, brief: Brief, client: str) -> str:
-        """Start a run or raise RunLimitError: one run at a time and runs_per_hour per client,
-        within the service's daily budget."""
+        """Start a run or raise RunLimitError: one run at a time and the visitor quota per client,
+        within the service's monthly budget."""
         run_id = uuid4().hex
         cancel = threading.Event()
         with self._start_lock:

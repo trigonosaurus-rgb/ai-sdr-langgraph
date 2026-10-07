@@ -51,6 +51,7 @@ export function BriefForm({
   cancelling,
   canGenerate,
   status,
+  notice,
   onGenerate,
   onCancel,
 }: {
@@ -63,6 +64,7 @@ export function BriefForm({
   cancelling: boolean
   canGenerate: boolean
   status: FormStatus
+  notice?: ReactNode // shown above the brief, e.g. when the service is paused
   onGenerate: () => void
   onCancel: () => void
 }) {
@@ -81,6 +83,7 @@ export function BriefForm({
   })
   return (
     <section className="brief-column" aria-labelledby="brief-title">
+      {notice}
       <header className="column-header">
         <h2 id="brief-title">Brief</h2>
       </header>

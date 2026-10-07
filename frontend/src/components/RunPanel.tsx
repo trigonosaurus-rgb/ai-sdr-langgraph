@@ -20,9 +20,11 @@ const tabs = [
 
 export function RunPanel({
   run,
+  paused = false,
   onExamples,
 }: {
   run: RunState
+  paused?: boolean // live generation is off for the month
   onExamples?: () => void
 }) {
   const [tab, setTab] = useState<ResultTab>('email')
@@ -203,7 +205,9 @@ export function RunPanel({
                 <p>
                   {running
                     ? 'Progress is shown in the Run column. The draft appears here as it is written.'
-                    : 'Fill in the brief and generate. Each run produces three things:'}
+                    : paused
+                      ? 'Live generation is paused for now. A run produces three things:'
+                      : 'Fill in the brief and generate. Each run produces three things:'}
                 </p>
               </div>
               {running ? (

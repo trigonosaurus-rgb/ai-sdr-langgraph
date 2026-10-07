@@ -9,7 +9,7 @@ Language = Literal["English", "Russian"]
 Tone = Literal["Direct", "Warm"]
 Stage = Literal["Research", "Strategy", "Writing", "Review"]
 Outcome = Literal["ready", "needs_attention", "failed"]
-FailureReason = Literal["insufficient_data", "website_mismatch", "cancelled", "daily_limit", "error"]
+FailureReason = Literal["insufficient_data", "website_mismatch", "cancelled", "budget_exhausted", "error"]
 
 
 def domain_of(url: str) -> str:

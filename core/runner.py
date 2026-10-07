@@ -5,7 +5,7 @@ from collections.abc import Callable
 from itertools import count
 from uuid import uuid4
 
-from core.context import DailyLimitReached, RunCancelled, RunContext
+from core.context import BudgetExhausted, RunCancelled, RunContext
 from core.events import Completed, Failed, Payload, RunUsage, StageStarted, Started, to_wire
 from core.graph import build_graph
 from core.schemas import Brief, FailureReason, LLMCall, RunResult, SearchCall, Stage
@@ -13,7 +13,9 @@ from core.state import SDRState
 
 log = logging.getLogger(__name__)
 EventHandler = Callable[[dict], None]
-DAILY_LIMIT_MESSAGE = "The service reached its daily spending limit during the run. Try again after 00:00 UTC."
+BUDGET_MESSAGE = (
+    "The service was paused by the developer: this month's demo budget ran out during the run. Nothing was finished."
+)
 
 
 def _sum[N: (int, float)](values: list[N | None]) -> N | None:
@@ -86,9 +88,9 @@ def run_sdr(
     except RunCancelled:
         log.info("run %s cancelled in %s", run_id, stage)
         stopped = "cancelled"
-    except DailyLimitReached:
-        log.warning("run %s stopped in %s: daily spending limit", run_id, stage)
-        stopped = "daily_limit"
+    except BudgetExhausted:
+        log.warning("run %s stopped in %s: monthly budget", run_id, stage)
+        stopped = "budget_exhausted"
     except Exception as exc:  # any failure ends the run as failed, never as a result
         log.exception("run %s failed in %s", run_id, stage)
         error = exc
@@ -102,9 +104,9 @@ def run_sdr(
     if stopped == "cancelled":
         status, reason = "failed", "cancelled"
         message = public_message = "The run was cancelled. Nothing was finished."
-    elif stopped == "daily_limit":
-        status, reason = "failed", "daily_limit"
-        message = public_message = DAILY_LIMIT_MESSAGE
+    elif stopped == "budget_exhausted":
+        status, reason = "failed", "budget_exhausted"
+        message = public_message = BUDGET_MESSAGE
     elif error is not None:
         status, reason = "failed", "error"
         message = f"{stage or 'Run'} step failed: {type(error).__name__}: {error}"

@@ -56,11 +56,12 @@ const runCost: RunCost = {
   searchCalls: [search, search, search],
 }
 const budget = {
-  usd: 1,
-  spentUsd: 0.1234,
-  searchCredits: 25,
+  modelUsd: 5,
+  spentModelUsd: 0.1234,
+  searchCredits: 750,
   spentSearchCredits: 9,
-  resetsAt: '2026-10-08T00:00:00+00:00',
+  paused: false,
+  resetsAt: '2026-11-01T00:00:00+00:00',
 }
 
 describe('run costs', () => {
@@ -141,7 +142,7 @@ describe('run costs', () => {
     ).toBeInTheDocument()
     expect(
       screen.getByText(
-        'Service budget today: $0.12 of $1.00 and 9 of 25 search credits',
+        'Service budget this month: $0.12 of $5.00 for models and 9 of 750 search credits, shared by all visitors. Resets on November 1.',
         { exact: false },
       ),
     ).toBeInTheDocument()

@@ -12,7 +12,7 @@ from core.context import RunContext
 from core.pricing import PRICES, ModelPrice, PriceTable
 from core.schemas import Brief, LLMCall, SearchCall, Usage
 from server.app import create_app
-from server.runs import PUBLIC_CRASH_MESSAGE, DailyBudget, RunLimitError, RunManager
+from server.runs import PUBLIC_CRASH_MESSAGE, MonthlyBudget, RunLimitError, RunManager, VisitorQuota
 from server.store import MIGRATIONS, Store
 from fakes import PASS, FakeClock, FakeLLM, draft, happy_script, reject
 
@@ -50,9 +50,9 @@ def make_client(db_path, search):
     def make(
         llm_factory=lambda: FakeLLM(happy_script()),
         make_context=None,
-        runs_per_hour: int = 100,
+        quota: VisitorQuota = VisitorQuota(per_day=100, per_month=100),
         now=None,
-        budget: DailyBudget = DailyBudget(usd=100, search_credits=1000),
+        budget: MonthlyBudget = MonthlyBudget(model_usd=100, search_credits=10_000),
         prices: PriceTable = PRICES,
     ) -> TestClient:
         def default_context(brief, cancel: threading.Event) -> RunContext:
@@ -67,7 +67,7 @@ def make_client(db_path, search):
 
         def make_manager() -> RunManager:
             store = Store(db_path, now=now) if now else Store(db_path)
-            return RunManager(store, make_context or default_context, runs_per_hour=runs_per_hour, budget=budget)
+            return RunManager(store, make_context or default_context, quota=quota, budget=budget)
 
         app = create_app(make_manager)
         return TestClient(app)
@@ -231,23 +231,49 @@ def test_one_run_at_a_time_per_address(make_client):
     assert after.status_code == 201
 
 
-def test_hourly_limit_per_address(make_client):
+def test_daily_quota_per_address(make_client):
     clock = {"now": datetime(2026, 10, 7, 12, 0, tzinfo=UTC)}
-    with make_client(runs_per_hour=2, now=lambda: clock["now"]) as client:
+    with make_client(quota=VisitorQuota(per_day=2, per_month=10), now=lambda: clock["now"]) as client:
         for minutes in (0, 10):
             clock["now"] = datetime(2026, 10, 7, 12, minutes, tzinfo=UTC)
             read_events(client, start(client))
         clock["now"] += timedelta(minutes=5)
         limited = client.post("/api/runs", json=BRIEF)
-        clock["now"] = datetime(2026, 10, 7, 13, 0, 1, tzinfo=UTC)  # the 12:00 run left the window
+        status = client.get("/api/status").json()
+        clock["now"] = datetime(2026, 10, 8, 12, 0, 1, tzinfo=UTC)  # the first run left the window
         allowed = client.post("/api/runs", json=BRIEF)
 
-    assert limited.status_code == 429 and "2 runs per hour" in limited.json()["detail"]
-    assert limited.headers["retry-after"] == str(45 * 60)
+    assert limited.status_code == 429
+    assert limited.json()["detail"] == "You have used your 2 runs for today. The next one is available in 24 h."
+    assert limited.headers["retry-after"] == str(23 * 3600 + 45 * 60)
+    assert status["visitor"] == {
+        "runsPerDay": 2,
+        "runsToday": 2,
+        "runsPerMonth": 10,
+        "runsThisMonth": 2,
+        "running": False,
+        "nextRunAt": "2026-10-08T12:00:00+00:00",
+    }
+    assert not status["paused"]
     assert allowed.status_code == 201
 
 
-# --- usage, costs and the daily budget
+def test_monthly_quota_per_address(make_client):
+    clock = {"now": datetime(2026, 10, 1, 9, 0, tzinfo=UTC)}
+    with make_client(quota=VisitorQuota(per_day=10, per_month=2), now=lambda: clock["now"]) as client:
+        read_events(client, start(client))
+        clock["now"] += timedelta(days=5)
+        read_events(client, start(client))
+        clock["now"] += timedelta(days=1)
+        limited = client.post("/api/runs", json=BRIEF)
+        next_run = client.get("/api/status").json()["visitor"]["nextRunAt"]
+
+    assert limited.status_code == 429
+    assert limited.json()["detail"] == "You have used your 2 runs for this month. The next one is available in 24 days."
+    assert next_run == "2026-10-31T09:00:00+00:00"
+
+
+# --- usage, costs and the monthly budget
 
 PRICED = PriceTable(
     version="test-1",
@@ -349,9 +375,12 @@ def test_period_usage_counts_only_the_callers_runs_in_the_period(make_client, db
     assert month["totals"]["runs"] == 2 and month["totals"]["modelUsd"] == pytest.approx(8 * FAKE_CALL_USD)
     assert day["since"] == "2026-10-06T12:00:00+00:00"
     assert bad.status_code == 422
-    # the budget belongs to the service: everyone's spending today, the other client included
-    assert day["budget"]["spentSearchCredits"] == 3 + 5
-    assert day["budget"]["resetsAt"] == "2026-10-08T00:00:00+00:00"
+    # the budget belongs to the service: everyone's spending this month, the other client included;
+    # search is counted in credits, money only for the models
+    budget = day["budget"]
+    assert budget["spentSearchCredits"] == 3 + 3 + 5
+    assert budget["spentModelUsd"] == pytest.approx(8 * FAKE_CALL_USD)
+    assert budget["resetsAt"] == "2026-11-01T00:00:00+00:00" and not budget["paused"]
 
 
 def test_no_runs_is_a_real_zero(make_client):
@@ -361,28 +390,41 @@ def test_no_runs_is_a_real_zero(make_client):
     assert not totals["incomplete"]
 
 
-def test_daily_search_credits_reject_new_runs_until_midnight(make_client, db_path):
-    seed_run(db_path, "other", "someone-else", credits=23)
-    with make_client(now=lambda: NOON, budget=DailyBudget(usd=100, search_credits=25)) as client:
+def test_monthly_search_credits_pause_the_service_until_the_1st(make_client, db_path):
+    seed_run(db_path, "other", "someone-else", credits=748)
+    with make_client(now=lambda: NOON, budget=MonthlyBudget(model_usd=100, search_credits=750)) as client:
         response = client.post("/api/runs", json=BRIEF)
+        status = client.get("/api/status").json()
 
-    assert response.status_code == 429 and "daily budget" in response.json()["detail"]
-    assert response.headers["retry-after"] == str(12 * 3600)
+    assert response.status_code == 429
+    assert response.json()["detail"] == (
+        "The service is paused by the developer until November 1: this month's demo budget is used up."
+    )
+    assert response.headers["retry-after"] == str((24 * 24 + 12) * 3600)  # Oct 7 noon to Nov 1
+    assert status["paused"] and status["resumesAt"] == "2026-11-01T00:00:00+00:00"
 
 
-def test_yesterdays_spending_does_not_count(make_client, db_path):
-    seed_run(db_path, "other", "someone-else", usd=5, now=lambda: NOON - timedelta(days=1))
-    with make_client(now=lambda: NOON, budget=DailyBudget(usd=1)) as client:
+def test_monthly_model_budget_pauses_the_service(make_client, db_path):
+    seed_run(db_path, "other", "someone-else", usd=4.99)
+    with make_client(now=lambda: NOON, budget=MonthlyBudget(model_usd=5, run_model_usd=0.05)) as client:
+        assert client.post("/api/runs", json=BRIEF).status_code == 429
+        assert client.get("/api/status").json()["paused"]
+
+
+def test_last_months_spending_does_not_count(make_client, db_path):
+    seed_run(db_path, "other", "someone-else", usd=10, credits=750, now=lambda: NOON - timedelta(days=30))
+    with make_client(now=lambda: NOON, budget=MonthlyBudget(model_usd=5, search_credits=750)) as client:
         assert client.post("/api/runs", json=BRIEF).status_code == 201
 
 
 def test_runs_in_progress_reserve_their_share_of_the_budget(db_path):
     store = Store(db_path)
     store.create_run("busy", Brief(**BRIEF), "someone-else")  # still running
-    manager = RunManager(store, lambda brief, cancel: None, budget=DailyBudget(usd=0.15, run_usd=0.10))
-    with pytest.raises(RunLimitError, match="near its daily budget") as caught:
+    manager = RunManager(store, lambda brief, cancel: None, budget=MonthlyBudget(model_usd=0.08, run_model_usd=0.05))
+    with pytest.raises(RunLimitError, match="busy right now") as caught:
         manager.start(Brief(**BRIEF), "me")
     assert caught.value.retry_after == 60
+    assert not manager.budget_status().paused  # one run alone would still fit
     manager.shutdown()
 
 
@@ -391,13 +433,14 @@ def test_budget_stops_a_run_before_the_call_that_would_exceed_it(make_client):
     # and the Review call is refused because the budget is spent.
     expensive = PriceTable(version="test-2", models={"fake-model": ModelPrice(600, 0, 0)}, search_credit_usd=0)
     llm = FakeLLM(happy_script())
-    budget = DailyBudget(usd=0.10, run_usd=0.10)
+    budget = MonthlyBudget(model_usd=0.10, run_model_usd=0.10)
     with make_client(llm_factory=lambda: llm, prices=expensive, budget=budget) as client:
         run_id = start(client)
         events = read_events(client, run_id)
         again = client.post("/api/runs", json=BRIEF)
 
     assert llm.stages() == ["Research", "Strategy", "Writing"]
-    assert events[-1]["type"] == "failed" and events[-1]["reason"] == "daily_limit"
+    assert events[-1]["type"] == "failed" and events[-1]["reason"] == "budget_exhausted"
+    assert "paused by the developer" in events[-1]["message"]
     assert events[-1]["stage"] == "Review"
-    assert again.status_code == 429
+    assert again.status_code == 429 and "paused by the developer" in again.json()["detail"]

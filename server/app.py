@@ -23,7 +23,7 @@ from core.context import RunContext
 from core.llm import OpenAILLM
 from core.schemas import Brief
 from core.search import TavilySearch
-from server.runs import BudgetStatus, DailyBudget, RunLimitError, RunManager
+from server.runs import BudgetStatus, MonthlyBudget, RunLimitError, RunManager, VisitorQuota, VisitorStatus
 from server.store import TERMINAL_EVENTS, LLMCallCost, RunRecord, SearchCallCost, Store, UsageTotals
 
 WAKE_TIMEOUT_S = 15  # re-check the store even without a wake-up
@@ -65,8 +65,16 @@ class RunCost(ApiModel):
     search_calls: list[SearchCallCost]
 
 
+class ServiceStatus(ApiModel):
+    """Whether the caller can start a run now: the service's monthly budget and their own quota."""
+
+    paused: bool
+    resumes_at: str | None  # when a paused service opens again
+    visitor: VisitorStatus
+
+
 class PeriodUsage(ApiModel):
-    """The caller's runs started within the period, and the service's budget for today."""
+    """The caller's runs started within the period, and the service's budget this month."""
 
     period: Literal["24h", "30d"]
     since: str
@@ -90,10 +98,13 @@ def default_manager() -> RunManager:
         store,
         make_context,
         max_workers=int(os.getenv("SDR_MAX_CONCURRENT_RUNS") or 4),
-        runs_per_hour=int(os.getenv("SDR_RUNS_PER_HOUR") or 5),
-        budget=DailyBudget(
-            usd=float(os.getenv("SDR_DAILY_BUDGET_USD") or DailyBudget.usd),
-            search_credits=float(os.getenv("SDR_DAILY_SEARCH_CREDITS") or DailyBudget.search_credits),
+        quota=VisitorQuota(
+            per_day=int(os.getenv("SDR_RUNS_PER_DAY") or VisitorQuota.per_day),
+            per_month=int(os.getenv("SDR_RUNS_PER_MONTH") or VisitorQuota.per_month),
+        ),
+        budget=MonthlyBudget(
+            model_usd=float(os.getenv("SDR_MONTHLY_MODEL_USD") or MonthlyBudget.model_usd),
+            search_credits=float(os.getenv("SDR_MONTHLY_SEARCH_CREDITS") or MonthlyBudget.search_credits),
         ),
     )
 
@@ -133,11 +144,20 @@ def create_app(make_manager: Callable[[], RunManager] = default_manager) -> Fast
     def health() -> dict[str, str]:
         return {"status": "ok"}
 
+    @app.get("/api/status", response_model=ServiceStatus)
+    def read_status(request: Request, manager: Manager) -> ServiceStatus:
+        budget = manager.budget_status()
+        return ServiceStatus(
+            paused=budget.paused,
+            resumes_at=budget.resets_at if budget.paused else None,
+            visitor=manager.visitor_status(client_id(request)),
+        )
+
     @app.post(
         "/api/runs",
         status_code=status.HTTP_201_CREATED,
         response_model=RunCreated,
-        responses={429: {"description": "A run is in progress, the hourly limit or the daily budget is reached"}},
+        responses={429: {"description": "A run is in progress, the visitor quota is used or the service is paused"}},
     )
     def create_run(brief: Brief, request: Request, manager: Manager) -> RunCreated:
         try:

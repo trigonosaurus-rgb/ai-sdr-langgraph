@@ -22,7 +22,7 @@ from core.pricing import ModelPrice, PriceTable  # noqa: E402
 from core.schemas import Brief, Draft  # noqa: E402
 from fakes import ABOUT, NEWS, FakeLLM, FakeSearch, happy_script, source  # noqa: E402
 from server.app import create_app  # noqa: E402
-from server.runs import DailyBudget, RunManager  # noqa: E402
+from server.runs import MonthlyBudget, RunManager, VisitorQuota  # noqa: E402
 from server.store import Store  # noqa: E402
 
 FAKE_PRICES = PriceTable(
@@ -75,8 +75,9 @@ def make_context(brief: Brief, cancel: threading.Event) -> RunContext:
 
 def make_manager() -> RunManager:
     store = Store(Path(tempfile.mkdtemp(prefix="sdr-e2e-")) / "sdr.sqlite3")
-    budget = DailyBudget(usd=100, search_credits=10_000)  # e2e makes many runs
-    return RunManager(store, make_context, max_workers=1, runs_per_hour=1000, budget=budget)
+    # e2e makes many runs from one address; the quota and budget are not what it tests
+    quota, budget = VisitorQuota(per_day=1000, per_month=1000), MonthlyBudget(model_usd=100, search_credits=10_000)
+    return RunManager(store, make_context, max_workers=1, quota=quota, budget=budget)
 
 
 app = create_app(make_manager)

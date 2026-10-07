@@ -95,13 +95,28 @@ export interface RunCost {
   llmCalls: LlmCallCost[]
   searchCalls: SearchCallCost[]
 }
-// The service's spending today, all visitors together.
+// The service's spending this calendar month (UTC), all visitors together. Money counts the
+// models only; web search is counted in provider credits.
 export interface BudgetStatus {
-  usd: number
-  spentUsd: number
+  modelUsd: number
+  spentModelUsd: number
   searchCredits: number
   spentSearchCredits: number
+  paused: boolean
   resetsAt: string
+}
+// Whether this visitor can start a run: the service's budget and their own quota (per address).
+export interface ServiceStatus {
+  paused: boolean
+  resumesAt: string | null
+  visitor: {
+    runsPerDay: number
+    runsToday: number // last 24 hours
+    runsPerMonth: number
+    runsThisMonth: number // last 30 days
+    running: boolean
+    nextRunAt: string | null // set while the quota is used up
+  }
 }
 export interface PeriodUsage {
   period: '24h' | '30d'
@@ -156,7 +171,7 @@ function errorFrom(status: number, body: unknown): ApiError {
 }
 
 export const api = {
-  health: () => request<{ status: string }>('/api/health'),
+  status: () => request<ServiceStatus>('/api/status'),
   createRun: (brief: Brief) =>
     request<{ runId: string }>('/api/runs', {
       method: 'POST',
@@ -230,7 +245,7 @@ const shapes: Record<RunEvent['type'], Shape> = {
       'insufficient_data',
       'website_mismatch',
       'cancelled',
-      'daily_limit',
+      'budget_exhausted',
       'error',
     ),
     message: isString,

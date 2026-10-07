@@ -23,8 +23,8 @@ class RunCancelled(Exception):
     """The run was cancelled; raised before a paid call so nothing more is spent."""
 
 
-class DailyLimitReached(Exception):
-    """The service spending limit for the day is reached; raised before a paid call."""
+class BudgetExhausted(Exception):
+    """The service budget for the month is spent; raised before a paid call."""
 
 
 @dataclass
@@ -35,7 +35,7 @@ class RunContext:
     clock: Callable[[], float] = time.monotonic  # seconds
     cancel: threading.Event | None = None  # set from another thread to stop before the next paid call
     prices: PriceTable = PRICES
-    # Called before each paid call; raises DailyLimitReached to stop the run.
+    # Called before each paid call; raises BudgetExhausted to stop the run.
     before_call: Callable[[CallKind], None] | None = None
     # Called with each recorded call, failed ones included, as soon as it ends.
     on_record: Callable[[LLMCall | SearchCall], None] | None = None

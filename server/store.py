@@ -149,7 +149,7 @@ class SearchCallCost(CamelModel):
 
 
 class Spend(BaseModel):
-    usd: float  # known costs only
+    model_usd: float  # known model costs: the money actually paid
     search_credits: float  # a search without reported credits counts as one
 
 
@@ -298,7 +298,7 @@ class Store:
         with self._lock:
             return self._db.execute("SELECT COUNT(*) FROM runs WHERE status = 'running'").fetchone()[0]
 
-    # --- paid calls, stored as soon as each one ends so the spending limits see it at once
+    # --- paid calls, stored as soon as each one ends so the budget checks see it at once
 
     def add_llm_call(self, run_id: str, call: LLMCall) -> None:
         u = call.usage
@@ -332,18 +332,16 @@ class Store:
             )  # fmt: skip
 
     def spent_since(self, since: datetime) -> Spend:
-        """Service-wide spending since the given moment, for the daily limits."""
+        """Service-wide spending since the given moment, for the monthly budget."""
         stamp = since.isoformat(timespec="milliseconds")
         with self._lock:
-            llm_usd = self._db.execute(
+            model_usd = self._db.execute(
                 "SELECT COALESCE(SUM(cost_usd), 0) FROM llm_calls WHERE created_at >= ?", (stamp,)
             ).fetchone()[0]
-            search_usd, credits = self._db.execute(
-                "SELECT COALESCE(SUM(cost_usd), 0), COALESCE(SUM(COALESCE(credits, 1)), 0)"
-                " FROM search_calls WHERE created_at >= ?",
-                (stamp,),
-            ).fetchone()
-        return Spend(usd=llm_usd + search_usd, search_credits=credits)
+            credits = self._db.execute(
+                "SELECT COALESCE(SUM(COALESCE(credits, 1)), 0) FROM search_calls WHERE created_at >= ?", (stamp,)
+            ).fetchone()[0]
+        return Spend(model_usd=model_usd, search_credits=credits)
 
     def usage(
         self, *, run_id: str | None = None, client: str | None = None, since: datetime | None = None

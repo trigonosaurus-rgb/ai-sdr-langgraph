@@ -5,7 +5,7 @@ import App from './App'
 import { parseEvent, validateBrief } from './api'
 import { emptyBrief } from './run'
 import type { RunEvent } from './run'
-import { FakeEventSource, mockApi, online } from './test/server'
+import { FakeEventSource, mockApi, online, serviceStatus } from './test/server'
 
 const brief = {
   company: 'Acme',
@@ -265,7 +265,7 @@ describe('live run', () => {
       'POST /api/runs': {
         status: 429,
         body: {
-          detail: 'Limit reached: 5 runs per hour. Try again in 12 min.',
+          detail: 'A run from your address is already in progress.',
         },
       },
     })
@@ -273,11 +273,120 @@ describe('live run', () => {
     await fillBrief(user)
     await generate(user)
     expect(await screen.findByRole('alert')).toHaveTextContent(
-      'Limit reached: 5 runs per hour. Try again in 12 min.',
+      'A run from your address is already in progress.',
     )
     expect(FakeEventSource.instances).toEqual([])
     expect(
       screen.getByRole('button', { name: 'Generate outreach' }),
     ).toBeEnabled()
+  })
+
+  it('says how many runs the visitor has left', async () => {
+    mockApi({
+      'GET /api/status': {
+        body: serviceStatus({ runsToday: 1, runsThisMonth: 4 }),
+      },
+    })
+    render(<App />)
+    expect(
+      await screen.findByText(
+        'Each run makes real model and search calls. Runs left: 2 today, 6 this month.',
+      ),
+    ).toBeInTheDocument()
+  })
+
+  it('turns Generate off when a refused start shows the quota is used up', async () => {
+    const user = userEvent.setup()
+    let refused = false
+    const nextRunAt = new Date(Date.now() + 3 * 3600_000).toISOString()
+    mockApi({
+      'GET /api/status': () => ({
+        body: refused
+          ? serviceStatus({ runsToday: 3, runsThisMonth: 3, nextRunAt })
+          : serviceStatus(),
+      }),
+      'POST /api/runs': () => {
+        refused = true
+        return {
+          status: 429,
+          body: {
+            detail:
+              'You have used your 3 runs for today. The next one is available in 3 h.',
+          },
+        }
+      },
+    })
+    render(<App />)
+    await fillBrief(user)
+    await generate(user)
+    expect(await screen.findByRole('alert')).toHaveTextContent(
+      'You have used your 3 runs for today.',
+    )
+    await waitFor(() =>
+      expect(
+        screen.getByRole('button', { name: 'Generate outreach' }),
+      ).toBeDisabled(),
+    )
+  })
+
+  it('shows a large notice when the developer paused the service', async () => {
+    mockApi({
+      'GET /api/status': {
+        body: serviceStatus({}, '2026-11-01T00:00:00+00:00'),
+      },
+    })
+    render(<App />)
+    expect(
+      await screen.findByRole('heading', {
+        name: 'Service paused by the developer',
+      }),
+    ).toBeInTheDocument()
+    expect(
+      screen.getByText(/live generation is off until November 1/),
+    ).toBeInTheDocument()
+    expect(
+      screen.getByRole('button', { name: 'Generate outreach' }),
+    ).toBeDisabled()
+    expect(
+      screen.getByRole('button', { name: /View examples/ }),
+    ).toBeInTheDocument()
+  })
+
+  it('pauses the service when the budget runs out during a run', async () => {
+    const user = userEvent.setup()
+    let ended = false
+    mockApi({
+      'GET /api/status': () => ({
+        body: ended
+          ? serviceStatus({ runsToday: 1 }, '2026-11-01T00:00:00+00:00')
+          : serviceStatus(),
+      }),
+      'POST /api/runs': { status: 201, body: { runId: 'r9' } },
+    })
+    render(<App />)
+    await fillBrief(user)
+    await generate(user)
+    const stream = FakeEventSource.latest()
+    ended = true
+    act(() =>
+      stream.send(
+        started('r9'),
+        event('r9', {
+          type: 'failed',
+          reason: 'budget_exhausted',
+          message:
+            "The service was paused by the developer: this month's demo budget ran out during the run. Nothing was finished.",
+          stage: 'Writing',
+          elapsedMs: 900,
+        }),
+      ),
+    )
+    const rail = screen.getByRole('region', { name: 'Run' })
+    expect(within(rail).getByText('Stopped')).toBeInTheDocument()
+    expect(
+      await screen.findByRole('heading', {
+        name: 'Service paused by the developer',
+      }),
+    ).toBeInTheDocument()
   })
 })

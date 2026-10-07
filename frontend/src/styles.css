@@ -367,6 +367,39 @@ main:focus {
 }
 
 /* Brief */
+.service-paused {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-2);
+  margin: var(--space-5) var(--space-5) 0;
+  padding: var(--space-5);
+  border: 1px solid var(--warning);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  color: var(--text);
+}
+.service-paused > svg {
+  color: var(--warning);
+}
+.service-paused h2 {
+  font-family: var(--font-letter);
+  font-size: var(--text-2xl);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.4px;
+}
+.service-paused p {
+  margin: 0;
+  color: var(--muted);
+  font-size: var(--text-md);
+  line-height: 1.55;
+}
+.service-paused .text-button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+}
 .brief-column form {
   display: flex;
   flex-direction: column;

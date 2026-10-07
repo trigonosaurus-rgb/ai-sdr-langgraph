@@ -58,7 +58,7 @@ test('run costs show the finished run by step and the visitor’s period', async
   await expect(dialog.locator('.metric').first()).toContainText('$0.0251')
   await dialog.getByRole('radio', { name: '24 hours' }).click()
   await expect(dialog).toContainText('from your address over the last 24 hours')
-  await expect(dialog).toContainText('Service budget today')
+  await expect(dialog).toContainText('Service budget this month')
 })
 
 test('reloading mid-run resumes the same run', async ({ page }) => {
@@ -118,7 +118,7 @@ test('an invalid brief is not sent', async ({ page }) => {
 })
 
 test('generation is off while the service is unreachable', async ({ page }) => {
-  await page.route('**/api/health', (route) => route.abort())
+  await page.route('**/api/status', (route) => route.abort())
   await page.goto('/')
   await expect(
     page.getByText('The service is unavailable, so generation is off.'),

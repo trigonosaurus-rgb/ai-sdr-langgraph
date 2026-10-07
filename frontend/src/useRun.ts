@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useReducer, useRef, useState } from 'react'
 import { ApiError, api, followRun } from './api'
-import type { StreamStatus } from './api'
+import type { ServiceStatus, StreamStatus } from './api'
 import { emptyRun, reduceRun } from './run'
 import type { RunEvent, RunState } from './run'
 import type { Brief } from './types'
@@ -29,13 +29,15 @@ type Action = RunEvent | { type: 'reset' }
 const reducer = (state: RunState, action: Action) =>
   action.type === 'reset' ? emptyRun : reduceRun(state, action)
 
-export type ServiceStatus = 'checking' | 'online' | 'offline'
+export type ServiceState = 'checking' | 'online' | 'offline'
 export type RunSession = ReturnType<typeof useRun>
 const HEALTH_RETRY_MS = 15_000
 
 export function useRun(onRestore: (brief: Brief) => void) {
   const [run, dispatch] = useReducer(reducer, emptyRun)
-  const [service, setService] = useState<ServiceStatus>('checking')
+  const [service, setService] = useState<ServiceState>('checking')
+  // The service's budget and this visitor's quota; refreshed when a run ends or a start is refused.
+  const [status, setStatus] = useState<ServiceStatus | null>(null)
   const [stream, setStream] = useState<StreamStatus>('closed')
   // The run this tab started or restored; until its `started` event arrives it is "starting".
   const [currentId, setCurrentId] = useState<string | null>(null)
@@ -57,12 +59,24 @@ export function useRun(onRestore: (brief: Brief) => void) {
     })
   }, [])
 
-  useEffect(() => {
+  const checkService = useCallback(() => {
     let alive = true
-    api.health().then(
-      () => alive && setService('online'),
+    api.status().then(
+      (next) => {
+        if (!alive) return
+        setStatus(next)
+        setService('online')
+      },
       () => alive && setService('offline'),
     )
+    return () => {
+      alive = false
+    }
+  }, [])
+
+  useEffect(() => {
+    let alive = true
+    const stopCheck = checkService()
     const saved = readSaved()
     if (saved)
       api.getRun(saved).then(
@@ -77,21 +91,23 @@ export function useRun(onRestore: (brief: Brief) => void) {
       )
     return () => {
       alive = false
+      stopCheck()
       close.current?.()
     }
-  }, [follow])
+  }, [follow, checkService])
 
   // While the service is down, check again now and then so Generate comes back by itself.
   useEffect(() => {
     if (service !== 'offline') return
-    const timer = window.setInterval(() => {
-      api.health().then(
-        () => setService('online'),
-        () => undefined,
-      )
-    }, HEALTH_RETRY_MS)
+    const timer = window.setInterval(checkService, HEALTH_RETRY_MS)
     return () => window.clearInterval(timer)
-  }, [service])
+  }, [service, checkService])
+
+  // A finished run uses up quota and budget; a run stopped by the budget pauses the service.
+  const finished = run.id !== null && run.status !== 'running'
+  useEffect(() => {
+    if (finished) return checkService()
+  }, [finished, run.id, checkService])
 
   const starting =
     requesting ||
@@ -107,6 +123,7 @@ export function useRun(onRestore: (brief: Brief) => void) {
       follow(runId)
     } catch (failure) {
       setError(failure as ApiError)
+      if ((failure as ApiError).status === 429) checkService()
     } finally {
       setRequesting(false)
     }
@@ -142,6 +159,7 @@ export function useRun(onRestore: (brief: Brief) => void) {
   return {
     run,
     service,
+    status,
     error,
     starting,
     running,

@@ -1,4 +1,5 @@
 import { vi } from 'vitest'
+import type { ServiceStatus } from '../api'
 import type { RunEvent } from '../run'
 
 // Minimal EventSource double: tests push events into the stream a component opened.
@@ -51,4 +52,20 @@ export function mockApi(routes: Record<string, Route | Reply>) {
   return fetch
 }
 
-export const online = { 'GET /api/health': { body: { status: 'ok' } } }
+export const serviceStatus = (
+  visitor: Partial<ServiceStatus['visitor']> = {},
+  paused: string | null = null,
+): ServiceStatus => ({
+  paused: paused !== null,
+  resumesAt: paused,
+  visitor: {
+    runsPerDay: 3,
+    runsToday: 0,
+    runsPerMonth: 10,
+    runsThisMonth: 0,
+    running: false,
+    nextRunAt: null,
+    ...visitor,
+  },
+})
+export const online = { 'GET /api/status': { body: serviceStatus() } }
