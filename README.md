@@ -24,6 +24,8 @@ python -m venv .venv
 .venv\Scripts\python.exe -m pip install -r requirements-dev.txt
 ```
 
+`requirements.txt` and `requirements-dev.txt` are pinned lock files compiled with pip-tools from `requirements.in` and `requirements-dev.in`.
+
 Create `.env` in the repository root:
 
 ```env

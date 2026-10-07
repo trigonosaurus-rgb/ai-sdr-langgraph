@@ -1,0 +1,10 @@
+# Direct runtime dependencies. Pinned versions live in requirements.txt:
+#   pip-compile requirements.in
+fastapi>=0.135
+langchain-core>=1.4
+langchain-openai>=1.2
+langgraph>=1.2
+pydantic>=2.13
+python-dotenv>=1.0.1
+tavily-python>=0.7.24
+uvicorn>=0.34

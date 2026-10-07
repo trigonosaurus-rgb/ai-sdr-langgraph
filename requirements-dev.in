@@ -1,0 +1,6 @@
+# Dev and test tools, resolved against the runtime pins:
+#   pip-compile requirements-dev.in
+-c requirements.txt
+-r requirements.in
+pip-tools>=7.4
+pytest>=8

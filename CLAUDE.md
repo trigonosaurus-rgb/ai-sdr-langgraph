@@ -31,6 +31,20 @@ npm.cmd run format:check
 .venv\Scripts\python.exe -m core.cli --help         # запуск — ПЛАТНЫЕ вызовы OpenAI и Tavily
 ```
 
+## Зависимости Python
+
+Прямые зависимости — в `requirements.in` (runtime) и `requirements-dev.in` (тесты, pip-tools); точные версии — в скомпилированных `requirements.txt` / `requirements-dev.txt`. Lock-файлы руками не править.
+
+```powershell
+# Добавить или поднять пакет: правка .in, затем пересборка обоих lock-файлов по порядку
+.venv\Scripts\pip-compile.exe --strip-extras requirements.in
+.venv\Scripts\pip-compile.exe --strip-extras requirements-dev.in
+# Обновить всё до последних версий: те же команды с --upgrade (или --upgrade-package <имя>)
+.venv\Scripts\pip-sync.exe requirements-dev.txt   # привести .venv точно к lock-файлу
+```
+
+После обновления `langchain-*`, `openai`, `langgraph` или `tavily-python` — pytest и, с согласия пользователя, один платный запуск CLI: structured output, usage и кредиты Tavily на новых версиях не гарантированы. Пакеты с платформенными extras (например `uvicorn[standard]`) не добавлять: lock собирается на Windows, а образ будет Linux.
+
 ## Правила
 
 - Ключи лежат в корневом `.env`. Не выводить его содержимое, не копировать ключи во frontend; провайдерские ключи остаются только на сервере.
