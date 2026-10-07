@@ -36,3 +36,6 @@ Thumbs.db
 
 # Local CLI run results
 runs/
+
+# Local API database
+data/

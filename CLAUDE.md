@@ -9,8 +9,9 @@
 - `core/llm.py` — structured output через LangChain + usage из метаданных API; `core/search.py` — Tavily; `core/context.py` — зависимости запуска и журнал всех платных вызовов, включая неудачные.
 - `core/events.py` — события, зеркало `frontend/src/run.ts`; `tests/test_events.py` проверяет совпадение типов.
 - `agents/` — узлы графа (фабрики `make_*(ctx)`). `prompts/*.md` — промпты с `version` во front matter.
-- `core/cli.py` — ручной запуск до появления API.
-- `tests/` — pytest на фейковых LLM и поиске (`tests/fakes.py`), без сети.
+- `core/cli.py` — ручной запуск из терминала.
+- `server/app.py` — FastAPI: `POST /api/runs`, SSE `GET /api/runs/{id}/events` (повтор по `after` / `Last-Event-ID`), `POST /api/runs/{id}/cancel`, снимок `GET /api/runs/{id}`. `server/runs.py` — граф в пуле потоков, отмена, пробуждение SSE; `server/store.py` — SQLite (`runs`, `events`, `llm_calls`, `search_calls`), миграции через `PRAGMA user_version`, база по умолчанию `data/sdr.sqlite3` (`SDR_DB_PATH`).
+- `tests/` — pytest на фейковых LLM и поиске (`tests/fakes.py`), без сети; `tests/test_api.py` — API на фейковом графе.
 - `frontend/` — React 19 + TypeScript + Vite. **Не подключён к графу**: генерация отключена, данные в Examples вымышленные (Northstar). Детали — [frontend/README.md](frontend/README.md), требования к будущему API — [frontend/INTEGRATION.md](frontend/INTEGRATION.md).
 - `frontend/src/run.ts` — контракт событий и reducer для будущего streaming. Меняя событие, менять и `core/events.py`.
 
@@ -29,6 +30,7 @@ npm.cmd run format:check
 # Python (из корня)
 .venv\Scripts\python.exe -m pytest                  # без сети
 .venv\Scripts\python.exe -m core.cli --help         # запуск — ПЛАТНЫЕ вызовы OpenAI и Tavily
+.venv\Scripts\python.exe -m uvicorn server.app:app --port 8000   # API; POST /api/runs — ПЛАТНЫЙ запуск
 ```
 
 ## Зависимости Python
