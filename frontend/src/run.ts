@@ -12,7 +12,8 @@ export interface RunUsage {
   durationSeconds: number | null
   model: string
 }
-export type FailureReason = 'insufficient_data' | 'website_mismatch' | 'error'
+export type FailureReason =
+  'insufficient_data' | 'website_mismatch' | 'cancelled' | 'error'
 export interface RunState {
   id: string | null
   sequence: number

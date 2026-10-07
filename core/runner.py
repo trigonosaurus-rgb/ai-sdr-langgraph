@@ -5,7 +5,7 @@ from collections.abc import Callable
 from itertools import count
 from uuid import uuid4
 
-from core.context import RunContext
+from core.context import RunCancelled, RunContext
 from core.events import Completed, Failed, Payload, RunUsage, StageStarted, Started, to_wire
 from core.graph import build_graph
 from core.schemas import Brief, FailureReason, LLMCall, RunResult, Stage
@@ -71,6 +71,7 @@ def run_sdr(
     graph = build_graph(ctx)
     state: SDRState = {"brief": brief}
     error: Exception | None = None
+    cancelled = False
     try:
         for mode, chunk in graph.stream(
             {"brief": brief},
@@ -81,6 +82,9 @@ def run_sdr(
                 publish(chunk)
             else:
                 state = chunk
+    except RunCancelled:
+        log.info("run %s cancelled in %s", run_id, stage)
+        cancelled = True
     except Exception as exc:  # any failure ends the run as failed, never as a result
         log.exception("run %s failed in %s", run_id, stage)
         error = exc
@@ -91,7 +95,10 @@ def run_sdr(
     reason: FailureReason | None = None
     issues: list[str] = []
 
-    if error is not None:
+    if cancelled:
+        status, reason = "failed", "cancelled"
+        message = public_message = "The run was cancelled. Nothing was finished."
+    elif error is not None:
         status, reason = "failed", "error"
         message = f"{stage or 'Run'} step failed: {type(error).__name__}: {error}"
         public_message = f"The {stage or 'run'} step failed. Nothing was finished."

@@ -3,9 +3,11 @@
 import re
 from pathlib import Path
 
+from typing import get_args
+
 from core.events import Payload
 from core.runner import run_sdr
-from core.schemas import Usage
+from core.schemas import FailureReason, Usage
 from fakes import PASS, FakeLLM, draft, happy_script, reject
 
 RUN_TS = Path(__file__).resolve().parent.parent / "frontend" / "src" / "run.ts"
@@ -102,6 +104,12 @@ def test_python_events_match_frontend_contract():
     ts_types = set(re.findall(r"type: '(\w+)'", union))
     py_types = {cls.model_fields["type"].default for cls in _payload_classes()}
     assert ts_types == py_types
+
+
+def test_failure_reasons_match_frontend_contract():
+    source = RUN_TS.read_text(encoding="utf-8")
+    declaration = source.split("export type FailureReason =", 1)[1].split("export", 1)[0]
+    assert set(re.findall(r"'(\w+)'", declaration)) == set(get_args(FailureReason))
 
 
 def _payload_classes():

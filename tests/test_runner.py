@@ -1,5 +1,7 @@
 """End-to-end runs of the graph on fakes: outcomes, rewrites, refusals and failures."""
 
+import threading
+
 from core.llm import LLMError
 from core.runner import run_sdr
 from core.schemas import Brief, ExtractedFact
@@ -220,3 +222,40 @@ def test_empty_draft_fails(brief, make_ctx):
     llm = FakeLLM(happy_script(Writing=[Draft(subject=" ", body="text")]))
     result, _ = run(brief, make_ctx(llm))
     assert result.status == "failed" and result.reason == "error"
+
+
+
+class CancellingLLM(FakeLLM):
+    """Sets the cancel flag right after answering the given stage, as a user clicking Cancel would."""
+
+    def __init__(self, script, after_stage: str):
+        super().__init__(script)
+        self.after_stage = after_stage
+        self.cancel = threading.Event()
+
+    def generate(self, stage, schema, system, user):
+        reply = super().generate(stage, schema, system, user)
+        if stage == self.after_stage:
+            self.cancel.set()
+        return reply
+
+
+def run_cancelling(brief, make_ctx, after_stage: str):
+    llm = CancellingLLM(happy_script(), after_stage)
+    ctx = make_ctx(llm)
+    ctx.cancel = llm.cancel
+    return run(brief, ctx)
+
+
+def test_cancel_stops_before_the_next_paid_call(brief, make_ctx):
+    result, events = run_cancelling(brief, make_ctx, after_stage="Research")
+    assert result.status == "failed" and result.reason == "cancelled"
+    assert [c.stage for c in result.llm_calls] == ["Research"]
+    assert result.draft is None
+    assert events[-1]["type"] == "failed" and events[-1]["reason"] == "cancelled"
+    assert events[-1]["stage"] == "Strategy"
+
+
+def test_cancel_after_the_last_paid_call_keeps_the_result(brief, make_ctx):
+    result, _ = run_cancelling(brief, make_ctx, after_stage="Review")
+    assert result.status == "ready"

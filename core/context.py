@@ -1,5 +1,6 @@
 """Per-run dependencies and the log of every paid call, including failed ones."""
 
+import threading
 import time
 from collections.abc import Callable
 from dataclasses import dataclass, field
@@ -16,14 +17,23 @@ from core.search import SearchClient, Topic
 T = TypeVar("T", bound=BaseModel)
 
 
+class RunCancelled(Exception):
+    """The run was cancelled; raised before a paid call so nothing more is spent."""
+
+
 @dataclass
 class RunContext:
     settings: Settings
     llm: StructuredLLM
     search_client: SearchClient
     clock: Callable[[], float] = time.monotonic  # seconds
+    cancel: threading.Event | None = None  # set from another thread to stop before the next paid call
     llm_calls: list[LLMCall] = field(default_factory=list)
     search_calls: list[SearchCall] = field(default_factory=list)
+
+    def check_cancelled(self) -> None:
+        if self.cancel is not None and self.cancel.is_set():
+            raise RunCancelled
 
     def _ms_since(self, start: float) -> int:
         return round((self.clock() - start) * 1000)
@@ -37,6 +47,7 @@ class RunContext:
         system: str,
         user: str,
     ) -> T:
+        self.check_cancelled()
         start = self.clock()
         model = self.settings.models[stage].model
         try:
@@ -73,6 +84,7 @@ class RunContext:
         topic: Topic = "general",
         include_domains: list[str] | None = None,
     ) -> list[SearchResult]:
+        self.check_cancelled()
         start = self.clock()
         try:
             response = self.search_client.search(
