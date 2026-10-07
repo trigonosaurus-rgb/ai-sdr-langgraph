@@ -6,11 +6,12 @@
 
 - `core/graph.py` — LangGraph: `researcher → strategist → copywriter ⇄ reviewer`, ранний выход после research. `core/runner.py` запускает граф, нумерует события и решает итог (`ready` / `needs_attention` / `failed`).
 - `core/schemas.py` — бриф, structured output (Pydantic), результат запуска. `core/config.py` — модели и reasoning effort по этапам, лимит переписываний (`OPENAI_MODEL_NAME`, `SDR_MAX_REWRITES`).
-- `core/llm.py` — structured output через LangChain + usage из метаданных API; `core/search.py` — Tavily; `core/context.py` — зависимости запуска и журнал всех платных вызовов, включая неудачные.
+- `core/llm.py` — structured output через LangChain + usage из метаданных API; `core/search.py` — Tavily; `core/context.py` — зависимости запуска и журнал всех платных вызовов, включая неудачные; перед каждым вызовом — отмена и `before_call` (суточный бюджет), после — `on_record`.
+- `core/pricing.py` — таблица тарифов с датой-версией. Стоимость вызова фиксируется при записи и не пересчитывается; при смене цен — новая версия таблицы, старые записи не трогать.
 - `core/events.py` — события, зеркало `frontend/src/run.ts`; `tests/test_events.py` проверяет совпадение типов.
 - `agents/` — узлы графа (фабрики `make_*(ctx)`). `prompts/*.md` — промпты с `version` во front matter.
 - `core/cli.py` — ручной запуск из терминала.
-- `server/app.py` — FastAPI: `POST /api/runs`, SSE `GET /api/runs/{id}/events` (повтор по `after` / `Last-Event-ID`), `POST /api/runs/{id}/cancel`, снимок `GET /api/runs/{id}`. `server/runs.py` — граф в пуле потоков, отмена, пробуждение SSE; `server/store.py` — SQLite (`runs`, `events`, `llm_calls`, `search_calls`), миграции через `PRAGMA user_version`, база по умолчанию `data/sdr.sqlite3` (`SDR_DB_PATH`).
+- `server/app.py` — FastAPI: `POST /api/runs`, SSE `GET /api/runs/{id}/events` (повтор по `after` / `Last-Event-ID`), `POST /api/runs/{id}/cancel`, снимок `GET /api/runs/{id}`. `GET /api/runs/{id}/usage`, `GET /api/usage?period=24h|30d`. `server/runs.py` — граф в пуле потоков, отмена, пробуждение SSE, лимиты и суточный бюджет (`SDR_DAILY_BUDGET_USD`, `SDR_DAILY_SEARCH_CREDITS`); `server/store.py` — SQLite (`runs`, `events`, `llm_calls`, `search_calls`; вызовы пишутся сразу по завершении), агрегаты usage, миграции через `PRAGMA user_version`, база по умолчанию `data/sdr.sqlite3` (`SDR_DB_PATH`).
 - `tests/` — pytest на фейковых LLM и поиске (`tests/fakes.py`), без сети; `tests/test_api.py` — API на фейковом графе.
 - `frontend/` — React 19 + TypeScript + Vite, подключён к API через прокси `/api`. Данные в Examples пока вымышленные (Northstar). Детали — [frontend/README.md](frontend/README.md), контракт API — [frontend/INTEGRATION.md](frontend/INTEGRATION.md).
 - `frontend/src/run.ts` — контракт событий и reducer. Меняя событие, менять и `core/events.py`. `src/api.ts` — запросы, валидация брифа и событий, SSE; `src/useRun.ts` — запуск, отмена, восстановление после перезагрузки.
