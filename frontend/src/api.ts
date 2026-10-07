@@ -50,6 +50,66 @@ export interface RunSnapshot {
   lastSequence: number
 }
 
+// Mirrors server/store.py UsageTotals. Each total sums the calls that reported it; null means
+// calls exist but none reported it, and `incomplete` means some did not.
+export interface UsageTotals {
+  runs: number
+  llmCalls: number
+  searchCalls: number
+  input: number | null
+  cachedInput: number | null // subset of input
+  output: number | null
+  reasoning: number | null // subset of output
+  searchCredits: number | null
+  modelUsd: number | null
+  searchUsd: number | null
+  durationSeconds: number | null
+  models: string[]
+  priceVersions: string[]
+  incomplete: boolean
+}
+export interface LlmCallCost {
+  stage: string
+  attempt: number
+  model: string
+  input: number | null
+  cachedInput: number | null
+  output: number | null
+  reasoning: number | null
+  costUsd: number | null
+  durationMs: number
+  failed: boolean
+}
+export interface SearchCallCost {
+  topic: string
+  results: number
+  credits: number | null
+  costUsd: number | null
+  durationMs: number
+  failed: boolean
+}
+export interface RunCost {
+  runId: string
+  status: RunSnapshot['status']
+  totals: UsageTotals
+  llmCalls: LlmCallCost[]
+  searchCalls: SearchCallCost[]
+}
+// The service's spending today, all visitors together.
+export interface BudgetStatus {
+  usd: number
+  spentUsd: number
+  searchCredits: number
+  spentSearchCredits: number
+  resetsAt: string
+}
+export interface PeriodUsage {
+  period: '24h' | '30d'
+  since: string
+  totals: UsageTotals
+  budget: BudgetStatus
+}
+
 // A request the server refused or could not serve; message is safe to show.
 export class ApiError extends Error {
   constructor(
@@ -104,6 +164,10 @@ export const api = {
     }),
   getRun: (runId: string) =>
     request<RunSnapshot>(`/api/runs/${encodeURIComponent(runId)}`),
+  runUsage: (runId: string) =>
+    request<RunCost>(`/api/runs/${encodeURIComponent(runId)}/usage`),
+  usage: (period: PeriodUsage['period']) =>
+    request<PeriodUsage>(`/api/usage?period=${period}`),
   cancelRun: (runId: string) =>
     request<{ runId: string }>(
       `/api/runs/${encodeURIComponent(runId)}/cancel`,

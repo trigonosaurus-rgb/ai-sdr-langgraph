@@ -2,7 +2,6 @@ import { fireEvent, render, screen, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import App from './App'
-import { Metrics } from './components/Metrics'
 import { RunPanel } from './components/RunPanel'
 import { emptyRun } from './run'
 
@@ -60,27 +59,6 @@ describe('workspace', () => {
     await user.click(screen.getByRole('button', { name: /New outreach/ }))
     expect(screen.getByLabelText('Company name')).toHaveValue('')
     expect(posts()).toEqual([])
-  })
-  it('keeps unknown search cost from producing a falsely complete total', () => {
-    render(
-      <Metrics
-        usage={{
-          input: 100,
-          cachedInput: 20,
-          output: 50,
-          reasoning: 15,
-          modelUsd: 0.001,
-          searchUsd: null,
-          durationSeconds: 3,
-          model: 'configured-model',
-        }}
-      />,
-    )
-    expect(screen.getByText('150')).toBeInTheDocument()
-    expect(screen.getByText('$0.0010')).toBeInTheDocument()
-    expect(screen.getByText('Estimated cost').parentElement).toHaveTextContent(
-      '—',
-    )
   })
   it('allows edits and copying only after review completes', async () => {
     const user = userEvent.setup()

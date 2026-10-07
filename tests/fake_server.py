@@ -4,6 +4,7 @@ uvicorn tests.fake_server:app --port 8765
 
 The company name picks the scenario: "slow" stretches research to a few seconds (time to reload
 or cancel), "broken" fails research; anything else runs to a ready draft.
+Costs use a made-up price table (version "fake") on the fakes' token counts.
 """
 
 import sys
@@ -17,12 +18,18 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))  # for `fakes`
 from core.config import Settings  # noqa: E402
 from core.context import RunContext  # noqa: E402
 from core.llm import LLMError  # noqa: E402
+from core.pricing import ModelPrice, PriceTable  # noqa: E402
 from core.schemas import Brief, Draft  # noqa: E402
 from fakes import ABOUT, NEWS, FakeLLM, FakeSearch, happy_script, source  # noqa: E402
 from server.app import create_app  # noqa: E402
-from server.runs import RunManager  # noqa: E402
+from server.runs import DailyBudget, RunManager  # noqa: E402
 from server.store import Store  # noqa: E402
 
+FAKE_PRICES = PriceTable(
+    version="fake",
+    models={"fake-model": ModelPrice(input=0.75, cached_input=0.075, output=4.50)},
+    search_credit_usd=0.008,
+)
 DRAFT = Draft(
     subject="Staffing the Warsaw analytics team",
     body=(
@@ -63,12 +70,13 @@ def make_context(brief: Brief, cancel: threading.Event) -> RunContext:
         official=[source("https://acme.com/about", "About Acme", ABOUT)],
         news=[source("https://news.example.com/acme-warsaw", "Acme expands to Warsaw", NEWS)],
     )
-    return RunContext(settings=Settings(), llm=llm, search_client=search, cancel=cancel)
+    return RunContext(settings=Settings(), llm=llm, search_client=search, cancel=cancel, prices=FAKE_PRICES)
 
 
 def make_manager() -> RunManager:
     store = Store(Path(tempfile.mkdtemp(prefix="sdr-e2e-")) / "sdr.sqlite3")
-    return RunManager(store, make_context, max_workers=1, runs_per_hour=1000)
+    budget = DailyBudget(usd=100, search_credits=10_000)  # e2e makes many runs
+    return RunManager(store, make_context, max_workers=1, runs_per_hour=1000, budget=budget)
 
 
 app = create_app(make_manager)

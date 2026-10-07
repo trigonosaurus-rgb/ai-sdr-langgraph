@@ -38,6 +38,29 @@ test('a run streams stages and the draft, then ends ready for review', async ({
   await expect(page.getByLabel('Company name')).toHaveValue('Acme')
 })
 
+test('run costs show the finished run by step and the visitor’s period', async ({
+  page,
+}) => {
+  await page.goto('/')
+  await fillBrief(page, 'Acme')
+  await generate(page).click()
+  await expect(rail(page).getByText('Ready for review')).toBeVisible({
+    timeout: 15_000,
+  })
+  // Four fake LLM calls (100 in, 20 cached, 50 out) and three one-credit searches at fake prices.
+  await expect(rail(page).getByText('$0.0251')).toBeVisible()
+  await rail(page).getByRole('button', { name: 'Usage details' }).click()
+  const dialog = page.getByRole('dialog', { name: 'Run costs' })
+  await expect(dialog).toContainText('Usage for this run.')
+  const steps = dialog.getByRole('table', { name: 'By step' })
+  await expect(steps.getByRole('row')).toHaveCount(6)
+  await expect(steps).toContainText('Web search, 3 requests')
+  await expect(dialog.locator('.metric').first()).toContainText('$0.0251')
+  await dialog.getByRole('radio', { name: '24 hours' }).click()
+  await expect(dialog).toContainText('from your address over the last 24 hours')
+  await expect(dialog).toContainText('Service budget today')
+})
+
 test('reloading mid-run resumes the same run', async ({ page }) => {
   await page.goto('/')
   await fillBrief(page, 'Slowco')

@@ -1142,6 +1142,55 @@ select {
   font-size: var(--text-xs);
   padding-left: var(--space-4);
 }
+.modal p.cost-note {
+  display: flex;
+  gap: var(--space-2);
+  align-items: flex-start;
+  margin: 0 0 var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  border-left: 2px solid var(--warning);
+  color: var(--warning);
+  font-size: var(--text-sm);
+  line-height: 1.5;
+}
+.cost-note svg {
+  flex: none;
+  margin-top: 2px;
+}
+.cost-steps {
+  margin-top: var(--space-5);
+}
+.cost-steps table {
+  width: 100%;
+  margin-top: var(--space-2);
+  border-collapse: collapse;
+  font-size: var(--text-sm);
+  font-variant-numeric: tabular-nums;
+}
+.cost-steps th,
+.cost-steps td {
+  padding: 6px 0;
+  border-top: 1px solid var(--soft-line);
+  text-align: right;
+  font-weight: 400;
+}
+.cost-steps thead th {
+  border-top: 0;
+  color: var(--faint);
+  font-size: var(--text-xs);
+  font-weight: 550;
+}
+.cost-steps th:first-child {
+  text-align: left;
+  padding-right: var(--space-3);
+}
+.cost-steps td {
+  padding-left: var(--space-4);
+  white-space: nowrap;
+}
+.cost-steps tr.failed th {
+  color: var(--danger);
+}
 .fine-print,
 .modal p.fine-print {
   font-size: var(--text-xs);

@@ -297,7 +297,11 @@ export default function App() {
       </div>
       {modal === 'costs' && (
         <Modal title="Run costs" onClose={() => setModal(null)} wide>
-          <Metrics usage={session.run.usage} />
+          <Metrics
+            runId={session.run.id}
+            runStatus={session.run.status}
+            runStage={session.run.stage}
+          />
         </Modal>
       )}
       {modal === 'guide' && (
@@ -327,8 +331,9 @@ export default function App() {
               <Wallet size={18} />
               <p>
                 <strong>Usage</strong>Token counts come from the provider's
-                response metadata. Cost estimates are not calculated yet and
-                show as unknown, not zero.
+                response metadata; costs are estimated from list prices when
+                each call is recorded. Anything not reported shows as unknown,
+                not zero. The service has a daily spending limit.
               </p>
             </div>
           </div>
