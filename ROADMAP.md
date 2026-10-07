@@ -64,6 +64,12 @@
 
 ## Этап 3 — API и интеграция
 
+0. **Сначала — фиксация версий Python-зависимостей.** Сейчас в `requirements.txt` только минимальные версии. После пересоздания `.venv` (2026-10-07) pip поставил более новые, чем в ручном запуске этапа 2: langchain-core 1.4.0 → 1.6.7, langchain-openai 1.2.2 → 1.6.7, tavily-python 0.7.24 → 0.8.5. Тесты проходят, но на реальных API новые версии не проверены.
+   - Добавить FastAPI и uvicorn в зависимости, затем зафиксировать точные версии через pip-tools: `requirements.in` / `requirements-dev.in` → `requirements.txt` / `requirements-dev.txt` (`pip-compile`). Ставить из скомпилированных файлов — одни версии локально, в CI и Docker.
+   - Пересобрать `.venv` из lock-файла, прогнать pytest.
+   - Один ручной запуск CLI на новых версиях (платно, только с согласия пользователя), чтобы проверить structured output, usage и кредиты Tavily.
+   - Описать в CLAUDE.md, как обновлять зависимости.
+
 1. **FastAPI:**
    - `POST /api/runs` — бриф, валидация, возвращает `run_id`;
    - `GET /api/runs/{id}/events` — SSE с `sequence`, повтор пропущенного по `Last-Event-ID`;
