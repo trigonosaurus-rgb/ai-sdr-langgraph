@@ -9,7 +9,7 @@ from typing import TypeVar
 from pydantic import BaseModel
 
 from core.config import Settings
-from core.llm import StructuredLLM
+from core.llm import PartialHandler, StructuredLLM
 from core.prompts import Prompt
 from core.schemas import LLMCall, SearchCall, SearchResult, Stage, Usage
 from core.search import SearchClient, Topic
@@ -46,12 +46,13 @@ class RunContext:
         schema: type[T],
         system: str,
         user: str,
+        on_partial: PartialHandler | None = None,
     ) -> T:
         self.check_cancelled()
         start = self.clock()
         model = self.settings.models[stage].model
         try:
-            reply = self.llm.generate(stage, schema, system, user)
+            reply = self.llm.generate(stage, schema, system, user, on_partial)
         except Exception as error:
             self.llm_calls.append(
                 LLMCall(

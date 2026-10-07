@@ -233,8 +233,8 @@ class CancellingLLM(FakeLLM):
         self.after_stage = after_stage
         self.cancel = threading.Event()
 
-    def generate(self, stage, schema, system, user):
-        reply = super().generate(stage, schema, system, user)
+    def generate(self, stage, schema, system, user, on_partial=None):
+        reply = super().generate(stage, schema, system, user, on_partial)
         if stage == self.after_stage:
             self.cancel.set()
         return reply

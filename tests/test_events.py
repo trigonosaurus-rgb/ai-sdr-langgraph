@@ -30,9 +30,29 @@ def test_events_are_numbered_and_stamped(brief, make_ctx):
     assert elapsed == sorted(elapsed) and elapsed[0] > 0
 
 
+def collapsed_types(events):
+    """Event types with each run of draft_delta folded into one: the count depends on chunking."""
+    result = []
+    for event in events:
+        if not (event["type"] == "draft_delta" and result and result[-1] == "draft_delta"):
+            result.append(event["type"])
+    return result
+
+
+def drafted(events) -> dict[str, str]:
+    """The draft a client shows: deltas concatenated since the last draft_reset."""
+    draft = {"subject": "", "body": ""}
+    for event in events:
+        if event["type"] == "draft_reset":
+            draft = {"subject": "", "body": ""}
+        elif event["type"] == "draft_delta":
+            draft[event["field"]] += event["delta"]
+    return draft
+
+
 def test_order_of_a_ready_run(brief, make_ctx):
     events = collect(brief, make_ctx(FakeLLM(happy_script())))
-    assert [e["type"] for e in events] == [
+    assert collapsed_types(events) == [
         "started",
         "stage",
         "activity",
@@ -43,11 +63,54 @@ def test_order_of_a_ready_run(brief, make_ctx):
         "stage",
         "draft_reset",
         "draft_delta",
-        "draft_delta",
         "stage",
         "review",
         "completed",
     ]
+
+
+def test_draft_is_streamed_in_many_deltas_that_add_up_to_the_draft(brief, make_ctx):
+    events = collect(brief, make_ctx(FakeLLM(happy_script())))
+    deltas = [e for e in events if e["type"] == "draft_delta"]
+    assert len(deltas) > 4
+    assert drafted(events) == draft(1).model_dump()
+
+
+def test_streamed_draft_matches_the_stripped_final_draft(brief, make_ctx):
+    from core.schemas import Draft
+
+    padded = Draft(subject="  Warsaw team ", body="\n Hello there.\n\nSecond line. \n")
+    events = collect(brief, make_ctx(FakeLLM(happy_script(Writing=[padded]), chunk_chars=1)))
+    assert drafted(events) == {"subject": "Warsaw team", "body": "Hello there.\n\nSecond line."}
+    assert not any(e["delta"] == "" for e in events if e["type"] == "draft_delta")
+
+
+def test_rewrite_resets_and_streams_the_new_draft(brief, make_ctx):
+    llm = FakeLLM(happy_script(Writing=[draft(1), draft(2)], Review=[reject("x"), PASS]))
+    events = collect(brief, make_ctx(llm))
+    resets = [e["attempt"] for e in events if e["type"] == "draft_reset"]
+    assert resets == [1, 2]
+    assert drafted(events) == draft(2).model_dump()
+
+
+def test_draft_stream_repairs_a_partial_that_was_not_a_prefix():
+    from agents.copywriter import DraftStream
+    from core.schemas import Draft
+
+    sent: list = []
+    import agents.copywriter as copywriter
+
+    original, copywriter.emit = copywriter.emit, sent.append
+    try:
+        stream = DraftStream(attempt=1)
+        stream.update({"subject": "Hello wor"})
+        stream.update({"subject": "Hello"})  # shorter: ignored, nothing is taken back
+        stream.finish(Draft(subject="Help wanted", body="Body."))
+    finally:
+        copywriter.emit = original
+    events = [e.model_dump(by_alias=True) for e in sent]
+    assert [e["type"] for e in events] == ["draft_delta", "draft_reset", "draft_delta", "draft_delta"]
+    assert drafted(events) == {"subject": "Help wanted", "body": "Body."}
 
 
 def test_wire_format_is_camel_case(brief, make_ctx):
@@ -71,7 +134,7 @@ def test_wire_format_is_camel_case(brief, make_ctx):
         "offerFit",
         "fitReason",
     }
-    assert by_type["draft_delta"] == {**by_type["draft_delta"], "field": "body", "delta": "Body of draft 1."}
+    assert set(by_type["draft_delta"]) == {"type", "field", "delta", "runId", "sequence"}
     assert by_type["completed"]["usage"] == {
         "input": 400,
         "cachedInput": 80,

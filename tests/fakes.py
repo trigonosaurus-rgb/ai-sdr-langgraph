@@ -2,6 +2,7 @@
 
 from dataclasses import dataclass, field
 
+from langchain_core.utils.json import parse_partial_json
 from pydantic import BaseModel
 
 from core.config import Settings
@@ -30,19 +31,26 @@ class Call:
 
 
 class FakeLLM:
-    """Replies scripted per stage, consumed in order. An Exception in the script is raised."""
+    """Replies scripted per stage, consumed in order. An Exception in the script is raised.
+    When streamed, the reply's JSON arrives in chunk_chars pieces, like tokens."""
 
-    def __init__(self, script: dict[str, list[BaseModel | Exception]], usage: Usage = USAGE):
+    def __init__(self, script: dict[str, list[BaseModel | Exception]], usage: Usage = USAGE, chunk_chars: int = 4):
         self.script = {stage: list(replies) for stage, replies in script.items()}
         self.usage = usage
+        self.chunk_chars = chunk_chars
         self.calls: list[Call] = []
 
-    def generate(self, stage, schema, system, user):
+    def generate(self, stage, schema, system, user, on_partial=None):
         self.calls.append(Call(stage, system, user))
         reply = self.script[stage].pop(0)
         if isinstance(reply, Exception):
             raise reply
         assert isinstance(reply, schema)
+        if on_partial is not None:
+            text = reply.model_dump_json()
+            for end in range(self.chunk_chars, len(text) + self.chunk_chars, self.chunk_chars):
+                if isinstance(partial := parse_partial_json(text[:end]), dict):
+                    on_partial(partial)
         return LLMReply(parsed=reply, usage=self.usage, model="fake-model")
 
     def stages(self) -> list[str]:

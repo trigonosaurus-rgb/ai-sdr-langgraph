@@ -30,11 +30,11 @@ class GatedLLM(FakeLLM):
         super().__init__(script)
         self.entered, self.release = threading.Event(), threading.Event()
 
-    def generate(self, stage, schema, system, user):
+    def generate(self, stage, schema, system, user, on_partial=None):
         if stage == "Research":
             self.entered.set()
             assert self.release.wait(5), "test never released the gate"
-        return super().generate(stage, schema, system, user)
+        return super().generate(stage, schema, system, user, on_partial)
 
 
 @pytest.fixture
