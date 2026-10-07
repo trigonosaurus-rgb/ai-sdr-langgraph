@@ -12,8 +12,9 @@
 - `core/cli.py` — ручной запуск из терминала.
 - `server/app.py` — FastAPI: `POST /api/runs`, SSE `GET /api/runs/{id}/events` (повтор по `after` / `Last-Event-ID`), `POST /api/runs/{id}/cancel`, снимок `GET /api/runs/{id}`. `server/runs.py` — граф в пуле потоков, отмена, пробуждение SSE; `server/store.py` — SQLite (`runs`, `events`, `llm_calls`, `search_calls`), миграции через `PRAGMA user_version`, база по умолчанию `data/sdr.sqlite3` (`SDR_DB_PATH`).
 - `tests/` — pytest на фейковых LLM и поиске (`tests/fakes.py`), без сети; `tests/test_api.py` — API на фейковом графе.
-- `frontend/` — React 19 + TypeScript + Vite. **Не подключён к графу**: генерация отключена, данные в Examples вымышленные (Northstar). Детали — [frontend/README.md](frontend/README.md), требования к будущему API — [frontend/INTEGRATION.md](frontend/INTEGRATION.md).
-- `frontend/src/run.ts` — контракт событий и reducer для будущего streaming. Меняя событие, менять и `core/events.py`.
+- `frontend/` — React 19 + TypeScript + Vite, подключён к API через прокси `/api`. Данные в Examples пока вымышленные (Northstar). Детали — [frontend/README.md](frontend/README.md), контракт API — [frontend/INTEGRATION.md](frontend/INTEGRATION.md).
+- `frontend/src/run.ts` — контракт событий и reducer. Меняя событие, менять и `core/events.py`. `src/api.ts` — запросы, валидация брифа и событий, SSE; `src/useRun.ts` — запуск, отмена, восстановление после перезагрузки.
+- `tests/fake_server.py` — настоящий API на сценарном фейковом графе для e2e (компания со словом `slow` — медленный запуск, `broken` — сбой).
 
 ## Команды
 
@@ -21,9 +22,10 @@
 
 ```powershell
 # Frontend (из frontend/)
-npm.cmd run dev            # http://127.0.0.1:5173 — перед запуском проверить, не занят ли порт
+npm.cmd run dev:all        # API :8000 + Vite :5173; Generate — ПЛАТНЫЕ вызовы. Перед запуском проверить порты
+npm.cmd run dev            # только Vite :5173 (без API сервис показан недоступным)
 npm.cmd test               # Vitest
-npm.cmd run test:browser   # Playwright, нужен установленный Microsoft Edge
+npm.cmd run test:browser   # Playwright + Edge; сам поднимает фейковый API :8765 и Vite :5174, без платных вызовов
 npm.cmd run build          # tsc + vite build
 npm.cmd run format:check
 

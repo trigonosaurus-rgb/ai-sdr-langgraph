@@ -62,7 +62,7 @@ def default_manager() -> RunManager:
     settings = Settings.from_env()
     store = Store(os.getenv("SDR_DB_PATH") or "data/sdr.sqlite3")
 
-    def make_context(cancel: threading.Event) -> RunContext:
+    def make_context(brief: Brief, cancel: threading.Event) -> RunContext:
         return RunContext(settings=settings, llm=OpenAILLM(settings), search_client=TavilySearch(), cancel=cancel)
 
     return RunManager(

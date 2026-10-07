@@ -779,6 +779,14 @@ select {
   line-height: 1.6;
   color: var(--muted);
 }
+.form-note {
+  border-left: 2px solid var(--line);
+  padding: var(--space-2) var(--space-3);
+  color: var(--muted);
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  margin-bottom: var(--space-4);
+}
 .form-error {
   border-left: 2px solid var(--danger);
   padding: var(--space-2) var(--space-3);
@@ -879,6 +887,10 @@ select {
 }
 .timeline-step.failed {
   color: var(--danger);
+}
+.timeline-step.stopped .timeline-marker {
+  box-shadow: inset 0 0 0 1px var(--line);
+  color: var(--muted);
 }
 .timeline-step.failed .timeline-marker {
   color: var(--danger);
@@ -1573,5 +1585,41 @@ h1 {
     animation: none !important;
     transition: none !important;
     scroll-behavior: auto !important;
+  }
+}
+
+/* Brief validation and service status */
+.field-error {
+  font-size: var(--text-xs);
+  color: var(--danger);
+}
+.field [aria-invalid='true'] {
+  border-color: var(--danger);
+}
+fieldset:disabled {
+  opacity: 0.7;
+}
+.run-disclaimer.online .connection-dot {
+  background: var(--accent);
+}
+.run-disclaimer.working .connection-dot {
+  background: var(--warning);
+  animation: pulse-dot 1.2s ease-in-out infinite;
+}
+.run-disclaimer.offline .connection-dot,
+.run-disclaimer.error .connection-dot {
+  background: var(--danger);
+}
+.run-disclaimer.error {
+  color: var(--danger);
+}
+@keyframes pulse-dot {
+  50% {
+    opacity: 0.35;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .run-disclaimer.working .connection-dot {
+    animation: none;
   }
 }

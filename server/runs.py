@@ -17,7 +17,7 @@ from core.schemas import Brief
 from server.store import TERMINAL_EVENTS, Store
 
 log = logging.getLogger(__name__)
-ContextFactory = Callable[[threading.Event], RunContext]
+ContextFactory = Callable[[Brief, threading.Event], RunContext]
 Listener = tuple[asyncio.AbstractEventLoop, asyncio.Event]
 
 PUBLIC_CRASH_MESSAGE = "The run stopped unexpectedly. Nothing was finished."
@@ -116,7 +116,7 @@ class RunManager:
             self._notify(run_id)
 
         try:
-            result = run_sdr(brief, self._make_context(cancel), run_id=run_id, on_event=on_event)
+            result = run_sdr(brief, self._make_context(brief, cancel), run_id=run_id, on_event=on_event)
             self.store.finish_run(result, final[-1] if final else None)
         except Exception as error:  # the runner reports graph errors itself; this is infrastructure
             log.exception("run %s crashed outside the graph", run_id)

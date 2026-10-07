@@ -5,6 +5,7 @@ import {
   LoaderCircle,
   Search,
   ShieldCheck,
+  Square,
   Target,
 } from 'lucide-react'
 import { useEffect, useState } from 'react'
@@ -47,7 +48,9 @@ export function RunTimeline({
   const running = run.status === 'running',
     ready = run.status === 'ready',
     attention = run.status === 'needs_attention',
-    failed = run.status === 'error'
+    failed = run.status === 'error',
+    // Cancelled by the user: a deliberate stop, not an alarm.
+    cancelled = failed && run.failureReason === 'cancelled'
   const stageIndex = run.stage ? steps.indexOf(run.stage) : -1
   const durations = stageDurations(run)
   const live = useStageClock(run)
@@ -63,7 +66,7 @@ export function RunTimeline({
       <header className="column-header">
         <h2 id="run-title">Run</h2>
         <span
-          className={`status-badge ${ready ? 'success' : running ? 'working' : failed || attention ? 'failed' : ''}`}
+          className={`status-badge ${ready ? 'success' : running ? 'working' : cancelled ? '' : failed || attention ? 'failed' : ''}`}
         >
           {ready
             ? 'Ready for review'
@@ -74,7 +77,9 @@ export function RunTimeline({
                 : failed
                   ? run.failureReason === 'error'
                     ? 'Failed'
-                    : 'Stopped'
+                    : run.failureReason === 'cancelled'
+                      ? 'Cancelled'
+                      : 'Stopped'
                   : 'Not started'}
         </span>
       </header>
@@ -85,7 +90,9 @@ export function RunTimeline({
             broken = failed && index === stageIndex
           const Icon = icons[index]
           const state = broken
-            ? 'failed'
+            ? cancelled
+              ? 'stopped'
+              : 'failed'
             : done
               ? 'complete'
               : current
@@ -98,7 +105,9 @@ export function RunTimeline({
               aria-current={current ? 'step' : undefined}
             >
               <span className="timeline-marker">
-                {broken ? (
+                {broken && cancelled ? (
+                  <Square size={12} />
+                ) : broken ? (
                   <CircleAlert size={15} />
                 ) : done ? (
                   <Check size={15} strokeWidth={2.5} />

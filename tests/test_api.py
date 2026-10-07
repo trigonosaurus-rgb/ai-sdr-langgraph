@@ -50,7 +50,7 @@ def make_client(db_path, search):
         runs_per_hour: int = 100,
         now=None,
     ) -> TestClient:
-        def default_context(cancel: threading.Event) -> RunContext:
+        def default_context(brief, cancel: threading.Event) -> RunContext:
             return RunContext(
                 settings=Settings(), llm=llm_factory(), search_client=search, clock=FakeClock(), cancel=cancel
             )
@@ -189,7 +189,7 @@ def test_runs_left_running_by_a_previous_process_fail_on_startup(make_client, db
 
 
 def test_crash_outside_the_graph_still_ends_the_stream(make_client):
-    def broken_context(cancel):
+    def broken_context(brief, cancel):
         raise RuntimeError("TAVILY_API_KEY rejected")
 
     with make_client(make_context=broken_context) as client:

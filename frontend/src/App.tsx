@@ -14,10 +14,50 @@ import { ThemeControl } from './components/ThemeControl'
 import { Modal } from './components/Modal'
 import { Metrics } from './components/Metrics'
 import { BriefForm } from './components/BriefForm'
+import type { FormStatus } from './components/BriefForm'
 import { RunPanel } from './components/RunPanel'
 import { RunTimeline } from './components/RunTimeline'
 import { Examples } from './components/Examples'
-import { emptyBrief, emptyRun } from './run'
+import { emptyBrief } from './run'
+import { validateBrief } from './api'
+import type { BriefErrors } from './api'
+import { useRun } from './useRun'
+import type { RunSession } from './useRun'
+
+function formStatus(session: RunSession): FormStatus {
+  if (session.error) return { tone: 'error', text: session.error.message }
+  if (session.lostRun)
+    return {
+      tone: 'error',
+      text: 'Could not open the run. Reload the page to try again.',
+    }
+  if (session.running) {
+    if (session.connection === 'closed')
+      return {
+        tone: 'error',
+        text: 'Lost connection to the run. Reload the page to resume it.',
+      }
+    if (session.connection === 'reconnecting')
+      return { tone: 'working', text: 'Connection lost. Reconnecting…' }
+    return {
+      tone: 'working',
+      text: session.cancelling
+        ? 'Stopping before the next paid call…'
+        : 'Running on the server. Reloading the page keeps it.',
+    }
+  }
+  if (session.service === 'checking')
+    return { tone: 'working', text: 'Checking the service…' }
+  if (session.service === 'offline')
+    return {
+      tone: 'offline',
+      text: 'The service is unavailable, so generation is off.',
+    }
+  return {
+    tone: 'online',
+    text: 'Each run makes real model and search calls.',
+  }
+}
 
 function BrandMark() {
   return (
@@ -41,6 +81,12 @@ function currentPage() {
 export default function App() {
   const [page, setPage] = useState(currentPage)
   const [brief, setBrief] = useState(emptyBrief)
+  const [showErrors, setShowErrors] = useState(false)
+  const session = useRun(setBrief)
+  const errors: BriefErrors = {
+    ...session.error?.fieldErrors,
+    ...(showErrors ? validateBrief(brief) : {}),
+  }
   const [modal, setModal] = useState<'costs' | 'guide' | null>(null)
   const [mobileNav, setMobileNav] = useState(false)
   const mainRef = useRef<HTMLElement>(null)
@@ -91,7 +137,19 @@ export default function App() {
     setPage(next)
     setMobileNav(false)
   }
+  function generate() {
+    const found = Object.keys(validateBrief(brief))
+    if (found.length) {
+      setShowErrors(true)
+      document.getElementById(found[0])?.focus()
+      return
+    }
+    setShowErrors(false)
+    session.start(brief)
+  }
   function newBrief() {
+    session.reset()
+    setShowErrors(false)
     setBrief({ ...emptyBrief })
     navigate('compose')
     requestAnimationFrame(() => document.getElementById('company')?.focus())
@@ -212,19 +270,34 @@ export default function App() {
           ) : (
             <div className="workspace">
               <h1 className="sr-only">Compose outreach</h1>
-              <BriefForm brief={brief} onChange={setBrief} />
+              <BriefForm
+                brief={brief}
+                onChange={setBrief}
+                errors={errors}
+                locked={session.running || session.starting}
+                running={session.running}
+                starting={session.starting}
+                cancelling={session.cancelling}
+                canGenerate={session.service === 'online'}
+                status={formStatus(session)}
+                onGenerate={generate}
+                onCancel={session.cancel}
+              />
               <RunPanel
-                run={emptyRun}
+                run={session.run}
                 onExamples={() => navigate('examples')}
               />
-              <RunTimeline run={emptyRun} onCosts={() => setModal('costs')} />
+              <RunTimeline
+                run={session.run}
+                onCosts={() => setModal('costs')}
+              />
             </div>
           )}
         </main>
       </div>
       {modal === 'costs' && (
         <Modal title="Run costs" onClose={() => setModal(null)} wide>
-          <Metrics usage={null} />
+          <Metrics usage={session.run.usage} />
         </Modal>
       )}
       {modal === 'guide' && (
@@ -237,9 +310,9 @@ export default function App() {
             <div>
               <CircleHelp size={18} />
               <p>
-                <strong>Local development</strong>The live generation service is
-                not connected to this interface yet. Filling in a brief makes no
-                API calls and uses no credits.
+                <strong>Live generation</strong>Generate researches the company
+                with real web search and model calls on the server. One run at a
+                time per visitor, with an hourly limit. Nothing is sent for you.
               </p>
             </div>
             <div>
@@ -253,9 +326,9 @@ export default function App() {
             <div>
               <Wallet size={18} />
               <p>
-                <strong>Usage and access</strong>Actual token usage, cost
-                estimates and trial access will be supplied by the server. No
-                trial runs are available or deducted in this local interface.
+                <strong>Usage</strong>Token counts come from the provider's
+                response metadata. Cost estimates are not calculated yet and
+                show as unknown, not zero.
               </p>
             </div>
           </div>

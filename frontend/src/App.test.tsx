@@ -1,6 +1,6 @@
 import { fireEvent, render, screen, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { beforeEach, describe, expect, it } from 'vitest'
+import { beforeEach, describe, expect, it, vi } from 'vitest'
 import App from './App'
 import { Metrics } from './components/Metrics'
 import { RunPanel } from './components/RunPanel'
@@ -9,8 +9,10 @@ import { emptyRun } from './run'
 beforeEach(() => {
   history.replaceState(null, '', '/')
 })
+const posts = () =>
+  vi.mocked(fetch).mock.calls.filter(([, init]) => init?.method === 'POST')
 describe('workspace', () => {
-  it('starts with an empty brief, no sample result and no fabricated usage', () => {
+  it('starts with an empty brief, no sample result and no fabricated usage', async () => {
     localStorage.setItem(
       'ai-sdr.sample-draft.v1',
       JSON.stringify({
@@ -25,10 +27,16 @@ describe('workspace', () => {
     expect(screen.queryByText('Northstar')).not.toBeInTheDocument()
     expect(screen.queryByLabelText('Email body')).not.toBeInTheDocument()
     expect(screen.queryByText('Total tokens')).not.toBeInTheDocument()
+    // The test has no backend, so the service reads as unavailable and nothing can start.
+    expect(
+      await screen.findByText(
+        'The service is unavailable, so generation is off.',
+      ),
+    ).toBeInTheDocument()
     expect(
       screen.getByRole('button', { name: 'Generate outreach' }),
     ).toBeDisabled()
-    expect(fetch).not.toHaveBeenCalled()
+    expect(posts()).toEqual([])
   })
   it('moves costs into a dismissible dialog and treats missing usage as unknown', async () => {
     const user = userEvent.setup()
@@ -43,7 +51,7 @@ describe('workspace', () => {
     )
     expect(screen.queryByRole('dialog')).not.toBeInTheDocument()
   })
-  it('lets the user edit and clear the brief without launching a fake run', async () => {
+  it('lets the user edit and clear the brief without launching a run', async () => {
     const user = userEvent.setup()
     render(<App />)
     await user.type(screen.getByLabelText('Company name'), 'Real company')
@@ -51,7 +59,7 @@ describe('workspace', () => {
     expect(screen.queryByLabelText('Email body')).not.toBeInTheDocument()
     await user.click(screen.getByRole('button', { name: /New outreach/ }))
     expect(screen.getByLabelText('Company name')).toHaveValue('')
-    expect(fetch).not.toHaveBeenCalled()
+    expect(posts()).toEqual([])
   })
   it('keeps unknown search cost from producing a falsely complete total', () => {
     render(

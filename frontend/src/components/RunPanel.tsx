@@ -113,9 +113,15 @@ export function RunPanel({
         tabIndex={0}
       >
         {run.error && (
-          <div className="form-error" role="alert">
-            {run.error} Any partial draft below is incomplete and has not passed
-            review.
+          <div
+            className={
+              run.failureReason === 'cancelled' ? 'form-note' : 'form-error'
+            }
+            role="alert"
+          >
+            {run.error}
+            {(draft.subject || draft.body) &&
+              ' The partial draft below is incomplete and has not passed review.'}
           </div>
         )}
         {attention && run.issues.length > 0 && (

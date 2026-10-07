@@ -15,7 +15,7 @@ A LangGraph workflow: `researcher → strategist → copywriter ⇄ reviewer`.
 
 Every run ends as `ready`, `needs_attention` (a draft exists but did not pass review, or the offer looks like a poor fit) or `failed`. A model or parsing error never becomes the result and never counts as a passed review. Prompts live in versioned files under `prompts/`, and each result records the prompt versions and the token usage reported by the API for each call.
 
-The React frontend in [`frontend/`](frontend/README.md) is not connected to the backend yet; its Examples use fictional data.
+The React frontend in [`frontend/`](frontend/README.md) talks to a FastAPI server (`server/`): it starts a run, follows its events over SSE as the draft is written, can cancel it and restores it after a reload. Runs, events and paid calls are stored in SQLite. Its Examples still use fictional data.
 
 ## Setup
 
@@ -33,11 +33,23 @@ OPENAI_API_KEY=...
 TAVILY_API_KEY=...
 OPENAI_MODEL_NAME=gpt-5.4-mini   # optional
 SDR_MAX_REWRITES=2               # optional
+SDR_DB_PATH=data/sdr.sqlite3     # optional, API storage
+SDR_RUNS_PER_HOUR=5              # optional, per client address
+SDR_MAX_CONCURRENT_RUNS=4        # optional, for the whole server
+SDR_CLIENT_SALT=...              # optional, salt for hashed client addresses
 ```
 
 ## Run
 
-From the terminal. This makes paid OpenAI and Tavily calls:
+In the browser (API on :8000, Vite on :5173). Generate makes paid OpenAI and Tavily calls:
+
+```powershell
+cd frontend
+npm.cmd ci
+npm.cmd run dev:all
+```
+
+From the terminal, also paid:
 
 ```powershell
 .venv\Scripts\python.exe -m core.cli --company "Acme" --website acme.com `
