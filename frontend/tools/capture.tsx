@@ -5,12 +5,10 @@ import { RunPanel } from '../src/components/RunPanel'
 import { RunTimeline } from '../src/components/RunTimeline'
 import { emptyRun, reduceRun, steps } from '../src/run'
 import type { RunEvent } from '../src/run'
-import { sampleBrief, draft, sources, sampleUsage } from './fixtures'
+import { sampleBrief, draft, sources, sampleUsage, strategy } from './fixtures'
 import '../src/styles.css'
 import './capture.css'
 
-const strategy =
-  'Start with Northstar’s guided onboarding. Connect it to your ability to carry customer context from sales into onboarding. Ask whether manual steps exist: this is a hypothesis to explore, not a confirmed pain point.'
 const id = 'recorded-fictional-example'
 // Illustrative server timings in ms since the run started; the animation runs faster.
 const timing = {
@@ -57,13 +55,15 @@ function Capture() {
         message: 'Connecting guided onboarding to your offer.',
         elapsedMs: timing.Strategy,
       })
-      later(2100, { type: 'evidence', sources, strategy })
+      later(1650, { type: 'evidence', sources })
+      later(2100, { type: 'strategy', strategy })
       later(3100, {
         type: 'stage',
         stage: 'Writing',
         message: 'Writing a short, grounded first message.',
         elapsedMs: timing.Writing,
       })
+      later(3200, { type: 'draft_reset', attempt: 1 })
       later(3300, {
         type: 'draft_delta',
         field: 'subject',
@@ -80,8 +80,16 @@ function Capture() {
         message: 'Checking claims, tone and the final question.',
         elapsedMs: timing.Review,
       })
+      later(end + 1700, {
+        type: 'review',
+        attempt: 1,
+        passed: true,
+        issues: [],
+      })
       later(end + 1800, {
         type: 'completed',
+        outcome: 'ready',
+        issues: [],
         usage: sampleUsage,
         elapsedMs: timing.end,
       })
@@ -98,7 +106,8 @@ function Capture() {
           sequence: 10 + index,
         }),
       )
-      dispatch({ type: 'evidence', sources, strategy, runId: id, sequence: 20 })
+      dispatch({ type: 'evidence', sources, runId: id, sequence: 19 })
+      dispatch({ type: 'strategy', strategy, runId: id, sequence: 20 })
       dispatch({
         type: 'draft_delta',
         field: 'subject',
@@ -115,6 +124,8 @@ function Capture() {
       })
       dispatch({
         type: 'completed',
+        outcome: 'ready',
+        issues: [],
         usage: sampleUsage,
         elapsedMs: timing.end,
         runId: id,

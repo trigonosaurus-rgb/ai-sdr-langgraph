@@ -33,7 +33,8 @@ export function RunPanel({
   const [notice, setNotice] = useState('')
   const draft = edited?.id === run.id ? edited.draft : run.draft
   const running = run.status === 'running',
-    ready = run.status === 'ready'
+    attention = run.status === 'needs_attention',
+    finished = run.status === 'ready' || attention
   function changeTab(event: KeyboardEvent<HTMLButtonElement>, index: number) {
     const next =
       event.key === 'ArrowRight'
@@ -117,16 +118,23 @@ export function RunPanel({
             review.
           </div>
         )}
+        {attention && run.issues.length > 0 && (
+          <div className="form-error" role="status">
+            Check before sending: {run.issues.join(' ')}
+          </div>
+        )}
         {tab === 'email' ? (
           draft.body || draft.subject ? (
             <>
               <div className="draft-meta">
                 <span>
                   <span className="tiny-dot" />
-                  {ready
+                  {finished
                     ? edited
                       ? 'Edited by you'
-                      : 'Ready for your review'
+                      : attention
+                        ? 'Needs your attention'
+                        : 'Ready for your review'
                     : run.status === 'error'
                       ? 'Incomplete draft'
                       : 'Writing as the response arrives'}
@@ -143,14 +151,14 @@ export function RunPanel({
                 <input
                   id="subject"
                   value={draft.subject}
-                  readOnly={!ready}
+                  readOnly={!finished}
                   onChange={(e) => edit('subject', e.target.value)}
                 />
                 <div className="editor-rule" />
                 <label className="sr-only" htmlFor="email-body">
                   Email body
                 </label>
-                {ready ? (
+                {finished ? (
                   <textarea
                     id="email-body"
                     value={draft.body}
@@ -164,7 +172,7 @@ export function RunPanel({
                   </div>
                 )}
               </div>
-              {ready && (
+              {finished && (
                 <div className="editor-actions">
                   <button className="primary-button" onClick={copy}>
                     <Copy size={15} />
@@ -261,7 +269,15 @@ export function RunPanel({
         ) : (
           <div className="strategy-content">
             {run.strategy ? (
-              <p className="empty-copy">{run.strategy}</p>
+              <>
+                <p className="empty-copy">{run.strategy.observation}</p>
+                <p className="empty-copy">{run.strategy.offerLink}</p>
+                {run.strategy.hypotheses.map((hypothesis) => (
+                  <p className="empty-copy" key={hypothesis}>
+                    Hypothesis, not confirmed: {hypothesis}
+                  </p>
+                ))}
+              </>
             ) : (
               <div className="empty-state">
                 <h3>No approach yet</h3>

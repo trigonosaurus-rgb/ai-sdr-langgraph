@@ -1,81 +1,52 @@
-# AI SDR (Sales Development Representative) 🤖
+# AI SDR
 
-> **New frontend:** a React + TypeScript workspace is available in [`frontend/`](frontend/README.md). From the repository root, run `cd frontend`, `npm.cmd ci`, then `npm.cmd run dev` and open http://127.0.0.1:5173. Compose starts with an empty brief; Examples contains two inline video walkthroughs with fictional data. Run costs opens a separate dialog. Live generation, actual usage and trial access are not connected yet. To run the existing Python agents, use Streamlit as described below.
+Researches a company and drafts a personalized cold email for a human to review. You give the company, its website, your offer, the recipient's role, the language and the tone; you get facts with source links and verbatim quotes, an approach that separates facts from hypotheses, and a reviewed draft.
 
-An advanced multi-agent system built with **LangGraph**, **LangChain**, and **Streamlit** that automates the process of researching companies, formulating sales strategies, and drafting highly personalized cold emails.
+Work in progress. The plan and stage status are in [ROADMAP.md](ROADMAP.md).
 
-## 🌟 Features
+## How it works
 
-- **Multi-Agent Architecture**: Utilizes LangGraph to orchestrate multiple specialized AI agents working together in a stateful workflow.
-- **Automated Research**: Integrates with the **Tavily Search API** to gather real-time data, recent news, and product information about a target company.
-- **Early Termination (Validation)**: If the target company does not exist or valid information cannot be found, the workflow efficiently terminates early to save API costs and time.
-- **Strategic Analysis**: Analyzes the collected data to identify pain points and craft a compelling B2B value proposition.
-- **Smart Copywriting**: Generates concise, personalized cold emails tailored to the specific prospect without using generic marketing clichés.
-- **Iterative Quality Control (Spam Filter)**: Features an internal "Spam Checker" node that evaluates the generated email. If the email sounds too promotional or generic, the graph loops back, providing constructive feedback to the Copywriter agent until the email passes the filter (up to a 3-attempt limit).
-- **Interactive UI**: A clean, real-time web interface built with **Streamlit** that streams the workflow's thought process, agent outputs, and final results.
+A LangGraph workflow: `researcher → strategist → copywriter ⇄ reviewer`.
 
-## 🏗️ Architecture Workflow
+1. **Research** runs three Tavily searches (the official site, the open web, recent news) and extracts facts with structured output. A fact is kept only if its quote is found verbatim in the cited page. The run stops honestly when the results describe a different company than the given website, or when there is too little to write a specific email.
+2. **Strategy** picks one observation grounded in the facts, links it to the offer, lists assumptions as hypotheses and judges how well the offer fits.
+3. **Writing** drafts the subject and body in the chosen language and tone. A rewrite sees the previous draft and the review issues.
+4. **Review** checks language, tone, grounding, spamminess and placeholders. The number of rewrites is configurable.
 
-The workflow is managed by a `StateGraph` that passes a typed state dictionary (`SDRState`) between the following nodes:
+Every run ends as `ready`, `needs_attention` (a draft exists but did not pass review, or the offer looks like a poor fit) or `failed`. A model or parsing error never becomes the result and never counts as a passed review. Prompts live in versioned files under `prompts/`, and each result records the prompt versions and the token usage reported by the API for each call.
 
-1. **Researcher Agent**: Takes a company name/URL, searches the web, and summarizes the company's core business and target audience. 
-   - *Conditional Edge*: If no valid company information is found, the workflow ends immediately.
-2. **Strategist Agent**: Reads the research summary and formulates a tailored sales approach and pain points.
-3. **Copywriter Agent**: Drafts the cold email based on the strategy.
-4. **Spam Checker Node**: Validates the email for "salesy" language. 
-   - *Conditional Edge*: If flagged as spam, it routes back to the Copywriter with specific feedback for a rewrite. If it passes (or reaches the maximum number of attempts), the workflow terminates successfully.
+The React frontend in [`frontend/`](frontend/README.md) is not connected to the backend yet; its Examples use fictional data.
 
-## 🛠️ Tech Stack
+## Setup
 
-- **Python 3.10+**
-- **[LangGraph](https://python.langchain.com/)**: For stateful, multi-actor LLM orchestration.
-- **[LangChain](https://www.langchain.com/)**: For LLM interactions, prompts, and tool integration.
-- **[Streamlit](https://streamlit.io/)**: For the interactive web application front-end.
-- **[OpenAI API](https://openai.com/)**: Core LLM engine (default: `gpt-5.4-mini`).
-- **[Tavily API](https://tavily.com/)**: Optimized internet search for AI agents.
+```powershell
+python -m venv .venv
+.venv\Scripts\python.exe -m pip install -r requirements-dev.txt
+```
 
-## 🚀 Setup and Installation
+Create `.env` in the repository root:
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/your-username/ai-sdr-langgraph.git
-   cd ai-sdr-langgraph
-   ```
+```env
+OPENAI_API_KEY=...
+TAVILY_API_KEY=...
+OPENAI_MODEL_NAME=gpt-5.4-mini   # optional
+SDR_MAX_REWRITES=2               # optional
+```
 
-2. **Create a virtual environment (optional but recommended)**
-   ```bash
-   python -m venv venv
-   # On Windows
-   venv\Scripts\activate
-   # On Mac/Linux
-   source venv/bin/activate
-   ```
+## Run
 
-3. **Install dependencies**
-   ```bash
-   pip install -r requirements.txt
-   ```
+From the terminal. This makes paid OpenAI and Tavily calls:
 
-4. **Configure Environment Variables**
-   Create a `.env` file in the root directory and add your API keys:
-   ```env
-   OPENAI_API_KEY=your_openai_api_key_here
-   TAVILY_API_KEY=your_tavily_api_key_here
-   OPENAI_MODEL_NAME=gpt-5.4-mini  # Optional: customize your preferred OpenAI model
-   ```
+```powershell
+.venv\Scripts\python.exe -m core.cli --company "Acme" --website acme.com `
+  --offer "Contract data engineers for analytics teams" --recipient "VP of Engineering" `
+  --language English --tone Direct
+```
 
-5. **Run the Application**
-   ```bash
-   streamlit run app.py
-   ```
+Progress goes to stderr, the draft to stdout, and the full result with facts, attempts, prompt versions and usage to `runs/<run_id>.json`.
 
-## 💡 Usage
+## Tests
 
-1. Open the Streamlit web interface in your browser (usually `http://localhost:8501`).
-2. In the sidebar, enter the **Company Name** and **Website URL** of your target client.
-3. Click **Launch Agents 🚀**.
-4. Watch the agents execute their tasks in real-time. You can expand each node's output to see intermediate thoughts, the strategy formulated, and any spam-check feedback loops.
-5. Review the final, ready-to-send personalized cold email!
-
----
-*Developed as a portfolio project showcasing modern AI automation and multi-agent workflows.*
+```powershell
+.venv\Scripts\python.exe -m pytest     # fake LLM and search, no network
+```

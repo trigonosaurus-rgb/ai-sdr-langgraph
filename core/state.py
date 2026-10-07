@@ -1,25 +1,19 @@
-from typing import TypedDict, Annotated
-import operator
+from typing import Annotated, TypedDict
 
-class SDRState(TypedDict):
-    # Input data
-    company_url: str
-    company_name: str
-    
-    # Collected information (Researcher)
-    company_info: str
-    search_queries: list[str]
-    research_iterations: int
-    is_valid_company: bool
-    
-    # Sales strategy (Strategist)
-    strategy: str
-    
-    # Email draft (Copywriter)
-    email_draft: str
-    is_spam: bool
-    spam_feedback: str
-    copywriter_iterations: int
-    
-    # Message log (optional for LangGraph)
-    messages: Annotated[list, operator.add]
+from core.schemas import Attempt, Brief, FailureReason, Research, Strategy
+
+
+def merge(left: dict, right: dict) -> dict:
+    return {**left, **right}
+
+
+class SDRState(TypedDict, total=False):
+    brief: Brief
+    research: Research
+    # Set by research when the run cannot continue honestly.
+    stop: FailureReason
+    strategy: Strategy
+    # Drafts in order; the last one is current. Nodes return the whole list.
+    attempts: list[Attempt]
+    # Prompt name -> version used in this run.
+    prompt_versions: Annotated[dict[str, str], merge]

@@ -4,13 +4,15 @@
 
 ## Структура
 
-- `core/graph.py` — LangGraph: `researcher → strategist → copywriter ⇄ spam_checker`. Состояние — `core/state.py`, LLM — `core/llm.py` (OpenAI через LangChain, модель из `OPENAI_MODEL_NAME`, по умолчанию `gpt-5.4-mini`).
-- `agents/` — узлы графа. Поиск — Tavily.
-- `app.py` — Streamlit, временный способ реального запуска до появления API.
+- `core/graph.py` — LangGraph: `researcher → strategist → copywriter ⇄ reviewer`, ранний выход после research. `core/runner.py` запускает граф, нумерует события и решает итог (`ready` / `needs_attention` / `failed`).
+- `core/schemas.py` — бриф, structured output (Pydantic), результат запуска. `core/config.py` — модели и reasoning effort по этапам, лимит переписываний (`OPENAI_MODEL_NAME`, `SDR_MAX_REWRITES`).
+- `core/llm.py` — structured output через LangChain + usage из метаданных API; `core/search.py` — Tavily; `core/context.py` — зависимости запуска и журнал всех платных вызовов, включая неудачные.
+- `core/events.py` — события, зеркало `frontend/src/run.ts`; `tests/test_events.py` проверяет совпадение типов.
+- `agents/` — узлы графа (фабрики `make_*(ctx)`). `prompts/*.md` — промпты с `version` во front matter.
+- `core/cli.py` — ручной запуск до появления API.
+- `tests/` — pytest на фейковых LLM и поиске (`tests/fakes.py`), без сети.
 - `frontend/` — React 19 + TypeScript + Vite. **Не подключён к графу**: генерация отключена, данные в Examples вымышленные (Northstar). Детали — [frontend/README.md](frontend/README.md), требования к будущему API — [frontend/INTEGRATION.md](frontend/INTEGRATION.md).
-- `frontend/src/run.ts` — прототип контракта событий и reducer для будущего streaming, не финальная схема API.
-
-Бриф во фронтенде (`company, website, offer, recipient, language, tone`) шире, чем вход графа (`company_name, company_url`): offer/recipient/language/tone бэкенд пока не принимает.
+- `frontend/src/run.ts` — контракт событий и reducer для будущего streaming. Меняя событие, менять и `core/events.py`.
 
 ## Команды
 
@@ -24,14 +26,15 @@ npm.cmd run test:browser   # Playwright, нужен установленный M
 npm.cmd run build          # tsc + vite build
 npm.cmd run format:check
 
-# Python
-.venv\Scripts\python.exe -m streamlit run app.py   # ПЛАТНЫЕ вызовы OpenAI и Tavily
+# Python (из корня)
+.venv\Scripts\python.exe -m pytest                  # без сети
+.venv\Scripts\python.exe -m core.cli --help         # запуск — ПЛАТНЫЕ вызовы OpenAI и Tavily
 ```
 
 ## Правила
 
 - Ключи лежат в корневом `.env`. Не выводить его содержимое, не копировать ключи во frontend; провайдерские ключи остаются только на сервере.
-- Не запускать реальные агенты (Streamlit, граф, вызовы OpenAI/Tavily) без явного согласия пользователя — это стоит денег.
+- Не запускать реальные агенты (CLI, граф, вызовы OpenAI/Tavily) без явного согласия пользователя — это стоит денег.
 - Не показывать выдуманные цифры как реальные: неизвестные токены/стоимость — прочерк, не ноль. Вымышленные данные явно помечать.
 - Визуальные изменения фронтенда проверять в браузере (Playwright MCP) на десктопе и мобильной ширине, в светлой и тёмной теме.
 - Коммитить после каждого законченного шага с понятным сообщением; пушить и создавать PR — по согласованию. Резервные копии — через git, не zip-архивы.

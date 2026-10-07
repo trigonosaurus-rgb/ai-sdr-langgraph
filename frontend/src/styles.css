@@ -656,6 +656,9 @@ select {
 .strategy-content > .empty-copy {
   animation: rise 320ms ease-out both;
 }
+.strategy-content > .empty-copy + .empty-copy {
+  margin-top: 12px;
+}
 .editor-actions {
   animation: rise 320ms 120ms ease-out both;
 }

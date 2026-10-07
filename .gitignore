@@ -33,3 +33,6 @@ frontend/playwright-report/
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Local CLI run results
+runs/

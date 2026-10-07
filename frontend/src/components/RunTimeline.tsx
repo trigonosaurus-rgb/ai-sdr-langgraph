@@ -46,6 +46,7 @@ export function RunTimeline({
 }) {
   const running = run.status === 'running',
     ready = run.status === 'ready',
+    attention = run.status === 'needs_attention',
     failed = run.status === 'error'
   const stageIndex = run.stage ? steps.indexOf(run.stage) : -1
   const durations = stageDurations(run)
@@ -62,20 +63,24 @@ export function RunTimeline({
       <header className="column-header">
         <h2 id="run-title">Run</h2>
         <span
-          className={`status-badge ${ready ? 'success' : running ? 'working' : failed ? 'failed' : ''}`}
+          className={`status-badge ${ready ? 'success' : running ? 'working' : failed || attention ? 'failed' : ''}`}
         >
           {ready
             ? 'Ready for review'
             : running
               ? 'In progress'
-              : failed
+              : attention
                 ? 'Needs attention'
-                : 'Not started'}
+                : failed
+                  ? run.failureReason === 'error'
+                    ? 'Failed'
+                    : 'Stopped'
+                  : 'Not started'}
         </span>
       </header>
       <ol className="timeline" aria-label="Workflow progress">
         {steps.map((label, index) => {
-          const done = ready || index < stageIndex,
+          const done = ready || attention || index < stageIndex,
             current = running && index === stageIndex,
             broken = failed && index === stageIndex
           const Icon = icons[index]

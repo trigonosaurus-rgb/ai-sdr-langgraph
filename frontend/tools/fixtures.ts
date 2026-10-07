@@ -1,4 +1,4 @@
-import type { Brief, Draft, Source } from '../src/types'
+import type { Brief, Draft, Source, Strategy } from '../src/types'
 import type { RunUsage } from '../src/run'
 export const sampleUsage: RunUsage = {
   input: null,
@@ -27,6 +27,9 @@ export const draft: Draft = {
 export const sources: Source[] = [
   {
     id: 1,
+    claim:
+      'Northstar is a project management platform for growing creative teams.',
+    url: 'https://northstar.example/product',
     title: 'Built for growing teams',
     path: 'northstar.example / product',
     excerpt:
@@ -34,6 +37,8 @@ export const sources: Source[] = [
   },
   {
     id: 2,
+    claim: 'Northstar offers guided onboarding for business customers.',
+    url: 'https://northstar.example/customers',
     title: 'A more personal start',
     path: 'northstar.example / customers',
     excerpt:
@@ -41,9 +46,23 @@ export const sources: Source[] = [
   },
   {
     id: 3,
+    claim: 'Northstar connects with CRM and communication tools.',
+    url: 'https://northstar.example/integrations',
     title: 'Connecting the customer journey',
     path: 'northstar.example / integrations',
     excerpt:
       'The sample product connects with CRM and communication tools. These materials do not establish whether Northstar has manual handoff problems or how much time a proposed solution could save.',
   },
 ]
+export const strategy: Strategy = {
+  observation: 'Northstar offers guided onboarding for new business customers.',
+  factIds: [2],
+  offerLink:
+    'Automations that carry customer context from sales into onboarding could shorten that guided setup.',
+  hypotheses: [
+    'Customer context may be re-entered by hand between sales and onboarding.',
+  ],
+  angle: 'Open with their guided onboarding and ask about the handoff.',
+  offerFit: 'good',
+  fitReason: 'They run a hands-on onboarding process for business customers.',
+}
