@@ -49,6 +49,9 @@ def main() -> int:
     parser.add_argument("--language", default="English", choices=["English", "Russian"])
     parser.add_argument("--tone", default="Direct", choices=["Direct", "Warm"])
     args = parser.parse_args()
+    for stream in (sys.stdout, sys.stderr):
+        if not stream.isatty():  # piped output on Windows defaults to a legacy code page
+            stream.reconfigure(encoding="utf-8")
 
     try:
         brief = Brief(**vars(args))
