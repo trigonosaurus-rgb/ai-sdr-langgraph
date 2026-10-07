@@ -54,10 +54,10 @@ export function mockApi(routes: Record<string, Route | Reply>) {
 
 export const serviceStatus = (
   visitor: Partial<ServiceStatus['visitor']> = {},
-  paused: string | null = null,
+  { paused = false, developer = false } = {},
 ): ServiceStatus => ({
-  paused: paused !== null,
-  resumesAt: paused,
+  paused,
+  developer,
   visitor: {
     runsPerDay: 3,
     runsToday: 0,

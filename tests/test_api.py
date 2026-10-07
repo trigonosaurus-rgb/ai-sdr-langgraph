@@ -12,7 +12,7 @@ from core.context import RunContext
 from core.pricing import PRICES, ModelPrice, PriceTable
 from core.schemas import Brief, LLMCall, SearchCall, Usage
 from server.app import create_app
-from server.runs import PUBLIC_CRASH_MESSAGE, MonthlyBudget, RunLimitError, RunManager, VisitorQuota
+from server.runs import PAUSED_MESSAGE, PUBLIC_CRASH_MESSAGE, MonthlyBudget, RunLimitError, RunManager, VisitorQuota
 from server.store import MIGRATIONS, Store
 from fakes import PASS, FakeClock, FakeLLM, draft, happy_script, reject
 
@@ -390,18 +390,16 @@ def test_no_runs_is_a_real_zero(make_client):
     assert not totals["incomplete"]
 
 
-def test_monthly_search_credits_pause_the_service_until_the_1st(make_client, db_path):
+def test_monthly_search_credits_stop_the_service_for_visitors(make_client, db_path):
     seed_run(db_path, "other", "someone-else", credits=748)
     with make_client(now=lambda: NOON, budget=MonthlyBudget(model_usd=100, search_credits=750)) as client:
         response = client.post("/api/runs", json=BRIEF)
         status = client.get("/api/status").json()
 
     assert response.status_code == 429
-    assert response.json()["detail"] == (
-        "The service is paused by the developer until November 1: this month's demo budget is used up."
-    )
-    assert response.headers["retry-after"] == str((24 * 24 + 12) * 3600)  # Oct 7 noon to Nov 1
-    assert status["paused"] and status["resumesAt"] == "2026-11-01T00:00:00+00:00"
+    assert response.json()["detail"] == PAUSED_MESSAGE == "The service is temporarily stopped by the developer."
+    assert "retry-after" not in response.headers  # the developer decides when it is back
+    assert status["paused"] and not status["developer"]
 
 
 def test_monthly_model_budget_pauses_the_service(make_client, db_path):
@@ -441,6 +439,52 @@ def test_budget_stops_a_run_before_the_call_that_would_exceed_it(make_client):
 
     assert llm.stages() == ["Research", "Strategy", "Writing"]
     assert events[-1]["type"] == "failed" and events[-1]["reason"] == "budget_exhausted"
-    assert "paused by the developer" in events[-1]["message"]
+    assert "temporarily stopped by the developer" in events[-1]["message"]
     assert events[-1]["stage"] == "Review"
-    assert again.status_code == 429 and "paused by the developer" in again.json()["detail"]
+    assert again.status_code == 429 and again.json()["detail"] == PAUSED_MESSAGE
+
+
+# --- the developer has no limits
+
+DEV = {"X-Developer-Key": "dev-secret"}
+
+
+@pytest.fixture
+def developer_key(monkeypatch):
+    monkeypatch.setenv("SDR_DEVELOPER_KEY", "dev-secret")
+
+
+def test_developer_key_skips_the_visitor_quota(make_client, developer_key):
+    with make_client(quota=VisitorQuota(per_day=1, per_month=1)) as client:
+        read_events(client, start(client))
+        visitor = client.post("/api/runs", json=BRIEF)
+        wrong = client.post("/api/runs", json=BRIEF, headers={"X-Developer-Key": "guess"})
+        developer = client.post("/api/runs", json=BRIEF, headers=DEV)
+        read_events(client, developer.json()["runId"])
+        statuses = [client.get("/api/status", headers=h).json()["developer"] for h in ({}, {"X-Developer-Key": "guess"}, DEV)]
+
+    assert visitor.status_code == 429 and wrong.status_code == 429
+    assert developer.status_code == 201
+    assert statuses == [False, False, True]
+
+
+def test_developer_runs_while_the_service_is_stopped_and_their_spending_counts(make_client, db_path, developer_key):
+    seed_run(db_path, "other", "someone-else", credits=748)
+    budget = MonthlyBudget(model_usd=100, search_credits=750)
+    with make_client(now=lambda: NOON, budget=budget, prices=PRICED) as client:
+        assert client.post("/api/runs", json=BRIEF).status_code == 429
+        run_id = client.post("/api/runs", json=BRIEF, headers=DEV).json()["runId"]
+        events = read_events(client, run_id)  # not stopped before its paid calls either
+        spent = client.get("/api/usage", params={"period": "24h"}).json()["budget"]["spentSearchCredits"]
+
+    assert events[-1]["type"] == "completed"
+    assert spent == 748 + 3
+
+
+def test_without_a_configured_key_nobody_is_the_developer(make_client, monkeypatch):
+    monkeypatch.delenv("SDR_DEVELOPER_KEY", raising=False)
+    with make_client(quota=VisitorQuota(per_day=1, per_month=1)) as client:
+        read_events(client, start(client))
+        response = client.post("/api/runs", json=BRIEF, headers={"X-Developer-Key": ""})
+        status = client.get("/api/status", headers={"X-Developer-Key": ""}).json()
+    assert response.status_code == 429 and not status["developer"]

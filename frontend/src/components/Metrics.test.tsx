@@ -142,7 +142,7 @@ describe('run costs', () => {
     ).toBeInTheDocument()
     expect(
       screen.getByText(
-        'Service budget this month: $0.12 of $5.00 for models and 9 of 750 search credits, shared by all visitors. Resets on November 1.',
+        'Service budget this month: $0.12 of $5.00 for models and 9 of 750 search credits, shared by all visitors.',
         { exact: false },
       ),
     ).toBeInTheDocument()

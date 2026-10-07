@@ -22,6 +22,7 @@ ContextFactory = Callable[[Brief, threading.Event], RunContext]
 Listener = tuple[asyncio.AbstractEventLoop, asyncio.Event]
 
 PUBLIC_CRASH_MESSAGE = "The run stopped unexpectedly. Nothing was finished."
+PAUSED_MESSAGE = "The service is temporarily stopped by the developer."
 
 
 @dataclass(frozen=True)
@@ -50,8 +51,8 @@ class BudgetStatus(CamelModel):
     spent_model_usd: float
     search_credits: float
     spent_search_credits: float
-    paused: bool  # a new run does not fit until the month resets
-    resets_at: str  # the 1st of next month, 00:00 UTC
+    paused: bool  # a new run does not fit: visitors cannot start runs
+    resets_at: str  # when this month's spending counters start over (the 1st, 00:00 UTC)
 
 
 class VisitorStatus(CamelModel):
@@ -78,10 +79,6 @@ def wait_text(seconds: float) -> str:
         return f"{minutes} min"
     hours = math.ceil(seconds / 3600)
     return f"{hours} h" if hours < 48 else f"{math.ceil(seconds / 86400)} days"
-
-
-def month_day(moment: datetime) -> str:
-    return f"{moment:%B} {moment.day}"
 
 
 class RunLimitError(Exception):
@@ -184,13 +181,8 @@ class RunManager:
         if self.store.count_running(client) > 0:
             raise RunLimitError("A run from your address is already in progress. Wait for it or cancel it.")
         now = self.store.now()
-        if not self._fits(1):
-            resume = next_month(now)
-            raise RunLimitError(
-                f"The service is paused by the developer until {month_day(resume)}: "
-                "this month's demo budget is used up.",
-                retry_after=max(1, math.ceil((resume - now).total_seconds())),
-            )
+        if not self._fits(1):  # no retry time: the developer decides when the service is back
+            raise RunLimitError(PAUSED_MESSAGE)
         for (limit, window, times), period in zip(self._quota_windows(client), ("today", "this month")):
             if len(times) >= limit:
                 wait = (times[-limit] + window - now).total_seconds()
@@ -203,17 +195,19 @@ class RunManager:
 
     # --- runs
 
-    def start(self, brief: Brief, client: str) -> str:
+    def start(self, brief: Brief, client: str, *, developer: bool = False) -> str:
         """Start a run or raise RunLimitError: one run at a time and the visitor quota per client,
-        within the service's monthly budget."""
+        within the service's monthly budget. The developer has no limits; their spending still
+        counts toward the budget."""
         run_id = uuid4().hex
         cancel = threading.Event()
         with self._start_lock:
-            self._check_limits(client)
+            if not developer:
+                self._check_limits(client)
             self.store.create_run(run_id, brief, client)
         with self._lock:
             self._cancels[run_id] = cancel
-        self._executor.submit(self._execute, run_id, brief, cancel)
+        self._executor.submit(self._execute, run_id, brief, cancel, developer)
         return run_id
 
     def cancel(self, run_id: str) -> bool:
@@ -225,7 +219,7 @@ class RunManager:
         cancel.set()
         return True
 
-    def _execute(self, run_id: str, brief: Brief, cancel: threading.Event) -> None:
+    def _execute(self, run_id: str, brief: Brief, cancel: threading.Event, developer: bool = False) -> None:
         final: list[dict] = []
 
         def on_event(event: dict) -> None:
@@ -243,7 +237,8 @@ class RunManager:
 
         try:
             ctx = self._make_context(brief, cancel)
-            ctx.before_call, ctx.on_record = self._check_call, on_record
+            ctx.before_call = None if developer else self._check_call
+            ctx.on_record = on_record
             result = run_sdr(brief, ctx, run_id=run_id, on_event=on_event)
             self.store.finish_run(result, final[-1] if final else None)
         except Exception as error:  # the runner reports graph errors itself; this is infrastructure

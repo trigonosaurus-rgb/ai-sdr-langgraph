@@ -56,8 +56,16 @@ function formStatus(session: RunSession): FormStatus {
       text: 'The service is unavailable, so generation is off.',
     }
   const status = session.status
+  if (status?.developer)
+    return {
+      tone: 'online',
+      text: `Developer access: no limits.${status.paused ? ' The service is stopped for visitors.' : ''}`,
+    }
   if (status?.paused)
-    return { tone: 'offline', text: 'Paused by the developer.' }
+    return {
+      tone: 'offline',
+      text: 'Temporarily stopped by the developer.',
+    }
   const visitor = status?.visitor
   if (visitor?.nextRunAt) {
     const period =
@@ -299,17 +307,16 @@ export default function App() {
                 cancelling={session.cancelling}
                 canGenerate={
                   session.service === 'online' &&
-                  !session.status?.paused &&
-                  !session.status?.visitor.nextRunAt
+                  (!!session.status?.developer ||
+                    (!session.status?.paused &&
+                      !session.status?.visitor.nextRunAt))
                 }
                 status={formStatus(session)}
                 notice={
+                  session.service === 'online' &&
                   session.status?.paused &&
-                  session.service === 'online' && (
-                    <ServicePaused
-                      resumesAt={session.status.resumesAt}
-                      onExamples={() => navigate('examples')}
-                    />
+                  !session.status.developer && (
+                    <ServicePaused onExamples={() => navigate('examples')} />
                   )
                 }
                 onGenerate={generate}
@@ -317,7 +324,7 @@ export default function App() {
               />
               <RunPanel
                 run={session.run}
-                paused={session.status?.paused}
+                paused={session.status?.paused && !session.status.developer}
                 onExamples={() => navigate('examples')}
               />
               <RunTimeline

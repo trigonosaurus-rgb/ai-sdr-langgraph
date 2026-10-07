@@ -2,7 +2,7 @@ import { act, render, screen, waitFor, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { beforeEach, describe, expect, it } from 'vitest'
 import App from './App'
-import { parseEvent, validateBrief } from './api'
+import { captureDeveloperKey, parseEvent, validateBrief } from './api'
 import { emptyBrief } from './run'
 import type { RunEvent } from './run'
 import { FakeEventSource, mockApi, online, serviceStatus } from './test/server'
@@ -329,20 +329,23 @@ describe('live run', () => {
     )
   })
 
-  it('shows a large notice when the developer paused the service', async () => {
+  it('shows a large notice, without a date, when the developer stopped the service', async () => {
     mockApi({
-      'GET /api/status': {
-        body: serviceStatus({}, '2026-11-01T00:00:00+00:00'),
-      },
+      'GET /api/status': { body: serviceStatus({}, { paused: true }) },
     })
     render(<App />)
     expect(
       await screen.findByRole('heading', {
-        name: 'Service paused by the developer',
+        name: 'Service temporarily stopped by the developer',
       }),
     ).toBeInTheDocument()
     expect(
-      screen.getByText(/live generation is off until November 1/),
+      screen.getByText(
+        'Live generation is off for now. The recorded examples show how a run works.',
+      ),
+    ).toBeInTheDocument()
+    expect(
+      screen.getByText('Temporarily stopped by the developer.'),
     ).toBeInTheDocument()
     expect(
       screen.getByRole('button', { name: 'Generate outreach' }),
@@ -352,13 +355,13 @@ describe('live run', () => {
     ).toBeInTheDocument()
   })
 
-  it('pauses the service when the budget runs out during a run', async () => {
+  it('stops the service when the budget runs out during a run', async () => {
     const user = userEvent.setup()
     let ended = false
     mockApi({
       'GET /api/status': () => ({
         body: ended
-          ? serviceStatus({ runsToday: 1 }, '2026-11-01T00:00:00+00:00')
+          ? serviceStatus({ runsToday: 1 }, { paused: true })
           : serviceStatus(),
       }),
       'POST /api/runs': { status: 201, body: { runId: 'r9' } },
@@ -375,7 +378,7 @@ describe('live run', () => {
           type: 'failed',
           reason: 'budget_exhausted',
           message:
-            "The service was paused by the developer: this month's demo budget ran out during the run. Nothing was finished.",
+            'The service was temporarily stopped by the developer during the run. Nothing was finished.',
           stage: 'Writing',
           elapsedMs: 900,
         }),
@@ -385,8 +388,44 @@ describe('live run', () => {
     expect(within(rail).getByText('Stopped')).toBeInTheDocument()
     expect(
       await screen.findByRole('heading', {
-        name: 'Service paused by the developer',
+        name: 'Service temporarily stopped by the developer',
       }),
     ).toBeInTheDocument()
+  })
+
+  it('gives the developer access without limits through the key in the link', async () => {
+    location.hash = '#developer=dev-secret'
+    captureDeveloperKey()
+    expect(location.hash).toBe('#compose') // the key does not stay in the address
+    const fetch = mockApi({
+      'GET /api/status': {
+        body: serviceStatus(
+          {
+            runsToday: 3,
+            runsThisMonth: 10,
+            nextRunAt: '2026-10-08T12:00:00+00:00',
+          },
+          { paused: true, developer: true },
+        ),
+      },
+    })
+    render(<App />)
+    expect(
+      await screen.findByText(
+        'Developer access: no limits. The service is stopped for visitors.',
+      ),
+    ).toBeInTheDocument()
+    expect(
+      screen.queryByRole('heading', { name: /stopped by the developer/ }),
+    ).not.toBeInTheDocument()
+    expect(
+      screen.getByRole('button', { name: 'Generate outreach' }),
+    ).toBeEnabled()
+    const [, init] = fetch.mock.calls[0]
+    expect(init?.headers).toMatchObject({ 'X-Developer-Key': 'dev-secret' })
+
+    location.hash = '#developer='
+    captureDeveloperKey()
+    expect(localStorage.getItem('ai-sdr.developer-key.v1')).toBeNull()
   })
 })

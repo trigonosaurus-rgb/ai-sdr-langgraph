@@ -11,7 +11,6 @@ import type {
   RunCost,
   UsageTotals,
 } from '../api'
-import { monthDay } from '../format'
 import type { RunState } from '../run'
 
 const number = (value: number | null | undefined) =>
@@ -116,7 +115,7 @@ function StepTable({ cost }: { cost: RunCost }) {
 }
 
 function budgetLine(budget: BudgetStatus) {
-  return `Service budget this month: ${dollars(budget.spentModelUsd)} of ${dollars(budget.modelUsd)} for models and ${number(budget.spentSearchCredits)} of ${number(budget.searchCredits)} search credits, shared by all visitors. Resets on ${monthDay(budget.resetsAt)}.`
+  return `Service budget this month: ${dollars(budget.spentModelUsd)} of ${dollars(budget.modelUsd)} for models and ${number(budget.spentSearchCredits)} of ${number(budget.searchCredits)} search credits, shared by all visitors.`
 }
 
 export function Metrics({

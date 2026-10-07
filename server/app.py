@@ -5,6 +5,7 @@ uvicorn server.app:app --port 8000
 
 import asyncio
 import hashlib
+import hmac
 import os
 import threading
 from collections.abc import AsyncIterator, Callable
@@ -68,8 +69,8 @@ class RunCost(ApiModel):
 class ServiceStatus(ApiModel):
     """Whether the caller can start a run now: the service's monthly budget and their own quota."""
 
-    paused: bool
-    resumes_at: str | None  # when a paused service opens again
+    paused: bool  # visitors cannot start runs
+    developer: bool  # the caller is the developer: no limits apply
     visitor: VisitorStatus
 
 
@@ -116,6 +117,12 @@ def client_id(request: Request) -> str:
     return hashlib.sha256(f"{salt}:{host}".encode()).hexdigest()[:32]
 
 
+def is_developer(key: str | None) -> bool:
+    """The developer is recognised by SDR_DEVELOPER_KEY, sent as X-Developer-Key; unset means nobody."""
+    expected = os.getenv("SDR_DEVELOPER_KEY", "")
+    return bool(expected and key) and hmac.compare_digest(key.encode(), expected.encode())
+
+
 def create_app(make_manager: Callable[[], RunManager] = default_manager) -> FastAPI:
     @asynccontextmanager
     async def lifespan(app: FastAPI) -> AsyncIterator[None]:
@@ -139,17 +146,17 @@ def create_app(make_manager: Callable[[], RunManager] = default_manager) -> Fast
         return record
 
     Run = Annotated[RunRecord, Depends(get_run)]
+    DeveloperKey = Annotated[str | None, Header(alias="X-Developer-Key")]
 
     @app.get("/api/health")
     def health() -> dict[str, str]:
         return {"status": "ok"}
 
     @app.get("/api/status", response_model=ServiceStatus)
-    def read_status(request: Request, manager: Manager) -> ServiceStatus:
-        budget = manager.budget_status()
+    def read_status(request: Request, manager: Manager, developer_key: DeveloperKey = None) -> ServiceStatus:
         return ServiceStatus(
-            paused=budget.paused,
-            resumes_at=budget.resets_at if budget.paused else None,
+            paused=manager.budget_status().paused,
+            developer=is_developer(developer_key),
             visitor=manager.visitor_status(client_id(request)),
         )
 
@@ -159,9 +166,13 @@ def create_app(make_manager: Callable[[], RunManager] = default_manager) -> Fast
         response_model=RunCreated,
         responses={429: {"description": "A run is in progress, the visitor quota is used or the service is paused"}},
     )
-    def create_run(brief: Brief, request: Request, manager: Manager) -> RunCreated:
+    def create_run(
+        brief: Brief, request: Request, manager: Manager, developer_key: DeveloperKey = None
+    ) -> RunCreated:
         try:
-            return RunCreated(run_id=manager.start(brief, client_id(request)))
+            return RunCreated(
+                run_id=manager.start(brief, client_id(request), developer=is_developer(developer_key))
+            )
         except RunLimitError as error:
             headers = {"Retry-After": str(error.retry_after)} if error.retry_after else None
             raise HTTPException(status.HTTP_429_TOO_MANY_REQUESTS, str(error), headers=headers) from error

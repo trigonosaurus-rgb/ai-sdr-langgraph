@@ -13,9 +13,7 @@ from core.state import SDRState
 
 log = logging.getLogger(__name__)
 EventHandler = Callable[[dict], None]
-BUDGET_MESSAGE = (
-    "The service was paused by the developer: this month's demo budget ran out during the run. Nothing was finished."
-)
+BUDGET_MESSAGE = "The service was temporarily stopped by the developer during the run. Nothing was finished."
 
 
 def _sum[N: (int, float)](values: list[N | None]) -> N | None:

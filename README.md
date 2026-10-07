@@ -40,6 +40,7 @@ SDR_MONTHLY_MODEL_USD=5          # optional, model spending per calendar month (
 SDR_MONTHLY_SEARCH_CREDITS=750   # optional, Tavily credits per calendar month (UTC)
 SDR_MAX_CONCURRENT_RUNS=4        # optional, for the whole server
 SDR_CLIENT_SALT=...              # optional, salt for hashed client addresses
+SDR_DEVELOPER_KEY=...            # optional, open /#developer=<key> once for runs without limits
 ```
 
 ## Run

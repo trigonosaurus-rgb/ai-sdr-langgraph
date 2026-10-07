@@ -106,9 +106,10 @@ export interface BudgetStatus {
   resetsAt: string
 }
 // Whether this visitor can start a run: the service's budget and their own quota (per address).
+// The developer, recognised by their key, has no limits.
 export interface ServiceStatus {
-  paused: boolean
-  resumesAt: string | null
+  paused: boolean // stopped for visitors; no date, the developer decides when it is back
+  developer: boolean
   visitor: {
     runsPerDay: number
     runsToday: number // last 24 hours
@@ -138,12 +139,47 @@ export class ApiError extends Error {
 
 const unavailable = 'The service is unavailable. Try again in a minute.'
 
+// The developer opens the site once with #developer=<SDR_DEVELOPER_KEY>. The fragment never
+// reaches the server; the key is kept in this browser and sent as X-Developer-Key.
+// #developer= with no key forgets it.
+const DEVELOPER_KEY = 'ai-sdr.developer-key.v1'
+
+export function captureDeveloperKey() {
+  const match = /^#developer=(.*)$/.exec(location.hash)
+  if (!match) return
+  try {
+    const key = decodeURIComponent(match[1])
+    if (key) localStorage.setItem(DEVELOPER_KEY, key)
+    else localStorage.removeItem(DEVELOPER_KEY)
+  } catch {
+    // Storage blocked: developer access is not kept.
+  }
+  history.replaceState(
+    null,
+    '',
+    `${location.pathname}${location.search}#compose`,
+  )
+}
+
+function developerHeaders(): Record<string, string> {
+  try {
+    const key = localStorage.getItem(DEVELOPER_KEY)
+    return key ? { 'X-Developer-Key': key } : {}
+  } catch {
+    return {}
+  }
+}
+
 async function request<T>(path: string, init?: RequestInit): Promise<T> {
   let response: Response
   try {
     response = await fetch(path, {
       ...init,
-      headers: { 'Content-Type': 'application/json', ...init?.headers },
+      headers: {
+        'Content-Type': 'application/json',
+        ...developerHeaders(),
+        ...init?.headers,
+      },
     })
   } catch {
     throw new ApiError(unavailable, 0)
