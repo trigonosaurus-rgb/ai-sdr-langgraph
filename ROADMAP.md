@@ -58,7 +58,7 @@
 - Strategy возвращает `offer_fit`; при `poor` письмо пишется, но итог — `needs_attention`.
 - Промпты — `prompts/*.md` с версией; usage каждого вызова (и неудачного) и кредиты Tavily пишутся в результат.
 - Контракт событий расширен и синхронизирован с `frontend/src/run.ts`: `activity`, `strategy`, `draft_reset`, `review`, исход в `completed`, причина в `failed`; время этапа накапливается между повторами при переписывании.
-- Streamlit заменён на `python -m core.cli`. Файл `app.py` и пакеты `streamlit`, `langchain-community`, `langchain-tavily` удалить вручную (`requirements.txt` уже без них).
+- Streamlit заменён на `python -m core.cli`. `app.py` удалён; пакеты `streamlit`, `langchain-community`, `langchain-tavily` убраны из `requirements.txt`.
 - `temperature` больше не передаётся; по этапам задаётся `reasoning_effort` (проверить на реальном запуске, что `gpt-5.4-mini` его принимает).
 
 ## Этап 3 — API и интеграция
