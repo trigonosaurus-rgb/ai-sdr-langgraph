@@ -183,13 +183,51 @@ export function RunPanel({
               )}
             </>
           ) : (
-            <div className="empty-state">
-              <h3>{running ? 'Researching the company' : 'No draft yet'}</h3>
-              <p>
-                {running
-                  ? 'Progress is shown in the Run column. The draft appears here as it is written.'
-                  : 'Fill in the brief and generate. The research, the approach and an editable draft will appear here.'}
-              </p>
+            <div className="draft-empty">
+              <div className="empty-state">
+                <h3>{running ? 'Researching the company' : 'No draft yet'}</h3>
+                <p>
+                  {running
+                    ? 'Progress is shown in the Run column. The draft appears here as it is written.'
+                    : 'Fill in the brief and generate. Each run produces three things:'}
+                </p>
+              </div>
+              {running ? (
+                // Shown only while something is actually loading.
+                <div className="draft-skeleton loading" aria-hidden="true">
+                  <span className="skeleton-subject" />
+                  <span className="skeleton-rule" />
+                  <span style={{ width: '92%' }} />
+                  <span style={{ width: '84%' }} />
+                  <span style={{ width: '60%' }} />
+                </div>
+              ) : (
+                <ol className="outcome-list" aria-label="What a run produces">
+                  <li>
+                    <Search size={16} />
+                    <span>
+                      <strong>Sourced facts</strong>
+                      What the company does, each point linked to the page it
+                      came from.
+                    </span>
+                  </li>
+                  <li>
+                    <Target size={16} />
+                    <span>
+                      <strong>An approach</strong>
+                      Why your offer fits them. Unconfirmed needs are marked as
+                      guesses.
+                    </span>
+                  </li>
+                  <li>
+                    <Mail size={16} />
+                    <span>
+                      <strong>A short email</strong>
+                      Editable, ready to copy. Nothing is sent for you.
+                    </span>
+                  </li>
+                </ol>
+              )}
               {onExamples && !running && (
                 <button className="text-button" onClick={onExamples}>
                   See an example run

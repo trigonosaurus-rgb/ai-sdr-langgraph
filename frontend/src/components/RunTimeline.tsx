@@ -7,6 +7,7 @@ import {
   ShieldCheck,
   Target,
 } from 'lucide-react'
+import { useEffect, useState } from 'react'
 import { stageDurations, steps } from '../run'
 import type { RunState } from '../run'
 
@@ -15,6 +16,26 @@ const seconds = (value: number | null | undefined) =>
   value == null
     ? '—'
     : `${new Intl.NumberFormat('en-US', { maximumFractionDigits: 1, minimumFractionDigits: 1 }).format(value)} s`
+
+// Ticks while a stage is active. The count starts from the local moment the stage event
+// arrived and is anchored to the server's stage start, so it never invents finished timings.
+function useStageClock(run: RunState) {
+  const running = run.status === 'running'
+  const [clock, setClock] = useState({ key: '', at: 0, now: 0 })
+  const key = `${run.id}:${run.stage}`
+  useEffect(() => {
+    if (!running) return
+    const at = performance.now()
+    setClock({ key, at, now: at })
+    const timer = window.setInterval(
+      () => setClock((value) => ({ ...value, now: performance.now() })),
+      100,
+    )
+    return () => window.clearInterval(timer)
+  }, [running, key])
+  if (!running || clock.key !== key) return null
+  return (clock.now - clock.at) / 1000
+}
 
 export function RunTimeline({
   run,
@@ -28,6 +49,14 @@ export function RunTimeline({
     failed = run.status === 'error'
   const stageIndex = run.stage ? steps.indexOf(run.stage) : -1
   const durations = stageDurations(run)
+  const live = useStageClock(run)
+  const currentStart = run.stage ? run.stageStartedMs[run.stage] : undefined
+  const total = running
+    ? live != null && currentStart != null
+      ? currentStart / 1000 + live
+      : null
+    : (run.usage?.durationSeconds ??
+      (run.endedMs != null ? run.endedMs / 1000 : null))
   return (
     <section className="run-rail" aria-labelledby="run-title">
       <header className="column-header">
@@ -76,7 +105,11 @@ export function RunTimeline({
               </span>
               <span className="timeline-label">{label}</span>
               <span className="timeline-time">
-                {done || broken ? seconds(durations[label]) : ''}
+                {done || broken
+                  ? seconds(durations[label])
+                  : current && live != null
+                    ? seconds(live)
+                    : ''}
               </span>
             </li>
           )
@@ -104,7 +137,7 @@ export function RunTimeline({
         <dl>
           <div>
             <dt>Total time</dt>
-            <dd>{seconds(run.usage?.durationSeconds)}</dd>
+            <dd>{seconds(total)}</dd>
           </div>
           <div>
             <dt>Estimated cost</dt>

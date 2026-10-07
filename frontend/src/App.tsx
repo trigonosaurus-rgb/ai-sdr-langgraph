@@ -24,7 +24,7 @@ function BrandMark() {
     <svg className="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
       <rect width="40" height="40" rx="9" />
       <path
-        d="m11 27 9-16 9 16M15 22h10"
+        d="M14 26 26 14M17 14h9v9"
         fill="none"
         strokeWidth="3.5"
         strokeLinecap="round"

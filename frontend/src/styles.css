@@ -1,4 +1,5 @@
-@import '@fontsource-variable/dm-sans';
+@import '@fontsource-variable/geist';
+@import '@fontsource-variable/newsreader/opsz.css';
 
 /* Spacing, type and radius come from these scales; avoid one-off values. */
 :root {
@@ -24,7 +25,10 @@
   --rail-width: 264px;
   --header-height: 56px;
 
-  font-family: 'DM Sans Variable', system-ui, sans-serif;
+  /* Geist for the tool, Newsreader for the message itself. */
+  --font-ui: 'Geist Variable', system-ui, sans-serif;
+  --font-letter: 'Newsreader Variable', Georgia, serif;
+  font-family: var(--font-ui);
   font-size: var(--text-md);
   line-height: 1.5;
   font-synthesis: none;
@@ -68,7 +72,7 @@
   --faint: #9a9a95;
   --line: #353535;
   --soft-line: #2c2c2c;
-  --accent: #bef264;
+  --accent: #a8c77a;
   --primary: #bef264;
   --primary-edge: #bef264;
   --primary-hover: #d0f58a;
@@ -575,6 +579,86 @@ select {
   line-height: 1.6;
   max-width: 560px;
 }
+.draft-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-6);
+}
+.outcome-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  max-width: 520px;
+  margin: 0;
+  padding: 0;
+}
+.outcome-list li {
+  display: flex;
+  gap: var(--space-3);
+  align-items: flex-start;
+  color: var(--muted);
+  line-height: 1.5;
+}
+.outcome-list svg {
+  margin-top: 2px;
+  padding: 6px;
+  width: 30px;
+  height: 30px;
+  border-radius: var(--radius-sm);
+  background: var(--hover);
+  color: var(--accent);
+}
+.outcome-list strong {
+  display: block;
+  color: var(--text);
+  font-weight: 600;
+}
+.draft-skeleton {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  max-width: 640px;
+}
+.draft-skeleton span {
+  display: block;
+  height: 10px;
+  border-radius: 5px;
+  background: var(--subtle);
+}
+.draft-skeleton .skeleton-subject {
+  width: 48%;
+  height: 16px;
+  border-radius: 6px;
+  background: var(--soft-line);
+}
+.draft-skeleton .skeleton-rule {
+  height: 1px;
+  margin: var(--space-1) 0 var(--space-2);
+  background: var(--soft-line);
+}
+.draft-skeleton .skeleton-gap {
+  margin-top: var(--space-4);
+}
+.draft-skeleton.loading span:not(.skeleton-rule) {
+  background: linear-gradient(
+    90deg,
+    var(--subtle) 0%,
+    var(--hover) 40%,
+    var(--subtle) 80%
+  );
+  background-size: 250% 100%;
+  animation: shimmer 1.6s ease-in-out infinite;
+}
+.email-editor,
+.source-detail,
+.strategy-content > .empty-copy {
+  animation: rise 320ms ease-out both;
+}
+.editor-actions {
+  animation: rise 320ms 120ms ease-out both;
+}
 .text-button {
   display: inline-flex;
   align-items: center;
@@ -628,9 +712,10 @@ select {
   border: 0;
   background: none;
   border-radius: 0;
-  font-size: var(--text-xl);
-  font-weight: 600;
-  letter-spacing: -0.2px;
+  font-family: var(--font-letter);
+  font-size: 26px;
+  font-weight: 500;
+  letter-spacing: -0.3px;
 }
 .editor-rule {
   height: 1px;
@@ -644,8 +729,9 @@ select {
   border-radius: 0;
   padding: 0;
   background: none;
-  font-size: 16px;
-  line-height: 1.7;
+  font-family: var(--font-letter);
+  font-size: 19px;
+  line-height: 1.6;
   min-height: 240px;
   resize: vertical;
   white-space: pre-wrap;
@@ -658,6 +744,7 @@ select {
   background: var(--accent);
   vertical-align: text-bottom;
   margin-left: 2px;
+  animation: blink 1s steps(1) infinite;
 }
 .editor-actions {
   display: flex;
@@ -741,8 +828,21 @@ select {
   width: 1px;
   background: var(--line);
 }
-.timeline-step.complete:not(:last-child)::after {
+.timeline-step:not(:last-child)::before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  left: 13.5px;
+  top: calc(50% + 17px);
+  height: calc(100% - 34px);
+  width: 1px;
   background: var(--primary-edge);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 450ms ease;
+}
+.timeline-step.complete:not(:last-child)::before {
+  transform: scaleY(1);
 }
 .timeline-marker {
   display: grid;
@@ -759,6 +859,7 @@ select {
 .timeline-step.complete .timeline-marker {
   background: var(--primary);
   color: var(--on-primary);
+  animation: marker-pop 320ms cubic-bezier(0.3, 1.5, 0.6, 1);
 }
 .timeline-step.current {
   color: var(--text);
@@ -768,6 +869,10 @@ select {
   background: var(--hover);
   color: var(--accent);
   box-shadow: inset 0 0 0 1px var(--primary-edge);
+  animation: marker-pulse 1.6s ease-out infinite;
+}
+.timeline-step.current .timeline-time {
+  color: var(--accent);
 }
 .timeline-step.failed {
   color: var(--danger);
@@ -1138,6 +1243,45 @@ h1 {
     transform: rotate(360deg);
   }
 }
+@keyframes marker-pop {
+  from {
+    transform: scale(0.6);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes marker-pulse {
+  0% {
+    box-shadow:
+      inset 0 0 0 1px var(--primary-edge),
+      0 0 0 0 color-mix(in srgb, var(--primary) 55%, transparent);
+  }
+  100% {
+    box-shadow:
+      inset 0 0 0 1px var(--primary-edge),
+      0 0 0 8px transparent;
+  }
+}
+@keyframes shimmer {
+  from {
+    background-position: 100% 0;
+  }
+  to {
+    background-position: -150% 0;
+  }
+}
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
 
 /* Native superelliptic corners; plain rounded corners elsewhere. Squircles read smaller, so radii grow. */
 @supports (corner-shape: squircle) {
@@ -1230,7 +1374,8 @@ h1 {
     min-height: 40px;
     font-size: var(--text-sm);
   }
-  .workspace .timeline-step:not(:last-child)::after {
+  .workspace .timeline-step:not(:last-child)::after,
+  .workspace .timeline-step:not(:last-child)::before {
     display: none;
   }
   .workspace .timeline-marker {
@@ -1369,12 +1514,18 @@ h1 {
   h1 {
     font-size: 24px;
   }
+  /* 16px or more stops iOS from zooming into focused fields. */
   input,
   textarea,
-  select,
-  .email-editor input,
-  .email-editor textarea {
+  select {
     font-size: 16px;
+  }
+  .email-editor input {
+    font-size: 22px;
+  }
+  .email-editor textarea,
+  .streaming-draft {
+    font-size: 17px;
   }
   .draft-meta {
     flex-wrap: wrap;
