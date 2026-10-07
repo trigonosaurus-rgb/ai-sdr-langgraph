@@ -44,13 +44,22 @@ def db_path(tmp_path):
 
 @pytest.fixture
 def make_client(db_path, search):
-    def make(llm_factory=lambda: FakeLLM(happy_script()), make_context=None) -> TestClient:
+    def make(
+        llm_factory=lambda: FakeLLM(happy_script()),
+        make_context=None,
+        runs_per_hour: int = 100,
+        now=None,
+    ) -> TestClient:
         def default_context(cancel: threading.Event) -> RunContext:
             return RunContext(
                 settings=Settings(), llm=llm_factory(), search_client=search, clock=FakeClock(), cancel=cancel
             )
 
-        app = create_app(lambda: RunManager(Store(db_path), make_context or default_context))
+        def make_manager() -> RunManager:
+            store = Store(db_path, now=now) if now else Store(db_path)
+            return RunManager(store, make_context or default_context, runs_per_hour=runs_per_hour)
+
+        app = create_app(make_manager)
         return TestClient(app)
 
     return make
@@ -197,3 +206,36 @@ def test_migrations_apply_once(db_path):
     Store(db_path).close()
     store = Store(db_path)
     assert store.schema_version == len(MIGRATIONS)
+
+
+def test_one_run_at_a_time_per_address(make_client):
+    llm = GatedLLM(happy_script())
+    with make_client(llm_factory=lambda: llm) as client:
+        first = start(client)
+        assert llm.entered.wait(5)
+        busy = client.post("/api/runs", json=BRIEF)
+        llm.release.set()
+        read_events(client, first)
+        after = client.post("/api/runs", json=BRIEF)
+
+    assert busy.status_code == 429 and "already in progress" in busy.json()["detail"]
+    assert "retry-after" not in busy.headers
+    assert after.status_code == 201
+
+
+def test_hourly_limit_per_address(make_client):
+    from datetime import UTC, datetime, timedelta
+
+    clock = {"now": datetime(2026, 10, 7, 12, 0, tzinfo=UTC)}
+    with make_client(runs_per_hour=2, now=lambda: clock["now"]) as client:
+        for minutes in (0, 10):
+            clock["now"] = datetime(2026, 10, 7, 12, minutes, tzinfo=UTC)
+            read_events(client, start(client))
+        clock["now"] += timedelta(minutes=5)
+        limited = client.post("/api/runs", json=BRIEF)
+        clock["now"] = datetime(2026, 10, 7, 13, 0, 1, tzinfo=UTC)  # the 12:00 run left the window
+        allowed = client.post("/api/runs", json=BRIEF)
+
+    assert limited.status_code == 429 and "2 runs per hour" in limited.json()["detail"]
+    assert limited.headers["retry-after"] == str(45 * 60)
+    assert allowed.status_code == 201

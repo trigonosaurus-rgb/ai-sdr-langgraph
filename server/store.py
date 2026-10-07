@@ -110,6 +110,9 @@ class Store:
         with self._lock:
             self._db.close()
 
+    def now(self) -> datetime:
+        return self._now()
+
     def _timestamp(self) -> str:
         return self._now().isoformat(timespec="milliseconds")
 
@@ -234,15 +237,20 @@ class Store:
             rows = self._db.execute("SELECT id FROM runs WHERE status = 'running'").fetchall()
         return [row["id"] for row in rows]
 
-    def count_runs(self, client: str, *, since: datetime | None = None, running: bool = False) -> int:
-        query, params = "SELECT COUNT(*) FROM runs WHERE client = ?", [client]
-        if since is not None:
-            query += " AND created_at >= ?"
-            params.append(since.isoformat(timespec="milliseconds"))
-        if running:
-            query += " AND status = 'running'"
+    def count_running(self, client: str) -> int:
         with self._lock:
-            return self._db.execute(query, params).fetchone()[0]
+            return self._db.execute(
+                "SELECT COUNT(*) FROM runs WHERE client = ? AND status = 'running'", (client,)
+            ).fetchone()[0]
+
+    def run_times(self, client: str, since: datetime) -> list[datetime]:
+        """Start times of the client's runs since the given moment, oldest first."""
+        with self._lock:
+            rows = self._db.execute(
+                "SELECT created_at FROM runs WHERE client = ? AND created_at >= ? ORDER BY created_at",
+                (client, since.isoformat(timespec="milliseconds")),
+            ).fetchall()
+        return [datetime.fromisoformat(row["created_at"]) for row in rows]
 
     # --- events
 

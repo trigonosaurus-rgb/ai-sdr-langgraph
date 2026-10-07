@@ -22,7 +22,7 @@ from core.context import RunContext
 from core.llm import OpenAILLM
 from core.schemas import Brief
 from core.search import TavilySearch
-from server.runs import RunManager
+from server.runs import RunLimitError, RunManager
 from server.store import TERMINAL_EVENTS, RunRecord, Store
 
 WAKE_TIMEOUT_S = 15  # re-check the store even without a wake-up
@@ -65,7 +65,12 @@ def default_manager() -> RunManager:
     def make_context(cancel: threading.Event) -> RunContext:
         return RunContext(settings=settings, llm=OpenAILLM(settings), search_client=TavilySearch(), cancel=cancel)
 
-    return RunManager(store, make_context, max_workers=int(os.getenv("SDR_MAX_CONCURRENT_RUNS") or 4))
+    return RunManager(
+        store,
+        make_context,
+        max_workers=int(os.getenv("SDR_MAX_CONCURRENT_RUNS") or 4),
+        runs_per_hour=int(os.getenv("SDR_RUNS_PER_HOUR") or 5),
+    )
 
 
 def client_id(request: Request) -> str:
@@ -103,9 +108,18 @@ def create_app(make_manager: Callable[[], RunManager] = default_manager) -> Fast
     def health() -> dict[str, str]:
         return {"status": "ok"}
 
-    @app.post("/api/runs", status_code=status.HTTP_201_CREATED, response_model=RunCreated)
+    @app.post(
+        "/api/runs",
+        status_code=status.HTTP_201_CREATED,
+        response_model=RunCreated,
+        responses={429: {"description": "A run is already in progress or the hourly limit is reached"}},
+    )
     def create_run(brief: Brief, request: Request, manager: Manager) -> RunCreated:
-        return RunCreated(run_id=manager.start(brief, client_id(request)))
+        try:
+            return RunCreated(run_id=manager.start(brief, client_id(request)))
+        except RunLimitError as error:
+            headers = {"Retry-After": str(error.retry_after)} if error.retry_after else None
+            raise HTTPException(status.HTTP_429_TOO_MANY_REQUESTS, str(error), headers=headers) from error
 
     @app.get("/api/runs/{run_id}", response_model=RunSnapshot)
     def read_run(run: Run) -> RunSnapshot:

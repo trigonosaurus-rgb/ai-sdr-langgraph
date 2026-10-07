@@ -2,10 +2,12 @@
 
 import asyncio
 import logging
+import math
 import threading
 from collections.abc import Callable, Iterator
 from concurrent.futures import ThreadPoolExecutor
 from contextlib import contextmanager
+from datetime import timedelta
 from uuid import uuid4
 
 from core.context import RunContext
@@ -19,12 +21,30 @@ ContextFactory = Callable[[threading.Event], RunContext]
 Listener = tuple[asyncio.AbstractEventLoop, asyncio.Event]
 
 PUBLIC_CRASH_MESSAGE = "The run stopped unexpectedly. Nothing was finished."
+LIMIT_WINDOW = timedelta(hours=1)
+
+
+class RunLimitError(Exception):
+    """The client may not start a run now; retry_after is in seconds when a wait will help."""
+
+    def __init__(self, message: str, retry_after: int | None = None):
+        super().__init__(message)
+        self.retry_after = retry_after
 
 
 class RunManager:
-    def __init__(self, store: Store, make_context: ContextFactory, *, max_workers: int = 4):
+    def __init__(
+        self,
+        store: Store,
+        make_context: ContextFactory,
+        *,
+        max_workers: int = 4,
+        runs_per_hour: int = 5,
+    ):
         self.store = store
+        self.runs_per_hour = runs_per_hour
         self._make_context = make_context
+        self._start_lock = threading.Lock()  # the limit check and the insert are one step
         self._executor = ThreadPoolExecutor(max_workers=max_workers, thread_name_prefix="sdr-run")
         self._lock = threading.Lock()
         self._cancels: dict[str, threading.Event] = {}
@@ -51,10 +71,26 @@ class RunManager:
 
     # --- runs
 
+    def _check_limits(self, client: str) -> None:
+        if self.store.count_running(client) > 0:
+            raise RunLimitError("A run from your address is already in progress. Wait for it or cancel it.")
+        now = self.store.now()
+        recent = self.store.run_times(client, since=now - LIMIT_WINDOW)
+        if len(recent) >= self.runs_per_hour:
+            frees_at = recent[-self.runs_per_hour] + LIMIT_WINDOW
+            retry_after = max(1, math.ceil((frees_at - now).total_seconds()))
+            raise RunLimitError(
+                f"Limit reached: {self.runs_per_hour} runs per hour. Try again in {math.ceil(retry_after / 60)} min.",
+                retry_after=retry_after,
+            )
+
     def start(self, brief: Brief, client: str) -> str:
+        """Start a run or raise RunLimitError: one run at a time and runs_per_hour per client."""
         run_id = uuid4().hex
         cancel = threading.Event()
-        self.store.create_run(run_id, brief, client)
+        with self._start_lock:
+            self._check_limits(client)
+            self.store.create_run(run_id, brief, client)
         with self._lock:
             self._cancels[run_id] = cancel
         self._executor.submit(self._execute, run_id, brief, cancel)
