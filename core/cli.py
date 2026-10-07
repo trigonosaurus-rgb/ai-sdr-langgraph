@@ -14,11 +14,15 @@ from pydantic import ValidationError
 from core.config import Settings
 from core.context import RunContext
 from core.llm import OpenAILLM
-from core.runner import run_sdr
+from core.runner import run_sdr, summarize_usage
 from core.schemas import Brief
 from core.search import TavilySearch
 
 RUNS_DIR = Path(__file__).resolve().parent.parent / "runs"
+
+
+def usd(value: float | None) -> str:
+    return "unknown" if value is None else f"${value:.4f}"
 
 
 def print_event(event: dict) -> None:
@@ -69,6 +73,12 @@ def main() -> int:
     path.write_text(result.model_dump_json(indent=2), encoding="utf-8")
 
     print(f"\n{result.status}: {result.message}", file=sys.stderr)
+    usage = summarize_usage(result.llm_calls, result.search_calls, result.duration_ms)
+    print(
+        f"Estimated cost: model {usd(usage.model_usd)}, search {usd(usage.search_usd)}"
+        f" (prices {ctx.prices.version}); {usage.input} input / {usage.output} output tokens",
+        file=sys.stderr,
+    )
     if result.draft:
         print(f"\nSubject: {result.draft.subject}\n\n{result.draft.body}\n")
     print(f"Full result: {path}", file=sys.stderr)

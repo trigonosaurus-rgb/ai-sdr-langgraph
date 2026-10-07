@@ -7,14 +7,15 @@ import threading
 from collections.abc import Callable, Iterator
 from concurrent.futures import ThreadPoolExecutor
 from contextlib import contextmanager
-from datetime import timedelta
+from dataclasses import dataclass
+from datetime import datetime, timedelta
 from uuid import uuid4
 
-from core.context import RunContext
+from core.context import CallKind, DailyLimitReached, RunContext
 from core.events import Failed, Started, to_wire
 from core.runner import run_sdr
-from core.schemas import Brief
-from server.store import TERMINAL_EVENTS, Store
+from core.schemas import Brief, LLMCall, SearchCall
+from server.store import TERMINAL_EVENTS, CamelModel, Store
 
 log = logging.getLogger(__name__)
 ContextFactory = Callable[[Brief, threading.Event], RunContext]
@@ -22,6 +23,29 @@ Listener = tuple[asyncio.AbstractEventLoop, asyncio.Event]
 
 PUBLIC_CRASH_MESSAGE = "The run stopped unexpectedly. Nothing was finished."
 LIMIT_WINDOW = timedelta(hours=1)
+
+
+@dataclass(frozen=True)
+class DailyBudget:
+    """Service-wide spending per UTC day, all visitors together. A new run starts only if it fits
+    with a reserve for itself and for every run in progress; each paid call is checked again."""
+
+    usd: float = 1.0
+    search_credits: float = 25
+    run_usd: float = 0.10  # reserve per run: a run with every rewrite stays below it
+    run_search_credits: float = 3  # searches per run, one credit each
+
+
+class BudgetStatus(CamelModel):
+    usd: float
+    spent_usd: float
+    search_credits: float
+    spent_search_credits: float
+    resets_at: str  # next 00:00 UTC
+
+
+def day_start(moment: datetime) -> datetime:
+    return moment.replace(hour=0, minute=0, second=0, microsecond=0)
 
 
 class RunLimitError(Exception):
@@ -40,9 +64,11 @@ class RunManager:
         *,
         max_workers: int = 4,
         runs_per_hour: int = 5,
+        budget: DailyBudget = DailyBudget(),
     ):
         self.store = store
         self.runs_per_hour = runs_per_hour
+        self.budget = budget
         self._make_context = make_context
         self._start_lock = threading.Lock()  # the limit check and the insert are one step
         self._executor = ThreadPoolExecutor(max_workers=max_workers, thread_name_prefix="sdr-run")
@@ -69,6 +95,48 @@ class RunManager:
             self._cancels.clear()  # what is left was queued and never started
         self.fail_interrupted("The server stopped before the run started.")
 
+    # --- daily budget
+
+    def budget_status(self) -> BudgetStatus:
+        start = day_start(self.store.now())
+        spent = self.store.spent_since(start)
+        return BudgetStatus(
+            usd=self.budget.usd,
+            spent_usd=spent.usd,
+            search_credits=self.budget.search_credits,
+            spent_search_credits=spent.search_credits,
+            resets_at=(start + timedelta(days=1)).isoformat(timespec="seconds"),
+        )
+
+    def _check_budget(self) -> None:
+        """Admit a run only if it fits today's budget with a reserve for every run in progress."""
+        b, now = self.budget, self.store.now()
+        spent = self.store.spent_since(day_start(now))
+
+        def fits(runs: int) -> bool:
+            return (
+                spent.usd + b.run_usd * runs <= b.usd
+                and spent.search_credits + b.run_search_credits * runs <= b.search_credits
+            )
+
+        if fits(self.store.count_all_running() + 1):
+            return
+        if fits(1):  # only the reserves of runs in progress are in the way
+            raise RunLimitError("The service is near its daily budget. Try again in a few minutes.", retry_after=60)
+        reset = day_start(now) + timedelta(days=1)
+        raise RunLimitError(
+            "The service has used its daily budget. New runs open at 00:00 UTC.",
+            retry_after=max(1, math.ceil((reset - now).total_seconds())),
+        )
+
+    def _check_call(self, kind: CallKind) -> None:
+        """Before each paid call: stop the run once today's budget is spent."""
+        spent = self.store.spent_since(day_start(self.store.now()))
+        if spent.usd >= self.budget.usd:
+            raise DailyLimitReached
+        if kind == "search" and spent.search_credits + 1 > self.budget.search_credits:
+            raise DailyLimitReached
+
     # --- runs
 
     def _check_limits(self, client: str) -> None:
@@ -83,9 +151,11 @@ class RunManager:
                 f"Limit reached: {self.runs_per_hour} runs per hour. Try again in {math.ceil(retry_after / 60)} min.",
                 retry_after=retry_after,
             )
+        self._check_budget()
 
     def start(self, brief: Brief, client: str) -> str:
-        """Start a run or raise RunLimitError: one run at a time and runs_per_hour per client."""
+        """Start a run or raise RunLimitError: one run at a time and runs_per_hour per client,
+        within the service's daily budget."""
         run_id = uuid4().hex
         cancel = threading.Event()
         with self._start_lock:
@@ -115,8 +185,16 @@ class RunManager:
             self.store.add_event(event)
             self._notify(run_id)
 
+        def on_record(call: LLMCall | SearchCall) -> None:
+            if isinstance(call, LLMCall):
+                self.store.add_llm_call(run_id, call)
+            else:
+                self.store.add_search_call(run_id, call)
+
         try:
-            result = run_sdr(brief, self._make_context(brief, cancel), run_id=run_id, on_event=on_event)
+            ctx = self._make_context(brief, cancel)
+            ctx.before_call, ctx.on_record = self._check_call, on_record
+            result = run_sdr(brief, ctx, run_id=run_id, on_event=on_event)
             self.store.finish_run(result, final[-1] if final else None)
         except Exception as error:  # the runner reports graph errors itself; this is infrastructure
             log.exception("run %s crashed outside the graph", run_id)

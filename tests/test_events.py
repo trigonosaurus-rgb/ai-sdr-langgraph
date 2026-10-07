@@ -141,7 +141,7 @@ def test_wire_format_is_camel_case(brief, make_ctx):
         "output": 200,
         "reasoning": 40,
         "modelUsd": None,
-        "searchUsd": None,
+        "searchUsd": 0.024,  # three searches, one credit each
         "durationSeconds": by_type["completed"]["elapsedMs"] / 1000,
         "model": "fake-model",
     }

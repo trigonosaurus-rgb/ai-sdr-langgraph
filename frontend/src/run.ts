@@ -13,7 +13,11 @@ export interface RunUsage {
   model: string
 }
 export type FailureReason =
-  'insufficient_data' | 'website_mismatch' | 'cancelled' | 'error'
+  | 'insufficient_data'
+  | 'website_mismatch'
+  | 'cancelled'
+  | 'daily_limit'
+  | 'error'
 export interface RunState {
   id: string | null
   sequence: number

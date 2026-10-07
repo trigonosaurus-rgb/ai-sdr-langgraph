@@ -9,7 +9,7 @@ Language = Literal["English", "Russian"]
 Tone = Literal["Direct", "Warm"]
 Stage = Literal["Research", "Strategy", "Writing", "Review"]
 Outcome = Literal["ready", "needs_attention", "failed"]
-FailureReason = Literal["insufficient_data", "website_mismatch", "cancelled", "error"]
+FailureReason = Literal["insufficient_data", "website_mismatch", "cancelled", "daily_limit", "error"]
 
 
 def domain_of(url: str) -> str:
@@ -135,6 +135,8 @@ class LLMCall(BaseModel):
     prompt_version: str
     duration_ms: int
     usage: Usage
+    cost_usd: float | None = None  # fixed when recorded; None: unknown model or usage
+    price_version: str | None = None
     error: str | None = None
 
 
@@ -144,6 +146,8 @@ class SearchCall(BaseModel):
     results: int
     credits: float | None  # as reported by Tavily; None if not reported
     duration_ms: int
+    cost_usd: float | None = None  # fixed when recorded; None when credits are unknown
+    price_version: str | None = None
     error: str | None = None
 
 

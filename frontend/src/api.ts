@@ -166,6 +166,7 @@ const shapes: Record<RunEvent['type'], Shape> = {
       'insufficient_data',
       'website_mismatch',
       'cancelled',
+      'daily_limit',
       'error',
     ),
     message: isString,

@@ -12,9 +12,10 @@ from contextlib import contextmanager
 from datetime import UTC, datetime
 from pathlib import Path
 
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
+from pydantic.alias_generators import to_camel
 
-from core.schemas import Brief, RunResult
+from core.schemas import Brief, LLMCall, RunResult, SearchCall
 
 RunStatus = str  # "running" | "ready" | "needs_attention" | "failed"
 TERMINAL_EVENTS = frozenset({"completed", "failed"})
@@ -75,6 +76,18 @@ MIGRATIONS = [
     );
     CREATE INDEX search_calls_run ON search_calls (run_id);
     """,
+    # Costs are fixed when a call is recorded; calls stored before pricing keep NULL (unknown).
+    """
+    ALTER TABLE llm_calls ADD COLUMN cost_usd REAL;
+    ALTER TABLE llm_calls ADD COLUMN price_version TEXT;
+    ALTER TABLE search_calls ADD COLUMN cost_usd REAL;
+    ALTER TABLE search_calls ADD COLUMN price_version TEXT;
+    CREATE INDEX llm_calls_created ON llm_calls (created_at);
+    CREATE INDEX search_calls_created ON search_calls (created_at);
+    CREATE INDEX runs_created ON runs (created_at);
+    ALTER TABLE runs ADD COLUMN duration_ms INTEGER;
+    UPDATE runs SET duration_ms = json_extract(result, '$.duration_ms') WHERE result IS NOT NULL;
+    """,
 ]
 
 
@@ -87,6 +100,57 @@ class RunRecord(BaseModel):
     created_at: str
     finished_at: str | None
     last_sequence: int  # -1 when no events yet
+
+
+class CamelModel(BaseModel):
+    model_config = ConfigDict(alias_generator=to_camel, populate_by_name=True)
+
+
+class UsageTotals(CamelModel):
+    """Usage and estimated cost of a set of runs. Each total sums the calls that reported it;
+    it is None when calls exist but none reported it, and incomplete is set when some did not."""
+
+    runs: int
+    llm_calls: int
+    search_calls: int
+    input: int | None
+    cached_input: int | None  # subset of input
+    output: int | None
+    reasoning: int | None  # subset of output
+    search_credits: float | None
+    model_usd: float | None
+    search_usd: float | None
+    duration_seconds: float | None  # finished runs only
+    models: list[str]
+    price_versions: list[str]
+    incomplete: bool
+
+
+class LLMCallCost(CamelModel):
+    stage: str
+    attempt: int
+    model: str
+    input: int | None
+    cached_input: int | None
+    output: int | None
+    reasoning: int | None
+    cost_usd: float | None
+    duration_ms: int
+    failed: bool
+
+
+class SearchCallCost(CamelModel):
+    topic: str
+    results: int
+    credits: float | None
+    cost_usd: float | None
+    duration_ms: int
+    failed: bool
+
+
+class Spend(BaseModel):
+    usd: float  # known costs only
+    search_credits: float  # a search without reported credits counts as one
 
 
 def _utc_now() -> datetime:
@@ -179,47 +243,25 @@ class Store:
         return RunResult.model_validate_json(row["result"]) if row and row["result"] else None
 
     def finish_run(self, result: RunResult, final_event: dict | None) -> None:
-        """Record the outcome, its terminal event and every paid call of a finished run, atomically:
-        a client never sees `completed` while the snapshot still says running, or the reverse."""
-        now = self._timestamp()
+        """Record the outcome and its terminal event atomically: a client never sees `completed`
+        while the snapshot still says running, or the reverse. Paid calls are stored as they end."""
         with self._transaction() as db:
             if final_event is not None:
                 self._insert_event(db, final_event)
             db.execute(
-                "UPDATE runs SET status = ?, reason = ?, message = ?, result = ?, finished_at = ? WHERE id = ?",
+                """
+                UPDATE runs SET status = ?, reason = ?, message = ?, result = ?, finished_at = ?, duration_ms = ?
+                WHERE id = ?
+                """,
                 (
                     result.status,
                     result.reason,
                     result.message,
                     result.model_dump_json(exclude={"brief": {"domain"}}),  # computed, rejected on read
-                    now,
+                    self._timestamp(),
+                    result.duration_ms,
                     result.run_id,
                 ),
-            )
-            db.executemany(
-                """
-                INSERT INTO llm_calls (run_id, stage, attempt, model, prompt_version, duration_ms,
-                    input_tokens, cached_input_tokens, output_tokens, reasoning_tokens, error, created_at)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-                """,
-                [
-                    (
-                        result.run_id, c.stage, c.attempt, c.model, c.prompt_version, c.duration_ms,
-                        c.usage.input_tokens, c.usage.cached_input_tokens, c.usage.output_tokens,
-                        c.usage.reasoning_tokens, c.error, now,
-                    )
-                    for c in result.llm_calls
-                ],
-            )
-            db.executemany(
-                """
-                INSERT INTO search_calls (run_id, query, topic, results, credits, duration_ms, error, created_at)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-                """,
-                [
-                    (result.run_id, c.query, c.topic, c.results, c.credits, c.duration_ms, c.error, now)
-                    for c in result.search_calls
-                ],
             )
 
     def fail_run(self, run_id: str, message: str, events: list[dict]) -> None:
@@ -251,6 +293,142 @@ class Store:
                 (client, since.isoformat(timespec="milliseconds")),
             ).fetchall()
         return [datetime.fromisoformat(row["created_at"]) for row in rows]
+
+    def count_all_running(self) -> int:
+        with self._lock:
+            return self._db.execute("SELECT COUNT(*) FROM runs WHERE status = 'running'").fetchone()[0]
+
+    # --- paid calls, stored as soon as each one ends so the spending limits see it at once
+
+    def add_llm_call(self, run_id: str, call: LLMCall) -> None:
+        u = call.usage
+        with self._transaction() as db:
+            db.execute(
+                """
+                INSERT INTO llm_calls (run_id, stage, attempt, model, prompt_version, duration_ms,
+                    input_tokens, cached_input_tokens, output_tokens, reasoning_tokens,
+                    cost_usd, price_version, error, created_at)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                """,
+                (
+                    run_id, call.stage, call.attempt, call.model, call.prompt_version, call.duration_ms,
+                    u.input_tokens, u.cached_input_tokens, u.output_tokens, u.reasoning_tokens,
+                    call.cost_usd, call.price_version, call.error, self._timestamp(),
+                ),
+            )  # fmt: skip
+
+    def add_search_call(self, run_id: str, call: SearchCall) -> None:
+        with self._transaction() as db:
+            db.execute(
+                """
+                INSERT INTO search_calls (run_id, query, topic, results, credits, duration_ms,
+                    cost_usd, price_version, error, created_at)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                """,
+                (
+                    run_id, call.query, call.topic, call.results, call.credits, call.duration_ms,
+                    call.cost_usd, call.price_version, call.error, self._timestamp(),
+                ),
+            )  # fmt: skip
+
+    def spent_since(self, since: datetime) -> Spend:
+        """Service-wide spending since the given moment, for the daily limits."""
+        stamp = since.isoformat(timespec="milliseconds")
+        with self._lock:
+            llm_usd = self._db.execute(
+                "SELECT COALESCE(SUM(cost_usd), 0) FROM llm_calls WHERE created_at >= ?", (stamp,)
+            ).fetchone()[0]
+            search_usd, credits = self._db.execute(
+                "SELECT COALESCE(SUM(cost_usd), 0), COALESCE(SUM(COALESCE(credits, 1)), 0)"
+                " FROM search_calls WHERE created_at >= ?",
+                (stamp,),
+            ).fetchone()
+        return Spend(usd=llm_usd + search_usd, search_credits=credits)
+
+    def usage(
+        self, *, run_id: str | None = None, client: str | None = None, since: datetime | None = None
+    ) -> UsageTotals:
+        """Totals for one run, or for a client's runs started since the given moment."""
+        if run_id is not None:
+            where, params = "runs.id = ?", (run_id,)
+        else:
+            stamp = since.isoformat(timespec="milliseconds") if since else ""
+            where, params = "runs.client = ? AND runs.created_at >= ?", (client, stamp)
+        incomplete = False
+
+        def known(total, reported: int, count: int):
+            nonlocal incomplete
+            incomplete = incomplete or reported < count
+            return total if reported else (None if count else 0)
+
+        llm_join = f"FROM llm_calls JOIN runs ON runs.id = llm_calls.run_id WHERE {where}"
+        search_join = f"FROM search_calls JOIN runs ON runs.id = search_calls.run_id WHERE {where}"
+        with self._lock:
+            runs, duration = self._db.execute(
+                f"SELECT COUNT(*), SUM(duration_ms) FROM runs WHERE {where}", params
+            ).fetchone()
+            llm = self._db.execute(
+                f"""
+                SELECT COUNT(*) AS n,
+                    SUM(input_tokens) AS input, COUNT(input_tokens) AS input_n,
+                    SUM(cached_input_tokens) AS cached, COUNT(cached_input_tokens) AS cached_n,
+                    SUM(output_tokens) AS output, COUNT(output_tokens) AS output_n,
+                    SUM(reasoning_tokens) AS reasoning, COUNT(reasoning_tokens) AS reasoning_n,
+                    SUM(cost_usd) AS usd, COUNT(cost_usd) AS usd_n
+                {llm_join}
+                """,
+                params,
+            ).fetchone()
+            search = self._db.execute(
+                f"""
+                SELECT COUNT(*) AS n, SUM(credits) AS credits, COUNT(credits) AS credits_n,
+                    SUM(cost_usd) AS usd, COUNT(cost_usd) AS usd_n
+                {search_join}
+                """,
+                params,
+            ).fetchone()
+            models = self._db.execute(f"SELECT DISTINCT model {llm_join}", params).fetchall()
+            versions = self._db.execute(
+                f"SELECT price_version {llm_join} UNION SELECT price_version {search_join}", params + params
+            ).fetchall()
+        n = llm["n"]
+        return UsageTotals(
+            runs=runs,
+            llm_calls=n,
+            search_calls=search["n"],
+            input=known(llm["input"], llm["input_n"], n),
+            cached_input=known(llm["cached"], llm["cached_n"], n),
+            output=known(llm["output"], llm["output_n"], n),
+            reasoning=known(llm["reasoning"], llm["reasoning_n"], n),
+            model_usd=known(llm["usd"], llm["usd_n"], n),
+            search_credits=known(search["credits"], search["credits_n"], search["n"]),
+            search_usd=known(search["usd"], search["usd_n"], search["n"]),
+            duration_seconds=duration / 1000 if duration is not None else None,
+            models=sorted(row[0] for row in models),
+            price_versions=sorted(row[0] for row in versions if row[0]),
+            incomplete=incomplete,
+        )
+
+    def run_calls(self, run_id: str) -> tuple[list[LLMCallCost], list[SearchCallCost]]:
+        """Every paid call of a run, in the order it was made."""
+        with self._lock:
+            llm = self._db.execute(
+                """
+                SELECT stage, attempt, model, input_tokens AS input, cached_input_tokens AS cached_input,
+                    output_tokens AS output, reasoning_tokens AS reasoning, cost_usd, duration_ms,
+                    error IS NOT NULL AS failed
+                FROM llm_calls WHERE run_id = ? ORDER BY id
+                """,
+                (run_id,),
+            ).fetchall()
+            search = self._db.execute(
+                """
+                SELECT topic, results, credits, cost_usd, duration_ms, error IS NOT NULL AS failed
+                FROM search_calls WHERE run_id = ? ORDER BY id
+                """,
+                (run_id,),
+            ).fetchall()
+        return [LLMCallCost(**dict(row)) for row in llm], [SearchCallCost(**dict(row)) for row in search]
 
     # --- events
 

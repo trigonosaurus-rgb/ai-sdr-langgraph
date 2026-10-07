@@ -9,7 +9,8 @@ import os
 import threading
 from collections.abc import AsyncIterator, Callable
 from contextlib import asynccontextmanager
-from typing import Annotated
+from datetime import timedelta
+from typing import Annotated, Literal
 
 from dotenv import load_dotenv
 from fastapi import Depends, FastAPI, Header, HTTPException, Query, Request, status
@@ -22,10 +23,11 @@ from core.context import RunContext
 from core.llm import OpenAILLM
 from core.schemas import Brief
 from core.search import TavilySearch
-from server.runs import RunLimitError, RunManager
-from server.store import TERMINAL_EVENTS, RunRecord, Store
+from server.runs import BudgetStatus, DailyBudget, RunLimitError, RunManager
+from server.store import TERMINAL_EVENTS, LLMCallCost, RunRecord, SearchCallCost, Store, UsageTotals
 
 WAKE_TIMEOUT_S = 15  # re-check the store even without a wake-up
+PERIODS = {"24h": timedelta(hours=24), "30d": timedelta(days=30)}
 
 
 class ApiModel(BaseModel):
@@ -53,6 +55,25 @@ class CancelAccepted(ApiModel):
     run_id: str
 
 
+class RunCost(ApiModel):
+    """Usage and estimated cost of one run, with every paid call it made, failed ones included."""
+
+    run_id: str
+    status: str
+    totals: UsageTotals
+    llm_calls: list[LLMCallCost]
+    search_calls: list[SearchCallCost]
+
+
+class PeriodUsage(ApiModel):
+    """The caller's runs started within the period, and the service's budget for today."""
+
+    period: Literal["24h", "30d"]
+    since: str
+    totals: UsageTotals
+    budget: BudgetStatus
+
+
 def default_manager() -> RunManager:
     """Production wiring from the environment; fails fast if a provider key is missing."""
     load_dotenv()
@@ -70,6 +91,10 @@ def default_manager() -> RunManager:
         make_context,
         max_workers=int(os.getenv("SDR_MAX_CONCURRENT_RUNS") or 4),
         runs_per_hour=int(os.getenv("SDR_RUNS_PER_HOUR") or 5),
+        budget=DailyBudget(
+            usd=float(os.getenv("SDR_DAILY_BUDGET_USD") or DailyBudget.usd),
+            search_credits=float(os.getenv("SDR_DAILY_SEARCH_CREDITS") or DailyBudget.search_credits),
+        ),
     )
 
 
@@ -112,7 +137,7 @@ def create_app(make_manager: Callable[[], RunManager] = default_manager) -> Fast
         "/api/runs",
         status_code=status.HTTP_201_CREATED,
         response_model=RunCreated,
-        responses={429: {"description": "A run is already in progress or the hourly limit is reached"}},
+        responses={429: {"description": "A run is in progress, the hourly limit or the daily budget is reached"}},
     )
     def create_run(brief: Brief, request: Request, manager: Manager) -> RunCreated:
         try:
@@ -131,6 +156,28 @@ def create_app(make_manager: Callable[[], RunManager] = default_manager) -> Fast
             created_at=run.created_at,
             finished_at=run.finished_at,
             last_sequence=run.last_sequence,
+        )
+
+    @app.get("/api/runs/{run_id}/usage", response_model=RunCost)
+    def read_run_usage(run: Run, manager: Manager) -> RunCost:
+        """Grows while the run is in progress: each paid call is stored as soon as it ends."""
+        llm_calls, search_calls = manager.store.run_calls(run.id)
+        return RunCost(
+            run_id=run.id,
+            status=run.status,
+            totals=manager.store.usage(run_id=run.id),
+            llm_calls=llm_calls,
+            search_calls=search_calls,
+        )
+
+    @app.get("/api/usage", response_model=PeriodUsage)
+    def read_usage(period: Literal["24h", "30d"], request: Request, manager: Manager) -> PeriodUsage:
+        since = manager.store.now() - PERIODS[period]
+        return PeriodUsage(
+            period=period,
+            since=since.isoformat(timespec="seconds"),
+            totals=manager.store.usage(client=client_id(request), since=since),
+            budget=manager.budget_status(),
         )
 
     @app.post("/api/runs/{run_id}/cancel", status_code=status.HTTP_202_ACCEPTED, response_model=CancelAccepted)

@@ -2,16 +2,19 @@
 
 import json
 import threading
+from datetime import UTC, datetime, timedelta
 
 import pytest
 from fastapi.testclient import TestClient
 
 from core.config import Settings
 from core.context import RunContext
+from core.pricing import PRICES, ModelPrice, PriceTable
+from core.schemas import Brief, LLMCall, SearchCall, Usage
 from server.app import create_app
-from server.runs import PUBLIC_CRASH_MESSAGE, RunManager
+from server.runs import PUBLIC_CRASH_MESSAGE, DailyBudget, RunLimitError, RunManager
 from server.store import MIGRATIONS, Store
-from fakes import FakeClock, FakeLLM, happy_script
+from fakes import PASS, FakeClock, FakeLLM, draft, happy_script, reject
 
 BRIEF = {
     "company": "Acme",
@@ -49,15 +52,22 @@ def make_client(db_path, search):
         make_context=None,
         runs_per_hour: int = 100,
         now=None,
+        budget: DailyBudget = DailyBudget(usd=100, search_credits=1000),
+        prices: PriceTable = PRICES,
     ) -> TestClient:
         def default_context(brief, cancel: threading.Event) -> RunContext:
             return RunContext(
-                settings=Settings(), llm=llm_factory(), search_client=search, clock=FakeClock(), cancel=cancel
+                settings=Settings(),
+                llm=llm_factory(),
+                search_client=search,
+                clock=FakeClock(),
+                cancel=cancel,
+                prices=prices,
             )
 
         def make_manager() -> RunManager:
             store = Store(db_path, now=now) if now else Store(db_path)
-            return RunManager(store, make_context or default_context, runs_per_hour=runs_per_hour)
+            return RunManager(store, make_context or default_context, runs_per_hour=runs_per_hour, budget=budget)
 
         app = create_app(make_manager)
         return TestClient(app)
@@ -173,8 +183,6 @@ def test_cancel_is_acknowledged_in_the_stream(make_client):
 
 
 def test_runs_left_running_by_a_previous_process_fail_on_startup(make_client, db_path):
-    from core.schemas import Brief
-
     store = Store(db_path)
     store.create_run("orphan", Brief(**BRIEF), "client")
     store.close()
@@ -224,8 +232,6 @@ def test_one_run_at_a_time_per_address(make_client):
 
 
 def test_hourly_limit_per_address(make_client):
-    from datetime import UTC, datetime, timedelta
-
     clock = {"now": datetime(2026, 10, 7, 12, 0, tzinfo=UTC)}
     with make_client(runs_per_hour=2, now=lambda: clock["now"]) as client:
         for minutes in (0, 10):
@@ -239,3 +245,159 @@ def test_hourly_limit_per_address(make_client):
     assert limited.status_code == 429 and "2 runs per hour" in limited.json()["detail"]
     assert limited.headers["retry-after"] == str(45 * 60)
     assert allowed.status_code == 201
+
+
+# --- usage, costs and the daily budget
+
+PRICED = PriceTable(
+    version="test-1",
+    models={"fake-model": ModelPrice(input=1.0, cached_input=0.1, output=10.0)},
+    search_credit_usd=0.01,
+)
+FAKE_CALL_USD = (80 * 1.0 + 20 * 0.1 + 50 * 10.0) / 1_000_000  # FakeLLM usage: 100 in (20 cached), 50 out
+NOON = datetime(2026, 10, 7, 12, 0, tzinfo=UTC)
+
+
+def seed_run(db_path, run_id: str, client: str, *, credits: float = 0, usd: float = 0, now=lambda: NOON) -> None:
+    """A run of another client that spent the given search credits and model money."""
+    store = Store(db_path, now=now)
+    store.create_run(run_id, Brief(**BRIEF), client)
+    search = SearchCall(query="q", topic="general", results=1, credits=credits, duration_ms=1, cost_usd=credits * 0.008)
+    store.add_search_call(run_id, search)
+    if usd:
+        call = LLMCall(
+            stage="Research", attempt=1, model="m", prompt_version="p", duration_ms=1, usage=Usage(), cost_usd=usd
+        )
+        store.add_llm_call(run_id, call)
+    store.fail_run(run_id, "seeded", [])
+    store.close()
+
+
+def test_paid_calls_are_stored_while_the_run_is_in_progress(make_client):
+    llm = GatedLLM(happy_script())
+    with make_client(llm_factory=lambda: llm) as client:
+        run_id = start(client)
+        assert llm.entered.wait(5)
+        during = client.get(f"/api/runs/{run_id}/usage").json()
+        llm.release.set()
+        read_events(client, run_id)
+        after = client.get(f"/api/runs/{run_id}/usage").json()
+
+    assert during["status"] == "running"
+    assert len(during["searchCalls"]) == 3 and during["llmCalls"] == []
+    assert after["status"] == "ready" and len(after["llmCalls"]) == 4
+
+
+def test_run_usage_has_totals_and_every_call(make_client):
+    script = happy_script(Writing=[draft(1), draft(2)], Review=[reject(), PASS])
+    with make_client(llm_factory=lambda: FakeLLM(script), prices=PRICED) as client:
+        run_id = start(client)
+        events = read_events(client, run_id)
+        usage = client.get(f"/api/runs/{run_id}/usage").json()
+
+    totals = usage["totals"]
+    assert totals["runs"] == 1 and totals["llmCalls"] == 6 and totals["searchCalls"] == 3
+    assert (totals["input"], totals["cachedInput"], totals["output"], totals["reasoning"]) == (600, 120, 300, 60)
+    assert totals["modelUsd"] == pytest.approx(6 * FAKE_CALL_USD)
+    assert totals["searchCredits"] == 3 and totals["searchUsd"] == pytest.approx(0.03)
+    assert totals["priceVersions"] == ["test-1"] and not totals["incomplete"]
+    assert totals["durationSeconds"] == events[-1]["usage"]["durationSeconds"]
+    stages = [(c["stage"], c["attempt"]) for c in usage["llmCalls"]]
+    assert stages == [("Research", 1), ("Strategy", 1), ("Writing", 1), ("Review", 1), ("Writing", 2), ("Review", 2)]
+    # the completed event carries the same costs, fixed when the calls were recorded
+    assert events[-1]["usage"]["modelUsd"] == pytest.approx(totals["modelUsd"])
+
+
+def test_unknown_usage_is_a_gap_not_a_zero(make_client):
+    with make_client(llm_factory=lambda: FakeLLM(happy_script(), usage=Usage()), prices=PRICED) as client:
+        run_id = start(client)
+        read_events(client, run_id)
+        totals = client.get(f"/api/runs/{run_id}/usage").json()["totals"]
+
+    assert totals["input"] is None and totals["modelUsd"] is None
+    assert totals["searchUsd"] == pytest.approx(0.03)  # what is known stays known
+    assert totals["incomplete"]
+
+
+def test_partly_unknown_usage_sums_the_known_part_and_says_so(make_client):
+    llms = iter([FakeLLM(happy_script()), FakeLLM(happy_script(), model="unpriced-model")])
+    with make_client(llm_factory=lambda: next(llms), prices=PRICED) as client:
+        read_events(client, start(client))
+        read_events(client, start(client))
+        totals = client.get("/api/usage", params={"period": "24h"}).json()["totals"]
+
+    assert totals["runs"] == 2 and totals["input"] == 800  # tokens are known for both
+    assert totals["modelUsd"] == pytest.approx(4 * FAKE_CALL_USD)  # only the priced run
+    assert totals["incomplete"]
+    assert totals["models"] == ["fake-model", "unpriced-model"]
+
+
+def test_period_usage_counts_only_the_callers_runs_in_the_period(make_client, db_path):
+    clock = {"now": NOON - timedelta(days=40)}
+    with make_client(now=lambda: clock["now"], prices=PRICED) as client:
+        read_events(client, start(client))  # too old for 30 days
+        clock["now"] = NOON - timedelta(days=3)
+        read_events(client, start(client))  # within 30 days, not 24 hours
+        clock["now"] = NOON
+        read_events(client, start(client))
+        seed_run(db_path, "other", "someone-else", credits=5)
+        day = client.get("/api/usage", params={"period": "24h"}).json()
+        month = client.get("/api/usage", params={"period": "30d"}).json()
+        bad = client.get("/api/usage", params={"period": "1y"})
+
+    assert day["totals"]["runs"] == 1 and day["totals"]["searchCredits"] == 3
+    assert month["totals"]["runs"] == 2 and month["totals"]["modelUsd"] == pytest.approx(8 * FAKE_CALL_USD)
+    assert day["since"] == "2026-10-06T12:00:00+00:00"
+    assert bad.status_code == 422
+    # the budget belongs to the service: everyone's spending today, the other client included
+    assert day["budget"]["spentSearchCredits"] == 3 + 5
+    assert day["budget"]["resetsAt"] == "2026-10-08T00:00:00+00:00"
+
+
+def test_no_runs_is_a_real_zero(make_client):
+    with make_client() as client:
+        totals = client.get("/api/usage", params={"period": "30d"}).json()["totals"]
+    assert totals["runs"] == 0 and totals["modelUsd"] == 0 and totals["input"] == 0
+    assert not totals["incomplete"]
+
+
+def test_daily_search_credits_reject_new_runs_until_midnight(make_client, db_path):
+    seed_run(db_path, "other", "someone-else", credits=23)
+    with make_client(now=lambda: NOON, budget=DailyBudget(usd=100, search_credits=25)) as client:
+        response = client.post("/api/runs", json=BRIEF)
+
+    assert response.status_code == 429 and "daily budget" in response.json()["detail"]
+    assert response.headers["retry-after"] == str(12 * 3600)
+
+
+def test_yesterdays_spending_does_not_count(make_client, db_path):
+    seed_run(db_path, "other", "someone-else", usd=5, now=lambda: NOON - timedelta(days=1))
+    with make_client(now=lambda: NOON, budget=DailyBudget(usd=1)) as client:
+        assert client.post("/api/runs", json=BRIEF).status_code == 201
+
+
+def test_runs_in_progress_reserve_their_share_of_the_budget(db_path):
+    store = Store(db_path)
+    store.create_run("busy", Brief(**BRIEF), "someone-else")  # still running
+    manager = RunManager(store, lambda brief, cancel: None, budget=DailyBudget(usd=0.15, run_usd=0.10))
+    with pytest.raises(RunLimitError, match="near its daily budget") as caught:
+        manager.start(Brief(**BRIEF), "me")
+    assert caught.value.retry_after == 60
+    manager.shutdown()
+
+
+def test_budget_stops_a_run_before_the_call_that_would_exceed_it(make_client):
+    # Each LLM call costs 0.048: Research and Strategy leave 0.004 of 0.10, Writing still starts,
+    # and the Review call is refused because the budget is spent.
+    expensive = PriceTable(version="test-2", models={"fake-model": ModelPrice(600, 0, 0)}, search_credit_usd=0)
+    llm = FakeLLM(happy_script())
+    budget = DailyBudget(usd=0.10, run_usd=0.10)
+    with make_client(llm_factory=lambda: llm, prices=expensive, budget=budget) as client:
+        run_id = start(client)
+        events = read_events(client, run_id)
+        again = client.post("/api/runs", json=BRIEF)
+
+    assert llm.stages() == ["Research", "Strategy", "Writing"]
+    assert events[-1]["type"] == "failed" and events[-1]["reason"] == "daily_limit"
+    assert events[-1]["stage"] == "Review"
+    assert again.status_code == 429

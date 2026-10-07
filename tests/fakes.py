@@ -34,9 +34,16 @@ class FakeLLM:
     """Replies scripted per stage, consumed in order. An Exception in the script is raised.
     When streamed, the reply's JSON arrives in chunk_chars pieces, like tokens."""
 
-    def __init__(self, script: dict[str, list[BaseModel | Exception]], usage: Usage = USAGE, chunk_chars: int = 4):
+    def __init__(
+        self,
+        script: dict[str, list[BaseModel | Exception]],
+        usage: Usage = USAGE,
+        chunk_chars: int = 4,
+        model: str = "fake-model",
+    ):
         self.script = {stage: list(replies) for stage, replies in script.items()}
         self.usage = usage
+        self.model = model
         self.chunk_chars = chunk_chars
         self.calls: list[Call] = []
 
@@ -51,7 +58,7 @@ class FakeLLM:
             for end in range(self.chunk_chars, len(text) + self.chunk_chars, self.chunk_chars):
                 if isinstance(partial := parse_partial_json(text[:end]), dict):
                     on_partial(partial)
-        return LLMReply(parsed=reply, usage=self.usage, model="fake-model")
+        return LLMReply(parsed=reply, usage=self.usage, model=self.model)
 
     def stages(self) -> list[str]:
         return [call.stage for call in self.calls]

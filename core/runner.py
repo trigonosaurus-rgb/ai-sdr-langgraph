@@ -5,30 +5,31 @@ from collections.abc import Callable
 from itertools import count
 from uuid import uuid4
 
-from core.context import RunCancelled, RunContext
+from core.context import DailyLimitReached, RunCancelled, RunContext
 from core.events import Completed, Failed, Payload, RunUsage, StageStarted, Started, to_wire
 from core.graph import build_graph
-from core.schemas import Brief, FailureReason, LLMCall, RunResult, Stage
+from core.schemas import Brief, FailureReason, LLMCall, RunResult, SearchCall, Stage
 from core.state import SDRState
 
 log = logging.getLogger(__name__)
 EventHandler = Callable[[dict], None]
+DAILY_LIMIT_MESSAGE = "The service reached its daily spending limit during the run. Try again after 00:00 UTC."
 
 
-def _sum(values: list[int | None]) -> int | None:
+def _sum[N: (int, float)](values: list[N | None]) -> N | None:
     """Total, or None if any value is unknown: a partial sum would understate usage."""
-    return None if any(v is None for v in values) else sum(values)  # type: ignore[arg-type]
+    return None if any(v is None for v in values) else sum(values)  # type: ignore[arg-type,return-value]
 
 
-def summarize_usage(calls: list[LLMCall], duration_ms: int) -> RunUsage:
+def summarize_usage(calls: list[LLMCall], searches: list[SearchCall], duration_ms: int) -> RunUsage:
     usages = [call.usage for call in calls]
     return RunUsage(
         input=_sum([u.input_tokens for u in usages]),
         cached_input=_sum([u.cached_input_tokens for u in usages]),
         output=_sum([u.output_tokens for u in usages]),
         reasoning=_sum([u.reasoning_tokens for u in usages]),
-        model_usd=None,  # pricing arrives in stage 4
-        search_usd=None,
+        model_usd=_sum([call.cost_usd for call in calls]),
+        search_usd=_sum([call.cost_usd for call in searches]),
         duration_seconds=duration_ms / 1000,
         model=", ".join(dict.fromkeys(call.model for call in calls)),
     )
@@ -71,7 +72,7 @@ def run_sdr(
     graph = build_graph(ctx)
     state: SDRState = {"brief": brief}
     error: Exception | None = None
-    cancelled = False
+    stopped: FailureReason | None = None
     try:
         for mode, chunk in graph.stream(
             {"brief": brief},
@@ -84,7 +85,10 @@ def run_sdr(
                 state = chunk
     except RunCancelled:
         log.info("run %s cancelled in %s", run_id, stage)
-        cancelled = True
+        stopped = "cancelled"
+    except DailyLimitReached:
+        log.warning("run %s stopped in %s: daily spending limit", run_id, stage)
+        stopped = "daily_limit"
     except Exception as exc:  # any failure ends the run as failed, never as a result
         log.exception("run %s failed in %s", run_id, stage)
         error = exc
@@ -95,9 +99,12 @@ def run_sdr(
     reason: FailureReason | None = None
     issues: list[str] = []
 
-    if cancelled:
+    if stopped == "cancelled":
         status, reason = "failed", "cancelled"
         message = public_message = "The run was cancelled. Nothing was finished."
+    elif stopped == "daily_limit":
+        status, reason = "failed", "daily_limit"
+        message = public_message = DAILY_LIMIT_MESSAGE
     elif error is not None:
         status, reason = "failed", "error"
         message = f"{stage or 'Run'} step failed: {type(error).__name__}: {error}"
@@ -128,7 +135,7 @@ def run_sdr(
             Completed(
                 outcome=status,
                 issues=issues,
-                usage=summarize_usage(ctx.llm_calls, duration),
+                usage=summarize_usage(ctx.llm_calls, ctx.search_calls, duration),
                 elapsed_ms=duration,
             )
         )
