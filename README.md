@@ -34,7 +34,10 @@ TAVILY_API_KEY=...
 OPENAI_MODEL_NAME=gpt-5.4-mini   # optional
 SDR_MAX_REWRITES=2               # optional
 SDR_DB_PATH=data/sdr.sqlite3     # optional, API storage
-SDR_RUNS_PER_HOUR=5              # optional, per client address
+SDR_RUNS_PER_DAY=3               # optional, per client address, rolling 24 hours
+SDR_RUNS_PER_MONTH=10            # optional, per client address, rolling 30 days
+SDR_MONTHLY_MODEL_USD=5          # optional, model spending per calendar month (UTC)
+SDR_MONTHLY_SEARCH_CREDITS=750   # optional, Tavily credits per calendar month (UTC)
 SDR_MAX_CONCURRENT_RUNS=4        # optional, for the whole server
 SDR_CLIENT_SALT=...              # optional, salt for hashed client addresses
 ```
