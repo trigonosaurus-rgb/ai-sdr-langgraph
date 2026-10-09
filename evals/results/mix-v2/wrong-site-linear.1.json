@@ -1,0 +1,127 @@
+{
+  "case_id": "wrong-site-linear",
+  "config": "mix",
+  "models": "Research gpt-6-luna/low, Strategy gpt-6.1-sol/medium, Writing gpt-5.4-mini/medium, Review gpt-5.4-mini/low",
+  "repeat": 1,
+  "snapshot_recorded_at": "2026-10-09T12:06:59+00:00",
+  "checks": {
+    "label": "website_mismatch",
+    "outcome_ok": true,
+    "facts": 3,
+    "dropped_facts": 0,
+    "attempts": 0,
+    "has_draft": false,
+    "language_ok": null,
+    "body_words": null,
+    "subject_words": null,
+    "length_ok": null,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "ba42a9de65a94914ad06d3175f17b960",
+    "brief": {
+      "company": "Linear",
+      "website": "notion.so",
+      "offer": "Recruiting and scheduling customer interview participants for product teams",
+      "recipient": "Head of Product",
+      "language": "English",
+      "tone": "Direct"
+    },
+    "status": "failed",
+    "reason": "website_mismatch",
+    "message": "Search results do not match notion.so. The provided notion.so pages identify Notion as the site operator and describe Linear as a third-party product integrated with Notion.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "Linear provides software teams with issue tracking, project planning, and product roadmaps.",
+          "excerpt": "Linear empowers software teams to build better products. It streamlines issue tracking, project planning, and product roadmaps.",
+          "source_url": "https://www.notion.so/integrations/linear-9fa29a25-5ec1-479c-9979-f0425675e8f9",
+          "source_title": "Linear Integrations | Connect Your Apps with Notion"
+        },
+        {
+          "id": 2,
+          "claim": "Linear issues, projects, and views can be previewed in Notion, with previews reflecting updated information from Linear.",
+          "excerpt": "Once any of these properties change in Linear, the preview in Notion changes accordingly (on page reload or manual preview refresh).",
+          "source_url": "https://linear.app/integrations/notion",
+          "source_title": "Notion Integration – Linear"
+        },
+        {
+          "id": 3,
+          "claim": "Notion’s AI Connector lets users search Linear projects, issues, and comments from Notion and find team priorities, status updates, and tasks.",
+          "excerpt": "Easily find information about team priorities, status updates, and tasks within the Linear projects, issues, and comments that you have access to without having to leave Notion.",
+          "source_url": "https://www.notion.so/integrations/notion-ai-connector-for-linear",
+          "source_title": "Notion AI Connector for Linear"
+        }
+      ],
+      "website_owner": "Notion",
+      "website_matches": false,
+      "website_note": "The provided notion.so pages identify Notion as the site operator and describe Linear as a third-party product integrated with Notion.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "The results provide no verified details about Linear’s scale, pricing, funding, hiring, or recent launches.",
+      "dropped_facts": 0,
+      "dropped": []
+    },
+    "strategy": null,
+    "draft": null,
+    "attempts": [],
+    "prompt_versions": {
+      "research": "research@2"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-6-luna",
+        "prompt_version": "research@2",
+        "duration_ms": 2681,
+        "usage": {
+          "input_tokens": 5020,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 5017,
+          "output_tokens": 261,
+          "reasoning_tokens": 0
+        },
+        "cost_usd": 0.000757925,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Linear\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Linear\" notion.so",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Linear\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 2692
+  }
+}

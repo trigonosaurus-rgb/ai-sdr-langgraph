@@ -1,0 +1,231 @@
+{
+  "case_id": "apollo",
+  "config": "mix",
+  "models": "Research gpt-6-luna/low, Strategy gpt-6.1-sol/medium, Writing gpt-5.4-mini/medium, Review gpt-5.4-mini/low",
+  "repeat": 1,
+  "snapshot_recorded_at": "2026-10-09T12:06:15+00:00",
+  "checks": {
+    "label": "draft",
+    "outcome_ok": true,
+    "facts": 6,
+    "dropped_facts": 0,
+    "attempts": 1,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 74,
+    "subject_words": 3,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "2db1a2532d0a4487a3db5d5960e7f4b6",
+    "brief": {
+      "company": "Apollo",
+      "website": "apollo.io",
+      "offer": "Data enrichment quality audits for sales databases",
+      "recipient": "Head of Data",
+      "language": "English",
+      "tone": "Direct"
+    },
+    "status": "ready",
+    "reason": null,
+    "message": "The draft passed review.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "Apollo is a lead intelligence and sales engagement platform.",
+          "excerpt": "Apollo.io is a lead intelligence and sales engagement platform trusted by nearly 9,000 paying customers",
+          "source_url": "https://www.ycombinator.com/companies/apollo-io",
+          "source_title": "Apollo.io: Apollo is the foundation of your entire go-to-market strategy. | Y Combinator"
+        },
+        {
+          "id": 2,
+          "claim": "Apollo uses its database of people and companies to help customers find and connect with ideal prospects at scale.",
+          "excerpt": "you can use our highly accurate database of people and companies to find and connect with your ideal customers at scale.",
+          "source_url": "https://knowledge.apollo.io/hc/en-us/articles/4413044057741-Use-Apollo-to-Find-New-Customers",
+          "source_title": "Use Apollo to Find New Customers – Apollo"
+        },
+        {
+          "id": 3,
+          "claim": "Apollo auto-scores people and companies using a customer’s website and prospecting activity to help rank prospects.",
+          "excerpt": "Apollo generates auto-scores based on your company website and prospecting activity.",
+          "source_url": "https://knowledge.apollo.io/hc/en-us/articles/4988048582285-Scoring-Engine-Overview",
+          "source_title": "Scores Overview – Apollo"
+        },
+        {
+          "id": 4,
+          "claim": "Apollo’s Chrome Extension brings Apollo data and actions into prospecting workflows across Gmail, Google Calendar, LinkedIn, company websites, Salesforce and HubSpot.",
+          "excerpt": "Use the extension to access Apollo data and take action from Gmail, Google Calendar, LinkedIn, company websites, Salesforce, HubSpot, and other supported platforms",
+          "source_url": "https://knowledge.apollo.io/hc/en-us/articles/4409226637453-Apollo-Chrome-Extension-Overview",
+          "source_title": "Apollo Chrome Extension Overview – Apollo"
+        },
+        {
+          "id": 5,
+          "claim": "Apollo’s extension can save contacts and companies, add prospects to lists and sequences, compose emails, log activities and push records to a CRM.",
+          "excerpt": "you can save contacts and companies, add prospects to lists and sequences, compose emails, log activities, push records to your CRM",
+          "source_url": "https://knowledge.apollo.io/hc/en-us/articles/4409226637453-Apollo-Chrome-Extension-Overview",
+          "source_title": "Apollo Chrome Extension Overview – Apollo"
+        },
+        {
+          "id": 6,
+          "claim": "Apollo was founded in 2015 and reports a team size of 800.",
+          "excerpt": "Founded:2015\nBatch:Winter 2016\nTeam Size:800",
+          "source_url": "https://www.ycombinator.com/companies/apollo-io",
+          "source_title": "Apollo.io: Apollo is the foundation of your entire go-to-market strategy. | Y Combinator"
+        }
+      ],
+      "website_owner": "Apollo",
+      "website_matches": true,
+      "website_note": "Apollo’s official knowledge-base pages describe Apollo products and features, tying apollo.io to the named company.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 0,
+      "dropped": []
+    },
+    "strategy": {
+      "observation": "Apollo’s Chrome Extension can push prospect records into Salesforce and HubSpot.",
+      "fact_ids": [
+        4,
+        5
+      ],
+      "offer_link": "An enrichment quality audit could assess the accuracy and completeness of Apollo records delivered through that workflow, giving the Head of Data an independent view of the data customers receive in their CRMs.",
+      "hypotheses": [
+        "The Head of Data may be responsible for the quality of prospect data delivered through Apollo’s integrations.",
+        "An independent audit may reveal quality gaps or provide useful validation beyond Apollo’s existing checks."
+      ],
+      "angle": "With Apollo’s extension pushing prospect records into Salesforce and HubSpot, would an independent audit of enrichment quality at that handoff be useful?",
+      "offer_fit": "good",
+      "fit_reason": "Prospect data is central to Apollo’s product, and its CRM delivery workflow provides a concrete audit target relevant to a Head of Data; the need for external validation remains unconfirmed."
+    },
+    "draft": {
+      "subject": "Apollo CRM handoff",
+      "body": "Apollo’s Chrome Extension pushes prospect records into Salesforce and HubSpot.\n\nIf the handoff into CRM is something you watch closely, I help run independent enrichment quality audits for sales databases. The focus is simple: spot missing fields, bad matches, and stale records before they spread downstream.\n\nMy guess is that would give your team a cleaner read on the data customers actually receive. Would a small audit of that extension-to-CRM flow be worth seeing?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Apollo CRM handoff",
+          "body": "Apollo’s Chrome Extension pushes prospect records into Salesforce and HubSpot.\n\nIf the handoff into CRM is something you watch closely, I help run independent enrichment quality audits for sales databases. The focus is simple: spot missing fields, bad matches, and stale records before they spread downstream.\n\nMy guess is that would give your team a cleaner read on the data customers actually receive. Would a small audit of that extension-to-CRM flow be worth seeing?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@2",
+      "strategy": "strategy@2",
+      "copywriter": "copywriter@2",
+      "review": "review@2"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-6-luna",
+        "prompt_version": "research@2",
+        "duration_ms": 3253,
+        "usage": {
+          "input_tokens": 5053,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 5050,
+          "output_tokens": 369,
+          "reasoning_tokens": 0
+        },
+        "cost_usd": 0.0008160499999999999,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-6.1-sol",
+        "prompt_version": "strategy@2",
+        "duration_ms": 7431,
+        "usage": {
+          "input_tokens": 697,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 280,
+          "reasoning_tokens": 62
+        },
+        "cost_usd": 0.004194,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "copywriter@2",
+        "duration_ms": 2917,
+        "usage": {
+          "input_tokens": 740,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 474,
+          "reasoning_tokens": 358
+        },
+        "cost_usd": 0.002688,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "review@2",
+        "duration_ms": 1836,
+        "usage": {
+          "input_tokens": 694,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 204,
+          "reasoning_tokens": 184
+        },
+        "cost_usd": 0.0014385,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Apollo\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Apollo\" apollo.io",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Apollo\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 15449
+  }
+}

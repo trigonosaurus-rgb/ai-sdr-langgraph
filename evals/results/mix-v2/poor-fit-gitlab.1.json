@@ -1,0 +1,231 @@
+{
+  "case_id": "poor-fit-gitlab",
+  "config": "mix",
+  "models": "Research gpt-6-luna/low, Strategy gpt-6.1-sol/medium, Writing gpt-5.4-mini/medium, Review gpt-5.4-mini/low",
+  "repeat": 1,
+  "snapshot_recorded_at": "2026-10-09T12:07:08+00:00",
+  "checks": {
+    "label": "poor_fit",
+    "outcome_ok": true,
+    "facts": 6,
+    "dropped_facts": 0,
+    "attempts": 1,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 48,
+    "subject_words": 2,
+    "length_ok": false,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "c6cbef2ee55841a793c6b66ee768cab4",
+    "brief": {
+      "company": "GitLab",
+      "website": "about.gitlab.com",
+      "offer": "Wedding photography packages for couples",
+      "recipient": "CFO",
+      "language": "English",
+      "tone": "Direct"
+    },
+    "status": "needs_attention",
+    "reason": null,
+    "message": "The draft passed review, but the offer looks like a poor fit.",
+    "issues": [
+      "The offer may not fit this company: The offer addresses a personal consumer need unrelated to GitLab’s stated business or the recipient’s finance role. Do not send this cold email without a separate, relevant personal signal."
+    ],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "GitLab describes its product as an intelligent orchestration platform that brings teams and AI agents together to ship secure software.",
+          "excerpt": "We're the company behind GitLab, the intelligent orchestration platform where teams and their AI agents ship secure software faster.",
+          "source_url": "https://about.gitlab.com/company",
+          "source_title": "About GitLab - The Intelligent Orchestration Platform"
+        },
+        {
+          "id": 2,
+          "claim": "GitLab says its platform supports more than 100,000 organizations.",
+          "excerpt": "used by more than 100,000 organizations to plan, build, secure, and deploy software at machine scale, guided by humans.",
+          "source_url": "https://about.gitlab.com/jobs",
+          "source_title": "Join GitLab"
+        },
+        {
+          "id": 3,
+          "claim": "GitLab says it has over 50 million registered users.",
+          "excerpt": "Over 50 million",
+          "source_url": "https://about.gitlab.com/company",
+          "source_title": "About GitLab - The Intelligent Orchestration Platform"
+        },
+        {
+          "id": 4,
+          "claim": "GitLab serves technology leaders and platform owners responsible for modernizing software delivery, including CIOs, CTOs, and DevOps leaders.",
+          "excerpt": "GitLab serves technology leaders and platform owners responsible for modernizing their software delivery lifecycle. This includes CIOs, CTOs, and DevOps leaders",
+          "source_url": "https://about.gitlab.com/platform",
+          "source_title": "GitLab Platform - Speed with control"
+        },
+        {
+          "id": 5,
+          "claim": "GitLab’s stated product strategy includes developing reporting and analytics for project and portfolio management.",
+          "excerpt": "Provide dashboarding and analytics for project and portfolio management, allowing business to track and communicate progress on work in-flight, capacity of teams and projects, and overall efficiency across their full portfolio.",
+          "source_url": "https://about.gitlab.com/blog/dev-strategy-review",
+          "source_title": "Tell us what you think about our Dev strategy"
+        },
+        {
+          "id": 6,
+          "claim": "GitLab has a global alliance partnership with Capgemini, which will use GitLab’s portfolio, including GitLab Duo Agent Platform, for clients globally.",
+          "excerpt": "GitLab and Capgemini have signed a global alliance partnership agreement. As a GitLab Select Partner, Capgemini will leverage the GitLab portfolio for clients globally, including GitLab Duo Agent Platform",
+          "source_url": "https://about.gitlab.com/blog/gitlab-and-capgemini-global-alliance-partnership",
+          "source_title": "GitLab and Capgemini accelerate DevSecOps transformation"
+        }
+      ],
+      "website_owner": "GitLab",
+      "website_matches": true,
+      "website_note": "The results identify about.gitlab.com as GitLab’s official site and describe the organisation behind GitLab.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "The results provide limited detail on current pricing and recent financial performance.",
+      "dropped_facts": 0,
+      "dropped": []
+    },
+    "strategy": {
+      "observation": "GitLab serves technology leaders and platform owners responsible for modernizing software delivery.",
+      "fact_ids": [
+        4
+      ],
+      "offer_link": "There is no supported connection between this audience and wedding photography packages for couples, nor any stated reason for GitLab’s CFO to purchase them.",
+      "hypotheses": [
+        "The CFO might personally be planning a wedding, but the facts provide no evidence of that."
+      ],
+      "angle": "I offer wedding photography for couples, but I don’t see a business connection to your CFO role at GitLab.",
+      "offer_fit": "poor",
+      "fit_reason": "The offer addresses a personal consumer need unrelated to GitLab’s stated business or the recipient’s finance role. Do not send this cold email without a separate, relevant personal signal."
+    },
+    "draft": {
+      "subject": "Wrong inbox",
+      "body": "I offer wedding photography packages for couples. I’m reaching out anyway, but I don’t see a business connection to your CFO role at GitLab, which is focused on technology leaders and platform owners modernizing software delivery.\n\nIf this is simply the wrong inbox, should I leave it here?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Wrong inbox",
+          "body": "I offer wedding photography packages for couples. I’m reaching out anyway, but I don’t see a business connection to your CFO role at GitLab, which is focused on technology leaders and platform owners modernizing software delivery.\n\nIf this is simply the wrong inbox, should I leave it here?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@2",
+      "strategy": "strategy@2",
+      "copywriter": "copywriter@2",
+      "review": "review@2"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-6-luna",
+        "prompt_version": "research@2",
+        "duration_ms": 4769,
+        "usage": {
+          "input_tokens": 4837,
+          "cached_input_tokens": 4834,
+          "cache_write_tokens": 0,
+          "output_tokens": 606,
+          "reasoning_tokens": 96
+        },
+        "cost_usd": 0.00035163999999999996,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-6.1-sol",
+        "prompt_version": "strategy@2",
+        "duration_ms": 9919,
+        "usage": {
+          "input_tokens": 681,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 346,
+          "reasoning_tokens": 163
+        },
+        "cost_usd": 0.004822,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "copywriter@2",
+        "duration_ms": 3384,
+        "usage": {
+          "input_tokens": 692,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 593,
+          "reasoning_tokens": 512
+        },
+        "cost_usd": 0.0031875,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "review@2",
+        "duration_ms": 2213,
+        "usage": {
+          "input_tokens": 644,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 372,
+          "reasoning_tokens": 352
+        },
+        "cost_usd": 0.002157,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"GitLab\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"GitLab\" about.gitlab.com",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"GitLab\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 20297
+  }
+}

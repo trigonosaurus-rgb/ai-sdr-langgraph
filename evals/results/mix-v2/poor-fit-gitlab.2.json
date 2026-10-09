@@ -1,0 +1,318 @@
+{
+  "case_id": "poor-fit-gitlab",
+  "config": "mix",
+  "models": "Research gpt-6-luna/low, Strategy gpt-6.1-sol/medium, Writing gpt-5.4-mini/medium, Review gpt-5.4-mini/low",
+  "repeat": 2,
+  "snapshot_recorded_at": "2026-10-09T12:07:08+00:00",
+  "checks": {
+    "label": "poor_fit",
+    "outcome_ok": true,
+    "facts": 5,
+    "dropped_facts": 0,
+    "attempts": 3,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 60,
+    "subject_words": 2,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "602b59ea5b7a4ff193f1b2a828c3056f",
+    "brief": {
+      "company": "GitLab",
+      "website": "about.gitlab.com",
+      "offer": "Wedding photography packages for couples",
+      "recipient": "CFO",
+      "language": "English",
+      "tone": "Direct"
+    },
+    "status": "needs_attention",
+    "reason": null,
+    "message": "The draft passed review, but the offer looks like a poor fit.",
+    "issues": [
+      "The offer may not fit this company: The offer serves couples planning weddings, not a software company’s finance function. No supplied fact establishes a plausible company or recipient need; sending this cold email is not recommended."
+    ],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "GitLab offers an intelligent orchestration platform that brings teams and AI agents together to ship secure software faster.",
+          "excerpt": "We're the company behind GitLab, the intelligent orchestration platform where teams and their AI agents ship secure software faster.",
+          "source_url": "https://about.gitlab.com/company",
+          "source_title": "About GitLab - The Intelligent Orchestration Platform"
+        },
+        {
+          "id": 2,
+          "claim": "GitLab says its platform is used by more than 100,000 organizations to plan, build, secure, and deploy software.",
+          "excerpt": "used by more than 100,000 organizations to plan, build, secure, and deploy software at machine scale, guided by humans.",
+          "source_url": "https://about.gitlab.com/jobs",
+          "source_title": "Join GitLab"
+        },
+        {
+          "id": 3,
+          "claim": "GitLab serves technology leaders and platform owners—including CIOs, CTOs, and DevOps leaders—modernizing software delivery.",
+          "excerpt": "This includes CIOs, CTOs, and DevOps leaders who need to create unified experiences for engineering, design, and product teams.",
+          "source_url": "https://about.gitlab.com/platform",
+          "source_title": "GitLab Platform - Speed with control"
+        },
+        {
+          "id": 4,
+          "claim": "GitLab’s stated product strategy includes building reporting and analytics for project and portfolio management, including visibility into capacity and efficiency.",
+          "excerpt": "Provide dashboarding and analytics for project and portfolio management, allowing business to track and communicate progress on work in-flight, capacity of teams and projects, and overall efficiency across their full portfolio.",
+          "source_url": "https://about.gitlab.com/blog/dev-strategy-review",
+          "source_title": "Tell us what you think about our Dev strategy"
+        },
+        {
+          "id": 5,
+          "claim": "GitLab and Capgemini signed a global alliance partnership; Capgemini will offer GitLab’s portfolio and implementation services to clients globally.",
+          "excerpt": "We're excited to share that GitLab and Capgemini have signed a global alliance partnership agreement. As a GitLab Select Partner, Capgemini will leverage the GitLab portfolio for clients globally",
+          "source_url": "https://about.gitlab.com/blog/gitlab-and-capgemini-global-alliance-partnership",
+          "source_title": "GitLab and Capgemini accelerate DevSecOps transformation"
+        }
+      ],
+      "website_owner": "GitLab",
+      "website_matches": true,
+      "website_note": "The results identify about.gitlab.com as GitLab’s official site and link it to GitLab’s company and product pages.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "Pricing model and current revenue or funding details are not established by the official-site results.",
+      "dropped_facts": 0,
+      "dropped": []
+    },
+    "strategy": {
+      "observation": "GitLab’s stated product strategy includes project and portfolio reporting and analytics, with visibility into capacity and efficiency.",
+      "fact_ids": [
+        4
+      ],
+      "offer_link": "Wedding photography packages for couples have no supported connection to this product strategy or to the recipient’s CFO role. The facts provide no basis for a relevant business pitch.",
+      "hypotheses": [
+        "The CFO could personally be planning a wedding, but there is no evidence of that, and it would not establish a business reason to contact them."
+      ],
+      "angle": "Your stated product strategy includes capacity and efficiency reporting, but I don’t see a relevant connection to our wedding photography packages.",
+      "offer_fit": "poor",
+      "fit_reason": "The offer serves couples planning weddings, not a software company’s finance function. No supplied fact establishes a plausible company or recipient need; sending this cold email is not recommended."
+    },
+    "draft": {
+      "subject": "Wrong lane",
+      "body": "I work with couples on wedding photography packages. Your stated focus on capacity and efficiency reporting doesn’t give me a real reason to send this to a CFO, so I’d rather not force it.\n\nIf this is simply the wrong lane, who should I ask for the right contact on your side? If not, I can close the loop here."
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Wrong lane for this note",
+          "body": "GitLab’s strategy around capacity and efficiency reporting doesn’t give me a clean business reason to reach out with wedding photography packages, so I may be in the wrong inbox.\n\nI work with couples on wedding photo coverage. If there isn’t a personal need here, who on your side would be the right contact to ignore this?"
+        },
+        "review": {
+          "passed": false,
+          "issues": [
+            "“who on your side would be the right contact to ignore this?” is not a direct, matter-of-fact ask. It sounds awkward and dismissive. Change it to a plain request for the right contact, or remove the outreach altogether if there is no fit."
+          ]
+        }
+      },
+      {
+        "attempt": 2,
+        "draft": {
+          "subject": "Wrong lane here",
+          "body": "Your capacity and efficiency reporting strategy doesn’t give me a clean reason to reach out with wedding photography packages.\n\nI work with couples on wedding photo coverage. If this is the wrong place for a note like this, who should I take off the list?"
+        },
+        "review": {
+          "passed": false,
+          "issues": [
+            "“Your capacity and efficiency reporting strategy doesn’t give me a clean reason to reach out with wedding photography packages… If this is the wrong place for a note like this, who should I take off the list?” — The body is under 40 words, which makes it too short. Expand it to at least 40 words."
+          ]
+        }
+      },
+      {
+        "attempt": 3,
+        "draft": {
+          "subject": "Wrong lane",
+          "body": "I work with couples on wedding photography packages. Your stated focus on capacity and efficiency reporting doesn’t give me a real reason to send this to a CFO, so I’d rather not force it.\n\nIf this is simply the wrong lane, who should I ask for the right contact on your side? If not, I can close the loop here."
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@2",
+      "strategy": "strategy@2",
+      "copywriter": "copywriter@2",
+      "review": "review@2"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-6-luna",
+        "prompt_version": "research@2",
+        "duration_ms": 3420,
+        "usage": {
+          "input_tokens": 4837,
+          "cached_input_tokens": 4834,
+          "cache_write_tokens": 0,
+          "output_tokens": 403,
+          "reasoning_tokens": 0
+        },
+        "cost_usd": 0.00025014,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-6.1-sol",
+        "prompt_version": "strategy@2",
+        "duration_ms": 5028,
+        "usage": {
+          "input_tokens": 664,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 198,
+          "reasoning_tokens": 0
+        },
+        "cost_usd": 0.003308,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "copywriter@2",
+        "duration_ms": 3879,
+        "usage": {
+          "input_tokens": 697,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 603,
+          "reasoning_tokens": 512
+        },
+        "cost_usd": 0.00323625,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "review@2",
+        "duration_ms": 2999,
+        "usage": {
+          "input_tokens": 637,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 504,
+          "reasoning_tokens": 429
+        },
+        "cost_usd": 0.00274575,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 2,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "copywriter@2",
+        "duration_ms": 3555,
+        "usage": {
+          "input_tokens": 853,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 586,
+          "reasoning_tokens": 512
+        },
+        "cost_usd": 0.00327675,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 2,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "review@2",
+        "duration_ms": 1865,
+        "usage": {
+          "input_tokens": 620,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 269,
+          "reasoning_tokens": 182
+        },
+        "cost_usd": 0.0016755,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 3,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "copywriter@2",
+        "duration_ms": 2705,
+        "usage": {
+          "input_tokens": 848,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 459,
+          "reasoning_tokens": 367
+        },
+        "cost_usd": 0.0027015,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 3,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "review@2",
+        "duration_ms": 2468,
+        "usage": {
+          "input_tokens": 638,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 451,
+          "reasoning_tokens": 431
+        },
+        "cost_usd": 0.002508,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"GitLab\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"GitLab\" about.gitlab.com",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"GitLab\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 25937
+  }
+}

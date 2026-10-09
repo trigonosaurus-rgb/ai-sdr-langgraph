@@ -1,0 +1,245 @@
+{
+  "case_id": "transistor",
+  "config": "mix",
+  "models": "Research gpt-6-luna/low, Strategy gpt-6.1-sol/medium, Writing gpt-5.4-mini/medium, Review gpt-5.4-mini/low",
+  "repeat": 1,
+  "snapshot_recorded_at": "2026-10-09T12:05:59+00:00",
+  "checks": {
+    "label": "draft",
+    "outcome_ok": true,
+    "facts": 8,
+    "dropped_facts": 0,
+    "attempts": 1,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 92,
+    "subject_words": 5,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "ac241231cfbb4713a7233b3117b25ddb",
+    "brief": {
+      "company": "Transistor",
+      "website": "transistor.fm",
+      "offer": "Podcast audio editing and show notes for B2B brands",
+      "recipient": "Partnerships Lead",
+      "language": "English",
+      "tone": "Warm"
+    },
+    "status": "ready",
+    "reason": null,
+    "message": "The draft passed review.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "Transistor provides podcast hosting, including hosting unlimited shows on one account.",
+          "excerpt": "Podcast Hosting\nHost unlimited shows on one account",
+          "source_url": "https://transistor.fm/brand",
+          "source_title": "Transistor Podcasting – download logo PNG and SVG, press information"
+        },
+        {
+          "id": 2,
+          "claim": "Transistor serves more than 30,000 podcasts and its customers range from independent podcasters to small businesses and enterprise companies.",
+          "excerpt": "Today, we serve over 30,000 podcasts of all types. Our customers include indie podcasters, small businesses, and enterprise companies.",
+          "source_url": "https://transistor.fm/about",
+          "source_title": "About Transistor.fm – a simple, powerful podcast hosting platform"
+        },
+        {
+          "id": 3,
+          "claim": "Its customers include Kickstarter, ProfitWell, Ali Abdaal, and Laravel.",
+          "excerpt": "Our customers include Kickstarter, ProfitWell, Ali Abdaal, and Laravel.",
+          "source_url": "https://transistor.fm/brand",
+          "source_title": "Transistor Podcasting – download logo PNG and SVG, press information"
+        },
+        {
+          "id": 4,
+          "claim": "Transistor powers podcasts including Acquired, Diggnation, and Think Fast Talk Smart, as well as branded shows for Kit.com, the U.S. Government, and Magic: The Gathering.",
+          "excerpt": "Today, Transistor powers podcasts like Acquired, Diggnation, and Think Fast Talk Smart and branded shows from Kit.com (ConvertKit), The U.S. Government, and Magic: The Gathering.",
+          "source_url": "https://transistor.fm/transistor-growth",
+          "source_title": "Transistor Surpasses Simplecast on the List of Top Hosting Platforms"
+        },
+        {
+          "id": 5,
+          "claim": "Transistor said new customers grew 24% year over year in the month before its growth update.",
+          "excerpt": "last month, new customers grew 24% over the previous year",
+          "source_url": "https://transistor.fm/transistor-growth",
+          "source_title": "Transistor Surpasses Simplecast on the List of Top Hosting Platforms"
+        },
+        {
+          "id": 6,
+          "claim": "Transistor announced a Ghost integration, developed amid customer overlap that included 404 Media and The Lever.",
+          "excerpt": "We also just shipped a Ghost integration that connects Transistor to one of the most popular platforms for independent publishers. The integration was born out of a real overlap in customers (like 404 Media and The Lever)",
+          "source_url": "https://justin.transistor.fm/episodes/an-update-on-what-were-building-at-transistor",
+          "source_title": "Justin's brain | An update on what we're building at Transistor"
+        },
+        {
+          "id": 7,
+          "claim": "Transistor was developing video podcast publishing to YouTube, Spotify, Apple Podcasts, and other apps supporting HLS video.",
+          "excerpt": "Transistor customers will soon be able to publish video podcast episodes on YouTube, Spotify, Apple Podcasts, and any other apps that support HLS video.",
+          "source_url": "https://justin.transistor.fm/episodes/an-update-on-what-were-building-at-transistor",
+          "source_title": "Justin's brain | An update on what we're building at Transistor"
+        },
+        {
+          "id": 8,
+          "claim": "Transistor offers a 14-day free trial.",
+          "excerpt": "Try us free for 14 days.",
+          "source_url": "https://transistor.fm/brand",
+          "source_title": "Transistor Podcasting – download logo PNG and SVG, press information"
+        }
+      ],
+      "website_owner": "Transistor",
+      "website_matches": true,
+      "website_note": "The results identify transistor.fm as Transistor’s official site and describe its products and company information.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 0,
+      "dropped": []
+    },
+    "strategy": {
+      "observation": "Transistor reported 24% year-over-year growth in new customers in the month preceding its growth update.",
+      "fact_ids": [
+        5
+      ],
+      "offer_link": "A referral partnership could connect suitable B2B customers with audio editing and show-notes services alongside Transistor’s hosting. For the Partnerships Lead, this is a potential complementary service partnership, rather than a pitch for Transistor to outsource its own production.",
+      "hypotheses": [
+        "Some new Transistor customers may be B2B brands that need outside help editing episodes and writing show notes.",
+        "The Partnerships Lead may be interested in referring customers to complementary production providers.",
+        "Production support may help those customers publish consistently after choosing a hosting platform."
+      ],
+      "angle": "Transistor reported 24% year-over-year growth in new customers in your recent update—would an editing and show-notes referral option for B2B podcasts be worth exploring?",
+      "offer_fit": "good",
+      "fit_reason": "Podcast production complements podcast hosting, and a referral arrangement is relevant to a partnerships role. The opportunity depends on unconfirmed demand from B2B customers and Transistor’s willingness to partner with service providers."
+    },
+    "draft": {
+      "subject": "Referral option for B2B podcasts",
+      "body": "Hi — I noticed Transistor reported 24% year-over-year growth in new customers in your recent update.\n\nMy guess is some of those new accounts are B2B brands that want help getting episodes edited and show notes written once they’ve chosen a host.\n\nI handle podcast audio editing and show notes for B2B teams, so the idea here would be a simple referral option for customers who need production support, not a change to Transistor’s hosting.\n\nIf that’s on your radar, who’s the right person to speak with about a partner like this?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Referral option for B2B podcasts",
+          "body": "Hi — I noticed Transistor reported 24% year-over-year growth in new customers in your recent update.\n\nMy guess is some of those new accounts are B2B brands that want help getting episodes edited and show notes written once they’ve chosen a host.\n\nI handle podcast audio editing and show notes for B2B teams, so the idea here would be a simple referral option for customers who need production support, not a change to Transistor’s hosting.\n\nIf that’s on your radar, who’s the right person to speak with about a partner like this?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@2",
+      "strategy": "strategy@2",
+      "copywriter": "copywriter@2",
+      "review": "review@2"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-6-luna",
+        "prompt_version": "research@2",
+        "duration_ms": 3698,
+        "usage": {
+          "input_tokens": 4680,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 4677,
+          "output_tokens": 491,
+          "reasoning_tokens": 0
+        },
+        "cost_usd": 0.000830425,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-6.1-sol",
+        "prompt_version": "strategy@2",
+        "duration_ms": 16123,
+        "usage": {
+          "input_tokens": 798,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 513,
+          "reasoning_tokens": 248
+        },
+        "cost_usd": 0.006726,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "copywriter@2",
+        "duration_ms": 1506,
+        "usage": {
+          "input_tokens": 884,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 139,
+          "reasoning_tokens": 0
+        },
+        "cost_usd": 0.0012885,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "review@2",
+        "duration_ms": 1582,
+        "usage": {
+          "input_tokens": 821,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 130,
+          "reasoning_tokens": 110
+        },
+        "cost_usd": 0.00120075,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Transistor\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Transistor\" transistor.fm",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Transistor\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 22929
+  }
+}

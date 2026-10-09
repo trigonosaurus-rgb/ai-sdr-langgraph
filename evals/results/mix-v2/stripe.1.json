@@ -1,0 +1,224 @@
+{
+  "case_id": "stripe",
+  "config": "mix",
+  "models": "Research gpt-6-luna/low, Strategy gpt-6.1-sol/medium, Writing gpt-5.4-mini/medium, Review gpt-5.4-mini/low",
+  "repeat": 1,
+  "snapshot_recorded_at": "2026-10-09T12:05:11+00:00",
+  "checks": {
+    "label": "draft",
+    "outcome_ok": true,
+    "facts": 5,
+    "dropped_facts": 0,
+    "attempts": 1,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 60,
+    "subject_words": 3,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "b332fdd274cc4e07b2328519e854c7f4",
+    "brief": {
+      "company": "Stripe",
+      "website": "stripe.com",
+      "offer": "Localizing developer documentation into Japanese, German and Brazilian Portuguese",
+      "recipient": "Head of Documentation",
+      "language": "English",
+      "tone": "Warm"
+    },
+    "status": "ready",
+    "reason": null,
+    "message": "The draft passed review.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "Stripe offers products and pricing tools that support flat-rate tiers, per-seat or per-license billing, and usage-based billing.",
+          "excerpt": "Offer your customers a choice of escalating options, like basic, starter, and Enterprise service levels",
+          "source_url": "https://docs.stripe.com/products-prices/overview",
+          "source_title": "Overview | Stripe Documentation"
+        },
+        {
+          "id": 2,
+          "claim": "Stripe says its infrastructure can help businesses process payments outside the iOS and Android app stores.",
+          "excerpt": "Read how Stripe can help you process payments outside of the iOS and Android app stores, giving you more control and helping grow your revenue.",
+          "source_url": "https://stripe.com",
+          "source_title": "Stripe | Financial Infrastructure to Grow Your Revenue"
+        },
+        {
+          "id": 3,
+          "claim": "Stripe partnered with Crypto.com to let customers pay with crypto balances at checkout.",
+          "excerpt": "Crypto.com partners with Stripe to enable better crypto payments.",
+          "source_url": "https://stripe.com",
+          "source_title": "Stripe | Financial Infrastructure to Grow Your Revenue"
+        },
+        {
+          "id": 4,
+          "claim": "Stripe’s Terminal and Connect products are described by a customer as an integrated solution for payments infrastructure.",
+          "excerpt": "The combination of Terminal and Connect is a powerful integrated solution.",
+          "source_url": "https://stripe.com",
+          "source_title": "Stripe | Financial Infrastructure to Grow Your Revenue"
+        },
+        {
+          "id": 5,
+          "claim": "Stripe has agreed to acquire Parafin to expand revenue opportunities for platforms and help small businesses grow.",
+          "excerpt": "We’re welcoming @ParafinHQ to Stripe. Together, we’ll expand revenue opportunities for platforms and help small businesses grow",
+          "source_url": "https://x.com/stripe",
+          "source_title": "Stripe (@stripe) / X"
+        }
+      ],
+      "website_owner": "Stripe",
+      "website_matches": true,
+      "website_note": "Stripe’s official homepage is at stripe.com and presents Stripe’s financial infrastructure and products.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "The results provide limited detail on Stripe’s scale, pricing, and specific business priorities beyond the cited product and partnership examples.",
+      "dropped_facts": 0,
+      "dropped": []
+    },
+    "strategy": {
+      "observation": "Stripe’s documentation covers flat-rate, per-seat or per-license, and usage-based billing models.",
+      "fact_ids": [
+        1
+      ],
+      "offer_link": "Localizing the documentation for these billing models into Japanese, German and Brazilian Portuguese could help developers who prefer those languages understand the implementation options. For the Head of Documentation, this offers a defined localization scope rather than a proposal to translate the entire documentation library.",
+      "hypotheses": [
+        "Stripe may have developers who would benefit from billing documentation in these three languages.",
+        "The relevant documentation may not already be fully localized and maintained in all three languages.",
+        "The Head of Documentation may consider billing implementation content a suitable starting point for localization."
+      ],
+      "angle": "Stripe’s docs cover three distinct billing models—would that section be a useful starting point for localization into Japanese, German and Brazilian Portuguese?",
+      "offer_fit": "good",
+      "fit_reason": "The offer directly addresses developer documentation and the recipient’s remit, with a concrete product area to scope the work around; demand for these languages and existing translation coverage remain unconfirmed."
+    },
+    "draft": {
+      "subject": "Billing docs localization",
+      "body": "Hi,\n\nStripe’s docs cover flat-rate, per-seat or per-license, and usage-based billing.\n\nI localize developer documentation into Japanese, German, and Brazilian Portuguese. If billing implementation is the part developers reach for first, localizing that section could give them a clearer path without needing to tackle the full docs set at once.\n\nWould that billing section be the right place to start?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Billing docs localization",
+          "body": "Hi,\n\nStripe’s docs cover flat-rate, per-seat or per-license, and usage-based billing.\n\nI localize developer documentation into Japanese, German, and Brazilian Portuguese. If billing implementation is the part developers reach for first, localizing that section could give them a clearer path without needing to tackle the full docs set at once.\n\nWould that billing section be the right place to start?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@2",
+      "strategy": "strategy@2",
+      "copywriter": "copywriter@2",
+      "review": "review@2"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-6-luna",
+        "prompt_version": "research@2",
+        "duration_ms": 3960,
+        "usage": {
+          "input_tokens": 4828,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 4825,
+          "output_tokens": 313,
+          "reasoning_tokens": 0
+        },
+        "cost_usd": 0.0007599249999999999,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-6.1-sol",
+        "prompt_version": "strategy@2",
+        "duration_ms": 10605,
+        "usage": {
+          "input_tokens": 634,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 355,
+          "reasoning_tokens": 109
+        },
+        "cost_usd": 0.004818,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "copywriter@2",
+        "duration_ms": 2567,
+        "usage": {
+          "input_tokens": 707,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 457,
+          "reasoning_tokens": 352
+        },
+        "cost_usd": 0.00258675,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "review@2",
+        "duration_ms": 969,
+        "usage": {
+          "input_tokens": 617,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 65,
+          "reasoning_tokens": 45
+        },
+        "cost_usd": 0.00075525,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Stripe\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Stripe\" stripe.com",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Stripe\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 18192
+  }
+}

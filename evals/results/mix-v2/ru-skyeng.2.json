@@ -1,0 +1,230 @@
+{
+  "case_id": "ru-skyeng",
+  "config": "mix",
+  "models": "Research gpt-6-luna/low, Strategy gpt-6.1-sol/medium, Writing gpt-5.4-mini/medium, Review gpt-5.4-mini/low",
+  "repeat": 2,
+  "snapshot_recorded_at": "2026-10-09T12:07:24+00:00",
+  "checks": {
+    "label": "draft",
+    "outcome_ok": true,
+    "facts": 5,
+    "dropped_facts": 1,
+    "attempts": 1,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 68,
+    "subject_words": 3,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "08364ef7f6834662bf70fe6b1139dfd5",
+    "brief": {
+      "company": "Skyeng",
+      "website": "skyeng.ru",
+      "offer": "Озвучка учебных материалов профессиональными дикторами",
+      "recipient": "Руководитель контента",
+      "language": "Russian",
+      "tone": "Warm"
+    },
+    "status": "ready",
+    "reason": null,
+    "message": "The draft passed review.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "Skyeng says more than 300,000 learners have already learned a foreign language with it.",
+          "excerpt": "More than  \n300,000 learners [...] have already mastered a foreign language with us",
+          "source_url": "https://job.skyeng.ru/talks",
+          "source_title": "Remote work as an English teacher in Skyeng Talks"
+        },
+        {
+          "id": 2,
+          "claim": "Skyeng uses AI personalization to tailor learning materials to each student's interests.",
+          "excerpt": "Our system helps you create materials tailored to each student’s interests.",
+          "source_url": "https://job.skyeng.ru/talks",
+          "source_title": "Remote work as an English teacher in Skyeng Talks"
+        },
+        {
+          "id": 3,
+          "claim": "Skyeng says its platform is built on more than 200 microservices.",
+          "excerpt": "200+   \nмикросервисов в основе платформы",
+          "source_url": "https://job.skyeng.ru/products",
+          "source_title": "Products"
+        },
+        {
+          "id": 4,
+          "claim": "Skyeng lets learners schedule lessons at times that suit them and change their schedules if plans change.",
+          "excerpt": "Обучение можно запланировать в любое время, когда это удобно: утром, в обед, вечером после работы и даже в полночь.",
+          "source_url": "https://skyeng.ru",
+          "source_title": "Школа иностранных языков онлайн - изучение иностранных языков"
+        },
+        {
+          "id": 5,
+          "claim": "Skyeng's individual teacher-led lessons and group conversation clubs last 50 minutes.",
+          "excerpt": "50 минут длятся индивидуальные занятия с преподавателем и в групповых разговорных клубах.",
+          "source_url": "https://skyeng.ru",
+          "source_title": "Школа иностранных языков онлайн - изучение иностранных языков"
+        }
+      ],
+      "website_owner": "Skyeng",
+      "website_matches": true,
+      "website_note": "The site identifies its language-learning services as Skyeng and describes its products and lessons.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 1,
+      "dropped": [
+        {
+          "claim": "Skyeng offers online language lessons with teachers, as well as self-study options.",
+          "source_id": 6,
+          "excerpt": "Учи английский с преподавателем или самостоятельно"
+        }
+      ]
+    },
+    "strategy": {
+      "observation": "Skyeng использует ИИ, чтобы адаптировать учебные материалы под интересы каждого ученика.",
+      "fact_ids": [
+        2
+      ],
+      "offer_link": "Профессиональная озвучка могла бы дополнить персонализированные материалы тематическими аудиофрагментами для практики аудирования. Если такие задания входят в контент-план, руководитель контента мог бы привлекать дикторов для записи выбранных тем и диалогов.",
+      "hypotheses": [
+        "Предполагаем, что персонализированные материалы могут включать задания на аудирование.",
+        "Возможно, часть тематических материалов можно записывать заранее и использовать для учеников со схожими интересами.",
+        "Предполагаем, что руководитель контента участвует в выборе форматов учебных материалов и подрядчиков для их производства."
+      ],
+      "angle": "Skyeng адаптирует материалы под интересы учеников с помощью ИИ — рассматриваете ли вы профессиональную озвучку тематических диалогов для таких заданий?",
+      "offer_fit": "good",
+      "fit_reason": "Озвучка имеет понятное применение в изучении иностранных языков, а персонализация даёт конкретный повод предложить записи под разные темы; при этом потребность в аудиоконтенте и внешних дикторах фактами не подтверждена."
+    },
+    "draft": {
+      "subject": "Озвучка для персонализации",
+      "body": "Здравствуйте.\n\nВижу, что вы подстраиваете материалы под интересы ученика через ИИ. Если в таких блоках есть аудирование, профессиональная озвучка могла бы добавить к ним тематические диалоги и короткие аудиофрагменты — под конкретные темы, а не в общий набор.\n\nЯ занимаюсь озвучкой учебных материалов профессиональными дикторами: помогаю быстро записывать чистые треки для уроков и практики.\n\nПодскажите, у вас такие аудиозадания обычно планируются отдельно или их сразу закладывают в контент-план?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Озвучка для персонализации",
+          "body": "Здравствуйте.\n\nВижу, что вы подстраиваете материалы под интересы ученика через ИИ. Если в таких блоках есть аудирование, профессиональная озвучка могла бы добавить к ним тематические диалоги и короткие аудиофрагменты — под конкретные темы, а не в общий набор.\n\nЯ занимаюсь озвучкой учебных материалов профессиональными дикторами: помогаю быстро записывать чистые треки для уроков и практики.\n\nПодскажите, у вас такие аудиозадания обычно планируются отдельно или их сразу закладывают в контент-план?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@2",
+      "strategy": "strategy@2",
+      "copywriter": "copywriter@2",
+      "review": "review@2"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-6-luna",
+        "prompt_version": "research@2",
+        "duration_ms": 4773,
+        "usage": {
+          "input_tokens": 4048,
+          "cached_input_tokens": 4045,
+          "cache_write_tokens": 0,
+          "output_tokens": 528,
+          "reasoning_tokens": 115
+        },
+        "cost_usd": 0.00030475,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-6.1-sol",
+        "prompt_version": "strategy@2",
+        "duration_ms": 10801,
+        "usage": {
+          "input_tokens": 639,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 412,
+          "reasoning_tokens": 106
+        },
+        "cost_usd": 0.005398,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "copywriter@2",
+        "duration_ms": 3705,
+        "usage": {
+          "input_tokens": 750,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 671,
+          "reasoning_tokens": 512
+        },
+        "cost_usd": 0.003582,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "review@2",
+        "duration_ms": 1393,
+        "usage": {
+          "input_tokens": 675,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 146,
+          "reasoning_tokens": 126
+        },
+        "cost_usd": 0.00116325,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Skyeng\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Skyeng\" skyeng.ru",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Skyeng\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 20691
+  }
+}

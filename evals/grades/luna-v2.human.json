@@ -1,0 +1,50 @@
+{
+  "grader": "human",
+  "graded_at": "2026-10-09",
+  "scale": "evals/README.md: grounding, relevance, naturalness, 0-2 each",
+  "scope": "blind sample from evals/blind/sample.json; configuration hidden",
+  "grades": {
+    "ru-kontur.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 0,
+      "note": ""
+    },
+    "apollo.1": {
+      "grounding": 2,
+      "relevance": 1,
+      "naturalness": 0,
+      "note": ""
+    },
+    "ru-skyeng.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": ""
+    },
+    "linear.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": ""
+    },
+    "ru-vkusvill.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": ""
+    },
+    "ramp.1": {
+      "grounding": 2,
+      "relevance": 1,
+      "naturalness": 1,
+      "note": ""
+    },
+    "mercury.1": {
+      "grounding": 2,
+      "relevance": 1,
+      "naturalness": 1,
+      "note": ""
+    }
+  }
+}

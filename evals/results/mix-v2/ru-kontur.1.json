@@ -1,0 +1,231 @@
+{
+  "case_id": "ru-kontur",
+  "config": "mix",
+  "models": "Research gpt-6-luna/low, Strategy gpt-6.1-sol/medium, Writing gpt-5.4-mini/medium, Review gpt-5.4-mini/low",
+  "repeat": 1,
+  "snapshot_recorded_at": "2026-10-09T12:07:15+00:00",
+  "checks": {
+    "label": "draft",
+    "outcome_ok": true,
+    "facts": 6,
+    "dropped_facts": 0,
+    "attempts": 1,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 75,
+    "subject_words": 3,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "eb05483b6e534dc4a0a621425370d6b6",
+    "brief": {
+      "company": "Контур",
+      "website": "kontur.ru",
+      "offer": "Автоматизация разбора обращений в поддержку с помощью ИИ",
+      "recipient": "Руководитель службы поддержки",
+      "language": "Russian",
+      "tone": "Direct"
+    },
+    "status": "ready",
+    "reason": null,
+    "message": "The draft passed review.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "Контур develops an ecosystem of products for businesses, with more than 70 products.",
+          "excerpt": "Контур — это экосистема для бизнеса, в которой больше 70 сервисов.",
+          "source_url": "https://kontur.ru/press/news/company/2021/5/7600",
+          "source_title": "Контур перешел на новый фирменный стиль — СКБ Контур"
+        },
+        {
+          "id": 2,
+          "claim": "Контур offers services across areas including electronic document exchange, accounting and reporting, retail, HR management, procurement, and information security.",
+          "excerpt": "Электронный документооборот\n\n  Учет и отчетность\n\n  Проверка контрагентов\n\n  Торговля и ритейл\n\n  Автоматизация бизнеса\n\n  Управление HR‑процессами",
+          "source_url": "https://kontur.ru/products",
+          "source_title": "Продукты — Контур"
+        },
+        {
+          "id": 3,
+          "claim": "At the time of its 2021 company profile, Контур reported revenue of 22.6 billion rubles and 2.2 million customer companies in Russia and abroad.",
+          "excerpt": "Выручка группы компаний за 2021 год составила 22,6 млрд рублей, а ее решениями пользуются 2,2 млн компаний в России и за рубежом.",
+          "source_url": "https://kontur.ru/press/news/company/2022/3/8230",
+          "source_title": "Гендиректором СКБ Контур назначен Михаил Сродных — СКБ Контур"
+        },
+        {
+          "id": 4,
+          "claim": "Контур and Beeline signed a strategic cooperation agreement at SPIEF 2025, including development of Контур.Толк, its video-conferencing service.",
+          "excerpt": "Билайн и разработчик цифровых сервисов для бизнеса СКБ Контур на Петербургском международном экономическом форуме (ПМЭФ-2025) заключили стратегическое соглашение о сотрудничестве.",
+          "source_url": "https://kontur.ru/press/news/79427-bilajn_i_kontur_pomogut_rossijskomu_biznesu",
+          "source_title": "Билайн и Контур помогут российскому бизнесу автоматизироваться — СКБ Контур"
+        },
+        {
+          "id": 5,
+          "claim": "Контур launched cross-border electronic document exchange between Russia and Uzbekistan.",
+          "excerpt": "SKB Kontur has launched cross-border electronic document exchange, allowing Russian companies to exchange legally binding e-documents with Uzbek partners.",
+          "source_url": "https://www.uzdaily.uz/en/skb-kontur-launches-e-document-exchange-between-russia-uzbekistan",
+          "source_title": "SKB Kontur Launches E-Document Exchange Between Russia, Uzbekistan"
+        },
+        {
+          "id": 6,
+          "claim": "Контур says its ecosystem is used by every third business in Russia and has more than 11,000 employees nationwide.",
+          "excerpt": "Контур — экосистема, которой пользуется каждый третий бизнес в России.\n\nМы помогаем компаниям и предпринимателям развивать свое дело, не отвлекаясь на рутину.\n\n### Топ-5\n\nIT-компаний в рейтингах работодателей\n\n### 70+\n\nПродуктов в экосистеме для бизнеса\n\n### 11 000+\n\nСотрудников",
+          "source_url": "https://kontur.ru/career",
+          "source_title": "Работа у нас — Контур"
+        }
+      ],
+      "website_owner": "СКБ Контур",
+      "website_matches": true,
+      "website_note": "The results identify kontur.ru as the official site of СКБ Контур and describe its business-services ecosystem.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "No pricing details or specific customer case studies are provided.",
+      "dropped_facts": 0,
+      "dropped": []
+    },
+    "strategy": {
+      "observation": "Контур запустил трансграничный электронный документооборот между Россией и Узбекистаном.",
+      "fact_ids": [
+        5
+      ],
+      "offer_link": "Если запуск добавляет новые типы обращений, ИИ-разбор может помочь поддержке выделять вопросы по трансграничному ЭДО, определять их тему и направлять профильным специалистам. Руководитель поддержки сможет проверить пользу автоматизации на одном направлении, прежде чем расширять её применение.",
+      "hypotheses": [
+        "Запуск трансграничного ЭДО может сопровождаться обращениями с новой для поддержки тематикой.",
+        "Первичная классификация и маршрутизация таких обращений могут требовать ручного разбора.",
+        "Если таких обращений достаточно, автоматизация может сократить время первичного разбора."
+      ],
+      "angle": "В связи с запуском ЭДО между Россией и Узбекистаном предлагаю проверить, сможет ли ИИ сократить ручной разбор обращений по этому направлению.",
+      "offer_fit": "good",
+      "fit_reason": "Предложение напрямую связано с задачами руководителя поддержки, а запуск нового направления даёт конкретный повод обсудить классификацию обращений; объём обращений и потребность в автоматизации пока не подтверждены."
+    },
+    "draft": {
+      "subject": "ЭДО с Узбекистаном",
+      "body": "Вижу, что вы запустили трансграничный ЭДО между Россией и Узбекистаном. На таком запуске обычно быстро появляются обращения с новой тематикой и их приходится вручную сортировать.\n\nМы помогаем автоматизировать разбор обращений в поддержку с помощью ИИ: он определяет тему, выделяет нестандартные запросы и направляет их нужной команде. Если на этом направлении уже есть поток обращений, можно начать с одной очереди и проверить эффект без перестройки всей поддержки.\n\nЕсть сейчас отдельный поток по вопросам именно этого ЭДО?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "ЭДО с Узбекистаном",
+          "body": "Вижу, что вы запустили трансграничный ЭДО между Россией и Узбекистаном. На таком запуске обычно быстро появляются обращения с новой тематикой и их приходится вручную сортировать.\n\nМы помогаем автоматизировать разбор обращений в поддержку с помощью ИИ: он определяет тему, выделяет нестандартные запросы и направляет их нужной команде. Если на этом направлении уже есть поток обращений, можно начать с одной очереди и проверить эффект без перестройки всей поддержки.\n\nЕсть сейчас отдельный поток по вопросам именно этого ЭДО?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@2",
+      "strategy": "strategy@2",
+      "copywriter": "copywriter@2",
+      "review": "review@2"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-6-luna",
+        "prompt_version": "research@2",
+        "duration_ms": 6057,
+        "usage": {
+          "input_tokens": 6524,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 6521,
+          "output_tokens": 778,
+          "reasoning_tokens": 117
+        },
+        "cost_usd": 0.0012044249999999999,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-6.1-sol",
+        "prompt_version": "strategy@2",
+        "duration_ms": 10955,
+        "usage": {
+          "input_tokens": 756,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 403,
+          "reasoning_tokens": 109
+        },
+        "cost_usd": 0.005542,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "copywriter@2",
+        "duration_ms": 2535,
+        "usage": {
+          "input_tokens": 867,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 396,
+          "reasoning_tokens": 242
+        },
+        "cost_usd": 0.00243225,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "review@2",
+        "duration_ms": 2171,
+        "usage": {
+          "input_tokens": 791,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 186,
+          "reasoning_tokens": 166
+        },
+        "cost_usd": 0.00143025,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Контур\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Контур\" kontur.ru",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Контур\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 21730
+  }
+}

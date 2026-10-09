@@ -1,0 +1,245 @@
+{
+  "case_id": "buttondown",
+  "config": "mix",
+  "models": "Research gpt-6-luna/low, Strategy gpt-6.1-sol/medium, Writing gpt-5.4-mini/medium, Review gpt-5.4-mini/low",
+  "repeat": 1,
+  "snapshot_recorded_at": "2026-10-09T12:05:45+00:00",
+  "checks": {
+    "label": "draft",
+    "outcome_ok": true,
+    "facts": 8,
+    "dropped_facts": 0,
+    "attempts": 1,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 80,
+    "subject_words": 4,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "0fbe7a6f5b944918bda7aa667fed6965",
+    "brief": {
+      "company": "Buttondown",
+      "website": "buttondown.com",
+      "offer": "Migration help for newsletter writers moving from Substack",
+      "recipient": "Founder",
+      "language": "English",
+      "tone": "Warm"
+    },
+    "status": "ready",
+    "reason": null,
+    "message": "The draft passed review.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "Buttondown is a newsletter platform for starting, growing, and monetizing newsletters, with subscriber management, email composition, paid subscriptions, automations, and an API.",
+          "excerpt": "Buttondown is a newsletter platform that makes it easy to start, grow, and monetize your newsletter. It offers subscriber management, email composition, paid subscriptions, automations, and a comprehensive API.",
+          "source_url": "https://docs.buttondown.com/llms.txt",
+          "source_title": "Buttondown"
+        },
+        {
+          "id": 2,
+          "claim": "Buttondown offers one-click concierge migration for mailing lists of any size, with migration completed within one business day.",
+          "excerpt": "That’s why we offerone-click concierge migration for your whole list, no matter how large it may be. Just create your account for free, contact us, and we’ll get you migrated within one business day.",
+          "source_url": "https://buttondown.com",
+          "source_title": "Buttondown — Newsletter software for people like you"
+        },
+        {
+          "id": 3,
+          "claim": "Buttondown says it does not take fees from customers’ paid subscribers.",
+          "excerpt": "We use Buttondown for our own mailing lists. And we don’t take fees from yourpaid subscribers.",
+          "source_url": "https://buttondown.com",
+          "source_title": "Buttondown — Newsletter software for people like you"
+        },
+        {
+          "id": 4,
+          "claim": "Buttondown says its API is feature-complete and that its automations, personalizations, and editor help users target messages.",
+          "excerpt": "Ourautomations, personalizations, and editor help you send the right message to the right people. And if you want to try your hand at building your own tools, our API is feature-complete & beloved in the industry.",
+          "source_url": "https://buttondown.com",
+          "source_title": "Buttondown — Newsletter software for people like you"
+        },
+        {
+          "id": 5,
+          "claim": "Buttondown says it prioritizes its product roadmap based on customer feedback.",
+          "excerpt": "We prioritize our product roadmap from our customer feedback, not our own agenda.",
+          "source_url": "https://buttondown.com",
+          "source_title": "Buttondown — Newsletter software for people like you"
+        },
+        {
+          "id": 6,
+          "claim": "Buttondown built a new customer home screen to help onboard new customers and let existing customers see list health and progress at a glance.",
+          "excerpt": "Doing so gives us a place to ask these questions and get people acclimated to the product, and it also helps existing customers better understand the health & progress of their lists at a glance.",
+          "source_url": "https://buttondown.com/blog/onboarding",
+          "source_title": "How we welcome new customers at Buttondown"
+        },
+        {
+          "id": 7,
+          "claim": "Buttondown provides priority support for business customers.",
+          "excerpt": "### Priority support.",
+          "source_url": "https://buttondown.com/features/for/businesses",
+          "source_title": "Buttondown for businesses"
+        },
+        {
+          "id": 8,
+          "claim": "Buttondown supports programmatic access to subscribers, emails, and other newsletter functions through a RESTful API.",
+          "excerpt": "API Introduction: RESTful API for programmatic access to subscribers, emails, and more",
+          "source_url": "https://docs.buttondown.com/llms.txt",
+          "source_title": "Buttondown"
+        }
+      ],
+      "website_owner": "Buttondown",
+      "website_matches": true,
+      "website_note": "The website identifies Buttondown as a newsletter platform and describes its products and services on its own pages.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "No verified company scale, pricing details, or recent funding and hiring information.",
+      "dropped_facts": 0,
+      "dropped": []
+    },
+    "strategy": {
+      "observation": "Buttondown says it does not take fees from customers’ paid subscribers.",
+      "fact_ids": [
+        3
+      ],
+      "offer_link": "Migration help could turn Buttondown’s no-fee paid-subscription model into a practical switching path for Substack writers considering Buttondown. However, Buttondown already offers one-click concierge migration within one business day, so an external service would need to complement that offering rather than duplicate it.",
+      "hypotheses": [
+        "Some Substack writers may consider Buttondown to reduce the costs associated with monetizing their newsletters.",
+        "The founder might consider outside migration help if it brings prospective customers or handles Substack-specific work beyond Buttondown’s existing concierge service.",
+        "There may be migration work outside the existing service’s scope, but the supplied facts do not establish such a gap."
+      ],
+      "angle": "Would help moving Substack writers attracted to Buttondown’s no-fee paid subscriptions add anything beyond your existing one-business-day concierge migration?",
+      "offer_fit": "weak",
+      "fit_reason": "Substack writers are plausible customers for Buttondown, but the offered migration help substantially overlaps with an existing fast concierge service; no unmet need or capacity constraint is established."
+    },
+    "draft": {
+      "subject": "No-fee switch from Substack",
+      "body": "Noticed Buttondown doesn’t take fees from paid subscribers, which feels like a real draw for writers coming from Substack.\n\nI help newsletter writers move from Substack to Buttondown, mostly by making the switch feel straightforward on the migration side.\n\nSince you already offer one-click concierge migration within a business day, I was wondering: if writers are choosing you for the no-fee setup, is there any Substack-specific work you’d want handled separately, or does your current process cover the whole handoff?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "No-fee switch from Substack",
+          "body": "Noticed Buttondown doesn’t take fees from paid subscribers, which feels like a real draw for writers coming from Substack.\n\nI help newsletter writers move from Substack to Buttondown, mostly by making the switch feel straightforward on the migration side.\n\nSince you already offer one-click concierge migration within a business day, I was wondering: if writers are choosing you for the no-fee setup, is there any Substack-specific work you’d want handled separately, or does your current process cover the whole handoff?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@2",
+      "strategy": "strategy@2",
+      "copywriter": "copywriter@2",
+      "review": "review@2"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-6-luna",
+        "prompt_version": "research@2",
+        "duration_ms": 3798,
+        "usage": {
+          "input_tokens": 4384,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 4381,
+          "output_tokens": 537,
+          "reasoning_tokens": 0
+        },
+        "cost_usd": 0.000816425,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-6.1-sol",
+        "prompt_version": "strategy@2",
+        "duration_ms": 13018,
+        "usage": {
+          "input_tokens": 740,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 423,
+          "reasoning_tokens": 156
+        },
+        "cost_usd": 0.00571,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "copywriter@2",
+        "duration_ms": 3148,
+        "usage": {
+          "input_tokens": 835,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 527,
+          "reasoning_tokens": 395
+        },
+        "cost_usd": 0.00299775,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "review@2",
+        "duration_ms": 1309,
+        "usage": {
+          "input_tokens": 752,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 107,
+          "reasoning_tokens": 87
+        },
+        "cost_usd": 0.0010455,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Buttondown\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Buttondown\" buttondown.com",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Buttondown\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 21297
+  }
+}

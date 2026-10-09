@@ -1,0 +1,176 @@
+{
+  "grader": "claude-opus-5-5",
+  "graded_at": "2026-10-09",
+  "scale": "evals/README.md: grounding, relevance, naturalness, 0-2 each",
+  "scope": "drafts of runs whose case accepts a draft and whose outcome was a draft",
+  "grades": {
+    "apollo.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "Extension-to-CRM handoff is a specific angle; 'my guess is' filler and a stock close."
+    },
+    "apollo.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "Same handoff angle; 'my guess is it's worth a quick review' is filler."
+    },
+    "buttondown.1": {
+      "grounding": 2,
+      "relevance": 1,
+      "naturalness": 1,
+      "note": "No-fee hook is good, but the offer competes with their concierge migration; long closing question."
+    },
+    "buttondown.2": {
+      "grounding": 2,
+      "relevance": 1,
+      "naturalness": 2,
+      "note": "Natural and concrete about what the sender handles; the overlap with their concierge remains."
+    },
+    "duolingo.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "B2 expansion to human-recorded dialogue; concise."
+    },
+    "duolingo.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "Same angle; the synthetic-voice point is phrased as a guess."
+    },
+    "gitlab.1": {
+      "grounding": 2,
+      "relevance": 1,
+      "naturalness": 1,
+      "note": "Opens with the sender; Capgemini rollouts to docs is a stretch."
+    },
+    "gitlab.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "Regulated-customer roadmap to release notes and migration guides; clean question."
+    },
+    "linear.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "Autonomy versus human review in agent delegation; concrete plan offer."
+    },
+    "linear.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "Where agent handoffs break down; a small, specific recruiting offer."
+    },
+    "mercury.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "Growing AI-founder cohort to a dedicated path; natural."
+    },
+    "mercury.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "Same angle; two questions compete."
+    },
+    "plausible.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "White-label search test is relevant; opens with the sender."
+    },
+    "plausible.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "Relevant narrow test; opens with the sender and ignores that they never advertised."
+    },
+    "ramp.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "UK and Europe rollout to templates; the regional-review hedge reads stiff."
+    },
+    "ramp.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "Same angle; a redundant middle paragraph about why the sender makes templates."
+    },
+    "ru-kontur.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "Uzbekistan e-document launch to a separate ticket queue; natural Russian."
+    },
+    "ru-kontur.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "Same angle, ends with a concrete ownership question."
+    },
+    "ru-skyeng.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "Self-study audio is relevant; the second paragraph is generic."
+    },
+    "ru-skyeng.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "AI-personalized materials to themed audio; 'чистые треки' is jargon."
+    },
+    "ru-vkusvill.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "4,200 own-brand products to consistent card attributes; natural."
+    },
+    "ru-vkusvill.2": {
+      "grounding": 2,
+      "relevance": 1,
+      "naturalness": 1,
+      "note": "Order volume is a generic hook; 94 words with 'UX-гипотез' jargon."
+    },
+    "stripe.1": {
+      "grounding": 2,
+      "relevance": 1,
+      "naturalness": 2,
+      "note": "Generic billing-docs angle, but short and natural."
+    },
+    "stripe.2": {
+      "grounding": 2,
+      "relevance": 1,
+      "naturalness": 1,
+      "note": "Crypto.com checkout to localization is a stretch; odd line about how the sender picks guides."
+    },
+    "transistor.1": {
+      "grounding": 2,
+      "relevance": 1,
+      "naturalness": 1,
+      "note": "24% growth to B2B brands needing editing is a guess; long."
+    },
+    "transistor.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "Kit.com branded shows to a referral partner; short and natural."
+    },
+    "tuple.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "Slack flow into a pairing session as a video story; concise."
+    },
+    "tuple.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "Onboarding use case to one customer video; specific ask."
+    }
+  }
+}

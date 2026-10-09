@@ -1,0 +1,272 @@
+{
+  "case_id": "tuple",
+  "config": "mix",
+  "models": "Research gpt-6-luna/low, Strategy gpt-6.1-sol/medium, Writing gpt-5.4-mini/medium, Review gpt-5.4-mini/low",
+  "repeat": 2,
+  "snapshot_recorded_at": "2026-10-09T12:05:52+00:00",
+  "checks": {
+    "label": "draft",
+    "outcome_ok": true,
+    "facts": 5,
+    "dropped_facts": 0,
+    "attempts": 2,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 60,
+    "subject_words": 3,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": [
+      "20"
+    ]
+  },
+  "result": {
+    "run_id": "18d24d8a9eb94013afe9f14c7c2fba9b",
+    "brief": {
+      "company": "Tuple",
+      "website": "tuple.app",
+      "offer": "Video case studies with engineering teams that use your product",
+      "recipient": "Head of Marketing",
+      "language": "English",
+      "tone": "Direct"
+    },
+    "status": "ready",
+    "reason": null,
+    "message": "The draft passed review.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "Tuple is a remote pair-programming app for macOS and Windows, designed for developer-focused collaboration.",
+          "excerpt": "The best remote pair programming app on macOS and Windows",
+          "source_url": "https://github.com/tupleapp",
+          "source_title": "Tuple · GitHub"
+        },
+        {
+          "id": 2,
+          "claim": "Tuple supports full-time mouse and keyboard control for both participants, along with command-line integration and pluginability.",
+          "excerpt": "Seamless collaboration with full-time mouse and keyboard support for both parties, snappy interactions, command-line integration and pluginability.",
+          "source_url": "https://www.linkedin.com/company/tupleapp",
+          "source_title": "Tuple"
+        },
+        {
+          "id": 3,
+          "claim": "Tuple offers a Slack integration that starts a pairing session from a channel or direct message, and lets others join with one click.",
+          "excerpt": "adds a `/tuple` command, which will start a pairing session directly from a channel or DMs. Anyone can then join your call with a single click",
+          "source_url": "https://slack.com/marketplace/A04B287N6P2-tuple",
+          "source_title": "Tuple & Slack Integration | Slack Marketplace"
+        },
+        {
+          "id": 4,
+          "claim": "Tuple serves a customer base that includes teams pairing remotely and developers onboarding with a colleague.",
+          "excerpt": "I've been using Tuple to pair with my onboarding buddy and my experience has been excellent.",
+          "source_url": "https://tuple.app/love",
+          "source_title": "Tuple Love · Tuple"
+        },
+        {
+          "id": 5,
+          "claim": "Tuple had 13 employees according to the LinkedIn search result.",
+          "excerpt": "Employees\n- Now: 13",
+          "source_url": "https://www.linkedin.com/company/tupleapp",
+          "source_title": "Tuple"
+        }
+      ],
+      "website_owner": "Tuple",
+      "website_matches": true,
+      "website_note": "The results identify tuple.app as Tuple’s official site and link the Tuple GitHub profile to tuple.app.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "The results do not state current pricing, customer counts, recent launches, or funding.",
+      "dropped_facts": 0,
+      "dropped": []
+    },
+    "strategy": {
+      "observation": "Tuple’s customer base includes developers using the product to onboard with a colleague.",
+      "fact_ids": [
+        4
+      ],
+      "offer_link": "A video case study with an engineering team could show how Tuple is used during onboarding, giving the Head of Marketing a customer-led asset that illustrates a concrete use case rather than just product features.",
+      "hypotheses": [
+        "The Head of Marketing may want customer evidence that helps prospective engineering teams understand where Tuple fits into their workflows.",
+        "An existing customer may be willing to demonstrate its onboarding workflow and discuss the benefits it has experienced."
+      ],
+      "angle": "Some Tuple customers use it to onboard developers with a colleague—would a video case study showing that workflow be useful for your marketing?",
+      "offer_fit": "good",
+      "fit_reason": "The offer features the engineering teams Tuple serves and can make an established customer use case tangible; customer participation and any measurable outcomes would still need to be confirmed."
+    },
+    "draft": {
+      "subject": "Onboarding with Tuple",
+      "body": "Some Tuple customers use it to onboard developers with a colleague.\n\nI make short video case studies with engineering teams. If that use case matters in your marketing, I can help turn one customer into a short video that shows the onboarding workflow in practice.\n\nDo you have one customer in mind who might be open to a 20-minute interview?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Onboarding customer story",
+          "body": "Some Tuple customers use it to onboard developers with a colleague.\n\nI make short video case studies with engineering teams, so you get a customer-led asset that shows one real workflow instead of a feature list.\n\nIf that onboarding use case matters in your marketing, is there one customer you’d be open to introducing for a 20-minute interview?"
+        },
+        "review": {
+          "passed": false,
+          "issues": [
+            "“customer-led asset” — buzzword. Say plainly what you deliver, for example “a short video case study.”"
+          ]
+        }
+      },
+      {
+        "attempt": 2,
+        "draft": {
+          "subject": "Onboarding with Tuple",
+          "body": "Some Tuple customers use it to onboard developers with a colleague.\n\nI make short video case studies with engineering teams. If that use case matters in your marketing, I can help turn one customer into a short video that shows the onboarding workflow in practice.\n\nDo you have one customer in mind who might be open to a 20-minute interview?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@2",
+      "strategy": "strategy@2",
+      "copywriter": "copywriter@2",
+      "review": "review@2"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-6-luna",
+        "prompt_version": "research@2",
+        "duration_ms": 3195,
+        "usage": {
+          "input_tokens": 2467,
+          "cached_input_tokens": 2464,
+          "cache_write_tokens": 0,
+          "output_tokens": 310,
+          "reasoning_tokens": 0
+        },
+        "cost_usd": 0.00017994,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-6.1-sol",
+        "prompt_version": "strategy@2",
+        "duration_ms": 9814,
+        "usage": {
+          "input_tokens": 617,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 298,
+          "reasoning_tokens": 82
+        },
+        "cost_usd": 0.004214,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "copywriter@2",
+        "duration_ms": 3927,
+        "usage": {
+          "input_tokens": 666,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 727,
+          "reasoning_tokens": 627
+        },
+        "cost_usd": 0.003771,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "review@2",
+        "duration_ms": 2302,
+        "usage": {
+          "input_tokens": 592,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 361,
+          "reasoning_tokens": 316
+        },
+        "cost_usd": 0.0020685,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 2,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "copywriter@2",
+        "duration_ms": 3224,
+        "usage": {
+          "input_tokens": 793,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 486,
+          "reasoning_tokens": 392
+        },
+        "cost_usd": 0.00278175,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 2,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "review@2",
+        "duration_ms": 1645,
+        "usage": {
+          "input_tokens": 592,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 202,
+          "reasoning_tokens": 182
+        },
+        "cost_usd": 0.001353,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Tuple\" company overview products customers",
+        "topic": "general",
+        "results": 0,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Tuple\" tuple.app",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Tuple\" news",
+        "topic": "news",
+        "results": 2,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 24121
+  }
+}

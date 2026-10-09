@@ -1,0 +1,238 @@
+{
+  "case_id": "gitlab",
+  "config": "mix",
+  "models": "Research gpt-6-luna/low, Strategy gpt-6.1-sol/medium, Writing gpt-5.4-mini/medium, Review gpt-5.4-mini/low",
+  "repeat": 2,
+  "snapshot_recorded_at": "2026-10-09T12:05:24+00:00",
+  "checks": {
+    "label": "draft",
+    "outcome_ok": true,
+    "facts": 7,
+    "dropped_facts": 0,
+    "attempts": 1,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 65,
+    "subject_words": 5,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "365f71c7ea1849f6ad938929fe43d8ee",
+    "brief": {
+      "company": "GitLab",
+      "website": "about.gitlab.com",
+      "offer": "Contract technical writers for release notes and migration guides",
+      "recipient": "Engineering Manager, Documentation",
+      "language": "English",
+      "tone": "Direct"
+    },
+    "status": "ready",
+    "reason": null,
+    "message": "The draft passed review.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "GitLab describes its product as an intelligent orchestration platform where teams and AI agents ship secure software faster.",
+          "excerpt": "We're the company behind GitLab, the intelligent orchestration platform where teams and their AI agents ship secure software faster.",
+          "source_url": "https://about.gitlab.com/company",
+          "source_title": "About GitLab - The Intelligent Orchestration Platform"
+        },
+        {
+          "id": 2,
+          "claim": "GitLab says its platform supports the complete software lifecycle, serving technology leaders and teams across engineering, product, security, and operations.",
+          "excerpt": "GitLab supports everyone involved in software delivery: developers, business analysts, product owners, testers, solution architects, security teams, and operations teams working together across the complete software lifecycle.",
+          "source_url": "https://about.gitlab.com/platform",
+          "source_title": "GitLab Platform - Speed with control"
+        },
+        {
+          "id": 3,
+          "claim": "GitLab says more than 100,000 organizations use its platform to plan, build, secure, and deploy software.",
+          "excerpt": "used by more than 100,000 organizations to plan, build, secure, and deploy software at machine scale, guided by humans.",
+          "source_url": "https://about.gitlab.com/jobs",
+          "source_title": "Join GitLab"
+        },
+        {
+          "id": 4,
+          "claim": "GitLab reports more than 50 million registered users.",
+          "excerpt": "Over 50 million",
+          "source_url": "https://about.gitlab.com/company",
+          "source_title": "About GitLab - The Intelligent Orchestration Platform"
+        },
+        {
+          "id": 5,
+          "claim": "GitLab has a global alliance partnership with Capgemini, which will use GitLab products and offer implementation services to clients worldwide.",
+          "excerpt": "As a GitLab Select Partner, Capgemini will leverage the GitLab portfolio for clients globally, including GitLab Duo Agent Platform, which orchestrates AI across the entire software development lifecycle, along with specialized implementation services.",
+          "source_url": "https://about.gitlab.com/blog/gitlab-and-capgemini-global-alliance-partnership",
+          "source_title": "GitLab and Capgemini accelerate DevSecOps transformation"
+        },
+        {
+          "id": 6,
+          "claim": "GitLab’s stated product strategy includes improving reporting and analytics for project and portfolio management, including visibility into work in progress, team capacity, and efficiency.",
+          "excerpt": "Provide dashboarding and analytics for project and portfolio management, allowing business to track and communicate progress on work in-flight, capacity of teams and projects, and overall efficiency across their full portfolio.",
+          "source_url": "https://about.gitlab.com/blog/dev-strategy-review",
+          "source_title": "Tell us what you think about our Dev strategy"
+        },
+        {
+          "id": 7,
+          "claim": "GitLab says it aims to improve requirements mapping, dependency management, and process management for regulated customers.",
+          "excerpt": "Many regulated customers want to use GitLab for requirements mapping, dependencies, and process management.",
+          "source_url": "https://about.gitlab.com/blog/dev-strategy-review",
+          "source_title": "Tell us what you think about our Dev strategy"
+        }
+      ],
+      "website_owner": "GitLab",
+      "website_matches": true,
+      "website_note": "The results identify about.gitlab.com as GitLab’s official site and link it to GitLab’s company and product pages.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "No current pricing model or specific customer outcomes are provided.",
+      "dropped_facts": 0,
+      "dropped": []
+    },
+    "strategy": {
+      "observation": "GitLab aims to improve requirements mapping, dependency management, and process management for regulated customers.",
+      "fact_ids": [
+        7
+      ],
+      "offer_link": "If these planned improvements change existing workflows, contract technical writers could produce release notes explaining what changed and migration guides covering prerequisites, affected configurations, and transition steps—giving the documentation manager additional capacity for that work.",
+      "hypotheses": [
+        "These improvements may introduce workflow or configuration changes that require migration guidance.",
+        "Regulated customers may need particularly explicit documentation of changes before adopting them.",
+        "The documentation manager may benefit from temporary writing capacity around releases involving these improvements."
+      ],
+      "angle": "As GitLab improves requirements mapping and dependency management for regulated customers, would contract writing support help your team document any resulting workflow changes in release notes and migration guides?",
+      "offer_fit": "good",
+      "fit_reason": "The offer directly matches the recipient's documentation remit and has a plausible application to GitLab's stated product improvements, although the facts do not establish upcoming migrations or a capacity gap."
+    },
+    "draft": {
+      "subject": "Docs support for regulated changes",
+      "body": "Noticed GitLab is working on requirements mapping, dependency management, and process management for regulated customers.\n\nIf those changes affect workflows or configurations, contract technical writers can take release notes and migration guides off your plate. I place writers for that kind of release work, so your team can keep focus on the product.\n\nAre you expecting any upcoming release where those changes need user-facing docs?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Docs support for regulated changes",
+          "body": "Noticed GitLab is working on requirements mapping, dependency management, and process management for regulated customers.\n\nIf those changes affect workflows or configurations, contract technical writers can take release notes and migration guides off your plate. I place writers for that kind of release work, so your team can keep focus on the product.\n\nAre you expecting any upcoming release where those changes need user-facing docs?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@2",
+      "strategy": "strategy@2",
+      "copywriter": "copywriter@2",
+      "review": "review@2"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-6-luna",
+        "prompt_version": "research@2",
+        "duration_ms": 3915,
+        "usage": {
+          "input_tokens": 4837,
+          "cached_input_tokens": 4834,
+          "cache_write_tokens": 0,
+          "output_tokens": 488,
+          "reasoning_tokens": 0
+        },
+        "cost_usd": 0.00029264,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-6.1-sol",
+        "prompt_version": "strategy@2",
+        "duration_ms": 9340,
+        "usage": {
+          "input_tokens": 738,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 328,
+          "reasoning_tokens": 92
+        },
+        "cost_usd": 0.004756,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "copywriter@2",
+        "duration_ms": 3079,
+        "usage": {
+          "input_tokens": 800,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 447,
+          "reasoning_tokens": 343
+        },
+        "cost_usd": 0.0026115,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "review@2",
+        "duration_ms": 1872,
+        "usage": {
+          "input_tokens": 722,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 276,
+          "reasoning_tokens": 256
+        },
+        "cost_usd": 0.0017835,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"GitLab\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"GitLab\" about.gitlab.com",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"GitLab\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 18222
+  }
+}
