@@ -30,6 +30,8 @@ The grader sees `blind/sample.json` (with `blind/sample.ru.json`, Claude's trans
 
 Objective but shallow: the outcome matches the expectation; the draft is in the requested language; body 50–120 words and subject under 8; no placeholders; every number in the draft appears in a fact or in the brief. A run that passes still needs grading.
 
+Style tics are counted separately and do not change the draft checks: stock hedges ("my guess is", "I'm assuming", "предполагаю,"), English words in Russian drafts that are not names from the brief or facts, and a Russian company name left undeclined after a preposition ("у Контур"). The report prints them as a second table.
+
 ## Grading scale
 
 Each draft gets 0–2 on three criteria:
