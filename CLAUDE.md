@@ -16,7 +16,7 @@
 - `server/web.py` — отдача собранного фронтенда (`SDR_STATIC_DIR`; `assets/` кэшируются навсегда, остальное `no-cache`) и заголовки безопасности (CSP `'self'` без inline-скриптов — тема в `frontend/public/theme.js`). Без `SDR_CLIENT_SALT` API не стартует.
 - `Dockerfile` — один образ: сборка фронтенда + FastAPI, один воркер uvicorn, база на томе `/data`, порт из `PORT`, доверенный прокси — `FORWARDED_ALLOW_IPS`. Переменные — [.env.example](.env.example). `.github/workflows/ci.yml` — pytest, Vitest, сборка, e2e, smoke-тест образа; без ключей.
 - `tests/` — pytest на фейковых LLM и поиске (`tests/fakes.py`), без сети; `tests/test_api.py` — API на фейковом графе.
-- `frontend/` — React 19 + TypeScript + Vite, подключён к API через прокси `/api`. Examples — повтор реальных запусков: `tools/export-run.mjs` → `tools/runs/*.json` → `npm.cmd run record:examples`. Детали — [frontend/README.md](frontend/README.md), контракт API — [frontend/INTEGRATION.md](frontend/INTEGRATION.md).
+- `frontend/` — React 19 + TypeScript + Vite, подключён к API через прокси `/api`. Корневой `package.json` — только точки входа (`setup`, `dev`, `test:web`, `test:browser`), без зависимостей. Examples — повтор реальных запусков: `tools/export-run.mjs` → `tools/runs/*.json` → `npm.cmd run record:examples`. Детали — [frontend/README.md](frontend/README.md), контракт API — [frontend/INTEGRATION.md](frontend/INTEGRATION.md).
 - `frontend/src/run.ts` — контракт событий и reducer. Меняя событие, менять и `core/events.py`. `src/api.ts` — запросы, валидация брифа и событий, SSE; `src/useRun.ts` — запуск, отмена, восстановление после перезагрузки.
 - `tests/fake_server.py` — настоящий API на сценарном фейковом графе для e2e (компания со словом `slow` — медленный запуск, `broken` — сбой).
 
@@ -25,8 +25,13 @@
 Окружение: Windows, PowerShell. В PowerShell использовать `npm.cmd`/`npx.cmd`.
 
 ```powershell
+# Из корня: package.json в корне только проксирует скрипты frontend/
+npm.cmd run setup          # npm ci во frontend/
+npm.cmd run dev            # = dev:all: API :8000 + Vite :5173; Generate — ПЛАТНЫЕ вызовы. Перед запуском проверить порты
+npm.cmd run test:web       # Vitest; test:browser — Playwright
+
 # Frontend (из frontend/)
-npm.cmd run dev:all        # API :8000 + Vite :5173; Generate — ПЛАТНЫЕ вызовы. Перед запуском проверить порты
+npm.cmd run dev:all        # то же, что npm.cmd run dev из корня
 npm.cmd run dev            # только Vite :5173 (без API сервис показан недоступным)
 npm.cmd test               # Vitest
 npm.cmd run test:browser   # Playwright + Edge; сам поднимает фейковый API :8765 и Vite :5174, без платных вызовов

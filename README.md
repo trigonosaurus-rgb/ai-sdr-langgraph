@@ -94,12 +94,11 @@ Copy [`.env.example`](.env.example) to `.env` in the repository root and fill in
 
 ### Run
 
-In the browser (API on :8000, Vite on :5173). Generate makes paid OpenAI and Tavily calls:
+In the browser (API on :8000, Vite on :5173), from the repository root; Node 24 is used for the frontend. Generate makes paid OpenAI and Tavily calls:
 
 ```powershell
-cd frontend
-npm.cmd ci
-npm.cmd run dev:all
+npm.cmd run setup   # installs the frontend's pinned dependencies
+npm.cmd run dev
 ```
 
 From the terminal, also paid:
@@ -125,7 +124,7 @@ Behind a reverse proxy, set `FORWARDED_ALLOW_IPS` to the proxy's address, or eve
 
 ```powershell
 .venv\Scripts\python.exe -m pytest     # fake LLM and search, no network
-cd frontend; npm.cmd test; npm.cmd run test:browser   # Vitest; Playwright on a fake API
+npm.cmd run test:web; npm.cmd run test:browser    # Vitest; Playwright on a fake API
 ```
 
 GitHub Actions runs all of them, the build and a smoke test of the Docker image on every push, without provider keys.

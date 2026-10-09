@@ -5,10 +5,11 @@ React + TypeScript + Vite. A full-height Compose workspace, a separate Examples 
 ## Run on Windows
 
 ```powershell
-cd frontend
 npm.cmd ci
 npm.cmd run dev:all   # API on :8000 (with reload) and Vite on :5173
 ```
+
+From the repository root the same is `npm.cmd run setup` and `npm.cmd run dev`.
 
 Open http://127.0.0.1:5173. Stop both with Ctrl+C. **Generate makes paid OpenAI and Tavily calls** with the keys from the root `.env`. `npm.cmd run dev` starts Vite alone; the workspace then reports the service as unavailable. `SDR_API_URL` points the `/api` proxy at another API. VS Code also has **Terminal → Run Task → Frontend: start preview**. Node 24 was used; dependencies are pinned. Fonts (Geist for the interface, Newsreader for the email) and video files are bundled locally.
 

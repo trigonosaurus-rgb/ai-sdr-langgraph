@@ -1,0 +1,11 @@
+{
+  "name": "ai-sdr",
+  "private": true,
+  "description": "Entry points from the repository root; the frontend's own scripts live in frontend/package.json.",
+  "scripts": {
+    "setup": "npm ci --prefix frontend",
+    "dev": "npm run dev:all --prefix frontend",
+    "test:web": "npm test --prefix frontend",
+    "test:browser": "npm run test:browser --prefix frontend"
+  }
+}
