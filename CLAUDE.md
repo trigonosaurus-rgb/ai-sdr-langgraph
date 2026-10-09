@@ -1,6 +1,6 @@
 # AI SDR
 
-Портфолио-проект: веб-приложение, которое исследует компанию и готовит персонализированное холодное письмо с проверкой человеком. План и статус этапов — [ROADMAP.md](ROADMAP.md).
+Портфолио-проект: веб-приложение, которое исследует компанию и готовит персонализированное холодное письмо с проверкой человеком. План и статус этапов — [ROADMAP.md](ROADMAP.md): локальный файл, в git не хранится (`.gitignore`).
 
 ## Структура
 
@@ -11,7 +11,7 @@
 - `core/events.py` — события, зеркало `frontend/src/run.ts`; `tests/test_events.py` проверяет совпадение типов.
 - `agents/` — узлы графа (фабрики `make_*(ctx)`). `prompts/*.md` — промпты с `version` во front matter.
 - `core/cli.py` — ручной запуск из терминала.
-- `evals/` — оценка качества: случаи `cases.toml` (часть — holdout), снимки поиска `snapshots/`, прогон с конфигурацией моделей (`configs.py`), автопроверки, оценки `grades/<результаты>.<claude|human>.json`, слепая выборка для человека (`blind.py`), отчёт. Описание и шкала — [evals/README.md](evals/README.md). Итоги этапа 5 — в README и ROADMAP.
+- `evals/` — оценка качества: случаи `cases.toml` (часть — holdout), снимки поиска `snapshots/`, прогон с конфигурацией моделей (`configs.py`), автопроверки, оценки `grades/<результаты>.<claude|human>.json`, слепая выборка для человека (`blind.py`), отчёт. Описание и шкала — [evals/README.md](evals/README.md). Итоги этапа 5 — в README.
 - `server/app.py` — FastAPI: `POST /api/runs`, SSE `GET /api/runs/{id}/events` (повтор по `after` / `Last-Event-ID`), `POST /api/runs/{id}/cancel`, снимок `GET /api/runs/{id}`. `GET /api/runs/{id}/usage`, `GET /api/usage?period=24h|30d`, `GET /api/status` (пауза сервиса, режим разработчика и квота посетителя). Разработчик без лимитов — по `SDR_DEVELOPER_KEY` в заголовке `X-Developer-Key`. `server/runs.py` — граф в пуле потоков, отмена, пробуждение SSE, квота посетителя (`SDR_RUNS_PER_DAY` / `SDR_RUNS_PER_MONTH`) и месячный бюджет сервиса (`SDR_MONTHLY_MODEL_USD`, `SDR_MONTHLY_SEARCH_CREDITS`); `server/store.py` — SQLite (`runs`, `events`, `llm_calls`, `search_calls`; вызовы пишутся сразу по завершении), агрегаты usage, миграции через `PRAGMA user_version`, база по умолчанию `data/sdr.sqlite3` (`SDR_DB_PATH`).
 - `server/web.py` — отдача собранного фронтенда (`SDR_STATIC_DIR`; `assets/` кэшируются навсегда, остальное `no-cache`) и заголовки безопасности (CSP `'self'` без inline-скриптов — тема в `frontend/public/theme.js`). Без `SDR_CLIENT_SALT` API не стартует.
 - `Dockerfile` — один образ: сборка фронтенда + FastAPI, один воркер uvicorn, база на томе `/data`, порт из `PORT`, доверенный прокси — `FORWARDED_ALLOW_IPS`. Переменные — [.env.example](.env.example). `.github/workflows/ci.yml` — pytest, Vitest, сборка, e2e, smoke-тест образа; без ключей.

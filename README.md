@@ -136,6 +136,5 @@ GitHub Actions runs all of them, the build and a smoke test of the Docker image 
 - [`server/`](server/) — FastAPI, the run manager (threads, cancellation, quotas, budget) and SQLite storage.
 - [`frontend/`](frontend/README.md) — React 19, TypeScript and Vite; the API contract is in [`frontend/INTEGRATION.md`](frontend/INTEGRATION.md).
 - [`evals/`](evals/README.md) — the evaluation set, search snapshots, automatic checks and grades.
-- [ROADMAP.md](ROADMAP.md) — the plan, decisions and results by stage.
 
 Not included by design: sending email, a CRM, accounts and payments.

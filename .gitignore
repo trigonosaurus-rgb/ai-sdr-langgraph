@@ -39,3 +39,6 @@ runs/
 
 # Local API database
 data/
+
+# Working plan, kept locally
+ROADMAP.md
