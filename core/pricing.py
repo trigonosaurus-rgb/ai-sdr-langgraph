@@ -47,9 +47,8 @@ class PriceTable:
             written, write_price = usage.cache_write_tokens, price.cache_write
         cached = usage.cached_input_tokens
         ordinary = usage.input_tokens - cached - written  # cached and written are part of input, priced once
-        return (
-            ordinary * price.input + cached * price.cached_input + written * write_price + usage.output_tokens * price.output
-        ) / PER_MILLION
+        input_cost = ordinary * price.input + cached * price.cached_input + written * write_price
+        return (input_cost + usage.output_tokens * price.output) / PER_MILLION
 
     def search_cost(self, credits: float | None) -> float | None:
         return None if credits is None else credits * self.search_credit_usd

@@ -1,0 +1,275 @@
+# Evaluation cases. Each one is a brief plus the outcomes a careful human would accept:
+#   draft             - enough verified facts, a fitting offer: a draft is expected
+#   poor_fit          - a draft, but strategy must judge the offer a poor fit
+#   insufficient_data - too little reliable information to write a specific email
+#   website_mismatch  - the website belongs to a different company
+# Expectations are set from the recorded search snapshot, never from model outputs.
+# holdout = true cases are kept out of prompt and model tuning and run only for the final check.
+
+# --- Well-known companies
+
+[[case]]
+id = "linear"
+company = "Linear"
+website = "linear.app"
+offer = "Recruiting and scheduling customer interview participants for product teams"
+recipient = "Head of Product"
+expect = ["draft"]
+note = "The stage 2-4 manual run; the link to the offer was a stretch there."
+
+[[case]]
+id = "stripe"
+company = "Stripe"
+website = "stripe.com"
+offer = "Localizing developer documentation into Japanese, German and Brazilian Portuguese"
+recipient = "Head of Documentation"
+tone = "Warm"
+expect = ["draft"]
+
+[[case]]
+id = "duolingo"
+company = "Duolingo"
+website = "duolingo.com"
+offer = "Voice actors and audio production for language-learning content"
+recipient = "Director of Learning Content"
+expect = ["draft"]
+
+[[case]]
+id = "gitlab"
+company = "GitLab"
+website = "about.gitlab.com"
+offer = "Contract technical writers for release notes and migration guides"
+recipient = "Engineering Manager, Documentation"
+expect = ["draft"]
+note = "The site lives on a subdomain."
+
+[[case]]
+id = "canva"
+company = "Canva"
+website = "canva.com"
+offer = "Accessibility audits of design templates against WCAG 2.2"
+recipient = "Head of Accessibility"
+tone = "Warm"
+expect = ["draft"]
+holdout = true
+
+[[case]]
+id = "wise"
+company = "Wise"
+website = "wise.com"
+offer = "AI triage of customer support tickets by intent and urgency"
+recipient = "VP of Customer Support"
+expect = ["draft"]
+holdout = true
+
+# --- Small companies with little press
+
+[[case]]
+id = "plausible"
+company = "Plausible Analytics"
+website = "plausible.io"
+offer = "Paid search campaigns for privacy-focused software products"
+recipient = "Co-founder"
+expect = ["draft", "insufficient_data"]
+
+[[case]]
+id = "buttondown"
+company = "Buttondown"
+website = "buttondown.com"
+offer = "Migration help for newsletter writers moving from Substack"
+recipient = "Founder"
+tone = "Warm"
+expect = ["draft", "insufficient_data"]
+
+[[case]]
+id = "tuple"
+company = "Tuple"
+website = "tuple.app"
+offer = "Video case studies with engineering teams that use your product"
+recipient = "Head of Marketing"
+expect = ["draft", "insufficient_data"]
+
+[[case]]
+id = "transistor"
+company = "Transistor"
+website = "transistor.fm"
+offer = "Podcast audio editing and show notes for B2B brands"
+recipient = "Partnerships Lead"
+tone = "Warm"
+expect = ["draft", "insufficient_data"]
+
+[[case]]
+id = "savvycal"
+company = "SavvyCal"
+website = "savvycal.com"
+offer = "Integration of scheduling links into HubSpot and Salesforce workflows"
+recipient = "Founder"
+expect = ["draft", "insufficient_data"]
+holdout = true
+
+# --- Ambiguous names: several organisations share the name
+
+[[case]]
+id = "apollo"
+company = "Apollo"
+website = "apollo.io"
+offer = "Data enrichment quality audits for sales databases"
+recipient = "Head of Data"
+expect = ["draft"]
+note = "Must not mix in Apollo GraphQL or Apollo Hospitals."
+
+[[case]]
+id = "mercury"
+company = "Mercury"
+website = "mercury.com"
+offer = "Onboarding email sequences for startup founders"
+recipient = "Lifecycle Marketing Lead"
+tone = "Warm"
+expect = ["draft"]
+note = "Must not mix in Mercury Insurance or other Mercury companies."
+
+[[case]]
+id = "ramp"
+company = "Ramp"
+website = "ramp.com"
+offer = "Expense policy templates for mid-size finance teams"
+recipient = "Head of Content"
+expect = ["draft"]
+
+[[case]]
+id = "pilot"
+company = "Pilot"
+website = "pilot.com"
+offer = "Tax season overflow staffing for accounting firms"
+recipient = "VP of Operations"
+expect = ["draft"]
+holdout = true
+note = "Many unrelated companies are called Pilot."
+
+# --- Little or no information
+
+[[case]]
+id = "fictional-bakery"
+company = "Hollowmere Bakehouse"
+website = "hollowmere-bakehouse.com"
+offer = "Online ordering setup for local bakeries"
+recipient = "Owner"
+expect = ["insufficient_data", "website_mismatch"]
+note = "Fictional company; the domain should have no indexed pages."
+
+[[case]]
+id = "fictional-saas"
+company = "Quillford Systems"
+website = "quillford-systems.io"
+offer = "SOC 2 readiness consulting for early-stage SaaS"
+recipient = "CTO"
+expect = ["insufficient_data", "website_mismatch"]
+note = "Fictional company."
+
+[[case]]
+id = "fictional-agency"
+company = "Brightlane Studio"
+website = "brightlane-studio-design.com"
+offer = "White-label web development for design agencies"
+recipient = "Creative Director"
+tone = "Warm"
+expect = ["insufficient_data", "website_mismatch"]
+holdout = true
+note = "Fictional company; real agencies with similar names may exist."
+
+# --- Wrong website: the domain belongs to another company
+
+[[case]]
+id = "wrong-site-linear"
+company = "Linear"
+website = "notion.so"
+offer = "Recruiting and scheduling customer interview participants for product teams"
+recipient = "Head of Product"
+expect = ["website_mismatch"]
+
+[[case]]
+id = "wrong-site-stripe"
+company = "Stripe"
+website = "adyen.com"
+offer = "Localizing developer documentation into Japanese, German and Brazilian Portuguese"
+recipient = "Head of Documentation"
+expect = ["website_mismatch"]
+holdout = true
+
+[[case]]
+id = "wrong-site-duolingo"
+company = "Duolingo"
+website = "babbel.com"
+offer = "Voice actors and audio production for language-learning content"
+recipient = "Director of Learning Content"
+expect = ["website_mismatch"]
+
+# --- The offer does not fit
+
+[[case]]
+id = "poor-fit-gitlab"
+company = "GitLab"
+website = "about.gitlab.com"
+offer = "Wedding photography packages for couples"
+recipient = "CFO"
+expect = ["poor_fit"]
+
+[[case]]
+id = "poor-fit-wise"
+company = "Wise"
+website = "wise.com"
+offer = "Forklift maintenance contracts for warehouses"
+recipient = "Head of Product"
+expect = ["poor_fit"]
+
+[[case]]
+id = "poor-fit-duolingo"
+company = "Duolingo"
+website = "duolingo.com"
+offer = "Bulk supply of school uniforms"
+recipient = "VP of Engineering"
+tone = "Warm"
+expect = ["poor_fit"]
+holdout = true
+
+# --- Russian
+
+[[case]]
+id = "ru-kontur"
+company = "Контур"
+website = "kontur.ru"
+offer = "Автоматизация разбора обращений в поддержку с помощью ИИ"
+recipient = "Руководитель службы поддержки"
+language = "Russian"
+expect = ["draft"]
+
+[[case]]
+id = "ru-skyeng"
+company = "Skyeng"
+website = "skyeng.ru"
+offer = "Озвучка учебных материалов профессиональными дикторами"
+recipient = "Руководитель контента"
+language = "Russian"
+tone = "Warm"
+expect = ["draft"]
+
+[[case]]
+id = "ru-vkusvill"
+company = "ВкусВилл"
+website = "vkusvill.ru"
+offer = "Аудит карточек товаров в мобильном приложении"
+recipient = "Директор по продукту"
+language = "Russian"
+expect = ["draft"]
+
+[[case]]
+id = "ru-miro"
+company = "Miro"
+website = "miro.com"
+offer = "Найм и проведение интервью с пользователями из Европы"
+recipient = "Head of Research"
+language = "Russian"
+tone = "Warm"
+expect = ["draft"]
+note = "Russian email to an international company: English sources, Russian draft."
+holdout = true

@@ -11,6 +11,7 @@
 - `core/events.py` — события, зеркало `frontend/src/run.ts`; `tests/test_events.py` проверяет совпадение типов.
 - `agents/` — узлы графа (фабрики `make_*(ctx)`). `prompts/*.md` — промпты с `version` во front matter.
 - `core/cli.py` — ручной запуск из терминала.
+- `evals/` — оценка качества: случаи `cases.toml`, снимки поиска `snapshots/`, прогон с конфигурацией моделей (`configs.py`), автопроверки, отчёт. Описание и шкала — [evals/README.md](evals/README.md).
 - `server/app.py` — FastAPI: `POST /api/runs`, SSE `GET /api/runs/{id}/events` (повтор по `after` / `Last-Event-ID`), `POST /api/runs/{id}/cancel`, снимок `GET /api/runs/{id}`. `GET /api/runs/{id}/usage`, `GET /api/usage?period=24h|30d`, `GET /api/status` (пауза сервиса, режим разработчика и квота посетителя). Разработчик без лимитов — по `SDR_DEVELOPER_KEY` в заголовке `X-Developer-Key`. `server/runs.py` — граф в пуле потоков, отмена, пробуждение SSE, квота посетителя (`SDR_RUNS_PER_DAY` / `SDR_RUNS_PER_MONTH`) и месячный бюджет сервиса (`SDR_MONTHLY_MODEL_USD`, `SDR_MONTHLY_SEARCH_CREDITS`); `server/store.py` — SQLite (`runs`, `events`, `llm_calls`, `search_calls`; вызовы пишутся сразу по завершении), агрегаты usage, миграции через `PRAGMA user_version`, база по умолчанию `data/sdr.sqlite3` (`SDR_DB_PATH`).
 - `tests/` — pytest на фейковых LLM и поиске (`tests/fakes.py`), без сети; `tests/test_api.py` — API на фейковом графе.
 - `frontend/` — React 19 + TypeScript + Vite, подключён к API через прокси `/api`. Данные в Examples пока вымышленные (Northstar). Детали — [frontend/README.md](frontend/README.md), контракт API — [frontend/INTEGRATION.md](frontend/INTEGRATION.md).
@@ -34,6 +35,9 @@ npm.cmd run format:check
 .venv\Scripts\python.exe -m pytest                  # без сети
 .venv\Scripts\python.exe -m core.cli --help         # запуск — ПЛАТНЫЕ вызовы OpenAI и Tavily
 .venv\Scripts\python.exe -m uvicorn server.app:app --port 8000   # API; POST /api/runs — ПЛАТНЫЙ запуск
+.venv\Scripts\python.exe -m evals.snapshot   # ПЛАТНО: кредиты Tavily для новых случаев
+.venv\Scripts\python.exe -m evals.run --config mini   # ПЛАТНО: OpenAI на снимках поиска
+.venv\Scripts\python.exe -m evals.report           # таблица по результатам, без сети
 ```
 
 ## Зависимости Python

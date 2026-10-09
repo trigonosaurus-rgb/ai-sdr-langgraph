@@ -17,7 +17,8 @@ class StageModel:
     temperature: float | None = None  # None: not sent; reasoning models reject it
 
 
-def _stage_models(model: str) -> dict[Stage, StageModel]:
+def stage_models(model: str) -> dict[Stage, StageModel]:
+    """One model for every stage, with the reasoning effort each stage needs."""
     return {
         "Research": StageModel(model, reasoning_effort="low"),
         "Strategy": StageModel(model, reasoning_effort="medium"),
@@ -28,7 +29,7 @@ def _stage_models(model: str) -> dict[Stage, StageModel]:
 
 @dataclass(frozen=True)
 class Settings:
-    models: dict[Stage, StageModel] = field(default_factory=lambda: _stage_models(DEFAULT_MODEL))
+    models: dict[Stage, StageModel] = field(default_factory=lambda: stage_models(DEFAULT_MODEL))
     max_rewrites: int = 2  # drafts after the first one; total attempts = 1 + max_rewrites
     min_facts: int = 2  # fewer verified facts than this means insufficient data
     search_results_per_query: int = 5
@@ -38,7 +39,7 @@ class Settings:
 
     @classmethod
     def from_env(cls) -> "Settings":
-        settings = cls(models=_stage_models(os.getenv("OPENAI_MODEL_NAME") or DEFAULT_MODEL))
+        settings = cls(models=stage_models(os.getenv("OPENAI_MODEL_NAME") or DEFAULT_MODEL))
         if value := os.getenv("SDR_MAX_REWRITES"):
             settings = replace(settings, max_rewrites=int(value))
         return settings

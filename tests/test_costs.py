@@ -35,7 +35,8 @@ def test_cache_writes_are_input_priced_at_the_write_rate():
     expected = (300 * 2.00 + 500 * 0.10 + 1200 * 2.50 + 100 * 10.00) / 1_000_000
     assert PRICES.llm_cost("gpt-6.1-sol", usage) == pytest.approx(expected)
     nothing_written = usage.model_copy(update={"cache_write_tokens": 0})
-    assert PRICES.llm_cost("gpt-6.1-sol", nothing_written) == pytest.approx((1500 * 2.00 + 500 * 0.10 + 100 * 10.00) / 1e6)
+    expected = (1500 * 2.00 + 500 * 0.10 + 100 * 10.00) / 1_000_000
+    assert PRICES.llm_cost("gpt-6.1-sol", nothing_written) == pytest.approx(expected)
 
 
 def test_unknown_cache_writes_make_the_cost_unknown_only_where_they_are_billed():
