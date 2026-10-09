@@ -15,7 +15,7 @@ A LangGraph workflow: `researcher → strategist → copywriter ⇄ reviewer`.
 
 Every run ends as `ready`, `needs_attention` (a draft exists but did not pass review, or the offer looks like a poor fit) or `failed`. A model or parsing error never becomes the result and never counts as a passed review. Prompts live in versioned files under `prompts/`, and each result records the prompt versions and the token usage reported by the API for each call.
 
-The React frontend in [`frontend/`](frontend/README.md) talks to a FastAPI server (`server/`): it starts a run, follows its events over SSE as the draft is written, can cancel it and restores it after a reload. Runs, events and paid calls are stored in SQLite. Its Examples still use fictional data.
+The React frontend in [`frontend/`](frontend/README.md) talks to a FastAPI server (`server/`): it starts a run, follows its events over SSE as the draft is written, can cancel it and restores it after a reload. Runs, events and paid calls are stored in SQLite. Its Examples replay two real runs.
 
 ## Setup
 

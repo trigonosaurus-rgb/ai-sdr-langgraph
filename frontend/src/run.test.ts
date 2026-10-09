@@ -162,6 +162,19 @@ describe('stream view state', () => {
       Review: null,
     })
   })
+  it('ends the activity feed with the review verdict', () => {
+    const state = play(
+      stage('Review', 5000),
+      { type: 'review', attempt: 1, passed: false, issues: ['Too long'] },
+      stage('Review', 8000),
+      { type: 'review', attempt: 2, passed: true, issues: [] },
+    )
+    expect(state.activity.slice(-3)).toEqual([
+      'Draft 1 returned with 1 issue',
+      expect.any(String),
+      'Draft 2 passed review',
+    ])
+  })
   it('adds up time across rewrites and ignores activity for timing', () => {
     const state = play(
       stage('Research', 0),

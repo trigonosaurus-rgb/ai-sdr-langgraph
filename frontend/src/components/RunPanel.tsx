@@ -93,12 +93,14 @@ export function RunPanel({
   run,
   paused = false,
   onExamples,
+  initialTab = 'email',
 }: {
   run: RunState
   paused?: boolean // live generation is stopped for visitors
   onExamples?: () => void
+  initialTab?: ResultTab
 }) {
-  const [tab, setTab] = useState<ResultTab>('email')
+  const [tab, setTab] = useState<ResultTab>(initialTab)
   const [edited, setEdited] = useState<{
     id: string | null
     draft: Draft
@@ -154,7 +156,7 @@ export function RunPanel({
         </span>
         <div>
           <h2 id="result-title">{run.company || 'No company yet'}</h2>
-          <p>{run.recipient ? `To ${run.recipient}` : 'Recipient not set'}</p>
+          <p>{run.recipient ? `To: ${run.recipient}` : 'Recipient not set'}</p>
         </div>
       </div>
       <div className="result-tabs" role="tablist" aria-label="Outreach results">

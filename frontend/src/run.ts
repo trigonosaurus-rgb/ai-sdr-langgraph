@@ -181,6 +181,13 @@ export function reduceRun(state: RunState, event: RunEvent): RunState {
     case 'review':
       return {
         ...next,
+        // The verdict closes the "Checking draft N" step in the activity feed.
+        activity: [
+          ...state.activity,
+          event.passed
+            ? `Draft ${event.attempt} passed review`
+            : `Draft ${event.attempt} returned with ${event.issues.length} ${event.issues.length === 1 ? 'issue' : 'issues'}`,
+        ],
         review: {
           attempt: event.attempt,
           passed: event.passed,

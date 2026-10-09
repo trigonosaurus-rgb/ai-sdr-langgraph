@@ -20,7 +20,7 @@ Open http://127.0.0.1:5173. Stop both with Ctrl+C. **Generate makes paid OpenAI 
 - `RunPanel` shows the draft as it streams, then makes it editable; copy and download are available only after a reviewed completion. A failure keeps partial output marked incomplete; a cancellation is shown neutrally, not as an error.
 - Compose opens an empty brief, not a completed sample. Before a run, the draft area lists what a run produces; a shimmering outline appears only while a run is loading. The active run survives a reload: its brief is restored and its events are replayed from the server. New outreach clears the brief and the run (cancelling it if it is still going).
 - Examples (`/#examples`) contains two real WebM recordings, with poster images and text walkthroughs. They autoplay silently when visible, loop and have a pause button. Offscreen/hidden videos stop. Reduced-motion preferences disable automatic playback; manual play remains available.
-- Recordings use fictional Northstar data and are labelled illustrative. They are temporary: final videos will be recorded on the working service.
+- Recordings replay real runs (Apollo in English, Kontur in Russian) from their stored events: stage times and costs are as measured, long waits are shortened and labelled so.
 - Run costs opens a centered native dialog with a blurred backdrop and a detached close control. Escape, backdrop and the close button dismiss it. It loads usage from the server: this run (every call by step and draft, web search apart) or the visitor's runs over 24 hours or 30 days, plus the service's budget this month. Missing costs/tokens are shown as unknown, not zero, and incomplete totals are flagged; cache and reasoning are subsets of input/output.
 - Motion (timeline fill, marker pop, active pulse, caret, content rise, status dot) is disabled under `prefers-reduced-motion`. Superelliptic corners use native CSS `corner-shape: squircle`, with rounded corners as a fallback.
 - Styles use spacing, type and radius scales defined as custom properties at the top of `src/styles.css`.
@@ -39,14 +39,15 @@ Browser checks use installed Microsoft Edge, with a fresh isolated test context.
 
 ## Re-record examples
 
-Keep Vite running, then:
+Videos are made from real runs, so re-recording costs nothing once a run is stored:
 
 ```powershell
 npx.cmd playwright install ffmpeg
-npm.cmd run record:examples
+node tools/export-run.mjs <run-id> apollo        # from ../data/sdr.sqlite3 to tools/runs/apollo.json
+npm.cmd run record:examples -- workflow=apollo evidence=kontur   # with Vite running on :5173
 ```
 
-The development-only page `tools/capture.html` renders the same `RunPanel` and `RunTimeline` as the app. `tools/fixtures.ts` and its timed events provide explicitly fictional material. The script records with Playwright into `public/examples/*.webm` and captures posters. `BROWSER_CHANNEL` can select another installed Chromium channel; the default is `msedge`. Temporary recordings are ignored by Git. Neither the capture entry nor fixtures are in the production JS bundle. Replace these recordings with captured live runs, reviewing them for private data before publishing.
+`tools/export-run.mjs` copies a finished run's brief and wire events, with each event's offset, from the local database. The development-only page `tools/capture.html` replays a fixture through the same `reduceRun`, `RunPanel` and `RunTimeline` as the app, with the server's stage times and costs; only waits over 1.2 s are shortened. The workflow scene plays the run from the start, the evidence scene opens on Research, scrolls the facts and shows the approach. The script records with Playwright into `public/examples/*.webm` and captures posters. `BROWSER_CHANNEL` can select another installed Chromium channel; the default is `msedge`. Temporary recordings are ignored by Git; the capture page is not in the production bundle. Fixtures are public data (brief, facts, draft): check a run for private data before exporting it.
 
 ## Main files
 

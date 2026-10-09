@@ -365,9 +365,9 @@ export default function App() {
             <div>
               <BookOpen size={18} />
               <p>
-                <strong>Recorded walkthroughs</strong>The Examples page contains
-                short recordings made with fictional company data. They show the
-                intended workflow, including incremental writing.
+                <strong>Recorded walkthroughs</strong>The Examples page replays
+                two real runs, with the email written as it streams and every
+                fact traced to its source.
               </p>
             </div>
             <div>

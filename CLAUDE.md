@@ -16,7 +16,7 @@
 - `server/web.py` — отдача собранного фронтенда (`SDR_STATIC_DIR`; `assets/` кэшируются навсегда, остальное `no-cache`) и заголовки безопасности (CSP `'self'` без inline-скриптов — тема в `frontend/public/theme.js`). Без `SDR_CLIENT_SALT` API не стартует.
 - `Dockerfile` — один образ: сборка фронтенда + FastAPI, один воркер uvicorn, база на томе `/data`, порт из `PORT`, доверенный прокси — `FORWARDED_ALLOW_IPS`. Переменные — [.env.example](.env.example). `.github/workflows/ci.yml` — pytest, Vitest, сборка, e2e, smoke-тест образа; без ключей.
 - `tests/` — pytest на фейковых LLM и поиске (`tests/fakes.py`), без сети; `tests/test_api.py` — API на фейковом графе.
-- `frontend/` — React 19 + TypeScript + Vite, подключён к API через прокси `/api`. Данные в Examples пока вымышленные (Northstar). Детали — [frontend/README.md](frontend/README.md), контракт API — [frontend/INTEGRATION.md](frontend/INTEGRATION.md).
+- `frontend/` — React 19 + TypeScript + Vite, подключён к API через прокси `/api`. Examples — повтор реальных запусков: `tools/export-run.mjs` → `tools/runs/*.json` → `npm.cmd run record:examples`. Детали — [frontend/README.md](frontend/README.md), контракт API — [frontend/INTEGRATION.md](frontend/INTEGRATION.md).
 - `frontend/src/run.ts` — контракт событий и reducer. Меняя событие, менять и `core/events.py`. `src/api.ts` — запросы, валидация брифа и событий, SSE; `src/useRun.ts` — запуск, отмена, восстановление после перезагрузки.
 - `tests/fake_server.py` — настоящий API на сценарном фейковом графе для e2e (компания со словом `slow` — медленный запуск, `broken` — сбой).
 

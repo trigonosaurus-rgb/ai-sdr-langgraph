@@ -61,8 +61,7 @@ try {
       await scrollThrough(page) // a longer email continues below the frame
       await pause(page, 2000)
     } else {
-      await page.getByRole('tab', { name: /Research/ }).click()
-      await pause(page, 600)
+      await pause(page, 600) // opens on the Research tab
       await page.screenshot({ path: path.join(directory, `${scene}.png`) })
       await pause(page, 2500)
       await scrollThrough(page)

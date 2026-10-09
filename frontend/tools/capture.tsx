@@ -75,7 +75,10 @@ function Capture({ fixture }: { fixture: Fixture }) {
         </span>
       </div>
       <div className="capture-frame">
-        <RunPanel run={run} />
+        <RunPanel
+          run={run}
+          initialTab={scene === 'evidence' ? 'research' : 'email'}
+        />
         <RunTimeline run={run} />
       </div>
     </>

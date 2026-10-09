@@ -6,17 +6,17 @@ const examples = [
     id: 'workflow',
     title: 'Research to first draft',
     description:
-      'Research and approach run first, then the email streams in as it is written.',
+      'A real run for Apollo: research and approach first, then the email streams in as it is written.',
     transcript:
-      'Northstar is a fictional software company with guided onboarding. The research supplies company context; the approach connects it to workflow automation. The draft asks whether the team has manual steps when handing customers from sales to onboarding. It does not claim a confirmed problem.',
+      'Brief: Apollo (apollo.io), an offer of data enrichment quality audits, to the Head of Data, in English. Research kept 8 facts from Apollo’s site and help center, among them a database of 240M contacts and 30M companies used by 1 million sales professionals. The email ties that database to the audit and asks whether the team measures coverage and duplicate drift. It passed review as the first draft. The run took 22.9 seconds and cost about $0.04; in the recording, waits for the model are shortened.',
   },
   {
     id: 'evidence',
     title: 'Sources and approach',
     description:
-      'Each claim in the draft can be checked against a source excerpt before you send it.',
+      'Every fact has a verbatim quote and a link to its page; the approach keeps guesses apart from facts.',
     transcript:
-      'The research tab contains three prepared Northstar excerpts: the product, guided onboarding and integrations. The approach labels a manual handoff as a hypothesis to explore, not an established fact.',
+      'Brief: Kontur (kontur.ru), an offer of AI triage for support requests, to the head of support, in Russian. Research kept 8 facts quoted from kontur.ru and its press pages, such as more than 3.1 million clients in 2025. Facts are summarised in English; quotes stay in the language of the source. The approach links the many product lines to the cost of routing requests by hand and marks three needs as unconfirmed hypotheses.',
   },
 ]
 
@@ -92,7 +92,7 @@ function ExampleVideo({ example }: { example: (typeof examples)[number] }) {
           <span>
             {failed
               ? 'Video unavailable. Read the walkthrough below.'
-              : 'Muted recording · fictional data'}
+              : 'Muted recording · real run'}
           </span>
           <button
             className="video-toggle"
@@ -119,8 +119,8 @@ export function Examples() {
       <div className="page-heading">
         <h1>Examples</h1>
         <p>
-          Two staged recordings with a fictional company, Northstar, showing the
-          flow of a run. Recordings of real runs will replace them.
+          Two real runs, replayed from their event logs. Stage times and costs
+          are as measured; long waits for the model are shortened.
         </p>
       </div>
       {examples.map((example) => (
