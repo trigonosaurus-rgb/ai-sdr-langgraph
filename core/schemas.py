@@ -124,6 +124,7 @@ class Usage(BaseModel):
 
     input_tokens: int | None = None
     cached_input_tokens: int | None = None  # subset of input_tokens
+    cache_write_tokens: int | None = None  # subset of input_tokens; reported by GPT-5.6 and later
     output_tokens: int | None = None
     reasoning_tokens: int | None = None  # subset of output_tokens
 

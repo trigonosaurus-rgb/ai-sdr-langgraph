@@ -88,6 +88,10 @@ MIGRATIONS = [
     ALTER TABLE runs ADD COLUMN duration_ms INTEGER;
     UPDATE runs SET duration_ms = json_extract(result, '$.duration_ms') WHERE result IS NOT NULL;
     """,
+    # GPT-5.6 and later bill prompt-cache writes separately; NULL: not reported.
+    """
+    ALTER TABLE llm_calls ADD COLUMN cache_write_tokens INTEGER;
+    """,
 ]
 
 
@@ -306,13 +310,13 @@ class Store:
             db.execute(
                 """
                 INSERT INTO llm_calls (run_id, stage, attempt, model, prompt_version, duration_ms,
-                    input_tokens, cached_input_tokens, output_tokens, reasoning_tokens,
+                    input_tokens, cached_input_tokens, cache_write_tokens, output_tokens, reasoning_tokens,
                     cost_usd, price_version, error, created_at)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
                 """,
                 (
                     run_id, call.stage, call.attempt, call.model, call.prompt_version, call.duration_ms,
-                    u.input_tokens, u.cached_input_tokens, u.output_tokens, u.reasoning_tokens,
+                    u.input_tokens, u.cached_input_tokens, u.cache_write_tokens, u.output_tokens, u.reasoning_tokens,
                     call.cost_usd, call.price_version, call.error, self._timestamp(),
                 ),
             )  # fmt: skip

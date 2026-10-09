@@ -6,7 +6,7 @@ from typing import Literal
 
 from core.schemas import Stage
 
-ReasoningEffort = Literal["none", "minimal", "low", "medium", "high"]
+ReasoningEffort = Literal["none", "minimal", "low", "medium", "high", "xhigh", "max"]
 DEFAULT_MODEL = "gpt-5.4-mini"
 
 

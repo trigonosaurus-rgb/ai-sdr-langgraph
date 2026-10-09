@@ -27,6 +27,26 @@ def test_llm_cost_prices_cached_input_and_output_once():
     assert PRICES.llm_cost(MINI, no_reasoning) == pytest.approx(expected)
 
 
+def test_cache_writes_are_input_priced_at_the_write_rate():
+    usage = Usage(
+        input_tokens=2000, cached_input_tokens=500, cache_write_tokens=1200, output_tokens=100, reasoning_tokens=40
+    )
+    # 300 ordinary + 500 cached + 1200 written input, each priced once; reasoning is inside output
+    expected = (300 * 2.00 + 500 * 0.10 + 1200 * 2.50 + 100 * 10.00) / 1_000_000
+    assert PRICES.llm_cost("gpt-6.1-sol", usage) == pytest.approx(expected)
+    nothing_written = usage.model_copy(update={"cache_write_tokens": 0})
+    assert PRICES.llm_cost("gpt-6.1-sol", nothing_written) == pytest.approx((1500 * 2.00 + 500 * 0.10 + 100 * 10.00) / 1e6)
+
+
+def test_unknown_cache_writes_make_the_cost_unknown_only_where_they_are_billed():
+    usage = Usage(input_tokens=2000, cached_input_tokens=0, output_tokens=100)
+    assert PRICES.llm_cost("gpt-6-luna", usage) is None
+    assert PRICES.llm_cost(MINI, usage) == pytest.approx((2000 * 0.75 + 100 * 4.50) / 1_000_000)
+    # an older model bills written tokens as ordinary input
+    written = usage.model_copy(update={"cache_write_tokens": 1500})
+    assert PRICES.llm_cost(MINI, written) == PRICES.llm_cost(MINI, usage)
+
+
 def test_snapshot_names_use_the_base_model_price():
     usage = Usage(input_tokens=1_000_000, cached_input_tokens=0, output_tokens=0)
     assert PRICES.llm_cost("gpt-5.4-mini-2026-03-17", usage) == pytest.approx(0.75)

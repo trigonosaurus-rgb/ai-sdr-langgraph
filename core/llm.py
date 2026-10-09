@@ -54,6 +54,7 @@ def usage_from_metadata(metadata: dict[str, Any] | None) -> Usage:
     return Usage(
         input_tokens=metadata.get("input_tokens"),
         cached_input_tokens=input_details.get("cache_read"),
+        cache_write_tokens=input_details.get("cache_creation"),
         output_tokens=metadata.get("output_tokens"),
         reasoning_tokens=output_details.get("reasoning"),
     )
@@ -70,6 +71,7 @@ def usage_from_error(error: Exception) -> Usage:
     return Usage(
         input_tokens=usage.prompt_tokens,
         cached_input_tokens=getattr(input_details, "cached_tokens", None),
+        cache_write_tokens=getattr(input_details, "cache_write_tokens", None),
         output_tokens=usage.completion_tokens,
         reasoning_tokens=getattr(output_details, "reasoning_tokens", None),
     )

@@ -22,6 +22,7 @@ class ModelPrice:
     input: float
     cached_input: float
     output: float
+    cache_write: float | None = None  # None: writing to the prompt cache costs nothing extra
 
 
 @dataclass(frozen=True)
@@ -38,23 +39,35 @@ class PriceTable:
         price = self.model_price(model)
         if price is None or None in (usage.input_tokens, usage.cached_input_tokens, usage.output_tokens):
             return None
+        if price.cache_write is None:
+            written, write_price = 0, 0.0  # any written tokens are ordinary input
+        elif usage.cache_write_tokens is None:
+            return None  # the write surcharge is unknown
+        else:
+            written, write_price = usage.cache_write_tokens, price.cache_write
         cached = usage.cached_input_tokens
-        uncached = usage.input_tokens - cached  # cached tokens are part of input, priced once
-        return (uncached * price.input + cached * price.cached_input + usage.output_tokens * price.output) / PER_MILLION
+        ordinary = usage.input_tokens - cached - written  # cached and written are part of input, priced once
+        return (
+            ordinary * price.input + cached * price.cached_input + written * write_price + usage.output_tokens * price.output
+        ) / PER_MILLION
 
     def search_cost(self, credits: float | None) -> float | None:
         return None if credits is None else credits * self.search_credit_usd
 
 
 # OpenAI standard tier, short context: https://developers.openai.com/api/docs/pricing
+# GPT-5.6 and later bill prompt-cache writes at 1.25x input:
+# https://developers.openai.com/api/docs/guides/prompt-caching
 # Tavily pay-as-you-go: https://docs.tavily.com/documentation/api-credits (basic search = 1 credit).
 # On the free plan searches cost nothing until the monthly credits run out; they are still priced
 # at the pay-as-you-go rate so the estimate shows what a run really costs.
 PRICES = PriceTable(
-    version="2026-10-07",
+    version="2026-10-09",
     models={
         "gpt-5.4-mini": ModelPrice(input=0.75, cached_input=0.075, output=4.50),
         "gpt-5.4-nano": ModelPrice(input=0.20, cached_input=0.02, output=1.25),
+        "gpt-6-luna": ModelPrice(input=0.10, cached_input=0.01, output=0.50, cache_write=0.125),
+        "gpt-6.1-sol": ModelPrice(input=2.00, cached_input=0.10, output=10.00, cache_write=2.50),
     },
     search_credit_usd=0.008,
 )

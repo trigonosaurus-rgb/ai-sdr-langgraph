@@ -29,11 +29,11 @@ def delta(**fields) -> dict:
     return {"choices": [{"index": 0, "delta": fields, "finish_reason": None}]}
 
 
-def stream_of(content: str, *, piece: int = 6, finish: str = "stop") -> bytes:
+def stream_of(content: str, *, piece: int = 6, finish: str = "stop", usage: dict = USAGE) -> bytes:
     chunks = [delta(role="assistant", content="")]
     chunks += [delta(content=content[i : i + piece]) for i in range(0, len(content), piece)]
     chunks.append({"choices": [{"index": 0, "delta": {}, "finish_reason": finish}]})
-    chunks.append({"choices": [], "usage": USAGE})  # sent because stream_options.include_usage is on
+    chunks.append({"choices": [], "usage": usage})  # sent because stream_options.include_usage is on
     return sse(chunks)
 
 
@@ -75,6 +75,15 @@ def test_stream_reports_partials_and_takes_usage_once():
     assert request["reasoning_effort"] == "medium"
     schema = request["response_format"]["json_schema"]
     assert schema["strict"] is True and schema["schema"]["required"] == ["subject", "body"]
+
+
+def test_cache_writes_are_taken_from_usage():
+    usage = {**USAGE, "prompt_tokens_details": {"cached_tokens": 10, "cache_write_tokens": 70}}
+    endpoint = Endpoint(stream_of(json.dumps({"subject": "S", "body": "B"}), usage=usage))
+
+    reply = make_llm(endpoint).generate("Writing", Draft, "system", "user", on_partial=lambda _: None)
+
+    assert reply.usage.cached_input_tokens == 10 and reply.usage.cache_write_tokens == 70
 
 
 def test_refusal_is_an_error_with_usage():
