@@ -107,6 +107,7 @@ def source(url: str, title: str, content: str) -> SearchResult:
 
 def research_output(**overrides) -> ResearchOutput:
     values = dict(
+        website_owner="Acme",
         website_matches=True,
         website_note="The official site and news describe the same company.",
         facts=[

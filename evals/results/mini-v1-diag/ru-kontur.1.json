@@ -1,0 +1,145 @@
+{
+  "case_id": "ru-kontur",
+  "config": "mini",
+  "models": "Research gpt-5.4-mini/low, Strategy gpt-5.4-mini/medium, Writing gpt-5.4-mini/medium, Review gpt-5.4-mini/low",
+  "repeat": 1,
+  "snapshot_recorded_at": "2026-10-09T12:07:15+00:00",
+  "checks": {
+    "label": "insufficient_data",
+    "outcome_ok": false,
+    "facts": 0,
+    "dropped_facts": 8,
+    "attempts": 0,
+    "has_draft": false,
+    "language_ok": null,
+    "body_words": null,
+    "subject_words": null,
+    "length_ok": null,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "f99a704ca3a648a5ab79e62f04c5cb03",
+    "brief": {
+      "company": "Контур",
+      "website": "kontur.ru",
+      "offer": "Автоматизация разбора обращений в поддержку с помощью ИИ",
+      "recipient": "Руководитель службы поддержки",
+      "language": "Russian",
+      "tone": "Direct"
+    },
+    "status": "failed",
+    "reason": "insufficient_data",
+    "message": "Not enough reliable information about Контур to write a specific email. Missing: No gaps essential for a basic outreach email; more detail on target industries, recent product launches, or buyer personas would make the outreach more tailored.",
+    "issues": [],
+    "research": {
+      "facts": [],
+      "website_matches": true,
+      "website_note": "The results consistently describe SKB Kontur / Kontur at kontur.ru as a business software ecosystem.",
+      "site_indexed": true,
+      "sufficient": false,
+      "gaps": "No gaps essential for a basic outreach email; more detail on target industries, recent product launches, or buyer personas would make the outreach more tailored.",
+      "dropped_facts": 8,
+      "dropped": [
+        {
+          "claim": "Kontur is a business software ecosystem with more than 70 services/products.",
+          "source_id": 1,
+          "excerpt": "«Контур — это экосистема для бизнеса, в которой больше 70 сервисов.»"
+        },
+        {
+          "claim": "Kontur says its core business areas include EDI, accounting, electronic signatures, and online cash registers.",
+          "source_id": 2,
+          "excerpt": "«Ключевые направления бизнеса — ЭДО, бухгалтерия, электронная подпись и онлайн-кассы.»"
+        },
+        {
+          "claim": "Kontur reported 2021 revenue of 22.6 billion rubles and says its solutions are used by 2.2 million companies in Russia and abroad.",
+          "source_id": 2,
+          "excerpt": "«Выручка группы компаний за 2021 год составила 22,6 млрд рублей, а ее решениями пользуются 2,2 млн компаний в России и за рубежом.»"
+        },
+        {
+          "claim": "Kontur says it has over 11,000 employees across the country.",
+          "source_id": 7,
+          "excerpt": "«11 000+ Сотрудников по всей стране»"
+        },
+        {
+          "claim": "Kontur says it is used by every third business in Russia.",
+          "source_id": 7,
+          "excerpt": "«Контур — экосистема, которой пользуется каждый третий бизнес в России.»"
+        },
+        {
+          "claim": "Kontur’s product catalog includes electronic document exchange, accounting and reporting, counterparty checks, retail, HR process automation, procurement, real estate transactions, banking services, lead generation, product marking, and information security.",
+          "source_id": 8,
+          "excerpt": "«Электронный документооборот … Учет и отчетность … Проверка контрагентов … Управление HR‑процессами … Маркировка товаров … Информационная безопасность»"
+        },
+        {
+          "claim": "Kontur offers a service portfolio that includes Ekstern, Diadok, Elba, Tolk, Market, Fokus, a certification center, Zakupki, and OFD.",
+          "source_id": 6,
+          "excerpt": "«Экстерн Диадок Эльба Толк Маркет Фокус Удостоверяющий центр Закупки ОФД»"
+        },
+        {
+          "claim": "Kontur says it helps customers choose services via a manager and offers 24/7 chat support for existing users.",
+          "source_id": 8,
+          "excerpt": "«Оставьте заявку на подключение — менеджер свяжется с вами и поможет выбрать сервисы под ваши задачи.»"
+        }
+      ]
+    },
+    "strategy": null,
+    "draft": null,
+    "attempts": [],
+    "prompt_versions": {
+      "research": "research@1"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "research@1",
+        "duration_ms": 4498,
+        "usage": {
+          "input_tokens": 6404,
+          "cached_input_tokens": 5888,
+          "cache_write_tokens": null,
+          "output_tokens": 597,
+          "reasoning_tokens": 24
+        },
+        "cost_usd": 0.0035150999999999997,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Контур\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Контур\" kontur.ru",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Контур\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 4529
+  }
+}

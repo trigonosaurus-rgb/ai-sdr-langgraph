@@ -43,6 +43,15 @@ def test_quote_must_appear_in_the_source():
     assert not quote_in_source("Acme", content)  # too short to prove anything
 
 
+def test_quote_check_accepts_russian_typography_and_ellipsis_cuts():
+    content = "Контур — экосистема для бизнеса. Управление HR\u2011процессами и всё для отчётности."
+    assert quote_in_source("«Контур - экосистема для бизнеса»", content)  # guillemets, plain dash
+    assert quote_in_source("„Управление HR-процессами и все для отчетности“", content)  # non-breaking hyphen, ё
+    assert quote_in_source("«Контур — экосистема для бизнеса… Управление HR-процессами»", content)
+    assert not quote_in_source("Контур — экосистема для бизнеса… и не только", content)  # every part must match
+    assert not quote_in_source("Контур — экосистема для бизнеса … Контур", content)  # each part long enough
+
+
 def test_every_prompt_has_a_version_and_renders():
     names = sorted(p.stem for p in PROMPTS_DIR.glob("*.md"))
     assert names == ["copywriter", "research", "review", "strategy"]

@@ -65,8 +65,12 @@ class ExtractedFact(BaseModel):
 
 
 class ResearchOutput(BaseModel):
+    # Naming the owner first keeps the model from judging whether the pages describe *their* owner.
+    website_owner: str = Field(
+        description="The organisation that owns the given website according to the results, or 'unknown'."
+    )
     website_matches: bool = Field(
-        description="True if the results describe the company that owns the given website."
+        description="True only if the given website is the named company's own website."
     )
     website_note: str = Field(description="One sentence explaining the website verdict.")
     facts: list[ExtractedFact]
@@ -111,6 +115,7 @@ class Fact(BaseModel):
 
 class Research(BaseModel):
     facts: list[Fact]
+    website_owner: str = ""  # empty in results recorded before research@2
     website_matches: bool
     website_note: str
     site_indexed: bool  # at least one result came from the brief's domain

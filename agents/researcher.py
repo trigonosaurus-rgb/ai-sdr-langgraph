@@ -46,16 +46,25 @@ def collect_sources(ctx: RunContext, brief: Brief) -> list[SearchResult]:
     return sources
 
 
+# Typographic variants the model may write differently from the page, both sides mapped alike.
+_PLAIN = str.maketrans({
+    "“": '"', "”": '"', "„": '"', "«": '"', "»": '"', "‘": "'", "’": "'",
+    "\u2010": "-", "\u2011": "-", "–": "-", "—": "-", "ё": "е",
+})  # fmt: skip
+_ELLIPSIS = re.compile(r"…|\.\.\.")
+MIN_QUOTE_CHARS = 12
+
+
 def _normalize(text: str) -> str:
-    text = text.lower()
-    for fancy, plain in (("“", '"'), ("”", '"'), ("‘", "'"), ("’", "'"), ("–", "-"), ("—", "-")):
-        text = text.replace(fancy, plain)
-    return re.sub(r"\s+", " ", text).strip()
+    return re.sub(r"\s+", " ", text.lower().translate(_PLAIN)).strip()
 
 
 def quote_in_source(excerpt: str, content: str) -> bool:
-    quote = _normalize(excerpt).strip(" .\"'")
-    return len(quote) >= 12 and quote in _normalize(content)
+    """The quote, or each part of it cut with an ellipsis, appears word for word in the source."""
+    source = _normalize(content)
+    parts = [part.strip(" .\"'") for part in _ELLIPSIS.split(_normalize(excerpt))]
+    parts = [part for part in parts if part]
+    return bool(parts) and all(len(part) >= MIN_QUOTE_CHARS and part in source for part in parts)
 
 
 def display_path(url: str) -> str:
@@ -121,6 +130,7 @@ def make_researcher(ctx: RunContext):
 
         research = Research(
             facts=facts,
+            website_owner=output.website_owner,
             website_matches=output.website_matches,
             website_note=output.website_note,
             site_indexed=official > 0,
