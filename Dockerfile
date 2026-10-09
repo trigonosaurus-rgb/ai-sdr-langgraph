@@ -1,14 +1,15 @@
 # One image: FastAPI serves the API under /api and the built frontend at /.
 # Configuration comes from environment variables (see .env.example); no .env file goes into the image.
+# Base images are the Docker Official Images from the AWS ECR Public mirror: no Docker Hub pull limits.
 
-FROM node:24-slim AS frontend
+FROM public.ecr.aws/docker/library/node:24-slim AS frontend
 WORKDIR /app/frontend
 COPY frontend/package.json frontend/package-lock.json ./
 RUN npm ci --no-audit --no-fund
 COPY frontend/ ./
 RUN npm run build
 
-FROM python:3.14-slim
+FROM public.ecr.aws/docker/library/python:3.14-slim
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
     PIP_DISABLE_PIP_VERSION_CHECK=1
