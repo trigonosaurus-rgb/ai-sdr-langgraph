@@ -68,3 +68,23 @@ Progress goes to stderr, the draft to stdout, and the full result with facts, at
 ```powershell
 .venv\Scripts\python.exe -m pytest     # fake LLM and search, no network
 ```
+
+## Quality and model choice
+
+Measured on 28 briefs in [`evals/`](evals/README.md): well-known and small companies, ambiguous names, fictional companies, a website that belongs to someone else, an offer that does not fit, English and Russian. 8 briefs are held out from tuning. Search results are recorded once and replayed, so every configuration sees the same pages. Each configuration ran every development brief twice.
+
+| Configuration (prompts v2) | Outcome as expected | Successful runs | Model cost per success | Median time |
+| --- | --- | --- | --- | --- |
+| `gpt-5.4-mini`, prompts v1 (baseline) | 34/40 | 24/40 | $0.021 | 16 s |
+| **`gpt-5.4-mini`** | **40/40** | **37/40** | $0.013 | **14 s** |
+| `gpt-6-luna` | 40/40 | 32/40 | $0.0015 | 19 s |
+| `gpt-6.1-sol` | 40/40 | 35/40 | $0.023 | 30 s |
+| luna research, sol strategy, mini writing and review | 40/40 | 35/40 | $0.010 | 20 s |
+| **`gpt-5.4-mini`, held-out briefs** | **16/16** | **13/16** | $0.015 | 16 s |
+
+- **Outcome as expected**: a draft where one is warranted, a refusal for a wrong website or too little information, a poor-fit warning for an unrelated offer. Checked automatically.
+- **Successful**: the outcome is right and, for a draft, it is fully grounded and scores at least 5 of 6 on grounding, relevance and naturalness. Drafts were graded by Claude (Anthropic): a different vendor from the models under test, but still an LLM, and it knew which configuration it was grading.
+- **Blind human check**: the author graded 26 drafts with the configuration hidden. On grounding the grades matched Claude's 25 times out of 26; Claude was more generous on relevance (+0.31 on a 0–2 scale) and naturalness (+0.35), so naturalness scores above are optimistic. The human grades also ranked `gpt-5.4-mini` with prompts v2 first.
+- **Cost** is the model only, from list prices. Search adds $0.024 per run (3 Tavily credits at the pay-as-you-go rate), more than the model for every configuration except sol.
+
+The biggest gain came from fixes, not from a bigger model: the quote check had rejected Russian quotes in guillemets, the website check asked an ambiguous question and accepted a competitor's site, and the review blocked drafts over style. `gpt-5.4-mini` stays on every stage: best results, fastest, one model.

@@ -1,0 +1,233 @@
+{
+  "case_id": "savvycal",
+  "config": "mini",
+  "models": "Research gpt-5.4-mini/low, Strategy gpt-5.4-mini/medium, Writing gpt-5.4-mini/medium, Review gpt-5.4-mini/low",
+  "repeat": 2,
+  "snapshot_recorded_at": "2026-10-09T12:06:08+00:00",
+  "checks": {
+    "label": "draft",
+    "outcome_ok": true,
+    "facts": 4,
+    "dropped_facts": 3,
+    "attempts": 1,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 70,
+    "subject_words": 3,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "c2ab9108810d4ee0bcabdcede05d6973",
+    "brief": {
+      "company": "SavvyCal",
+      "website": "savvycal.com",
+      "offer": "Integration of scheduling links into HubSpot and Salesforce workflows",
+      "recipient": "Founder",
+      "language": "English",
+      "tone": "Direct"
+    },
+    "status": "ready",
+    "reason": null,
+    "message": "The draft passed review.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "SavvyCal is an independent, profitable software company that builds scheduling tools.",
+          "excerpt": "SavvyCal is an independent, profitable software company that builds scheduling tools.",
+          "source_url": "https://savvycal.com/jobs/full-stack-developer",
+          "source_title": "Senior Full-Stack Developer"
+        },
+        {
+          "id": 2,
+          "claim": "SavvyCal has two product lines: SavvyCal Meetings and SavvyCal Appointments.",
+          "excerpt": "Our product suite includes SavvyCal Meetings, our flagship meeting scheduling platform... and SavvyCal Appointments, our newest venture providing appointment scheduling infrastructure for service businesses.",
+          "source_url": "https://savvycal.com/jobs/full-stack-developer",
+          "source_title": "Senior Full-Stack Developer"
+        },
+        {
+          "id": 3,
+          "claim": "SavvyCal Appointments is already being used in booking flows for a major fertility clinic.",
+          "excerpt": "This product is already powering booking flows for one of the largest fertility clinics in the United States.",
+          "source_url": "https://savvycal.com/jobs/full-stack-developer",
+          "source_title": "Senior Full-Stack Developer"
+        },
+        {
+          "id": 4,
+          "claim": "SavvyCal's mission is to reduce friction and awkwardness in scheduling time with people.",
+          "excerpt": "Our mission is to cut the friction and awkwardness\n out of scheduling time with people.",
+          "source_url": "https://savvycal.com/company",
+          "source_title": "Company · SavvyCal"
+        }
+      ],
+      "website_owner": "SavvyCal",
+      "website_matches": true,
+      "website_note": "The website is the official SavvyCal site, and the pages and job post on it describe SavvyCal as the company behind the product.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 3,
+      "dropped": [
+        {
+          "claim": "SavvyCal says it is a small team with big ambitions and is funded by TinySeed plus angel investors.",
+          "source_id": 5,
+          "excerpt": "We’re a small team with big ambitions\n\nWe’re an indie SaaS company with a little bit of financial backing fromTinySeed and a few angel investors."
+        },
+        {
+          "claim": "SavvyCal offers calendar overlay scheduling and ranked availability.",
+          "source_id": 4,
+          "excerpt": "### Calendar Overlay\n\nA first of its kind week view. No switching back and forth between screens anymore.\n\n### Preferred Slots"
+        },
+        {
+          "claim": "SavvyCal supports team scheduling, including collective mode and round robin mode.",
+          "source_id": 4,
+          "excerpt": "## Team Scheduling\n\n## Work better together [...] ### Collective Mode\n\nCombine your availability with multiple colleagues on scheduling links.\n\n### Round Robin Mode"
+        }
+      ]
+    },
+    "strategy": {
+      "observation": "SavvyCal’s mission is to reduce friction and awkwardness in scheduling time with people.",
+      "fact_ids": [
+        4
+      ],
+      "offer_link": "Integrating scheduling links into HubSpot and Salesforce workflows would move scheduling into the systems teams already use, which can reduce back-and-forth and make the booking process feel less awkward—directly aligned with SavvyCal’s stated mission.",
+      "hypotheses": [
+        "The founder may be looking for ways to deepen SavvyCal’s role inside revenue-team workflows.",
+        "SavvyCal may see CRM-native scheduling as a useful distribution or retention lever.",
+        "Their customers may benefit from placing booking links inside HubSpot and Salesforce automations rather than only on standalone booking pages."
+      ],
+      "angle": "SavvyCal already exists to remove scheduling friction; putting scheduling links inside HubSpot and Salesforce workflows is one way to remove it where teams actually work.",
+      "offer_fit": "good",
+      "fit_reason": "SavvyCal is a scheduling company with a mission explicitly centered on reducing scheduling friction, so an integration that embeds booking links into HubSpot and Salesforce workflows is a plausible and relevant extension of that value proposition."
+    },
+    "draft": {
+      "subject": "Scheduling in CRM",
+      "body": "SavvyCal’s mission is already about reducing friction in scheduling.\n\nMy guess is putting booking links inside HubSpot and Salesforce workflows would cut some of the back-and-forth teams deal with, since they can schedule where the work already happens.\n\nI build integrations that place scheduling links inside CRM workflows. If this feels like a useful direction, would you be the right person to ask whether it belongs in the product roadmap?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Scheduling in CRM",
+          "body": "SavvyCal’s mission is already about reducing friction in scheduling.\n\nMy guess is putting booking links inside HubSpot and Salesforce workflows would cut some of the back-and-forth teams deal with, since they can schedule where the work already happens.\n\nI build integrations that place scheduling links inside CRM workflows. If this feels like a useful direction, would you be the right person to ask whether it belongs in the product roadmap?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@2",
+      "strategy": "strategy@2",
+      "copywriter": "copywriter@2",
+      "review": "review@2"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "research@2",
+        "duration_ms": 3353,
+        "usage": {
+          "input_tokens": 4893,
+          "cached_input_tokens": 4352,
+          "cache_write_tokens": null,
+          "output_tokens": 501,
+          "reasoning_tokens": 65
+        },
+        "cost_usd": 0.00298665,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "strategy@2",
+        "duration_ms": 5277,
+        "usage": {
+          "input_tokens": 589,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 746,
+          "reasoning_tokens": 512
+        },
+        "cost_usd": 0.00379875,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "copywriter@2",
+        "duration_ms": 3198,
+        "usage": {
+          "input_tokens": 671,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 464,
+          "reasoning_tokens": 355
+        },
+        "cost_usd": 0.00259125,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "review@2",
+        "duration_ms": 3367,
+        "usage": {
+          "input_tokens": 579,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 516,
+          "reasoning_tokens": 496
+        },
+        "cost_usd": 0.00275625,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"SavvyCal\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"SavvyCal\" savvycal.com",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"SavvyCal\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 15209
+  }
+}

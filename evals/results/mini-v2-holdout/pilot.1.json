@@ -1,0 +1,248 @@
+{
+  "case_id": "pilot",
+  "config": "mini",
+  "models": "Research gpt-5.4-mini/low, Strategy gpt-5.4-mini/medium, Writing gpt-5.4-mini/medium, Review gpt-5.4-mini/low",
+  "repeat": 1,
+  "snapshot_recorded_at": "2026-10-09T12:06:33+00:00",
+  "checks": {
+    "label": "draft",
+    "outcome_ok": true,
+    "facts": 8,
+    "dropped_facts": 0,
+    "attempts": 1,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 69,
+    "subject_words": 3,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "5e7cdefb45464090bb9bc6f3228ee693",
+    "brief": {
+      "company": "Pilot",
+      "website": "pilot.com",
+      "offer": "Tax season overflow staffing for accounting firms",
+      "recipient": "VP of Operations",
+      "language": "English",
+      "tone": "Direct"
+    },
+    "status": "ready",
+    "reason": null,
+    "message": "The draft passed review.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "Pilot provides bookkeeping, CFO, and tax services for startups and growing businesses.",
+          "excerpt": "Pilot provides bookkeeping, CFO, and tax services for literally thousands of startups and growing businesses.",
+          "source_url": "https://pilot.com/integrations/squarespace",
+          "source_title": "Squarespace - Integrations Database - Pilot.com"
+        },
+        {
+          "id": 2,
+          "claim": "Pilot says most of its bookkeeping software is built to let Pilot provide the service, and customers have very little to do.",
+          "excerpt": "most of our bookkeeping software is built to allow us to provide a better service. The thing that makes Pilot hard to demo, however, is the same thing that makes us special: for our customers, there’s very little to do.",
+          "source_url": "https://pilot.com/blog/bookkeeping-with-pilot-how-it-works",
+          "source_title": "How Bookkeeping Works - Pilot Bookkeeping Services | Pilot Blog"
+        },
+        {
+          "id": 3,
+          "claim": "Pilot says nearly 1,000 customers use it for bookkeeping and tax.",
+          "excerpt": "nearly 1,000 customers love using Pilot for bookkeeping and tax.",
+          "source_url": "https://pilot.com/blog/pilot-launches-three-new-products-that-reach-beyond-bookkeeping-tax",
+          "source_title": "Pilot Launches CFO & R&D Tax Services for Businesses | Pilot Blog"
+        },
+        {
+          "id": 4,
+          "claim": "Pilot processes over $130 million in company expenses, over $50 million in customer revenue, and approximately 200,000 transactions each month.",
+          "excerpt": "Each month, we process:\n\n Over $130 million in company expenses,\n Over $50 million in customer revenue, and\n Approximately 200,000 transactions",
+          "source_url": "https://pilot.com/blog/pilot-launches-three-new-products-that-reach-beyond-bookkeeping-tax",
+          "source_title": "Pilot Launches CFO & R&D Tax Services for Businesses | Pilot Blog"
+        },
+        {
+          "id": 5,
+          "claim": "Pilot has launched three new services beyond its core bookkeeping and tax offerings: Pilot R&D Credit, Pilot CFO Services, and Pilot Extended Services.",
+          "excerpt": "we built three new services to help businesses with their full finance stack:\n\n Pilot R&D Credit\n Pilot CFO Services\n Pilot Extended Services",
+          "source_url": "https://pilot.com/blog/pilot-launches-three-new-products-that-reach-beyond-bookkeeping-tax",
+          "source_title": "Pilot Launches CFO & R&D Tax Services for Businesses | Pilot Blog"
+        },
+        {
+          "id": 6,
+          "claim": "Pilot’s customers include consumer businesses, and the company highlights support for brands such as OpenAI, Scale, Crossnet, Loog, Mosaic, and others.",
+          "excerpt": "Hundreds of consumer businesses trust Pilot",
+          "source_url": "https://pilot.com/g2",
+          "source_title": "Pilot on G2: #1 Rated Bookkeeping Services Provider"
+        },
+        {
+          "id": 7,
+          "claim": "Pilot says it has supported companies over the years and emphasizes expertise with startups and readiness for funding opportunities.",
+          "excerpt": "Just a few of the companies we’ve supported over the years",
+          "source_url": "https://pilot.com/g2",
+          "source_title": "Pilot on G2: #1 Rated Bookkeeping Services Provider"
+        },
+        {
+          "id": 8,
+          "claim": "Pilot’s privacy statement says it uses Pilot AI, a generative AI-powered chatbot about customers’ books.",
+          "excerpt": "our Pilot AI product feature enables customers to ask a generative AI-powered chatbot about their books.",
+          "source_url": "https://pilot.com/terms/privacy",
+          "source_title": "Privacy Statement - Pilot Bookkeeping Services"
+        }
+      ],
+      "website_owner": "Pilot",
+      "website_matches": true,
+      "website_note": "The results from pilot.com consistently describe Pilot’s own bookkeeping, tax, CFO, and related services, so the website belongs to Pilot.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 0,
+      "dropped": []
+    },
+    "strategy": {
+      "observation": "Pilot already supports nearly 1,000 bookkeeping and tax customers and processes about 200,000 transactions a month, so its delivery operations likely carry meaningful tax-season workload.",
+      "fact_ids": [
+        3,
+        4,
+        1
+      ],
+      "offer_link": "Tax season overflow staffing could help Pilot absorb temporary spikes in tax prep/review work without stretching its core team, which may matter given its bookkeeping and tax client load.",
+      "hypotheses": [
+        "Pilot experiences seasonal capacity pressure during tax season.",
+        "The operations team is responsible for balancing delivery staffing across bookkeeping and tax work.",
+        "Pilot may use temporary specialists or contractors to handle overflow work.",
+        "A flexible staffing partner could reduce turnaround risk during peak periods."
+      ],
+      "angle": "Pilot already supports nearly 1,000 bookkeeping and tax customers and processes about 200,000 transactions a month, so tax-season workload is likely concentrated on your operations team.",
+      "offer_fit": "weak",
+      "fit_reason": "Pilot is a tax-services provider, so overflow staffing is at least directionally relevant, but the company is not clearly an accounting firm with disclosed seasonal staffing constraints. The connection is plausible rather than strong."
+    },
+    "draft": {
+      "subject": "Peak-season tax staffing",
+      "body": "Pilot already supports nearly 1,000 bookkeeping and tax customers and processes about 200,000 transactions a month.\n\nMy guess is tax season puts a lot of that work on ops. I help accounting teams add temporary tax prep and review staff for the busy stretch, so core teams don’t get buried.\n\nDo you ever bring in overflow help for March and April, or do you keep all of it in-house?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Peak-season tax staffing",
+          "body": "Pilot already supports nearly 1,000 bookkeeping and tax customers and processes about 200,000 transactions a month.\n\nMy guess is tax season puts a lot of that work on ops. I help accounting teams add temporary tax prep and review staff for the busy stretch, so core teams don’t get buried.\n\nDo you ever bring in overflow help for March and April, or do you keep all of it in-house?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@2",
+      "strategy": "strategy@2",
+      "copywriter": "copywriter@2",
+      "review": "review@2"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "research@2",
+        "duration_ms": 3525,
+        "usage": {
+          "input_tokens": 4664,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 532,
+          "reasoning_tokens": 22
+        },
+        "cost_usd": 0.005892,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "strategy@2",
+        "duration_ms": 5677,
+        "usage": {
+          "input_tokens": 799,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 746,
+          "reasoning_tokens": 512
+        },
+        "cost_usd": 0.00395625,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "copywriter@2",
+        "duration_ms": 4399,
+        "usage": {
+          "input_tokens": 881,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 593,
+          "reasoning_tokens": 483
+        },
+        "cost_usd": 0.00332925,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "review@2",
+        "duration_ms": 2165,
+        "usage": {
+          "input_tokens": 790,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 248,
+          "reasoning_tokens": 228
+        },
+        "cost_usd": 0.0017085,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Pilot\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Pilot\" pilot.com",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Pilot\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 15783
+  }
+}

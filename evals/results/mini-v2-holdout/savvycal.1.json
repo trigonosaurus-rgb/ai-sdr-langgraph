@@ -1,0 +1,293 @@
+{
+  "case_id": "savvycal",
+  "config": "mini",
+  "models": "Research gpt-5.4-mini/low, Strategy gpt-5.4-mini/medium, Writing gpt-5.4-mini/medium, Review gpt-5.4-mini/low",
+  "repeat": 1,
+  "snapshot_recorded_at": "2026-10-09T12:06:08+00:00",
+  "checks": {
+    "label": "draft",
+    "outcome_ok": true,
+    "facts": 8,
+    "dropped_facts": 0,
+    "attempts": 2,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 84,
+    "subject_words": 2,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "dfbb83426231424f86d597c912c93e2c",
+    "brief": {
+      "company": "SavvyCal",
+      "website": "savvycal.com",
+      "offer": "Integration of scheduling links into HubSpot and Salesforce workflows",
+      "recipient": "Founder",
+      "language": "English",
+      "tone": "Direct"
+    },
+    "status": "ready",
+    "reason": null,
+    "message": "The draft passed review.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "SavvyCal is an independent, profitable software company that builds scheduling tools.",
+          "excerpt": "SavvyCal is an independent, profitable software company that builds scheduling tools.",
+          "source_url": "https://savvycal.com/jobs/full-stack-developer",
+          "source_title": "Senior Full-Stack Developer"
+        },
+        {
+          "id": 2,
+          "claim": "SavvyCal has two product lines: SavvyCal Meetings and SavvyCal Appointments.",
+          "excerpt": "Our product suite includes SavvyCal Meetings, our flagship meeting scheduling platform ... and SavvyCal Appointments, our newest venture providing appointment scheduling infrastructure for service businesses.",
+          "source_url": "https://savvycal.com/jobs/full-stack-developer",
+          "source_title": "Senior Full-Stack Developer"
+        },
+        {
+          "id": 3,
+          "claim": "SavvyCal Appointments is already powering booking flows for a large healthcare customer.",
+          "excerpt": "This product is already powering booking flows for one of the largest fertility clinics in the United States.",
+          "source_url": "https://savvycal.com/jobs/full-stack-developer",
+          "source_title": "Senior Full-Stack Developer"
+        },
+        {
+          "id": 4,
+          "claim": "SavvyCal serves thousands of customers across diverse industries.",
+          "excerpt": "Our flagship meeting scheduling platform trusted by thousands of customers across diverse industries",
+          "source_url": "https://savvycal.com/jobs/full-stack-developer",
+          "source_title": "Senior Full-Stack Developer"
+        },
+        {
+          "id": 5,
+          "claim": "SavvyCal says it is a small team and its mission is to reduce friction and awkwardness in scheduling.",
+          "excerpt": "# We’re a small team with big ambitions\n\nOur mission is to cut the friction and awkwardness  \nout of scheduling time with people.",
+          "source_url": "https://savvycal.com/company",
+          "source_title": "Company · SavvyCal"
+        },
+        {
+          "id": 6,
+          "claim": "SavvyCal is an indie SaaS company with financial backing from TinySeed and angel investors.",
+          "excerpt": "We’re an indie SaaS company with a little bit of financial backing fromTinySeed and a few angel investors.",
+          "source_url": "https://savvycal.com/company",
+          "source_title": "Company · SavvyCal"
+        },
+        {
+          "id": 7,
+          "claim": "SavvyCal was founded by Derrick Reimer, who previously co-founded Drip.com.",
+          "excerpt": "SavvyCal was founded byDerrick Reimer. Previously, Derrick co-founded Drip.com.",
+          "source_url": "https://savvycal.com/company",
+          "source_title": "Company · SavvyCal"
+        },
+        {
+          "id": 8,
+          "claim": "SavvyCal’s pricing starts at $12 per user per month and includes a free trial-free entry point for some pages describing the product.",
+          "excerpt": "Paid plans start at $12/user/month and include features such as calendar overlays, round-robin scheduling, and collective scheduling.",
+          "source_url": "https://cal.com/blog/best-agency-scheduling-software",
+          "source_title": "5 Best Agency Scheduling Software For Keeping Teams and Clients in Sync | Cal.com - Scheduling Software for Online Bookings"
+        }
+      ],
+      "website_owner": "SavvyCal",
+      "website_matches": true,
+      "website_note": "The results show savvycal.com is SavvyCal’s official site, including its product pages, company page, and hiring page.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 0,
+      "dropped": []
+    },
+    "strategy": {
+      "observation": "SavvyCal has two product lines, and SavvyCal Appointments is already powering booking flows for a large healthcare customer.",
+      "fact_ids": [
+        2,
+        3
+      ],
+      "offer_link": "Because Appointments is already being used in a real booking workflow at a larger customer, integrating scheduling links into HubSpot and Salesforce workflows could make it easier for SavvyCal to sell into revenue and service teams that want bookings triggered from their CRM processes.",
+      "hypotheses": [
+        "The team may be looking for ways to deepen workflow automation without adding much product complexity.",
+        "HubSpot and Salesforce integrations may help SavvyCal win additional B2B customers beyond its current base.",
+        "The founder may care about expansion revenue from CRM-connected use cases, especially in regulated or process-heavy verticals."
+      ],
+      "angle": "Since SavvyCal Appointments is already handling booking flows for a large healthcare customer, I wanted to reach out about putting scheduling links directly into HubSpot and Salesforce workflows so those bookings can be triggered from the systems teams already use.",
+      "offer_fit": "weak",
+      "fit_reason": "SavvyCal clearly sells scheduling software, so workflow integrations are plausible, but the facts do not show a specific HubSpot/Salesforce focus or a strong CRM-led go-to-market motion. The connection is sensible, but still a stretch rather than an obvious fit."
+    },
+    "draft": {
+      "subject": "CRM-triggered scheduling",
+      "body": "If SavvyCal Appointments is already powering booking flows for a large healthcare customer, my guess is CRM-triggered scheduling could be a useful next step.\n\nI build integrations that put scheduling links into HubSpot and Salesforce workflows, so a booking can fire from the record teams already use. If you’re exploring expansion beyond direct scheduling pages, this may be a low-complexity way to reach revenue and service teams.\n\nWould it make sense to map one HubSpot or Salesforce workflow where a booking link should trigger?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "CRM-triggered bookings",
+          "body": "If Appointments is already handling bookings for a larger healthcare customer, my guess is CRM-triggered scheduling is worth a look.\n\nI build integrations that put scheduling links into HubSpot and Salesforce workflows, so teams can trigger the right booking step from the record they already work in. That usually matters when you want more usage from revenue or service teams without adding much process.\n\nWould it make sense to map one workflow where a booking link should fire from HubSpot or Salesforce?"
+        },
+        "review": {
+          "passed": false,
+          "issues": [
+            "“a larger healthcare customer” changes the fact “a large healthcare customer.” If you use this proof point, keep the wording aligned with the source or make it clearly a guess."
+          ]
+        }
+      },
+      {
+        "attempt": 2,
+        "draft": {
+          "subject": "CRM-triggered scheduling",
+          "body": "If SavvyCal Appointments is already powering booking flows for a large healthcare customer, my guess is CRM-triggered scheduling could be a useful next step.\n\nI build integrations that put scheduling links into HubSpot and Salesforce workflows, so a booking can fire from the record teams already use. If you’re exploring expansion beyond direct scheduling pages, this may be a low-complexity way to reach revenue and service teams.\n\nWould it make sense to map one HubSpot or Salesforce workflow where a booking link should trigger?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@2",
+      "strategy": "strategy@2",
+      "copywriter": "copywriter@2",
+      "review": "review@2"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "research@2",
+        "duration_ms": 3202,
+        "usage": {
+          "input_tokens": 4893,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 515,
+          "reasoning_tokens": 39
+        },
+        "cost_usd": 0.00598725,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "strategy@2",
+        "duration_ms": 5059,
+        "usage": {
+          "input_tokens": 733,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 736,
+          "reasoning_tokens": 460
+        },
+        "cost_usd": 0.00386175,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "copywriter@2",
+        "duration_ms": 3533,
+        "usage": {
+          "input_tokens": 843,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 462,
+          "reasoning_tokens": 342
+        },
+        "cost_usd": 0.00271125,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "review@2",
+        "duration_ms": 2434,
+        "usage": {
+          "input_tokens": 734,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 271,
+          "reasoning_tokens": 214
+        },
+        "cost_usd": 0.00177,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 2,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "copywriter@2",
+        "duration_ms": 3159,
+        "usage": {
+          "input_tokens": 1008,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 462,
+          "reasoning_tokens": 333
+        },
+        "cost_usd": 0.002835,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 2,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "review@2",
+        "duration_ms": 2594,
+        "usage": {
+          "input_tokens": 743,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 284,
+          "reasoning_tokens": 264
+        },
+        "cost_usd": 0.00183525,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"SavvyCal\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"SavvyCal\" savvycal.com",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"SavvyCal\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 19996
+  }
+}

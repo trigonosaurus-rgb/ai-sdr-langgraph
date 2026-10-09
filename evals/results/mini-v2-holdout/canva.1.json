@@ -1,0 +1,246 @@
+{
+  "case_id": "canva",
+  "config": "mini",
+  "models": "Research gpt-5.4-mini/low, Strategy gpt-5.4-mini/medium, Writing gpt-5.4-mini/medium, Review gpt-5.4-mini/low",
+  "repeat": 1,
+  "snapshot_recorded_at": "2026-10-09T12:05:30+00:00",
+  "checks": {
+    "label": "draft",
+    "outcome_ok": true,
+    "facts": 8,
+    "dropped_facts": 0,
+    "attempts": 1,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 81,
+    "subject_words": 4,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "2cb4d951fa654fb28c59df162c32132e",
+    "brief": {
+      "company": "Canva",
+      "website": "canva.com",
+      "offer": "Accessibility audits of design templates against WCAG 2.2",
+      "recipient": "Head of Accessibility",
+      "language": "English",
+      "tone": "Warm"
+    },
+    "status": "ready",
+    "reason": null,
+    "message": "The draft passed review.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "Canva has launched a Creative Operating System, described as its biggest product launch ever and a fully connected AI-powered foundation across the Visual Suite.",
+          "excerpt": "the introduction of our Creative Operating System⁠(opens in a new tab or window), the biggest product launch in our history. Built for what we’re calling the Imagination Era, it introduced a fully connected, AI-powered foundation across the Visual Suite",
+          "source_url": "https://www.canva.com/newsroom/news/canva-2025-wrap",
+          "source_title": "A transformative year for Canva: 2025 in review"
+        },
+        {
+          "id": 2,
+          "claim": "Canva says it is used by 95% of the Fortune 500 and has enterprise customers like Docusign.",
+          "excerpt": "Today, Canva is used by 95% of the Fortune 500, and customers like Docusign⁠(opens in a new tab or window) shared encouraging signs of impact",
+          "source_url": "https://www.canva.com/newsroom/news/canva-2025-wrap",
+          "source_title": "A transformative year for Canva: 2025 in review"
+        },
+        {
+          "id": 3,
+          "claim": "Canva Enterprise is positioned for large organizations to create, collaborate, and publish visual content at scale on a secure platform.",
+          "excerpt": "Canva Enterprise is a subscription offering designed to empower large organizations to easily create, collaborate, and publish high-impact visual content at scale with a secure platform designed for enterprise.",
+          "source_url": "https://www.canva.com/enterprise",
+          "source_title": "Canva Enterprise - your organization's all-in-one design tool"
+        },
+        {
+          "id": 4,
+          "claim": "Canva Enterprise includes 24/7 support and case manager support for admins.",
+          "excerpt": "This includes 24/7 support and case manager support for Admins.",
+          "source_url": "https://www.canva.com/enterprise",
+          "source_title": "Canva Enterprise - your organization's all-in-one design tool"
+        },
+        {
+          "id": 5,
+          "claim": "Canva Enterprise customers with 150+ contracted seats get creative services, a dedicated customer success manager, and IT set up and technical services.",
+          "excerpt": "For Canva Enterprise customers with 150+ contracted seats, you also get access to creative services, a dedicated customer success manager, and IT set up and technical services.",
+          "source_url": "https://www.canva.com/enterprise",
+          "source_title": "Canva Enterprise - your organization's all-in-one design tool"
+        },
+        {
+          "id": 6,
+          "claim": "Canva Enterprise includes IP infringement indemnity and AI output indemnification for eligible customers using Magic Studio.",
+          "excerpt": "Canva provides an IP infringement indemnity as it relates to use of the Canva platform and its underlying technology.\n  2. Canva Shield AI output indemnification: Enterprise customers with 100 or more paid users are indemnified against IP infringement claims arising out of AI output, at no extra cost, when using Canva's Magic Studio.",
+          "source_url": "https://www.canva.com/enterprise",
+          "source_title": "Canva Enterprise - your organization's all-in-one design tool"
+        },
+        {
+          "id": 7,
+          "claim": "Canva Business is built for individuals, marketers and growing teams, with higher AI access, enhanced brand management, smarter marketing with ad analytics, and a shared workspace.",
+          "excerpt": "Canva Business is built for individuals, marketers and growing teams who need higher AI access, enhanced brand management, smarter marketing with ad analytics, and a shared workspace for seamless collaboration to scale and grow their business.",
+          "source_url": "https://www.canva.com/solutions/small-business",
+          "source_title": "Canva for small and medium businesses"
+        },
+        {
+          "id": 8,
+          "claim": "Canva says its platform includes AI tools, templates, and collaboration features for creating presentations, docs, videos, and more.",
+          "excerpt": "Canva is your all-in-one graphic design tool to create beautiful designs fast, with the power of AI. Access easy AI design tools and apps to create just about anything and collaborate with everyone.",
+          "source_url": "https://www.design.ing",
+          "source_title": "Design with Canva: Easy AI design tools in one place"
+        }
+      ],
+      "website_owner": "Canva",
+      "website_matches": true,
+      "website_note": "The results from canva.com are official Canva pages, so the website belongs to Canva.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 0,
+      "dropped": []
+    },
+    "strategy": {
+      "observation": "Canva has launched its Creative Operating System, a major AI-powered foundation across the Visual Suite, and Canva’s platform includes templates plus AI tools for creating presentations, docs, videos, and more.",
+      "fact_ids": [
+        1,
+        8
+      ],
+      "offer_link": "Because the new connected Visual Suite appears to broaden the number and variety of templates people can use, accessibility audits against WCAG 2.2 could help catch issues before template changes or new template sets ship across Canva’s products.",
+      "hypotheses": [
+        "The Creative Operating System rollout is increasing the pace at which templates and template-adjacent assets change.",
+        "The Head of Accessibility may be responsible for setting quality standards for templates across multiple content types, not just core app UI.",
+        "Canva may want to ensure templates used by enterprise customers are safe to publish at scale without accessibility regressions."
+      ],
+      "angle": "With Canva’s new Creative Operating System tying templates across the Visual Suite, every template update now has a broader accessibility surface area.",
+      "offer_fit": "good",
+      "fit_reason": "Canva’s product is template-heavy and spans multiple content formats, so WCAG 2.2 audits of design templates have a plausible, concrete use: finding and preventing accessibility issues in assets that are likely to be reused at scale across the platform."
+    },
+    "draft": {
+      "subject": "Templates across Visual Suite",
+      "body": "With Canva’s new Creative Operating System tying templates across the Visual Suite, the accessibility surface area looks a lot bigger. If template updates are moving faster too, my guess is a WCAG 2.2 review before release could catch issues earlier, especially across presentations, docs, and video templates.\n\nI audit design templates against WCAG 2.2, mainly to flag problems before they get repeated at scale. Which template family would you want checked first if you were tightening accessibility coverage across the suite?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Templates across Visual Suite",
+          "body": "With Canva’s new Creative Operating System tying templates across the Visual Suite, the accessibility surface area looks a lot bigger. If template updates are moving faster too, my guess is a WCAG 2.2 review before release could catch issues earlier, especially across presentations, docs, and video templates.\n\nI audit design templates against WCAG 2.2, mainly to flag problems before they get repeated at scale. Which template family would you want checked first if you were tightening accessibility coverage across the suite?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@2",
+      "strategy": "strategy@2",
+      "copywriter": "copywriter@2",
+      "review": "review@2"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "research@2",
+        "duration_ms": 4158,
+        "usage": {
+          "input_tokens": 4141,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 684,
+          "reasoning_tokens": 30
+        },
+        "cost_usd": 0.00618375,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "strategy@2",
+        "duration_ms": 5478,
+        "usage": {
+          "input_tokens": 797,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 739,
+          "reasoning_tokens": 472
+        },
+        "cost_usd": 0.00392325,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "copywriter@2",
+        "duration_ms": 4080,
+        "usage": {
+          "input_tokens": 899,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 491,
+          "reasoning_tokens": 366
+        },
+        "cost_usd": 0.00288375,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "review@2",
+        "duration_ms": 2480,
+        "usage": {
+          "input_tokens": 803,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 269,
+          "reasoning_tokens": 249
+        },
+        "cost_usd": 0.00181275,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Canva\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Canva\" canva.com",
+        "topic": "general",
+        "results": 3,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Canva\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 16286
+  }
+}

@@ -1,0 +1,247 @@
+{
+  "case_id": "poor-fit-duolingo",
+  "config": "mini",
+  "models": "Research gpt-5.4-mini/low, Strategy gpt-5.4-mini/medium, Writing gpt-5.4-mini/medium, Review gpt-5.4-mini/low",
+  "repeat": 2,
+  "snapshot_recorded_at": "2026-10-09T12:07:09+00:00",
+  "checks": {
+    "label": "poor_fit",
+    "outcome_ok": true,
+    "facts": 8,
+    "dropped_facts": 0,
+    "attempts": 1,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 68,
+    "subject_words": 3,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "11d655230ba94355b6a3a7f307a238a4",
+    "brief": {
+      "company": "Duolingo",
+      "website": "duolingo.com",
+      "offer": "Bulk supply of school uniforms",
+      "recipient": "VP of Engineering",
+      "language": "English",
+      "tone": "Warm"
+    },
+    "status": "needs_attention",
+    "reason": null,
+    "message": "The draft passed review, but the offer looks like a poor fit.",
+    "issues": [
+      "The offer may not fit this company: A bulk school-uniform offer does not plausibly map to Duolingo’s product-led, software-heavy engineering priorities, and none of the facts suggest a school, campus, or apparel-buying use case for the VP of Engineering."
+    ],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "Duolingo uses a freemium model that offers free learning while monetizing through paid subscriptions.",
+          "excerpt": "The freemium business model is good for our mission and our business. Duolingo started as a free product, and we remain committed to offering free learning for all while monetizing through a valuable paid experience.",
+          "source_url": "http://investors.duolingo.com/company-strategy-overview-0",
+          "source_title": "Company Strategy Overview - Duolingo, Inc."
+        },
+        {
+          "id": 2,
+          "claim": "Duolingo says it runs extensive product experimentation, with 1,000+ A/B tests per quarter.",
+          "excerpt": "We obsess over product quality, running 1,000+ A/B tests per quarter and refining",
+          "source_url": "http://investors.duolingo.com/company-strategy-overview-0",
+          "source_title": "Company Strategy Overview - Duolingo, Inc."
+        },
+        {
+          "id": 3,
+          "claim": "Duolingo reported 52.7M daily active users, 133.1M monthly active users, and 12.2M paid subscribers as of Q4 2025.",
+          "excerpt": "As of Q4 2025, we have 52.7M DAUs, 133.1M MAUs, and 12.2M paid subscribers.",
+          "source_url": "http://investors.duolingo.com/company-strategy-overview-0",
+          "source_title": "Company Strategy Overview - Duolingo, Inc."
+        },
+        {
+          "id": 4,
+          "claim": "Duolingo says its growth investment is focused mostly on product R&D, with marketing used selectively.",
+          "excerpt": "our investment in growth is almost all in product R&D, with marketing used to strategically accelerate growth.",
+          "source_url": "https://blog.duolingo.com/duolingo-company-strategy",
+          "source_title": "Duolingo Company Strategy: How Duolingo Builds Lasting Success"
+        },
+        {
+          "id": 5,
+          "claim": "Duolingo’s course catalog includes Music, which is iOS and Android only.",
+          "excerpt": "Music\n\niOS and Android only",
+          "source_url": "https://www.duolingo.com/courses",
+          "source_title": "Learn a language for free"
+        },
+        {
+          "id": 6,
+          "claim": "Duolingo offers a Super Duolingo subscription with a 1-week free trial and reminders before billing.",
+          "excerpt": "Start my 1 week free\n\n## how your free trial works\n\nWe’ll send you reminders about when your free trial is going to end!",
+          "source_url": "https://www.duolingo.com/super",
+          "source_title": "Learn a language for free"
+        },
+        {
+          "id": 7,
+          "claim": "Duolingo says its subscription helps fund free access for millions of learners worldwide.",
+          "excerpt": "Your Super Duolingo subscription helps you be a superlearner — and helps us provide a free learning experience to millions of Duolingo learners worldwide.",
+          "source_url": "https://www.duolingo.com/super",
+          "source_title": "Learn a language for free"
+        },
+        {
+          "id": 8,
+          "claim": "Duolingo is required to stop offering the Duolingo English Test to people testing in Iran or using Iranian government-issued identification.",
+          "excerpt": "Duolingo is required to stop offering the Duolingo English Test to people testing in Iran or using Iranian government-issued identification beginning September 1.",
+          "source_url": "https://www.aljazeera.com/news/2026/9/1/duolingo-d-day-iranians-question-latest-us-sanctions-targeting-education",
+          "source_title": "Duolingo D-Day: Iranians question latest US sanctions targeting education | Education News | Al Jazeera"
+        }
+      ],
+      "website_owner": "Duolingo, Inc.",
+      "website_matches": true,
+      "website_note": "The results repeatedly identify duolingo.com as Duolingo’s own official site and investor/handbook/blog pages belong to Duolingo, Inc.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 0,
+      "dropped": []
+    },
+    "strategy": {
+      "observation": "Duolingo says it runs 1,000+ A/B tests per quarter and that most growth investment is concentrated in product R&D, indicating an engineering organization centered on rapid software experimentation.",
+      "fact_ids": [
+        2,
+        4
+      ],
+      "offer_link": "Bulk supply of school uniforms has no direct connection to that experimentation-heavy product engineering focus; it would only be relevant if Duolingo were separately procuring uniforms for a disclosed school or field program, which is not supported by the facts.",
+      "hypotheses": [
+        "Duolingo may have some unrelated education or community initiative that requires apparel procurement, but that is not confirmed.",
+        "The recipient may oversee non-product operations or vendor purchasing in addition to engineering, but that is an assumption."
+      ],
+      "angle": "With 1,000+ A/B tests a quarter and growth spend aimed at product R&D, your engineering team is clearly built around software experimentation, not apparel procurement.",
+      "offer_fit": "poor",
+      "fit_reason": "A bulk school-uniform offer does not plausibly map to Duolingo’s product-led, software-heavy engineering priorities, and none of the facts suggest a school, campus, or apparel-buying use case for the VP of Engineering."
+    },
+    "draft": {
+      "subject": "School uniform sourcing",
+      "body": "Noticed Duolingo runs 1,000+ A/B tests each quarter, and most growth spend seems to sit in product R&D. That reads like a team built for rapid software iteration, not vendor wrangling.\n\nI supply bulk school uniforms for organizations that need a straightforward source for school or field programs. If Duolingo has any separate education initiative that ever needs that kind of procurement, who handles it on your side?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "School uniform sourcing",
+          "body": "Noticed Duolingo runs 1,000+ A/B tests each quarter, and most growth spend seems to sit in product R&D. That reads like a team built for rapid software iteration, not vendor wrangling.\n\nI supply bulk school uniforms for organizations that need a straightforward source for school or field programs. If Duolingo has any separate education initiative that ever needs that kind of procurement, who handles it on your side?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@2",
+      "strategy": "strategy@2",
+      "copywriter": "copywriter@2",
+      "review": "review@2"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "research@2",
+        "duration_ms": 3869,
+        "usage": {
+          "input_tokens": 4865,
+          "cached_input_tokens": 4352,
+          "cache_write_tokens": null,
+          "output_tokens": 655,
+          "reasoning_tokens": 101
+        },
+        "cost_usd": 0.0036586500000000003,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "strategy@2",
+        "duration_ms": 6304,
+        "usage": {
+          "input_tokens": 782,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 863,
+          "reasoning_tokens": 605
+        },
+        "cost_usd": 0.00447,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "copywriter@2",
+        "duration_ms": 4329,
+        "usage": {
+          "input_tokens": 871,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 624,
+          "reasoning_tokens": 512
+        },
+        "cost_usd": 0.00346125,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "review@2",
+        "duration_ms": 2500,
+        "usage": {
+          "input_tokens": 776,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 287,
+          "reasoning_tokens": 267
+        },
+        "cost_usd": 0.0018735,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Duolingo\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Duolingo\" duolingo.com",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Duolingo\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 17019
+  }
+}

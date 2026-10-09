@@ -1,0 +1,68 @@
+{
+  "grader": "claude-opus-5-5",
+  "graded_at": "2026-10-09",
+  "scale": "evals/README.md: grounding, relevance, naturalness, 0-2 each",
+  "scope": "drafts of runs whose case accepts a draft and whose outcome was a draft",
+  "grades": {
+    "canva.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "Creative OS widening the template surface to a pre-release WCAG review; 'my guess is' and long sentences."
+    },
+    "canva.2": {
+      "grounding": 2,
+      "relevance": 1,
+      "naturalness": 1,
+      "note": "'made me think about template-level accessibility' is abstract; generic quarter question."
+    },
+    "pilot.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "Volume and March-April overflow are concrete; natural in-house-or-outside question."
+    },
+    "pilot.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "New services adding tax work is a fair guess; stacked guesses in the opening."
+    },
+    "ru-miro.1": {
+      "grounding": 2,
+      "relevance": 1,
+      "naturalness": 2,
+      "note": "Natural Russian; scale-based regional angle is generic."
+    },
+    "ru-miro.2": {
+      "grounding": 2,
+      "relevance": 1,
+      "naturalness": 1,
+      "note": "English 'roadmaps' and 'AI prompts' inside Russian; the research-canvas link to European interviews is loose."
+    },
+    "savvycal.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "Healthcare booking flows to CRM-triggered scheduling is relevant; hedges a known fact with 'If'."
+    },
+    "savvycal.2": {
+      "grounding": 2,
+      "relevance": 1,
+      "naturalness": 1,
+      "note": "Mission statement is a generic hook; asks if the founder is the right person."
+    },
+    "wise.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "Three products imply three request types; asks to compare routing for them."
+    },
+    "wise.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "Concrete ticket types; stock 'this quarter' closing."
+    }
+  }
+}

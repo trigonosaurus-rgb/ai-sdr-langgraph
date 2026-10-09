@@ -1,0 +1,246 @@
+{
+  "case_id": "wise",
+  "config": "mini",
+  "models": "Research gpt-5.4-mini/low, Strategy gpt-5.4-mini/medium, Writing gpt-5.4-mini/medium, Review gpt-5.4-mini/low",
+  "repeat": 2,
+  "snapshot_recorded_at": "2026-10-09T12:05:34+00:00",
+  "checks": {
+    "label": "draft",
+    "outcome_ok": true,
+    "facts": 7,
+    "dropped_facts": 1,
+    "attempts": 1,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 78,
+    "subject_words": 4,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "3492cffba65c4508b97404c6b4d75d49",
+    "brief": {
+      "company": "Wise",
+      "website": "wise.com",
+      "offer": "AI triage of customer support tickets by intent and urgency",
+      "recipient": "VP of Customer Support",
+      "language": "English",
+      "tone": "Direct"
+    },
+    "status": "ready",
+    "reason": null,
+    "message": "The draft passed review.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "Wise serves three customer groups through three products: personal customers, small and medium-sized businesses, and banks and other enterprises.",
+          "excerpt": "We serve each of these customer groups through our three products: the Wise Account for personal customers, Wise Business for small and medium-sized businesses and Wise Platform for banks and other enterprises.",
+          "source_url": "https://wise.com/imaginary-v2/images/ad736416f90791dbb49c7e59f1f45d8d-WiseFY2025AnnualReportAccounts.pdf",
+          "source_title": "Wise – 2025 Annual Report and Accounts"
+        },
+        {
+          "id": 2,
+          "claim": "In FY2025, over 15.6 million customers used Wise for cross-border transactions.",
+          "excerpt": "During FY2025 over 15.6 million customers used Wise for cross-border transactions and a growing number used other Wise products.",
+          "source_url": "https://wise.com/imaginary-v2/images/ad736416f90791dbb49c7e59f1f45d8d-WiseFY2025AnnualReportAccounts.pdf",
+          "source_title": "Wise – 2025 Annual Report and Accounts"
+        },
+        {
+          "id": 3,
+          "claim": "Wise says it reduced prices and built infrastructure to help customers move and manage money around the world.",
+          "excerpt": "We continued investing in our customers by reducing our prices and building the infrastructure they need to move and manage money around the world, while also broadening our product offering.",
+          "source_url": "https://wise.com/imaginary-v2/images/ad736416f90791dbb49c7e59f1f45d8d-WiseFY2025AnnualReportAccounts.pdf",
+          "source_title": "Wise – 2025 Annual Report and Accounts"
+        },
+        {
+          "id": 4,
+          "claim": "Wise’s core products include Wise Account, Wise Business, and Wise Platform, and they are aimed at people, small businesses and other corporations using Wise APIs.",
+          "excerpt": "Our three core core products, Wise Account; Wise Business; and Wise Platform, bring these solutions to people, small businesses and other corporations who want to use our network through our APIs.",
+          "source_url": "https://wise.com/imaginary-v2/Wise-Annual-Report-Accounts-FY2023.pdf",
+          "source_title": "WISE 2023 Annual Report and Accounts"
+        },
+        {
+          "id": 5,
+          "claim": "Wise says its payments are instant 55% of the time and its fees are transparent.",
+          "excerpt": "our payments are instant 55% of the time, we are radically cheaper than banks, our fees are transparent, and our products are a delight to use.",
+          "source_url": "https://wise.com/imaginary-v2/Wise-Annual-Report-Accounts-FY2023.pdf",
+          "source_title": "WISE 2023 Annual Report and Accounts"
+        },
+        {
+          "id": 6,
+          "claim": "Wise says people and businesses can hold 40+ currencies, move money between countries and spend money abroad.",
+          "excerpt": "With Wise Account and Wise Business, people and businesses can hold 40+ currencies, move money between countries and spend money abroad.",
+          "source_url": "https://newsroom.wise.com/en-NAM/about",
+          "source_title": "About Wise | Wise Newsroom"
+        },
+        {
+          "id": 7,
+          "claim": "Wise said that in financial year 2026 it supported nearly 19 million people and businesses and processed over $243 billion in cross-border transactions.",
+          "excerpt": "In the financial year 2026, Wise supported nearly 19 million people and [...] million people and businesses, processing over $243 billion in cross-border transactions and saving customers more than $3.3 billion.",
+          "source_url": "https://newsroom.wise.com/en-NAM/about",
+          "source_title": "About Wise | Wise Newsroom"
+        }
+      ],
+      "website_owner": "Wise Plc",
+      "website_matches": true,
+      "website_note": "The results show wise.com is Wise’s own official site and investor/newsroom pages for Wise Plc.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 1,
+      "dropped": [
+        {
+          "claim": "Wise says it launched eco-friendly cards for customers in FY2023.",
+          "source_id": 2,
+          "excerpt": "In FY2023, we launched eco-friendly cards for our UK and EU [...]"
+        }
+      ]
+    },
+    "strategy": {
+      "observation": "Wise now supports nearly 19 million people and businesses across three customer groups and three products, while processing over $243B in cross-border transactions, which implies a very large and complex support queue.",
+      "fact_ids": [
+        1,
+        6,
+        7
+      ],
+      "offer_link": "An AI triage layer that classifies tickets by intent and urgency could help Wise route high-volume, cross-border support requests faster across consumer, SMB, and enterprise queues, especially when some issues are time-sensitive money-movement problems.",
+      "hypotheses": [
+        "Wise’s support inbox likely includes a mix of payment timing, transfer status, account access, verification, fee, and API/integration issues.",
+        "A meaningful share of incoming tickets may be urgent because customers are moving money across countries and need quick resolution.",
+        "Support may be split across multiple queues, geographies, or languages, making manual prioritization harder as volume grows."
+      ],
+      "angle": "With Wise supporting nearly 19 million people and businesses and processing $243B in cross-border transactions, ticket routing by intent and urgency may be getting harder to do manually.",
+      "offer_fit": "good",
+      "fit_reason": "Wise’s scale, multiple customer groups, and cross-border payment context make automated ticket triage a plausible fit, because fast identification of urgent money-movement issues could reduce response time and queue friction."
+    },
+    "draft": {
+      "subject": "Routing support at Wise",
+      "body": "With Wise supporting nearly 19 million people and businesses and processing over $243B in cross-border transactions, manual ticket routing may be getting hard to keep up with.\n\nI work on AI triage for support tickets by intent and urgency. If your queue mixes payment timing, transfer status, verification, and account access issues, an AI layer could push the urgent cases to the right team first.\n\nIs ticket prioritization something your support ops team is looking at this quarter?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Routing support at Wise",
+          "body": "With Wise supporting nearly 19 million people and businesses and processing over $243B in cross-border transactions, manual ticket routing may be getting hard to keep up with.\n\nI work on AI triage for support tickets by intent and urgency. If your queue mixes payment timing, transfer status, verification, and account access issues, an AI layer could push the urgent cases to the right team first.\n\nIs ticket prioritization something your support ops team is looking at this quarter?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@2",
+      "strategy": "strategy@2",
+      "copywriter": "copywriter@2",
+      "review": "review@2"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "research@2",
+        "duration_ms": 3723,
+        "usage": {
+          "input_tokens": 4654,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 604,
+          "reasoning_tokens": 39
+        },
+        "cost_usd": 0.0062085,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "strategy@2",
+        "duration_ms": 6705,
+        "usage": {
+          "input_tokens": 738,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 1033,
+          "reasoning_tokens": 753
+        },
+        "cost_usd": 0.005202,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "copywriter@2",
+        "duration_ms": 3046,
+        "usage": {
+          "input_tokens": 860,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 467,
+          "reasoning_tokens": 347
+        },
+        "cost_usd": 0.0027465,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "review@2",
+        "duration_ms": 1539,
+        "usage": {
+          "input_tokens": 739,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 133,
+          "reasoning_tokens": 113
+        },
+        "cost_usd": 0.00115275,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Wise\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Wise\" wise.com",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Wise\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 15099
+  }
+}

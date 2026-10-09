@@ -1,0 +1,231 @@
+{
+  "case_id": "ru-miro",
+  "config": "mini",
+  "models": "Research gpt-5.4-mini/low, Strategy gpt-5.4-mini/medium, Writing gpt-5.4-mini/medium, Review gpt-5.4-mini/low",
+  "repeat": 1,
+  "snapshot_recorded_at": "2026-10-09T12:07:39+00:00",
+  "checks": {
+    "label": "draft",
+    "outcome_ok": true,
+    "facts": 6,
+    "dropped_facts": 0,
+    "attempts": 1,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 67,
+    "subject_words": 3,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "d67093d2f6394b4fa9f40e4be24a6218",
+    "brief": {
+      "company": "Miro",
+      "website": "miro.com",
+      "offer": "Найм и проведение интервью с пользователями из Европы",
+      "recipient": "Head of Research",
+      "language": "Russian",
+      "tone": "Warm"
+    },
+    "status": "ready",
+    "reason": null,
+    "message": "The draft passed review.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "Miro is an AI-powered innovation workspace for teams to plan, co-create, and build together.",
+          "excerpt": "Miro becomes the AI Innovation Workspace, bringing teams and AI together to plan, co-create, and build faster.",
+          "source_url": "https://miro.com/careers/our-story",
+          "source_title": "Miro Careers | Our Company Story"
+        },
+        {
+          "id": 2,
+          "claim": "Miro says its platform is used by more than 100 million users and 250,000 companies worldwide.",
+          "excerpt": "serves more than 100M users and 250,000 companies collaborate in the Innovation Workspace.",
+          "source_url": "https://miro.com/careers/vacancy/8654691002",
+          "source_title": "Vice President Customer Success - New York, San Francisco | Miro Careers"
+        },
+        {
+          "id": 3,
+          "claim": "Miro is positioned as a visual workspace for distributed teams, with an infinite canvas for workshops, meetings, product design, and brainstorming.",
+          "excerpt": "Miro is a visual workspace for innovation that enables distributed teams of any size to dream, design, and build the future together. The platform's infinite canvas enables teams to lead engaging workshops and meetings, design products, brainstorm ideas, and more.",
+          "source_url": "https://miro.com/careers/our-story",
+          "source_title": "Miro Careers | Our Company Story"
+        },
+        {
+          "id": 4,
+          "claim": "Miro’s product area includes Intelligent Canvas, Flows, Prototypes & Wireframes, Mermaid Diagrams, and several platform capabilities like AI Workflows, Connectors, and MCP Server.",
+          "excerpt": "Product\n  + Featured\n    - Intelligent Canvas™\n    - Flows\n    - Prototypes & Wireframes\n    - Mermaid Diagrams\n    - Engage\n  + Platform\n    - AI Overview\n       AI Workflows\n       Connectors\n       MCP Server",
+          "source_url": "https://miro.com/about",
+          "source_title": "About Miro | Meet the team | Our mission - Miro | The Innovation Workspace"
+        },
+        {
+          "id": 5,
+          "claim": "Miro connects with more than 250 apps and offers enterprise-grade security and scale.",
+          "excerpt": "Connects with 250+ apps so teams stay aligned and productive in one scalable, secure workspace.",
+          "source_url": "https://miro.com",
+          "source_title": "AI Innovation Workspace | Miro"
+        },
+        {
+          "id": 6,
+          "claim": "Miro says its platform helps teams move faster, citing outcomes such as 3.6x faster time to market and 50% shorter planning processes.",
+          "excerpt": "3.6x\n\nfaster time to market\n\n50%\n\nshorter planning process",
+          "source_url": "https://miro.com",
+          "source_title": "AI Innovation Workspace | Miro"
+        }
+      ],
+      "website_owner": "Miro",
+      "website_matches": true,
+      "website_note": "The domain miro.com is presented in the results as Miro’s official site and company pages.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 0,
+      "dropped": []
+    },
+    "strategy": {
+      "observation": "Miro says its platform is used by more than 100 million users and 250,000 companies worldwide, which makes regional user insights relevant to a broadly distributed customer base.",
+      "fact_ids": [
+        2
+      ],
+      "offer_link": "If your research team needs to understand how European users work differently from the broader global base, we can recruit and run interviews with users in Europe to give you that regional qualitative input.",
+      "hypotheses": [
+        "The research team may be looking for qualitative feedback from a specific region rather than only global aggregate data.",
+        "European users may have workflow, localization, procurement, or compliance nuances that are worth validating separately.",
+        "Current research coverage may not fully reflect European user behavior or expectations."
+      ],
+      "angle": "With Miro serving 100M users across 250,000 companies worldwide, European user interviews could add regional context to your research without broadening the project scope.",
+      "offer_fit": "good",
+      "fit_reason": "A global, distributed user base makes Europe-based interviews a plausible and useful research input for Miro, especially for a Head of Research who may want region-specific qualitative data."
+    },
+    "draft": {
+      "subject": "Пользователи из Европы",
+      "body": "Здравствуйте.\n\nУ Miro больше 100 млн пользователей и 250 тыс. компаний по миру — из‑за этого региональные различия могут заметно влиять на выводы из исследований.\n\nЯ занимаюсь наймом и проведением интервью с пользователями из Европы. Если вам важно понять, чем их сценарии и ожидания отличаются от глобальной базы, могу взять на себя рекрут и сами разговоры.\n\nЕсть ли сейчас тема, где европейская выборка была бы особенно полезна?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Пользователи из Европы",
+          "body": "Здравствуйте.\n\nУ Miro больше 100 млн пользователей и 250 тыс. компаний по миру — из‑за этого региональные различия могут заметно влиять на выводы из исследований.\n\nЯ занимаюсь наймом и проведением интервью с пользователями из Европы. Если вам важно понять, чем их сценарии и ожидания отличаются от глобальной базы, могу взять на себя рекрут и сами разговоры.\n\nЕсть ли сейчас тема, где европейская выборка была бы особенно полезна?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@2",
+      "strategy": "strategy@2",
+      "copywriter": "copywriter@2",
+      "review": "review@2"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "research@2",
+        "duration_ms": 3237,
+        "usage": {
+          "input_tokens": 4506,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 503,
+          "reasoning_tokens": 37
+        },
+        "cost_usd": 0.005643,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "strategy@2",
+        "duration_ms": 4552,
+        "usage": {
+          "input_tokens": 725,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 590,
+          "reasoning_tokens": 360
+        },
+        "cost_usd": 0.00319875,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "copywriter@2",
+        "duration_ms": 3840,
+        "usage": {
+          "input_tokens": 810,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 620,
+          "reasoning_tokens": 491
+        },
+        "cost_usd": 0.0033975,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "review@2",
+        "duration_ms": 1649,
+        "usage": {
+          "input_tokens": 731,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 117,
+          "reasoning_tokens": 97
+        },
+        "cost_usd": 0.00107475,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Miro\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Miro\" miro.com",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Miro\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 13288
+  }
+}

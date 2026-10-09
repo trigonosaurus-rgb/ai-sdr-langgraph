@@ -1,0 +1,246 @@
+{
+  "case_id": "canva",
+  "config": "mini",
+  "models": "Research gpt-5.4-mini/low, Strategy gpt-5.4-mini/medium, Writing gpt-5.4-mini/medium, Review gpt-5.4-mini/low",
+  "repeat": 2,
+  "snapshot_recorded_at": "2026-10-09T12:05:30+00:00",
+  "checks": {
+    "label": "draft",
+    "outcome_ok": true,
+    "facts": 8,
+    "dropped_facts": 0,
+    "attempts": 1,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 56,
+    "subject_words": 3,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "cc1e5cf5407e4560b2852254f9fc0512",
+    "brief": {
+      "company": "Canva",
+      "website": "canva.com",
+      "offer": "Accessibility audits of design templates against WCAG 2.2",
+      "recipient": "Head of Accessibility",
+      "language": "English",
+      "tone": "Warm"
+    },
+    "status": "ready",
+    "reason": null,
+    "message": "The draft passed review.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "Canva says its platform is used by 95% of the Fortune 500 and by customers such as Docusign.",
+          "excerpt": "Today, Canva is used by 95% of the Fortune 500, and customers like Docusign⁠(opens in a new tab or window) shared encouraging signs of impact",
+          "source_url": "https://www.canva.com/newsroom/news/canva-2025-wrap",
+          "source_title": "A transformative year for Canva: 2025 in review"
+        },
+        {
+          "id": 2,
+          "claim": "Canva launched a Creative Operating System in 2025 and called it the biggest product launch in its history.",
+          "excerpt": "the introduction of our Creative Operating System⁠(opens in a new tab or window), the biggest product launch in our history.",
+          "source_url": "https://www.canva.com/newsroom/news/canva-2025-wrap",
+          "source_title": "A transformative year for Canva: 2025 in review"
+        },
+        {
+          "id": 3,
+          "claim": "Canva Enterprise is designed for large organizations to create, collaborate, and publish visual content at scale on a secure platform.",
+          "excerpt": "Canva Enterprise is a subscription offering designed to empower large organizations to easily create, collaborate, and publish high-impact visual content at scale with a secure platform designed for enterprise.",
+          "source_url": "https://www.canva.com/enterprise",
+          "source_title": "Canva Enterprise - your organization's all-in-one design tool"
+        },
+        {
+          "id": 4,
+          "claim": "Canva Enterprise customers get 24/7 support, case manager support for admins, and for 150+ contracted seats, creative services plus a dedicated customer success manager and IT set up and technical services.",
+          "excerpt": "This includes 24/7 support and case manager support for Admins. Plus, for Canva Enterprise customers with 150+ contracted seats, you also get access to creative services, a dedicated customer success manager, and IT set up and technical services.",
+          "source_url": "https://www.canva.com/enterprise",
+          "source_title": "Canva Enterprise - your organization's all-in-one design tool"
+        },
+        {
+          "id": 5,
+          "claim": "Canva Business is aimed at individuals, marketers, and growing teams, with higher AI access, enhanced brand management, smarter marketing with ad analytics, and a shared workspace.",
+          "excerpt": "Canva Business is built for individuals, marketers and growing teams who need higher AI access, enhanced brand management, smarter marketing with ad analytics, and a shared workspace for seamless collaboration to scale and grow their business.",
+          "source_url": "https://www.canva.com/solutions/small-business",
+          "source_title": "Canva for small and medium businesses"
+        },
+        {
+          "id": 6,
+          "claim": "Canva says its AI tool for creating mini apps and websites has more than 10 million monthly active users.",
+          "excerpt": "The company debuted a tool that lets users create mini apps and websites using AI last year. Obrecht noted the tool has more than 10 million monthly active users now.",
+          "source_url": "https://finance.yahoo.com/news/canva-gets-4b-revenue-llm-140000998.html",
+          "source_title": "Canva gets to $4B in revenue as LLM referral traffic rises"
+        },
+        {
+          "id": 7,
+          "claim": "By October 2025, users had more than 26 million conversations with the Canva app on ChatGPT.",
+          "excerpt": "it said that by October 2025, users had more than 26 million conversations with the Canva app on ChatGPT.",
+          "source_url": "https://finance.yahoo.com/news/canva-gets-4b-revenue-llm-140000998.html",
+          "source_title": "Canva gets to $4B in revenue as LLM referral traffic rises"
+        },
+        {
+          "id": 8,
+          "claim": "Canva reported $4 billion in ARR, 265 million monthly active users, and 31 million paid subscribers by year-end 2025.",
+          "excerpt": "By year-end 2025, Canva reported $4 billion in ARR, 265 million monthly active users and 31 million paid subscribers.",
+          "source_url": "https://www.cmswire.com/digital-experience/canva-ai-20-adds-agentic-design-tools",
+          "source_title": "Canva AI 2.0 Turns the Design Platform Into an Agentic Creative System"
+        }
+      ],
+      "website_owner": "Canva",
+      "website_matches": true,
+      "website_note": "The results show canva.com as Canva’s official site and official newsroom pages on that domain.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 0,
+      "dropped": []
+    },
+    "strategy": {
+      "observation": "Canva launched its Creative Operating System in 2025 as its biggest product launch, and Canva Enterprise is built for organizations to create, collaborate, and publish visual content at scale on a secure platform.",
+      "fact_ids": [
+        2,
+        3
+      ],
+      "offer_link": "A WCAG 2.2 audit of design templates could help catch accessibility issues before they reach the large-volume publishing workflows Canva Enterprise supports, especially after a major product launch that may have expanded templates or new design surfaces.",
+      "hypotheses": [
+        "Template accessibility may be a current priority for Canva's accessibility team or enterprise customers.",
+        "The 2025 Creative Operating System likely introduced new or updated template experiences that would benefit from a fresh accessibility review.",
+        "Canva may want a repeatable process for checking template-level accessibility across a large and changing design catalog."
+      ],
+      "angle": "Canva’s 2025 Creative Operating System launch and enterprise publishing use case make template-level WCAG 2.2 auditing worth doing before accessible issues propagate at scale.",
+      "offer_fit": "good",
+      "fit_reason": "Canva is a design platform whose templates feed large-scale publishing, so auditing templates against WCAG 2.2 is directly relevant to the Head of Accessibility; the main assumption is that template-level review is a live need after the major 2025 launch."
+    },
+    "draft": {
+      "subject": "Template accessibility review",
+      "body": "Canva’s Creative Operating System launch and the enterprise publishing use case made me think about template-level accessibility before issues spread through large-volume workflows.\n\nI help teams audit design templates against WCAG 2.2, mainly to catch problems early when the catalog is changing. Would a template review process be something your team is looking at this quarter?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Template accessibility review",
+          "body": "Canva’s Creative Operating System launch and the enterprise publishing use case made me think about template-level accessibility before issues spread through large-volume workflows.\n\nI help teams audit design templates against WCAG 2.2, mainly to catch problems early when the catalog is changing. Would a template review process be something your team is looking at this quarter?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@2",
+      "strategy": "strategy@2",
+      "copywriter": "copywriter@2",
+      "review": "review@2"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "research@2",
+        "duration_ms": 4312,
+        "usage": {
+          "input_tokens": 4141,
+          "cached_input_tokens": 3840,
+          "cache_write_tokens": null,
+          "output_tokens": 700,
+          "reasoning_tokens": 65
+        },
+        "cost_usd": 0.00366375,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "strategy@2",
+        "duration_ms": 9288,
+        "usage": {
+          "input_tokens": 832,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 1441,
+          "reasoning_tokens": 1157
+        },
+        "cost_usd": 0.0071085,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "copywriter@2",
+        "duration_ms": 3138,
+        "usage": {
+          "input_tokens": 936,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 510,
+          "reasoning_tokens": 418
+        },
+        "cost_usd": 0.002997,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "review@2",
+        "duration_ms": 2134,
+        "usage": {
+          "input_tokens": 805,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 237,
+          "reasoning_tokens": 217
+        },
+        "cost_usd": 0.00167025,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Canva\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Canva\" canva.com",
+        "topic": "general",
+        "results": 3,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Canva\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 18960
+  }
+}

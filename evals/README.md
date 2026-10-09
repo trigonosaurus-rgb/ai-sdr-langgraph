@@ -17,6 +17,15 @@ Measures the graph on a fixed set of briefs so that models, reasoning effort and
 
 `evals.run` skips results that already exist, so an interrupted run resumes.
 
+Blind human grading:
+
+```powershell
+.venv\Scripts\python.exe -m evals.blind sample mini-v1 mini-v2 luna-v2 sol-v2 --cases 7 --seed 5   # blind/sample.json + blind/key.json
+.venv\Scripts\python.exe -m evals.blind import blind/human-grades.json   # grades/<results>.human.json and agreement with Claude
+```
+
+The grader sees `blind/sample.json` (with `blind/sample.ru.json`, Claude's translation for reading only), never the key.
+
 ## Automatic checks
 
 Objective but shallow: the outcome matches the expectation; the draft is in the requested language; body 50–120 words and subject under 8; no placeholders; every number in the draft appears in a fact or in the brief. A run that passes still needs grading.
