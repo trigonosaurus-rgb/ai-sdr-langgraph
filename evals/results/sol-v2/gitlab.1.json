@@ -1,0 +1,245 @@
+{
+  "case_id": "gitlab",
+  "config": "sol",
+  "models": "Research gpt-6.1-sol/low, Strategy gpt-6.1-sol/medium, Writing gpt-6.1-sol/medium, Review gpt-6.1-sol/low",
+  "repeat": 1,
+  "snapshot_recorded_at": "2026-10-09T12:05:24+00:00",
+  "checks": {
+    "label": "draft",
+    "outcome_ok": true,
+    "facts": 8,
+    "dropped_facts": 0,
+    "attempts": 1,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 72,
+    "subject_words": 4,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "269ca171cc314ada8762bca3f8bfb8d9",
+    "brief": {
+      "company": "GitLab",
+      "website": "about.gitlab.com",
+      "offer": "Contract technical writers for release notes and migration guides",
+      "recipient": "Engineering Manager, Documentation",
+      "language": "English",
+      "tone": "Direct"
+    },
+    "status": "ready",
+    "reason": null,
+    "message": "The draft passed review.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "GitLab provides an intelligent orchestration platform where teams and AI agents ship secure software faster.",
+          "excerpt": "We're the company behind GitLab, the intelligent orchestration platform where teams and their AI agents ship secure software faster.",
+          "source_url": "https://about.gitlab.com/company",
+          "source_title": "About GitLab - The Intelligent Orchestration Platform"
+        },
+        {
+          "id": 2,
+          "claim": "GitLab signed a global alliance partnership agreement with Capgemini.",
+          "excerpt": "We're excited to share that GitLab and Capgemini have signed a global alliance partnership agreement.",
+          "source_url": "https://about.gitlab.com/blog/gitlab-and-capgemini-global-alliance-partnership",
+          "source_title": "GitLab and Capgemini accelerate DevSecOps transformation"
+        },
+        {
+          "id": 3,
+          "claim": "GitLab Duo Agent Platform orchestrates AI across the entire software development lifecycle.",
+          "excerpt": "GitLab Duo Agent Platform, which orchestrates AI across the entire software development lifecycle",
+          "source_url": "https://about.gitlab.com/blog/gitlab-and-capgemini-global-alliance-partnership",
+          "source_title": "GitLab and Capgemini accelerate DevSecOps transformation"
+        },
+        {
+          "id": 4,
+          "claim": "More than 100,000 organizations use GitLab to plan, build, secure, and deploy software.",
+          "excerpt": "GitLab is the trusted enterprise platform for software creation in the AI era, used by more than 100,000 organizations to plan, build, secure, and deploy software at machine scale, guided by humans.",
+          "source_url": "https://about.gitlab.com/jobs",
+          "source_title": "Join GitLab"
+        },
+        {
+          "id": 5,
+          "claim": "Carrefour and Thales use GitLab to evolve their CI/CD platforms and increase developer productivity.",
+          "excerpt": "### How Carrefour and Thales are evolving their CI/CD platforms\n\nLearn how a large retailer and an aerospace and defense company are using GitLab to evolve their CI/CD platforms to increase developer productivity.",
+          "source_url": "https://about.gitlab.com/blog/tags/customers",
+          "source_title": "Customers articles - GitLab Blog"
+        },
+        {
+          "id": 6,
+          "claim": "GitLab announced a restructuring process that includes a voluntary separation window.",
+          "excerpt": "This morning we shared with team members that we're beginning a restructuring process at GitLab, and we're running it differently than most. The planning is happening openly, including a voluntary separation window.",
+          "source_url": "https://about.gitlab.com/blog/gitlab-act-2",
+          "source_title": "GitLab Act 2"
+        },
+        {
+          "id": 7,
+          "claim": "GitLab reported revenue of $282 million for the fiscal first quarter ended April 30, 2026, up 18% year over year.",
+          "excerpt": "For the fiscal first quarter ended April 30, 2026, revenue rose 18% year-over-year (YoY) to $282 million.",
+          "source_url": "https://www.barchart.com/story/news/2342088/gitlab-shares-sink-after-layoff-news-why-analysts-still-see-massive-upside",
+          "source_title": "GitLab Shares Sink After Layoff News. Why Analysts Still See Massive Upside."
+        },
+        {
+          "id": 8,
+          "claim": "GitLab targets technology leaders and platform owners responsible for modernizing software delivery, including CIOs, CTOs, and DevOps leaders.",
+          "excerpt": "GitLab serves technology leaders and platform owners responsible for modernizing their software delivery lifecycle. This includes CIOs, CTOs, and DevOps leaders who need to create unified experiences for engineering, design, and product teams.",
+          "source_url": "https://about.gitlab.com/platform",
+          "source_title": "GitLab Platform - Speed with control"
+        }
+      ],
+      "website_owner": "GitLab Inc.",
+      "website_matches": true,
+      "website_note": "Official GitLab pages use this domain, and results explicitly list about.gitlab.com as GitLab Inc.'s website.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 0,
+      "dropped": []
+    },
+    "strategy": {
+      "observation": "GitLab announced a restructuring process that includes a voluntary separation window.",
+      "fact_ids": [
+        6
+      ],
+      "offer_link": "If the restructuring affects documentation capacity, contract technical writers could provide time-limited support for release notes and migration guides without requiring permanent hires.",
+      "hypotheses": [
+        "The restructuring may affect the documentation team's capacity or allocation of work.",
+        "Release notes and migration guides may still need coverage while staffing changes take place.",
+        "The recipient may be able to commission contract writing support, although restructuring-related budget constraints could limit that option."
+      ],
+      "angle": "With GitLab announcing a restructuring and voluntary separation window, would short-term writing support for release notes and migration guides be useful if documentation capacity shifts?",
+      "offer_fit": "good",
+      "fit_reason": "The deliverables directly match the recipient's documentation remit, and temporary support has a plausible use during organizational change; actual demand and contractor budget remain unconfirmed."
+    },
+    "draft": {
+      "subject": "Documentation coverage during restructuring",
+      "body": "With GitLab announcing a restructuring and voluntary separation window, is short-term documentation coverage something you’re considering if team capacity shifts?\n\nI provide contract technical writers for release notes and migration guides. They can cover a defined period without requiring permanent hires, which could help if staffing changes leave a gap in that work.\n\nIs there a release notes or migration guide workload you’d consider assigning to a contract writer during the transition?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Documentation coverage during restructuring",
+          "body": "With GitLab announcing a restructuring and voluntary separation window, is short-term documentation coverage something you’re considering if team capacity shifts?\n\nI provide contract technical writers for release notes and migration guides. They can cover a defined period without requiring permanent hires, which could help if staffing changes leave a gap in that work.\n\nIs there a release notes or migration guide workload you’d consider assigning to a contract writer during the transition?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@2",
+      "strategy": "strategy@2",
+      "copywriter": "copywriter@2",
+      "review": "review@2"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-6.1-sol",
+        "prompt_version": "research@2",
+        "duration_ms": 10507,
+        "usage": {
+          "input_tokens": 4837,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 4834,
+          "output_tokens": 661,
+          "reasoning_tokens": 0
+        },
+        "cost_usd": 0.018701,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-6.1-sol",
+        "prompt_version": "strategy@2",
+        "duration_ms": 10422,
+        "usage": {
+          "input_tokens": 752,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 317,
+          "reasoning_tokens": 100
+        },
+        "cost_usd": 0.004674,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-6.1-sol",
+        "prompt_version": "copywriter@2",
+        "duration_ms": 5247,
+        "usage": {
+          "input_tokens": 799,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 103,
+          "reasoning_tokens": 0
+        },
+        "cost_usd": 0.002628,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-6.1-sol",
+        "prompt_version": "review@2",
+        "duration_ms": 2755,
+        "usage": {
+          "input_tokens": 741,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 14,
+          "reasoning_tokens": 0
+        },
+        "cost_usd": 0.001622,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"GitLab\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"GitLab\" about.gitlab.com",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"GitLab\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 28953
+  }
+}

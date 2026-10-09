@@ -1,0 +1,230 @@
+{
+  "case_id": "stripe",
+  "config": "luna",
+  "models": "Research gpt-6-luna/low, Strategy gpt-6-luna/medium, Writing gpt-6-luna/medium, Review gpt-6-luna/low",
+  "repeat": 1,
+  "snapshot_recorded_at": "2026-10-09T12:05:11+00:00",
+  "checks": {
+    "label": "draft",
+    "outcome_ok": true,
+    "facts": 6,
+    "dropped_facts": 0,
+    "attempts": 1,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 62,
+    "subject_words": 5,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "dd6696c1adab4b5d84271b590212eb18",
+    "brief": {
+      "company": "Stripe",
+      "website": "stripe.com",
+      "offer": "Localizing developer documentation into Japanese, German and Brazilian Portuguese",
+      "recipient": "Head of Documentation",
+      "language": "English",
+      "tone": "Warm"
+    },
+    "status": "ready",
+    "reason": null,
+    "message": "The draft passed review.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "Stripe offers a payments and financial infrastructure platform, including products such as Terminal and Connect.",
+          "excerpt": "Stripe offers an enterprise-grade infrastructure that puts our customers on the cutting edge of modern payments technology. The combination of Terminal and Connect is a powerful integrated solution.",
+          "source_url": "https://stripe.com",
+          "source_title": "Stripe | Financial Infrastructure to Grow Your Revenue"
+        },
+        {
+          "id": 2,
+          "claim": "Stripe supports product and price management, including flat-rate tiers, per-seat or per-license billing, and usage-based billing.",
+          "excerpt": "Let your customers pick how many seats or licenses they’ll use and bill them for each.",
+          "source_url": "https://docs.stripe.com/products-prices/overview",
+          "source_title": "Overview | Stripe Documentation"
+        },
+        {
+          "id": 3,
+          "claim": "Stripe says its crypto checkout partnership with Crypto.com lets customers pay directly with their crypto balance.",
+          "excerpt": "Crypto.com partners with Stripe to enable better crypto payments.",
+          "source_url": "https://stripe.com",
+          "source_title": "Stripe | Financial Infrastructure to Grow Your Revenue"
+        },
+        {
+          "id": 4,
+          "claim": "Stripe became the Ryder Cup’s Worldwide Partner and Official Financial and Payments Infrastructure Partner.",
+          "excerpt": "Stripe has signed a new agreement to become a Worldwide Partner and the Official Financial and Payments Infrastructure Partner to golf’s greatest team contest—the Ryder Cup.",
+          "source_url": "https://www.rydercup.com/news-media/stripe-becomes-a-worldwide-partner-of-the-ryder-cup",
+          "source_title": "Stripe becomes a Worldwide Partner of the Ryder Cup"
+        },
+        {
+          "id": 5,
+          "claim": "Stripe partnered with FedEx to combine logistics and financial infrastructure data insights for small-business financing options.",
+          "excerpt": "Stripe is partnering with global shipping giant FedEx to combine their data insights from logistics and financial infrastructure to create financing options for small businesses, the companies said Tuesday in a joint press release.",
+          "source_url": "https://www.paymentsdive.com/news/stripe-fedex-team-on-smb-lending-business-capital-logistics/832368",
+          "source_title": "Stripe, FedEx team on SMB lending"
+        },
+        {
+          "id": 6,
+          "claim": "Stripe plans to use its Parafin acquisition to expand lending for smaller firms.",
+          "excerpt": "Stripe plans to use the San Francisco-based startup to expand its lending for smaller firms.",
+          "source_url": "https://www.paymentsdive.com/news/stripe-fedex-team-on-smb-lending-business-capital-logistics/832368",
+          "source_title": "Stripe, FedEx team on SMB lending"
+        }
+      ],
+      "website_owner": "Stripe",
+      "website_matches": true,
+      "website_note": "The website is Stripe’s own site, and the results identify stripe.com as Stripe’s website.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 0,
+      "dropped": []
+    },
+    "strategy": {
+      "observation": "Stripe’s documentation covers multiple billing models, including flat-rate, per-seat or per-license, and usage-based billing.",
+      "fact_ids": [
+        2
+      ],
+      "offer_link": "Localizing these distinctions into Japanese, German, and Brazilian Portuguese could make billing documentation easier for developers using those languages to understand and implement.",
+      "hypotheses": [
+        "Developers who prefer Japanese, German, or Brazilian Portuguese documentation may benefit from localized explanations of these billing models.",
+        "Stripe may be interested in expanding or improving documentation access in these languages."
+      ],
+      "angle": "Stripe’s docs explain flat-rate, per-seat, and usage-based billing, and I wondered whether localized versions in Japanese, German, and Brazilian Portuguese would help developers working through those options.",
+      "offer_fit": "weak",
+      "fit_reason": "The offer directly concerns developer documentation, and the documented billing models provide concrete material to localize; however, the facts do not establish demand for these languages or a current localization priority."
+    },
+    "draft": {
+      "subject": "Billing docs in three languages",
+      "body": "Hi,\n\nI noticed Stripe’s docs explain flat-rate, per-seat or per-license, and usage-based billing. I wondered whether localized explanations could help developers working through those options in their preferred language.\n\nI localize developer documentation into Japanese, German, and Brazilian Portuguese, with care for the distinctions that matter when developers implement billing. Are any of those language versions being considered for Stripe’s billing docs?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Billing docs in three languages",
+          "body": "Hi,\n\nI noticed Stripe’s docs explain flat-rate, per-seat or per-license, and usage-based billing. I wondered whether localized explanations could help developers working through those options in their preferred language.\n\nI localize developer documentation into Japanese, German, and Brazilian Portuguese, with care for the distinctions that matter when developers implement billing. Are any of those language versions being considered for Stripe’s billing docs?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@2",
+      "strategy": "strategy@2",
+      "copywriter": "copywriter@2",
+      "review": "review@2"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-6-luna",
+        "prompt_version": "research@2",
+        "duration_ms": 4589,
+        "usage": {
+          "input_tokens": 4828,
+          "cached_input_tokens": 4825,
+          "cache_write_tokens": 0,
+          "output_tokens": 453,
+          "reasoning_tokens": 0
+        },
+        "cost_usd": 0.00027505,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-6-luna",
+        "prompt_version": "strategy@2",
+        "duration_ms": 6033,
+        "usage": {
+          "input_tokens": 666,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 604,
+          "reasoning_tokens": 379
+        },
+        "cost_usd": 0.0003686,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-6-luna",
+        "prompt_version": "copywriter@2",
+        "duration_ms": 3537,
+        "usage": {
+          "input_tokens": 717,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 255,
+          "reasoning_tokens": 148
+        },
+        "cost_usd": 0.0001992,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-6-luna",
+        "prompt_version": "review@2",
+        "duration_ms": 2620,
+        "usage": {
+          "input_tokens": 653,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 136,
+          "reasoning_tokens": 116
+        },
+        "cost_usd": 0.00013330000000000001,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Stripe\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Stripe\" stripe.com",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Stripe\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 16872
+  }
+}

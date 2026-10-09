@@ -1,0 +1,230 @@
+{
+  "case_id": "linear",
+  "config": "luna",
+  "models": "Research gpt-6-luna/low, Strategy gpt-6-luna/medium, Writing gpt-6-luna/medium, Review gpt-6-luna/low",
+  "repeat": 1,
+  "snapshot_recorded_at": "2026-10-09T12:05:06+00:00",
+  "checks": {
+    "label": "draft",
+    "outcome_ok": true,
+    "facts": 6,
+    "dropped_facts": 0,
+    "attempts": 1,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 73,
+    "subject_words": 5,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "bec0278bf6594e99b840f63b1aa25488",
+    "brief": {
+      "company": "Linear",
+      "website": "linear.app",
+      "offer": "Recruiting and scheduling customer interview participants for product teams",
+      "recipient": "Head of Product",
+      "language": "English",
+      "tone": "Direct"
+    },
+    "status": "ready",
+    "reason": null,
+    "message": "The draft passed review.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "Linear provides a product-development tool for planning and building products, with AI workflows at its core.",
+          "excerpt": "Purpose-built for modern teams with AI workflows at its core, Linear sets a new standard for planning and building products.",
+          "source_url": "https://linear.app",
+          "source_title": "Linear – The system for product development"
+        },
+        {
+          "id": 2,
+          "claim": "Linear says it powers more than 40,000 product teams, ranging from startups to major enterprises.",
+          "excerpt": "Linear powers over40,000 product teams. From ambitious startups to major enterprises.",
+          "source_url": "https://linear.app",
+          "source_title": "Linear – The system for product development"
+        },
+        {
+          "id": 3,
+          "claim": "Linear is designed for workflows shared by people and AI agents, including drafting PRDs and pushing PRs.",
+          "excerpt": "Designed for workflows shared by humans and agents. From drafting PRDs to pushing PRs.",
+          "source_url": "https://linear.app",
+          "source_title": "Linear – The system for product development"
+        },
+        {
+          "id": 4,
+          "claim": "Linear offers its product on web, macOS, Windows, iOS, and Android.",
+          "excerpt": "Available for web,  macOS, Windows, iOS, and Android.",
+          "source_url": "https://linear.app/download",
+          "source_title": "Download Linear"
+        },
+        {
+          "id": 5,
+          "claim": "Linear’s mobile app supports filing issues, following work updates, receiving notifications, and updating issues, projects, and documents.",
+          "excerpt": "File issues on-the-go • Stay up-to-date on your most important streams of work • Get instant notifications about important updates • Update issues, projects, and documents from anywhere",
+          "source_url": "https://apps.apple.com/us/app/linear-mobile/id1645587184",
+          "source_title": "‎Linear Mobile App - App Store"
+        },
+        {
+          "id": 6,
+          "claim": "Linear names OpenAI and Ramp employees among its customer advocates.",
+          "excerpt": "Gabriel PealStaff Software Engineer, OpenAIOur speed is intense and Linear helps us be action biased.",
+          "source_url": "https://linear.app",
+          "source_title": "Linear – The system for product development"
+        }
+      ],
+      "website_owner": "Linear",
+      "website_matches": true,
+      "website_note": "The results identify linear.app as Linear’s official website and present Linear’s product and customer information there.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "The results do not give current pricing, funding, or recent hiring information.",
+      "dropped_facts": 0,
+      "dropped": []
+    },
+    "strategy": {
+      "observation": "Linear designs workflows shared by people and AI agents, including drafting PRDs and pushing PRs.",
+      "fact_ids": [
+        3
+      ],
+      "offer_link": "Interview participants could help Linear’s product team learn how customers want people and AI agents to collaborate across these workflows, informing product decisions.",
+      "hypotheses": [
+        "Linear may be seeking more customer input on how these workflows work in practice.",
+        "The Head of Product may be involved in deciding when and how to gather that input."
+      ],
+      "angle": "Since Linear’s workflows are designed for people and AI agents to work together, I wondered how you’re gathering customer input on where that collaboration works best.",
+      "offer_fit": "good",
+      "fit_reason": "Customer interviews are directly relevant to understanding how users experience product workflows, and the human-and-agent collaboration described in fact 3 gives the offer a specific connection to Linear’s product."
+    },
+    "draft": {
+      "subject": "Customer input on agent workflows",
+      "body": "Since Linear’s workflows are designed for people and AI agents to work together, I wondered how you’re gathering customer input on where that collaboration works best.\n\nI recruit and schedule customer interview participants for product teams, so teams can hear directly how people use these workflows and where they want agents involved. If you’re looking at this now, would it help to interview a few users specifically about drafting PRDs or pushing PRs?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Customer input on agent workflows",
+          "body": "Since Linear’s workflows are designed for people and AI agents to work together, I wondered how you’re gathering customer input on where that collaboration works best.\n\nI recruit and schedule customer interview participants for product teams, so teams can hear directly how people use these workflows and where they want agents involved. If you’re looking at this now, would it help to interview a few users specifically about drafting PRDs or pushing PRs?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@2",
+      "strategy": "strategy@2",
+      "copywriter": "copywriter@2",
+      "review": "review@2"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-6-luna",
+        "prompt_version": "research@2",
+        "duration_ms": 4226,
+        "usage": {
+          "input_tokens": 3766,
+          "cached_input_tokens": 3763,
+          "cache_write_tokens": 0,
+          "output_tokens": 462,
+          "reasoning_tokens": 0
+        },
+        "cost_usd": 0.00026893,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-6-luna",
+        "prompt_version": "strategy@2",
+        "duration_ms": 6031,
+        "usage": {
+          "input_tokens": 661,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 522,
+          "reasoning_tokens": 314
+        },
+        "cost_usd": 0.00032710000000000004,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-6-luna",
+        "prompt_version": "copywriter@2",
+        "duration_ms": 3883,
+        "usage": {
+          "input_tokens": 698,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 305,
+          "reasoning_tokens": 195
+        },
+        "cost_usd": 0.0002223,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-6-luna",
+        "prompt_version": "review@2",
+        "duration_ms": 2188,
+        "usage": {
+          "input_tokens": 654,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 124,
+          "reasoning_tokens": 104
+        },
+        "cost_usd": 0.0001274,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Linear\" company overview products customers",
+        "topic": "general",
+        "results": 2,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Linear\" linear.app",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Linear\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 16426
+  }
+}

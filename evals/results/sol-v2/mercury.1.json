@@ -1,0 +1,245 @@
+{
+  "case_id": "mercury",
+  "config": "sol",
+  "models": "Research gpt-6.1-sol/low, Strategy gpt-6.1-sol/medium, Writing gpt-6.1-sol/medium, Review gpt-6.1-sol/low",
+  "repeat": 1,
+  "snapshot_recorded_at": "2026-10-09T12:06:22+00:00",
+  "checks": {
+    "label": "draft",
+    "outcome_ok": true,
+    "facts": 8,
+    "dropped_facts": 0,
+    "attempts": 1,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 89,
+    "subject_words": 5,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "329ae7903b7c4493b54bc9f4ebb49c8f",
+    "brief": {
+      "company": "Mercury",
+      "website": "mercury.com",
+      "offer": "Onboarding email sequences for startup founders",
+      "recipient": "Lifecycle Marketing Lead",
+      "language": "English",
+      "tone": "Warm"
+    },
+    "status": "ready",
+    "reason": null,
+    "message": "The draft passed review.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "Mercury launched Mercury Books, AI-powered accounting software that categorizes and reconciles transactions as they happen.",
+          "excerpt": "Today, we're launching @Mercury Books. AI-powered accounting software, for your bookkeeper or you, that categorizes and reconciles your transactions the moment they happen.",
+          "source_url": "https://x.com/mercury",
+          "source_title": "Mercury (@mercury) / X"
+        },
+        {
+          "id": 2,
+          "claim": "Mercury serves more than 300,000 customers.",
+          "excerpt": "Today, more than 300,000 customers use Mercury.",
+          "source_url": "https://mercury.com/blog/annual-letter-2025",
+          "source_title": "Mercury Annual Letter 2025 | Mercury"
+        },
+        {
+          "id": 3,
+          "claim": "By the end of 2025, 73% of Mercury's new customers came from outside AI or tech startups.",
+          "excerpt": "By the end of 2025, 73% of new customers came from outside the AI or tech startup category,",
+          "source_url": "https://mercury.com/blog/annual-letter-2025",
+          "source_title": "Mercury Annual Letter 2025 | Mercury"
+        },
+        {
+          "id": 4,
+          "claim": "One in three U.S. startups uses Mercury, and it onboarded 2.4 times more AI companies in 2025 than in the previous year.",
+          "excerpt": "Today, 1 in 3 U.S. startups use Mercury, including a rapidly growing share of AI companies — in 2025, we onboarded 2.4x more AI companies than the year before.",
+          "source_url": "https://mercury.com/blog/annual-letter-2025",
+          "source_title": "Mercury Annual Letter 2025 | Mercury"
+        },
+        {
+          "id": 5,
+          "claim": "Mercury is a fintech company offering banking services through Choice Financial Group and Column N.A., rather than an FDIC-insured bank itself.",
+          "excerpt": "Mercury is a fintech company, not an FDIC-insured bank. Banking services provided through Choice Financial Group and Column N.A., Members FDIC.",
+          "source_url": "https://mercury.com",
+          "source_title": "Online Business Banking For Startups, Small Businesses & Scaling Companies"
+        },
+        {
+          "id": 6,
+          "claim": "Mercury Insights offers AI-powered cashflow alerts and a chatbot for questions about business finances.",
+          "excerpt": "filter and compare by time periods, get AI-powered cashflow alerts and ask a chatbot questions like “Why did expenses increase this month?”",
+          "source_url": "https://mercury.com/blog/march-2026-product-updates",
+          "source_title": "March 2026 product updates | Mercury"
+        },
+        {
+          "id": 7,
+          "claim": "Mercury Bill Pay automates accounts payable, organizing incoming bills by approval status and due date and supporting scheduled ACH, check or wire payments.",
+          "excerpt": "Bills sent to your dedicated inbox are automatically organized by approval status and due date, and can be scheduled for payment via ACH, check, or wire.",
+          "source_url": "https://support.mercury.com/hc/en-us/articles/28768945847316-Bill-Pay-overview",
+          "source_title": "Bill Pay overview – Mercury"
+        },
+        {
+          "id": 8,
+          "claim": "Mercury offers unlimited invoicing in its free version, while recurring invoices and ACH debit invoicing require paid plans.",
+          "excerpt": "Customers can create, send, track, and receive payment on as many invoices as they’d like in the free version of Mercury. Advanced invoicing capabilities, such as sending recurring invoices, and invoicing with ACH debit, are available as part of our paid plans.",
+          "source_url": "https://app.mercury.com/help/mercury-invoicing-overview",
+          "source_title": "Mercury invoicing overview – Mercury"
+        }
+      ],
+      "website_owner": "Mercury",
+      "website_matches": true,
+      "website_note": "Mercury's official pages and company profiles identify mercury.com as its website.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 0,
+      "dropped": []
+    },
+    "strategy": {
+      "observation": "Mercury launched Mercury Books, AI-powered accounting software that categorizes and reconciles transactions as they happen.",
+      "fact_ids": [
+        1
+      ],
+      "offer_link": "Founder-focused onboarding emails could introduce Mercury Books to eligible customers, explain its automated accounting features, and guide them toward getting started. This gives the Lifecycle Marketing Lead a concrete potential application for the sender’s sequences around a new product launch.",
+      "hypotheses": [
+        "Startup founders may be a target audience for Mercury Books.",
+        "Some founders may need guidance on how Mercury Books fits into their existing accounting workflow before adopting it.",
+        "The Lifecycle Marketing Lead may own or influence email journeys supporting Mercury Books adoption."
+      ],
+      "angle": "With Mercury Books now launched, would a founder-focused onboarding sequence help customers understand where it fits into their accounting workflow and get started?",
+      "offer_fit": "good",
+      "fit_reason": "A new accounting product creates a plausible use for onboarding sequences, and lifecycle marketing is closely aligned with that work; the fit depends on founders being a target segment and the recipient having responsibility for the launch journey."
+    },
+    "draft": {
+      "subject": "Founder onboarding for Mercury Books",
+      "body": "Hi,\n\nWith Mercury Books now launched, are you considering a separate onboarding email sequence for startup founders?\n\nMy guess is that some founders may need help figuring out where it fits into their existing accounting workflow before getting started.\n\nI write onboarding email sequences for startup founders. For this launch, that could mean a short series that helps eligible founders understand the fit and take their first steps, rather than trying to cover everything in one announcement.\n\nCould I send you a three-email outline focused on that workflow question?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Founder onboarding for Mercury Books",
+          "body": "Hi,\n\nWith Mercury Books now launched, are you considering a separate onboarding email sequence for startup founders?\n\nMy guess is that some founders may need help figuring out where it fits into their existing accounting workflow before getting started.\n\nI write onboarding email sequences for startup founders. For this launch, that could mean a short series that helps eligible founders understand the fit and take their first steps, rather than trying to cover everything in one announcement.\n\nCould I send you a three-email outline focused on that workflow question?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@2",
+      "strategy": "strategy@2",
+      "copywriter": "copywriter@2",
+      "review": "review@2"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-6.1-sol",
+        "prompt_version": "research@2",
+        "duration_ms": 9384,
+        "usage": {
+          "input_tokens": 4255,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 4252,
+          "output_tokens": 571,
+          "reasoning_tokens": 0
+        },
+        "cost_usd": 0.016346,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-6.1-sol",
+        "prompt_version": "strategy@2",
+        "duration_ms": 11527,
+        "usage": {
+          "input_tokens": 766,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 411,
+          "reasoning_tokens": 164
+        },
+        "cost_usd": 0.005642,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-6.1-sol",
+        "prompt_version": "copywriter@2",
+        "duration_ms": 5635,
+        "usage": {
+          "input_tokens": 831,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 165,
+          "reasoning_tokens": 34
+        },
+        "cost_usd": 0.003312,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-6.1-sol",
+        "prompt_version": "review@2",
+        "duration_ms": 1688,
+        "usage": {
+          "input_tokens": 771,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 14,
+          "reasoning_tokens": 0
+        },
+        "cost_usd": 0.001682,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Mercury\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Mercury\" mercury.com",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Mercury\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 28255
+  }
+}

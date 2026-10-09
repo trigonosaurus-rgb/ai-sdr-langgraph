@@ -1,0 +1,237 @@
+{
+  "case_id": "ru-kontur",
+  "config": "luna",
+  "models": "Research gpt-6-luna/low, Strategy gpt-6-luna/medium, Writing gpt-6-luna/medium, Review gpt-6-luna/low",
+  "repeat": 1,
+  "snapshot_recorded_at": "2026-10-09T12:07:15+00:00",
+  "checks": {
+    "label": "draft",
+    "outcome_ok": true,
+    "facts": 7,
+    "dropped_facts": 0,
+    "attempts": 1,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 63,
+    "subject_words": 5,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "2a61c8ed04d6425f92168ce2989a2b2b",
+    "brief": {
+      "company": "Контур",
+      "website": "kontur.ru",
+      "offer": "Автоматизация разбора обращений в поддержку с помощью ИИ",
+      "recipient": "Руководитель службы поддержки",
+      "language": "Russian",
+      "tone": "Direct"
+    },
+    "status": "ready",
+    "reason": null,
+    "message": "The draft passed review.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "Kontur develops an ecosystem of more than 70 business services.",
+          "excerpt": "Контур — это экосистема для бизнеса, в которой больше 70 сервисов.",
+          "source_url": "https://kontur.ru/press/news/company/2021/5/7600",
+          "source_title": "Контур перешел на новый фирменный стиль — СКБ Контур"
+        },
+        {
+          "id": 2,
+          "claim": "Kontur’s products cover areas including electronic document exchange, accounting and reporting, retail, HR management, procurement, and information security.",
+          "excerpt": "Электронный документооборот\n\n  Учет и отчетность\n\n  Проверка контрагентов\n\n  Торговля и ритейл\n\n  Автоматизация бизнеса\n\n  Управление HR‑процессами",
+          "source_url": "https://kontur.ru/products",
+          "source_title": "Продукты — Контур"
+        },
+        {
+          "id": 3,
+          "claim": "Kontur’s services are used by one in three businesses in Russia.",
+          "excerpt": "Контур — экосистема, которой пользуется каждый третий бизнес в России.",
+          "source_url": "https://kontur.ru/career",
+          "source_title": "Работа у нас — Контур"
+        },
+        {
+          "id": 4,
+          "claim": "Kontur and Beeline signed a strategic cooperation agreement at SPIEF 2025, including work on Kontur.Talk, its video-conferencing service.",
+          "excerpt": "Билайн и разработчик цифровых сервисов для бизнеса СКБ Контур на Петербургском международном экономическом форуме (ПМЭФ-2025) заключили стратегическое соглашение о сотрудничестве.",
+          "source_url": "https://kontur.ru/press/news/79427-bilajn_i_kontur_pomogut_rossijskomu_biznesu",
+          "source_title": "Билайн и Контур помогут российскому бизнесу автоматизироваться — СКБ Контур"
+        },
+        {
+          "id": 5,
+          "claim": "The Beeline partnership is intended to improve Kontur.Talk and help reduce costs for Beeline and other users.",
+          "excerpt": "Всё это позволит повышать качество продукта, улучшать опыт взаимодействия с ним и снижать издержки не только для Билайна, но и для других пользователей Контур.Толк.",
+          "source_url": "https://kontur.ru/press/news/79427-bilajn_i_kontur_pomogut_rossijskomu_biznesu",
+          "source_title": "Билайн и Контур помогут российскому бизнесу автоматизироваться — СКБ Контур"
+        },
+        {
+          "id": 6,
+          "claim": "Kontur launched cross-border electronic document exchange between Russia and Uzbekistan, enabling legally binding exchanges with Uzbek partners.",
+          "excerpt": "SKB Kontur has launched cross-border electronic document exchange, allowing Russian companies to exchange legally binding e-documents with Uzbek partners.",
+          "source_url": "https://www.uzdaily.uz/en/skb-kontur-launches-e-document-exchange-between-russia-uzbekistan",
+          "source_title": "SKB Kontur Launches E-Document Exchange Between Russia, Uzbekistan"
+        },
+        {
+          "id": 7,
+          "claim": "Kontur reported 11,000+ employees across the country.",
+          "excerpt": "11 000+\n\nСотрудников   \nпо всей стране",
+          "source_url": "https://kontur.ru/career",
+          "source_title": "Работа у нас — Контур"
+        }
+      ],
+      "website_owner": "СКБ Контур",
+      "website_matches": true,
+      "website_note": "The results identify kontur.ru as СКБ Контур’s official site and describe its business-services ecosystem.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "Current revenue, pricing model, and detailed customer or market breakdown are not established in the results.",
+      "dropped_facts": 0,
+      "dropped": []
+    },
+    "strategy": {
+      "observation": "Kontur launched legally binding electronic document exchange between Russia and Uzbekistan, enabling exchanges with Uzbek partners.",
+      "fact_ids": [
+        6
+      ],
+      "offer_link": "AI-based request parsing could identify and route support requests about setting up or using this new cross-border exchange, helping the support team handle those requests consistently.",
+      "hypotheses": [
+        "The launch may generate new or less familiar support questions about setup and cross-border workflows.",
+        "The support team may benefit from automatically classifying and routing these requests."
+      ],
+      "angle": "Kontur’s launch of legally binding document exchange between Russia and Uzbekistan may bring a new category of setup and workflow questions to support.",
+      "offer_fit": "good",
+      "fit_reason": "A specific product expansion creates a plausible need to recognize and route related support requests, which directly matches the offer; the facts do not confirm the volume of those requests."
+    },
+    "draft": {
+      "subject": "Обращения по обмену с Узбекистаном",
+      "body": "Запуск юридически значимого обмена электронными документами между Россией и Узбекистаном может добавить в поддержку вопросы по настройке и трансграничным сценариям.\n\nЯ автоматизирую разбор обращений с помощью ИИ: классифицирую запросы и направляю их нужной команде. Если по новому обмену появляются непривычные вопросы, такой разбор поможет обрабатывать их единообразно.\n\nЕсть ли сейчас отдельная категория обращений по настройке обмена с Узбекистаном, которую имеет смысл классифицировать автоматически?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Обращения по обмену с Узбекистаном",
+          "body": "Запуск юридически значимого обмена электронными документами между Россией и Узбекистаном может добавить в поддержку вопросы по настройке и трансграничным сценариям.\n\nЯ автоматизирую разбор обращений с помощью ИИ: классифицирую запросы и направляю их нужной команде. Если по новому обмену появляются непривычные вопросы, такой разбор поможет обрабатывать их единообразно.\n\nЕсть ли сейчас отдельная категория обращений по настройке обмена с Узбекистаном, которую имеет смысл классифицировать автоматически?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@2",
+      "strategy": "strategy@2",
+      "copywriter": "copywriter@2",
+      "review": "review@2"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-6-luna",
+        "prompt_version": "research@2",
+        "duration_ms": 7359,
+        "usage": {
+          "input_tokens": 6524,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 6521,
+          "output_tokens": 833,
+          "reasoning_tokens": 198
+        },
+        "cost_usd": 0.001231925,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-6-luna",
+        "prompt_version": "strategy@2",
+        "duration_ms": 7280,
+        "usage": {
+          "input_tokens": 761,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 638,
+          "reasoning_tokens": 433
+        },
+        "cost_usd": 0.0003951,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-6-luna",
+        "prompt_version": "copywriter@2",
+        "duration_ms": 5308,
+        "usage": {
+          "input_tokens": 796,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 649,
+          "reasoning_tokens": 495
+        },
+        "cost_usd": 0.0004041,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-6-luna",
+        "prompt_version": "review@2",
+        "duration_ms": 2304,
+        "usage": {
+          "input_tokens": 796,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 151,
+          "reasoning_tokens": 131
+        },
+        "cost_usd": 0.00015510000000000003,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Контур\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Контур\" kontur.ru",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Контур\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 22264
+  }
+}

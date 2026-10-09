@@ -1,0 +1,245 @@
+{
+  "case_id": "ru-kontur",
+  "config": "sol",
+  "models": "Research gpt-6.1-sol/low, Strategy gpt-6.1-sol/medium, Writing gpt-6.1-sol/medium, Review gpt-6.1-sol/low",
+  "repeat": 2,
+  "snapshot_recorded_at": "2026-10-09T12:07:15+00:00",
+  "checks": {
+    "label": "draft",
+    "outcome_ok": true,
+    "facts": 8,
+    "dropped_facts": 0,
+    "attempts": 1,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 76,
+    "subject_words": 6,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "c7d79fadeab7455d9447867680e6d92a",
+    "brief": {
+      "company": "Контур",
+      "website": "kontur.ru",
+      "offer": "Автоматизация разбора обращений в поддержку с помощью ИИ",
+      "recipient": "Руководитель службы поддержки",
+      "language": "Russian",
+      "tone": "Direct"
+    },
+    "status": "ready",
+    "reason": null,
+    "message": "The draft passed review.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "Kontur develops a business software ecosystem whose core areas include electronic document exchange, accounting, electronic signatures and online cash registers.",
+          "excerpt": "Ключевые направления бизнеса — ЭДО, бухгалтерия, электронная подпись и онлайн-кассы.",
+          "source_url": "https://kontur.ru/press/news/company/2022/3/8230",
+          "source_title": "Гендиректором СКБ Контур назначен Михаил Сродных — СКБ Контур"
+        },
+        {
+          "id": 2,
+          "claim": "Kontur and Beeline signed a strategic cooperation agreement at the 2025 St. Petersburg International Economic Forum.",
+          "excerpt": "Билайн и разработчик цифровых сервисов для бизнеса СКБ Контур на Петербургском международном экономическом форуме (ПМЭФ-2025) заключили стратегическое соглашение о сотрудничестве.",
+          "source_url": "https://kontur.ru/press/news/79427-bilajn_i_kontur_pomogut_rossijskomu_biznesu",
+          "source_title": "Билайн и Контур помогут российскому бизнесу автоматизироваться — СКБ Контур"
+        },
+        {
+          "id": 3,
+          "claim": "The Beeline partnership includes developing Kontur's business ecosystem, particularly its Kontur.Tolk video conferencing service.",
+          "excerpt": "Соглашение затронет в том числе развитие экосистемы для бизнеса Контур — в частности сервиса видеоконференций Контур.Толк.",
+          "source_url": "https://kontur.ru/press/news/79427-bilajn_i_kontur_pomogut_rossijskomu_biznesu",
+          "source_title": "Билайн и Контур помогут российскому бизнесу автоматизироваться — СКБ Контур"
+        },
+        {
+          "id": 4,
+          "claim": "Kontur launched cross-border electronic document exchange enabling Russian companies to exchange legally binding documents with Uzbek partners.",
+          "excerpt": "SKB Kontur has launched cross-border electronic document exchange, allowing Russian companies to exchange legally binding e-documents with Uzbek partners.",
+          "source_url": "https://www.uzdaily.uz/en/skb-kontur-launches-e-document-exchange-between-russia-uzbekistan",
+          "source_title": "SKB Kontur Launches E-Document Exchange Between Russia, Uzbekistan"
+        },
+        {
+          "id": 5,
+          "claim": "Dmitry Mramorov was announced as Kontur's returning CEO effective April 19, 2026, replacing Mikhail Srodnykh.",
+          "excerpt": "С 19 апреля 2026 года компанию вновь возглавит Дмитрий Мраморов, который руководил ею с 2009 по 2019 год. На этом посту он сменит Михаила Сродных, занимавшего кресло с 2022 года.",
+          "source_url": "https://ura.news/news/1053086533",
+          "source_title": "Дмитрий Мраморов вновь возглавит компанию СКБ Контур с 19 апреля 2026 года"
+        },
+        {
+          "id": 6,
+          "claim": "Kontur's careers page states that one in three businesses in Russia uses its ecosystem.",
+          "excerpt": "Контур — экосистема, которой пользуется каждый третий бизнес в России.",
+          "source_url": "https://kontur.ru/career",
+          "source_title": "Работа у нас — Контур"
+        },
+        {
+          "id": 7,
+          "claim": "Kontur lists more than 70 products in its business ecosystem.",
+          "excerpt": "### 70+\n\nПродуктов в экосистеме для бизнеса",
+          "source_url": "https://kontur.ru/career",
+          "source_title": "Работа у нас — Контур"
+        },
+        {
+          "id": 8,
+          "claim": "Kontur lists more than 11,000 employees across the country.",
+          "excerpt": "### 11 000+\n\nСотрудников   \nпо всей стране",
+          "source_url": "https://kontur.ru/career",
+          "source_title": "Работа у нас — Контур"
+        }
+      ],
+      "website_owner": "СКБ Контур",
+      "website_matches": true,
+      "website_note": "The kontur.ru homepage presents Kontur's business ecosystem, and its careers page identifies СКБ Контур in the copyright notice.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 0,
+      "dropped": []
+    },
+    "strategy": {
+      "observation": "Контур запустил трансграничный электронный документооборот, позволяющий российским компаниям обмениваться юридически значимыми документами с партнёрами из Узбекистана.",
+      "fact_ids": [
+        4
+      ],
+      "offer_link": "Если запуск добавил новые типы обращений, ИИ мог бы автоматически определять их тему и этап документооборота, выделять вопросы по обмену с Узбекистаном и направлять их нужным специалистам. Для руководителя поддержки это потенциальный способ сократить ручной разбор без автоматизации самих консультаций.",
+      "hypotheses": [
+        "Возможно, новый сценарий обмена вызывает вопросы о подключении, подписании и юридической значимости документов.",
+        "Предполагаем, что часть таких обращений требует отдельной классификации и передачи профильным специалистам.",
+        "Объём этих обращений может быть достаточным для автоматизации; факты не подтверждают ни их количество, ни нагрузку на поддержку."
+      ],
+      "angle": "После запуска ЭДО с Узбекистаном есть ли смысл автоматически выделять обращения по этому направлению и направлять их профильным специалистам с помощью ИИ?",
+      "offer_fit": "good",
+      "fit_reason": "Автоматизация разбора обращений напрямую связана с зоной ответственности получателя, а запуск нового сценария ЭДО даёт конкретную тему для разговора; экономический эффект зависит от объёма обращений и текущего процесса их обработки."
+    },
+    "draft": {
+      "subject": "Разбор обращений по ЭДО с Узбекистаном",
+      "body": "После запуска ЭДО с Узбекистаном можно попробовать автоматически выделять обращения по этому направлению и передавать их профильным специалистам.\n\nЕсли появились новые вопросы о подключении или подписании документов, их ручной разбор может занимать дополнительное время.\n\nЯ занимаюсь автоматизацией разбора обращений в поддержку с помощью ИИ: определением темы, этапа документооборота и маршрутизацией. Здесь задача — сократить ручную сортировку, оставив сами консультации специалистам.\n\nЕсть ли среди обращений по ЭДО с Узбекистаном одна тема, которую вы хотели бы выделять автоматически?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Разбор обращений по ЭДО с Узбекистаном",
+          "body": "После запуска ЭДО с Узбекистаном можно попробовать автоматически выделять обращения по этому направлению и передавать их профильным специалистам.\n\nЕсли появились новые вопросы о подключении или подписании документов, их ручной разбор может занимать дополнительное время.\n\nЯ занимаюсь автоматизацией разбора обращений в поддержку с помощью ИИ: определением темы, этапа документооборота и маршрутизацией. Здесь задача — сократить ручную сортировку, оставив сами консультации специалистам.\n\nЕсть ли среди обращений по ЭДО с Узбекистаном одна тема, которую вы хотели бы выделять автоматически?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@2",
+      "strategy": "strategy@2",
+      "copywriter": "copywriter@2",
+      "review": "review@2"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-6.1-sol",
+        "prompt_version": "research@2",
+        "duration_ms": 11847,
+        "usage": {
+          "input_tokens": 6524,
+          "cached_input_tokens": 6521,
+          "cache_write_tokens": 0,
+          "output_tokens": 679,
+          "reasoning_tokens": 0
+        },
+        "cost_usd": 0.0074481,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-6.1-sol",
+        "prompt_version": "strategy@2",
+        "duration_ms": 11276,
+        "usage": {
+          "input_tokens": 818,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 438,
+          "reasoning_tokens": 101
+        },
+        "cost_usd": 0.006016,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-6.1-sol",
+        "prompt_version": "copywriter@2",
+        "duration_ms": 7437,
+        "usage": {
+          "input_tokens": 965,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 334,
+          "reasoning_tokens": 164
+        },
+        "cost_usd": 0.00527,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-6.1-sol",
+        "prompt_version": "review@2",
+        "duration_ms": 1857,
+        "usage": {
+          "input_tokens": 867,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 14,
+          "reasoning_tokens": 0
+        },
+        "cost_usd": 0.001874,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Контур\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Контур\" kontur.ru",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Контур\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 32430
+  }
+}

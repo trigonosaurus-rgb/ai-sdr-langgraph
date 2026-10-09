@@ -1,0 +1,245 @@
+{
+  "case_id": "duolingo",
+  "config": "sol",
+  "models": "Research gpt-6.1-sol/low, Strategy gpt-6.1-sol/medium, Writing gpt-6.1-sol/medium, Review gpt-6.1-sol/low",
+  "repeat": 2,
+  "snapshot_recorded_at": "2026-10-09T12:05:18+00:00",
+  "checks": {
+    "label": "draft",
+    "outcome_ok": true,
+    "facts": 8,
+    "dropped_facts": 0,
+    "attempts": 1,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 71,
+    "subject_words": 5,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "724224cf13244775a7b5b7974595e4bf",
+    "brief": {
+      "company": "Duolingo",
+      "website": "duolingo.com",
+      "offer": "Voice actors and audio production for language-learning content",
+      "recipient": "Director of Learning Content",
+      "language": "English",
+      "tone": "Direct"
+    },
+    "status": "ready",
+    "reason": null,
+    "message": "The draft passed review.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "Duolingo offers language learning through iPhone and Android apps.",
+          "excerpt": "Learn anytime, anywhere\n\nMake your breaks and commutes more productive with our iPhone and Android apps.",
+          "source_url": "https://www.duolingo.com/super",
+          "source_title": "Learn a language for free"
+        },
+        {
+          "id": 2,
+          "claim": "In its Q2 report on August 5, 2026, Duolingo reported 58.7 million daily active users, up 23%, and 12.7 million paid subscribers, up 17%.",
+          "excerpt": "In the Q2 report on August 5, 2026, daily active users (DAU) grew 23% to 58.7 million. Alongside this acceleration, CEO Luis von Ahn said the DAU growth is likely to remain above 20% during the rest of the year. Paid subscribers rose 17% to 12.7 million.",
+          "source_url": "https://finance.yahoo.com/markets/stocks/articles/market-called-duolingo-ai-casualty-022054320.html",
+          "source_title": "The Market Called Duolingo an AI Casualty. Its Users Just Said Otherwise"
+        },
+        {
+          "id": 3,
+          "claim": "Duolingo runs more than 1,000 A/B tests per quarter to improve product quality.",
+          "excerpt": "We obsess over product quality, running 1,000+ A/B tests per quarter",
+          "source_url": "http://investors.duolingo.com/company-strategy-overview-0",
+          "source_title": "Company Strategy Overview - Duolingo, Inc."
+        },
+        {
+          "id": 4,
+          "claim": "Duolingo uses a freemium model, keeping learning free while monetizing a paid experience.",
+          "excerpt": "Duolingo started as a free product, and we remain committed to offering free learning for all while monetizing through a valuable paid experience.",
+          "source_url": "http://investors.duolingo.com/company-strategy-overview-0",
+          "source_title": "Company Strategy Overview - Duolingo, Inc."
+        },
+        {
+          "id": 5,
+          "claim": "In 2026, nine of Duolingo's most popular language courses reached B2 level.",
+          "excerpt": "In 2026, we reached a major milestone: nine of our most popular language courses now extend to B2",
+          "source_url": "http://investors.duolingo.com/company-strategy-overview-0",
+          "source_title": "Company Strategy Overview - Duolingo, Inc."
+        },
+        {
+          "id": 6,
+          "claim": "Duolingo identifies English learners as a growth opportunity: they represent roughly 80% of language learners worldwide but only 46% of its daily active users.",
+          "excerpt": "We see enormous opportunity with English Learners, who represent roughly 80% of language learners worldwide but only 46% of our DAUs.",
+          "source_url": "https://blog.duolingo.com/duolingo-company-strategy",
+          "source_title": "Duolingo Company Strategy: How Duolingo Builds Lasting Success"
+        },
+        {
+          "id": 7,
+          "claim": "Duolingo says almost all of its growth investment goes into product R&D, with marketing used to strategically accelerate growth.",
+          "excerpt": "In line with our core beliefs, our investment in growth is almost all in product R&D, with marketing used to strategically accelerate growth.",
+          "source_url": "https://blog.duolingo.com/duolingo-company-strategy",
+          "source_title": "Duolingo Company Strategy: How Duolingo Builds Lasting Success"
+        },
+        {
+          "id": 8,
+          "claim": "Using generative AI, Duolingo developed 148 new language courses in a year, as announced in April 2025; its first 100 courses took 12 years.",
+          "excerpt": "Using generative AI, the company has drastically scaled up production. In April 2025, von Ahn announced that the company had developed 148 new language courses in a year. Its first 100 courses took 12 years to develop.",
+          "source_url": "https://www.fool.com/investing/2026/06/01/duolingo-is-one-of-the-most-interesting-ai-plays",
+          "source_title": "Duolingo Is One of the Most Interesting AI Plays Nobody's Talking About | The Motley Fool"
+        }
+      ],
+      "website_owner": "Duolingo, Inc.",
+      "website_matches": true,
+      "website_note": "The results identify duolingo.com and its investor and blog subdomains as Duolingo's official sites.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 0,
+      "dropped": []
+    },
+    "strategy": {
+      "observation": "In 2026, nine of Duolingo’s most popular language courses reached B2 level.",
+      "fact_ids": [
+        5
+      ],
+      "offer_link": "Voice actors and audio production could support B2 listening material with natural-paced dialogue, varied accents, and nuanced delivery. For a Director of Learning Content, the concrete use would be commissioning recordings for selected advanced lessons where human performance serves the learning objective.",
+      "hypotheses": [
+        "Duolingo may be adding or refining listening exercises within these B2 courses.",
+        "Some advanced exercises may benefit from human-performed conversational nuance or accent variation.",
+        "The Director of Learning Content may influence audio requirements and external production decisions."
+      ],
+      "angle": "With nine of Duolingo’s most popular courses now reaching B2, are there advanced listening exercises where you’d consider human-recorded dialogue for natural pacing and conversational nuance?",
+      "offer_fit": "good",
+      "fit_reason": "The B2 milestone gives the offer a specific learning-content application aligned with the recipient’s role, although the facts do not establish a need for outside voice talent or audio production."
+    },
+    "draft": {
+      "subject": "Human-recorded dialogue for B2 lessons",
+      "body": "With nine of your most popular courses now reaching B2, are there listening exercises where human-recorded dialogue could help learners follow natural conversation?\n\nWe provide voice actors and audio production for language-learning content. If you’re refining advanced listening lessons, we could record selected dialogues with natural pacing, varied accents, and nuanced delivery where those choices serve the learning objective.\n\nIs there one B2 listening exercise you’d consider for a sample recording?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Human-recorded dialogue for B2 lessons",
+          "body": "With nine of your most popular courses now reaching B2, are there listening exercises where human-recorded dialogue could help learners follow natural conversation?\n\nWe provide voice actors and audio production for language-learning content. If you’re refining advanced listening lessons, we could record selected dialogues with natural pacing, varied accents, and nuanced delivery where those choices serve the learning objective.\n\nIs there one B2 listening exercise you’d consider for a sample recording?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@2",
+      "strategy": "strategy@2",
+      "copywriter": "copywriter@2",
+      "review": "review@2"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-6.1-sol",
+        "prompt_version": "research@2",
+        "duration_ms": 10467,
+        "usage": {
+          "input_tokens": 4865,
+          "cached_input_tokens": 4862,
+          "cache_write_tokens": 0,
+          "output_tokens": 621,
+          "reasoning_tokens": 0
+        },
+        "cost_usd": 0.0067022,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-6.1-sol",
+        "prompt_version": "strategy@2",
+        "duration_ms": 7802,
+        "usage": {
+          "input_tokens": 833,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 246,
+          "reasoning_tokens": 0
+        },
+        "cost_usd": 0.004126,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-6.1-sol",
+        "prompt_version": "copywriter@2",
+        "duration_ms": 4798,
+        "usage": {
+          "input_tokens": 911,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 111,
+          "reasoning_tokens": 0
+        },
+        "cost_usd": 0.002932,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-6.1-sol",
+        "prompt_version": "review@2",
+        "duration_ms": 1794,
+        "usage": {
+          "input_tokens": 831,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 14,
+          "reasoning_tokens": 0
+        },
+        "cost_usd": 0.001802,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Duolingo\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Duolingo\" duolingo.com",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Duolingo\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 24874
+  }
+}

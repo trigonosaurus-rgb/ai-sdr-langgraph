@@ -1,0 +1,245 @@
+{
+  "case_id": "ru-skyeng",
+  "config": "sol",
+  "models": "Research gpt-6.1-sol/low, Strategy gpt-6.1-sol/medium, Writing gpt-6.1-sol/medium, Review gpt-6.1-sol/low",
+  "repeat": 2,
+  "snapshot_recorded_at": "2026-10-09T12:07:24+00:00",
+  "checks": {
+    "label": "draft",
+    "outcome_ok": true,
+    "facts": 8,
+    "dropped_facts": 0,
+    "attempts": 1,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 75,
+    "subject_words": 5,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "a6735b0120e34b249f43cbcff2e77480",
+    "brief": {
+      "company": "Skyeng",
+      "website": "skyeng.ru",
+      "offer": "Озвучка учебных материалов профессиональными дикторами",
+      "recipient": "Руководитель контента",
+      "language": "Russian",
+      "tone": "Warm"
+    },
+    "status": "ready",
+    "reason": null,
+    "message": "The draft passed review.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "Skyeng is an online language school offering one-to-one tutoring.",
+          "excerpt": "В онлайн-школе Skyeng можно учить языки с репетитором один на один",
+          "source_url": "https://play.google.com/store/apps/details?id=skyeng.words.prod&hl=ru",
+          "source_title": "Skyeng: английский, репетиторы"
+        },
+        {
+          "id": 2,
+          "claim": "Skyeng uses AI to help teachers create lesson materials tailored to each student's interests.",
+          "excerpt": "Our system helps you create materials tailored to each student’s interests. Want to build a lesson around the Oscars, crypto, or esports?   \nJust type in the topic — the platform will do the rest!",
+          "source_url": "https://job.skyeng.ru/talks",
+          "source_title": "Remote work as an English teacher in Skyeng Talks"
+        },
+        {
+          "id": 3,
+          "claim": "Skyeng's platform is built on more than 200 microservices.",
+          "excerpt": "200+   \nмикросервисов в основе платформы",
+          "source_url": "https://job.skyeng.ru/products",
+          "source_title": "Products"
+        },
+        {
+          "id": 4,
+          "claim": "Skyeng's Flexible tariff includes group lessons, conversation clubs and unlimited practice tools, starting at RUB 2,490 per month.",
+          "excerpt": "Тариф «Гибкий»: групповые уроки, разговорные клубы и безлимитные тренажёры — от 2490 ₽/мес.",
+          "source_url": "https://www.youtube.com/channel/UCcBbiCpR-eBwL5l6H63lgfg",
+          "source_title": "Skyeng – онлайн-школа иностранных языков"
+        },
+        {
+          "id": 5,
+          "claim": "Skyeng uses analytical matching mechanisms to help students find a suitable teacher on their first attempt.",
+          "excerpt": "Аналитические механизмы подбора, помогающие ученику найти «своего» преподавателя с первого раза",
+          "source_url": "https://job.skyeng.ru/products",
+          "source_title": "Products"
+        },
+        {
+          "id": 6,
+          "claim": "Skyeng operates high-load systems for billing, operations and business-process management.",
+          "excerpt": "Высоконагруженные системы для биллинга, операционки и управления бизнес-процессами",
+          "source_url": "https://job.skyeng.ru/products",
+          "source_title": "Products"
+        },
+        {
+          "id": 7,
+          "claim": "Skyeng offers 50-minute individual lessons and group conversation clubs, with 15-minute native-speaker conversation sessions on some English courses.",
+          "excerpt": "50 минут длятся индивидуальные занятия с преподавателем и в групповых разговорных клубах.   \nНа некоторых курсах английского есть 15‑минутные разговорные встречи с преподавателями — носителями языка.",
+          "source_url": "https://skyeng.ru",
+          "source_title": "Школа иностранных языков онлайн - изучение иностранных языков"
+        },
+        {
+          "id": 8,
+          "claim": "Skyeng Talks recruits remote English teachers with at least two years of teaching experience.",
+          "excerpt": "Our perfect teacher:\n\nSpeaks English fluently and with clear pronunciation\n\nHas at least 2 years of teaching experience",
+          "source_url": "https://job.skyeng.ru/talks",
+          "source_title": "Remote work as an English teacher in Skyeng Talks"
+        }
+      ],
+      "website_owner": "Skyeng",
+      "website_matches": true,
+      "website_note": "The skyeng.ru homepage identifies its learning services as Skyeng, and Skyeng-branded recruitment pages use the same domain.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 0,
+      "dropped": []
+    },
+    "strategy": {
+      "observation": "В тариф «Гибкий» Skyeng стоимостью от 2 490 ₽ в месяц входят инструменты для неограниченной практики.",
+      "fact_ids": [
+        4
+      ],
+      "offer_link": "Если среди инструментов практики есть или планируются упражнения на аудирование, профессиональные дикторы могут озвучить диалоги и учебные тексты для многократного использования. Руководителю контента это предложение может быть полезно для подготовки аудиоматериалов с заданными темпом речи, произношением и подачей.",
+      "hypotheses": [
+        "В инструментах неограниченной практики могут использоваться или планироваться задания с аудио.",
+        "Для части таких заданий может быть важна управляемая дикторская подача, а не только синтез речи.",
+        "Руководитель контента может участвовать в выборе подрядчиков для озвучки учебных материалов."
+      ],
+      "angle": "В тарифе «Гибкий» Skyeng есть неограниченная практика — рассматриваете ли вы профессиональную дикторскую озвучку для упражнений на аудирование в этом формате?",
+      "offer_fit": "good",
+      "fit_reason": "Озвучка учебных материалов напрямую применима в языковом обучении, а инструменты неограниченной практики дают конкретный возможный сценарий её использования. При этом факты не подтверждают потребность Skyeng во внешних дикторах или наличие аудиозаданий в этом тарифе."
+    },
+    "draft": {
+      "subject": "Озвучка для упражнений на аудирование",
+      "body": "Здравствуйте!\n\nОбратил внимание на неограниченную практику в тарифе «Гибкий». Если в этом формате есть или планируются упражнения на аудирование, возможно, для части диалогов и текстов вам нужна озвучка с определённым темпом речи и произношением.\n\nПредлагаю озвучку учебных материалов профессиональными дикторами. Для таких упражнений можно задать темп и подачу под учебную задачу, чтобы ученики могли возвращаться к записи и тренировать понимание на слух.\n\nПланируете ли вы в ближайшее время добавлять диалоги для аудирования в неограниченную практику?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Озвучка для упражнений на аудирование",
+          "body": "Здравствуйте!\n\nОбратил внимание на неограниченную практику в тарифе «Гибкий». Если в этом формате есть или планируются упражнения на аудирование, возможно, для части диалогов и текстов вам нужна озвучка с определённым темпом речи и произношением.\n\nПредлагаю озвучку учебных материалов профессиональными дикторами. Для таких упражнений можно задать темп и подачу под учебную задачу, чтобы ученики могли возвращаться к записи и тренировать понимание на слух.\n\nПланируете ли вы в ближайшее время добавлять диалоги для аудирования в неограниченную практику?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@2",
+      "strategy": "strategy@2",
+      "copywriter": "copywriter@2",
+      "review": "review@2"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-6.1-sol",
+        "prompt_version": "research@2",
+        "duration_ms": 11002,
+        "usage": {
+          "input_tokens": 4048,
+          "cached_input_tokens": 4045,
+          "cache_write_tokens": 0,
+          "output_tokens": 636,
+          "reasoning_tokens": 0
+        },
+        "cost_usd": 0.0067705,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-6.1-sol",
+        "prompt_version": "strategy@2",
+        "duration_ms": 12131,
+        "usage": {
+          "input_tokens": 731,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 424,
+          "reasoning_tokens": 81
+        },
+        "cost_usd": 0.005702,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-6.1-sol",
+        "prompt_version": "copywriter@2",
+        "duration_ms": 7644,
+        "usage": {
+          "input_tokens": 869,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 275,
+          "reasoning_tokens": 102
+        },
+        "cost_usd": 0.004488,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-6.1-sol",
+        "prompt_version": "review@2",
+        "duration_ms": 2148,
+        "usage": {
+          "input_tokens": 781,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 14,
+          "reasoning_tokens": 0
+        },
+        "cost_usd": 0.001702,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Skyeng\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Skyeng\" skyeng.ru",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Skyeng\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 32941
+  }
+}

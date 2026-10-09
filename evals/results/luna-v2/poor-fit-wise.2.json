@@ -1,0 +1,232 @@
+{
+  "case_id": "poor-fit-wise",
+  "config": "luna",
+  "models": "Research gpt-6-luna/low, Strategy gpt-6-luna/medium, Writing gpt-6-luna/medium, Review gpt-6-luna/low",
+  "repeat": 2,
+  "snapshot_recorded_at": "2026-10-09T12:07:09+00:00",
+  "checks": {
+    "label": "poor_fit",
+    "outcome_ok": true,
+    "facts": 6,
+    "dropped_facts": 0,
+    "attempts": 1,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 58,
+    "subject_words": 3,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "bb6c772c05cd469098ae4af39674c0d4",
+    "brief": {
+      "company": "Wise",
+      "website": "wise.com",
+      "offer": "Forklift maintenance contracts for warehouses",
+      "recipient": "Head of Product",
+      "language": "English",
+      "tone": "Direct"
+    },
+    "status": "needs_attention",
+    "reason": null,
+    "message": "The draft passed review, but the offer looks like a poor fit.",
+    "issues": [
+      "The offer may not fit this company: The reported infrastructure investment is not specified as physical, and the facts do not indicate that Wise operates warehouses or uses forklifts. A forklift maintenance offer therefore has no established use for the Head of Product."
+    ],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "Wise provides a personal Wise Account, Wise Business for small and medium-sized businesses, and Wise Platform for banks and other enterprises.",
+          "excerpt": "We serve each of these customer groups through our three products: the Wise Account for personal customers, Wise Business for small and medium-sized businesses and Wise Platform for banks and other enterprises.",
+          "source_url": "https://wise.com/imaginary-v2/images/ad736416f90791dbb49c7e59f1f45d8d-WiseFY2025AnnualReportAccounts.pdf",
+          "source_title": "Wise – 2025 Annual Report and Accounts"
+        },
+        {
+          "id": 2,
+          "claim": "Over 15.6 million customers used Wise for cross-border transactions during FY2025.",
+          "excerpt": "During FY2025 over 15.6 million customers used Wise for cross-border transactions",
+          "source_url": "https://wise.com/imaginary-v2/images/ad736416f90791dbb49c7e59f1f45d8d-WiseFY2025AnnualReportAccounts.pdf",
+          "source_title": "Wise – 2025 Annual Report and Accounts"
+        },
+        {
+          "id": 3,
+          "claim": "Wise says it reduced prices and invested in infrastructure during FY2025.",
+          "excerpt": "We continued investing in our customers by reducing our prices and building the infrastructure they need to move and manage money around the world",
+          "source_url": "https://wise.com/imaginary-v2/images/ad736416f90791dbb49c7e59f1f45d8d-WiseFY2025AnnualReportAccounts.pdf",
+          "source_title": "Wise – 2025 Annual Report and Accounts"
+        },
+        {
+          "id": 4,
+          "claim": "Wise Account and Wise Business customers can hold more than 40 currencies, move money between countries, and spend abroad.",
+          "excerpt": "With Wise Account and Wise Business, people and businesses can hold 40+ currencies, move money between countries and spend money abroad.",
+          "source_url": "https://newsroom.wise.com/en-NAM/about",
+          "source_title": "About Wise | Wise Newsroom"
+        },
+        {
+          "id": 5,
+          "claim": "Large companies and banks use Wise technology.",
+          "excerpt": "Large companies and banks use Wise technology too, an entirely new network for the world's money.",
+          "source_url": "https://newsroom.wise.com/en-NAM/about",
+          "source_title": "About Wise | Wise Newsroom"
+        },
+        {
+          "id": 6,
+          "claim": "Wise launched a multi-currency Interest feature in Canada for people and businesses.",
+          "excerpt": "Wise has announced the launch of its new Interest feature for people and businesses in Canada.",
+          "source_url": "https://newsroom.wise.com/en-NAM/about",
+          "source_title": "About Wise | Wise Newsroom"
+        }
+      ],
+      "website_owner": "Wise",
+      "website_matches": true,
+      "website_note": "The search results identify wise.com as Wise’s official website and show Wise products and company information on it.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 0,
+      "dropped": []
+    },
+    "strategy": {
+      "observation": "Wise says it invested in infrastructure during FY2025.",
+      "fact_ids": [
+        3
+      ],
+      "offer_link": "If that investment included physical warehouse operations, forklift maintenance contracts could help keep warehouse equipment available. The facts do not establish that Wise operates warehouses, so this is only a tenuous connection.",
+      "hypotheses": [
+        "Wise may operate warehouses or use warehouse space that relies on forklifts; this is not confirmed by the facts.",
+        "Wise may be considering maintenance support for any such equipment; this is not confirmed by the facts."
+      ],
+      "angle": "I saw that Wise reported investing in infrastructure during FY2025.",
+      "offer_fit": "poor",
+      "fit_reason": "The reported infrastructure investment is not specified as physical, and the facts do not indicate that Wise operates warehouses or uses forklifts. A forklift maintenance offer therefore has no established use for the Head of Product."
+    },
+    "draft": {
+      "subject": "Infrastructure and forklifts",
+      "body": "I saw Wise reported investing in infrastructure during FY2025. If that includes warehouse space with forklifts, I provide maintenance contracts to help keep that equipment available.\n\nI don’t know whether Wise operates or uses warehouses, so this may not be relevant to your product remit. Does Wise have any warehouse operations where forklift maintenance contracts would be relevant?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Infrastructure and forklifts",
+          "body": "I saw Wise reported investing in infrastructure during FY2025. If that includes warehouse space with forklifts, I provide maintenance contracts to help keep that equipment available.\n\nI don’t know whether Wise operates or uses warehouses, so this may not be relevant to your product remit. Does Wise have any warehouse operations where forklift maintenance contracts would be relevant?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@2",
+      "strategy": "strategy@2",
+      "copywriter": "copywriter@2",
+      "review": "review@2"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-6-luna",
+        "prompt_version": "research@2",
+        "duration_ms": 3550,
+        "usage": {
+          "input_tokens": 4654,
+          "cached_input_tokens": 4651,
+          "cache_write_tokens": 0,
+          "output_tokens": 446,
+          "reasoning_tokens": 0
+        },
+        "cost_usd": 0.00026981,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-6-luna",
+        "prompt_version": "strategy@2",
+        "duration_ms": 6756,
+        "usage": {
+          "input_tokens": 655,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 665,
+          "reasoning_tokens": 483
+        },
+        "cost_usd": 0.000398,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-6-luna",
+        "prompt_version": "copywriter@2",
+        "duration_ms": 4321,
+        "usage": {
+          "input_tokens": 687,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 325,
+          "reasoning_tokens": 232
+        },
+        "cost_usd": 0.00023119999999999998,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-6-luna",
+        "prompt_version": "review@2",
+        "duration_ms": 2944,
+        "usage": {
+          "input_tokens": 631,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 139,
+          "reasoning_tokens": 119
+        },
+        "cost_usd": 0.0001326,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Wise\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Wise\" wise.com",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Wise\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 17588
+  }
+}

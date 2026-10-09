@@ -1,0 +1,245 @@
+{
+  "case_id": "stripe",
+  "config": "sol",
+  "models": "Research gpt-6.1-sol/low, Strategy gpt-6.1-sol/medium, Writing gpt-6.1-sol/medium, Review gpt-6.1-sol/low",
+  "repeat": 2,
+  "snapshot_recorded_at": "2026-10-09T12:05:11+00:00",
+  "checks": {
+    "label": "draft",
+    "outcome_ok": true,
+    "facts": 8,
+    "dropped_facts": 0,
+    "attempts": 1,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 75,
+    "subject_words": 5,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "7c341542d00942c2853cb2a1fcba625e",
+    "brief": {
+      "company": "Stripe",
+      "website": "stripe.com",
+      "offer": "Localizing developer documentation into Japanese, German and Brazilian Portuguese",
+      "recipient": "Head of Documentation",
+      "language": "English",
+      "tone": "Warm"
+    },
+    "status": "ready",
+    "reason": null,
+    "message": "The draft passed review.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "Stripe provides payment services accepting credit cards, digital wallets and other payment methods.",
+          "excerpt": "Stripe is a payment service provider that accepts credit cards, digital wallets and many other payment methods.",
+          "source_url": "https://www.nerdwallet.com/business/software/learn/what-is-stripe",
+          "source_title": "What Is Stripe, and How Does It Work to Accept Payments? - NerdWallet"
+        },
+        {
+          "id": 2,
+          "claim": "Stripe is partnering with FedEx to use logistics and financial infrastructure data to create financing options for small businesses.",
+          "excerpt": "Stripe is partnering with global shipping giant FedEx to combine their data insights from logistics and financial infrastructure to create financing options for small businesses, the companies said Tuesday in a joint press release.",
+          "source_url": "https://www.paymentsdive.com/news/stripe-fedex-team-on-smb-lending-business-capital-logistics/832368",
+          "source_title": "Stripe, FedEx team on SMB lending"
+        },
+        {
+          "id": 3,
+          "claim": "Stripe announced an agreement to acquire Parafin, with the stated aim of expanding revenue opportunities for platforms and helping small businesses grow.",
+          "excerpt": "Excited to share that @stripe has agreed to acquire @ParafinHQ!",
+          "source_url": "https://x.com/stripe",
+          "source_title": "Stripe (@stripe) / X"
+        },
+        {
+          "id": 4,
+          "claim": "Stripe's partnership with Crypto.com lets customers pay with their crypto balance directly at checkout.",
+          "excerpt": "Crypto.com partners with Stripe to enable better crypto payments.Learn how the partnership can help you tap into a new global customer base by letting customers pay with their crypto balance directly at checkout.",
+          "source_url": "https://stripe.com",
+          "source_title": "Stripe | Financial Infrastructure to Grow Your Revenue"
+        },
+        {
+          "id": 5,
+          "claim": "Stripe offers tools to process payments outside the iOS and Android app stores.",
+          "excerpt": "Read how Stripe can help you process payments outside of the iOS and Android app stores, giving you more control and helping grow your revenue.",
+          "source_url": "https://stripe.com",
+          "source_title": "Stripe | Financial Infrastructure to Grow Your Revenue"
+        },
+        {
+          "id": 6,
+          "claim": "Stripe now supports holding, sending, spending and building with OUSD.",
+          "excerpt": "You can now hold, send, spend, and build with OUSD on Stripe.",
+          "source_url": "https://x.com/stripe",
+          "source_title": "Stripe (@stripe) / X"
+        },
+        {
+          "id": 7,
+          "claim": "Stripe supports usage-based billing, charging customers according to service consumption during a billing period.",
+          "excerpt": "Charge your customers based on how much of your service they use during the billing period.",
+          "source_url": "https://docs.stripe.com/products-prices/overview?locale=en-GB",
+          "source_title": "Overview | Stripe Documentation"
+        },
+        {
+          "id": 8,
+          "claim": "Stripe signed an agreement to become a Worldwide Partner and the Official Financial and Payments Infrastructure Partner of the Ryder Cup.",
+          "excerpt": "Stripe has signed a new agreement to become a Worldwide Partner and the Official Financial and Payments Infrastructure Partner to golf’s greatest team contest—the Ryder Cup.",
+          "source_url": "https://www.rydercup.com/news-media/stripe-becomes-a-worldwide-partner-of-the-ryder-cup",
+          "source_title": "Stripe becomes a Worldwide Partner of the Ryder Cup"
+        }
+      ],
+      "website_owner": "Stripe",
+      "website_matches": true,
+      "website_note": "The stripe.com homepage identifies Stripe and describes its payment infrastructure and partnerships, corroborated by Stripe's profile linking to stripe.com.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 0,
+      "dropped": []
+    },
+    "strategy": {
+      "observation": "Stripe now supports holding, sending, spending and building with OUSD.",
+      "fact_ids": [
+        6
+      ],
+      "offer_link": "If developers adopting Stripe's OUSD support need guidance in Japanese, German or Brazilian Portuguese, localizing the relevant developer documentation could make that functionality easier to implement. The offer gives the Head of Documentation a focused localization scope around this newly supported capability.",
+      "hypotheses": [
+        "Developers working in one or more of the offered languages may be adopting Stripe's OUSD support.",
+        "Relevant OUSD developer documentation may not yet be fully localized into these languages.",
+        "The Head of Documentation may prioritize localization when new capabilities introduce implementation guidance."
+      ],
+      "angle": "With Stripe now supporting building with OUSD, is Japanese, German or Brazilian Portuguese localization on the roadmap for the relevant developer docs?",
+      "offer_fit": "good",
+      "fit_reason": "Developer-documentation localization directly matches the recipient's remit, and newly supported OUSD functionality provides a concrete potential scope; demand for these specific languages and existing translation coverage remain unconfirmed."
+    },
+    "draft": {
+      "subject": "Localization for OUSD developer docs",
+      "body": "Hi,\n\nWith Stripe now supporting building with OUSD, I wondered whether Japanese, German or Brazilian Portuguese is on the roadmap for the relevant developer docs.\n\nI localize developer documentation into those three languages. If developers adopting OUSD need guidance in their preferred language, a focused localization effort could make the implementation steps easier to follow without expanding into the full docs library.\n\nIs there one OUSD implementation guide you’d consider a starting point for localization?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Localization for OUSD developer docs",
+          "body": "Hi,\n\nWith Stripe now supporting building with OUSD, I wondered whether Japanese, German or Brazilian Portuguese is on the roadmap for the relevant developer docs.\n\nI localize developer documentation into those three languages. If developers adopting OUSD need guidance in their preferred language, a focused localization effort could make the implementation steps easier to follow without expanding into the full docs library.\n\nIs there one OUSD implementation guide you’d consider a starting point for localization?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@2",
+      "strategy": "strategy@2",
+      "copywriter": "copywriter@2",
+      "review": "review@2"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-6.1-sol",
+        "prompt_version": "research@2",
+        "duration_ms": 9065,
+        "usage": {
+          "input_tokens": 4828,
+          "cached_input_tokens": 4825,
+          "cache_write_tokens": 0,
+          "output_tokens": 486,
+          "reasoning_tokens": 0
+        },
+        "cost_usd": 0.0053485,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-6.1-sol",
+        "prompt_version": "strategy@2",
+        "duration_ms": 12116,
+        "usage": {
+          "input_tokens": 737,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 413,
+          "reasoning_tokens": 171
+        },
+        "cost_usd": 0.005604,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-6.1-sol",
+        "prompt_version": "copywriter@2",
+        "duration_ms": 3699,
+        "usage": {
+          "input_tokens": 804,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 113,
+          "reasoning_tokens": 0
+        },
+        "cost_usd": 0.002738,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-6.1-sol",
+        "prompt_version": "review@2",
+        "duration_ms": 3267,
+        "usage": {
+          "input_tokens": 734,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 14,
+          "reasoning_tokens": 0
+        },
+        "cost_usd": 0.001608,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Stripe\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Stripe\" stripe.com",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Stripe\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 28229
+  }
+}

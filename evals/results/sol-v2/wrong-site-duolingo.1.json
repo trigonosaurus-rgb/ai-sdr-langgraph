@@ -1,0 +1,162 @@
+{
+  "case_id": "wrong-site-duolingo",
+  "config": "sol",
+  "models": "Research gpt-6.1-sol/low, Strategy gpt-6.1-sol/medium, Writing gpt-6.1-sol/medium, Review gpt-6.1-sol/low",
+  "repeat": 1,
+  "snapshot_recorded_at": "2026-10-09T12:07:08+00:00",
+  "checks": {
+    "label": "website_mismatch",
+    "outcome_ok": true,
+    "facts": 8,
+    "dropped_facts": 0,
+    "attempts": 0,
+    "has_draft": false,
+    "language_ok": null,
+    "body_words": null,
+    "subject_words": null,
+    "length_ok": null,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "a4772d630d7848eaab0389dc7d491cee",
+    "brief": {
+      "company": "Duolingo",
+      "website": "babbel.com",
+      "offer": "Voice actors and audio production for language-learning content",
+      "recipient": "Director of Learning Content",
+      "language": "English",
+      "tone": "Direct"
+    },
+    "status": "failed",
+    "reason": "website_mismatch",
+    "message": "Search results do not match babbel.com. The babbel.com pages promote Babbel and compare its offerings with Duolingo, identifying the website as Babbel's rather than Duolingo's.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "Duolingo is a language-learning app focused on daily practice through gamification and has added AI tools, including video chats.",
+          "excerpt": "Duolingo is one of the best-known language learning apps, with a focus on daily practice through gamification.",
+          "source_url": "https://www.babbel.com/speak-ai-alternatives",
+          "source_title": "Best AI Language Learning Apps: Speak AI Alternatives (2026)"
+        },
+        {
+          "id": 2,
+          "claim": "In its Q2 report on August 5, 2026, Duolingo reported 58.7 million daily active users, up 23%.",
+          "excerpt": "In the Q2 report on August 5, 2026, daily active users (DAU) grew 23% to 58.7 million.",
+          "source_url": "https://finance.yahoo.com/markets/stocks/articles/market-called-duolingo-ai-casualty-022054320.html",
+          "source_title": "The Market Called Duolingo an AI Casualty. Its Users Just Said Otherwise"
+        },
+        {
+          "id": 3,
+          "claim": "Duolingo's paid subscribers increased 17% to 12.7 million.",
+          "excerpt": "Paid subscribers rose 17% to 12.7 million.",
+          "source_url": "https://finance.yahoo.com/markets/stocks/articles/market-called-duolingo-ai-casualty-022054320.html",
+          "source_title": "The Market Called Duolingo an AI Casualty. Its Users Just Said Otherwise"
+        },
+        {
+          "id": 4,
+          "claim": "Using generative AI to scale course production, Duolingo developed 148 new language courses in a year, as announced in April 2025.",
+          "excerpt": "Using generative AI, the company has drastically scaled up production. In April 2025, von Ahn announced that the company had developed 148 new language courses in a year.",
+          "source_url": "https://www.fool.com/investing/2026/06/01/duolingo-is-one-of-the-most-interesting-ai-plays",
+          "source_title": "Duolingo Is One of the Most Interesting AI Plays Nobody's Talking About | The Motley Fool"
+        },
+        {
+          "id": 5,
+          "claim": "Duolingo management described 2026 as a strategic investment year and expects gross margin to decline as AI feature use expands.",
+          "excerpt": "Management also expects gross margin to trend down through the year as AI feature use expands",
+          "source_url": "https://finance.yahoo.com/markets/stocks/articles/duolingo-q1-earnings-beat-estimates-144800167.html",
+          "source_title": "Duolingo Q1 Earnings Beat Estimates on User Growth, Margin Gains"
+        },
+        {
+          "id": 6,
+          "claim": "Duolingo's Q1 2026 revenue increased 27% year over year to $292 million.",
+          "excerpt": "Revenues rose 27.0% year over year to $292.0 million",
+          "source_url": "https://finance.yahoo.com/markets/stocks/articles/duolingo-q1-earnings-beat-estimates-144800167.html",
+          "source_title": "Duolingo Q1 Earnings Beat Estimates on User Growth, Margin Gains"
+        },
+        {
+          "id": 7,
+          "claim": "Duolingo offers an ad-supported free tier with access to entire language courses.",
+          "excerpt": "Duolingo offers a fully free tier with access to entire language courses, supported by ads.",
+          "source_url": "https://www.babbel.com/compare-best-language-learning-apps",
+          "source_title": "The Best Language Learning Apps Of 2026"
+        },
+        {
+          "id": 8,
+          "claim": "Duolingo offers more than 40 languages, including Klingon and Hawaiian.",
+          "excerpt": "Duolingo offers over 40 languages, including pop culture conlangs (Klingon) and less common learning languages like Hawaiian.",
+          "source_url": "https://www.babbel.com/compare-best-language-learning-apps",
+          "source_title": "The Best Language Learning Apps Of 2026"
+        }
+      ],
+      "website_owner": "Babbel",
+      "website_matches": false,
+      "website_note": "The babbel.com pages promote Babbel and compare its offerings with Duolingo, identifying the website as Babbel's rather than Duolingo's.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 0,
+      "dropped": []
+    },
+    "strategy": null,
+    "draft": null,
+    "attempts": [],
+    "prompt_versions": {
+      "research": "research@2"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-6.1-sol",
+        "prompt_version": "research@2",
+        "duration_ms": 11034,
+        "usage": {
+          "input_tokens": 4624,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 4621,
+          "output_tokens": 627,
+          "reasoning_tokens": 0
+        },
+        "cost_usd": 0.0178285,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Duolingo\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Duolingo\" babbel.com",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Duolingo\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 11045
+  }
+}

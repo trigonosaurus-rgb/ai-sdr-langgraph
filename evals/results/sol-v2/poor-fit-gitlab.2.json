@@ -1,0 +1,245 @@
+{
+  "case_id": "poor-fit-gitlab",
+  "config": "sol",
+  "models": "Research gpt-6.1-sol/low, Strategy gpt-6.1-sol/medium, Writing gpt-6.1-sol/medium, Review gpt-6.1-sol/low",
+  "repeat": 2,
+  "snapshot_recorded_at": "2026-10-09T12:07:08+00:00",
+  "checks": {
+    "label": "poor_fit",
+    "outcome_ok": true,
+    "facts": 8,
+    "dropped_facts": 0,
+    "attempts": 1,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 60,
+    "subject_words": 4,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "9cc5a143475849be8297b3021c0d88f9",
+    "brief": {
+      "company": "GitLab",
+      "website": "about.gitlab.com",
+      "offer": "Wedding photography packages for couples",
+      "recipient": "CFO",
+      "language": "English",
+      "tone": "Direct"
+    },
+    "status": "needs_attention",
+    "reason": null,
+    "message": "The draft passed review, but the offer looks like a poor fit.",
+    "issues": [
+      "The offer may not fit this company: The offer serves couples planning weddings, not a software company or its CFO in a professional capacity. None of the supplied facts establishes a relevant buying need; do not send this email on the available evidence."
+    ],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "GitLab provides an intelligent orchestration platform where teams and AI agents ship secure software faster.",
+          "excerpt": "We're the company behind GitLab, the intelligent orchestration platform where teams and their AI agents ship secure software faster.",
+          "source_url": "https://about.gitlab.com/company",
+          "source_title": "About GitLab - The Intelligent Orchestration Platform"
+        },
+        {
+          "id": 2,
+          "claim": "GitLab and Capgemini signed a global alliance partnership agreement.",
+          "excerpt": "We're excited to share that GitLab and Capgemini have signed a global alliance partnership agreement.",
+          "source_url": "https://about.gitlab.com/blog/gitlab-and-capgemini-global-alliance-partnership",
+          "source_title": "GitLab and Capgemini accelerate DevSecOps transformation"
+        },
+        {
+          "id": 3,
+          "claim": "GitLab Duo Agent Platform orchestrates AI across the entire software development lifecycle.",
+          "excerpt": "GitLab Duo Agent Platform, which orchestrates AI across the entire software development lifecycle",
+          "source_url": "https://about.gitlab.com/blog/gitlab-and-capgemini-global-alliance-partnership",
+          "source_title": "GitLab and Capgemini accelerate DevSecOps transformation"
+        },
+        {
+          "id": 4,
+          "claim": "More than 100,000 organisations use GitLab to plan, build, secure, and deploy software.",
+          "excerpt": "GitLab is the trusted enterprise platform for software creation in the AI era, used by more than 100,000 organizations to plan, build, secure, and deploy software at machine scale, guided by humans.",
+          "source_url": "https://about.gitlab.com/jobs",
+          "source_title": "Join GitLab"
+        },
+        {
+          "id": 5,
+          "claim": "Carrefour and Thales use GitLab to evolve their CI/CD platforms and increase developer productivity.",
+          "excerpt": "### How Carrefour and Thales are evolving their CI/CD platforms\n\nLearn how a large retailer and an aerospace and defense company are using GitLab to evolve their CI/CD platforms to increase developer productivity.",
+          "source_url": "https://about.gitlab.com/blog/tags/customers",
+          "source_title": "Customers articles - GitLab Blog"
+        },
+        {
+          "id": 6,
+          "claim": "GitLab announced a restructuring process that includes a voluntary separation window.",
+          "excerpt": "This morning we shared with team members that we're beginning a restructuring process at GitLab, and we're running it differently than most. The planning is happening openly, including a voluntary separation window.",
+          "source_url": "https://about.gitlab.com/blog/gitlab-act-2",
+          "source_title": "GitLab Act 2"
+        },
+        {
+          "id": 7,
+          "claim": "For the fiscal first quarter ended April 30, 2026, GitLab reported revenue of $282 million, up 18% year over year.",
+          "excerpt": "For the fiscal first quarter ended April 30, 2026, revenue rose 18% year-over-year (YoY) to $282 million.",
+          "source_url": "https://www.barchart.com/story/news/2342088/gitlab-shares-sink-after-layoff-news-why-analysts-still-see-massive-upside",
+          "source_title": "GitLab Shares Sink After Layoff News. Why Analysts Still See Massive Upside."
+        },
+        {
+          "id": 8,
+          "claim": "GitLab targets CIOs, CTOs, and DevOps leaders who need unified experiences for engineering, design, and product teams.",
+          "excerpt": "This includes CIOs, CTOs, and DevOps leaders who need to create unified experiences for engineering, design, and product teams.",
+          "source_url": "https://about.gitlab.com/platform",
+          "source_title": "GitLab Platform - Speed with control"
+        }
+      ],
+      "website_owner": "GitLab Inc.",
+      "website_matches": true,
+      "website_note": "GitLab's official company page identifies the organisation behind GitLab, and third-party results list about.gitlab.com as its website.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 0,
+      "dropped": []
+    },
+    "strategy": {
+      "observation": "GitLab signed a global alliance partnership agreement with Capgemini.",
+      "fact_ids": [
+        2
+      ],
+      "offer_link": "The alliance provides no concrete connection to wedding photography packages for couples or to the CFO’s professional responsibilities. A personal wedding could create relevance, but the facts provide no evidence of one; this is not a justified cold-email target.",
+      "hypotheses": [
+        "The recipient might personally be planning a wedding, but this is unverified and should not be used as a targeting premise."
+      ],
+      "angle": "Wedding photography has no business connection to GitLab’s Capgemini alliance, so my offer would only be relevant if you’re personally looking for a wedding photographer.",
+      "offer_fit": "poor",
+      "fit_reason": "The offer serves couples planning weddings, not a software company or its CFO in a professional capacity. None of the supplied facts establishes a relevant buying need; do not send this email on the available evidence."
+    },
+    "draft": {
+      "subject": "Wedding photography, if relevant",
+      "body": "GitLab’s alliance with Capgemini doesn’t provide a business reason for this note. My offer would only be relevant if you’re personally looking for a wedding photographer.\n\nI offer wedding photography packages for couples. That’s separate from your CFO responsibilities, and I don’t have any information suggesting you’re planning a wedding.\n\nAre you personally considering wedding photography packages at the moment?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Wedding photography, if relevant",
+          "body": "GitLab’s alliance with Capgemini doesn’t provide a business reason for this note. My offer would only be relevant if you’re personally looking for a wedding photographer.\n\nI offer wedding photography packages for couples. That’s separate from your CFO responsibilities, and I don’t have any information suggesting you’re planning a wedding.\n\nAre you personally considering wedding photography packages at the moment?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@2",
+      "strategy": "strategy@2",
+      "copywriter": "copywriter@2",
+      "review": "review@2"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-6.1-sol",
+        "prompt_version": "research@2",
+        "duration_ms": 9789,
+        "usage": {
+          "input_tokens": 4837,
+          "cached_input_tokens": 4834,
+          "cache_write_tokens": 0,
+          "output_tokens": 646,
+          "reasoning_tokens": 0
+        },
+        "cost_usd": 0.0069494,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-6.1-sol",
+        "prompt_version": "strategy@2",
+        "duration_ms": 10869,
+        "usage": {
+          "input_tokens": 745,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 402,
+          "reasoning_tokens": 184
+        },
+        "cost_usd": 0.00551,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-6.1-sol",
+        "prompt_version": "copywriter@2",
+        "duration_ms": 8087,
+        "usage": {
+          "input_tokens": 786,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 245,
+          "reasoning_tokens": 142
+        },
+        "cost_usd": 0.004022,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-6.1-sol",
+        "prompt_version": "review@2",
+        "duration_ms": 2214,
+        "usage": {
+          "input_tokens": 728,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 14,
+          "reasoning_tokens": 0
+        },
+        "cost_usd": 0.001596,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"GitLab\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"GitLab\" about.gitlab.com",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"GitLab\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 30974
+  }
+}

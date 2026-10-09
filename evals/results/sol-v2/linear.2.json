@@ -1,0 +1,238 @@
+{
+  "case_id": "linear",
+  "config": "sol",
+  "models": "Research gpt-6.1-sol/low, Strategy gpt-6.1-sol/medium, Writing gpt-6.1-sol/medium, Review gpt-6.1-sol/low",
+  "repeat": 2,
+  "snapshot_recorded_at": "2026-10-09T12:05:06+00:00",
+  "checks": {
+    "label": "draft",
+    "outcome_ok": true,
+    "facts": 7,
+    "dropped_facts": 0,
+    "attempts": 1,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 76,
+    "subject_words": 5,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "71ea499755f148cd9370af2f462a5b53",
+    "brief": {
+      "company": "Linear",
+      "website": "linear.app",
+      "offer": "Recruiting and scheduling customer interview participants for product teams",
+      "recipient": "Head of Product",
+      "language": "English",
+      "tone": "Direct"
+    },
+    "status": "ready",
+    "reason": null,
+    "message": "The draft passed review.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "Linear builds an issue tracking and project management tool for product teams.",
+          "excerpt": "To empower product teams to do their best work, we are building an issue tracking and project management tool that combines UI elegance with world-class performance.",
+          "source_url": "https://www.linkedin.com/company/linearapp",
+          "source_title": "Linear"
+        },
+        {
+          "id": 2,
+          "claim": "Linear serves over 40,000 product teams, ranging from startups to major enterprises.",
+          "excerpt": "Linear powers over40,000 product teams. From ambitious startups to major enterprises.",
+          "source_url": "https://linear.app",
+          "source_title": "Linear – The system for product development"
+        },
+        {
+          "id": 3,
+          "claim": "Linear supports building and deploying AI agents that collaborate on complex tasks or handle entire issues end-to-end.",
+          "excerpt": "Build and deploy AI agents that work alongside you as teammates. Work on complex tasks together or delegate entire issues end-to-end.",
+          "source_url": "https://linear.app",
+          "source_title": "Linear – The system for product development"
+        },
+        {
+          "id": 4,
+          "claim": "Linear positions AI workflows as a core part of its product planning and development tool.",
+          "excerpt": "Purpose-built for modern teams with AI workflows at its core, Linear sets a new standard for planning and building products.",
+          "source_url": "https://linear.app",
+          "source_title": "Linear – The system for product development"
+        },
+        {
+          "id": 5,
+          "claim": "Linear is available on web, macOS, Windows, iOS, and Android.",
+          "excerpt": "Available for web,  macOS, Windows, iOS, and Android.",
+          "source_url": "https://linear.app/download",
+          "source_title": "Download Linear"
+        },
+        {
+          "id": 6,
+          "claim": "Linear Mobile complements the desktop app with on-demand workflows, including filing issues while away from a keyboard.",
+          "excerpt": "Linear Mobile is a companion to the Linear desktop app, designed for on-demand workflows when you are away from your keyboard: • File issues on-the-go",
+          "source_url": "https://apps.apple.com/us/app/linear-mobile/id1645587184",
+          "source_title": "‎Linear Mobile App - App Store"
+        },
+        {
+          "id": 7,
+          "claim": "Linear was founded in 2019 and was fully remote from the start.",
+          "excerpt": "Founded in 2019, Linear has become the tool of choice for thousands of high-impact companies to build their products better. Linear was set up as a fully remote company from the start.",
+          "source_url": "https://www.linkedin.com/company/linearapp",
+          "source_title": "Linear"
+        }
+      ],
+      "website_owner": "Linear",
+      "website_matches": true,
+      "website_note": "The official Linear homepage and download page on linear.app identify the website as Linear's own site.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 0,
+      "dropped": []
+    },
+    "strategy": {
+      "observation": "Linear supports AI agents that collaborate on complex tasks or handle entire issues end-to-end.",
+      "fact_ids": [
+        3
+      ],
+      "offer_link": "Recruiting and scheduling interviews with customers who use or are evaluating these agents could help the Head of Product explore when teams want agent assistance versus end-to-end execution, without requiring the product team to coordinate participants.",
+      "hypotheses": [
+        "Linear may be evaluating how customers decide which issues to delegate to AI agents.",
+        "The product team may benefit from interviewing customers with different levels of experience using agents.",
+        "Recruiting and scheduling those customers may take time away from conducting interviews and applying the findings."
+      ],
+      "angle": "With Linear supporting agents that can handle entire issues end-to-end, would interviews with customers about what they would—and wouldn't—delegate be useful for your product decisions?",
+      "offer_fit": "good",
+      "fit_reason": "The offer provides a plausible way to gather customer input on an explicitly supported product capability, and the Head of Product is a relevant recipient; Linear's current research needs and recruitment capacity are unconfirmed."
+    },
+    "draft": {
+      "subject": "Customer interviews on agent delegation",
+      "body": "If you're exploring where customers draw the line on handing entire issues to AI agents, interviews could help clarify when they want assistance versus full delegation.\n\nI recruit and schedule customer interview participants for product teams. Here, that would mean recruiting customers who use or are evaluating agents, leaving your team to conduct the interviews rather than coordinate participants.\n\nWould you start with customers already delegating whole issues, or those still deciding what to hand over?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Customer interviews on agent delegation",
+          "body": "If you're exploring where customers draw the line on handing entire issues to AI agents, interviews could help clarify when they want assistance versus full delegation.\n\nI recruit and schedule customer interview participants for product teams. Here, that would mean recruiting customers who use or are evaluating agents, leaving your team to conduct the interviews rather than coordinate participants.\n\nWould you start with customers already delegating whole issues, or those still deciding what to hand over?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@2",
+      "strategy": "strategy@2",
+      "copywriter": "copywriter@2",
+      "review": "review@2"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-6.1-sol",
+        "prompt_version": "research@2",
+        "duration_ms": 7616,
+        "usage": {
+          "input_tokens": 3766,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 3763,
+          "output_tokens": 419,
+          "reasoning_tokens": 0
+        },
+        "cost_usd": 0.0136035,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-6.1-sol",
+        "prompt_version": "strategy@2",
+        "duration_ms": 7451,
+        "usage": {
+          "input_tokens": 667,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 240,
+          "reasoning_tokens": 0
+        },
+        "cost_usd": 0.003734,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-6.1-sol",
+        "prompt_version": "copywriter@2",
+        "duration_ms": 7751,
+        "usage": {
+          "input_tokens": 735,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 313,
+          "reasoning_tokens": 200
+        },
+        "cost_usd": 0.0046,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-6.1-sol",
+        "prompt_version": "review@2",
+        "duration_ms": 1887,
+        "usage": {
+          "input_tokens": 661,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 14,
+          "reasoning_tokens": 0
+        },
+        "cost_usd": 0.001462,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Linear\" company overview products customers",
+        "topic": "general",
+        "results": 2,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Linear\" linear.app",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Linear\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 24790
+  }
+}

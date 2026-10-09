@@ -8,7 +8,8 @@ from core.runner import run_sdr
 from core.schemas import Fact
 from evals.cases import Case, load_cases, outcome_label, parse_cases, select
 from evals.checks import check, language_ok, ungrounded_numbers
-from evals.grades import Grade
+from evals.blind import agreement, import_grades
+from evals.grades import Grade, GradeFile, grades_path, load_grades
 from evals.report import summarize
 from evals.run import run_case
 from evals.snapshot import SnapshotMissing, load, record, save
@@ -162,3 +163,27 @@ def test_report_counts_successes_only_once_every_draft_is_graded(tmp_path, case,
     assert row.grounding == 1.5 and row.naturalness == 1.5
     assert row.model_usd is None and row.usd_per_success is None  # fake-model has no price: unknown, never zero
 
+
+
+def test_blind_grades_go_back_to_their_runs_and_are_compared_with_claude(tmp_path):
+    claude = GradeFile(
+        grader="claude",
+        graded_at="2026-10-09",
+        scale="",
+        scope="",
+        grades={"linear.1": Grade(grounding=2, relevance=2, naturalness=1)},
+    )
+    grades_path("mini-v2", "claude", tmp_path).write_text(claude.model_dump_json(), encoding="utf-8")
+    key = {"d01": "mini-v2/linear.1", "d02": "sol-v2/linear.1"}
+    raw = {
+        "d01": {"grounding": 2, "relevance": 1, "naturalness": 1, "note": "stretch"},
+        "d02": {"grounding": 2, "relevance": 2, "naturalness": 2},
+    }
+
+    human = import_grades(raw, key, tmp_path)
+
+    assert load_grades("sol-v2", "human", tmp_path) == {"linear.1": Grade(grounding=2, relevance=2, naturalness=2)}
+    assert human["mini-v2"]["linear.1"].note == "stretch"
+    report = agreement(human, tmp_path)
+    assert report.startswith("Exact agreement 2/3, within one point 3/3")
+    assert "relevance: exact 0/1, Claude minus human +1.00" in report

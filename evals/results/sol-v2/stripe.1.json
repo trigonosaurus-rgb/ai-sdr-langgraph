@@ -1,0 +1,245 @@
+{
+  "case_id": "stripe",
+  "config": "sol",
+  "models": "Research gpt-6.1-sol/low, Strategy gpt-6.1-sol/medium, Writing gpt-6.1-sol/medium, Review gpt-6.1-sol/low",
+  "repeat": 1,
+  "snapshot_recorded_at": "2026-10-09T12:05:11+00:00",
+  "checks": {
+    "label": "draft",
+    "outcome_ok": true,
+    "facts": 8,
+    "dropped_facts": 0,
+    "attempts": 1,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 86,
+    "subject_words": 6,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "a64898a1516e474d849dcd36e606a2d3",
+    "brief": {
+      "company": "Stripe",
+      "website": "stripe.com",
+      "offer": "Localizing developer documentation into Japanese, German and Brazilian Portuguese",
+      "recipient": "Head of Documentation",
+      "language": "English",
+      "tone": "Warm"
+    },
+    "status": "ready",
+    "reason": null,
+    "message": "The draft passed review.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "Stripe provides payment services that accept credit cards, digital wallets and other payment methods.",
+          "excerpt": "Stripe is a payment service provider that accepts credit cards, digital wallets and many other payment methods.",
+          "source_url": "https://www.nerdwallet.com/business/software/learn/what-is-stripe",
+          "source_title": "What Is Stripe, and How Does It Work to Accept Payments? - NerdWallet"
+        },
+        {
+          "id": 2,
+          "claim": "Stripe is partnering with FedEx to combine logistics and financial infrastructure data to create financing options for small businesses.",
+          "excerpt": "Stripe is partnering with global shipping giant FedEx to combine their data insights from logistics and financial infrastructure to create financing options for small businesses",
+          "source_url": "https://www.paymentsdive.com/news/stripe-fedex-team-on-smb-lending-business-capital-logistics/832368",
+          "source_title": "Stripe, FedEx team on SMB lending"
+        },
+        {
+          "id": 3,
+          "claim": "Stripe announced an agreement to acquire Parafin, with a stated goal of expanding revenue opportunities for platforms and helping small businesses grow.",
+          "excerpt": "Excited to share that @stripe has agreed to acquire @ParafinHQ!",
+          "source_url": "https://x.com/stripe",
+          "source_title": "Stripe (@stripe) / X"
+        },
+        {
+          "id": 4,
+          "claim": "Stripe partners with Crypto.com to let customers pay with their crypto balance directly at checkout.",
+          "excerpt": "Crypto.com partners with Stripe to enable better crypto payments.Learn how the partnership can help you tap into a new global customer base by letting customers pay with their crypto balance directly at checkout.",
+          "source_url": "https://stripe.com",
+          "source_title": "Stripe | Financial Infrastructure to Grow Your Revenue"
+        },
+        {
+          "id": 5,
+          "claim": "Stripe offers tools to process payments outside the iOS and Android app stores.",
+          "excerpt": "Read how Stripe can help you process payments outside of the iOS and Android app stores, giving you more control and helping grow your revenue.",
+          "source_url": "https://stripe.com",
+          "source_title": "Stripe | Financial Infrastructure to Grow Your Revenue"
+        },
+        {
+          "id": 6,
+          "claim": "Stripe supports usage-based billing, charging customers according to their service consumption during a billing period.",
+          "excerpt": "Charge your customers based on how much of your service they use during the billing period.",
+          "source_url": "https://docs.stripe.com/products-prices/overview?locale=en-GB",
+          "source_title": "Overview | Stripe Documentation"
+        },
+        {
+          "id": 7,
+          "claim": "Substack uses Stripe for subscriptions and payments.",
+          "excerpt": "Stripe makes the subscriptions and payment piece really easy for everyone involved. And that helps us make it easy for writers and other creators to do the work they want to do on Substack and get paid for it.",
+          "source_url": "https://stripe.com",
+          "source_title": "Stripe | Financial Infrastructure to Grow Your Revenue"
+        },
+        {
+          "id": 8,
+          "claim": "Stripe became a Worldwide Partner and the Official Financial and Payments Infrastructure Partner of the Ryder Cup.",
+          "excerpt": "Stripe has signed a new agreement to become a Worldwide Partner and the Official Financial and Payments Infrastructure Partner to golf’s greatest team contest—the Ryder Cup.",
+          "source_url": "https://www.rydercup.com/news-media/stripe-becomes-a-worldwide-partner-of-the-ryder-cup",
+          "source_title": "Stripe becomes a Worldwide Partner of the Ryder Cup"
+        }
+      ],
+      "website_owner": "Stripe",
+      "website_matches": true,
+      "website_note": "The stripe.com homepage identifies Stripe and describes its products and partnerships, and Stripe's social profile links to the domain.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 0,
+      "dropped": []
+    },
+    "strategy": {
+      "observation": "Stripe supports usage-based billing, charging customers according to their service consumption during a billing period.",
+      "fact_ids": [
+        6
+      ],
+      "offer_link": "Localizing the developer documentation for usage-based billing into Japanese, German and Brazilian Portuguese could help developers who prefer those languages understand and implement consumption-based charging, if Stripe has coverage gaps in those languages.",
+      "hypotheses": [
+        "Some developers implementing Stripe’s usage-based billing may prefer documentation in Japanese, German or Brazilian Portuguese.",
+        "The relevant documentation may have gaps in coverage or freshness in those languages; the facts do not establish its current localization status.",
+        "The Head of Documentation may prioritize making technical billing guidance accessible across languages."
+      ],
+      "angle": "Does Stripe’s usage-based billing documentation have any Japanese, German or Brazilian Portuguese coverage gaps you’re looking to close?",
+      "offer_fit": "good",
+      "fit_reason": "The offer directly concerns developer documentation and the recipient’s remit, with usage-based billing providing a concrete scope for localization. Actual demand depends on language coverage and developer needs, neither of which is confirmed."
+    },
+    "draft": {
+      "subject": "Language coverage for usage-based billing docs",
+      "body": "Hi,\n\nAre there any gaps in Stripe’s usage-based billing documentation in Japanese, German or Brazilian Portuguese that you’re looking to close?\n\nI localize developer documentation into those three languages. If developers implementing consumption-based charging prefer to work in one of them, having the relevant guidance available could make implementation easier.\n\nI don’t know where your coverage stands today, so I’d start with a narrow scope rather than a broader documentation project. Is there one usage-based billing guide you’d prioritize for localization into one of those languages?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Language coverage for usage-based billing docs",
+          "body": "Hi,\n\nAre there any gaps in Stripe’s usage-based billing documentation in Japanese, German or Brazilian Portuguese that you’re looking to close?\n\nI localize developer documentation into those three languages. If developers implementing consumption-based charging prefer to work in one of them, having the relevant guidance available could make implementation easier.\n\nI don’t know where your coverage stands today, so I’d start with a narrow scope rather than a broader documentation project. Is there one usage-based billing guide you’d prioritize for localization into one of those languages?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@2",
+      "strategy": "strategy@2",
+      "copywriter": "copywriter@2",
+      "review": "review@2"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-6.1-sol",
+        "prompt_version": "research@2",
+        "duration_ms": 10127,
+        "usage": {
+          "input_tokens": 4828,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 4825,
+          "output_tokens": 603,
+          "reasoning_tokens": 0
+        },
+        "cost_usd": 0.0180985,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-6.1-sol",
+        "prompt_version": "strategy@2",
+        "duration_ms": 11470,
+        "usage": {
+          "input_tokens": 732,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 417,
+          "reasoning_tokens": 173
+        },
+        "cost_usd": 0.005634,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-6.1-sol",
+        "prompt_version": "copywriter@2",
+        "duration_ms": 4034,
+        "usage": {
+          "input_tokens": 799,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 130,
+          "reasoning_tokens": 0
+        },
+        "cost_usd": 0.002898,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-6.1-sol",
+        "prompt_version": "review@2",
+        "duration_ms": 1819,
+        "usage": {
+          "input_tokens": 746,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 14,
+          "reasoning_tokens": 0
+        },
+        "cost_usd": 0.001632,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Stripe\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Stripe\" stripe.com",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Stripe\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 27529
+  }
+}

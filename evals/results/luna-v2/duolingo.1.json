@@ -1,0 +1,230 @@
+{
+  "case_id": "duolingo",
+  "config": "luna",
+  "models": "Research gpt-6-luna/low, Strategy gpt-6-luna/medium, Writing gpt-6-luna/medium, Review gpt-6-luna/low",
+  "repeat": 1,
+  "snapshot_recorded_at": "2026-10-09T12:05:18+00:00",
+  "checks": {
+    "label": "draft",
+    "outcome_ok": true,
+    "facts": 6,
+    "dropped_facts": 0,
+    "attempts": 1,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 64,
+    "subject_words": 4,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "0e1eaf39317540699f9a7dbb7cbc82ab",
+    "brief": {
+      "company": "Duolingo",
+      "website": "duolingo.com",
+      "offer": "Voice actors and audio production for language-learning content",
+      "recipient": "Director of Learning Content",
+      "language": "English",
+      "tone": "Direct"
+    },
+    "status": "ready",
+    "reason": null,
+    "message": "The draft passed review.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "Duolingo offers language-learning products and courses, alongside music, math, and chess content.",
+          "excerpt": "# Courses for English Speakers",
+          "source_url": "https://www.duolingo.com/courses",
+          "source_title": "Learn a language for free"
+        },
+        {
+          "id": 2,
+          "claim": "Duolingo’s freemium model offers free learning and monetizes through a paid experience.",
+          "excerpt": "The freemium business model is good for our mission and our business. Duolingo started as a free product, and we remain committed to offering free learning for all while monetizing through a valuable paid experience.",
+          "source_url": "http://investors.duolingo.com/company-strategy-overview-0",
+          "source_title": "Company Strategy Overview - Duolingo, Inc."
+        },
+        {
+          "id": 3,
+          "claim": "As of Q4 2025, Duolingo reported 52.7 million daily active users, 133.1 million monthly active users, and 12.2 million paid subscribers.",
+          "excerpt": "As of Q4 2025, we have 52.7M DAUs, 133.1M MAUs, and 12.2M paid subscribers.",
+          "source_url": "http://investors.duolingo.com/company-strategy-overview-0",
+          "source_title": "Company Strategy Overview - Duolingo, Inc."
+        },
+        {
+          "id": 4,
+          "claim": "Duolingo says it runs more than 1,000 A/B tests per quarter to refine its product.",
+          "excerpt": "running 1,000+ A/B tests per quarter",
+          "source_url": "http://investors.duolingo.com/company-strategy-overview-0",
+          "source_title": "Company Strategy Overview - Duolingo, Inc."
+        },
+        {
+          "id": 5,
+          "claim": "Duolingo says AI is helping expand its course offerings, and nine popular language courses reached B2 in 2026.",
+          "excerpt": "In 2026, we reached a major milestone: nine of our most popular language courses now extend to B2",
+          "source_url": "http://investors.duolingo.com/company-strategy-overview-0",
+          "source_title": "Company Strategy Overview - Duolingo, Inc."
+        },
+        {
+          "id": 6,
+          "claim": "Duolingo’s Super subscription includes a one-week free trial, after which the account is charged unless the user cancels.",
+          "excerpt": "Day 7\n\nYour account is charged, cancel anytime 24 hours before",
+          "source_url": "https://www.duolingo.com/super",
+          "source_title": "Learn a language for free"
+        }
+      ],
+      "website_owner": "Duolingo",
+      "website_matches": true,
+      "website_note": "The results identify duolingo.com as Duolingo’s official learning app and link its pages to the company’s investor and blog sites.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 0,
+      "dropped": []
+    },
+    "strategy": {
+      "observation": "Duolingo says AI is helping expand its course offerings, and nine popular language courses reached B2 in 2026.",
+      "fact_ids": [
+        5
+      ],
+      "offer_link": "As Duolingo expands courses and their depth, voice actors and audio production could support the spoken examples, dialogues, and listening materials those courses may include.",
+      "hypotheses": [
+        "Duolingo may use human-recorded audio alongside AI-generated course content.",
+        "The expanded courses may create a need for additional audio production capacity."
+      ],
+      "angle": "With nine popular language courses reaching B2 in 2026 as AI expands Duolingo’s course offerings, voice and audio production could help support the spoken content in those deeper courses.",
+      "offer_fit": "good",
+      "fit_reason": "The offer directly supports language-learning content, and the stated course expansion gives it a specific, plausible connection to the recipient’s remit, though the facts do not confirm a need for external voice or production support."
+    },
+    "draft": {
+      "subject": "Audio for deeper courses",
+      "body": "Duolingo says AI is helping expand its courses, with nine popular language courses reaching B2 in 2026. As lessons deepen, spoken examples and dialogues may call for more varied recording and editing.\n\nI provide voice actors and audio production for language-learning content, which could support those listening materials as courses grow.\n\nAre you planning new recorded dialogues for any of the courses reaching B2?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Audio for deeper courses",
+          "body": "Duolingo says AI is helping expand its courses, with nine popular language courses reaching B2 in 2026. As lessons deepen, spoken examples and dialogues may call for more varied recording and editing.\n\nI provide voice actors and audio production for language-learning content, which could support those listening materials as courses grow.\n\nAre you planning new recorded dialogues for any of the courses reaching B2?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@2",
+      "strategy": "strategy@2",
+      "copywriter": "copywriter@2",
+      "review": "review@2"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-6-luna",
+        "prompt_version": "research@2",
+        "duration_ms": 3617,
+        "usage": {
+          "input_tokens": 4865,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 4862,
+          "output_tokens": 407,
+          "reasoning_tokens": 0
+        },
+        "cost_usd": 0.00081155,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-6-luna",
+        "prompt_version": "strategy@2",
+        "duration_ms": 4736,
+        "usage": {
+          "input_tokens": 710,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 464,
+          "reasoning_tokens": 236
+        },
+        "cost_usd": 0.000303,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-6-luna",
+        "prompt_version": "copywriter@2",
+        "duration_ms": 3527,
+        "usage": {
+          "input_tokens": 759,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 362,
+          "reasoning_tokens": 257
+        },
+        "cost_usd": 0.00025689999999999996,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-6-luna",
+        "prompt_version": "review@2",
+        "duration_ms": 3457,
+        "usage": {
+          "input_tokens": 696,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 234,
+          "reasoning_tokens": 214
+        },
+        "cost_usd": 0.00018660000000000004,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Duolingo\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Duolingo\" duolingo.com",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Duolingo\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 15356
+  }
+}

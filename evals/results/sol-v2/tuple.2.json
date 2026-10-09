@@ -1,0 +1,245 @@
+{
+  "case_id": "tuple",
+  "config": "sol",
+  "models": "Research gpt-6.1-sol/low, Strategy gpt-6.1-sol/medium, Writing gpt-6.1-sol/medium, Review gpt-6.1-sol/low",
+  "repeat": 2,
+  "snapshot_recorded_at": "2026-10-09T12:05:52+00:00",
+  "checks": {
+    "label": "draft",
+    "outcome_ok": true,
+    "facts": 8,
+    "dropped_facts": 0,
+    "attempts": 1,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 100,
+    "subject_words": 6,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "eabb5aaac849443caf88df41c2726877",
+    "brief": {
+      "company": "Tuple",
+      "website": "tuple.app",
+      "offer": "Video case studies with engineering teams that use your product",
+      "recipient": "Head of Marketing",
+      "language": "English",
+      "tone": "Direct"
+    },
+    "status": "ready",
+    "reason": null,
+    "message": "The draft passed review.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "Tuple makes a remote pair-programming app for macOS and Windows.",
+          "excerpt": "The best remote pair programming app on macOS and Windows",
+          "source_url": "https://github.com/tupleapp",
+          "source_title": "Tuple · GitHub"
+        },
+        {
+          "id": 2,
+          "claim": "Tuple supports simultaneous mouse and keyboard collaboration, command-line integration and pluginability.",
+          "excerpt": "Seamless collaboration with full-time mouse and keyboard support for both parties, snappy interactions, command-line integration and pluginability.",
+          "source_url": "https://www.linkedin.com/company/tupleapp",
+          "source_title": "Tuple"
+        },
+        {
+          "id": 3,
+          "claim": "Tuple's Slack integration lets users start pairing sessions from channels or direct messages using the /tuple command.",
+          "excerpt": "Tuple's integration for Slack adds a `/tuple` command, which will start a pairing session directly from a channel or DMs.",
+          "source_url": "https://slack.com/marketplace/A04B287N6P2-tuple",
+          "source_title": "Tuple & Slack Integration | Slack Marketplace"
+        },
+        {
+          "id": 4,
+          "claim": "The Slack integration enables one-click call joining and changes participants' Slack statuses to show they are busy.",
+          "excerpt": "Anyone can then join your call with a single click—couldn't be simpler! Participants will also have their Slack status changed, so that your coworkers know you're busy.",
+          "source_url": "https://slack.com/marketplace/A04B287N6P2-tuple",
+          "source_title": "Tuple & Slack Integration | Slack Marketplace"
+        },
+        {
+          "id": 5,
+          "claim": "Tuple's LinkedIn profile lists 13 employees.",
+          "excerpt": "## Employees\n- Now: 13",
+          "source_url": "https://www.linkedin.com/company/tupleapp",
+          "source_title": "Tuple"
+        },
+        {
+          "id": 6,
+          "claim": "Tuple is headquartered in Somerville, Massachusetts.",
+          "excerpt": "Headquarters: Somerville, MA, United States",
+          "source_url": "https://www.linkedin.com/company/tupleapp",
+          "source_title": "Tuple"
+        },
+        {
+          "id": 7,
+          "claim": "Tuple publishes a Raycast extension on GitHub.",
+          "excerpt": "Raycast extension for Tuple",
+          "source_url": "https://github.com/tupleapp",
+          "source_title": "Tuple · GitHub"
+        },
+        {
+          "id": 8,
+          "claim": "A customer testimonial describes using Tuple to pair with an onboarding buddy.",
+          "excerpt": "I've been using Tuple to pair with my onboarding buddy and my experience has been excellent.",
+          "source_url": "https://tuple.app/love",
+          "source_title": "Tuple Love · Tuple"
+        }
+      ],
+      "website_owner": "Tuple",
+      "website_matches": true,
+      "website_note": "The tuple.app testimonial page is identified as Tuple's official site, and other results link the domain to its pair-programming product.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 0,
+      "dropped": []
+    },
+    "strategy": {
+      "observation": "A Tuple customer testimonial describes using the product to pair with an onboarding buddy.",
+      "fact_ids": [
+        8
+      ],
+      "offer_link": "A video case study could expand that testimonial into an engineering team's concrete onboarding story: showing how a new hire and their buddy use Tuple, with interviews about their experience. For the Head of Marketing, this could provide customer evidence around a specific use case rather than another feature demonstration.",
+      "hypotheses": [
+        "Engineering onboarding may be a use case the Head of Marketing wants to promote.",
+        "The customer behind the testimonial may be willing to participate in a filmed case study.",
+        "Prospective engineering buyers may find a detailed peer example more useful than a short testimonial."
+      ],
+      "angle": "Your customer testimonial about pairing with an onboarding buddy could be the starting point for a video showing how an engineering team uses Tuple to onboard a new hire.",
+      "offer_fit": "good",
+      "fit_reason": "The offer directly matches Tuple's engineering audience, and the existing testimonial supplies a specific customer use case to explore; customer participation and marketing priority remain unconfirmed."
+    },
+    "draft": {
+      "subject": "An onboarding story from your customer",
+      "body": "Your customer testimonial about pairing with an onboarding buddy could be the starting point for a video case study about a new hire’s experience.\n\nI make video case studies with engineering teams that use your product. For this story, I’d show how the new hire and their buddy use Tuple, with interviews about what helped during onboarding.\n\nIf onboarding is a use case you want to highlight, that would give prospective buyers a concrete team example rather than another feature demonstration.\n\nWould you consider asking the customer behind that testimonial whether they’d be willing to tell that story on video?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "An onboarding story from your customer",
+          "body": "Your customer testimonial about pairing with an onboarding buddy could be the starting point for a video case study about a new hire’s experience.\n\nI make video case studies with engineering teams that use your product. For this story, I’d show how the new hire and their buddy use Tuple, with interviews about what helped during onboarding.\n\nIf onboarding is a use case you want to highlight, that would give prospective buyers a concrete team example rather than another feature demonstration.\n\nWould you consider asking the customer behind that testimonial whether they’d be willing to tell that story on video?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@2",
+      "strategy": "strategy@2",
+      "copywriter": "copywriter@2",
+      "review": "review@2"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-6.1-sol",
+        "prompt_version": "research@2",
+        "duration_ms": 7592,
+        "usage": {
+          "input_tokens": 2467,
+          "cached_input_tokens": 2464,
+          "cache_write_tokens": 0,
+          "output_tokens": 388,
+          "reasoning_tokens": 0
+        },
+        "cost_usd": 0.0041324,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-6.1-sol",
+        "prompt_version": "strategy@2",
+        "duration_ms": 7314,
+        "usage": {
+          "input_tokens": 665,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 241,
+          "reasoning_tokens": 0
+        },
+        "cost_usd": 0.00374,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-6.1-sol",
+        "prompt_version": "copywriter@2",
+        "duration_ms": 5439,
+        "usage": {
+          "input_tokens": 744,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 136,
+          "reasoning_tokens": 0
+        },
+        "cost_usd": 0.002848,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-6.1-sol",
+        "prompt_version": "review@2",
+        "duration_ms": 2020,
+        "usage": {
+          "input_tokens": 686,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 14,
+          "reasoning_tokens": 0
+        },
+        "cost_usd": 0.001512,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Tuple\" company overview products customers",
+        "topic": "general",
+        "results": 0,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Tuple\" tuple.app",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Tuple\" news",
+        "topic": "news",
+        "results": 2,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 22380
+  }
+}

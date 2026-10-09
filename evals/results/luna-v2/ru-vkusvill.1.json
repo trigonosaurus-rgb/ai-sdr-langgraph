@@ -1,0 +1,244 @@
+{
+  "case_id": "ru-vkusvill",
+  "config": "luna",
+  "models": "Research gpt-6-luna/low, Strategy gpt-6-luna/medium, Writing gpt-6-luna/medium, Review gpt-6-luna/low",
+  "repeat": 1,
+  "snapshot_recorded_at": "2026-10-09T12:07:34+00:00",
+  "checks": {
+    "label": "draft",
+    "outcome_ok": true,
+    "facts": 8,
+    "dropped_facts": 0,
+    "attempts": 1,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 68,
+    "subject_words": 3,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "6dd5b404db9945daa95e7011086051fe",
+    "brief": {
+      "company": "ВкусВилл",
+      "website": "vkusvill.ru",
+      "offer": "Аудит карточек товаров в мобильном приложении",
+      "recipient": "Директор по продукту",
+      "language": "Russian",
+      "tone": "Direct"
+    },
+    "status": "ready",
+    "reason": null,
+    "message": "The draft passed review.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "ВкусВилл reports more than 1,900 producer partners.",
+          "excerpt": "1 900+\n\nпроизводителей стали нашими партнёрами и создают продукты для вас",
+          "source_url": "https://vkusvill.ru/about",
+          "source_title": "О нас | ВкусВилл"
+        },
+        {
+          "id": 2,
+          "claim": "ВкусВилл reports operating more than 1,537 stores and 264 dark stores across 155+ cities.",
+          "excerpt": "1 537+ | магазинов |\n| 264+ | даркстора  Что такое даркстор? |\n| 155+ | городов",
+          "source_url": "https://vkusvill.ru/about",
+          "source_title": "О нас | ВкусВилл"
+        },
+        {
+          "id": 3,
+          "claim": "ВкусВилл says its couriers deliver more than 480,000 orders per day.",
+          "excerpt": "480+ тыс.\n\nзаказов в день доставляют наши курьеры",
+          "source_url": "https://vkusvill.ru/about",
+          "source_title": "О нас | ВкусВилл"
+        },
+        {
+          "id": 4,
+          "claim": "ВкусВилл offers B2B services, including micromarkets, vending, ready-made meal plans, and catering.",
+          "excerpt": "Помимо бесплатной доставки, в неё входят микромаркеты, вендинги, B2B-направление, готовые рационы, кейтеринг и многое другое.",
+          "source_url": "https://vkusvill.ru/history",
+          "source_title": "История компаний «ВкусВилл» и «Избёнка»"
+        },
+        {
+          "id": 5,
+          "claim": "ВкусВилл’s B2B service offers free delivery in 1–2 hours, a wide assortment, and deferred payment within a weekly budget, according to a customer testimonial on its B2B page.",
+          "excerpt": "на каждую неделю у нас есть бюджет, в рамках которого мы можем заказывать продукты с отсрочкой платежа. ВкусВилл предоставляет действительно широкий ассортимент качественных продуктов с бесплатной доставкой за 1-2 часа.",
+          "source_url": "https://vkusvill.ru/b2b",
+          "source_title": "ВкусВилл Бизнес"
+        },
+        {
+          "id": 6,
+          "claim": "ВкусВилл reports more than 4,200 products under its own brand, with 85% of its assortment produced domestically.",
+          "excerpt": "| 4 200+ | продуктов под брендом ВкусВилл |\n| 85% | ассортимента отечественного производства",
+          "source_url": "https://vkusvill.ru/about",
+          "source_title": "О нас | ВкусВилл"
+        },
+        {
+          "id": 7,
+          "claim": "ВкусВилл says its product quality process includes nine verification steps.",
+          "excerpt": "9\n\nшагов проверки делают продукты ВкусВилл не только вкусными, но и качественными",
+          "source_url": "https://vkusvill.ru/about",
+          "source_title": "О нас | ВкусВилл"
+        },
+        {
+          "id": 8,
+          "claim": "ВкусВилл says it acquired АндерСон, a brand with its own confectionery factory and family café network.",
+          "excerpt": "мы купили «АндерСон» — это уникальный бренд с собственной кондитерской фабрикой и сетью семейных кафе.",
+          "source_url": "https://vkusvill.ru/history",
+          "source_title": "История компаний «ВкусВилл» и «Избёнка»"
+        }
+      ],
+      "website_owner": "ВкусВилл",
+      "website_matches": true,
+      "website_note": "The results identify vkusvill.ru as ВкусВилл’s official website and present the company’s own pages there.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 0,
+      "dropped": []
+    },
+    "strategy": {
+      "observation": "ВкусВилл сообщает о более чем 4 200 товарах под собственной маркой.",
+      "fact_ids": [
+        6
+      ],
+      "offer_link": "Аудит карточек в мобильном приложении может помочь оценить, насколько полно и последовательно представлены товары собственной марки, и выявить конкретные возможности улучшить карточки в таком широком каталоге.",
+      "hypotheses": [
+        "Предполагаю, что поддерживать единое качество карточек для большого ассортимента может быть непросто.",
+        "Возможно, директору по продукту полезно понимать, какие элементы карточек стоит улучшать в первую очередь."
+      ],
+      "angle": "У ВкусВилла более 4 200 товаров собственной марки — на таком ассортименте аудит карточек в приложении может помочь найти точки для улучшения их представления.",
+      "offer_fit": "good",
+      "fit_reason": "Карточки товаров напрямую относятся к цифровому продуктовому опыту, а большой каталог собственной марки даёт конкретный масштаб для аудита. Факты не подтверждают наличие проблем, но услуга имеет очевидное применение."
+    },
+    "draft": {
+      "subject": "Карточки собственной марки",
+      "body": "У ВкусВилла больше 4 200 товаров под собственной маркой. Если при таком ассортименте важно понимать, где карточки представлены непоследовательно или им не хватает информации, аудит поможет найти конкретные точки улучшения и расставить их по приоритету.\n\nЯ провожу аудит карточек товаров в мобильном приложении: проверяю полноту и единообразие представления и отмечаю, что стоит исправить в первую очередь.\n\nЕсть ли смысл начать с выборки карточек собственной марки из нескольких категорий?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Карточки собственной марки",
+          "body": "У ВкусВилла больше 4 200 товаров под собственной маркой. Если при таком ассортименте важно понимать, где карточки представлены непоследовательно или им не хватает информации, аудит поможет найти конкретные точки улучшения и расставить их по приоритету.\n\nЯ провожу аудит карточек товаров в мобильном приложении: проверяю полноту и единообразие представления и отмечаю, что стоит исправить в первую очередь.\n\nЕсть ли смысл начать с выборки карточек собственной марки из нескольких категорий?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@2",
+      "strategy": "strategy@2",
+      "copywriter": "copywriter@2",
+      "review": "review@2"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-6-luna",
+        "prompt_version": "research@2",
+        "duration_ms": 7583,
+        "usage": {
+          "input_tokens": 5871,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 5868,
+          "output_tokens": 754,
+          "reasoning_tokens": 58
+        },
+        "cost_usd": 0.0011108,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-6-luna",
+        "prompt_version": "strategy@2",
+        "duration_ms": 5956,
+        "usage": {
+          "input_tokens": 798,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 492,
+          "reasoning_tokens": 237
+        },
+        "cost_usd": 0.0003258,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-6-luna",
+        "prompt_version": "copywriter@2",
+        "duration_ms": 3651,
+        "usage": {
+          "input_tokens": 870,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 370,
+          "reasoning_tokens": 232
+        },
+        "cost_usd": 0.000272,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-6-luna",
+        "prompt_version": "review@2",
+        "duration_ms": 2202,
+        "usage": {
+          "input_tokens": 819,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 152,
+          "reasoning_tokens": 132
+        },
+        "cost_usd": 0.00015790000000000002,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"ВкусВилл\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"ВкусВилл\" vkusvill.ru",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"ВкусВилл\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 19408
+  }
+}

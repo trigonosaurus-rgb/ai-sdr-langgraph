@@ -1,0 +1,1220 @@
+[
+  {
+    "id": "d01",
+    "company": "Ramp",
+    "website": "ramp.com",
+    "recipient": "Head of Content",
+    "offer": "Expense policy templates for mid-size finance teams",
+    "language": "English",
+    "tone": "Direct",
+    "facts": [
+      {
+        "claim": "Ramp is a financial operations platform that helps companies spend less and move faster.",
+        "excerpt": "\"Ramp is a financial operations platform that helps companies spend less and move faster.\"",
+        "url": "https://support.ramp.com/ramp-overview?ref=kellblog.com"
+      },
+      {
+        "claim": "Ramp’s core product includes cards, Bill Pay, accounting, travel, and reimbursements.",
+        "excerpt": "\"Tour Ramp and its main products: cards, Bill Pay, accounting, travel, and reimbursements.\"",
+        "url": "https://support.ramp.com/ramp-overview?ref=kellblog.com"
+      },
+      {
+        "claim": "More than 70,000 businesses use Ramp.",
+        "excerpt": "\"More than 70,000 businesses use Ramp\"",
+        "url": "https://support.ramp.com/ramp-overview?ref=kellblog.com"
+      },
+      {
+        "claim": "Ramp is used to manage corporate cards, expenses, bill payments, procurement, vendor management, travel, banking, and accounting automation in one system.",
+        "excerpt": "\"manage corporate cards, expenses, bill payments, procurement, vendor management, travel, banking, and accounting automation in one system.\"",
+        "url": "https://support.ramp.com/ramp-overview?ref=kellblog.com"
+      },
+      {
+        "claim": "Ramp says customers have saved more than $12 billion and 27.5 million hours using its controls, automation, and savings insights.",
+        "excerpt": "\"Ramp customers have saved more than $12 billion and 27.5 million hours\"",
+        "url": "https://support.ramp.com/ramp-overview?ref=kellblog.com"
+      },
+      {
+        "claim": "Ramp supports more than $100 billion in annualized card and AP payment volume.",
+        "excerpt": "\"Ramp supports more than $100 billion in annualized card and AP payment volume\"",
+        "url": "https://support.ramp.com/ramp-overview?ref=kellblog.com"
+      },
+      {
+        "claim": "Ramp says customers save 5% or more on average with Ramp.",
+        "excerpt": "\"customers save 5% or more on average with Ramp.\"",
+        "url": "https://support.ramp.com/ramp-overview?ref=kellblog.com"
+      },
+      {
+        "claim": "Ramp’s website describes it as a financial technology company and says it is not a bank.",
+        "excerpt": "\"Ramp Business Corporation is a financial technology company and is not a bank.\"",
+        "url": "https://ramp.com"
+      }
+    ],
+    "subject": "Expense policy templates",
+    "body": "Ramp already covers cards, expenses, bill pay, travel, and reimbursements.\n\nThat makes expense policy templates for mid-size finance teams a practical content asset. The idea is to give teams a simple way to set controls across the workflows Ramp already supports.\n\nIf helpful, I can send a few template outlines you could turn into a post or gated download. Worth a look?"
+  },
+  {
+    "id": "d02",
+    "company": "Контур",
+    "website": "kontur.ru",
+    "recipient": "Руководитель службы поддержки",
+    "offer": "Автоматизация разбора обращений в поддержку с помощью ИИ",
+    "language": "Russian",
+    "tone": "Direct",
+    "facts": [
+      {
+        "claim": "Kontur develops an ecosystem of more than 70 business services.",
+        "excerpt": "Контур — это экосистема для бизнеса, в которой больше 70 сервисов.",
+        "url": "https://kontur.ru/press/news/company/2021/5/7600"
+      },
+      {
+        "claim": "Kontur’s products cover areas including electronic document exchange, accounting and reporting, retail, HR management, procurement, and information security.",
+        "excerpt": "Электронный документооборот\n\n  Учет и отчетность\n\n  Проверка контрагентов\n\n  Торговля и ритейл\n\n  Автоматизация бизнеса\n\n  Управление HR‑процессами",
+        "url": "https://kontur.ru/products"
+      },
+      {
+        "claim": "Kontur’s services are used by one in three businesses in Russia.",
+        "excerpt": "Контур — экосистема, которой пользуется каждый третий бизнес в России.",
+        "url": "https://kontur.ru/career"
+      },
+      {
+        "claim": "Kontur and Beeline signed a strategic cooperation agreement at SPIEF 2025, including work on Kontur.Talk, its video-conferencing service.",
+        "excerpt": "Билайн и разработчик цифровых сервисов для бизнеса СКБ Контур на Петербургском международном экономическом форуме (ПМЭФ-2025) заключили стратегическое соглашение о сотрудничестве.",
+        "url": "https://kontur.ru/press/news/79427-bilajn_i_kontur_pomogut_rossijskomu_biznesu"
+      },
+      {
+        "claim": "The Beeline partnership is intended to improve Kontur.Talk and help reduce costs for Beeline and other users.",
+        "excerpt": "Всё это позволит повышать качество продукта, улучшать опыт взаимодействия с ним и снижать издержки не только для Билайна, но и для других пользователей Контур.Толк.",
+        "url": "https://kontur.ru/press/news/79427-bilajn_i_kontur_pomogut_rossijskomu_biznesu"
+      },
+      {
+        "claim": "Kontur launched cross-border electronic document exchange between Russia and Uzbekistan, enabling legally binding exchanges with Uzbek partners.",
+        "excerpt": "SKB Kontur has launched cross-border electronic document exchange, allowing Russian companies to exchange legally binding e-documents with Uzbek partners.",
+        "url": "https://www.uzdaily.uz/en/skb-kontur-launches-e-document-exchange-between-russia-uzbekistan"
+      },
+      {
+        "claim": "Kontur reported 11,000+ employees across the country.",
+        "excerpt": "11 000+\n\nСотрудников   \nпо всей стране",
+        "url": "https://kontur.ru/career"
+      }
+    ],
+    "subject": "Обращения по обмену с Узбекистаном",
+    "body": "Запуск юридически значимого обмена электронными документами между Россией и Узбекистаном может добавить в поддержку вопросы по настройке и трансграничным сценариям.\n\nЯ автоматизирую разбор обращений с помощью ИИ: классифицирую запросы и направляю их нужной команде. Если по новому обмену появляются непривычные вопросы, такой разбор поможет обрабатывать их единообразно.\n\nЕсть ли сейчас отдельная категория обращений по настройке обмена с Узбекистаном, которую имеет смысл классифицировать автоматически?"
+  },
+  {
+    "id": "d03",
+    "company": "Ramp",
+    "website": "ramp.com",
+    "recipient": "Head of Content",
+    "offer": "Expense policy templates for mid-size finance teams",
+    "language": "English",
+    "tone": "Direct",
+    "facts": [
+      {
+        "claim": "Ramp provides an integrated financial operations platform used by more than 70,000 businesses for cards, expenses, payments, procurement, travel, banking, and accounting automation.",
+        "excerpt": "More than 70,000 businesses use Ramp to manage corporate cards, expenses, bill payments, procurement, vendor management, travel, banking, and accounting automation in one system.",
+        "url": "https://support.ramp.com/ramp-overview?ref=kellblog.com"
+      },
+      {
+        "claim": "On June 4, 2026, Ramp announced $750 million in primary financing led by ICONIQ, GIC, and Ontario Teachers' Pension Plan at a $44 billion valuation.",
+        "excerpt": "Today, Ramp announced a $750 million primary financing round led by ICONIQ, GIC, and Ontario Teachers' Pension Plan, valuing the company at $44 billion.",
+        "url": "https://www.prnewswire.com/news-releases/ramp-raises-series-f-at-44-billion-valuation-302791103.html"
+      },
+      {
+        "claim": "Ramp announced plans to begin serving companies headquartered in the UK and Europe in summer 2026.",
+        "excerpt": "announced it would start serving companies headquartered in the UK and Europe this summer.",
+        "url": "https://www.prnewswire.com/news-releases/ramp-raises-series-f-at-44-billion-valuation-302791103.html"
+      },
+      {
+        "claim": "Ramp deepened its multi-year Visa partnership to enable AI agents to execute autonomous corporate payments with real-time controls.",
+        "excerpt": "Ramp also deepened its multi-year partnership with Visa to enable AI agents to execute autonomous corporate payments with real-time controls.",
+        "url": "https://www.prnewswire.com/news-releases/ramp-raises-series-f-at-44-billion-valuation-302791103.html"
+      },
+      {
+        "claim": "Ramp recently acquired Billhop for UK/EU payments and Juno for guest travel.",
+        "excerpt": "closed two acquisitions — Billhop (UK/EU payments) and Juno (guest travel)",
+        "url": "https://www.prnewswire.com/news-releases/ramp-raises-series-f-at-44-billion-valuation-302791103.html"
+      },
+      {
+        "claim": "Ramp reported releasing more than 70 products and major features in the months preceding its June 2026 funding announcement.",
+        "excerpt": "In the past few months, Ramp released 70+ products and major features",
+        "url": "https://www.prnewswire.com/news-releases/ramp-raises-series-f-at-44-billion-valuation-302791103.html"
+      },
+      {
+        "claim": "Ramp supports more than $100 billion in annualized card and accounts payable payment volume, with customers saving 5% or more on average.",
+        "excerpt": "Ramp supports more than $100 billion in annualized card and AP payment volume, and customers save 5% or more on average with Ramp.",
+        "url": "https://support.ramp.com/ramp-overview?ref=kellblog.com"
+      },
+      {
+        "claim": "Stanford Athletics named Ramp its official expense management partner in a multi-year partnership announced in May 2026.",
+        "excerpt": "Stanford Athletics and Ramp today announced a multi-year partnership naming Ramp the official expense management partner of Stanford Athletics.",
+        "url": "https://gostanford.com/news/2026/05/26/stanford-athletics-selects-ramp-to-modernize-financial-operations-in-multi-year-partnership"
+      }
+    ],
+    "subject": "Expense policy templates for UK and Europe",
+    "body": "For Ramp’s announced UK and European expansion, expense policy templates could help mid-size finance teams put spending rules in writing before they evaluate software.\n\nIf your content team is developing resources for those markets, I offer expense policy templates for mid-size finance teams. They could give readers a practical starting point, subject to review for regional suitability.\n\nWould you like to see one template to assess whether it could fit your UK and European content plans?"
+  },
+  {
+    "id": "d04",
+    "company": "Apollo",
+    "website": "apollo.io",
+    "recipient": "Head of Data",
+    "offer": "Data enrichment quality audits for sales databases",
+    "language": "English",
+    "tone": "Direct",
+    "facts": [
+      {
+        "claim": "Apollo provides a highly accurate database of people and companies to help users find and connect with ideal customers at scale.",
+        "excerpt": "you can use our highly accurate database of people and companies to find and connect with your ideal customers at scale",
+        "url": "https://knowledge.apollo.io/hc/en-us/articles/4413044057741-Use-Apollo-to-Find-New-Customers"
+      },
+      {
+        "claim": "Apollo lets users refine prospecting with firmographic filters and buying-intent signals.",
+        "excerpt": "Firmographics such as company size, industry, location, annual revenue, and budget can help define the types of companies that you serve best.",
+        "url": "https://knowledge.apollo.io/hc/en-us/articles/4413044057741-Use-Apollo-to-Find-New-Customers"
+      },
+      {
+        "claim": "Apollo uses auto-scores to rank prospects based on fit with an ideal customer profile and prospecting activity.",
+        "excerpt": "Apollo automatically generates scores based on your account and prospecting activity, helping identify and rank the most important business scenarios affecting your ideal customers.",
+        "url": "https://knowledge.apollo.io/hc/en-us/articles/4988048582285-Scoring-Engine-Overview"
+      },
+      {
+        "claim": "Apollo’s Chrome extension works inside Gmail, Google Calendar, LinkedIn, company websites, Salesforce, HubSpot, and other platforms.",
+        "excerpt": "Use the extension to access Apollo data and take action from Gmail, Google Calendar, LinkedIn, company websites, Salesforce, HubSpot, and other supported platforms without switching back and forth between tabs.",
+        "url": "https://knowledge.apollo.io/hc/en-us/articles/4409226637453-Apollo-Chrome-Extension-Overview"
+      },
+      {
+        "claim": "The Chrome extension can save contacts and companies, add prospects to lists and sequences, compose emails, log activities, and push records to a CRM.",
+        "excerpt": "With the Chrome extension, you can save contacts and companies, add prospects to lists and sequences, compose emails, log activities, push records to your CRM",
+        "url": "https://knowledge.apollo.io/hc/en-us/articles/4409226637453-Apollo-Chrome-Extension-Overview"
+      },
+      {
+        "claim": "Apollo positions itself as an AI GTM system combining data, intelligence, and execution, and says it is trusted by millions of users and over 600,000 companies worldwide.",
+        "excerpt": "Apollo is the AI GTM System that uniquely combines data, intelligence, and execution in one loop, helping every business find and win their next customer. Trusted by millions of users and over 600,000 companies worldwide",
+        "url": "https://www.linkedin.com/company/apolloio"
+      },
+      {
+        "claim": "Apollo.io was founded in 2015 and Y Combinator lists its team size as 800.",
+        "excerpt": "Founded:2015\n\nBatch:Winter 2016\n\nTeam Size:800",
+        "url": "https://www.ycombinator.com/companies/apollo-io"
+      }
+    ],
+    "subject": "Enrichment audit for Apollo",
+    "body": "Because Apollo’s filters and auto-scores depend on the underlying people and company records, I thought a quick independent enrichment audit could be relevant.\n\nI help teams check sales databases for coverage, freshness, duplicates, and field-level consistency. If small gaps are creeping into core records, they can affect search results and scoring downstream.\n\nDo you ever run sample audits against source fields to catch that drift, or is that already covered on your side?"
+  },
+  {
+    "id": "d05",
+    "company": "Linear",
+    "website": "linear.app",
+    "recipient": "Head of Product",
+    "offer": "Recruiting and scheduling customer interview participants for product teams",
+    "language": "English",
+    "tone": "Direct",
+    "facts": [
+      {
+        "claim": "Linear provides a product planning tool for managing issues, projects, and product roadmaps.",
+        "excerpt": "Linear is a purpose-built tool for planning and building products. Streamline issues, projects, and product roadmaps.",
+        "url": "https://apps.apple.com/us/app/linear-mobile/id1645587184"
+      },
+      {
+        "claim": "Linear serves over 40,000 product teams, ranging from startups to major enterprises.",
+        "excerpt": "Linear powers over40,000 product teams. From ambitious startups to major enterprises.",
+        "url": "https://linear.app"
+      },
+      {
+        "claim": "Linear supports building and deploying AI agents as teammates, including delegating entire issues end-to-end.",
+        "excerpt": "Build and deploy AI agents that work alongside you as teammates. Work on complex tasks together or delegate entire issues end-to-end.",
+        "url": "https://linear.app"
+      },
+      {
+        "claim": "Linear positions AI workflows at the core of its product for modern teams.",
+        "excerpt": "Purpose-built for modern teams with AI workflows at its core, Linear sets a new standard for planning and building products.",
+        "url": "https://linear.app"
+      },
+      {
+        "claim": "Linear is available on the web, macOS, Windows, iOS, and Android.",
+        "excerpt": "Available for web,  macOS, Windows, iOS, and Android.",
+        "url": "https://linear.app/download"
+      },
+      {
+        "claim": "Linear Mobile complements the desktop app with workflows for users away from their keyboards.",
+        "excerpt": "Linear Mobile. Designed for “away from keyboard” workflows that complement the desktop experience.",
+        "url": "https://linear.app/download"
+      },
+      {
+        "claim": "Linear was founded in 2019.",
+        "excerpt": "Founded in 2019, Linear has become the tool of choice for thousands of high-impact companies to build their products better.",
+        "url": "https://www.linkedin.com/company/linearapp"
+      },
+      {
+        "claim": "Linear was established as a fully remote company.",
+        "excerpt": "Linear was set up as a fully remote company from the start.",
+        "url": "https://www.linkedin.com/company/linearapp"
+      }
+    ],
+    "subject": "Interviews on agent delegation boundaries",
+    "body": "If you're evaluating end-to-end issue delegation to AI agents, customer interviews could help clarify what people would hand off and where they'd want human review.\n\nI recruit and schedule customer interview participants for product teams. That would let your team explore those boundaries without handling the participant coordination.\n\nWould you prioritize interviewing customers already delegating entire issues, or those still deciding what they'd trust an agent to handle?"
+  },
+  {
+    "id": "d06",
+    "company": "Apollo",
+    "website": "apollo.io",
+    "recipient": "Head of Data",
+    "offer": "Data enrichment quality audits for sales databases",
+    "language": "English",
+    "tone": "Direct",
+    "facts": [
+      {
+        "claim": "Apollo is a lead intelligence and sales engagement platform; Y Combinator reports nearly 9,000 paying customers.",
+        "excerpt": "Apollo.io is a lead intelligence and sales engagement platform trusted by nearly 9,000 paying customers",
+        "url": "https://www.ycombinator.com/companies/apollo-io"
+      },
+      {
+        "claim": "Apollo says its platform helps more than 500,000 sales professionals enrich and analyze prospect data.",
+        "excerpt": "help over 500,000 sales professionals enrich and analyze prospects' data",
+        "url": "https://www.ycombinator.com/companies/apollo-io"
+      },
+      {
+        "claim": "Apollo’s Chrome Extension works across tools including Gmail, Google Calendar, LinkedIn, Salesforce, and HubSpot, with features for saving contacts, composing emails, and pushing records to a CRM.",
+        "excerpt": "Use the extension to access Apollo data and take action from Gmail, Google Calendar, LinkedIn, company websites, Salesforce, HubSpot, and other supported platforms",
+        "url": "https://knowledge.apollo.io/hc/en-us/articles/4409226637453-Apollo-Chrome-Extension-Overview"
+      },
+      {
+        "claim": "Apollo automatically scores people and companies based on an organization’s account and prospecting activity, helping teams identify and rank important prospects.",
+        "excerpt": "Apollo automatically generates scores based on your account and prospecting activity, helping identify and rank the most important business scenarios affecting your ideal customers.",
+        "url": "https://knowledge.apollo.io/hc/en-us/articles/4988048582285-Scoring-Engine-Overview"
+      },
+      {
+        "claim": "Apollo’s prospecting guidance recommends using ideal-customer-profile data and search filters, including buying intent and signals, to find prospects.",
+        "excerpt": "Refine your search with more advanced filters like buying intent or signals to find the most promising companies.",
+        "url": "https://knowledge.apollo.io/hc/en-us/articles/4413044057741-Use-Apollo-to-Find-New-Customers"
+      }
+    ],
+    "subject": "Auditing enrichment data quality",
+    "body": "Apollo says its platform helps more than 500,000 sales professionals enrich and analyze prospect data. At that scale, an independent audit could help your data team assess the quality of the records supporting that experience.\n\nI run data enrichment quality audits for sales databases, checking whether records are accurate and usable for prospecting. Would a small audit of one data segment help your team assess that quality?"
+  },
+  {
+    "id": "d07",
+    "company": "Skyeng",
+    "website": "skyeng.ru",
+    "recipient": "Руководитель контента",
+    "offer": "Озвучка учебных материалов профессиональными дикторами",
+    "language": "Russian",
+    "tone": "Warm",
+    "facts": [
+      {
+        "claim": "Skyeng offers online language learning with a teacher and self-study options.",
+        "excerpt": "Изучение английского языка вместе со Skyeng - просто, удобно и интересно. Учи английский с преподавателем или самостоятельно",
+        "url": "https://go.skyeng.ru/km_android"
+      },
+      {
+        "claim": "Skyeng says more than 300,000 learners have mastered a foreign language with it.",
+        "excerpt": "More than  \n300,000 learners [...] have already mastered a foreign language with us",
+        "url": "https://job.skyeng.ru/talks"
+      },
+      {
+        "claim": "Skyeng’s learning platform uses AI personalization to tailor materials to each student’s interests.",
+        "excerpt": "Our system helps you create materials tailored to each student’s interests.",
+        "url": "https://job.skyeng.ru/talks"
+      },
+      {
+        "claim": "Skyeng says its platform is built on more than 200 microservices.",
+        "excerpt": "200+   \nмикросервисов в основе платформы",
+        "url": "https://job.skyeng.ru/products"
+      },
+      {
+        "claim": "Skyeng offers students flexible lesson scheduling and lets them freeze their progress if they need a break.",
+        "excerpt": "Если захотите отдохнуть, в личном кабинете можно заморозить прогресс и вернуться к обучению, когда будете готовы.",
+        "url": "https://skyeng.ru"
+      },
+      {
+        "claim": "Skyeng’s individual teacher-led lessons and group conversation clubs last 50 minutes.",
+        "excerpt": "50 минут длятся индивидуальные занятия с преподавателем и в групповых разговорных клубах.",
+        "url": "https://skyeng.ru"
+      },
+      {
+        "claim": "Skyeng offers an ecosystem that includes teacher-led lessons, language coaching, practice tools, conversation clubs, and an oral-practice chatbot.",
+        "excerpt": "Вы платите за один курс, а получаете целую экосистему продуктов: занятия с преподавателем и языковым тренером, тренажёры, разговорные клубы и чат‑бот для устной практики",
+        "url": "https://wwwskyeng.ru"
+      }
+    ],
+    "subject": "Аудиоверсии для самостоятельной практики",
+    "body": "Здравствуйте.\n\nУ Skyeng есть самостоятельные форматы обучения наряду с занятиями с преподавателем. Если часть материалов для самостоятельной работы пока не озвучена или требует обновления, аудиоверсии могли бы помочь ученикам практиковать понимание речи на слух.\n\nЯ предлагаю озвучку учебных материалов профессиональными дикторами, чтобы ученики могли тренировать восприятие иностранной речи на слух и вне занятий.\n\nПодскажите, есть ли у вас сейчас материалы для самостоятельной работы, которым в первую очередь пригодилась бы аудиоверсия?"
+  },
+  {
+    "id": "d08",
+    "company": "Linear",
+    "website": "linear.app",
+    "recipient": "Head of Product",
+    "offer": "Recruiting and scheduling customer interview participants for product teams",
+    "language": "English",
+    "tone": "Direct",
+    "facts": [
+      {
+        "claim": "Linear says it powers over 40,000 product teams.",
+        "excerpt": "\"Linear powers over40,000 product teams.\"",
+        "url": "https://linear.app"
+      },
+      {
+        "claim": "Linear says it is designed for workflows shared by humans and agents, including drafting PRDs and pushing PRs.",
+        "excerpt": "\"Designed for workflows shared by humans and agents. From drafting PRDs to pushing PRs.\"",
+        "url": "https://linear.app"
+      },
+      {
+        "claim": "Linear is available on web, macOS, Windows, iOS, and Android.",
+        "excerpt": "\"Available for web,  macOS, Windows, iOS, and Android.\"",
+        "url": "https://linear.app/download"
+      },
+      {
+        "claim": "Linear Mobile is a companion app for away-from-keyboard workflows, including filing issues and receiving notifications.",
+        "excerpt": "\"Linear Mobile is a companion to the Linear desktop app, designed for on-demand workflows when you are away from your keyboard: • File issues on-the-go\"",
+        "url": "https://apps.apple.com/us/app/linear-mobile/id1645587184"
+      },
+      {
+        "claim": "Linear is an issue tracking and project management tool focused on product teams.",
+        "excerpt": "\"we are building an issue tracking and project management tool\"",
+        "url": "https://www.linkedin.com/company/linearapp"
+      },
+      {
+        "claim": "Linear says it is used by thousands of high-impact companies.",
+        "excerpt": "\"has become the tool of choice for thousands of high-impact companies\"",
+        "url": "https://www.linkedin.com/company/linearapp"
+      }
+    ],
+    "subject": "Customer interview logistics",
+    "body": "Linear already serves 40,000+ product teams, so I wondered if customer interview recruiting and scheduling is still manual on your side.\n\nLinear is built for issue tracking, PRDs, and shared human-plus-agent workflows. If your product team is validating those areas with customers, I can recruit participants and schedule the sessions.\n\nThat would keep the logistics off your team.\n\nWould you want help with recruiting and scheduling customer interviews?"
+  },
+  {
+    "id": "d09",
+    "company": "Skyeng",
+    "website": "skyeng.ru",
+    "recipient": "Руководитель контента",
+    "offer": "Озвучка учебных материалов профессиональными дикторами",
+    "language": "Russian",
+    "tone": "Warm",
+    "facts": [
+      {
+        "claim": "Skyeng says it provides a full learning ecosystem, not just lessons, including a teacher, a language coach, trainers, conversation clubs, and a chat bot for speaking practice.",
+        "excerpt": "Вы платите за один курс, а получаете целую экосистему продуктов: занятия с преподавателем и языковым тренером, тренажёры, разговорные клубы и чат‑бот для устной практики",
+        "url": "https://wwwskyeng.ru"
+      },
+      {
+        "claim": "Skyeng says its model uses AI to make learning more accessible, faster, and more effective for both students and teachers.",
+        "excerpt": "Мы не просто внедряем новые технологии, а делаем обучение доступнее, быстрее и эффективнее — как для ученика, так и для преподавателя",
+        "url": "https://skyeng.ru"
+      },
+      {
+        "claim": "Skyeng lets students schedule lessons flexibly, including mornings, lunchtime, evenings, or even midnight, and pause progress if needed.",
+        "excerpt": "Обучение можно запланировать в любое время, когда это удобно: утром, в обед, вечером после работы и даже в полночь. ... Если захотите отдохнуть, в личном кабинете можно заморозить прогресс",
+        "url": "https://skyeng.ru"
+      },
+      {
+        "claim": "Skyeng says individual lessons and group conversation clubs last 50 minutes, while some English courses include 15-minute speaking meetings with native-speaker teachers.",
+        "excerpt": "50 минут длятся индивидуальные занятия с преподавателем и в групповых разговорных клубах.   На некоторых курсах английского есть 15‑минутные разговорные встречи с преподавателями — носителями языка.",
+        "url": "https://skyeng.ru"
+      },
+      {
+        "claim": "Skyeng says it has more than 300,000 learners and is one of the leading players in online education across Russia and the CIS.",
+        "excerpt": "Skyeng is one of the leading players in online education across Russia and the CIS\\\n\n\\ According to Smart Ranking, 2025\n\nglobally approved\n\nUnique educational model\n\nBuilt to international standards, focused on practical language skills\n\nMore than  \n300,000 learners",
+        "url": "https://job.skyeng.ru/talks"
+      }
+    ],
+    "subject": "Аудио для материалов Skyeng",
+    "body": "Здравствуйте.\n\nУ Skyeng обучение уже выглядит как формат «в любое время суток»: уроки можно ставить утром, днем, вечером и даже ночью, а вокруг них есть целая экосистема. Если у вас есть материалы для самоподготовки, профессиональная озвучка могла бы добавить к ним удобный аудиоканал — для повторения в дороге или между делами.\n\nЯ занимаюсь озвучкой учебных материалов профессиональными дикторами. Подскажете, есть ли у вас сейчас модуль или курс, который было бы логично попробовать перевести в аудио?"
+  },
+  {
+    "id": "d10",
+    "company": "Linear",
+    "website": "linear.app",
+    "recipient": "Head of Product",
+    "offer": "Recruiting and scheduling customer interview participants for product teams",
+    "language": "English",
+    "tone": "Direct",
+    "facts": [
+      {
+        "claim": "Linear provides a product-development tool for planning and building products, with AI workflows at its core.",
+        "excerpt": "Purpose-built for modern teams with AI workflows at its core, Linear sets a new standard for planning and building products.",
+        "url": "https://linear.app"
+      },
+      {
+        "claim": "Linear says it powers more than 40,000 product teams, ranging from startups to major enterprises.",
+        "excerpt": "Linear powers over40,000 product teams. From ambitious startups to major enterprises.",
+        "url": "https://linear.app"
+      },
+      {
+        "claim": "Linear is designed for workflows shared by people and AI agents, including drafting PRDs and pushing PRs.",
+        "excerpt": "Designed for workflows shared by humans and agents. From drafting PRDs to pushing PRs.",
+        "url": "https://linear.app"
+      },
+      {
+        "claim": "Linear offers its product on web, macOS, Windows, iOS, and Android.",
+        "excerpt": "Available for web,  macOS, Windows, iOS, and Android.",
+        "url": "https://linear.app/download"
+      },
+      {
+        "claim": "Linear’s mobile app supports filing issues, following work updates, receiving notifications, and updating issues, projects, and documents.",
+        "excerpt": "File issues on-the-go • Stay up-to-date on your most important streams of work • Get instant notifications about important updates • Update issues, projects, and documents from anywhere",
+        "url": "https://apps.apple.com/us/app/linear-mobile/id1645587184"
+      },
+      {
+        "claim": "Linear names OpenAI and Ramp employees among its customer advocates.",
+        "excerpt": "Gabriel PealStaff Software Engineer, OpenAIOur speed is intense and Linear helps us be action biased.",
+        "url": "https://linear.app"
+      }
+    ],
+    "subject": "Customer input on agent workflows",
+    "body": "Since Linear’s workflows are designed for people and AI agents to work together, I wondered how you’re gathering customer input on where that collaboration works best.\n\nI recruit and schedule customer interview participants for product teams, so teams can hear directly how people use these workflows and where they want agents involved. If you’re looking at this now, would it help to interview a few users specifically about drafting PRDs or pushing PRs?"
+  },
+  {
+    "id": "d11",
+    "company": "ВкусВилл",
+    "website": "vkusvill.ru",
+    "recipient": "Директор по продукту",
+    "offer": "Аудит карточек товаров в мобильном приложении",
+    "language": "Russian",
+    "tone": "Direct",
+    "facts": [
+      {
+        "claim": "ВкусВилл is a brand of healthy food and a retail chain with free delivery.",
+        "excerpt": "«ВкусВилл» — бренд полезных продуктов для здорового питания, сеть магазинов и сервис бесплатной доставки.",
+        "url": "https://vkusvill.ru/history"
+      },
+      {
+        "claim": "The company says it works with over 1,900 partner producers.",
+        "excerpt": "1 900+ производителей стали нашими партнёрами",
+        "url": "https://vkusvill.ru/about"
+      },
+      {
+        "claim": "The company says couriers deliver more than 480,000 orders per day.",
+        "excerpt": "480+ тыс. заказов в день доставляют наши курьеры",
+        "url": "https://vkusvill.ru/about"
+      }
+    ],
+    "subject": "Карточки товаров в приложении",
+    "body": "При 1 900+ партнёрах и 480 000+ заказах в день карточка товара в приложении у вас, вероятно, уже влияет на конверсию.\n\nПредполагаю, что при таком масштабе часть карточек может отличаться по полноте, структуре и визуальной подаче. А это иногда мешает выбору и оформлению заказа.\n\nДелаю аудит карточек товаров в мобильном приложении: смотрю, где теряется внимание, чего не хватает для решения и что можно упростить без переделки всего интерфейса.\n\nИнтересно, если пришлю короткий пример проверки?"
+  },
+  {
+    "id": "d12",
+    "company": "ВкусВилл",
+    "website": "vkusvill.ru",
+    "recipient": "Директор по продукту",
+    "offer": "Аудит карточек товаров в мобильном приложении",
+    "language": "Russian",
+    "tone": "Direct",
+    "facts": [
+      {
+        "claim": "VkusVill is a healthy-food brand, retail store chain and free delivery service.",
+        "excerpt": "«ВкусВилл» — бренд полезных продуктов для здорового питания, сеть магазинов и сервис бесплатной доставки.",
+        "url": "https://vkusvill.ru/history"
+      },
+      {
+        "claim": "VkusVill reports delivering more than 480,000 orders per day.",
+        "excerpt": "480+ тыс.\n\nзаказов в день доставляют наши курьеры",
+        "url": "https://vkusvill.ru/about"
+      },
+      {
+        "claim": "Its official website lists more than 1,537 stores, 264 dark stores and coverage across more than 155 cities.",
+        "excerpt": "| 1 537+ | магазинов |\n| 264+ | даркстора  Что такое даркстор? |\n| 155+ | городов  Карта магазинов |",
+        "url": "https://vkusvill.ru/about"
+      },
+      {
+        "claim": "VkusVill partners with more than 1,900 producers.",
+        "excerpt": "1 900+\n\nпроизводителей стали нашими партнёрами и создают продукты для вас",
+        "url": "https://vkusvill.ru/about"
+      },
+      {
+        "claim": "VkusVill lists more than 4,200 own-brand products, with 85% of its assortment domestically produced and more than 11,200 items available for free delivery.",
+        "excerpt": "| 4 200+ | продуктов под брендом ВкусВилл |\n| 85% | ассортимента отечественного производства |\n| 11 200+ | товаров доступны с нашей бесплатной доставкой |",
+        "url": "https://vkusvill.ru/about"
+      },
+      {
+        "claim": "Its ecosystem includes micro-markets, vending, a B2B business, prepared meal plans and catering.",
+        "excerpt": "Помимо бесплатной доставки, в неё входят микромаркеты, вендинги, B2B-направление, готовые рационы, кейтеринг и многое другое.",
+        "url": "https://vkusvill.ru/history"
+      },
+      {
+        "claim": "VkusVill acquired Anderson, a brand with its own confectionery factory and family café chain, as part of its ecosystem development.",
+        "excerpt": "В связи с этим мы купили «АндерСон» — это уникальный бренд с собственной кондитерской фабрикой и сетью семейных кафе.",
+        "url": "https://vkusvill.ru/history"
+      },
+      {
+        "claim": "VkusVill's delivery app advertises free grocery delivery without a minimum order amount.",
+        "excerpt": "бесплатная доставка продуктов без минимальной суммы",
+        "url": "https://play.google.com/store/apps/details?id=ru.vkusvill&hl=ru"
+      }
+    ],
+    "subject": "Карточка товара для заказа одной позиции",
+    "body": "В приложении «ВкусВилл» доставка бесплатна без минимальной суммы — предлагаю проверить, помогает ли карточка выбрать товар, даже если он будет единственным в заказе.\n\nЯ провожу аудит карточек товаров в мобильном приложении: проверяю, легко ли перед добавлением в корзину найти и понять состав, вес, цену и условия хранения. Если человек приходит за одной позицией, нехватка этих сведений может помешать ему оформить заказ. Результат аудита — список конкретных изменений с приоритетами для проверки в экспериментах.\n\nКакие одну-две категории вы бы выбрали для такой проверки сценария заказа одного товара?"
+  },
+  {
+    "id": "d13",
+    "company": "Контур",
+    "website": "kontur.ru",
+    "recipient": "Руководитель службы поддержки",
+    "offer": "Автоматизация разбора обращений в поддержку с помощью ИИ",
+    "language": "Russian",
+    "tone": "Direct",
+    "facts": [
+      {
+        "claim": "Контур is an ecosystem of business software with more than 70 services/products.",
+        "excerpt": "Контур — это экосистема для бизнеса, в которой больше 70 сервисов.",
+        "url": "https://kontur.ru/press/news/company/2021/5/7600"
+      },
+      {
+        "claim": "СКБ Контур says its key business areas are electronic document exchange, accounting/reporting, electronic signatures, and online cash registers.",
+        "excerpt": "Ключевые направления бизнеса — ЭДО, бухгалтерия, электронная подпись и онлайн-кассы.",
+        "url": "https://kontur.ru/press/news/company/2022/3/8230"
+      },
+      {
+        "claim": "The company says its solutions are used by 2.2 million companies in Russia and abroad.",
+        "excerpt": "а ее решениями пользуются 2,2 млн компаний в России и за рубежом.",
+        "url": "https://kontur.ru/press/news/company/2022/3/8230"
+      },
+      {
+        "claim": "The career page says Контур has 11,000+ employees across the country.",
+        "excerpt": "### 11 000+\n\nСотрудников   \nпо всей стране",
+        "url": "https://kontur.ru/career"
+      },
+      {
+        "claim": "The website positions Контур as a business ecosystem used by every third business in Russia.",
+        "excerpt": "Контур — экосистема, которой пользуется каждый третий бизнес в России.",
+        "url": "https://kontur.ru/career"
+      }
+    ],
+    "subject": "Разбор обращений в Контур",
+    "body": "У вас 70+ сервисов и 2,2 млн компаний-клиентов, поэтому поток в поддержку, вероятно, очень разный по темам и продуктам.\n\nЯ занимаюсь автоматизацией разбора обращений с помощью ИИ: он помогает классифицировать, маршрутизировать и приоритизировать тикеты без ручной сортировки.\n\nЕсли у вас сейчас часть обращений разбирается вручную на первом этапе, кому лучше показать короткий сценарий автоклассификации по продуктам — вам или тому, кто отвечает за маршрутизацию?"
+  },
+  {
+    "id": "d14",
+    "company": "Mercury",
+    "website": "mercury.com",
+    "recipient": "Lifecycle Marketing Lead",
+    "offer": "Onboarding email sequences for startup founders",
+    "language": "English",
+    "tone": "Warm",
+    "facts": [
+      {
+        "claim": "Mercury launched Mercury Books, AI-powered accounting software that categorizes and reconciles transactions as they happen.",
+        "excerpt": "Today, we're launching @Mercury Books. AI-powered accounting software, for your bookkeeper or you, that categorizes and reconciles your transactions the moment they happen.",
+        "url": "https://x.com/mercury"
+      },
+      {
+        "claim": "Mercury serves more than 300,000 customers.",
+        "excerpt": "Today, more than 300,000 customers use Mercury.",
+        "url": "https://mercury.com/blog/annual-letter-2025"
+      },
+      {
+        "claim": "By the end of 2025, 73% of Mercury's new customers came from outside AI or tech startups.",
+        "excerpt": "By the end of 2025, 73% of new customers came from outside the AI or tech startup category,",
+        "url": "https://mercury.com/blog/annual-letter-2025"
+      },
+      {
+        "claim": "One in three U.S. startups uses Mercury, and it onboarded 2.4 times more AI companies in 2025 than in the previous year.",
+        "excerpt": "Today, 1 in 3 U.S. startups use Mercury, including a rapidly growing share of AI companies — in 2025, we onboarded 2.4x more AI companies than the year before.",
+        "url": "https://mercury.com/blog/annual-letter-2025"
+      },
+      {
+        "claim": "Mercury is a fintech company offering banking services through Choice Financial Group and Column N.A., rather than an FDIC-insured bank itself.",
+        "excerpt": "Mercury is a fintech company, not an FDIC-insured bank. Banking services provided through Choice Financial Group and Column N.A., Members FDIC.",
+        "url": "https://mercury.com"
+      },
+      {
+        "claim": "Mercury Insights offers AI-powered cashflow alerts and a chatbot for questions about business finances.",
+        "excerpt": "filter and compare by time periods, get AI-powered cashflow alerts and ask a chatbot questions like “Why did expenses increase this month?”",
+        "url": "https://mercury.com/blog/march-2026-product-updates"
+      },
+      {
+        "claim": "Mercury Bill Pay automates accounts payable, organizing incoming bills by approval status and due date and supporting scheduled ACH, check or wire payments.",
+        "excerpt": "Bills sent to your dedicated inbox are automatically organized by approval status and due date, and can be scheduled for payment via ACH, check, or wire.",
+        "url": "https://support.mercury.com/hc/en-us/articles/28768945847316-Bill-Pay-overview"
+      },
+      {
+        "claim": "Mercury offers unlimited invoicing in its free version, while recurring invoices and ACH debit invoicing require paid plans.",
+        "excerpt": "Customers can create, send, track, and receive payment on as many invoices as they’d like in the free version of Mercury. Advanced invoicing capabilities, such as sending recurring invoices, and invoicing with ACH debit, are available as part of our paid plans.",
+        "url": "https://app.mercury.com/help/mercury-invoicing-overview"
+      }
+    ],
+    "subject": "Founder onboarding for Mercury Books",
+    "body": "Hi,\n\nWith Mercury Books now launched, are you considering a separate onboarding email sequence for startup founders?\n\nMy guess is that some founders may need help figuring out where it fits into their existing accounting workflow before getting started.\n\nI write onboarding email sequences for startup founders. For this launch, that could mean a short series that helps eligible founders understand the fit and take their first steps, rather than trying to cover everything in one announcement.\n\nCould I send you a three-email outline focused on that workflow question?"
+  },
+  {
+    "id": "d15",
+    "company": "Ramp",
+    "website": "ramp.com",
+    "recipient": "Head of Content",
+    "offer": "Expense policy templates for mid-size finance teams",
+    "language": "English",
+    "tone": "Direct",
+    "facts": [
+      {
+        "claim": "Ramp is a financial operations platform that helps companies spend less and move faster.",
+        "excerpt": "Ramp is a financial operations platform that helps companies spend less and move faster.",
+        "url": "https://support.ramp.com/ramp-overview?ref=kellblog.com"
+      },
+      {
+        "claim": "Ramp says more than 70,000 businesses use it for cards, expenses, bill payments, procurement, vendor management, travel, banking, and accounting automation.",
+        "excerpt": "More than 70,000 businesses use Ramp to manage corporate cards, expenses, bill payments, procurement, vendor management, travel, banking, and accounting automation in one system.",
+        "url": "https://support.ramp.com/ramp-overview?ref=kellblog.com"
+      },
+      {
+        "claim": "Ramp says customers have saved more than $12 billion and 27.5 million hours using its controls, automation, and savings insights.",
+        "excerpt": "Ramp customers have saved more than $12 billion and 27.5 million hours by using Ramp's controls, automation, and savings insights.",
+        "url": "https://support.ramp.com/ramp-overview?ref=kellblog.com"
+      },
+      {
+        "claim": "Ramp supports more than $100 billion in annualized card and AP payment volume.",
+        "excerpt": "Ramp supports more than $100 billion in annualized card and AP payment volume,",
+        "url": "https://support.ramp.com/ramp-overview?ref=kellblog.com"
+      },
+      {
+        "claim": "Ramp’s core product includes cards, Bill Pay, accounting, travel, and reimbursements.",
+        "excerpt": "Tour Ramp and its main products: cards, Bill Pay, accounting, travel, and reimbursements.",
+        "url": "https://support.ramp.com/ramp-overview?ref=kellblog.com"
+      },
+      {
+        "claim": "Ramp’s site says it is a financial technology company and not a bank.",
+        "excerpt": "Ramp Business Corporation is a financial technology company and is not a bank.",
+        "url": "https://ramp.com"
+      },
+      {
+        "claim": "Ramp is based at 28 West 23rd Street, Floor 2, New York, NY 10010.",
+        "excerpt": "Ramp Business Corporation  28 West 23rd Street, Floor 2  New York, NY 10010",
+        "url": "https://ramp.com"
+      },
+      {
+        "claim": "Ramp says it has more than 70,000 businesses simplifying their finances with Ramp.",
+        "excerpt": "Join the 70,000+ businesses simplifying their finances with Ramp.",
+        "url": "https://ramp.com"
+      }
+    ],
+    "subject": "Expense policy templates",
+    "body": "Since Ramp’s core product spans cards, bill pay, accounting, travel, and reimbursements, expense policy content seems like a natural fit for your audience.\n\nI put together expense policy templates for mid-size finance teams. They help teams define what’s allowed on cards, how reimbursements work, and where travel rules usually get stuck.\n\nIf you’re building practical content for finance buyers, would a template focused on card, travel, and reimbursement policies be worth testing?"
+  },
+  {
+    "id": "d16",
+    "company": "ВкусВилл",
+    "website": "vkusvill.ru",
+    "recipient": "Директор по продукту",
+    "offer": "Аудит карточек товаров в мобильном приложении",
+    "language": "Russian",
+    "tone": "Direct",
+    "facts": [
+      {
+        "claim": "ВкусВилл reports more than 1,900 producer partners.",
+        "excerpt": "1 900+\n\nпроизводителей стали нашими партнёрами и создают продукты для вас",
+        "url": "https://vkusvill.ru/about"
+      },
+      {
+        "claim": "ВкусВилл reports operating more than 1,537 stores and 264 dark stores across 155+ cities.",
+        "excerpt": "1 537+ | магазинов |\n| 264+ | даркстора  Что такое даркстор? |\n| 155+ | городов",
+        "url": "https://vkusvill.ru/about"
+      },
+      {
+        "claim": "ВкусВилл says its couriers deliver more than 480,000 orders per day.",
+        "excerpt": "480+ тыс.\n\nзаказов в день доставляют наши курьеры",
+        "url": "https://vkusvill.ru/about"
+      },
+      {
+        "claim": "ВкусВилл offers B2B services, including micromarkets, vending, ready-made meal plans, and catering.",
+        "excerpt": "Помимо бесплатной доставки, в неё входят микромаркеты, вендинги, B2B-направление, готовые рационы, кейтеринг и многое другое.",
+        "url": "https://vkusvill.ru/history"
+      },
+      {
+        "claim": "ВкусВилл’s B2B service offers free delivery in 1–2 hours, a wide assortment, and deferred payment within a weekly budget, according to a customer testimonial on its B2B page.",
+        "excerpt": "на каждую неделю у нас есть бюджет, в рамках которого мы можем заказывать продукты с отсрочкой платежа. ВкусВилл предоставляет действительно широкий ассортимент качественных продуктов с бесплатной доставкой за 1-2 часа.",
+        "url": "https://vkusvill.ru/b2b"
+      },
+      {
+        "claim": "ВкусВилл reports more than 4,200 products under its own brand, with 85% of its assortment produced domestically.",
+        "excerpt": "| 4 200+ | продуктов под брендом ВкусВилл |\n| 85% | ассортимента отечественного производства",
+        "url": "https://vkusvill.ru/about"
+      },
+      {
+        "claim": "ВкусВилл says its product quality process includes nine verification steps.",
+        "excerpt": "9\n\nшагов проверки делают продукты ВкусВилл не только вкусными, но и качественными",
+        "url": "https://vkusvill.ru/about"
+      },
+      {
+        "claim": "ВкусВилл says it acquired АндерСон, a brand with its own confectionery factory and family café network.",
+        "excerpt": "мы купили «АндерСон» — это уникальный бренд с собственной кондитерской фабрикой и сетью семейных кафе.",
+        "url": "https://vkusvill.ru/history"
+      }
+    ],
+    "subject": "Карточки собственной марки",
+    "body": "У ВкусВилла больше 4 200 товаров под собственной маркой. Если при таком ассортименте важно понимать, где карточки представлены непоследовательно или им не хватает информации, аудит поможет найти конкретные точки улучшения и расставить их по приоритету.\n\nЯ провожу аудит карточек товаров в мобильном приложении: проверяю полноту и единообразие представления и отмечаю, что стоит исправить в первую очередь.\n\nЕсть ли смысл начать с выборки карточек собственной марки из нескольких категорий?"
+  },
+  {
+    "id": "d17",
+    "company": "Контур",
+    "website": "kontur.ru",
+    "recipient": "Руководитель службы поддержки",
+    "offer": "Автоматизация разбора обращений в поддержку с помощью ИИ",
+    "language": "Russian",
+    "tone": "Direct",
+    "facts": [
+      {
+        "claim": "Kontur develops a business-product ecosystem whose core areas include electronic document exchange, accounting, electronic signatures and online cash registers.",
+        "excerpt": "Ключевые направления бизнеса — ЭДО, бухгалтерия, электронная подпись и онлайн-кассы.",
+        "url": "https://kontur.ru/press/news/company/2022/3/8230"
+      },
+      {
+        "claim": "Kontur and Beeline signed a strategic cooperation agreement at SPIEF 2025.",
+        "excerpt": "Билайн и разработчик цифровых сервисов для бизнеса СКБ Контур на Петербургском международном экономическом форуме (ПМЭФ-2025) заключили стратегическое соглашение о сотрудничестве.",
+        "url": "https://kontur.ru/press/news/79427-bilajn_i_kontur_pomogut_rossijskomu_biznesu"
+      },
+      {
+        "claim": "The Beeline cooperation includes developing Kontur's business ecosystem, particularly its Kontur.Talk videoconferencing service.",
+        "excerpt": "Соглашение затронет в том числе развитие экосистемы для бизнеса Контур — в частности сервиса видеоконференций Контур.Толк.",
+        "url": "https://kontur.ru/press/news/79427-bilajn_i_kontur_pomogut_rossijskomu_biznesu"
+      },
+      {
+        "claim": "Kontur launched cross-border electronic document exchange enabling Russian companies to exchange legally binding documents with Uzbek partners.",
+        "excerpt": "SKB Kontur has launched cross-border electronic document exchange, allowing Russian companies to exchange legally binding e-documents with Uzbek partners.",
+        "url": "https://www.uzdaily.uz/en/skb-kontur-launches-e-document-exchange-between-russia-uzbekistan"
+      },
+      {
+        "claim": "Dmitry Mramorov was announced to return as Kontur's chief executive from April 19, 2026, replacing Mikhail Srodnykh.",
+        "excerpt": "С 19 апреля 2026 года компанию вновь возглавит Дмитрий Мраморов, который руководил ею с 2009 по 2019 год. На этом посту он сменит Михаила Сродных, занимавшего кресло с 2022 года.",
+        "url": "https://ura.news/news/1053086533"
+      },
+      {
+        "claim": "Kontur's careers page lists more than 70 products in its business ecosystem and more than 11,000 employees nationwide.",
+        "excerpt": "### 70+\n\nПродуктов в экосистеме для бизнеса\n\n### 11 000+\n\nСотрудников   \nпо всей стране",
+        "url": "https://kontur.ru/career"
+      },
+      {
+        "claim": "Kontur says its ecosystem is used by every third business in Russia.",
+        "excerpt": "Контур — экосистема, которой пользуется каждый третий бизнес в России.",
+        "url": "https://kontur.ru/career"
+      },
+      {
+        "claim": "Kontur and Documentolog launched cross-border electronic document exchange between Russia and Kazakhstan.",
+        "excerpt": "Контур и Documentolog запустили трансграничный ЭДО между Россией и Казахстаном",
+        "url": "https://kontur.ru/press/news/79427-bilajn_i_kontur_pomogut_rossijskomu_biznesu"
+      }
+    ],
+    "subject": "Разбор обращений по ЭДО с Узбекистаном",
+    "body": "Если после запуска ЭДО с Узбекистаном обращения идут в общий поток поддержки, их первичный разбор можно автоматизировать.\n\nЯ предлагаю автоматизацию разбора обращений с помощью ИИ: выделять запросы по этому направлению, определять тему и направлять подходящим специалистам. Если сейчас это делают вручную, такой подход мог бы сократить время на сортировку и передачу обращений.\n\nПодскажите, обращения по ЭДО с Узбекистаном сейчас выделяются в отдельную категорию или разбираются вместе с остальными?"
+  },
+  {
+    "id": "d18",
+    "company": "Ramp",
+    "website": "ramp.com",
+    "recipient": "Head of Content",
+    "offer": "Expense policy templates for mid-size finance teams",
+    "language": "English",
+    "tone": "Direct",
+    "facts": [
+      {
+        "claim": "Ramp offers a financial operations platform covering corporate cards, expenses, bill payments, procurement, vendor management, travel, banking, and accounting automation.",
+        "excerpt": "More than 70,000 businesses use Ramp to manage corporate cards, expenses, bill payments, procurement, vendor management, travel, banking, and accounting automation in one system.",
+        "url": "https://support.ramp.com/ramp-overview?ref=kellblog.com"
+      },
+      {
+        "claim": "Ramp reports supporting more than $100 billion in annualized card and AP payment volume, while customers save 5% or more on average.",
+        "excerpt": "Ramp supports more than $100 billion in annualized card and AP payment volume, and customers save 5% or more on average with Ramp.",
+        "url": "https://support.ramp.com/ramp-overview?ref=kellblog.com"
+      },
+      {
+        "claim": "Ramp announced a $750 million financing round in June 2026 at a $44 billion valuation.",
+        "excerpt": "Today, Ramp announced a $750 million primary financing round led by ICONIQ, GIC, and Ontario Teachers' Pension Plan, valuing the company at $44 billion.",
+        "url": "https://www.prnewswire.com/news-releases/ramp-raises-series-f-at-44-billion-valuation-302791103.html"
+      },
+      {
+        "claim": "Ramp said it released more than 70 products and major features in the preceding few months and planned to begin serving companies headquartered in the UK and Europe that summer.",
+        "excerpt": "In the past few months, Ramp released 70+ products and major features, closed two acquisitions — Billhop (UK/EU payments) and Juno (guest travel) — and announced it would start serving companies headquartered in the UK and Europe this summer.",
+        "url": "https://www.prnewswire.com/news-releases/ramp-raises-series-f-at-44-billion-valuation-302791103.html"
+      },
+      {
+        "claim": "Ramp announced a multi-year partnership with Stanford Athletics as its official expense management partner.",
+        "excerpt": "Stanford Athletics and Ramp today announced a multi-year partnership naming Ramp the official expense management partner of Stanford Athletics.",
+        "url": "https://gostanford.com/news/2026/05/26/stanford-athletics-selects-ramp-to-modernize-financial-operations-in-multi-year-partnership"
+      },
+      {
+        "claim": "Eventbrite CEO Julia Hartz is featured as a Ramp customer and says Ramp brought value to its finance team and global employee base.",
+        "excerpt": "Ramp has brought tangible value to our finance team, our global employee base, and to me personally. I am obsessed with Ramp.",
+        "url": "https://ramp.com/customers"
+      }
+    ],
+    "subject": "Expense policy templates",
+    "body": "I create expense policy templates for mid-size finance teams. They could give Ramp’s content team a practical resource alongside its expanding expense tools.\n\nRamp said it released more than 70 products and major features in recent months and planned to begin serving companies headquartered in the UK and Europe that summer. If templates tailored to those companies fit your content plans, would you be open to reviewing a one-page outline?"
+  },
+  {
+    "id": "d19",
+    "company": "Linear",
+    "website": "linear.app",
+    "recipient": "Head of Product",
+    "offer": "Recruiting and scheduling customer interview participants for product teams",
+    "language": "English",
+    "tone": "Direct",
+    "facts": [
+      {
+        "claim": "Linear says it powers more than 40,000 product teams, from startups to enterprises.",
+        "excerpt": "Linear powers over40,000 product teams. From ambitious startups to major enterprises.",
+        "url": "https://linear.app"
+      },
+      {
+        "claim": "Linear is positioned as AI-native, with workflows designed for humans and agents.",
+        "excerpt": "Designed for workflows shared by humans and agents. From drafting PRDs to pushing PRs.",
+        "url": "https://linear.app"
+      },
+      {
+        "claim": "Linear offers desktop, web, and mobile apps across major platforms.",
+        "excerpt": "Available for web,  macOS, Windows, iOS, and Android.",
+        "url": "https://linear.app/download"
+      },
+      {
+        "claim": "Linear Mobile is meant as a companion to the desktop app for when users are away from their keyboard.",
+        "excerpt": "Linear Mobile is a companion to the Linear desktop app, designed for on-demand workflows when you are away from your keyboard:",
+        "url": "https://apps.apple.com/us/app/linear-mobile/id1645587184"
+      },
+      {
+        "claim": "Linear was founded in 2019 and is a fully remote company.",
+        "excerpt": "Founded in 2019, Linear has become the tool of choice for thousands of high-impact companies to build their products better. Linear was set up as a fully remote company from the start.",
+        "url": "https://www.linkedin.com/company/linearapp"
+      }
+    ],
+    "subject": "Interview recruiting for Linear",
+    "body": "Hi,\n\nLinear’s 40,000+ product teams look like a strong pool for customer interviews.\n\nI help product teams recruit and schedule the right participants for interviews. If your team runs regular discovery or roadmap conversations, my guess is the time sink is still finding the right users and getting them on the calendar.\n\nDo you already have a standard process for turning that user base into interview participants, or is it still handled case by case?"
+  },
+  {
+    "id": "d20",
+    "company": "Apollo",
+    "website": "apollo.io",
+    "recipient": "Head of Data",
+    "offer": "Data enrichment quality audits for sales databases",
+    "language": "English",
+    "tone": "Direct",
+    "facts": [
+      {
+        "claim": "Apollo.io is a lead intelligence and sales engagement platform for B2B teams.",
+        "excerpt": "\"Apollo.io is a lead intelligence and sales engagement platform\"",
+        "url": "https://www.ycombinator.com/companies/apollo-io"
+      },
+      {
+        "claim": "Apollo.io says it is trusted by nearly 9,000 paying customers.",
+        "excerpt": "\"trusted by nearly 9,000 paying customers\"",
+        "url": "https://www.ycombinator.com/companies/apollo-io"
+      },
+      {
+        "claim": "Apollo.io says its platform helps over 500,000 sales professionals enrich and analyze prospect data.",
+        "excerpt": "\"help over 500,000 sales professionals enrich and analyze prospects' data\"",
+        "url": "https://www.ycombinator.com/companies/apollo-io"
+      },
+      {
+        "claim": "Apollo.io offers a highly accurate database of people and companies to find and connect with ideal customers at scale.",
+        "excerpt": "\"use our highly accurate database of people and companies to find and connect with your ideal customers at scale\"",
+        "url": "https://knowledge.apollo.io/hc/en-us/articles/4413044057741-Use-Apollo-to-Find-New-Customers"
+      },
+      {
+        "claim": "Apollo.io’s Chrome extension works inside Gmail, Google Calendar, LinkedIn, company websites, Salesforce, and HubSpot.",
+        "excerpt": "\"from Gmail, Google Calendar, LinkedIn, company websites, Salesforce, HubSpot\"",
+        "url": "https://knowledge.apollo.io/hc/en-us/articles/4409226637453-Apollo-Chrome-Extension-Overview"
+      },
+      {
+        "claim": "Apollo.io supports sales workflows such as saving contacts and companies, adding prospects to lists and sequences, composing emails, and pushing records to a CRM.",
+        "excerpt": "\"save contacts and companies, add prospects to lists and sequences, compose emails, log activities, push records to your CRM\"",
+        "url": "https://knowledge.apollo.io/hc/en-us/articles/4409226637453-Apollo-Chrome-Extension-Overview"
+      },
+      {
+        "claim": "Apollo.io automatically generates prospect scores based on a company website and prospecting activity.",
+        "excerpt": "\"Apollo generates auto-scores based on your company website and prospecting activity\"",
+        "url": "https://knowledge.apollo.io/hc/en-us/articles/4988048582285-Scoring-Engine-Overview"
+      }
+    ],
+    "subject": "Audit for enrichment data",
+    "body": "Apollo helps 500,000+ sales professionals enrich and analyze prospect data, and those records move into CRM, email, LinkedIn, and scoring workflows.\n\nI’m reaching out because a data enrichment quality audit could benchmark accuracy, completeness, and freshness before those records reach customer-facing systems.\n\nIf your team already tracks enrichment quality, this could be a second check for drift across sources and use cases. If not, it may surface gaps faster.\n\nOpen to a short conversation?"
+  },
+  {
+    "id": "d21",
+    "company": "ВкусВилл",
+    "website": "vkusvill.ru",
+    "recipient": "Директор по продукту",
+    "offer": "Аудит карточек товаров в мобильном приложении",
+    "language": "Russian",
+    "tone": "Direct",
+    "facts": [
+      {
+        "claim": "ВкусВилл is a brand of healthy food and a retail chain with free delivery.",
+        "excerpt": "«ВкусВилл» — бренд полезных продуктов для здорового питания, сеть магазинов и сервис бесплатной доставки.",
+        "url": "https://vkusvill.ru/history"
+      },
+      {
+        "claim": "The company serves customers who want safe products with quality and honest ingredients.",
+        "excerpt": "Мы работаем для тех, кто выбирает для себя и близких безопасные продукты, качественные и с честным составом.",
+        "url": "https://vkusvill.ru/history"
+      },
+      {
+        "claim": "ВкусВилл has more than 1,900 partner producers.",
+        "excerpt": "1 900+  производителей стали нашими партнёрами и создают продукты для вас",
+        "url": "https://vkusvill.ru/about"
+      },
+      {
+        "claim": "The assortment includes more than 4,200 products under the ВкусВилл brand and 85% of the assortment is domestically produced.",
+        "excerpt": "4 200+ | продуктов под брендом ВкусВилл |\n| 85% | ассортимента отечественного производства |",
+        "url": "https://vkusvill.ru/about"
+      },
+      {
+        "claim": "The company positions itself as a leader in grocery delivery and says couriers deliver 480k+ orders per day.",
+        "excerpt": "Лидеры в доставке продуктов\n\n9 из 10\n\nпокупателей оценивают доставку на отлично\n\n480+ тыс.\n\nзаказов в день доставляют наши курьеры",
+        "url": "https://vkusvill.ru/about"
+      },
+      {
+        "claim": "The product catalog spans grocery, ready meals, flowers, pharmacy, catering, kids' products, pets, cosmetics, and more.",
+        "excerpt": "Готовая еда\n Сладости и десерты\n ...\n Свежие цветы\n Здоровье\n Добрая полка\n Подарочные карты",
+        "url": "https://vkusvill.ru/goods"
+      }
+    ],
+    "subject": "Карточки в разных категориях",
+    "body": "У ВкусВилла в приложении очень широкий каталог: 4 200+ товаров под брендом и много категорий — от продуктов до аптеки и детских товаров.\n\nИз-за этого карточки, похоже, должны одинаково хорошо работать и для еды, и для смежных категорий. Я делаю аудит карточек товаров в мобильных приложениях и смотрю, где не хватает единообразия, полноты данных и понятной подачи.\n\nС какой категории вам было бы полезнее начать проверку карточек — с еды, готовой еды или аптечных товаров?"
+  },
+  {
+    "id": "d22",
+    "company": "Mercury",
+    "website": "mercury.com",
+    "recipient": "Lifecycle Marketing Lead",
+    "offer": "Onboarding email sequences for startup founders",
+    "language": "English",
+    "tone": "Warm",
+    "facts": [
+      {
+        "claim": "Mercury says more than 300,000 customers use its product.",
+        "excerpt": "\"Today, more than 300,000 customers use Mercury.\"",
+        "url": "https://mercury.com/blog/annual-letter-2025"
+      },
+      {
+        "claim": "Mercury says 1 in 3 U.S. startups use its platform.",
+        "excerpt": "\"Today, 1 in 3 U.S. startups use Mercury\"",
+        "url": "https://mercury.com/blog/annual-letter-2025"
+      },
+      {
+        "claim": "Mercury has expanded beyond startups, with 73% of new customers in 2025 coming from outside the AI or tech startup category.",
+        "excerpt": "\"By the end of 2025, 73% of new customers came from outside the AI or tech startup category\"",
+        "url": "https://mercury.com/blog/annual-letter-2025"
+      },
+      {
+        "claim": "Mercury operates with a partner bank business model and provides banking services through direct integrations with partner banks insured by the FDIC.",
+        "excerpt": "\"we’ve built Mercury with a partner bank business model\"",
+        "url": "https://www.mercury.com/how-mercury-works"
+      },
+      {
+        "claim": "Mercury Bill Pay is an automated accounts payable solution that organizes bills by approval status and due date and can schedule payments by ACH, check, or wire.",
+        "excerpt": "\"Mercury Bill Pay is an automated accounts payable solution\"",
+        "url": "https://support.mercury.com/hc/en-us/articles/28768945847316-Bill-Pay-overview"
+      },
+      {
+        "claim": "Mercury offers invoicing in a free version, with paid plans for advanced features like recurring invoices and ACH debit.",
+        "excerpt": "\"Customers can create, send, track, and receive payment on as many invoices as they’d like in the free version of Mercury.\"",
+        "url": "https://app.mercury.com/help/mercury-invoicing-overview"
+      },
+      {
+        "claim": "Mercury offers personal banking features including a 3.50% APY savings account, joint accounts, and unlimited free USD wires.",
+        "excerpt": "\"Level up your personal finances with 3.50% APY on your savings account, joint accounts, unlimited free USD wires, and more.\"",
+        "url": "https://mercury.com"
+      },
+      {
+        "claim": "Mercury says it provides banking, credit cards, and software in one product for companies and entrepreneurs.",
+        "excerpt": "\"With banking, credit cards, and software, Mercury helps more than 200K ambitious companies and entrepreneurs\"",
+        "url": "https://www.trustpilot.com/review/mercury.com"
+      }
+    ],
+    "subject": "Founders and first value",
+    "body": "Mercury is now bringing in most new customers from outside AI/tech startups, even though 1 in 3 U.S. startups still use the platform.\n\nGiven that, I wondered if the first-run experience needs to guide founder users a bit faster to their first value across banking, cards, Bill Pay, invoicing, and savings. I help teams build short onboarding email sequences that speak to startup founders, map the setup path, and set up the next best action by segment.\n\nWould a quick look at that be useful?"
+  },
+  {
+    "id": "d23",
+    "company": "Skyeng",
+    "website": "skyeng.ru",
+    "recipient": "Руководитель контента",
+    "offer": "Озвучка учебных материалов профессиональными дикторами",
+    "language": "Russian",
+    "tone": "Warm",
+    "facts": [
+      {
+        "claim": "Skyeng is an online language school offering one-to-one lessons with tutors.",
+        "excerpt": "В онлайн-школе Skyeng можно учить языки с репетитором один на один",
+        "url": "https://play.google.com/store/apps/details?id=skyeng.words.prod&hl=ru"
+      },
+      {
+        "claim": "Skyeng uses AI to help teachers create lesson materials tailored to each student's interests.",
+        "excerpt": "Smart AI personalization\n\nOur system helps you create materials tailored to each student’s interests.",
+        "url": "https://job.skyeng.ru/talks"
+      },
+      {
+        "claim": "Skyeng's platform is built on more than 200 microservices.",
+        "excerpt": "200+   \nмикросервисов в основе платформы",
+        "url": "https://job.skyeng.ru/products"
+      },
+      {
+        "claim": "Skyeng uses analytical matching mechanisms to help students find a suitable teacher on their first attempt.",
+        "excerpt": "Аналитические механизмы подбора, помогающие ученику найти «своего» преподавателя с первого раза",
+        "url": "https://job.skyeng.ru/products"
+      },
+      {
+        "claim": "Skyeng's Flexible plan includes group lessons, conversation clubs and unlimited practice tools, starting at 2,490 rubles per month.",
+        "excerpt": "Тариф «Гибкий»: групповые уроки, разговорные клубы и безлимитные тренажёры — от 2490 ₽/мес.",
+        "url": "https://www.youtube.com/channel/UCcBbiCpR-eBwL5l6H63lgfg"
+      },
+      {
+        "claim": "Skyeng recruits remote English teachers for Skyeng Talks and requires at least two years of teaching experience.",
+        "excerpt": "Our perfect teacher:\n\nSpeaks English fluently and with clear pronunciation\n\nHas at least 2 years of teaching experience",
+        "url": "https://job.skyeng.ru/talks"
+      },
+      {
+        "claim": "Skyeng offers 50-minute individual lessons and group conversation clubs, with 15-minute native-speaker conversation sessions on some English courses.",
+        "excerpt": "50 минут длятся индивидуальные занятия с преподавателем и в групповых разговорных клубах.   \nНа некоторых курсах английского есть 15‑минутные разговорные встречи с преподавателями — носителями языка.",
+        "url": "https://skyeng.ru"
+      },
+      {
+        "claim": "Skyeng states that its technology priorities are making learning more accessible, faster and more effective for both students and teachers.",
+        "excerpt": "Мы не просто внедряем новые технологии, а делаем обучение доступнее, быстрее и эффективнее — как для ученика, так и для преподавателя",
+        "url": "https://skyeng.ru"
+      }
+    ],
+    "subject": "Озвучка заданий для самостоятельной практики",
+    "body": "Здравствуйте!\n\nПишу по поводу аудиоматериалов для безлимитной практики в Flexible. Если среди заданий есть аудирование, возможно, для части диалогов и учебных текстов вам нужна профессиональная дикторская озвучка.\n\nМы озвучиваем учебные материалы профессиональными дикторами. Можем записать небольшой пробный фрагмент: так вы сможете оценить произношение и темп на своём материале и понять, подходят ли они для конкретного упражнения.\n\nЕсть ли короткий диалог для самостоятельной практики, на котором вы хотели бы попробовать такую озвучку?"
+  },
+  {
+    "id": "d24",
+    "company": "Mercury",
+    "website": "mercury.com",
+    "recipient": "Lifecycle Marketing Lead",
+    "offer": "Onboarding email sequences for startup founders",
+    "language": "English",
+    "tone": "Warm",
+    "facts": [
+      {
+        "claim": "Mercury says more than 300,000 customers use its product.",
+        "excerpt": "Today, more than 300,000 customers use Mercury.",
+        "url": "https://mercury.com/blog/annual-letter-2025"
+      },
+      {
+        "claim": "Mercury serves a broad customer mix beyond startups, including ecommerce companies, professional services firms, and individuals.",
+        "excerpt": "Mercury has also become central to how other entrepreneurs use money — from ecommerce companies navigating cash flow to professional services firms juggling growing books of business to individuals seeking to build the life they want.",
+        "url": "https://mercury.com/blog/annual-letter-2025"
+      },
+      {
+        "claim": "Mercury reports that 1 in 3 U.S. startups use its product.",
+        "excerpt": "Today, 1 in 3 U.S. startups use Mercury,",
+        "url": "https://mercury.com/blog/annual-letter-2025"
+      },
+      {
+        "claim": "Mercury onboarded 2.4x more AI companies in 2025 than the prior year.",
+        "excerpt": "in 2025, we onboarded 2.4x more AI companies than the year before.",
+        "url": "https://mercury.com/blog/annual-letter-2025"
+      },
+      {
+        "claim": "Mercury’s invoicing product has a free version for unlimited invoices, with paid plans for recurring invoices and ACH debit invoicing.",
+        "excerpt": "Customers can create, send, track, and receive payment on as many invoices as they’d like in the free version of Mercury. Advanced invoicing capabilities, such as sending recurring invoices, and invoicing with ACH debit, are available as part of our paid plans.",
+        "url": "https://app.mercury.com/help/mercury-invoicing-overview"
+      },
+      {
+        "claim": "Mercury Bill Pay is an automated accounts payable product that can schedule payments by ACH, check, or wire and sync bill data to accounting software.",
+        "excerpt": "Mercury Bill Pay is an automated accounts payable solution that helps you manage and pay company bills from your Mercury account. Bills sent to your dedicated inbox are automatically organized by approval status and due date, and can be scheduled for payment via ACH, check, or wire. You can also sync bill data directly to your accounting software.",
+        "url": "https://support.mercury.com/hc/en-us/articles/28768945847316-Bill-Pay-overview"
+      },
+      {
+        "claim": "Mercury offers personal banking features including a 3.50% APY savings account, joint accounts, and unlimited free USD wires.",
+        "excerpt": "Level up your personal finances with 3.50% APY on your savings account, joint accounts, unlimited free USD wires, and more.",
+        "url": "https://mercury.com"
+      }
+    ],
+    "subject": "Founders need a separate path",
+    "body": "Hi — with 1 in 3 U.S. startups already using Mercury, my guess is founder onboarding has to do a lot of the heavy lifting early on.\n\nI write onboarding email sequences for startup founders, usually to help new accounts get to first value faster and keep moving after signup.\n\nIf your lifecycle team is looking at activation for startup customers this quarter, would it make sense to compare the current flow with a founder-specific version?"
+  },
+  {
+    "id": "d25",
+    "company": "Apollo",
+    "website": "apollo.io",
+    "recipient": "Head of Data",
+    "offer": "Data enrichment quality audits for sales databases",
+    "language": "English",
+    "tone": "Direct",
+    "facts": [
+      {
+        "claim": "Apollo combines B2B contact data, GTM intelligence, and sales execution in one system.",
+        "excerpt": "Apollo pairs one of the industry's largest B2B contact databases with a purpose-built GTM intelligence engine and a full execution stack, all in one system.",
+        "url": "https://www.linkedin.com/company/apolloio"
+      },
+      {
+        "claim": "Apollo reports serving millions of users and over 600,000 companies worldwide.",
+        "excerpt": "Trusted by millions of users and over 600,000 companies worldwide",
+        "url": "https://www.linkedin.com/company/apolloio"
+      },
+      {
+        "claim": "Apollo's Chrome extension provides access to its data from Gmail, Google Calendar, LinkedIn, Salesforce, and HubSpot.",
+        "excerpt": "Use the extension to access Apollo data and take action from Gmail, Google Calendar, LinkedIn, company websites, Salesforce, HubSpot, and other supported platforms without switching back and forth between tabs.",
+        "url": "https://knowledge.apollo.io/hc/en-us/articles/4409226637453-Apollo-Chrome-Extension-Overview"
+      },
+      {
+        "claim": "Apollo automatically scores prospects using the customer's company website and prospecting activity.",
+        "excerpt": "Apollo generates auto-scores based on your company website and prospecting activity.",
+        "url": "https://knowledge.apollo.io/hc/en-us/articles/4988048582285-Scoring-Engine-Overview"
+      },
+      {
+        "claim": "Apollo offers advanced prospect search filters using buying intent and signals.",
+        "excerpt": "Refine your search with more advanced filters like buying intent or signals to find the most promising companies.",
+        "url": "https://knowledge.apollo.io/hc/en-us/articles/4413044057741-Use-Apollo-to-Find-New-Customers"
+      },
+      {
+        "claim": "Apollo offers lookalike company discovery to expand prospect lists.",
+        "excerpt": "If you already have existing customers, or know specific businesses that match your ICP, you can find similar companies on Apollo. Use lookalikes to broaden or build on your prospect list.",
+        "url": "https://knowledge.apollo.io/hc/en-us/articles/4413044057741-Leverage-the-Apollo-Database-to-Find-New-Customers"
+      },
+      {
+        "claim": "Apollo's Y Combinator profile lists remote US openings for senior backend software and senior DevOps engineers.",
+        "excerpt": "Senior Backend Software Engineer (Remote)\n\nRemote (US)\n\n3+ years\n\nApply Now ›\n\nSenior DevOps Engineer (Remote)\n\nRemote (US)\n\n3+ years",
+        "url": "https://www.ycombinator.com/companies/apollo-io"
+      },
+      {
+        "claim": "Apollo offers a free pricing plan.",
+        "excerpt": "The flexible pricing, including a free plan, is especially noteworthy.",
+        "url": "https://apix-drive.com/en/blog/marketing/apollo-io-explained"
+      }
+    ],
+    "subject": "Data quality behind prospect filters",
+    "body": "If the data behind intent- and signal-based prospect filters falls within your remit, an independent audit could help check whether those inputs are reliable enough for prospect selection.\n\nI audit enrichment quality in sales databases, checking field freshness, completeness, and consistency. Stale or missing inputs could affect which prospects appear in filtered searches; the audit would check for that without presuming gaps in your existing checks.\n\nIs there one field supporting those filters you’d prioritize for a small sample audit?"
+  },
+  {
+    "id": "d26",
+    "company": "Mercury",
+    "website": "mercury.com",
+    "recipient": "Lifecycle Marketing Lead",
+    "offer": "Onboarding email sequences for startup founders",
+    "language": "English",
+    "tone": "Warm",
+    "facts": [
+      {
+        "claim": "Mercury says one in three U.S. startups use it; it onboarded 2.4 times more AI companies in 2025 than the year before.",
+        "excerpt": "Today, 1 in 3 U.S. startups use Mercury, including a rapidly growing share of AI companies — in 2025, we onboarded 2.4x more AI companies than the year before.",
+        "url": "https://mercury.com/blog/annual-letter-2025"
+      },
+      {
+        "claim": "Mercury provides business financial tools including banking, payments, spend controls, and finance operations automation.",
+        "excerpt": "Mercury combines checking & savings accounts with payments, spend control, and finance ops automation in one place.",
+        "url": "https://www.trustpilot.com/review/mercury.com"
+      },
+      {
+        "claim": "Mercury Bill Pay automates accounts payable, organizes bills by approval status and due date, supports ACH, check, and wire payments, and syncs bill data to accounting software.",
+        "excerpt": "Bills sent to your dedicated inbox are automatically organized by approval status and due date, and can be scheduled for payment via ACH, check, or wire. You can also sync bill data directly to your accounting software.",
+        "url": "https://support.mercury.com/hc/en-us/articles/28768945847316-Bill-Pay-overview"
+      },
+      {
+        "claim": "Mercury offers free invoice creation, sending, tracking, and payment receipt; recurring invoices and ACH debit invoicing are paid-plan features.",
+        "excerpt": "Customers can create, send, track, and receive payment on as many invoices as they’d like in the free version of Mercury. Advanced invoicing capabilities, such as sending recurring invoices, and invoicing with ACH debit, are available as part of our paid plans.",
+        "url": "https://app.mercury.com/help/mercury-invoicing-overview"
+      },
+      {
+        "claim": "Mercury launched dashboard Insights with financial charts, AI-powered cash-flow alerts, and a chatbot for questions about spending.",
+        "excerpt": "For business accounts, interactive charts and tables update automatically so you always know where things stand: filter and compare by time periods, get AI-powered cashflow alerts and ask a chatbot questions like “Why did expenses increase this month?”",
+        "url": "https://mercury.com/blog/march-2026-product-updates"
+      },
+      {
+        "claim": "Mercury introduced Mercury Books, AI-powered accounting software built into its platform.",
+        "excerpt": "Introducing Mercury Books, AI-powered accounting software, built into Mercury",
+        "url": "https://mercury.com"
+      }
+    ],
+    "subject": "Getting started with Mercury Books",
+    "body": "Hi,\n\nWith Mercury Books now built into the platform, I wondered if new founders could use a little guidance on getting started with the accounting tools in their account.\n\nI write onboarding email sequences for startup founders, helping make the first steps with a new tool clear and manageable. If you’re looking to help more customers discover Mercury Books after signup, a focused sequence could walk them through those steps.\n\nWould a short sequence covering the first setup steps in Mercury Books fit your lifecycle plans?"
+  }
+]

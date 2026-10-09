@@ -1,0 +1,290 @@
+{
+  "case_id": "plausible",
+  "config": "luna",
+  "models": "Research gpt-6-luna/low, Strategy gpt-6-luna/medium, Writing gpt-6-luna/medium, Review gpt-6-luna/low",
+  "repeat": 2,
+  "snapshot_recorded_at": "2026-10-09T12:05:40+00:00",
+  "checks": {
+    "label": "draft",
+    "outcome_ok": true,
+    "facts": 7,
+    "dropped_facts": 1,
+    "attempts": 2,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 70,
+    "subject_words": 5,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "fdac818f972c44458fc2ff42f4c1d34b",
+    "brief": {
+      "company": "Plausible Analytics",
+      "website": "plausible.io",
+      "offer": "Paid search campaigns for privacy-focused software products",
+      "recipient": "Co-founder",
+      "language": "English",
+      "tone": "Direct"
+    },
+    "status": "ready",
+    "reason": null,
+    "message": "The draft passed review.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "Plausible offers white-label analytics for SaaS platforms, website builders, and marketplaces, with embedded dashboards or a Stats API.",
+          "excerpt": "SaaS platforms can add analytics as a maintained product feature without building a separate collection and reporting system.",
+          "source_url": "https://plausible.io/white-label-web-analytics",
+          "source_title": "White label web analytics for SaaS platforms and website builders | Plausible Analytics"
+        },
+        {
+          "id": 2,
+          "claim": "Plausible says more than 21,000 paying customers trust it for website and business insights.",
+          "excerpt": "over 21,000 paying customers trust us with their website and business insights:",
+          "source_url": "https://plausible.io",
+          "source_title": "Plausible Analytics | Simple, privacy-friendly Google Analytics alternative"
+        },
+        {
+          "id": 3,
+          "claim": "The company crossed $1 million in annual recurring revenue in 2022 and says it has continued to grow profitably as an independent operator.",
+          "excerpt": "Plausible crossed $1 million in annual recurring revenue in 2022 and has continued to grow as a profitable, independently operated company.",
+          "source_url": "https://plausible.io/about",
+          "source_title": "About | Plausible Analytics"
+        },
+        {
+          "id": 4,
+          "claim": "Plausible says its analytics do not use cookies or collect personal data.",
+          "excerpt": "We do not use cookies and we do not collect personal data.",
+          "source_url": "https://plausible.io/about",
+          "source_title": "About | Plausible Analytics"
+        },
+        {
+          "id": 5,
+          "claim": "Its analytics data is processed exclusively on servers operated by European companies and never leaves the EU.",
+          "excerpt": "All visitor data is exclusively processed on servers owned and operated by European companies and never leaves the EU.",
+          "source_url": "https://plausible.io",
+          "source_title": "Plausible Analytics | Simple, privacy-friendly Google Analytics alternative"
+        },
+        {
+          "id": 6,
+          "claim": "Plausible says it has never spent money on advertising, affiliates, or paid endorsements, and grows through recommendations.",
+          "excerpt": "We have never spent a cent on advertising, affiliates or paid endorsements.",
+          "source_url": "https://plausible.io/about",
+          "source_title": "About | Plausible Analytics"
+        },
+        {
+          "id": 7,
+          "claim": "Plausible offers a cloud service as well as a self-hosting option.",
+          "excerpt": "You can self-host Plausible or have us run it for you in the Cloud.",
+          "source_url": "https://hub.docker.com/r/plausible/analytics",
+          "source_title": "plausible/analytics - Docker Image"
+        }
+      ],
+      "website_owner": "Plausible Analytics",
+      "website_matches": true,
+      "website_note": "The results identify plausible.io as Plausible Analytics’ official website.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 1,
+      "dropped": [
+        {
+          "claim": "Plausible has described supporting more than 4,000 subscribers and 1,000+ monthly trials without dedicated support personnel.",
+          "source_id": 3,
+          "excerpt": "How we scaled support for 4,000+ subscribers and 1,000+ monthly trials (without dedicated support personnel)"
+        }
+      ]
+    },
+    "strategy": {
+      "observation": "Plausible says it has never spent on advertising and has grown through recommendations.",
+      "fact_ids": [
+        6
+      ],
+      "offer_link": "Paid search could be a limited way to test whether people actively searching for privacy-focused analytics convert, without assuming Plausible should replace its recommendation-led growth.",
+      "hypotheses": [
+        "Plausible may be open to testing an additional acquisition channel.",
+        "There may be enough high-intent search demand for privacy-focused analytics to justify a small campaign."
+      ],
+      "angle": "Since Plausible says it has never spent on advertising and has grown through recommendations, would you consider testing paid search for people actively looking for privacy-focused analytics?",
+      "offer_fit": "weak",
+      "fit_reason": "The offer is relevant to a privacy-focused software product, but Plausible has explicitly grown without advertising, so paid search may not align with its established acquisition approach or current priorities."
+    },
+    "draft": {
+      "subject": "A small paid search test",
+      "body": "Plausible says it has never spent on advertising and has grown through recommendations. A small paid search test could add a channel alongside that approach, focused on people actively searching for privacy-focused analytics.\n\nI run paid search campaigns for privacy-focused software products. The point would be to see whether those high-intent searches convert, not to replace recommendation-led growth.\n\nWould you consider a limited test on a few privacy-focused analytics searches?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "A small paid search test",
+          "body": "Plausible says it has never spent on advertising and has grown through recommendations. Paid search could be a small way to see whether people actively searching for privacy-focused analytics convert, without changing that approach.\n\nI run paid search campaigns for privacy-focused software products. Would you consider testing a limited campaign against a few high-intent searches for privacy-focused analytics?"
+        },
+        "review": {
+          "passed": false,
+          "issues": [
+            "“without changing that approach” implies paid search would not change Plausible’s recommendation-led approach, but paid advertising would be a change. Rephrase to make clear it would be a small test alongside its existing approach."
+          ]
+        }
+      },
+      {
+        "attempt": 2,
+        "draft": {
+          "subject": "A small paid search test",
+          "body": "Plausible says it has never spent on advertising and has grown through recommendations. A small paid search test could add a channel alongside that approach, focused on people actively searching for privacy-focused analytics.\n\nI run paid search campaigns for privacy-focused software products. The point would be to see whether those high-intent searches convert, not to replace recommendation-led growth.\n\nWould you consider a limited test on a few privacy-focused analytics searches?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@2",
+      "strategy": "strategy@2",
+      "copywriter": "copywriter@2",
+      "review": "review@2"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-6-luna",
+        "prompt_version": "research@2",
+        "duration_ms": 5968,
+        "usage": {
+          "input_tokens": 3804,
+          "cached_input_tokens": 3801,
+          "cache_write_tokens": 0,
+          "output_tokens": 638,
+          "reasoning_tokens": 62
+        },
+        "cost_usd": 0.00035731,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-6-luna",
+        "prompt_version": "strategy@2",
+        "duration_ms": 5362,
+        "usage": {
+          "input_tokens": 730,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 533,
+          "reasoning_tokens": 320
+        },
+        "cost_usd": 0.0003395,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-6-luna",
+        "prompt_version": "copywriter@2",
+        "duration_ms": 3128,
+        "usage": {
+          "input_tokens": 769,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 281,
+          "reasoning_tokens": 185
+        },
+        "cost_usd": 0.0002174,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-6-luna",
+        "prompt_version": "review@2",
+        "duration_ms": 4322,
+        "usage": {
+          "input_tokens": 710,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 435,
+          "reasoning_tokens": 370
+        },
+        "cost_usd": 0.0002885,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 2,
+        "model": "gpt-6-luna",
+        "prompt_version": "copywriter@2",
+        "duration_ms": 3581,
+        "usage": {
+          "input_tokens": 920,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 366,
+          "reasoning_tokens": 253
+        },
+        "cost_usd": 0.000275,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 2,
+        "model": "gpt-6-luna",
+        "prompt_version": "review@2",
+        "duration_ms": 1731,
+        "usage": {
+          "input_tokens": 725,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 117,
+          "reasoning_tokens": 97
+        },
+        "cost_usd": 0.000131,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Plausible Analytics\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Plausible Analytics\" plausible.io",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Plausible Analytics\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 24109
+  }
+}

@@ -1,0 +1,237 @@
+{
+  "case_id": "ru-skyeng",
+  "config": "luna",
+  "models": "Research gpt-6-luna/low, Strategy gpt-6-luna/medium, Writing gpt-6-luna/medium, Review gpt-6-luna/low",
+  "repeat": 1,
+  "snapshot_recorded_at": "2026-10-09T12:07:24+00:00",
+  "checks": {
+    "label": "draft",
+    "outcome_ok": true,
+    "facts": 7,
+    "dropped_facts": 0,
+    "attempts": 1,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 70,
+    "subject_words": 4,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "23d60ec8424d4338852bbf2ff45b813b",
+    "brief": {
+      "company": "Skyeng",
+      "website": "skyeng.ru",
+      "offer": "Озвучка учебных материалов профессиональными дикторами",
+      "recipient": "Руководитель контента",
+      "language": "Russian",
+      "tone": "Warm"
+    },
+    "status": "ready",
+    "reason": null,
+    "message": "The draft passed review.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "Skyeng offers online language learning with a teacher and self-study options.",
+          "excerpt": "Изучение английского языка вместе со Skyeng - просто, удобно и интересно. Учи английский с преподавателем или самостоятельно",
+          "source_url": "https://go.skyeng.ru/km_android",
+          "source_title": "Skyeng: английский, репетиторы - Apps on Google Play"
+        },
+        {
+          "id": 2,
+          "claim": "Skyeng says more than 300,000 learners have mastered a foreign language with it.",
+          "excerpt": "More than  \n300,000 learners [...] have already mastered a foreign language with us",
+          "source_url": "https://job.skyeng.ru/talks",
+          "source_title": "Remote work as an English teacher in Skyeng Talks"
+        },
+        {
+          "id": 3,
+          "claim": "Skyeng’s learning platform uses AI personalization to tailor materials to each student’s interests.",
+          "excerpt": "Our system helps you create materials tailored to each student’s interests.",
+          "source_url": "https://job.skyeng.ru/talks",
+          "source_title": "Remote work as an English teacher in Skyeng Talks"
+        },
+        {
+          "id": 4,
+          "claim": "Skyeng says its platform is built on more than 200 microservices.",
+          "excerpt": "200+   \nмикросервисов в основе платформы",
+          "source_url": "https://job.skyeng.ru/products",
+          "source_title": "Products"
+        },
+        {
+          "id": 5,
+          "claim": "Skyeng offers students flexible lesson scheduling and lets them freeze their progress if they need a break.",
+          "excerpt": "Если захотите отдохнуть, в личном кабинете можно заморозить прогресс и вернуться к обучению, когда будете готовы.",
+          "source_url": "https://skyeng.ru",
+          "source_title": "Школа иностранных языков онлайн - изучение иностранных языков"
+        },
+        {
+          "id": 6,
+          "claim": "Skyeng’s individual teacher-led lessons and group conversation clubs last 50 minutes.",
+          "excerpt": "50 минут длятся индивидуальные занятия с преподавателем и в групповых разговорных клубах.",
+          "source_url": "https://skyeng.ru",
+          "source_title": "Школа иностранных языков онлайн - изучение иностранных языков"
+        },
+        {
+          "id": 7,
+          "claim": "Skyeng offers an ecosystem that includes teacher-led lessons, language coaching, practice tools, conversation clubs, and an oral-practice chatbot.",
+          "excerpt": "Вы платите за один курс, а получаете целую экосистему продуктов: занятия с преподавателем и языковым тренером, тренажёры, разговорные клубы и чат‑бот для устной практики",
+          "source_url": "https://wwwskyeng.ru",
+          "source_title": "Школа иностранных языков онлайн - изучение иностранных языков"
+        }
+      ],
+      "website_owner": "Skyeng",
+      "website_matches": true,
+      "website_note": "The results identify skyeng.ru as Skyeng’s online language school website.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 0,
+      "dropped": []
+    },
+    "strategy": {
+      "observation": "Skyeng предлагает варианты самостоятельного обучения наряду с занятиями с преподавателем.",
+      "fact_ids": [
+        1
+      ],
+      "offer_link": "Профессиональная озвучка могла бы дать учащимся аудиоверсии материалов для самостоятельной работы и поддержать практику восприятия иностранной речи на слух.",
+      "hypotheses": [
+        "Предполагаю, что часть материалов для самостоятельного обучения сейчас не озвучена или нуждается в обновлении.",
+        "Предполагаю, что руководитель контента отвечает за выбор формата и качество озвученных учебных материалов."
+      ],
+      "angle": "У Skyeng есть форматы самостоятельного обучения — профессиональная озвучка могла бы добавить к ним аудиоверсии учебных материалов для практики на слух.",
+      "offer_fit": "good",
+      "fit_reason": "Озвученные материалы напрямую применимы в языковом обучении и самостоятельной практике. Факты подтверждают наличие такого формата обучения, но не подтверждают, что Skyeng сейчас ищет подрядчика или испытывает нехватку аудиоматериалов."
+    },
+    "draft": {
+      "subject": "Аудиоверсии для самостоятельной практики",
+      "body": "Здравствуйте.\n\nУ Skyeng есть самостоятельные форматы обучения наряду с занятиями с преподавателем. Если часть материалов для самостоятельной работы пока не озвучена или требует обновления, аудиоверсии могли бы помочь ученикам практиковать понимание речи на слух.\n\nЯ предлагаю озвучку учебных материалов профессиональными дикторами, чтобы ученики могли тренировать восприятие иностранной речи на слух и вне занятий.\n\nПодскажите, есть ли у вас сейчас материалы для самостоятельной работы, которым в первую очередь пригодилась бы аудиоверсия?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Аудиоверсии для самостоятельной практики",
+          "body": "Здравствуйте.\n\nУ Skyeng есть самостоятельные форматы обучения наряду с занятиями с преподавателем. Если часть материалов для самостоятельной работы пока не озвучена или требует обновления, аудиоверсии могли бы помочь ученикам практиковать понимание речи на слух.\n\nЯ предлагаю озвучку учебных материалов профессиональными дикторами, чтобы ученики могли тренировать восприятие иностранной речи на слух и вне занятий.\n\nПодскажите, есть ли у вас сейчас материалы для самостоятельной работы, которым в первую очередь пригодилась бы аудиоверсия?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@2",
+      "strategy": "strategy@2",
+      "copywriter": "copywriter@2",
+      "review": "review@2"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-6-luna",
+        "prompt_version": "research@2",
+        "duration_ms": 6928,
+        "usage": {
+          "input_tokens": 4048,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 4045,
+          "output_tokens": 734,
+          "reasoning_tokens": 210
+        },
+        "cost_usd": 0.000872925,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-6-luna",
+        "prompt_version": "strategy@2",
+        "duration_ms": 6537,
+        "usage": {
+          "input_tokens": 724,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 606,
+          "reasoning_tokens": 353
+        },
+        "cost_usd": 0.00037539999999999996,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-6-luna",
+        "prompt_version": "copywriter@2",
+        "duration_ms": 5849,
+        "usage": {
+          "input_tokens": 783,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 682,
+          "reasoning_tokens": 527
+        },
+        "cost_usd": 0.0004193,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-6-luna",
+        "prompt_version": "review@2",
+        "duration_ms": 2266,
+        "usage": {
+          "input_tokens": 751,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 154,
+          "reasoning_tokens": 134
+        },
+        "cost_usd": 0.0001521,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Skyeng\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Skyeng\" skyeng.ru",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Skyeng\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 21602
+  }
+}

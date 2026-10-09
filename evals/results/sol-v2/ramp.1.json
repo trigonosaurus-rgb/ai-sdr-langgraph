@@ -1,0 +1,245 @@
+{
+  "case_id": "ramp",
+  "config": "sol",
+  "models": "Research gpt-6.1-sol/low, Strategy gpt-6.1-sol/medium, Writing gpt-6.1-sol/medium, Review gpt-6.1-sol/low",
+  "repeat": 1,
+  "snapshot_recorded_at": "2026-10-09T12:06:28+00:00",
+  "checks": {
+    "label": "draft",
+    "outcome_ok": true,
+    "facts": 8,
+    "dropped_facts": 0,
+    "attempts": 1,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 76,
+    "subject_words": 7,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "95433e7eb2fc441cad7121adf6dfb2ee",
+    "brief": {
+      "company": "Ramp",
+      "website": "ramp.com",
+      "offer": "Expense policy templates for mid-size finance teams",
+      "recipient": "Head of Content",
+      "language": "English",
+      "tone": "Direct"
+    },
+    "status": "ready",
+    "reason": null,
+    "message": "The draft passed review.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "Ramp provides an integrated financial operations platform used by more than 70,000 businesses for cards, expenses, payments, procurement, travel, banking, and accounting automation.",
+          "excerpt": "More than 70,000 businesses use Ramp to manage corporate cards, expenses, bill payments, procurement, vendor management, travel, banking, and accounting automation in one system.",
+          "source_url": "https://support.ramp.com/ramp-overview?ref=kellblog.com",
+          "source_title": "Ramp Help Center"
+        },
+        {
+          "id": 2,
+          "claim": "On June 4, 2026, Ramp announced $750 million in primary financing led by ICONIQ, GIC, and Ontario Teachers' Pension Plan at a $44 billion valuation.",
+          "excerpt": "Today, Ramp announced a $750 million primary financing round led by ICONIQ, GIC, and Ontario Teachers' Pension Plan, valuing the company at $44 billion.",
+          "source_url": "https://www.prnewswire.com/news-releases/ramp-raises-series-f-at-44-billion-valuation-302791103.html",
+          "source_title": "Ramp Raises Series F at $44 Billion Valuation"
+        },
+        {
+          "id": 3,
+          "claim": "Ramp announced plans to begin serving companies headquartered in the UK and Europe in summer 2026.",
+          "excerpt": "announced it would start serving companies headquartered in the UK and Europe this summer.",
+          "source_url": "https://www.prnewswire.com/news-releases/ramp-raises-series-f-at-44-billion-valuation-302791103.html",
+          "source_title": "Ramp Raises Series F at $44 Billion Valuation"
+        },
+        {
+          "id": 4,
+          "claim": "Ramp deepened its multi-year Visa partnership to enable AI agents to execute autonomous corporate payments with real-time controls.",
+          "excerpt": "Ramp also deepened its multi-year partnership with Visa to enable AI agents to execute autonomous corporate payments with real-time controls.",
+          "source_url": "https://www.prnewswire.com/news-releases/ramp-raises-series-f-at-44-billion-valuation-302791103.html",
+          "source_title": "Ramp Raises Series F at $44 Billion Valuation"
+        },
+        {
+          "id": 5,
+          "claim": "Ramp recently acquired Billhop for UK/EU payments and Juno for guest travel.",
+          "excerpt": "closed two acquisitions — Billhop (UK/EU payments) and Juno (guest travel)",
+          "source_url": "https://www.prnewswire.com/news-releases/ramp-raises-series-f-at-44-billion-valuation-302791103.html",
+          "source_title": "Ramp Raises Series F at $44 Billion Valuation"
+        },
+        {
+          "id": 6,
+          "claim": "Ramp reported releasing more than 70 products and major features in the months preceding its June 2026 funding announcement.",
+          "excerpt": "In the past few months, Ramp released 70+ products and major features",
+          "source_url": "https://www.prnewswire.com/news-releases/ramp-raises-series-f-at-44-billion-valuation-302791103.html",
+          "source_title": "Ramp Raises Series F at $44 Billion Valuation"
+        },
+        {
+          "id": 7,
+          "claim": "Ramp supports more than $100 billion in annualized card and accounts payable payment volume, with customers saving 5% or more on average.",
+          "excerpt": "Ramp supports more than $100 billion in annualized card and AP payment volume, and customers save 5% or more on average with Ramp.",
+          "source_url": "https://support.ramp.com/ramp-overview?ref=kellblog.com",
+          "source_title": "Ramp Help Center"
+        },
+        {
+          "id": 8,
+          "claim": "Stanford Athletics named Ramp its official expense management partner in a multi-year partnership announced in May 2026.",
+          "excerpt": "Stanford Athletics and Ramp today announced a multi-year partnership naming Ramp the official expense management partner of Stanford Athletics.",
+          "source_url": "https://gostanford.com/news/2026/05/26/stanford-athletics-selects-ramp-to-modernize-financial-operations-in-multi-year-partnership",
+          "source_title": "Stanford Athletics Selects Ramp to Modernize Financial Operations in Multi-Year Partnership - Stanford Cardinal - Official Athletics Website"
+        }
+      ],
+      "website_owner": "Ramp Business Corporation",
+      "website_matches": true,
+      "website_note": "The ramp.com homepage identifies Ramp Business Corporation, and the results identify ramp.com as Ramp's website.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 0,
+      "dropped": []
+    },
+    "strategy": {
+      "observation": "In June 2026, Ramp announced plans to begin serving companies headquartered in the UK and Europe that summer.",
+      "fact_ids": [
+        3
+      ],
+      "offer_link": "Expense policy templates could give the Head of Content a practical resource for attracting and educating mid-size finance teams in those prospective markets. They could help readers document spending rules before evaluating expense-management software, provided the templates are reviewed for regional suitability.",
+      "hypotheses": [
+        "Ramp's content team may be developing resources to support the announced UK and European expansion.",
+        "Mid-size finance teams may be a relevant audience for that expansion.",
+        "The offered templates may be suitable for those markets after regional review or adaptation."
+      ],
+      "angle": "For Ramp's announced UK and European expansion, would expense policy templates be useful content for mid-size finance teams setting up their spending rules?",
+      "offer_fit": "good",
+      "fit_reason": "The offer is directly relevant to expense-management education and gives a content leader a concrete, usable asset; its value for this expansion depends on audience alignment and regional suitability."
+    },
+    "draft": {
+      "subject": "Expense policy templates for UK and Europe",
+      "body": "For Ramp’s announced UK and European expansion, expense policy templates could help mid-size finance teams put spending rules in writing before they evaluate software.\n\nIf your content team is developing resources for those markets, I offer expense policy templates for mid-size finance teams. They could give readers a practical starting point, subject to review for regional suitability.\n\nWould you like to see one template to assess whether it could fit your UK and European content plans?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Expense policy templates for UK and Europe",
+          "body": "For Ramp’s announced UK and European expansion, expense policy templates could help mid-size finance teams put spending rules in writing before they evaluate software.\n\nIf your content team is developing resources for those markets, I offer expense policy templates for mid-size finance teams. They could give readers a practical starting point, subject to review for regional suitability.\n\nWould you like to see one template to assess whether it could fit your UK and European content plans?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@2",
+      "strategy": "strategy@2",
+      "copywriter": "copywriter@2",
+      "review": "review@2"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-6.1-sol",
+        "prompt_version": "research@2",
+        "duration_ms": 11054,
+        "usage": {
+          "input_tokens": 4436,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 4433,
+          "output_tokens": 646,
+          "reasoning_tokens": 0
+        },
+        "cost_usd": 0.0175485,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-6.1-sol",
+        "prompt_version": "strategy@2",
+        "duration_ms": 13716,
+        "usage": {
+          "input_tokens": 802,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 493,
+          "reasoning_tokens": 251
+        },
+        "cost_usd": 0.006534,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-6.1-sol",
+        "prompt_version": "copywriter@2",
+        "duration_ms": 4252,
+        "usage": {
+          "input_tokens": 873,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 110,
+          "reasoning_tokens": 0
+        },
+        "cost_usd": 0.002846,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-6.1-sol",
+        "prompt_version": "review@2",
+        "duration_ms": 3952,
+        "usage": {
+          "input_tokens": 798,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 14,
+          "reasoning_tokens": 0
+        },
+        "cost_usd": 0.001736,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Ramp\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Ramp\" ramp.com",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Ramp\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 32988
+  }
+}

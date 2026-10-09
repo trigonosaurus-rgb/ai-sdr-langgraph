@@ -1,0 +1,176 @@
+{
+  "grader": "claude-opus-5-5",
+  "graded_at": "2026-10-09",
+  "scale": "evals/README.md: grounding, relevance, naturalness, 0-2 each",
+  "scope": "drafts of runs whose case accepts a draft and whose outcome was a draft",
+  "grades": {
+    "apollo.1": {
+      "grounding": 2,
+      "relevance": 1,
+      "naturalness": 1,
+      "note": "Opens by restating the 500,000-users fact verbatim; scale is a generic hook; 'assess that quality' twice."
+    },
+    "apollo.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "Logical record-quality link; one dense paragraph that repeats itself."
+    },
+    "buttondown.1": {
+      "grounding": 2,
+      "relevance": 1,
+      "naturalness": 2,
+      "note": "Warm and natural; the no-fee angle is good but the offer competes with Buttondown's own concierge migration."
+    },
+    "buttondown.2": {
+      "grounding": 2,
+      "relevance": 1,
+      "naturalness": 1,
+      "note": "Admits its own irrelevance ('would only seem relevant if...'), which undercuts the pitch."
+    },
+    "duolingo.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "B2 expansion to recorded dialogues; specific closing question."
+    },
+    "duolingo.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "Same angle, concise; asks which course is the priority."
+    },
+    "gitlab.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "Stated product priorities to migration guides is logical; the opening recites the priorities at length."
+    },
+    "gitlab.2": {
+      "grounding": 2,
+      "relevance": 1,
+      "naturalness": 2,
+      "note": "Capgemini alliance to migration guides is a stretch; reads naturally."
+    },
+    "linear.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "Agent-workflow interviews are relevant; long and stiff ('I wondered how you're gathering...')."
+    },
+    "linear.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "Relevant; 'interviews could help your team understand how those workflows are working' is stiff."
+    },
+    "mercury.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "Mercury Books onboarding is a specific, sensible sequence to offer."
+    },
+    "mercury.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "2.4x more AI companies to a tailored founder path; good question."
+    },
+    "plausible.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "No-cookie, EU-only processing as search differentiators; clean."
+    },
+    "plausible.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "Acknowledges they never paid for ads and proposes a small test alongside; honest and well judged."
+    },
+    "ramp.1": {
+      "grounding": 1,
+      "relevance": 1,
+      "naturalness": 1,
+      "note": "'expanding expense tools' is unsupported (review flagged it three times); opens with the sender."
+    },
+    "ramp.2": {
+      "grounding": 2,
+      "relevance": 1,
+      "naturalness": 1,
+      "note": "70+ launches to a policy template is a stretch; 'expense-management coverage' is vague."
+    },
+    "ru-kontur.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "The Russia-Uzbekistan e-document launch as a source of new support questions is sharp; natural Russian."
+    },
+    "ru-kontur.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "Correct, natural Russian; a concrete pilot on one category."
+    },
+    "ru-skyeng.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "Relevant self-study angle; 'на слух' repeated in consecutive sentences."
+    },
+    "ru-skyeng.2": {
+      "grounding": 2,
+      "relevance": 1,
+      "naturalness": 1,
+      "note": "Conversation clubs and chatbot to voice-over is a loose link."
+    },
+    "ru-vkusvill.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "4,200 own-brand products to a sample audit; natural."
+    },
+    "ru-vkusvill.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "Same angle; offers audit criteria, a low-commitment ask."
+    },
+    "stripe.1": {
+      "grounding": 2,
+      "relevance": 1,
+      "naturalness": 1,
+      "note": "Tells the Head of Documentation what their docs explain; generic link."
+    },
+    "stripe.2": {
+      "grounding": 2,
+      "relevance": 1,
+      "naturalness": 1,
+      "note": "Same 'I noticed Stripe's docs explain...' opening; concrete starting point helps."
+    },
+    "transistor.1": {
+      "grounding": 2,
+      "relevance": 1,
+      "naturalness": 1,
+      "note": "24% growth to B2B brands needing editing is a guess presented as momentum."
+    },
+    "transistor.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "Ghost integration and shared publishers is a specific partner angle."
+    },
+    "tuple.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "Relevant; the first sentence is clunky."
+    },
+    "tuple.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "Concise and concrete; good closing question."
+    }
+  }
+}

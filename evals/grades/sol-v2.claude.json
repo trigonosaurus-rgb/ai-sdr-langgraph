@@ -1,0 +1,176 @@
+{
+  "grader": "claude-opus-5-5",
+  "graded_at": "2026-10-09",
+  "scale": "evals/README.md: grounding, relevance, naturalness, 0-2 each",
+  "scope": "drafts of runs whose case accepts a draft and whose outcome was a draft",
+  "grades": {
+    "apollo.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "Intent filters to input quality is sharp; defensive phrasing ('without presuming gaps in your existing checks')."
+    },
+    "apollo.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "Extension integrations to a field-level audit; concrete starting sample."
+    },
+    "buttondown.1": {
+      "grounding": 2,
+      "relevance": 1,
+      "naturalness": 1,
+      "note": "Hedges about duplicating the concierge migration; the offer competes with it."
+    },
+    "buttondown.2": {
+      "grounding": 2,
+      "relevance": 1,
+      "naturalness": 1,
+      "note": "Same hedge; the pitch rests on demand that may not exist."
+    },
+    "duolingo.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "B2 listening material with multi-speaker dialogues; specific closing ask."
+    },
+    "duolingo.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "Relevant; 'where those choices serve the learning objective' is stiff."
+    },
+    "gitlab.1": {
+      "grounding": 2,
+      "relevance": 1,
+      "naturalness": 1,
+      "note": "Pitches contract writers off a restructuring and voluntary separations: logical but tone-deaf."
+    },
+    "gitlab.2": {
+      "grounding": 2,
+      "relevance": 1,
+      "naturalness": 1,
+      "note": "Same restructuring angle; risky to send."
+    },
+    "linear.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "Interviews on where customers draw the line with agent delegation; excellent closing choice."
+    },
+    "linear.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "Same sharp angle, concise."
+    },
+    "mercury.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "Mercury Books launch to a founder onboarding sequence; three-email outline ask."
+    },
+    "mercury.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "Same, warm and natural."
+    },
+    "plausible.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "Smart narrow test around embedded analytics; the opening proposal reads abrupt."
+    },
+    "plausible.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "Acknowledges no-ads growth and scopes a two-keyword test; well judged."
+    },
+    "ramp.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "UK and Europe expansion to templates is logical; 'subject to review for regional suitability' is stiff."
+    },
+    "ramp.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "Same angle; a defensive paragraph about regional review."
+    },
+    "ru-kontur.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "Uzbekistan e-document launch to a separate ticket category; natural Russian."
+    },
+    "ru-kontur.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "Same angle with a concrete question."
+    },
+    "ru-skyeng.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "Unlimited practice in the plan to voiced exercises; 'в Flexible' mixes scripts where the plan is called «Гибкий»."
+    },
+    "ru-skyeng.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "Same angle, natural."
+    },
+    "ru-vkusvill.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "No-minimum delivery to single-item card decisions is inventive; a dense middle paragraph."
+    },
+    "ru-vkusvill.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "Loyalty discounts and whether the final price is clear on the card; precise and natural."
+    },
+    "stripe.1": {
+      "grounding": 2,
+      "relevance": 1,
+      "naturalness": 1,
+      "note": "Generic billing-docs angle and hedging ('I don't know where your coverage stands today')."
+    },
+    "stripe.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "OUSD launch to a first localized guide; natural."
+    },
+    "transistor.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "Kit.com as evidence of B2B customers; referral partnership with a sample edit."
+    },
+    "transistor.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "Same evidence, asks about an existing preferred partner."
+    },
+    "tuple.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "Builds the case study from their onboarding-buddy testimonial; concrete."
+    },
+    "tuple.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "Same idea at 100 words; longer than needed."
+    }
+  }
+}

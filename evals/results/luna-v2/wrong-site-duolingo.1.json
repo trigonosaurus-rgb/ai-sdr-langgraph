@@ -1,0 +1,155 @@
+{
+  "case_id": "wrong-site-duolingo",
+  "config": "luna",
+  "models": "Research gpt-6-luna/low, Strategy gpt-6-luna/medium, Writing gpt-6-luna/medium, Review gpt-6-luna/low",
+  "repeat": 1,
+  "snapshot_recorded_at": "2026-10-09T12:07:08+00:00",
+  "checks": {
+    "label": "website_mismatch",
+    "outcome_ok": true,
+    "facts": 7,
+    "dropped_facts": 0,
+    "attempts": 0,
+    "has_draft": false,
+    "language_ok": null,
+    "body_words": null,
+    "subject_words": null,
+    "length_ok": null,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "26edca726e78410882c8b75816665ab7",
+    "brief": {
+      "company": "Duolingo",
+      "website": "babbel.com",
+      "offer": "Voice actors and audio production for language-learning content",
+      "recipient": "Director of Learning Content",
+      "language": "English",
+      "tone": "Direct"
+    },
+    "status": "failed",
+    "reason": "website_mismatch",
+    "message": "Search results do not match babbel.com. The supplied website is Babbel’s own site, and the results do not indicate that it belongs to Duolingo.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "Duolingo offers language-learning apps and language certifications.",
+          "excerpt": "Duolingo, the American educational technology company that offers learning apps and language certifications",
+          "source_url": "https://www.aljazeera.com/news/2026/9/1/duolingo-d-day-iranians-question-latest-us-sanctions-targeting-education",
+          "source_title": "Duolingo D-Day: Iranians question latest US sanctions targeting education | Education News | Al Jazeera"
+        },
+        {
+          "id": 2,
+          "claim": "Duolingo's daily active users grew 21% year over year to 56.5 million in Q1 2026.",
+          "excerpt": "daily active users increasing 21% year over year to 56.5 million",
+          "source_url": "https://finance.yahoo.com/markets/stocks/articles/duolingo-q1-earnings-beat-estimates-144800167.html",
+          "source_title": "Duolingo Q1 Earnings Beat Estimates on User Growth, Margin Gains"
+        },
+        {
+          "id": 3,
+          "claim": "Duolingo reported Q1 2026 revenue of $292 million, up 27% year over year.",
+          "excerpt": "Revenues rose 27.0% year over year to $292.0 million",
+          "source_url": "https://finance.yahoo.com/markets/stocks/articles/duolingo-q1-earnings-beat-estimates-144800167.html",
+          "source_title": "Duolingo Q1 Earnings Beat Estimates on User Growth, Margin Gains"
+        },
+        {
+          "id": 4,
+          "claim": "Duolingo has a free, ad-supported tier that includes access to its language courses.",
+          "excerpt": "Duolingo offers a fully free tier with access to entire language courses, supported by ads.",
+          "source_url": "https://www.babbel.com/compare-best-language-learning-apps",
+          "source_title": "The Best Language Learning Apps Of 2026"
+        },
+        {
+          "id": 5,
+          "claim": "Duolingo uses gamified drills and streaks, points, and rewards to encourage daily practice.",
+          "excerpt": "Duolingo uses gamified drills to help you build a daily habit.",
+          "source_url": "https://www.babbel.com/compare-best-language-learning-apps",
+          "source_title": "The Best Language Learning Apps Of 2026"
+        },
+        {
+          "id": 6,
+          "claim": "Duolingo added AI tools, including video chats.",
+          "excerpt": "It's also added a number of AI tools, including video chats.",
+          "source_url": "https://www.babbel.com/speak-ai-alternatives",
+          "source_title": "Best AI Language Learning Apps: Speak AI Alternatives (2026)"
+        },
+        {
+          "id": 7,
+          "claim": "Duolingo developed 148 new language courses in a year using generative AI.",
+          "excerpt": "Using generative AI, the company has drastically scaled up production. In April 2025, von Ahn announced that the company had developed 148 new language courses in a year.",
+          "source_url": "https://www.fool.com/investing/2026/06/01/duolingo-is-one-of-the-most-interesting-ai-plays",
+          "source_title": "Duolingo Is One of the Most Interesting AI Plays Nobody's Talking About | The Motley Fool"
+        }
+      ],
+      "website_owner": "Babbel",
+      "website_matches": false,
+      "website_note": "The supplied website is Babbel’s own site, and the results do not indicate that it belongs to Duolingo.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "The supplied website is Babbel’s, not Duolingo’s; these results do not establish Duolingo’s own website.",
+      "dropped_facts": 0,
+      "dropped": []
+    },
+    "strategy": null,
+    "draft": null,
+    "attempts": [],
+    "prompt_versions": {
+      "research": "research@2"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-6-luna",
+        "prompt_version": "research@2",
+        "duration_ms": 4211,
+        "usage": {
+          "input_tokens": 4624,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 4621,
+          "output_tokens": 518,
+          "reasoning_tokens": 0
+        },
+        "cost_usd": 0.000836925,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Duolingo\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Duolingo\" babbel.com",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Duolingo\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 4222
+  }
+}

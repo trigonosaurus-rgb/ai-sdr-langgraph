@@ -1,0 +1,238 @@
+{
+  "case_id": "poor-fit-gitlab",
+  "config": "luna",
+  "models": "Research gpt-6-luna/low, Strategy gpt-6-luna/medium, Writing gpt-6-luna/medium, Review gpt-6-luna/low",
+  "repeat": 1,
+  "snapshot_recorded_at": "2026-10-09T12:07:08+00:00",
+  "checks": {
+    "label": "poor_fit",
+    "outcome_ok": true,
+    "facts": 7,
+    "dropped_facts": 0,
+    "attempts": 1,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 56,
+    "subject_words": 3,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "8cf5a1cff2df4f5cb01998961c1c2dec",
+    "brief": {
+      "company": "GitLab",
+      "website": "about.gitlab.com",
+      "offer": "Wedding photography packages for couples",
+      "recipient": "CFO",
+      "language": "English",
+      "tone": "Direct"
+    },
+    "status": "needs_attention",
+    "reason": null,
+    "message": "The draft passed review, but the offer looks like a poor fit.",
+    "issues": [
+      "The offer may not fit this company: The offer serves couples planning weddings, while the available facts describe GitLab’s software platform and business; there is no substantiated use case for the CFO."
+    ],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "GitLab provides an intelligent orchestration platform for teams and AI agents to ship secure software.",
+          "excerpt": "We're the company behind GitLab, the intelligent orchestration platform where teams and their AI agents ship secure software faster.",
+          "source_url": "https://about.gitlab.com/company",
+          "source_title": "About GitLab - The Intelligent Orchestration Platform"
+        },
+        {
+          "id": 2,
+          "claim": "GitLab says its platform supports more than 100,000 organizations.",
+          "excerpt": "used by more than 100,000 organizations to plan, build, secure, and deploy software at machine scale",
+          "source_url": "https://about.gitlab.com/jobs",
+          "source_title": "Join GitLab"
+        },
+        {
+          "id": 3,
+          "claim": "GitLab says its platform serves leaders modernizing software delivery and supports teams across the complete software lifecycle.",
+          "excerpt": "GitLab serves technology leaders and platform owners responsible for modernizing their software delivery lifecycle.",
+          "source_url": "https://about.gitlab.com/platform",
+          "source_title": "GitLab Platform - Speed with control"
+        },
+        {
+          "id": 4,
+          "claim": "GitLab reports over 50 million registered users.",
+          "excerpt": "Over 50 million",
+          "source_url": "https://about.gitlab.com/company",
+          "source_title": "About GitLab - The Intelligent Orchestration Platform"
+        },
+        {
+          "id": 5,
+          "claim": "GitLab's GitLab Duo Agent Platform is included in its global alliance partnership with Capgemini, which will provide implementation services to clients globally.",
+          "excerpt": "As a GitLab Select Partner, Capgemini will leverage the GitLab portfolio for clients globally, including GitLab Duo Agent Platform, which orchestrates AI across the entire software development lifecycle, along with specialized implementation services.",
+          "source_url": "https://about.gitlab.com/blog/gitlab-and-capgemini-global-alliance-partnership",
+          "source_title": "GitLab and Capgemini accelerate DevSecOps transformation"
+        },
+        {
+          "id": 6,
+          "claim": "GitLab's stated product strategy includes developing reporting and analytics for project and portfolio management.",
+          "excerpt": "Provide dashboarding and analytics for project and portfolio management, allowing business to track and communicate progress on work in-flight, capacity of teams and projects, and overall efficiency across their full portfolio.",
+          "source_url": "https://about.gitlab.com/blog/dev-strategy-review",
+          "source_title": "Tell us what you think about our Dev strategy"
+        },
+        {
+          "id": 7,
+          "claim": "GitLab lists Google and AWS among subprocessors providing cloud hosting and AI-powered product features.",
+          "excerpt": "Google LLC | United States | Cloud Hosting, Customer Support, and AI-Powered Product Features | GitLab.com, Dedicated, and Self-Managed",
+          "source_url": "https://about.gitlab.com/privacy/subprocessors",
+          "source_title": "GitLab Legal"
+        }
+      ],
+      "website_owner": "GitLab",
+      "website_matches": true,
+      "website_note": "The supplied pages identify about.gitlab.com as GitLab’s official site and describe GitLab as the company behind the platform.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "No current pricing or specific customer case-study outcomes are provided in these results.",
+      "dropped_facts": 0,
+      "dropped": []
+    },
+    "strategy": {
+      "observation": "GitLab describes its platform as helping teams and AI agents ship secure software.",
+      "fact_ids": [
+        1
+      ],
+      "offer_link": "That product focus does not create a clear need for wedding photography packages for couples, and the facts provide no connection to a relevant consumer service or employee benefit.",
+      "hypotheses": [
+        "It is possible the CFO has a role in evaluating employee perks or vendor spending, but the facts do not establish that."
+      ],
+      "angle": "GitLab’s focus on software orchestration for teams and AI agents seems unrelated to wedding photography packages for couples.",
+      "offer_fit": "poor",
+      "fit_reason": "The offer serves couples planning weddings, while the available facts describe GitLab’s software platform and business; there is no substantiated use case for the CFO."
+    },
+    "draft": {
+      "subject": "A likely mismatch",
+      "body": "GitLab describes its platform as helping teams and AI agents ship secure software. I offer wedding photography packages for couples, so I don't see a clear fit with that focus. If employee benefits or vendor spending sit within your remit, does GitLab have an employee wedding benefit or referral route where these packages could be relevant?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "A likely mismatch",
+          "body": "GitLab describes its platform as helping teams and AI agents ship secure software. I offer wedding photography packages for couples, so I don't see a clear fit with that focus. If employee benefits or vendor spending sit within your remit, does GitLab have an employee wedding benefit or referral route where these packages could be relevant?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@2",
+      "strategy": "strategy@2",
+      "copywriter": "copywriter@2",
+      "review": "review@2"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-6-luna",
+        "prompt_version": "research@2",
+        "duration_ms": 5414,
+        "usage": {
+          "input_tokens": 4837,
+          "cached_input_tokens": 4834,
+          "cache_write_tokens": 0,
+          "output_tokens": 550,
+          "reasoning_tokens": 0
+        },
+        "cost_usd": 0.00032364,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-6-luna",
+        "prompt_version": "strategy@2",
+        "duration_ms": 5096,
+        "usage": {
+          "input_tokens": 693,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 510,
+          "reasoning_tokens": 323
+        },
+        "cost_usd": 0.0003243,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-6-luna",
+        "prompt_version": "copywriter@2",
+        "duration_ms": 7024,
+        "usage": {
+          "input_tokens": 712,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 732,
+          "reasoning_tokens": 641
+        },
+        "cost_usd": 0.0004372,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-6-luna",
+        "prompt_version": "review@2",
+        "duration_ms": 3019,
+        "usage": {
+          "input_tokens": 662,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 266,
+          "reasoning_tokens": 246
+        },
+        "cost_usd": 0.0001992,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"GitLab\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"GitLab\" about.gitlab.com",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"GitLab\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 20570
+  }
+}

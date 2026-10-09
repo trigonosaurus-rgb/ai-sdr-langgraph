@@ -1,0 +1,284 @@
+{
+  "case_id": "gitlab",
+  "config": "luna",
+  "models": "Research gpt-6-luna/low, Strategy gpt-6-luna/medium, Writing gpt-6-luna/medium, Review gpt-6-luna/low",
+  "repeat": 2,
+  "snapshot_recorded_at": "2026-10-09T12:05:24+00:00",
+  "checks": {
+    "label": "draft",
+    "outcome_ok": true,
+    "facts": 7,
+    "dropped_facts": 0,
+    "attempts": 2,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 60,
+    "subject_words": 4,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "32bfc232d1bb4931b0e231ea565666bd",
+    "brief": {
+      "company": "GitLab",
+      "website": "about.gitlab.com",
+      "offer": "Contract technical writers for release notes and migration guides",
+      "recipient": "Engineering Manager, Documentation",
+      "language": "English",
+      "tone": "Direct"
+    },
+    "status": "ready",
+    "reason": null,
+    "message": "The draft passed review.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "GitLab describes its product as an intelligent orchestration platform where teams and AI agents work together to ship secure software faster.",
+          "excerpt": "We're the company behind GitLab, the intelligent orchestration platform where teams and their AI agents ship secure software faster.",
+          "source_url": "https://about.gitlab.com/company",
+          "source_title": "About GitLab - The Intelligent Orchestration Platform"
+        },
+        {
+          "id": 2,
+          "claim": "GitLab says its platform supports the full software delivery lifecycle and serves technology leaders, platform owners, and cross-functional software teams.",
+          "excerpt": "GitLab supports everyone involved in software delivery: developers, business analysts, product owners, testers, solution architects, security teams, and operations teams working together across the complete software lifecycle.",
+          "source_url": "https://about.gitlab.com/platform",
+          "source_title": "GitLab Platform - Speed with control"
+        },
+        {
+          "id": 3,
+          "claim": "GitLab says more than 100,000 organizations use its platform to plan, build, secure, and deploy software.",
+          "excerpt": "used by more than 100,000 organizations to plan, build, secure, and deploy software at machine scale, guided by humans.",
+          "source_url": "https://about.gitlab.com/jobs",
+          "source_title": "Join GitLab"
+        },
+        {
+          "id": 4,
+          "claim": "GitLab lists more than 50 million registered users.",
+          "excerpt": "Over 50 million",
+          "source_url": "https://about.gitlab.com/company",
+          "source_title": "About GitLab - The Intelligent Orchestration Platform"
+        },
+        {
+          "id": 5,
+          "claim": "GitLab announced a global alliance partnership with Capgemini, which will use GitLab’s portfolio and offer implementation services to clients worldwide.",
+          "excerpt": "As a GitLab Select Partner, Capgemini will leverage the GitLab portfolio for clients globally, including GitLab Duo Agent Platform, which orchestrates AI across the entire software development lifecycle, along with specialized implementation services.",
+          "source_url": "https://about.gitlab.com/blog/gitlab-and-capgemini-global-alliance-partnership",
+          "source_title": "GitLab and Capgemini accelerate DevSecOps transformation"
+        },
+        {
+          "id": 6,
+          "claim": "GitLab’s customer stories feature organizations including Carrefour, Thales, Kingfisher, and Southwest.",
+          "excerpt": "How Carrefour and Thales are evolving their CI/CD platforms",
+          "source_url": "https://about.gitlab.com/blog/tags/customers",
+          "source_title": "Customers articles - GitLab Blog"
+        },
+        {
+          "id": 7,
+          "claim": "GitLab lists Google and AWS among providers of cloud hosting for GitLab.com, Dedicated, and Self-Managed products.",
+          "excerpt": "Google LLC | United States | Cloud Hosting, Customer Support, and AI-Powered Product Features | GitLab.com, Dedicated, and Self-Managed",
+          "source_url": "https://about.gitlab.com/privacy/subprocessors",
+          "source_title": "GitLab Legal"
+        }
+      ],
+      "website_owner": "GitLab",
+      "website_matches": true,
+      "website_note": "The results identify about.gitlab.com as GitLab’s official site and describe GitLab on its company pages.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "The results do not provide current pricing or detailed information about GitLab’s customer segments by revenue.",
+      "dropped_facts": 0,
+      "dropped": []
+    },
+    "strategy": {
+      "observation": "GitLab announced a global alliance with Capgemini, which will use GitLab’s portfolio and offer implementation services to clients worldwide.",
+      "fact_ids": [
+        5
+      ],
+      "offer_link": "As Capgemilni helps clients implement GitLab, migration guides could help explain product changes and support those implementations; contract writers could also assist with release notes. The facts don’t establish that the partnership increases documentation needs.",
+      "hypotheses": [
+        "The alliance may bring more client implementations that need clear migration guidance.",
+        "GitLab’s documentation team may need additional capacity for release notes or migration guides."
+      ],
+      "angle": "I noticed GitLab’s Capgemini alliance will include implementation services for clients worldwide.",
+      "offer_fit": "weak",
+      "fit_reason": "The partnership creates a plausible connection to migration guidance, but there is no evidence that it will increase documentation work or that GitLab needs contract writers."
+    },
+    "draft": {
+      "subject": "Migration guidance for implementations",
+      "body": "I noticed GitLab’s Capgemini alliance includes implementation services for clients worldwide. If that brings more teams through product changes, clear migration guides could help support those implementations.\n\nI provide contract technical writers for release notes and migration guides, giving documentation teams extra capacity when the work spikes.\n\nAre migration guides part of the documentation support you’re planning around the alliance?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Migration guidance for implementations",
+          "body": "Hi,\n\nI noticed GitLab’s Capgemini alliance includes implementation services for clients worldwide. If that brings more teams through product changes, clear migration guides could help support those implementations.\n\nI provide contract technical writers for release notes and migration guides, giving documentation teams extra capacity when the work spikes.\n\nAre migration guides part of the documentation support you’re planning around the alliance?"
+        },
+        "review": {
+          "passed": false,
+          "issues": [
+            "“Hi,” delays the point instead of putting it in the first line. Remove the greeting and start with the Capgemini alliance observation."
+          ]
+        }
+      },
+      {
+        "attempt": 2,
+        "draft": {
+          "subject": "Migration guidance for implementations",
+          "body": "I noticed GitLab’s Capgemini alliance includes implementation services for clients worldwide. If that brings more teams through product changes, clear migration guides could help support those implementations.\n\nI provide contract technical writers for release notes and migration guides, giving documentation teams extra capacity when the work spikes.\n\nAre migration guides part of the documentation support you’re planning around the alliance?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@2",
+      "strategy": "strategy@2",
+      "copywriter": "copywriter@2",
+      "review": "review@2"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-6-luna",
+        "prompt_version": "research@2",
+        "duration_ms": 12712,
+        "usage": {
+          "input_tokens": 4837,
+          "cached_input_tokens": 4834,
+          "cache_write_tokens": 0,
+          "output_tokens": 631,
+          "reasoning_tokens": 47
+        },
+        "cost_usd": 0.00036414,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-6-luna",
+        "prompt_version": "strategy@2",
+        "duration_ms": 5655,
+        "usage": {
+          "input_tokens": 726,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 540,
+          "reasoning_tokens": 329
+        },
+        "cost_usd": 0.00034260000000000003,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-6-luna",
+        "prompt_version": "copywriter@2",
+        "duration_ms": 3011,
+        "usage": {
+          "input_tokens": 770,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 288,
+          "reasoning_tokens": 186
+        },
+        "cost_usd": 0.000221,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-6-luna",
+        "prompt_version": "review@2",
+        "duration_ms": 3457,
+        "usage": {
+          "input_tokens": 706,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 228,
+          "reasoning_tokens": 179
+        },
+        "cost_usd": 0.00018460000000000001,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 2,
+        "model": "gpt-6-luna",
+        "prompt_version": "copywriter@2",
+        "duration_ms": 2333,
+        "usage": {
+          "input_tokens": 907,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 169,
+          "reasoning_tokens": 71
+        },
+        "cost_usd": 0.00017519999999999998,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 2,
+        "model": "gpt-6-luna",
+        "prompt_version": "review@2",
+        "duration_ms": 2884,
+        "usage": {
+          "input_tokens": 704,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 117,
+          "reasoning_tokens": 97
+        },
+        "cost_usd": 0.00012890000000000002,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"GitLab\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"GitLab\" about.gitlab.com",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"GitLab\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 30070
+  }
+}

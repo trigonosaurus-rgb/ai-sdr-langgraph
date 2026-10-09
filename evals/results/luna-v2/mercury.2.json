@@ -1,0 +1,237 @@
+{
+  "case_id": "mercury",
+  "config": "luna",
+  "models": "Research gpt-6-luna/low, Strategy gpt-6-luna/medium, Writing gpt-6-luna/medium, Review gpt-6-luna/low",
+  "repeat": 2,
+  "snapshot_recorded_at": "2026-10-09T12:06:22+00:00",
+  "checks": {
+    "label": "draft",
+    "outcome_ok": true,
+    "facts": 7,
+    "dropped_facts": 0,
+    "attempts": 1,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 74,
+    "subject_words": 4,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "7b84b439b0b3410ebc40c3fef24ea276",
+    "brief": {
+      "company": "Mercury",
+      "website": "mercury.com",
+      "offer": "Onboarding email sequences for startup founders",
+      "recipient": "Lifecycle Marketing Lead",
+      "language": "English",
+      "tone": "Warm"
+    },
+    "status": "ready",
+    "reason": null,
+    "message": "The draft passed review.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "Mercury says more than 300,000 customers use its platform, and 73% of new customers by the end of 2025 were outside the AI or tech startup category.",
+          "excerpt": "Today, more than 300,000 customers use Mercury. ... By the end of 2025, 73% of new customers came from outside the AI or tech startup category",
+          "source_url": "https://mercury.com/blog/annual-letter-2025",
+          "source_title": "Mercury Annual Letter 2025 | Mercury"
+        },
+        {
+          "id": 2,
+          "claim": "Mercury reports that one in three U.S. startups use its services and that it onboarded 2.4 times as many AI companies in 2025 as in 2024.",
+          "excerpt": "Today, 1 in 3 U.S. startups use Mercury, including a rapidly growing share of AI companies — in 2025, we onboarded 2.4x more AI companies than the year before.",
+          "source_url": "https://mercury.com/blog/annual-letter-2025",
+          "source_title": "Mercury Annual Letter 2025 | Mercury"
+        },
+        {
+          "id": 3,
+          "claim": "Mercury provides business banking and financial workflows, including payments, spend controls, and finance-operations automation.",
+          "excerpt": "Mercury combines checking & savings accounts with payments, spend control, and finance ops automation in one place.",
+          "source_url": "https://www.trustpilot.com/review/mercury.com",
+          "source_title": "Mercury is rated \"Great\" with 4 / 5 on Trustpilot"
+        },
+        {
+          "id": 4,
+          "claim": "Mercury Bill Pay automates accounts payable, organizing bills by approval status and due date and scheduling payment by ACH, check, or wire.",
+          "excerpt": "Mercury Bill Pay is an automated accounts payable solution that helps you manage and pay company bills from your Mercury account. Bills sent to your dedicated inbox are automatically organized by approval status and due date, and can be scheduled for payment via ACH, check, or wire.",
+          "source_url": "https://support.mercury.com/hc/en-us/articles/28768945847316-Bill-Pay-overview",
+          "source_title": "Bill Pay overview – Mercury"
+        },
+        {
+          "id": 5,
+          "claim": "Mercury offers free invoicing, with recurring invoices and ACH debit invoicing available on paid plans.",
+          "excerpt": "Customers can create, send, track, and receive payment on as many invoices as they’d like in the free version of Mercury. Advanced invoicing capabilities, such as sending recurring invoices, and invoicing with ACH debit, are available as part of our paid plans.",
+          "source_url": "https://app.mercury.com/help/mercury-invoicing-overview",
+          "source_title": "Mercury invoicing overview – Mercury"
+        },
+        {
+          "id": 6,
+          "claim": "Mercury launched dashboard financial insights with interactive business charts and tables, AI-powered cash-flow alerts, and a chatbot for financial questions.",
+          "excerpt": "For business accounts, interactive charts and tables update automatically so you always know where things stand: filter and compare by time periods, get AI-powered cashflow alerts and ask a chatbot questions like “Why did expenses increase this month?”",
+          "source_url": "https://mercury.com/blog/march-2026-product-updates",
+          "source_title": "March 2026 product updates | Mercury"
+        },
+        {
+          "id": 7,
+          "claim": "Mercury says it built its business around a partner-bank model, providing banking services through direct integrations with partner banks.",
+          "excerpt": "From the beginning, we’ve built Mercury with a partner bank business model. Today, we support over 300K customers, with banking services provided through Mercury’s direct integrations with our partner banks",
+          "source_url": "https://www.mercury.com/how-mercury-works",
+          "source_title": "How Mercury works with its partners to bring you powerful banking | Mercury"
+        }
+      ],
+      "website_owner": "Mercury",
+      "website_matches": true,
+      "website_note": "The results identify mercury.com as Mercury’s official site and describe Mercury’s fintech products there.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 0,
+      "dropped": []
+    },
+    "strategy": {
+      "observation": "Mercury onboarded 2.4 times as many AI companies in 2025 as in 2024.",
+      "fact_ids": [
+        2
+      ],
+      "offer_link": "Founder-focused onboarding sequences could guide this growing customer segment through Mercury’s business finance workflows, such as payments and spend controls.",
+      "hypotheses": [
+        "AI startup founders may have onboarding needs that differ enough from other customers to benefit from a dedicated sequence.",
+        "Mercury may not already have a lifecycle sequence tailored to this segment."
+      ],
+      "angle": "Mercury onboarded 2.4 times as many AI companies in 2025 as in 2024, creating a timely opportunity to consider how founder onboarding serves that growing segment.",
+      "offer_fit": "good",
+      "fit_reason": "Mercury serves startup founders with business financial workflows, and the growth in AI-company onboarding gives a specific reason to consider founder-focused lifecycle emails. The facts do not confirm a gap in Mercury’s existing onboarding."
+    },
+    "draft": {
+      "subject": "Onboarding for AI founders",
+      "body": "Hi,\n\nMercury onboarded 2.4 times as many AI companies in 2025 as in 2024. I wondered if founders in this growing group might benefit from a tailored path through early finance workflows like payments and spend controls.\n\nI write onboarding email sequences for startup founders, with a focus on helping them get oriented to the workflows they need. Have you found that AI founders need extra guidance with payments or spend controls early on?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Onboarding for AI founders",
+          "body": "Hi,\n\nMercury onboarded 2.4 times as many AI companies in 2025 as in 2024. I wondered if founders in this growing group might benefit from a tailored path through early finance workflows like payments and spend controls.\n\nI write onboarding email sequences for startup founders, with a focus on helping them get oriented to the workflows they need. Have you found that AI founders need extra guidance with payments or spend controls early on?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@2",
+      "strategy": "strategy@2",
+      "copywriter": "copywriter@2",
+      "review": "review@2"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-6-luna",
+        "prompt_version": "research@2",
+        "duration_ms": 5232,
+        "usage": {
+          "input_tokens": 4255,
+          "cached_input_tokens": 4252,
+          "cache_write_tokens": 0,
+          "output_tokens": 607,
+          "reasoning_tokens": 0
+        },
+        "cost_usd": 0.00034632,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-6-luna",
+        "prompt_version": "strategy@2",
+        "duration_ms": 6491,
+        "usage": {
+          "input_tokens": 766,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 679,
+          "reasoning_tokens": 454
+        },
+        "cost_usd": 0.00041610000000000003,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-6-luna",
+        "prompt_version": "copywriter@2",
+        "duration_ms": 5412,
+        "usage": {
+          "input_tokens": 808,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 489,
+          "reasoning_tokens": 372
+        },
+        "cost_usd": 0.0003253,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-6-luna",
+        "prompt_version": "review@2",
+        "duration_ms": 2609,
+        "usage": {
+          "input_tokens": 761,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 135,
+          "reasoning_tokens": 115
+        },
+        "cost_usd": 0.00014360000000000002,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Mercury\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Mercury\" mercury.com",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Mercury\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 19758
+  }
+}

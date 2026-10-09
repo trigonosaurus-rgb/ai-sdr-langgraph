@@ -1,0 +1,239 @@
+{
+  "case_id": "poor-fit-wise",
+  "config": "sol",
+  "models": "Research gpt-6.1-sol/low, Strategy gpt-6.1-sol/medium, Writing gpt-6.1-sol/medium, Review gpt-6.1-sol/low",
+  "repeat": 1,
+  "snapshot_recorded_at": "2026-10-09T12:07:09+00:00",
+  "checks": {
+    "label": "poor_fit",
+    "outcome_ok": true,
+    "facts": 7,
+    "dropped_facts": 0,
+    "attempts": 1,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 76,
+    "subject_words": 6,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "d26f1a57ea1842549bb804d7f8ea1024",
+    "brief": {
+      "company": "Wise",
+      "website": "wise.com",
+      "offer": "Forklift maintenance contracts for warehouses",
+      "recipient": "Head of Product",
+      "language": "English",
+      "tone": "Direct"
+    },
+    "status": "needs_attention",
+    "reason": null,
+    "message": "The draft passed review, but the offer looks like a poor fit.",
+    "issues": [
+      "The offer may not fit this company: The facts describe financial products and money-transfer infrastructure, not warehouse operations. No plausible need for forklift maintenance or relevant ownership by the Head of Product is established; this cold email should not be sent."
+    ],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "Wise Account and Wise Business let individuals and businesses hold over 40 currencies, transfer money internationally and spend abroad.",
+          "excerpt": "With Wise Account and Wise Business, people and businesses can hold 40+ currencies, move money between countries and spend money abroad.",
+          "source_url": "https://newsroom.wise.com/en-NAM/about",
+          "source_title": "About Wise | Wise Newsroom"
+        },
+        {
+          "id": 2,
+          "claim": "Wise serves personal customers through Wise Account, SMEs through Wise Business, and banks and other enterprises through Wise Platform.",
+          "excerpt": "We serve each of these customer groups through our three products: the Wise Account for personal customers, Wise Business for small and medium-sized businesses and Wise Platform for banks and other enterprises.",
+          "source_url": "https://wise.com/imaginary-v2/images/ad736416f90791dbb49c7e59f1f45d8d-WiseFY2025AnnualReportAccounts.pdf",
+          "source_title": "Wise – 2025 Annual Report and Accounts"
+        },
+        {
+          "id": 3,
+          "claim": "In FY2026, Wise reported 19 million active customers, up 21% year over year, and $243.4 billion in cross-border volume, up 31%.",
+          "excerpt": "19m\n\nActive customers\n\n(+21% YoY)\n\n$243.4bn\n\nCross-border volume\n\n(+31% YoY)",
+          "source_url": "https://owners.wise.com",
+          "source_title": "Overview | Wise Plc."
+        },
+        {
+          "id": 4,
+          "claim": "Wise launched an Interest feature for people and businesses in Canada.",
+          "excerpt": "Wise has announced the launch of its new Interest feature for people and businesses in Canada.",
+          "source_url": "https://newsroom.wise.com/en-NAM/about",
+          "source_title": "About Wise | Wise Newsroom"
+        },
+        {
+          "id": 5,
+          "claim": "Wise reported $39 billion in customer holdings in FY2026, up 40% year over year.",
+          "excerpt": "$39.0bn\n\nCustomer holdings\n\n(+40% YoY)",
+          "source_url": "https://owners.wise.com",
+          "source_title": "Overview | Wise Plc."
+        },
+        {
+          "id": 6,
+          "claim": "During FY2025, Wise invested in reducing prices, building infrastructure for moving and managing money globally, and broadening its product offering.",
+          "excerpt": "We continued investing in our customers by reducing our prices and building the infrastructure they need to move and manage money around the world, while also broadening our product offering.",
+          "source_url": "https://wise.com/imaginary-v2/images/ad736416f90791dbb49c7e59f1f45d8d-WiseFY2025AnnualReportAccounts.pdf",
+          "source_title": "Wise – 2025 Annual Report and Accounts"
+        },
+        {
+          "id": 7,
+          "claim": "Wise reported FY2026 net revenue of $2.5 billion, up 29% year over year.",
+          "excerpt": "$2.5bn\n\nNet Revenue\n\n(+29% YoY)",
+          "source_url": "https://owners.wise.com",
+          "source_title": "Overview | Wise Plc."
+        }
+      ],
+      "website_owner": "Wise",
+      "website_matches": true,
+      "website_note": "The wise.com homepage presents Wise products, and result 7 explicitly lists wise.com as Wise's website.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 0,
+      "dropped": []
+    },
+    "strategy": {
+      "observation": "Wise launched an Interest feature for people and businesses in Canada.",
+      "fact_ids": [
+        4
+      ],
+      "offer_link": "The launch provides no concrete connection to forklift maintenance contracts. Such contracts would require a warehouse operation using forklifts, which the supplied facts do not establish.",
+      "hypotheses": [
+        "The offer could become relevant if Wise operated warehouses with forklifts, but this is unverified.",
+        "Even if such operations existed, responsibility might sit with facilities or operations rather than the Head of Product."
+      ],
+      "angle": "Wise’s Canadian Interest launch gives me a product-specific reason to reach out, but not a relevant reason to offer warehouse forklift maintenance.",
+      "offer_fit": "poor",
+      "fit_reason": "The facts describe financial products and money-transfer infrastructure, not warehouse operations. No plausible need for forklift maintenance or relevant ownership by the Head of Product is established; this cold email should not be sent."
+    },
+    "draft": {
+      "subject": "Checking whether warehouse maintenance is relevant",
+      "body": "Wise’s Interest launch in Canada doesn’t give me a clear reason to think forklift maintenance is relevant to your team.\n\nI provide forklift maintenance contracts for warehouses to help prevent equipment downtime. That would only matter here if Wise runs warehouse operations using forklifts, which the launch itself doesn’t establish. If it does, facilities or operations may be the better contact.\n\nDoes that launch involve any warehouses using forklifts, or should I rule out a fit?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Checking whether warehouse maintenance is relevant",
+          "body": "Wise’s Interest launch in Canada doesn’t give me a clear reason to think forklift maintenance is relevant to your team.\n\nI provide forklift maintenance contracts for warehouses to help prevent equipment downtime. That would only matter here if Wise runs warehouse operations using forklifts, which the launch itself doesn’t establish. If it does, facilities or operations may be the better contact.\n\nDoes that launch involve any warehouses using forklifts, or should I rule out a fit?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@2",
+      "strategy": "strategy@2",
+      "copywriter": "copywriter@2",
+      "review": "review@2"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-6.1-sol",
+        "prompt_version": "research@2",
+        "duration_ms": 9302,
+        "usage": {
+          "input_tokens": 4654,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 4651,
+          "output_tokens": 566,
+          "reasoning_tokens": 0
+        },
+        "cost_usd": 0.0172935,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-6.1-sol",
+        "prompt_version": "strategy@2",
+        "duration_ms": 9429,
+        "usage": {
+          "input_tokens": 718,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 338,
+          "reasoning_tokens": 126
+        },
+        "cost_usd": 0.004816,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-6.1-sol",
+        "prompt_version": "copywriter@2",
+        "duration_ms": 10792,
+        "usage": {
+          "input_tokens": 755,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 342,
+          "reasoning_tokens": 224
+        },
+        "cost_usd": 0.00493,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-6.1-sol",
+        "prompt_version": "review@2",
+        "duration_ms": 5252,
+        "usage": {
+          "input_tokens": 717,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 14,
+          "reasoning_tokens": 0
+        },
+        "cost_usd": 0.001574,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Wise\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Wise\" wise.com",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Wise\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 34797
+  }
+}

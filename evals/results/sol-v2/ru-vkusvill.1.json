@@ -1,0 +1,245 @@
+{
+  "case_id": "ru-vkusvill",
+  "config": "sol",
+  "models": "Research gpt-6.1-sol/low, Strategy gpt-6.1-sol/medium, Writing gpt-6.1-sol/medium, Review gpt-6.1-sol/low",
+  "repeat": 1,
+  "snapshot_recorded_at": "2026-10-09T12:07:34+00:00",
+  "checks": {
+    "label": "draft",
+    "outcome_ok": true,
+    "facts": 8,
+    "dropped_facts": 0,
+    "attempts": 1,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 86,
+    "subject_words": 6,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "1d5df093ae514d2abecefe778a9f233b",
+    "brief": {
+      "company": "ВкусВилл",
+      "website": "vkusvill.ru",
+      "offer": "Аудит карточек товаров в мобильном приложении",
+      "recipient": "Директор по продукту",
+      "language": "Russian",
+      "tone": "Direct"
+    },
+    "status": "ready",
+    "reason": null,
+    "message": "The draft passed review.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "VkusVill is a healthy-food brand, retail store chain and free delivery service.",
+          "excerpt": "«ВкусВилл» — бренд полезных продуктов для здорового питания, сеть магазинов и сервис бесплатной доставки.",
+          "source_url": "https://vkusvill.ru/history",
+          "source_title": "История компаний «ВкусВилл» и «Избёнка»"
+        },
+        {
+          "id": 2,
+          "claim": "VkusVill reports delivering more than 480,000 orders per day.",
+          "excerpt": "480+ тыс.\n\nзаказов в день доставляют наши курьеры",
+          "source_url": "https://vkusvill.ru/about",
+          "source_title": "О нас | ВкусВилл"
+        },
+        {
+          "id": 3,
+          "claim": "Its official website lists more than 1,537 stores, 264 dark stores and coverage across more than 155 cities.",
+          "excerpt": "| 1 537+ | магазинов |\n| 264+ | даркстора  Что такое даркстор? |\n| 155+ | городов  Карта магазинов |",
+          "source_url": "https://vkusvill.ru/about",
+          "source_title": "О нас | ВкусВилл"
+        },
+        {
+          "id": 4,
+          "claim": "VkusVill partners with more than 1,900 producers.",
+          "excerpt": "1 900+\n\nпроизводителей стали нашими партнёрами и создают продукты для вас",
+          "source_url": "https://vkusvill.ru/about",
+          "source_title": "О нас | ВкусВилл"
+        },
+        {
+          "id": 5,
+          "claim": "VkusVill lists more than 4,200 own-brand products, with 85% of its assortment domestically produced and more than 11,200 items available for free delivery.",
+          "excerpt": "| 4 200+ | продуктов под брендом ВкусВилл |\n| 85% | ассортимента отечественного производства |\n| 11 200+ | товаров доступны с нашей бесплатной доставкой |",
+          "source_url": "https://vkusvill.ru/about",
+          "source_title": "О нас | ВкусВилл"
+        },
+        {
+          "id": 6,
+          "claim": "Its ecosystem includes micro-markets, vending, a B2B business, prepared meal plans and catering.",
+          "excerpt": "Помимо бесплатной доставки, в неё входят микромаркеты, вендинги, B2B-направление, готовые рационы, кейтеринг и многое другое.",
+          "source_url": "https://vkusvill.ru/history",
+          "source_title": "История компаний «ВкусВилл» и «Избёнка»"
+        },
+        {
+          "id": 7,
+          "claim": "VkusVill acquired Anderson, a brand with its own confectionery factory and family café chain, as part of its ecosystem development.",
+          "excerpt": "В связи с этим мы купили «АндерСон» — это уникальный бренд с собственной кондитерской фабрикой и сетью семейных кафе.",
+          "source_url": "https://vkusvill.ru/history",
+          "source_title": "История компаний «ВкусВилл» и «Избёнка»"
+        },
+        {
+          "id": 8,
+          "claim": "VkusVill's delivery app advertises free grocery delivery without a minimum order amount.",
+          "excerpt": "бесплатная доставка продуктов без минимальной суммы",
+          "source_url": "https://play.google.com/store/apps/details?id=ru.vkusvill&hl=ru",
+          "source_title": "Приложения в Google Play – ВкусВилл: доставка продуктов"
+        }
+      ],
+      "website_owner": "ВкусВилл",
+      "website_matches": true,
+      "website_note": "The website's company history identifies ВкусВилл as its business, and result 7 explicitly lists vkusvill.ru as the company's site.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 0,
+      "dropped": []
+    },
+    "strategy": {
+      "observation": "В приложении «ВкусВилл» заявлена бесплатная доставка продуктов без минимальной суммы заказа.",
+      "fact_ids": [
+        8
+      ],
+      "offer_link": "Отсутствие минимальной суммы позволяет заказать даже один товар. Аудит карточек может проверить, достаточно ли в них информации для такого решения: понятны ли состав, вес, цена и условия хранения, легко ли найти эти сведения перед добавлением в корзину.",
+      "hypotheses": [
+        "Возможно, часть пользователей приходит в приложение за одним конкретным товаром, а не за большой закупкой.",
+        "Если важные для выбора сведения в карточке трудно найти или интерпретировать, это может мешать добавлению товара в корзину.",
+        "Директору по продукту может быть полезен список проверяемых улучшений карточек, приоритизированных для последующих экспериментов."
+      ],
+      "angle": "В приложении «ВкусВилл» доставка бесплатна без минимальной суммы — предлагаю проверить, помогает ли карточка уверенно выбрать товар, даже когда он будет единственным в заказе.",
+      "offer_fit": "good",
+      "fit_reason": "Аудит касается конкретного элемента покупательского пути в приложении и соответствует зоне ответственности продуктового руководителя; при этом факты не подтверждают наличие проблем с карточками, поэтому предложение стоит подавать как проверку, а не исправление известных недостатков."
+    },
+    "draft": {
+      "subject": "Карточка товара для заказа одной позиции",
+      "body": "В приложении «ВкусВилл» доставка бесплатна без минимальной суммы — предлагаю проверить, помогает ли карточка выбрать товар, даже если он будет единственным в заказе.\n\nЯ провожу аудит карточек товаров в мобильном приложении: проверяю, легко ли перед добавлением в корзину найти и понять состав, вес, цену и условия хранения. Если человек приходит за одной позицией, нехватка этих сведений может помешать ему оформить заказ. Результат аудита — список конкретных изменений с приоритетами для проверки в экспериментах.\n\nКакие одну-две категории вы бы выбрали для такой проверки сценария заказа одного товара?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Карточка товара для заказа одной позиции",
+          "body": "В приложении «ВкусВилл» доставка бесплатна без минимальной суммы — предлагаю проверить, помогает ли карточка выбрать товар, даже если он будет единственным в заказе.\n\nЯ провожу аудит карточек товаров в мобильном приложении: проверяю, легко ли перед добавлением в корзину найти и понять состав, вес, цену и условия хранения. Если человек приходит за одной позицией, нехватка этих сведений может помешать ему оформить заказ. Результат аудита — список конкретных изменений с приоритетами для проверки в экспериментах.\n\nКакие одну-две категории вы бы выбрали для такой проверки сценария заказа одного товара?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@2",
+      "strategy": "strategy@2",
+      "copywriter": "copywriter@2",
+      "review": "review@2"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-6.1-sol",
+        "prompt_version": "research@2",
+        "duration_ms": 12222,
+        "usage": {
+          "input_tokens": 5871,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 5868,
+          "output_tokens": 666,
+          "reasoning_tokens": 0
+        },
+        "cost_usd": 0.021336,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-6.1-sol",
+        "prompt_version": "strategy@2",
+        "duration_ms": 14583,
+        "usage": {
+          "input_tokens": 795,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 485,
+          "reasoning_tokens": 168
+        },
+        "cost_usd": 0.00644,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-6.1-sol",
+        "prompt_version": "copywriter@2",
+        "duration_ms": 4359,
+        "usage": {
+          "input_tokens": 919,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 165,
+          "reasoning_tokens": 0
+        },
+        "cost_usd": 0.003488,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-6.1-sol",
+        "prompt_version": "review@2",
+        "duration_ms": 1828,
+        "usage": {
+          "input_tokens": 848,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 14,
+          "reasoning_tokens": 0
+        },
+        "cost_usd": 0.001836,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"ВкусВилл\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"ВкусВилл\" vkusvill.ru",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"ВкусВилл\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 33004
+  }
+}
