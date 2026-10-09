@@ -1,0 +1,247 @@
+{
+  "case_id": "plausible",
+  "config": "mini",
+  "models": "Research gpt-5.4-mini/low, Strategy gpt-5.4-mini/medium, Writing gpt-5.4-mini/medium, Review gpt-5.4-mini/low",
+  "repeat": 2,
+  "snapshot_recorded_at": "2026-10-09T12:05:40+00:00",
+  "checks": {
+    "label": "draft",
+    "outcome_ok": true,
+    "facts": 8,
+    "dropped_facts": 0,
+    "attempts": 1,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 56,
+    "subject_words": 4,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "877cbdb3ea2b45f189b040c5a6aba051",
+    "brief": {
+      "company": "Plausible Analytics",
+      "website": "plausible.io",
+      "offer": "Paid search campaigns for privacy-focused software products",
+      "recipient": "Co-founder",
+      "language": "English",
+      "tone": "Direct"
+    },
+    "status": "ready",
+    "reason": null,
+    "message": "The draft passed review.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "Plausible Analytics is an independent, open source analytics company based in the EU.",
+          "excerpt": "Plausible Analytics is an independent, open source analytics company based in the EU.",
+          "source_url": "https://plausible.io/about",
+          "source_title": "About | Plausible Analytics"
+        },
+        {
+          "id": 2,
+          "claim": "Its product is privacy-focused web analytics that does not use cookies or collect personal data.",
+          "excerpt": "We do not use cookies and we do not collect personal data.",
+          "source_url": "https://plausible.io/about",
+          "source_title": "About | Plausible Analytics"
+        },
+        {
+          "id": 3,
+          "claim": "The company says it crossed $1 million in annual recurring revenue in 2022 and is profitable and independently operated.",
+          "excerpt": "Plausible crossed $1 million in annual recurring revenue in 2022 and has continued to grow as a profitable, independently operated company.",
+          "source_url": "https://plausible.io/about",
+          "source_title": "About | Plausible Analytics"
+        },
+        {
+          "id": 4,
+          "claim": "Plausible sells a white-label analytics product for SaaS platforms, website builders, marketplaces, and hosting services.",
+          "excerpt": "SaaS platforms can add analytics as a maintained product feature without building a separate collection and reporting system.",
+          "source_url": "https://plausible.io/white-label-web-analytics",
+          "source_title": "White label web analytics for SaaS platforms and website builders | Plausible Analytics"
+        },
+        {
+          "id": 5,
+          "claim": "It supports embedded analytics and a multi-tenant setup where each customer gets their own dashboard and site data.",
+          "excerpt": "Provision one site for each customer\n   2. Send each customer’s events to the matching site\n   3. Show the analytics inside your product",
+          "source_url": "https://plausible.io/white-label-web-analytics",
+          "source_title": "White label web analytics for SaaS platforms and website builders | Plausible Analytics"
+        },
+        {
+          "id": 6,
+          "claim": "Plausible says it has more than 21,000 paying customers.",
+          "excerpt": "why over 21,000 paying customers trust us with their website and business insights:",
+          "source_url": "https://plausible.io",
+          "source_title": "Plausible Analytics | Simple, privacy-friendly Google Analytics alternative"
+        },
+        {
+          "id": 7,
+          "claim": "The company offers a free trial and positions itself as a Google Analytics alternative.",
+          "excerpt": "We invite you to take a look around, explore our live demo and try Plausible for free.",
+          "source_url": "https://plausible.io",
+          "source_title": "Plausible Analytics | Simple, privacy-friendly Google Analytics alternative"
+        },
+        {
+          "id": 8,
+          "claim": "The service is hosted on servers owned and operated by European companies and data never leaves the EU.",
+          "excerpt": "All visitor data is exclusively processed on servers owned and operated by European companies and never leaves the EU.",
+          "source_url": "https://plausible.io",
+          "source_title": "Plausible Analytics | Simple, privacy-friendly Google Analytics alternative"
+        }
+      ],
+      "website_owner": "Plausible Analytics",
+      "website_matches": true,
+      "website_note": "The results identify plausible.io as the official site of Plausible Analytics, including its about page and homepage.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 0,
+      "dropped": []
+    },
+    "strategy": {
+      "observation": "Plausible sells privacy-focused web analytics and explicitly positions itself as a Google Analytics alternative with a free trial.",
+      "fact_ids": [
+        2,
+        7,
+        8
+      ],
+      "offer_link": "That combination creates clear high-intent search demand around terms like privacy analytics, cookie-free analytics, and Google Analytics alternatives, which is exactly where paid search can capture trial traffic from people already looking for this category.",
+      "hypotheses": [
+        "I’m assuming you still want more top-of-funnel trial signups from buyers actively comparing analytics tools.",
+        "I’m assuming you may be open to using paid search alongside your existing organic and word-of-mouth acquisition.",
+        "I’m assuming keyword demand and CAC could still justify paid acquisition in your category."
+      ],
+      "angle": "Plausible already sits in a search-friendly category—privacy-focused Google Analytics alternative with a free trial—so I wanted to reach out about paid search on the highest-intent keywords around that demand.",
+      "offer_fit": "good",
+      "fit_reason": "Plausible’s positioning gives paid search a plausible use case because people already search for privacy-first analytics alternatives, and a free trial makes those clicks monetizable. The only caveat is that keyword volume may be limited, but the fit is still strong enough to justify outreach."
+    },
+    "draft": {
+      "subject": "Paid search for Plausible",
+      "body": "Plausible already sits in a search-friendly category: privacy-focused analytics, Google Analytics alternative, free trial.\n\nI run paid search campaigns for privacy-focused software products. The aim is simple: capture people who are already looking for a tool like this.\n\nIf paid search is on your radar, are you testing the highest-intent keywords for trial signups this quarter?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Paid search for Plausible",
+          "body": "Plausible already sits in a search-friendly category: privacy-focused analytics, Google Analytics alternative, free trial.\n\nI run paid search campaigns for privacy-focused software products. The aim is simple: capture people who are already looking for a tool like this.\n\nIf paid search is on your radar, are you testing the highest-intent keywords for trial signups this quarter?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@2",
+      "strategy": "strategy@2",
+      "copywriter": "copywriter@2",
+      "review": "review@2"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "research@2",
+        "duration_ms": 3102,
+        "usage": {
+          "input_tokens": 3804,
+          "cached_input_tokens": 3328,
+          "cache_write_tokens": null,
+          "output_tokens": 516,
+          "reasoning_tokens": 52
+        },
+        "cost_usd": 0.0029286,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "strategy@2",
+        "duration_ms": 10642,
+        "usage": {
+          "input_tokens": 763,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 1291,
+          "reasoning_tokens": 1023
+        },
+        "cost_usd": 0.00638175,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "copywriter@2",
+        "duration_ms": 4580,
+        "usage": {
+          "input_tokens": 854,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 614,
+          "reasoning_tokens": 512
+        },
+        "cost_usd": 0.0034035,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "review@2",
+        "duration_ms": 3062,
+        "usage": {
+          "input_tokens": 747,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 375,
+          "reasoning_tokens": 355
+        },
+        "cost_usd": 0.00224775,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Plausible Analytics\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Plausible Analytics\" plausible.io",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Plausible Analytics\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 21400
+  }
+}

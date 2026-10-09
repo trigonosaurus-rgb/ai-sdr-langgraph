@@ -1,0 +1,252 @@
+{
+  "case_id": "duolingo",
+  "config": "mini",
+  "models": "Research gpt-5.4-mini/low, Strategy gpt-5.4-mini/medium, Writing gpt-5.4-mini/medium, Review gpt-5.4-mini/low",
+  "repeat": 2,
+  "snapshot_recorded_at": "2026-10-09T12:05:18+00:00",
+  "checks": {
+    "label": "draft",
+    "outcome_ok": true,
+    "facts": 8,
+    "dropped_facts": 1,
+    "attempts": 1,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 72,
+    "subject_words": 3,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "8626ebaa7dcf49008998be9076ee7283",
+    "brief": {
+      "company": "Duolingo",
+      "website": "duolingo.com",
+      "offer": "Voice actors and audio production for language-learning content",
+      "recipient": "Director of Learning Content",
+      "language": "English",
+      "tone": "Direct"
+    },
+    "status": "ready",
+    "reason": null,
+    "message": "The draft passed review.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "Duolingo uses a freemium business model, offering free learning while monetizing through a paid experience.",
+          "excerpt": "The freemium business model is good for our mission and our business. Duolingo started as a free product, and we remain committed to offering free learning for all while monetizing through a valuable paid experience.",
+          "source_url": "http://investors.duolingo.com/company-strategy-overview-0",
+          "source_title": "Company Strategy Overview - Duolingo, Inc."
+        },
+        {
+          "id": 2,
+          "claim": "Duolingo reported 52.7M daily active users, 133.1M monthly active users, and 12.2M paid subscribers as of Q4 2025.",
+          "excerpt": "As of Q4 2025, we have 52.7M DAUs, 133.1M MAUs, and 12.2M paid subscribers.",
+          "source_url": "http://investors.duolingo.com/company-strategy-overview-0",
+          "source_title": "Company Strategy Overview - Duolingo, Inc."
+        },
+        {
+          "id": 3,
+          "claim": "Duolingo’s strategy emphasizes product-led growth over heavy paid acquisition and says most growth investment goes into product R&D.",
+          "excerpt": "Spammy notifications, deceptive patterns, and heavy paid acquisition are short-term tactics. Instead, we focus on long-term engagement—",
+          "source_url": "https://blog.duolingo.com/duolingo-company-strategy",
+          "source_title": "Duolingo Company Strategy: How Duolingo Builds Lasting Success"
+        },
+        {
+          "id": 4,
+          "claim": "Duolingo says its investment in growth is almost all in product R&D, using marketing only to strategically accelerate growth.",
+          "excerpt": "In line with our core beliefs, our investment in growth is almost all in product R&D, with marketing used to strategically accelerate growth.",
+          "source_url": "https://blog.duolingo.com/duolingo-company-strategy",
+          "source_title": "Duolingo Company Strategy: How Duolingo Builds Lasting Success"
+        },
+        {
+          "id": 5,
+          "claim": "Duolingo’s course catalog includes language, chess, and math offerings, with app availability for iOS and Android noted for some courses.",
+          "excerpt": "# Courses for English Speakers",
+          "source_url": "https://www.duolingo.com/courses",
+          "source_title": "Learn a language for free"
+        },
+        {
+          "id": 6,
+          "claim": "Duolingo says its subscription helps fund free learning for millions of users worldwide.",
+          "excerpt": "Your Super Duolingo subscription helps you be a superlearner — and helps us provide a free learning experience to millions of Duolingo learners worldwide.",
+          "source_url": "https://www.duolingo.com/super",
+          "source_title": "Learn a language for free"
+        },
+        {
+          "id": 7,
+          "claim": "Duolingo lists millions of learners across many courses, including Spanish, French, Japanese, German, and more.",
+          "excerpt": "## Spanish\n\n42M learners",
+          "source_url": "https://www.duolingo.com/register",
+          "source_title": "Learn a language for free"
+        },
+        {
+          "id": 8,
+          "claim": "Duolingo says it has a “forever product” focused on long-term user retention and a “100-year brand.”",
+          "excerpt": "• We’re building a forever product that puts long-term user retention first. • We hire exceptional people who will grow with Duolingo and shape its future for years to come. • We’re creating a 100-year brand with delightful, quirky characters that become a part of learners’ lives.",
+          "source_url": "https://handbook.duolingo.com",
+          "source_title": "The Duolingo Handbook"
+        }
+      ],
+      "website_owner": "Duolingo, Inc.",
+      "website_matches": true,
+      "website_note": "The results repeatedly label duolingo.com as Duolingo’s official site and link investor, blog, and product pages under the Duolingo brand.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 1,
+      "dropped": [
+        {
+          "claim": "Duolingo says it runs 1,000+ A/B tests per quarter to improve product quality.",
+          "source_id": 1,
+          "excerpt": "We obsess over product quality, running 1,000+ A/B tests per quarter and refining [...]"
+        }
+      ]
+    },
+    "strategy": {
+      "observation": "Duolingo maintains a broad language-course catalog, with millions of learners across courses such as Spanish, French, Japanese, and German, which implies ongoing creation and refresh of learning content across multiple languages.",
+      "fact_ids": [
+        5,
+        7
+      ],
+      "offer_link": "Voice actors and audio production could help Duolingo scale high-quality spoken examples, dialogues, and pronunciation content across those language courses, especially when new lessons or course updates need consistent native-sounding audio.",
+      "hypotheses": [
+        "Duolingo may be refreshing or expanding course audio assets rather than relying entirely on existing recordings or synthetic voice.",
+        "The learning content team may need external help to produce or localize audio efficiently across multiple languages.",
+        "Consistent voice quality and pronunciation accuracy may be a current priority for course updates, but that is not confirmed by the facts."
+      ],
+      "angle": "With courses spanning Spanish, French, Japanese, German, and more, Duolingo’s content team has to keep spoken lesson audio consistent across a lot of languages.",
+      "offer_fit": "good",
+      "fit_reason": "A Director of Learning Content is a plausible buyer for audio that supports lesson production, pronunciation practice, and course refreshes across many languages. The fit is not certain because Duolingo may use in-house or synthetic audio, but the need is credible enough to justify outreach."
+    },
+    "draft": {
+      "subject": "Lesson audio consistency",
+      "body": "With millions of learners across Spanish, French, Japanese, German, and more, keeping lesson audio consistent across languages gets hard fast.\n\nI work with language-learning teams on voice actors and audio production for spoken examples, dialogues, and pronunciation clips. It helps new or refreshed lessons ship without audio quality drifting from course to course.\n\nIf course updates are pulling in new spoken content, who on your team handles outside voice and production support?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Lesson audio consistency",
+          "body": "With millions of learners across Spanish, French, Japanese, German, and more, keeping lesson audio consistent across languages gets hard fast.\n\nI work with language-learning teams on voice actors and audio production for spoken examples, dialogues, and pronunciation clips. It helps new or refreshed lessons ship without audio quality drifting from course to course.\n\nIf course updates are pulling in new spoken content, who on your team handles outside voice and production support?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@2",
+      "strategy": "strategy@2",
+      "copywriter": "copywriter@2",
+      "review": "review@2"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "research@2",
+        "duration_ms": 4324,
+        "usage": {
+          "input_tokens": 4865,
+          "cached_input_tokens": 4352,
+          "cache_write_tokens": null,
+          "output_tokens": 690,
+          "reasoning_tokens": 50
+        },
+        "cost_usd": 0.00381615,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "strategy@2",
+        "duration_ms": 7180,
+        "usage": {
+          "input_tokens": 795,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 980,
+          "reasoning_tokens": 700
+        },
+        "cost_usd": 0.00500625,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "copywriter@2",
+        "duration_ms": 4393,
+        "usage": {
+          "input_tokens": 903,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 623,
+          "reasoning_tokens": 512
+        },
+        "cost_usd": 0.00348075,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "review@2",
+        "duration_ms": 1554,
+        "usage": {
+          "input_tokens": 787,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 126,
+          "reasoning_tokens": 106
+        },
+        "cost_usd": 0.00115725,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Duolingo\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Duolingo\" duolingo.com",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Duolingo\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 17471
+  }
+}

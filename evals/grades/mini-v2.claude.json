@@ -1,0 +1,176 @@
+{
+  "grader": "claude-opus-5-5",
+  "graded_at": "2026-10-09",
+  "scale": "evals/README.md: grounding, relevance, naturalness, 0-2 each",
+  "scope": "drafts of runs whose case accepts a draft and whose outcome was a draft",
+  "grades": {
+    "apollo.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "Specific link from filters and auto-scores to record quality; concrete closing question."
+    },
+    "apollo.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "Records spreading through the extension's integrations is a sharp, grounded angle."
+    },
+    "buttondown.1": {
+      "grounding": 2,
+      "relevance": 1,
+      "naturalness": 1,
+      "note": "Buttondown already runs concierge migration, so the offer competes with it; 'move to Buttondown' over-specifies the sender."
+    },
+    "buttondown.2": {
+      "grounding": 2,
+      "relevance": 1,
+      "naturalness": 2,
+      "note": "Natural overflow-help framing, but the company already does migrations itself."
+    },
+    "duolingo.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "B2 course expansion to audio load is specific; 'are you the right person' close is acceptable."
+    },
+    "duolingo.2": {
+      "grounding": 2,
+      "relevance": 1,
+      "naturalness": 2,
+      "note": "Natural, but 'many courses, consistency' is a generic observation."
+    },
+    "gitlab.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "177 consecutive monthly releases is exactly the right hook for release notes."
+    },
+    "gitlab.2": {
+      "grounding": 2,
+      "relevance": 1,
+      "naturalness": 1,
+      "note": "Generic lifecycle observation; 'If GitLab is serving teams...' hedges a known fact awkwardly."
+    },
+    "linear.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "Turns the 40,000-team user base into an interview pool; good process question."
+    },
+    "linear.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "Validating agent workflows with users is a plausible need; simple ownership question."
+    },
+    "mercury.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "1 in 3 US startups ties directly to founder onboarding; the comparison offer is concrete."
+    },
+    "mercury.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "Same logic; offering a 3-email outline is a low-commitment ask."
+    },
+    "plausible.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "Good intent angle, but 'makes paid search a clean fit' is self-serving."
+    },
+    "plausible.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "Relevant category framing; 'The aim is simple' reads like a template."
+    },
+    "ramp.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "Product scope to policy templates is logical; specific template offer."
+    },
+    "ramp.2": {
+      "grounding": 2,
+      "relevance": 1,
+      "naturalness": 1,
+      "note": "70+ launches to expense templates is a stretch; stock 'Would that be worth having?'."
+    },
+    "ru-kontur.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "Grounded and relevant; the closing question is long and bureaucratic."
+    },
+    "ru-kontur.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "Good closing question, but 'У Контур' is a declension error a native speaker would not make."
+    },
+    "ru-skyeng.1": {
+      "grounding": 2,
+      "relevance": 1,
+      "naturalness": 2,
+      "note": "Natural Russian; flexible scheduling to voice-over is a stretch."
+    },
+    "ru-skyeng.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "Relevant, but 'speaking practice' left in English and the anglicism 'нативной частью'."
+    },
+    "ru-vkusvill.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "Wide catalog to consistent cards; the category-choice question is natural."
+    },
+    "ru-vkusvill.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "Relevant; 'CTA' anglicism and an unproven claim about typical conversion effects."
+    },
+    "stripe.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "New OUSD docs are a timely, specific reason to localize; warm and natural."
+    },
+    "stripe.2": {
+      "grounding": 2,
+      "relevance": 1,
+      "naturalness": 2,
+      "note": "Billing docs are documented features, so grounded; observation generic; good roadmap question."
+    },
+    "transistor.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "Video expansion to production partner is apt; long, hedged closing question."
+    },
+    "transistor.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "Relevant, but opens with the sender instead of the observation."
+    },
+    "tuple.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "The /tuple Slack flow as a video story is concrete and natural."
+    },
+    "tuple.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "Specific workflow story; clean closing question."
+    }
+  }
+}

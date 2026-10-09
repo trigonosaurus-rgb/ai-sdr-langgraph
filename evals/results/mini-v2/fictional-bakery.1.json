@@ -1,0 +1,140 @@
+{
+  "case_id": "fictional-bakery",
+  "config": "mini",
+  "models": "Research gpt-5.4-mini/low, Strategy gpt-5.4-mini/medium, Writing gpt-5.4-mini/medium, Review gpt-5.4-mini/low",
+  "repeat": 1,
+  "snapshot_recorded_at": "2026-10-09T12:06:42+00:00",
+  "checks": {
+    "label": "website_mismatch",
+    "outcome_ok": true,
+    "facts": 4,
+    "dropped_facts": 1,
+    "attempts": 0,
+    "has_draft": false,
+    "language_ok": null,
+    "body_words": null,
+    "subject_words": null,
+    "length_ok": null,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "65e8666880c94cd59cf8b5ba13da2f5d",
+    "brief": {
+      "company": "Hollowmere Bakehouse",
+      "website": "hollowmere-bakehouse.com",
+      "offer": "Online ordering setup for local bakeries",
+      "recipient": "Owner",
+      "language": "English",
+      "tone": "Direct"
+    },
+    "status": "failed",
+    "reason": "website_mismatch",
+    "message": "Search results do not match hollowmere-bakehouse.com. The results do not show who owns hollowmere-bakehouse.com, and none of the results directly tie that website to Hollowmere Bakehouse.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "It sells coffee, sourdough, and laminated pastries baked on-site.",
+          "excerpt": "Coffee, sourdough and laminated pastries baked on-site",
+          "source_url": "https://onwardsdigital.com/example-cafe.html",
+          "source_title": "Hollowmere Coffee & Bakehouse — East End, Portland, Maine"
+        },
+        {
+          "id": 2,
+          "claim": "The bakehouse starts production early, from 5am.",
+          "excerpt": "baked on-site from 5am",
+          "source_url": "https://onwardsdigital.com/example-cafe.html",
+          "source_title": "Hollowmere Coffee & Bakehouse — East End, Portland, Maine"
+        },
+        {
+          "id": 3,
+          "claim": "It is open daily from 7 to 3.",
+          "excerpt": "Open daily 7–3.",
+          "source_url": "https://onwardsdigital.com/example-cafe.html",
+          "source_title": "Hollowmere Coffee & Bakehouse — East End, Portland, Maine"
+        },
+        {
+          "id": 4,
+          "claim": "It offers weekend brunch until 2 and is walk-in only.",
+          "excerpt": "Weekend brunch until 2. Open daily 7–3. Walk-in only; order ahead",
+          "source_url": "https://onwardsdigital.com/example-cafe.html",
+          "source_title": "Hollowmere Coffee & Bakehouse — East End, Portland, Maine"
+        }
+      ],
+      "website_owner": "unknown",
+      "website_matches": false,
+      "website_note": "The results do not show who owns hollowmere-bakehouse.com, and none of the results directly tie that website to Hollowmere Bakehouse.",
+      "site_indexed": false,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 1,
+      "dropped": [
+        {
+          "claim": "Hollowmere Bakehouse appears to operate as a coffee and bakery shop in Portland’s East End.",
+          "source_id": 1,
+          "excerpt": "Hollowmere Coffee & Bakehouse — East End, Portland, Maine"
+        }
+      ]
+    },
+    "strategy": null,
+    "draft": null,
+    "attempts": [],
+    "prompt_versions": {
+      "research": "research@2"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "research@2",
+        "duration_ms": 2504,
+        "usage": {
+          "input_tokens": 2224,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 454,
+          "reasoning_tokens": 204
+        },
+        "cost_usd": 0.003711,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Hollowmere Bakehouse\" company overview products customers",
+        "topic": "general",
+        "results": 0,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Hollowmere Bakehouse\" hollowmere-bakehouse.com",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Hollowmere Bakehouse\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 2520
+  }
+}

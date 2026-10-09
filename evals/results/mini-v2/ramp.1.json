@@ -1,0 +1,245 @@
+{
+  "case_id": "ramp",
+  "config": "mini",
+  "models": "Research gpt-5.4-mini/low, Strategy gpt-5.4-mini/medium, Writing gpt-5.4-mini/medium, Review gpt-5.4-mini/low",
+  "repeat": 1,
+  "snapshot_recorded_at": "2026-10-09T12:06:28+00:00",
+  "checks": {
+    "label": "draft",
+    "outcome_ok": true,
+    "facts": 8,
+    "dropped_facts": 0,
+    "attempts": 1,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 72,
+    "subject_words": 3,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "bfdf7a65a1b74216977319b6796f4e0e",
+    "brief": {
+      "company": "Ramp",
+      "website": "ramp.com",
+      "offer": "Expense policy templates for mid-size finance teams",
+      "recipient": "Head of Content",
+      "language": "English",
+      "tone": "Direct"
+    },
+    "status": "ready",
+    "reason": null,
+    "message": "The draft passed review.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "Ramp is a financial operations platform that helps companies spend less and move faster.",
+          "excerpt": "Ramp is a financial operations platform that helps companies spend less and move faster.",
+          "source_url": "https://support.ramp.com/ramp-overview?ref=kellblog.com",
+          "source_title": "Ramp Help Center"
+        },
+        {
+          "id": 2,
+          "claim": "Ramp says more than 70,000 businesses use it for cards, expenses, bill payments, procurement, vendor management, travel, banking, and accounting automation.",
+          "excerpt": "More than 70,000 businesses use Ramp to manage corporate cards, expenses, bill payments, procurement, vendor management, travel, banking, and accounting automation in one system.",
+          "source_url": "https://support.ramp.com/ramp-overview?ref=kellblog.com",
+          "source_title": "Ramp Help Center"
+        },
+        {
+          "id": 3,
+          "claim": "Ramp says customers have saved more than $12 billion and 27.5 million hours using its controls, automation, and savings insights.",
+          "excerpt": "Ramp customers have saved more than $12 billion and 27.5 million hours by using Ramp's controls, automation, and savings insights.",
+          "source_url": "https://support.ramp.com/ramp-overview?ref=kellblog.com",
+          "source_title": "Ramp Help Center"
+        },
+        {
+          "id": 4,
+          "claim": "Ramp supports more than $100 billion in annualized card and AP payment volume.",
+          "excerpt": "Ramp supports more than $100 billion in annualized card and AP payment volume,",
+          "source_url": "https://support.ramp.com/ramp-overview?ref=kellblog.com",
+          "source_title": "Ramp Help Center"
+        },
+        {
+          "id": 5,
+          "claim": "Ramp’s core product includes cards, Bill Pay, accounting, travel, and reimbursements.",
+          "excerpt": "Tour Ramp and its main products: cards, Bill Pay, accounting, travel, and reimbursements.",
+          "source_url": "https://support.ramp.com/ramp-overview?ref=kellblog.com",
+          "source_title": "Ramp Help Center"
+        },
+        {
+          "id": 6,
+          "claim": "Ramp’s site says it is a financial technology company and not a bank.",
+          "excerpt": "Ramp Business Corporation is a financial technology company and is not a bank.",
+          "source_url": "https://ramp.com",
+          "source_title": "Spend Management, Corporate Cards & Accounts Payable Solutions | Ramp"
+        },
+        {
+          "id": 7,
+          "claim": "Ramp is based at 28 West 23rd Street, Floor 2, New York, NY 10010.",
+          "excerpt": "Ramp Business Corporation  28 West 23rd Street, Floor 2  New York, NY 10010",
+          "source_url": "https://ramp.com",
+          "source_title": "Spend Management, Corporate Cards & Accounts Payable Solutions | Ramp"
+        },
+        {
+          "id": 8,
+          "claim": "Ramp says it has more than 70,000 businesses simplifying their finances with Ramp.",
+          "excerpt": "Join the 70,000+ businesses simplifying their finances with Ramp.",
+          "source_url": "https://ramp.com",
+          "source_title": "Spend Management, Corporate Cards & Accounts Payable Solutions | Ramp"
+        }
+      ],
+      "website_owner": "Ramp",
+      "website_matches": true,
+      "website_note": "The results show ramp.com is Ramp’s own official website and help center, describing Ramp’s products and company information.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 0,
+      "dropped": []
+    },
+    "strategy": {
+      "observation": "Ramp’s core product includes cards, bill pay, accounting, travel, and reimbursements, so content about expense policies maps directly to workflows its users already manage in the product.",
+      "fact_ids": [
+        5
+      ],
+      "offer_link": "Expense policy templates could help Ramp create practical content for finance teams that are setting rules around cards, reimbursements, and travel spend—topics tightly connected to Ramp’s core workflows.",
+      "hypotheses": [
+        "Ramp’s content team may be looking for more bottom-of-funnel or enablement content for finance buyers.",
+        "Mid-size finance teams may be a meaningful audience segment for Ramp’s content strategy.",
+        "Expense policy templates could be useful as a lead magnet, SEO asset, or customer education piece."
+      ],
+      "angle": "Ramp’s core product spans cards, expenses, travel, and reimbursements, so expense policy templates are a natural content piece for the finance teams using those workflows.",
+      "offer_fit": "good",
+      "fit_reason": "Ramp’s product touches the exact areas that expense policy templates address, and the Head of Content role could plausibly use them for acquisition or customer education. The fit is not guaranteed, but it is direct enough to be relevant."
+    },
+    "draft": {
+      "subject": "Expense policy templates",
+      "body": "Since Ramp’s core product spans cards, bill pay, accounting, travel, and reimbursements, expense policy content seems like a natural fit for your audience.\n\nI put together expense policy templates for mid-size finance teams. They help teams define what’s allowed on cards, how reimbursements work, and where travel rules usually get stuck.\n\nIf you’re building practical content for finance buyers, would a template focused on card, travel, and reimbursement policies be worth testing?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Expense policy templates",
+          "body": "Since Ramp’s core product spans cards, bill pay, accounting, travel, and reimbursements, expense policy content seems like a natural fit for your audience.\n\nI put together expense policy templates for mid-size finance teams. They help teams define what’s allowed on cards, how reimbursements work, and where travel rules usually get stuck.\n\nIf you’re building practical content for finance buyers, would a template focused on card, travel, and reimbursement policies be worth testing?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@2",
+      "strategy": "strategy@2",
+      "copywriter": "copywriter@2",
+      "review": "review@2"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "research@2",
+        "duration_ms": 2926,
+        "usage": {
+          "input_tokens": 4436,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 506,
+          "reasoning_tokens": 33
+        },
+        "cost_usd": 0.005604,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "strategy@2",
+        "duration_ms": 4809,
+        "usage": {
+          "input_tokens": 739,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 755,
+          "reasoning_tokens": 512
+        },
+        "cost_usd": 0.00395175,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "copywriter@2",
+        "duration_ms": 3238,
+        "usage": {
+          "input_tokens": 827,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 560,
+          "reasoning_tokens": 442
+        },
+        "cost_usd": 0.00314025,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "review@2",
+        "duration_ms": 1323,
+        "usage": {
+          "input_tokens": 737,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 115,
+          "reasoning_tokens": 95
+        },
+        "cost_usd": 0.00107025,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Ramp\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Ramp\" ramp.com",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Ramp\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 12313
+  }
+}

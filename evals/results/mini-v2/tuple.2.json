@@ -1,0 +1,239 @@
+{
+  "case_id": "tuple",
+  "config": "mini",
+  "models": "Research gpt-5.4-mini/low, Strategy gpt-5.4-mini/medium, Writing gpt-5.4-mini/medium, Review gpt-5.4-mini/low",
+  "repeat": 2,
+  "snapshot_recorded_at": "2026-10-09T12:05:52+00:00",
+  "checks": {
+    "label": "draft",
+    "outcome_ok": true,
+    "facts": 7,
+    "dropped_facts": 0,
+    "attempts": 1,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 63,
+    "subject_words": 3,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "fd4523ebface4545acd86002d161df8d",
+    "brief": {
+      "company": "Tuple",
+      "website": "tuple.app",
+      "offer": "Video case studies with engineering teams that use your product",
+      "recipient": "Head of Marketing",
+      "language": "English",
+      "tone": "Direct"
+    },
+    "status": "ready",
+    "reason": null,
+    "message": "The draft passed review.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "Tuple is a remote pair programming app for developers.",
+          "excerpt": "Tuple is an app for remote pair programming, optimized for everything that developers care about",
+          "source_url": "https://www.linkedin.com/company/tupleapp",
+          "source_title": "Tuple"
+        },
+        {
+          "id": 2,
+          "claim": "Tuple is positioned as the best remote pair programming app on macOS and Windows.",
+          "excerpt": "# Tuple\n\n### The best remote pair programming app on macOS and Windows",
+          "source_url": "https://github.com/tupleapp",
+          "source_title": "Tuple · GitHub"
+        },
+        {
+          "id": 3,
+          "claim": "Tuple emphasizes seamless collaboration with full-time mouse and keyboard support for both parties.",
+          "excerpt": "Seamless collaboration with full-time mouse and keyboard support for both parties",
+          "source_url": "https://www.linkedin.com/company/tupleapp",
+          "source_title": "Tuple"
+        },
+        {
+          "id": 4,
+          "claim": "Tuple advertises snappy interactions, command-line integration, and pluginability.",
+          "excerpt": "snappy interactions, command-line integration and pluginability.",
+          "source_url": "https://www.linkedin.com/company/tupleapp",
+          "source_title": "Tuple"
+        },
+        {
+          "id": 5,
+          "claim": "Tuple has a Slack integration that starts pairing sessions from channels or DMs using a /tuple command.",
+          "excerpt": "Tuple's integration for Slack adds a `/tuple` command, which will start a pairing session directly from a channel or DMs.",
+          "source_url": "https://slack.com/marketplace/A04B287N6P2-tuple",
+          "source_title": "Tuple & Slack Integration | Slack Marketplace"
+        },
+        {
+          "id": 6,
+          "claim": "Tuple offers a free-forever account for educational purposes on request.",
+          "excerpt": "if you email support@tuple.app and say you want to use Tuple for educational purposes, we'll make you a free-forever account.",
+          "source_url": "https://news.ycombinator.com/item?id=29641907",
+          "source_title": "Tuple: Pair Programming Tool for macOS | Hacker News"
+        },
+        {
+          "id": 7,
+          "claim": "Tuple says it is optimized for developers who care about high-fidelity remote control and mouse cursors for all participants.",
+          "excerpt": "a world where you want mouse cursors for all participants and high-fidelity remote control (like Command+Tab support).",
+          "source_url": "https://github.com/tupleapp",
+          "source_title": "Tuple · GitHub"
+        }
+      ],
+      "website_owner": "Tuple",
+      "website_matches": true,
+      "website_note": "The results tie tuple.app to Tuple through its official site, LinkedIn page, and GitHub organization.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 0,
+      "dropped": []
+    },
+    "strategy": {
+      "observation": "Tuple’s Slack integration lets teams start pair programming sessions from channels or DMs with a /tuple command, which points to a team-workflow use case rather than just an individual-dev tool.",
+      "fact_ids": [
+        5,
+        1
+      ],
+      "offer_link": "Video case studies featuring engineering teams would give Tuple a concrete way to show that team-workflow in action, especially how real teams adopt Tuple from Slack and use it inside day-to-day engineering collaboration.",
+      "hypotheses": [
+        "Tuple’s marketing team may be looking for more proof-driven content to support demand generation.",
+        "Engineering-team customer stories may be especially persuasive for developers evaluating collaboration tools.",
+        "Tuple may want more bottom-of-funnel assets that show real workflows rather than feature descriptions."
+      ],
+      "angle": "Tuple’s Slack pairing workflow makes it a natural fit for short customer videos showing engineering teams starting sessions from the tools they already use.",
+      "offer_fit": "weak",
+      "fit_reason": "Tuple is a plausible fit because it sells a developer collaboration tool that can benefit from customer proof, but the facts do not show a stated need for case studies or a current campaign where video stories are clearly required."
+    },
+    "draft": {
+      "subject": "Slack workflow stories",
+      "body": "Tuple’s /tuple flow stands out. Starting a pairing session from Slack or a DM makes the workflow feel team-level, not just individual-dev.\n\nI make short video case studies with engineering teams. My guess is those stories would show the handoff from Slack to live pairing in a way feature pages can’t.\n\nIs a Slack-to-session customer story already part of your plan this quarter?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Slack workflow stories",
+          "body": "Tuple’s /tuple flow stands out. Starting a pairing session from Slack or a DM makes the workflow feel team-level, not just individual-dev.\n\nI make short video case studies with engineering teams. My guess is those stories would show the handoff from Slack to live pairing in a way feature pages can’t.\n\nIs a Slack-to-session customer story already part of your plan this quarter?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@2",
+      "strategy": "strategy@2",
+      "copywriter": "copywriter@2",
+      "review": "review@2"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "research@2",
+        "duration_ms": 3106,
+        "usage": {
+          "input_tokens": 2467,
+          "cached_input_tokens": 2304,
+          "cache_write_tokens": null,
+          "output_tokens": 430,
+          "reasoning_tokens": 50
+        },
+        "cost_usd": 0.0022300500000000003,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "strategy@2",
+        "duration_ms": 5465,
+        "usage": {
+          "input_tokens": 660,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 748,
+          "reasoning_tokens": 512
+        },
+        "cost_usd": 0.003861,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "copywriter@2",
+        "duration_ms": 3993,
+        "usage": {
+          "input_tokens": 743,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 615,
+          "reasoning_tokens": 512
+        },
+        "cost_usd": 0.00332475,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "review@2",
+        "duration_ms": 1586,
+        "usage": {
+          "input_tokens": 644,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 137,
+          "reasoning_tokens": 117
+        },
+        "cost_usd": 0.0010995,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Tuple\" company overview products customers",
+        "topic": "general",
+        "results": 0,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Tuple\" tuple.app",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Tuple\" news",
+        "topic": "news",
+        "results": 2,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 14166
+  }
+}

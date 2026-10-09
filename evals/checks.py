@@ -9,8 +9,9 @@ from core.schemas import Brief, Fact, Language, RunResult
 from evals.cases import Case, Label, outcome_label
 
 PLACEHOLDER = re.compile(r"\[[^\]]{1,40}\]|\{\{[^}]*\}\}|<[A-Z][A-Za-z ]{1,30}>", re.I)
-# 40,000 / 40 000 / 1.5 / 30%: thousands groups joined, the result compared as digits only
-NUMBER = re.compile(r"\d+(?:[,\u00a0\u202f ]\d{3})*(?:\.\d+)?")
+# 40,000 / 40 000 / 1.5 / 30%: thousands groups joined, compared as digits only. Digits inside
+# words (B2B, WCAG2) are not numbers; single digits ("1-2 examples") are too common to flag.
+NUMBER = re.compile(r"(?<!\w)\d+(?:[,\u00a0\u202f ]\d{3})*(?:\.\d+)?(?!\w)")
 CYRILLIC = re.compile(r"[а-яё]", re.I)
 LATIN = re.compile(r"[a-z]", re.I)
 BODY_WORDS = (50, 120)
@@ -39,7 +40,8 @@ class Checks(BaseModel):
 
 
 def numbers(text: str) -> set[str]:
-    return {re.sub(r"[,\u00a0\u202f ]", "", match) for match in NUMBER.findall(text)}
+    found = {re.sub(r"[,\u00a0\u202f ]", "", match) for match in NUMBER.findall(text)}
+    return {number for number in found if len(number) > 1}
 
 
 def language_ok(text: str, language: Language) -> bool:

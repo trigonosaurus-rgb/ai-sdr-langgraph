@@ -1,0 +1,233 @@
+{
+  "case_id": "ru-kontur",
+  "config": "mini",
+  "models": "Research gpt-5.4-mini/low, Strategy gpt-5.4-mini/medium, Writing gpt-5.4-mini/medium, Review gpt-5.4-mini/low",
+  "repeat": 2,
+  "snapshot_recorded_at": "2026-10-09T12:07:15+00:00",
+  "checks": {
+    "label": "draft",
+    "outcome_ok": true,
+    "facts": 6,
+    "dropped_facts": 0,
+    "attempts": 1,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 67,
+    "subject_words": 4,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "d73b5c284ed8482681086f10cce939fd",
+    "brief": {
+      "company": "Контур",
+      "website": "kontur.ru",
+      "offer": "Автоматизация разбора обращений в поддержку с помощью ИИ",
+      "recipient": "Руководитель службы поддержки",
+      "language": "Russian",
+      "tone": "Direct"
+    },
+    "status": "ready",
+    "reason": null,
+    "message": "The draft passed review.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "Контур positions itself as a business software ecosystem with more than 70 services.",
+          "excerpt": "Контур — это экосистема для бизнеса, в которой больше 70 сервисов.",
+          "source_url": "https://kontur.ru/press/news/company/2021/5/7600",
+          "source_title": "Контур перешел на новый фирменный стиль — СКБ Контур"
+        },
+        {
+          "id": 2,
+          "claim": "СКБ Контур says its core business areas include EDI, accounting, electronic signatures, and online cash registers.",
+          "excerpt": "Ключевые направления бизнеса — ЭДО, бухгалтерия, электронная подпись и онлайн-кассы.",
+          "source_url": "https://kontur.ru/press/news/company/2022/3/8230",
+          "source_title": "Гендиректором СКБ Контур назначен Михаил Сродных — СКБ Контур"
+        },
+        {
+          "id": 3,
+          "claim": "The company says its solutions are used by 2.2 million companies in Russia and abroad.",
+          "excerpt": "а ее решениями пользуются 2,2 млн компаний в России и за рубежом.",
+          "source_url": "https://kontur.ru/press/news/company/2022/3/8230",
+          "source_title": "Гендиректором СКБ Контур назначен Михаил Сродных — СКБ Контур"
+        },
+        {
+          "id": 4,
+          "claim": "On the careers page, Контур says it has 11,000+ employees across the country.",
+          "excerpt": "### 11 000+\n\nСотрудников   \nпо всей стране",
+          "source_url": "https://kontur.ru/career",
+          "source_title": "Работа у нас — Контур"
+        },
+        {
+          "id": 5,
+          "claim": "The careers page also says Contur is used by every third business in Russia.",
+          "excerpt": "Контур — экосистема, которой пользуется каждый третий бизнес в России.",
+          "source_url": "https://kontur.ru/career",
+          "source_title": "Работа у нас — Контур"
+        },
+        {
+          "id": 6,
+          "claim": "Contur's product portfolio includes Diadoc, Focus, Zakupki, Market, Tolk, and OFD.",
+          "excerpt": "Продукты\n\n Экстерн\n Диадок\n Эльба\n Толк\n Маркет\n Фокус\n Удостоверяющий центр\n Закупки\n ОФД",
+          "source_url": "https://kontur.ru",
+          "source_title": "Контур — экосистема для бизнеса"
+        }
+      ],
+      "website_owner": "СКБ Контур",
+      "website_matches": true,
+      "website_note": "The website is kontur.ru, and the results identify it as the official site of СКБ Контур.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 0,
+      "dropped": []
+    },
+    "strategy": {
+      "observation": "Контур — это экосистема бизнес‑софта из 70+ сервисов и нескольких ключевых продуктовых направлений, включая ЭДО, бухгалтерию, ЭП и онлайн‑кассы.",
+      "fact_ids": [
+        1,
+        2,
+        6
+      ],
+      "offer_link": "Для службы поддержки такой набор продуктов обычно означает очень разнородные обращения; ИИ‑разбор может автоматически классифицировать, маршрутизировать и приоритизировать тикеты по нужному продукту или теме.",
+      "hypotheses": [
+        "Вероятно, у поддержки Контур много разных типов обращений по разным сервисам.",
+        "Вероятно, часть времени команды уходит на ручную классификацию и перенаправление обращений.",
+        "Вероятно, ускорение первичного разбора могло бы снизить нагрузку на первую линию."
+      ],
+      "angle": "У Контур 70+ сервисов и несколько разных продуктовых направлений — обычно это делает поток обращений в поддержку очень разнородным.",
+      "offer_fit": "good",
+      "fit_reason": "Автоматизация разбора обращений с помощью ИИ выглядит уместно для компании с широким портфелем продуктов: чем больше сервисов и типов вопросов, тем полезнее автоматическая классификация и маршрутизация обращений. "
+    },
+    "draft": {
+      "subject": "Разбор обращений в Контуре",
+      "body": "У Контур 70+ сервисов и несколько разных направлений — ЭДО, бухгалтерия, ЭП, онлайн-кассы. Для поддержки это обычно значит очень разнородные обращения.\n\nМы делаем автоматизацию разбора обращений с помощью ИИ: он может сразу классифицировать тикет, отправлять в нужную очередь и ставить приоритет. Если часть обращений у вас до сих пор сортируется вручную, это, вероятно, съедает время первой линии.\n\nКуда у вас чаще всего “застревают” обращения на первом шаге?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Разбор обращений в Контуре",
+          "body": "У Контур 70+ сервисов и несколько разных направлений — ЭДО, бухгалтерия, ЭП, онлайн-кассы. Для поддержки это обычно значит очень разнородные обращения.\n\nМы делаем автоматизацию разбора обращений с помощью ИИ: он может сразу классифицировать тикет, отправлять в нужную очередь и ставить приоритет. Если часть обращений у вас до сих пор сортируется вручную, это, вероятно, съедает время первой линии.\n\nКуда у вас чаще всего “застревают” обращения на первом шаге?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@2",
+      "strategy": "strategy@2",
+      "copywriter": "copywriter@2",
+      "review": "review@2"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "research@2",
+        "duration_ms": 3099,
+        "usage": {
+          "input_tokens": 6524,
+          "cached_input_tokens": 6400,
+          "cache_write_tokens": null,
+          "output_tokens": 480,
+          "reasoning_tokens": 99
+        },
+        "cost_usd": 0.002733,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "strategy@2",
+        "duration_ms": 4676,
+        "usage": {
+          "input_tokens": 728,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 786,
+          "reasoning_tokens": 512
+        },
+        "cost_usd": 0.004083,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "copywriter@2",
+        "duration_ms": 2723,
+        "usage": {
+          "input_tokens": 840,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 445,
+          "reasoning_tokens": 295
+        },
+        "cost_usd": 0.0026325,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "review@2",
+        "duration_ms": 1757,
+        "usage": {
+          "input_tokens": 759,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 197,
+          "reasoning_tokens": 177
+        },
+        "cost_usd": 0.00145575,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Контур\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Контур\" kontur.ru",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Контур\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 12272
+  }
+}

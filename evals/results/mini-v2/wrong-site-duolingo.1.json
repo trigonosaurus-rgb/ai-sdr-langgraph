@@ -1,0 +1,141 @@
+{
+  "case_id": "wrong-site-duolingo",
+  "config": "mini",
+  "models": "Research gpt-5.4-mini/low, Strategy gpt-5.4-mini/medium, Writing gpt-5.4-mini/medium, Review gpt-5.4-mini/low",
+  "repeat": 1,
+  "snapshot_recorded_at": "2026-10-09T12:07:08+00:00",
+  "checks": {
+    "label": "website_mismatch",
+    "outcome_ok": true,
+    "facts": 5,
+    "dropped_facts": 0,
+    "attempts": 0,
+    "has_draft": false,
+    "language_ok": null,
+    "body_words": null,
+    "subject_words": null,
+    "length_ok": null,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "f002a803b90b4f1a9826c2f510cd7224",
+    "brief": {
+      "company": "Duolingo",
+      "website": "babbel.com",
+      "offer": "Voice actors and audio production for language-learning content",
+      "recipient": "Director of Learning Content",
+      "language": "English",
+      "tone": "Direct"
+    },
+    "status": "failed",
+    "reason": "website_mismatch",
+    "message": "Search results do not match babbel.com. The results are from Babbel.com and discuss Duolingo as a competing app, so the site belongs to Babbel rather than Duolingo.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "Duolingo offers a fully free tier with ads and access to entire language courses.",
+          "excerpt": "Duolingo offers a fully free tier with access to entire language courses, supported by ads.",
+          "source_url": "https://www.babbel.com/compare-best-language-learning-apps",
+          "source_title": "The Best Language Learning Apps Of 2026"
+        },
+        {
+          "id": 2,
+          "claim": "Duolingo has over 40 languages in its catalog, including Klingon and Hawaiian.",
+          "excerpt": "Duolingo offers over 40 languages, including pop culture conlangs (Klingon) and less common learning languages like Hawaiian.",
+          "source_url": "https://www.babbel.com/compare-best-language-learning-apps",
+          "source_title": "The Best Language Learning Apps Of 2026"
+        },
+        {
+          "id": 3,
+          "claim": "Duolingo’s core product is gamified daily practice focused on vocabulary and basic sentence structure.",
+          "excerpt": "Duolingo uses gamified drills to help you build a daily habit. It’s designed for casual learners with a focus on vocabulary and basic sentence structure.",
+          "source_url": "https://www.babbel.com/compare-best-language-learning-apps",
+          "source_title": "The Best Language Learning Apps Of 2026"
+        },
+        {
+          "id": 4,
+          "claim": "Babbel says Duolingo has added AI tools, including video chats and a new AI-powered conversation partner.",
+          "excerpt": "It's also added a number of AI tools, including video chats.",
+          "source_url": "https://www.babbel.com/speak-ai-alternatives",
+          "source_title": "Best AI Language Learning Apps: Speak AI Alternatives (2026)"
+        },
+        {
+          "id": 5,
+          "claim": "Babbel describes Duolingo as a popular app that is especially good for learners who want streaks, points, and short sessions.",
+          "excerpt": "Duolingo is a popular alternative if you want a highly gamified language learning app and fast daily momentum.",
+          "source_url": "https://www.babbel.com/langua-alternatives",
+          "source_title": "Alternatives To Langua: Best AI Language Learning Apps"
+        }
+      ],
+      "website_owner": "Babbel",
+      "website_matches": false,
+      "website_note": "The results are from Babbel.com and discuss Duolingo as a competing app, so the site belongs to Babbel rather than Duolingo.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 0,
+      "dropped": []
+    },
+    "strategy": null,
+    "draft": null,
+    "attempts": [],
+    "prompt_versions": {
+      "research": "research@2"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "research@2",
+        "duration_ms": 2305,
+        "usage": {
+          "input_tokens": 4624,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 401,
+          "reasoning_tokens": 64
+        },
+        "cost_usd": 0.0052725,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Duolingo\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Duolingo\" babbel.com",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Duolingo\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 2317
+  }
+}

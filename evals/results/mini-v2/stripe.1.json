@@ -1,0 +1,230 @@
+{
+  "case_id": "stripe",
+  "config": "mini",
+  "models": "Research gpt-5.4-mini/low, Strategy gpt-5.4-mini/medium, Writing gpt-5.4-mini/medium, Review gpt-5.4-mini/low",
+  "repeat": 1,
+  "snapshot_recorded_at": "2026-10-09T12:05:11+00:00",
+  "checks": {
+    "label": "draft",
+    "outcome_ok": true,
+    "facts": 5,
+    "dropped_facts": 1,
+    "attempts": 1,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 80,
+    "subject_words": 2,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "cff8791c303242728b4fb3afdc89776e",
+    "brief": {
+      "company": "Stripe",
+      "website": "stripe.com",
+      "offer": "Localizing developer documentation into Japanese, German and Brazilian Portuguese",
+      "recipient": "Head of Documentation",
+      "language": "English",
+      "tone": "Warm"
+    },
+    "status": "ready",
+    "reason": null,
+    "message": "The draft passed review.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "Stripe lets businesses create, edit, archive, and delete products and prices.",
+          "excerpt": "Create, edit, archive, and delete products and prices.",
+          "source_url": "https://docs.stripe.com/products-prices/overview",
+          "source_title": "Overview | Stripe Documentation"
+        },
+        {
+          "id": 2,
+          "claim": "Stripe supports multiple pricing models, including flat-rate tiers, per-seat billing, and usage-based billing.",
+          "excerpt": "Flat rate (good-better-best)\n\nOffer your customers a choice of escalating options, like basic, starter, and Enterprise service levels\")\n\nLet your customers pick how many seats or licenses they’ll use and bill them for each.\n\nCharge your customers based on how much of your service they use during the billing period.",
+          "source_url": "https://docs.stripe.com/products-prices/overview",
+          "source_title": "Overview | Stripe Documentation"
+        },
+        {
+          "id": 3,
+          "claim": "Stripe has a dedicated migration flow for moving customer and payment data to Stripe.",
+          "excerpt": "Successfully migrate your customers and their payments data to Stripe.",
+          "source_url": "https://docs.stripe.com/get-started/data-migrations/overview",
+          "source_title": "Overview | Stripe Documentation"
+        },
+        {
+          "id": 4,
+          "claim": "Stripe says it is expanding revenue opportunities for platforms and helping small businesses grow through its Parafin acquisition.",
+          "excerpt": "We’re welcoming @ParafinHQ to Stripe. Together, we’ll expand revenue opportunities for platforms and help small businesses grow: stripe.com/newsroom/news/….",
+          "source_url": "https://x.com/stripe",
+          "source_title": "Stripe (@stripe) / X"
+        },
+        {
+          "id": 5,
+          "claim": "Stripe says you can now hold, send, spend, and build with OUSD on Stripe.",
+          "excerpt": "You can now hold, send, spend, and build with OUSD on Stripe.",
+          "source_url": "https://x.com/stripe",
+          "source_title": "Stripe (@stripe) / X"
+        }
+      ],
+      "website_owner": "Stripe",
+      "website_matches": true,
+      "website_note": "The results tie stripe.com and docs.stripe.com to Stripe itself, including official documentation and Stripe’s own homepage and X profile.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 1,
+      "dropped": [
+        {
+          "claim": "Stripe positions itself as financial infrastructure for revenue growth.",
+          "source_id": 6,
+          "excerpt": "Stripe | Financial Infrastructure to Grow Your Revenue"
+        }
+      ]
+    },
+    "strategy": {
+      "observation": "Stripe has just added support for OUSD on Stripe, creating a new developer-facing product area that needs documentation.",
+      "fact_ids": [
+        5
+      ],
+      "offer_link": "If Stripe is documenting the OUSD launch, localizing those docs into Japanese, German, and Brazilian Portuguese could make the new integration guidance easier to use for non-English-speaking developers.",
+      "hypotheses": [
+        "Stripe expects meaningful developer demand for OUSD outside English-speaking markets.",
+        "The documentation team is responsible for launch content that could benefit from translation rather than only API reference.",
+        "Japanese, German, and Brazilian Portuguese are priority languages for Stripe’s developer audience."
+      ],
+      "angle": "Stripe’s new OUSD support means a fresh doc set to ship, and that’s the point where localized developer guidance can have the most leverage.",
+      "offer_fit": "weak",
+      "fit_reason": "The launch creates a plausible documentation need, but there is no fact showing Stripe currently needs localization or that these three languages are strategic for this release, so the connection is helpful but still an assumption."
+    },
+    "draft": {
+      "subject": "OUSD docs",
+      "body": "Hi there — Stripe’s new OUSD support feels like one of those launches where the first docs do a lot of the heavy lifting.\n\nI help teams localize developer documentation into Japanese, German, and Brazilian Portuguese. If the OUSD launch includes fresh developer docs, my guess is that localized setup and integration guidance would make it easier for non-English-speaking developers to get moving without waiting on the English pages.\n\nAre you the person handling localization for the OUSD doc set?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "OUSD docs",
+          "body": "Hi there — Stripe’s new OUSD support feels like one of those launches where the first docs do a lot of the heavy lifting.\n\nI help teams localize developer documentation into Japanese, German, and Brazilian Portuguese. If the OUSD launch includes fresh developer docs, my guess is that localized setup and integration guidance would make it easier for non-English-speaking developers to get moving without waiting on the English pages.\n\nAre you the person handling localization for the OUSD doc set?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@2",
+      "strategy": "strategy@2",
+      "copywriter": "copywriter@2",
+      "review": "review@2"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "research@2",
+        "duration_ms": 3549,
+        "usage": {
+          "input_tokens": 4828,
+          "cached_input_tokens": 4352,
+          "cache_write_tokens": null,
+          "output_tokens": 461,
+          "reasoning_tokens": 85
+        },
+        "cost_usd": 0.0027579,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "strategy@2",
+        "duration_ms": 5446,
+        "usage": {
+          "input_tokens": 618,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 726,
+          "reasoning_tokens": 512
+        },
+        "cost_usd": 0.0037305,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "copywriter@2",
+        "duration_ms": 4710,
+        "usage": {
+          "input_tokens": 683,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 611,
+          "reasoning_tokens": 491
+        },
+        "cost_usd": 0.00326175,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "review@2",
+        "duration_ms": 1926,
+        "usage": {
+          "input_tokens": 618,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 185,
+          "reasoning_tokens": 165
+        },
+        "cost_usd": 0.001296,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Stripe\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Stripe\" stripe.com",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Stripe\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 15712
+  }
+}

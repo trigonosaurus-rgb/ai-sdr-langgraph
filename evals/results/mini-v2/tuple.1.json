@@ -1,0 +1,244 @@
+{
+  "case_id": "tuple",
+  "config": "mini",
+  "models": "Research gpt-5.4-mini/low, Strategy gpt-5.4-mini/medium, Writing gpt-5.4-mini/medium, Review gpt-5.4-mini/low",
+  "repeat": 1,
+  "snapshot_recorded_at": "2026-10-09T12:05:52+00:00",
+  "checks": {
+    "label": "draft",
+    "outcome_ok": true,
+    "facts": 8,
+    "dropped_facts": 0,
+    "attempts": 1,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 73,
+    "subject_words": 4,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "24495908c083472d931157f6af4b921f",
+    "brief": {
+      "company": "Tuple",
+      "website": "tuple.app",
+      "offer": "Video case studies with engineering teams that use your product",
+      "recipient": "Head of Marketing",
+      "language": "English",
+      "tone": "Direct"
+    },
+    "status": "ready",
+    "reason": null,
+    "message": "The draft passed review.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "Tuple is a remote pair-programming app.",
+          "excerpt": "Tuple is an app for remote pair programming, optimized for everything that developers care about:",
+          "source_url": "https://www.linkedin.com/company/tupleapp",
+          "source_title": "Tuple"
+        },
+        {
+          "id": 2,
+          "claim": "Tuple is positioned as the best remote pair programming app on macOS and Windows.",
+          "excerpt": "# Tuple\n\nThe best remote pair programming app on macOS and Windows",
+          "source_url": "https://github.com/tupleapp",
+          "source_title": "Tuple · GitHub"
+        },
+        {
+          "id": 3,
+          "claim": "Tuple emphasizes high-fidelity collaboration with mouse and keyboard support for both participants.",
+          "excerpt": "Seamless collaboration with full-time mouse and keyboard support for both parties",
+          "source_url": "https://www.linkedin.com/company/tupleapp",
+          "source_title": "Tuple"
+        },
+        {
+          "id": 4,
+          "claim": "Tuple claims low-latency, developer-friendly interactions with command-line integration and pluginability.",
+          "excerpt": "snappy interactions, command-line integration and pluginability.",
+          "source_url": "https://www.linkedin.com/company/tupleapp",
+          "source_title": "Tuple"
+        },
+        {
+          "id": 5,
+          "claim": "Tuple's Slack integration lets users start a pairing session from a channel or DM with a /tuple command.",
+          "excerpt": "Tuple's integration for Slack adds a `/tuple` command, which will start a pairing session directly from a channel or DMs.",
+          "source_url": "https://slack.com/marketplace/A04B287N6P2-tuple",
+          "source_title": "Tuple & Slack Integration | Slack Marketplace"
+        },
+        {
+          "id": 6,
+          "claim": "Tuple says the experience has crisp audio and video with low CPU usage.",
+          "excerpt": "Experience ridiculously crisp audio and video with crazy-low CPU usage, and no UI in your way.",
+          "source_url": "https://slack.com/marketplace/A04B287N6P2-tuple",
+          "source_title": "Tuple & Slack Integration | Slack Marketplace"
+        },
+        {
+          "id": 7,
+          "claim": "Tuple offers application data retention controls tied to customer requests to support@tuple.app.",
+          "excerpt": "Tuple will retain application data indefinitely unless otherwise requested by a customer writing in to support@tuple.app.",
+          "source_url": "https://slack.com/marketplace/A04B287N6P2-tuple",
+          "source_title": "Tuple & Slack Integration | Slack Marketplace"
+        },
+        {
+          "id": 8,
+          "claim": "Tuple says it will remove a user's data at their written request to support@tuple.app.",
+          "excerpt": "Tuple will remove a user's data at their written request to support@tuple.app, and otherwise do not delete or archive any data.",
+          "source_url": "https://slack.com/marketplace/A04B287N6P2-tuple",
+          "source_title": "Tuple & Slack Integration | Slack Marketplace"
+        }
+      ],
+      "website_owner": "Tuple",
+      "website_matches": true,
+      "website_note": "Result [1] is the official Tuple site, and the other results also describe Tuple as the company behind tuple.app.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 0,
+      "dropped": []
+    },
+    "strategy": {
+      "observation": "Tuple has a Slack integration that lets users start a pairing session from a channel or DM with a /tuple command.",
+      "fact_ids": [
+        5
+      ],
+      "offer_link": "That makes video case studies with engineering teams a natural fit, because the story can show real teams starting pairing sessions inside an existing workflow rather than describing Tuple in the abstract.",
+      "hypotheses": [
+        "I’m assuming the marketing team wants customer proof that is easy for engineering buyers to recognize and trust.",
+        "I’m assuming you’d value videos that show actual usage patterns over generic product promos."
+      ],
+      "angle": "Tuple’s Slack /tuple flow is a concrete example of how engineering teams can start pairing inside their existing workflow, which is the kind of behavior video case studies can make credible.",
+      "offer_fit": "good",
+      "fit_reason": "Tuple is a developer-focused product with a specific workflow integration, so customer videos featuring engineering teams using it would plausibly support marketing and sales with credible social proof."
+    },
+    "draft": {
+      "subject": "Video proof for Tuple",
+      "body": "Tuple’s /tuple Slack flow is the kind of thing a video case study can show clearly: a team starts a pairing session inside the workflow they already use.\n\nI make short video case studies with engineering teams. My guess is that kind of proof is easier for technical buyers to trust than a generic product promo.\n\nWould it make sense to test one story built around how a team uses /tuple in Slack?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Video proof for Tuple",
+          "body": "Tuple’s /tuple Slack flow is the kind of thing a video case study can show clearly: a team starts a pairing session inside the workflow they already use.\n\nI make short video case studies with engineering teams. My guess is that kind of proof is easier for technical buyers to trust than a generic product promo.\n\nWould it make sense to test one story built around how a team uses /tuple in Slack?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@2",
+      "strategy": "strategy@2",
+      "copywriter": "copywriter@2",
+      "review": "review@2"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "research@2",
+        "duration_ms": 3001,
+        "usage": {
+          "input_tokens": 2467,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 491,
+          "reasoning_tokens": 71
+        },
+        "cost_usd": 0.00405975,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "strategy@2",
+        "duration_ms": 5745,
+        "usage": {
+          "input_tokens": 687,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 780,
+          "reasoning_tokens": 573
+        },
+        "cost_usd": 0.00402525,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "copywriter@2",
+        "duration_ms": 3202,
+        "usage": {
+          "input_tokens": 746,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 466,
+          "reasoning_tokens": 358
+        },
+        "cost_usd": 0.0026565,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "review@2",
+        "duration_ms": 1777,
+        "usage": {
+          "input_tokens": 676,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 208,
+          "reasoning_tokens": 188
+        },
+        "cost_usd": 0.001443,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Tuple\" company overview products customers",
+        "topic": "general",
+        "results": 0,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Tuple\" tuple.app",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Tuple\" news",
+        "topic": "news",
+        "results": 2,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 13740
+  }
+}

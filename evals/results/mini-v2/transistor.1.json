@@ -1,0 +1,246 @@
+{
+  "case_id": "transistor",
+  "config": "mini",
+  "models": "Research gpt-5.4-mini/low, Strategy gpt-5.4-mini/medium, Writing gpt-5.4-mini/medium, Review gpt-5.4-mini/low",
+  "repeat": 1,
+  "snapshot_recorded_at": "2026-10-09T12:05:59+00:00",
+  "checks": {
+    "label": "draft",
+    "outcome_ok": true,
+    "facts": 8,
+    "dropped_facts": 0,
+    "attempts": 1,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 72,
+    "subject_words": 3,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "5cbbdce502104630a9bafa1cdaf172ec",
+    "brief": {
+      "company": "Transistor",
+      "website": "transistor.fm",
+      "offer": "Podcast audio editing and show notes for B2B brands",
+      "recipient": "Partnerships Lead",
+      "language": "English",
+      "tone": "Warm"
+    },
+    "status": "ready",
+    "reason": null,
+    "message": "The draft passed review.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "Transistor is a podcast hosting platform that helps users get podcasts on Spotify, Apple Podcasts, and Google.",
+          "excerpt": "Transistor gives you everything you need to get your podcast on Spotify, Apple Podcasts, and Google",
+          "source_url": "https://transistor.fm/brand",
+          "source_title": "Transistor Podcasting – download logo PNG and SVG, press information"
+        },
+        {
+          "id": 2,
+          "claim": "Transistor offers a 14-day free trial for its pricing plans.",
+          "excerpt": "Try us free for 14 days.",
+          "source_url": "https://transistor.fm/brand",
+          "source_title": "Transistor Podcasting – download logo PNG and SVG, press information"
+        },
+        {
+          "id": 3,
+          "claim": "Transistor hosts unlimited shows on one account and supports video podcast hosting and private podcasts.",
+          "excerpt": "Host unlimited shows on one account #### Video Podcast Hosting\n\nHost & distribute video podcasts #### Private Podcasts",
+          "source_url": "https://transistor.fm/brand",
+          "source_title": "Transistor Podcasting – download logo PNG and SVG, press information"
+        },
+        {
+          "id": 4,
+          "claim": "Transistor serves over 30,000 podcasts.",
+          "excerpt": "Today, we serve over 30,000 podcasts of all types.",
+          "source_url": "https://transistor.fm/about",
+          "source_title": "About Transistor.fm – a simple, powerful podcast hosting platform"
+        },
+        {
+          "id": 5,
+          "claim": "Transistor says it is a small team of five people and lists two founders plus three employees.",
+          "excerpt": "Today, we're a small (but mighty) team of five people.",
+          "source_url": "https://transistor.fm/about",
+          "source_title": "About Transistor.fm – a simple, powerful podcast hosting platform"
+        },
+        {
+          "id": 6,
+          "claim": "Transistor's founding focus included a simple, elegant experience for managing multiple shows.",
+          "excerpt": "A simple, elegant experience built for managing multiple shows",
+          "source_url": "https://transistor.fm/transistor-growth",
+          "source_title": "Transistor Surpasses Simplecast on the List of Top Hosting Platforms"
+        },
+        {
+          "id": 7,
+          "claim": "Transistor has offered human-powered live chat and email support from the beginning.",
+          "excerpt": "we've offered human-powered live chat and email support from the beginning",
+          "source_url": "https://transistor.fm/transistor-growth",
+          "source_title": "Transistor Surpasses Simplecast on the List of Top Hosting Platforms"
+        },
+        {
+          "id": 8,
+          "claim": "Transistor launched video podcasting and says customers will soon be able to publish video podcast episodes on YouTube, Spotify, Apple Podcasts, and other HLS-video apps.",
+          "excerpt": "The big thing I'm really excited about is video podcasting.  \n  \nTransistor customers will soon be able to publish video podcast episodes on YouTube, Spotify, Apple Podcasts, and any other apps that support HLS video.",
+          "source_url": "https://justin.transistor.fm/episodes/an-update-on-what-were-building-at-transistor",
+          "source_title": "Justin's brain | An update on what we're building at Transistor"
+        }
+      ],
+      "website_owner": "Transistor.fm",
+      "website_matches": true,
+      "website_note": "The results consistently describe transistor.fm as Transistor's official site and company pages, including its about, brand, and homepage pages.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 0,
+      "dropped": []
+    },
+    "strategy": {
+      "observation": "Transistor has expanded beyond audio hosting into video podcasting, and says customers will soon be able to publish video podcast episodes on YouTube, Spotify, Apple Podcasts, and other HLS-video apps.",
+      "fact_ids": [
+        3,
+        8
+      ],
+      "offer_link": "That kind of cross-platform publishing expansion can create a need for production support around the episodes themselves, so a partner that handles audio editing and show notes for B2B brands could complement Transistor’s platform offering and give their customers a publish-ready workflow.",
+      "hypotheses": [
+        "Transistor’s partnerships team may work with agencies or service providers that support customer production workflows.",
+        "Some Transistor customers may be B2B brands producing podcasts that need help turning raw recordings into publish-ready episodes.",
+        "Adding editing and show notes as a partner service could help Transistor improve adoption or retention for customers launching more complex shows."
+      ],
+      "angle": "As Transistor expands into video podcast publishing, you may have customers who need a production partner to turn raw recordings into publish-ready episodes and show notes.",
+      "offer_fit": "weak",
+      "fit_reason": "Transistor is primarily a hosting and distribution platform, so podcast editing is adjacent rather than core. The only clear path is through partnerships with customer-facing service providers, which is plausible but not a strong or direct fit."
+    },
+    "draft": {
+      "subject": "Video podcast workflow",
+      "body": "As Transistor expands into video podcast publishing, you may have customers who need help turning raw recordings into publish-ready episodes and show notes.\n\nI help B2B brands with podcast audio editing and show notes, so the production side doesn’t slow down publishing. If your partnerships team is looking at services that support that workflow, would it make sense to talk through where a production partner could fit for customers moving into video?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Video podcast workflow",
+          "body": "As Transistor expands into video podcast publishing, you may have customers who need help turning raw recordings into publish-ready episodes and show notes.\n\nI help B2B brands with podcast audio editing and show notes, so the production side doesn’t slow down publishing. If your partnerships team is looking at services that support that workflow, would it make sense to talk through where a production partner could fit for customers moving into video?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@2",
+      "strategy": "strategy@2",
+      "copywriter": "copywriter@2",
+      "review": "review@2"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "research@2",
+        "duration_ms": 3816,
+        "usage": {
+          "input_tokens": 4680,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 475,
+          "reasoning_tokens": 33
+        },
+        "cost_usd": 0.0056475,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "strategy@2",
+        "duration_ms": 8509,
+        "usage": {
+          "input_tokens": 775,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 1300,
+          "reasoning_tokens": 1024
+        },
+        "cost_usd": 0.00643125,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "copywriter@2",
+        "duration_ms": 3251,
+        "usage": {
+          "input_tokens": 889,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 413,
+          "reasoning_tokens": 306
+        },
+        "cost_usd": 0.00252525,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "review@2",
+        "duration_ms": 1395,
+        "usage": {
+          "input_tokens": 764,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 118,
+          "reasoning_tokens": 98
+        },
+        "cost_usd": 0.001104,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Transistor\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Transistor\" transistor.fm",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Transistor\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 16985
+  }
+}

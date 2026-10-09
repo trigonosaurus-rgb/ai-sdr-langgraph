@@ -1,0 +1,243 @@
+{
+  "case_id": "transistor",
+  "config": "mini",
+  "models": "Research gpt-5.4-mini/low, Strategy gpt-5.4-mini/medium, Writing gpt-5.4-mini/medium, Review gpt-5.4-mini/low",
+  "repeat": 2,
+  "snapshot_recorded_at": "2026-10-09T12:05:59+00:00",
+  "checks": {
+    "label": "draft",
+    "outcome_ok": true,
+    "facts": 6,
+    "dropped_facts": 2,
+    "attempts": 1,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 74,
+    "subject_words": 3,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "69ca43b0000a42cebda657ca7322cf82",
+    "brief": {
+      "company": "Transistor",
+      "website": "transistor.fm",
+      "offer": "Podcast audio editing and show notes for B2B brands",
+      "recipient": "Partnerships Lead",
+      "language": "English",
+      "tone": "Warm"
+    },
+    "status": "ready",
+    "reason": null,
+    "message": "The draft passed review.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "Transistor serves over 30,000 podcasts.",
+          "excerpt": "Today, we serve over 30,000 podcasts of all types.",
+          "source_url": "https://transistor.fm/about",
+          "source_title": "About Transistor.fm – a simple, powerful podcast hosting platform"
+        },
+        {
+          "id": 2,
+          "claim": "Transistor's customers include indie podcasters, small businesses, and enterprise companies.",
+          "excerpt": "Our customers include indie podcasters, small businesses, and enterprise companies.",
+          "source_url": "https://transistor.fm/about",
+          "source_title": "About Transistor.fm – a simple, powerful podcast hosting platform"
+        },
+        {
+          "id": 3,
+          "claim": "Transistor offers video podcast hosting.",
+          "excerpt": "Video Podcast Hosting\n\nHost & distribute video podcasts",
+          "source_url": "https://transistor.fm/brand",
+          "source_title": "Transistor Podcasting – download logo PNG and SVG, press information"
+        },
+        {
+          "id": 4,
+          "claim": "Transistor offers private podcasts.",
+          "excerpt": "Private Podcasts",
+          "source_url": "https://transistor.fm/brand",
+          "source_title": "Transistor Podcasting – download logo PNG and SVG, press information"
+        },
+        {
+          "id": 5,
+          "claim": "Transistor has a 14-day free trial.",
+          "excerpt": "Try us free for 14 days.",
+          "source_url": "https://transistor.fm",
+          "source_title": "Host Unlimited Shows • Best Audio and Video Podcast Hosting • Transistor"
+        },
+        {
+          "id": 6,
+          "claim": "Transistor's team is small, with five people listed on the About page.",
+          "excerpt": "Today, we're a small (but mighty) team of five people.",
+          "source_url": "https://transistor.fm/about",
+          "source_title": "About Transistor.fm – a simple, powerful podcast hosting platform"
+        }
+      ],
+      "website_owner": "Transistor",
+      "website_matches": true,
+      "website_note": "The results identify transistor.fm as Transistor's official site and describe Transistor.fm as the podcast hosting platform.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 2,
+      "dropped": [
+        {
+          "claim": "Transistor is a podcast hosting platform.",
+          "source_id": 4,
+          "excerpt": "About Transistor.fm – a simple, powerful podcast hosting platform"
+        },
+        {
+          "claim": "Transistor offers podcast hosting for unlimited shows on one account.",
+          "source_id": 6,
+          "excerpt": "Host Unlimited Shows • Best Audio and Video Podcast Hosting • Transistor"
+        }
+      ]
+    },
+    "strategy": {
+      "observation": "Transistor offers private podcasts, and its customer base includes enterprise companies and small businesses, which makes it plausible that many of the shows on the platform are business podcasts rather than hobby projects.",
+      "fact_ids": [
+        2,
+        4
+      ],
+      "offer_link": "If Transistor works with B2B and enterprise podcast programs, an audio-editing and show-notes partner could help those customers publish consistently and reduce production overhead for teams using private or externally facing shows.",
+      "hypotheses": [
+        "Transistor may field requests from customers who need help producing and maintaining business podcasts, especially private/internal shows.",
+        "The Partnerships Lead may be open to referral or service-partner conversations that add value for Transistor customers without requiring in-house production services.",
+        "Some Transistor customers may prefer to outsource editing and show-note creation rather than handle it internally."
+      ],
+      "angle": "Since Transistor supports private podcasts for enterprise and small-business customers, you may have B2B shows on the platform that need editing and show notes support.",
+      "offer_fit": "weak",
+      "fit_reason": "There is a plausible fit because Transistor serves business podcast customers and offers private podcasts, but the facts do not show that Transistor needs or sells production services, so the link to audio editing and show notes is indirect."
+    },
+    "draft": {
+      "subject": "Private podcast support",
+      "body": "Hi — I help B2B brands with podcast audio editing and show notes, so teams can publish without adding more in-house work.\n\nSince Transistor supports private podcasts and works with small businesses and enterprise companies, my guess is some of your customers are running business podcasts that need a bit of production support.\n\nDo you ever point those teams to outside editing or show-notes help, or is that not part of the partnership side?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Private podcast support",
+          "body": "Hi — I help B2B brands with podcast audio editing and show notes, so teams can publish without adding more in-house work.\n\nSince Transistor supports private podcasts and works with small businesses and enterprise companies, my guess is some of your customers are running business podcasts that need a bit of production support.\n\nDo you ever point those teams to outside editing or show-notes help, or is that not part of the partnership side?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@2",
+      "strategy": "strategy@2",
+      "copywriter": "copywriter@2",
+      "review": "review@2"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "research@2",
+        "duration_ms": 2593,
+        "usage": {
+          "input_tokens": 4680,
+          "cached_input_tokens": 4352,
+          "cache_write_tokens": null,
+          "output_tokens": 369,
+          "reasoning_tokens": 53
+        },
+        "cost_usd": 0.0022329,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "strategy@2",
+        "duration_ms": 6090,
+        "usage": {
+          "input_tokens": 653,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 774,
+          "reasoning_tokens": 512
+        },
+        "cost_usd": 0.00397275,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "copywriter@2",
+        "duration_ms": 3509,
+        "usage": {
+          "input_tokens": 758,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 463,
+          "reasoning_tokens": 351
+        },
+        "cost_usd": 0.002652,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "review@2",
+        "duration_ms": 1224,
+        "usage": {
+          "input_tokens": 645,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 109,
+          "reasoning_tokens": 89
+        },
+        "cost_usd": 0.00097425,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Transistor\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Transistor\" transistor.fm",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Transistor\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 13430
+  }
+}

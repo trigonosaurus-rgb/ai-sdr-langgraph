@@ -92,7 +92,8 @@ def test_language_check_allows_latin_brand_names_in_russian():
 def test_numbers_must_come_from_facts_or_the_brief(brief):
     facts = [fact("Used by over 40,000 product teams", "more than 40 000 teams")]
     assert ungrounded_numbers("Over 40,000 teams use it", facts, brief) == []
-    assert ungrounded_numbers("Over 45,000 teams, 3x faster", facts, brief) == ["3", "45000"]
+    assert ungrounded_numbers("Over 45,000 teams, 30% faster", facts, brief) == ["30", "45000"]
+    assert ungrounded_numbers("B2B teams, 1-2 examples, 480k orders", facts, brief) == []
     with_offer = brief.model_copy(update={"offer": "WCAG 2.2 audits"})
     assert ungrounded_numbers("Audits against WCAG 2.2", [], with_offer) == []
 

@@ -1,0 +1,244 @@
+{
+  "case_id": "ramp",
+  "config": "mini",
+  "models": "Research gpt-5.4-mini/low, Strategy gpt-5.4-mini/medium, Writing gpt-5.4-mini/medium, Review gpt-5.4-mini/low",
+  "repeat": 2,
+  "snapshot_recorded_at": "2026-10-09T12:06:28+00:00",
+  "checks": {
+    "label": "draft",
+    "outcome_ok": true,
+    "facts": 7,
+    "dropped_facts": 1,
+    "attempts": 1,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 71,
+    "subject_words": 3,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "e8162f6565414207b5508521e7ec88eb",
+    "brief": {
+      "company": "Ramp",
+      "website": "ramp.com",
+      "offer": "Expense policy templates for mid-size finance teams",
+      "recipient": "Head of Content",
+      "language": "English",
+      "tone": "Direct"
+    },
+    "status": "ready",
+    "reason": null,
+    "message": "The draft passed review.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "Ramp says more than 70,000 businesses use its platform.",
+          "excerpt": "More than 70,000 businesses use Ramp to manage corporate cards, expenses, bill payments, procurement, vendor management, travel, banking, and accounting automation in one system.",
+          "source_url": "https://support.ramp.com/ramp-overview?ref=kellblog.com",
+          "source_title": "Ramp Help Center"
+        },
+        {
+          "id": 2,
+          "claim": "Ramp claims customers have saved more than $12 billion and 27.5 million hours using its controls, automation, and savings insights.",
+          "excerpt": "Ramp customers have saved more than $12 billion and 27.5 million hours by using Ramp's controls, automation, and savings insights.",
+          "source_url": "https://support.ramp.com/ramp-overview?ref=kellblog.com",
+          "source_title": "Ramp Help Center"
+        },
+        {
+          "id": 3,
+          "claim": "Ramp supports more than $100 billion in annualized card and AP payment volume.",
+          "excerpt": "Ramp supports more than $100 billion in annualized card and AP payment volume",
+          "source_url": "https://support.ramp.com/ramp-overview?ref=kellblog.com",
+          "source_title": "Ramp Help Center"
+        },
+        {
+          "id": 4,
+          "claim": "Ramp’s website says customers save 5% or more on average with Ramp.",
+          "excerpt": "customers save 5% or more on average with Ramp.",
+          "source_url": "https://support.ramp.com/ramp-overview?ref=kellblog.com",
+          "source_title": "Ramp Help Center"
+        },
+        {
+          "id": 5,
+          "claim": "Ramp says it works with over 70,000 companies and positions itself as helping teams spend less, close faster, and finance smarter.",
+          "excerpt": "70,000+ companies spend less, close faster, and finance smarter on Ramp:",
+          "source_url": "https://ramp.com/customers",
+          "source_title": "Ramp Customers are Happy Customers - Case Studies | Ramp"
+        },
+        {
+          "id": 6,
+          "claim": "Ramp announced a $750 million primary financing round led by ICONIQ, GIC, and Ontario Teachers' Pension Plan, valuing the company at $44 billion.",
+          "excerpt": "Today, Ramp announced a $750 million primary financing round led by ICONIQ, GIC, and Ontario Teachers' Pension Plan, valuing the company at $44 billion.",
+          "source_url": "https://www.prnewswire.com/news-releases/ramp-raises-series-f-at-44-billion-valuation-302791103.html",
+          "source_title": "Ramp Raises Series F at $44 Billion Valuation"
+        },
+        {
+          "id": 7,
+          "claim": "Ramp said it released 70+ products and major features in the past few months and closed two acquisitions: Billhop and Juno.",
+          "excerpt": "In the past few months, Ramp released 70+ products and major features, closed two acquisitions — Billhop (UK/EU payments) and Juno (guest travel)",
+          "source_url": "https://www.prnewswire.com/news-releases/ramp-raises-series-f-at-44-billion-valuation-302791103.html",
+          "source_title": "Ramp Raises Series F at $44 Billion Valuation"
+        }
+      ],
+      "website_owner": "Ramp Business Corporation",
+      "website_matches": true,
+      "website_note": "The results tie ramp.com to Ramp Business Corporation and describe the site as Ramp’s official website and help center.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 1,
+      "dropped": [
+        {
+          "claim": "Ramp is a financial operations platform for companies, and its core products include cards, Bill Pay, accounting, travel, and reimbursements.",
+          "source_id": 1,
+          "excerpt": "Ramp is a financial operations platform that helps companies spend less and move faster. [...] Tour Ramp and its main products: cards, Bill Pay, accounting, travel, and reimbursements."
+        }
+      ]
+    },
+    "strategy": {
+      "observation": "Ramp said it released 70+ products and major features in the past few months and closed two acquisitions, which suggests a rapidly expanding product surface area that could create more need for clear spend and expense guidance.",
+      "fact_ids": [
+        7
+      ],
+      "offer_link": "Expense policy templates for mid-size finance teams could give Ramp a ready-made content asset for explaining best-practice expense rules to the finance teams navigating those newer products and workflows.",
+      "hypotheses": [
+        "Ramp's content team may be looking for practical, template-driven assets that help finance teams adopt new spend controls.",
+        "New product launches and acquisitions may be creating policy questions that content can address.",
+        "Mid-size finance teams may be one of the audience segments Ramp wants to attract or educate."
+      ],
+      "angle": "Ramp’s recent burst of product launches and acquisitions looks like the right moment for a practical expense-policy template aimed at finance teams.",
+      "offer_fit": "weak",
+      "fit_reason": "There is a plausible content use for expense policy templates, but the connection is indirect: the recipient leads content, not finance operations, and the offer is more naturally useful to customers than to Ramp itself."
+    },
+    "draft": {
+      "subject": "Expense policy template",
+      "body": "Ramp's 70+ launches and two acquisitions in the last few months mean a lot more to explain across spend and expense workflows.\n\nI write expense policy templates for mid-size finance teams. The goal is to give content teams a ready-made asset when new tools and rules create more policy questions.\n\nIf useful, I can send a one-page template your team could adapt for those newer workflows. Would that be worth having?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Expense policy template",
+          "body": "Ramp's 70+ launches and two acquisitions in the last few months mean a lot more to explain across spend and expense workflows.\n\nI write expense policy templates for mid-size finance teams. The goal is to give content teams a ready-made asset when new tools and rules create more policy questions.\n\nIf useful, I can send a one-page template your team could adapt for those newer workflows. Would that be worth having?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@2",
+      "strategy": "strategy@2",
+      "copywriter": "copywriter@2",
+      "review": "review@2"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "research@2",
+        "duration_ms": 3384,
+        "usage": {
+          "input_tokens": 4436,
+          "cached_input_tokens": 3840,
+          "cache_write_tokens": null,
+          "output_tokens": 578,
+          "reasoning_tokens": 34
+        },
+        "cost_usd": 0.003336,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "strategy@2",
+        "duration_ms": 4455,
+        "usage": {
+          "input_tokens": 718,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 747,
+          "reasoning_tokens": 512
+        },
+        "cost_usd": 0.0039,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "copywriter@2",
+        "duration_ms": 3328,
+        "usage": {
+          "input_tokens": 803,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 594,
+          "reasoning_tokens": 485
+        },
+        "cost_usd": 0.00327525,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "review@2",
+        "duration_ms": 1778,
+        "usage": {
+          "input_tokens": 707,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 252,
+          "reasoning_tokens": 232
+        },
+        "cost_usd": 0.00166425,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Ramp\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Ramp\" ramp.com",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Ramp\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 12957
+  }
+}

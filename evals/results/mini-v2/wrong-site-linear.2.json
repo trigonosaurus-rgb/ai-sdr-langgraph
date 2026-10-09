@@ -1,0 +1,148 @@
+{
+  "case_id": "wrong-site-linear",
+  "config": "mini",
+  "models": "Research gpt-5.4-mini/low, Strategy gpt-5.4-mini/medium, Writing gpt-5.4-mini/medium, Review gpt-5.4-mini/low",
+  "repeat": 2,
+  "snapshot_recorded_at": "2026-10-09T12:06:59+00:00",
+  "checks": {
+    "label": "website_mismatch",
+    "outcome_ok": true,
+    "facts": 6,
+    "dropped_facts": 0,
+    "attempts": 0,
+    "has_draft": false,
+    "language_ok": null,
+    "body_words": null,
+    "subject_words": null,
+    "length_ok": null,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "441fa07880864d93b889af8df3f5cdb9",
+    "brief": {
+      "company": "Linear",
+      "website": "notion.so",
+      "offer": "Recruiting and scheduling customer interview participants for product teams",
+      "recipient": "Head of Product",
+      "language": "English",
+      "tone": "Direct"
+    },
+    "status": "failed",
+    "reason": "website_mismatch",
+    "message": "Search results do not match notion.so. The domain notion.so is owned by Notion, and the results show pages from Notion’s own integration and blog pages rather than Linear’s website.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "Linear is a product for software teams that focuses on issue tracking, project planning, and product roadmaps.",
+          "excerpt": "Linear empowers software teams to build better products. It streamlines issue tracking, project planning, and product roadmaps.",
+          "source_url": "https://www.notion.so/integrations/linear-9fa29a25-5ec1-479c-9979-f0425675e8f9",
+          "source_title": "Linear Integrations | Connect Your Apps with Notion"
+        },
+        {
+          "id": 2,
+          "claim": "Linear links can be previewed inside Notion with real-time previews of issues, views, and projects.",
+          "excerpt": "you can bring the magic of Linear to Notion. When you paste links from Linear, you’ll be able to see real-time previews of your issues, views, and projects directly in Notion.",
+          "source_url": "https://www.notion.so/integrations/linear-9fa29a25-5ec1-479c-9979-f0425675e8f9",
+          "source_title": "Linear Integrations | Connect Your Apps with Notion"
+        },
+        {
+          "id": 3,
+          "claim": "Linear’s Notion AI connector lets users search Linear projects, issues, and comments from Notion.",
+          "excerpt": "Search Linear projects, issues, and comments from Notion.",
+          "source_url": "https://www.notion.so/integrations/notion-ai-connector-for-linear",
+          "source_title": "Notion AI Connector for Linear"
+        },
+        {
+          "id": 4,
+          "claim": "The Notion AI Connector is available for all Linear organizations.",
+          "excerpt": "Available for all Linear organizations.",
+          "source_url": "https://www.notion.so/integrations/notion-ai-connector-for-linear",
+          "source_title": "Notion AI Connector for Linear"
+        },
+        {
+          "id": 5,
+          "claim": "Linear’s Notion connection shows live previews for issues, projects, and views, including issue title, description, status, issue ID, team, assignee, and last update date.",
+          "excerpt": "For issues, the preview shows issue title, description, status, issue ID, team, assignee, and the date of the last update.",
+          "source_url": "https://linear.app/integrations/notion",
+          "source_title": "Notion Integration – Linear"
+        },
+        {
+          "id": 6,
+          "claim": "Linear’s Notion integration updates previews when the underlying Linear data changes.",
+          "excerpt": "Once any of these properties change in Linear, the preview in Notion changes accordingly (on page reload or manual preview refresh).",
+          "source_url": "https://linear.app/integrations/notion",
+          "source_title": "Notion Integration – Linear"
+        }
+      ],
+      "website_owner": "Notion",
+      "website_matches": false,
+      "website_note": "The domain notion.so is owned by Notion, and the results show pages from Notion’s own integration and blog pages rather than Linear’s website.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 0,
+      "dropped": []
+    },
+    "strategy": null,
+    "draft": null,
+    "attempts": [],
+    "prompt_versions": {
+      "research": "research@2"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "research@2",
+        "duration_ms": 2899,
+        "usage": {
+          "input_tokens": 5020,
+          "cached_input_tokens": 4864,
+          "cache_write_tokens": null,
+          "output_tokens": 465,
+          "reasoning_tokens": 73
+        },
+        "cost_usd": 0.0025743000000000003,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Linear\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Linear\" notion.so",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Linear\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 2909
+  }
+}

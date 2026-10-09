@@ -1,0 +1,245 @@
+{
+  "case_id": "ru-vkusvill",
+  "config": "mini",
+  "models": "Research gpt-5.4-mini/low, Strategy gpt-5.4-mini/medium, Writing gpt-5.4-mini/medium, Review gpt-5.4-mini/low",
+  "repeat": 2,
+  "snapshot_recorded_at": "2026-10-09T12:07:34+00:00",
+  "checks": {
+    "label": "draft",
+    "outcome_ok": true,
+    "facts": 6,
+    "dropped_facts": 2,
+    "attempts": 1,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 65,
+    "subject_words": 3,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": [
+      "2"
+    ]
+  },
+  "result": {
+    "run_id": "e12ff16f46d64f6a90f09210760b1ac8",
+    "brief": {
+      "company": "ВкусВилл",
+      "website": "vkusvill.ru",
+      "offer": "Аудит карточек товаров в мобильном приложении",
+      "recipient": "Директор по продукту",
+      "language": "Russian",
+      "tone": "Direct"
+    },
+    "status": "ready",
+    "reason": null,
+    "message": "The draft passed review.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "ВкусВилл is a brand of healthy food and a retail chain with a free delivery service.",
+          "excerpt": "«ВкусВилл» — бренд полезных продуктов для здорового питания, сеть магазинов и сервис бесплатной доставки.",
+          "source_url": "https://vkusvill.ru/history",
+          "source_title": "История компаний «ВкусВилл» и «Избёнка»"
+        },
+        {
+          "id": 2,
+          "claim": "The company says it works with customers, producers, and partners in open dialogue and uses feedback to improve continuously.",
+          "excerpt": "Мы всегда в открытом диалоге с покупателями, производителями и партнёрами. Это позволяет нам развивать компанию от обратной связи и постоянно улучшаться для вас.",
+          "source_url": "https://vkusvill.ru/about",
+          "source_title": "О нас | ВкусВилл"
+        },
+        {
+          "id": 3,
+          "claim": "VkusVill has more than 1,900 producers as partners.",
+          "excerpt": "1 900+\n\nпроизводителей стали нашими партнёрами и создают продукты для вас",
+          "source_url": "https://vkusvill.ru/about",
+          "source_title": "О нас | ВкусВилл"
+        },
+        {
+          "id": 4,
+          "claim": "VkusVill positions itself as a leader in grocery delivery, with 480k+ orders delivered per day.",
+          "excerpt": "Лидеры в доставке продуктов\n\n9 из 10\n\nпокупателей оценивают доставку на отлично\n\n480+ тыс.\n\nзаказов в день доставляют наши курьеры",
+          "source_url": "https://vkusvill.ru/about",
+          "source_title": "О нас | ВкусВилл"
+        },
+        {
+          "id": 5,
+          "claim": "The company emphasizes three principles: tasty, natural, and healthy food; engaged relationships; and care for oneself and the future.",
+          "excerpt": "На пути к этой цели нам помогают три принципа: вкусная, натуральная и полезная еда; включённые отношения с покупателями, партнёрами и коллегами; забота о себе и будущем.",
+          "source_url": "https://vkusvill.ru/faq/kakaya-missiya-i-tsennosti-u-vkusvilla-",
+          "source_title": "Какая миссия и ценности у ВкусВилла?"
+        },
+        {
+          "id": 6,
+          "claim": "Its business offering includes ordering food for children through the VkusVill mobile app, with deferred payment and delivery for businesses.",
+          "excerpt": "Можно заказать через мобильное приложение ВкусВилл питание деткам либо вечером, либо день в день.",
+          "source_url": "https://vkusvill.ru/b2b",
+          "source_title": "ВкусВилл Бизнес"
+        }
+      ],
+      "website_owner": "ВкусВилл",
+      "website_matches": true,
+      "website_note": "The results from vkusvill.ru and other references identify the site as ВкусВилл’s own website.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 2,
+      "dropped": [
+        {
+          "claim": "Its assortment includes more than 4,200 products under the VkusVill brand and free delivery covers 11,200+ items.",
+          "source_id": 1,
+          "excerpt": "4 200+ | продуктов под брендом ВкусВилл |\n| 11 200+ | товаров доступны с нашей бесплатной доставкой |"
+        },
+        {
+          "claim": "The chain has 1,537+ stores, 264+ darkstores, and operates in 155+ cities.",
+          "source_id": 1,
+          "excerpt": "1 537+ | магазинов |\n| 264+ | даркстора |\n| 155+ | городов"
+        }
+      ]
+    },
+    "strategy": {
+      "observation": "ВкусВилл продаёт через мобильное приложение на потоке 480k+ заказов в день, причём там же есть отдельные сценарии для детских покупок, отсрочки платежа и B2B-доставки.",
+      "fact_ids": [
+        4,
+        6
+      ],
+      "offer_link": "Аудит карточек товаров в мобильном приложении может быть полезен, потому что на таком объёме даже небольшие улучшения в структуре, контенте и CTA на карточке способны повлиять на конверсию, а разные сценарии покупки часто требуют разной подачи информации.",
+      "hypotheses": [
+        "В текущих карточках может не хватать ясности по ключевым атрибутам товара, из-за чего часть пользователей не доходит до покупки.",
+        "Разные сценарии в приложении могут использовать карточки с не до конца адаптированной иерархией информации или акцентами.",
+        "В карточках могут быть возможности повысить конверсию через более точную подачу доверительных и продуктовых сигналов."
+      ],
+      "angle": "В мобильном приложении ВкусВилла карточка товара работает на очень большой поток заказов и на несколько разных сценариев покупки сразу.",
+      "offer_fit": "good",
+      "fit_reason": "У ВкусВилла карточки в мобильном приложении напрямую влияют на продажи в высокочастотном канале, поэтому аудит карточек выглядит уместным и потенциально полезным для директора по продукту."
+    },
+    "draft": {
+      "subject": "Карточки в приложении",
+      "body": "В мобильном приложении ВкусВилла карточка товара работает на большой поток и на разные сценарии покупки сразу.\n\nЯ делаю аудит карточек товаров в мобильных приложениях. Обычно на таком потоке даже небольшие правки в структуре, акцентах и CTA дают заметный эффект на конверсию.\n\nЕсли у вас сейчас отдельно смотрят детские, B2B и обычные карточки, могу прислать короткий разбор, где чаще всего теряется ясность. Кому его лучше отправить?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Карточки в приложении",
+          "body": "В мобильном приложении ВкусВилла карточка товара работает на большой поток и на разные сценарии покупки сразу.\n\nЯ делаю аудит карточек товаров в мобильных приложениях. Обычно на таком потоке даже небольшие правки в структуре, акцентах и CTA дают заметный эффект на конверсию.\n\nЕсли у вас сейчас отдельно смотрят детские, B2B и обычные карточки, могу прислать короткий разбор, где чаще всего теряется ясность. Кому его лучше отправить?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@2",
+      "strategy": "strategy@2",
+      "copywriter": "copywriter@2",
+      "review": "review@2"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "research@2",
+        "duration_ms": 3275,
+        "usage": {
+          "input_tokens": 5871,
+          "cached_input_tokens": 5376,
+          "cache_write_tokens": null,
+          "output_tokens": 620,
+          "reasoning_tokens": 47
+        },
+        "cost_usd": 0.00356445,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "strategy@2",
+        "duration_ms": 6337,
+        "usage": {
+          "input_tokens": 702,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 1155,
+          "reasoning_tokens": 834
+        },
+        "cost_usd": 0.005724,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "copywriter@2",
+        "duration_ms": 3657,
+        "usage": {
+          "input_tokens": 858,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 651,
+          "reasoning_tokens": 512
+        },
+        "cost_usd": 0.003573,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "review@2",
+        "duration_ms": 4032,
+        "usage": {
+          "input_tokens": 723,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 738,
+          "reasoning_tokens": 712
+        },
+        "cost_usd": 0.00386325,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"ВкусВилл\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"ВкусВилл\" vkusvill.ru",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"ВкусВилл\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 17316
+  }
+}

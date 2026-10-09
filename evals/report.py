@@ -14,7 +14,8 @@ from pathlib import Path
 from pydantic import BaseModel
 
 from core.runner import summarize_usage
-from evals.cases import load_cases
+from evals.cases import Case, load_cases
+from evals.checks import check
 from evals.grades import Grade, load_grades
 from evals.run import RESULTS_DIR, CaseRun
 
@@ -44,8 +45,10 @@ class Row(BaseModel):
         return self.model_usd / self.successes
 
 
-def load_runs(directory: Path) -> list[CaseRun]:
-    return [CaseRun.model_validate_json(path.read_text(encoding="utf-8")) for path in sorted(directory.glob("*.json"))]
+def load_runs(directory: Path, cases: dict[str, Case]) -> list[CaseRun]:
+    """Saved runs with their checks recomputed, so a fixed check applies to earlier runs too."""
+    runs = [CaseRun.model_validate_json(path.read_text(encoding="utf-8")) for path in sorted(directory.glob("*.json"))]
+    return [run.model_copy(update={"checks": check(cases[run.case_id], run.result)}) for run in runs]
 
 
 def mean(values: list[int]) -> float | None:
@@ -122,10 +125,11 @@ def main() -> int:
             stream.reconfigure(encoding="utf-8")
 
     names = args.names or sorted(p.name for p in RESULTS_DIR.glob("*") if p.is_dir())
-    expected_draft = {case.id for case in load_cases() if case.expect == ["draft"]}
+    cases = {case.id: case for case in load_cases()}
+    expected_draft = {case.id for case in cases.values() if case.expect == ["draft"]}
     rows = []
     for name in names:
-        runs = load_runs(RESULTS_DIR / name)
+        runs = load_runs(RESULTS_DIR / name, cases)
         if runs:
             rows.append(summarize(name, runs, expected_draft, load_grades(name, args.grader)))
     if not rows:

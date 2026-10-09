@@ -1,0 +1,292 @@
+{
+  "case_id": "gitlab",
+  "config": "mini",
+  "models": "Research gpt-5.4-mini/low, Strategy gpt-5.4-mini/medium, Writing gpt-5.4-mini/medium, Review gpt-5.4-mini/low",
+  "repeat": 1,
+  "snapshot_recorded_at": "2026-10-09T12:05:24+00:00",
+  "checks": {
+    "label": "draft",
+    "outcome_ok": true,
+    "facts": 8,
+    "dropped_facts": 0,
+    "attempts": 2,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 63,
+    "subject_words": 3,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "a508e40c8d4f446ab070f1da3fbb48c2",
+    "brief": {
+      "company": "GitLab",
+      "website": "about.gitlab.com",
+      "offer": "Contract technical writers for release notes and migration guides",
+      "recipient": "Engineering Manager, Documentation",
+      "language": "English",
+      "tone": "Direct"
+    },
+    "status": "ready",
+    "reason": null,
+    "message": "The draft passed review.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "GitLab says it is the company behind the GitLab intelligent orchestration platform for teams and AI agents.",
+          "excerpt": "We're the company behind GitLab, the intelligent orchestration platform where teams and their AI agents ship secure software faster.",
+          "source_url": "https://about.gitlab.com/company",
+          "source_title": "About GitLab - The Intelligent Orchestration Platform"
+        },
+        {
+          "id": 2,
+          "claim": "GitLab states its mission is to unlock every team to ship trusted software at speed.",
+          "excerpt": "Our mission is to unlock every team to ship trusted software at the speed of imagination.",
+          "source_url": "https://about.gitlab.com/company",
+          "source_title": "About GitLab - The Intelligent Orchestration Platform"
+        },
+        {
+          "id": 3,
+          "claim": "GitLab says it is used by more than 100,000 organizations.",
+          "excerpt": "GitLab is the trusted enterprise platform for software creation in the AI era, used by more than 100,000 organizations to plan, build, secure, and deploy software at machine scale, guided by humans.",
+          "source_url": "https://about.gitlab.com/jobs",
+          "source_title": "Join GitLab"
+        },
+        {
+          "id": 4,
+          "claim": "GitLab reports 2,500+ team members and 5,500+ contributors.",
+          "excerpt": "Code\n\ncontributors\n\n5,500+\n\nTeam members\n\n2,500+",
+          "source_url": "https://about.gitlab.com/jobs",
+          "source_title": "Join GitLab"
+        },
+        {
+          "id": 5,
+          "claim": "GitLab lists 177 consecutive monthly releases.",
+          "excerpt": "Consecutive monthly releases every month\n\n177",
+          "source_url": "https://about.gitlab.com/jobs",
+          "source_title": "Join GitLab"
+        },
+        {
+          "id": 6,
+          "claim": "GitLab says it serves technology leaders and platform owners modernizing the software delivery lifecycle.",
+          "excerpt": "GitLab serves technology leaders and platform owners responsible for modernizing their software delivery lifecycle.",
+          "source_url": "https://about.gitlab.com/platform",
+          "source_title": "GitLab Platform - Speed with control"
+        },
+        {
+          "id": 7,
+          "claim": "GitLab says it supports everyone involved in software delivery, including developers, business analysts, product owners, testers, solution architects, security teams, and operations teams.",
+          "excerpt": "GitLab supports everyone involved in software delivery: developers, business analysts, product owners, testers, solution architects, security teams, and operations teams working together across the complete software lifecycle.",
+          "source_url": "https://about.gitlab.com/platform",
+          "source_title": "GitLab Platform - Speed with control"
+        },
+        {
+          "id": 8,
+          "claim": "GitLab’s subprocessors page shows it uses providers including Google, AWS, Anthropic, OpenAI, Fireworks.ai, Snowflake, and Fivetran for cloud hosting, AI features, customer support, and analytics.",
+          "excerpt": "Google LLC | United States | Cloud Hosting, Customer Support, and AI-Powered Product Features | GitLab.com, Dedicated, and Self-Managed",
+          "source_url": "https://about.gitlab.com/privacy/subprocessors",
+          "source_title": "GitLab Legal"
+        }
+      ],
+      "website_owner": "GitLab",
+      "website_matches": true,
+      "website_note": "The results show about.gitlab.com as GitLab’s official site and company pages.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 0,
+      "dropped": []
+    },
+    "strategy": {
+      "observation": "GitLab has published 177 consecutive monthly releases, which suggests a constant need to produce and update release notes and upgrade documentation.",
+      "fact_ids": [
+        5
+      ],
+      "offer_link": "Contract technical writers could help absorb the recurring release-notes and migration-guide workload that comes with a monthly release cadence, especially when the documentation team needs to keep pace without slowing product shipping.",
+      "hypotheses": [
+        "The documentation team may be spending significant time on release notes and upgrade/migration guides.",
+        "Some releases may require customer-facing migration guidance beyond standard release notes.",
+        "Your team may want temporary help to prevent documentation bottlenecks during release cycles."
+      ],
+      "angle": "GitLab’s 177 straight monthly releases probably keep your documentation team on a permanent release-notes treadmill.",
+      "offer_fit": "good",
+      "fit_reason": "A steady monthly release cadence makes contract technical writers a plausible fit, because release notes are repetitive, time-sensitive, and easy to staff externally when the volume is continuous."
+    },
+    "draft": {
+      "subject": "Monthly release documentation",
+      "body": "GitLab’s 177 consecutive monthly releases suggest a steady release-notes and migration-guide load for your documentation team.\n\nI place contract technical writers on release notes and migration guides. That can help when monthly releases create recurring documentation work and the team needs to keep pace without slowing shipping.\n\nDo you ever bring in outside writers for release notes or migration guides during release cycles?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Monthly release docs",
+          "body": "GitLab’s 177 straight monthly releases probably keep your docs team on a constant release-notes treadmill.\n\nI place contract technical writers who take on release notes and migration guides, so internal teams can keep shipping without documentation lag. If release cycles create spikes for your team, I may be able to help.\n\nDo you ever bring in outside writers for release notes or upgrade docs during monthly releases?"
+        },
+        "review": {
+          "passed": false,
+          "issues": [
+            "“keep your docs team on a constant release-notes treadmill” is hypey/loaded. Make it more matter-of-fact and remove the metaphor."
+          ]
+        }
+      },
+      {
+        "attempt": 2,
+        "draft": {
+          "subject": "Monthly release documentation",
+          "body": "GitLab’s 177 consecutive monthly releases suggest a steady release-notes and migration-guide load for your documentation team.\n\nI place contract technical writers on release notes and migration guides. That can help when monthly releases create recurring documentation work and the team needs to keep pace without slowing shipping.\n\nDo you ever bring in outside writers for release notes or migration guides during release cycles?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@2",
+      "strategy": "strategy@2",
+      "copywriter": "copywriter@2",
+      "review": "review@2"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "research@2",
+        "duration_ms": 3722,
+        "usage": {
+          "input_tokens": 4837,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 602,
+          "reasoning_tokens": 30
+        },
+        "cost_usd": 0.00633675,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "strategy@2",
+        "duration_ms": 5009,
+        "usage": {
+          "input_tokens": 749,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 654,
+          "reasoning_tokens": 452
+        },
+        "cost_usd": 0.00350475,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "copywriter@2",
+        "duration_ms": 3157,
+        "usage": {
+          "input_tokens": 807,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 417,
+          "reasoning_tokens": 313
+        },
+        "cost_usd": 0.00248175,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "review@2",
+        "duration_ms": 2487,
+        "usage": {
+          "input_tokens": 733,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 304,
+          "reasoning_tokens": 252
+        },
+        "cost_usd": 0.00191775,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 2,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "copywriter@2",
+        "duration_ms": 3112,
+        "usage": {
+          "input_tokens": 951,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 385,
+          "reasoning_tokens": 286
+        },
+        "cost_usd": 0.00244575,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 2,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "review@2",
+        "duration_ms": 2171,
+        "usage": {
+          "input_tokens": 728,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 188,
+          "reasoning_tokens": 168
+        },
+        "cost_usd": 0.001392,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"GitLab\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"GitLab\" about.gitlab.com",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"GitLab\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 19674
+  }
+}

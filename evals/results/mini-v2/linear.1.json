@@ -1,0 +1,230 @@
+{
+  "case_id": "linear",
+  "config": "mini",
+  "models": "Research gpt-5.4-mini/low, Strategy gpt-5.4-mini/medium, Writing gpt-5.4-mini/medium, Review gpt-5.4-mini/low",
+  "repeat": 1,
+  "snapshot_recorded_at": "2026-10-09T12:05:06+00:00",
+  "checks": {
+    "label": "draft",
+    "outcome_ok": true,
+    "facts": 5,
+    "dropped_facts": 1,
+    "attempts": 1,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 75,
+    "subject_words": 4,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "f71b58bc78994b79b6c9fe3d514b35a2",
+    "brief": {
+      "company": "Linear",
+      "website": "linear.app",
+      "offer": "Recruiting and scheduling customer interview participants for product teams",
+      "recipient": "Head of Product",
+      "language": "English",
+      "tone": "Direct"
+    },
+    "status": "ready",
+    "reason": null,
+    "message": "The draft passed review.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "Linear says it powers more than 40,000 product teams, from startups to enterprises.",
+          "excerpt": "Linear powers over40,000 product teams. From ambitious startups to major enterprises.",
+          "source_url": "https://linear.app",
+          "source_title": "Linear – The system for product development"
+        },
+        {
+          "id": 2,
+          "claim": "Linear is positioned as AI-native, with workflows designed for humans and agents.",
+          "excerpt": "Designed for workflows shared by humans and agents. From drafting PRDs to pushing PRs.",
+          "source_url": "https://linear.app",
+          "source_title": "Linear – The system for product development"
+        },
+        {
+          "id": 3,
+          "claim": "Linear offers desktop, web, and mobile apps across major platforms.",
+          "excerpt": "Available for web,  macOS, Windows, iOS, and Android.",
+          "source_url": "https://linear.app/download",
+          "source_title": "Download Linear"
+        },
+        {
+          "id": 4,
+          "claim": "Linear Mobile is meant as a companion to the desktop app for when users are away from their keyboard.",
+          "excerpt": "Linear Mobile is a companion to the Linear desktop app, designed for on-demand workflows when you are away from your keyboard:",
+          "source_url": "https://apps.apple.com/us/app/linear-mobile/id1645587184",
+          "source_title": "‎Linear Mobile App - App Store"
+        },
+        {
+          "id": 5,
+          "claim": "Linear was founded in 2019 and is a fully remote company.",
+          "excerpt": "Founded in 2019, Linear has become the tool of choice for thousands of high-impact companies to build their products better. Linear was set up as a fully remote company from the start.",
+          "source_url": "https://www.linkedin.com/company/linearapp",
+          "source_title": "Linear"
+        }
+      ],
+      "website_owner": "Linear",
+      "website_matches": true,
+      "website_note": "The results identify linear.app as Linear’s official site and describe the company’s product directly on that domain.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 1,
+      "dropped": [
+        {
+          "claim": "Linear is a product development tool built for planning and building products.",
+          "source_id": 1,
+          "excerpt": "Linear – The system for product development (official site)"
+        }
+      ]
+    },
+    "strategy": {
+      "observation": "Linear says it powers more than 40,000 product teams, so your customer base likely includes a large pool of the exact people product teams interview when validating workflows and buying decisions.",
+      "fact_ids": [
+        1
+      ],
+      "offer_link": "If your team needs to talk to current product-team users, a service that recruits and schedules interview participants could reduce the time spent finding the right matches and coordinating sessions.",
+      "hypotheses": [
+        "I’m assuming your product organization runs regular customer interviews to inform roadmap decisions.",
+        "I’m assuming it can still take meaningful effort to identify and schedule the right customers, even with a large user base.",
+        "I’m assuming you would value outside help only if it saves your team time without lowering participant quality."
+      ],
+      "angle": "Linear already has a built-in audience of 40,000+ product teams, which could make customer interview recruiting much easier if your team needs it.",
+      "offer_fit": "weak",
+      "fit_reason": "The fit is plausible because Linear’s customers are exactly the kind of product users a product team would interview, and the scale of that base suggests enough potential participants. But there’s no fact showing a current research bottleneck or active hiring/research push, so the case for outsourcing recruiting is still a stretch."
+    },
+    "draft": {
+      "subject": "Interview recruiting for Linear",
+      "body": "Hi,\n\nLinear’s 40,000+ product teams look like a strong pool for customer interviews.\n\nI help product teams recruit and schedule the right participants for interviews. If your team runs regular discovery or roadmap conversations, my guess is the time sink is still finding the right users and getting them on the calendar.\n\nDo you already have a standard process for turning that user base into interview participants, or is it still handled case by case?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Interview recruiting for Linear",
+          "body": "Hi,\n\nLinear’s 40,000+ product teams look like a strong pool for customer interviews.\n\nI help product teams recruit and schedule the right participants for interviews. If your team runs regular discovery or roadmap conversations, my guess is the time sink is still finding the right users and getting them on the calendar.\n\nDo you already have a standard process for turning that user base into interview participants, or is it still handled case by case?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@2",
+      "strategy": "strategy@2",
+      "copywriter": "copywriter@2",
+      "review": "review@2"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "research@2",
+        "duration_ms": 3080,
+        "usage": {
+          "input_tokens": 3766,
+          "cached_input_tokens": 3328,
+          "cache_write_tokens": null,
+          "output_tokens": 365,
+          "reasoning_tokens": 27
+        },
+        "cost_usd": 0.0022206,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "strategy@2",
+        "duration_ms": 7269,
+        "usage": {
+          "input_tokens": 607,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 1084,
+          "reasoning_tokens": 819
+        },
+        "cost_usd": 0.00533325,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "copywriter@2",
+        "duration_ms": 3604,
+        "usage": {
+          "input_tokens": 696,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 554,
+          "reasoning_tokens": 438
+        },
+        "cost_usd": 0.003015,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "review@2",
+        "duration_ms": 1747,
+        "usage": {
+          "input_tokens": 602,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 110,
+          "reasoning_tokens": 90
+        },
+        "cost_usd": 0.0009465,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Linear\" company overview products customers",
+        "topic": "general",
+        "results": 2,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Linear\" linear.app",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Linear\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 15793
+  }
+}

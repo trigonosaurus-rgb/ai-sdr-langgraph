@@ -1,0 +1,226 @@
+{
+  "case_id": "stripe",
+  "config": "mini",
+  "models": "Research gpt-5.4-mini/low, Strategy gpt-5.4-mini/medium, Writing gpt-5.4-mini/medium, Review gpt-5.4-mini/low",
+  "repeat": 2,
+  "snapshot_recorded_at": "2026-10-09T12:05:11+00:00",
+  "checks": {
+    "label": "draft",
+    "outcome_ok": true,
+    "facts": 4,
+    "dropped_facts": 1,
+    "attempts": 1,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 73,
+    "subject_words": 5,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "24558caf31d14794a6a25c684431728c",
+    "brief": {
+      "company": "Stripe",
+      "website": "stripe.com",
+      "offer": "Localizing developer documentation into Japanese, German and Brazilian Portuguese",
+      "recipient": "Head of Documentation",
+      "language": "English",
+      "tone": "Warm"
+    },
+    "status": "ready",
+    "reason": null,
+    "message": "The draft passed review.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "Stripe lets businesses create, edit, archive, and delete products and prices.",
+          "excerpt": "Create, edit, archive, and delete products and prices.",
+          "source_url": "https://docs.stripe.com/products-prices/overview",
+          "source_title": "Overview | Stripe Documentation"
+        },
+        {
+          "id": 2,
+          "claim": "Stripe supports multiple pricing models, including flat rate, seat-based billing, and usage-based billing.",
+          "excerpt": "Flat rate (good-better-best)\n\nOffer your customers a choice of escalating options, like basic, starter, and Enterprise service levels\")\n\nLet your customers pick how many seats or licenses they'll use and bill them for each.\n\nCharge your customers based on how much of your service they use during the billing period.",
+          "source_url": "https://docs.stripe.com/products-prices/overview",
+          "source_title": "Overview | Stripe Documentation"
+        },
+        {
+          "id": 3,
+          "claim": "Stripe says it can help businesses process payments outside iOS and Android app stores.",
+          "excerpt": "New tools to process payments outside app stores.New regulations mean new opportunities. Read how Stripe can help you process payments outside of the iOS and Android app stores, giving you more control and helping grow your revenue.",
+          "source_url": "https://stripe.com",
+          "source_title": "Stripe | Financial Infrastructure to Grow Your Revenue"
+        },
+        {
+          "id": 4,
+          "claim": "Stripe highlights a partnership with Crypto.com to enable crypto payments and let customers pay with their crypto balance at checkout.",
+          "excerpt": "Crypto.com partners with Stripe to enable better crypto payments.\n\nLearn how the partnership can help you tap into a new global customer base by letting customers pay with their crypto balance directly at checkout.",
+          "source_url": "https://stripe.com",
+          "source_title": "Stripe | Financial Infrastructure to Grow Your Revenue"
+        }
+      ],
+      "website_owner": "Stripe",
+      "website_matches": true,
+      "website_note": "The results show stripe.com and Stripe Documentation as official Stripe pages, and the homepage is branded Stripe.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 1,
+      "dropped": [
+        {
+          "claim": "Stripe has guidance for migrating customer and payment data to Stripe, including a requirement for both customer records and associated payment data.",
+          "source_id": 5,
+          "excerpt": "Successfully migrate your customers and their payments data to Stripe.\n\nMigrating your customer and payments data to Stripe is a multi-step process.\n\nFor each type of data migration, we can only assist you if your request includes both customer records and the associated payment data."
+        }
+      ]
+    },
+    "strategy": {
+      "observation": "Stripe’s documentation has to explain a wide set of developer-facing money flows and configuration options, including product and price management, flat-rate/seat-based/usage-based billing, off-app-store payments, and crypto checkout.",
+      "fact_ids": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "offer_link": "If your docs need to make those workflows easy to implement, localizing them into Japanese, German, and Brazilian Portuguese could reduce friction for developers in major non-English markets who are trying to integrate Stripe’s more complex billing and payment features.",
+      "hypotheses": [
+        "You may be trying to increase self-serve adoption of Stripe’s developer products outside English-speaking markets.",
+        "Some of your highest-value developer audiences may prefer Japanese, German, or Brazilian Portuguese documentation.",
+        "Localization could help reduce support burden by making advanced implementation details easier to understand without an engineer translating them manually."
+      ],
+      "angle": "Stripe’s docs have to explain a lot of complex payment and billing workflows, from usage-based pricing to crypto checkout.",
+      "offer_fit": "good",
+      "fit_reason": "This is a plausible fit because Stripe’s documentation covers technical, globally relevant payment and billing features that developers may need to implement in multiple languages; localization could reasonably help adoption and comprehension, even though the facts do not confirm a specific language-market expansion initiative."
+    },
+    "draft": {
+      "subject": "Billing docs in more languages",
+      "body": "Stripe’s docs have to explain a lot of developer-facing money flows, from product and price management to usage-based billing.\n\nI localize developer documentation into Japanese, German, and Brazilian Portuguese. For teams like yours, that can make the more technical implementation pages easier to follow without someone translating edge cases by hand.\n\nAre those three languages already on your roadmap for the billing and pricing docs, or are they still handled in English only?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Billing docs in more languages",
+          "body": "Stripe’s docs have to explain a lot of developer-facing money flows, from product and price management to usage-based billing.\n\nI localize developer documentation into Japanese, German, and Brazilian Portuguese. For teams like yours, that can make the more technical implementation pages easier to follow without someone translating edge cases by hand.\n\nAre those three languages already on your roadmap for the billing and pricing docs, or are they still handled in English only?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@2",
+      "strategy": "strategy@2",
+      "copywriter": "copywriter@2",
+      "review": "review@2"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "research@2",
+        "duration_ms": 3260,
+        "usage": {
+          "input_tokens": 4828,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 473,
+          "reasoning_tokens": 50
+        },
+        "cost_usd": 0.0057495,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "strategy@2",
+        "duration_ms": 5238,
+        "usage": {
+          "input_tokens": 594,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 736,
+          "reasoning_tokens": 468
+        },
+        "cost_usd": 0.0037575,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "copywriter@2",
+        "duration_ms": 4276,
+        "usage": {
+          "input_tokens": 696,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 444,
+          "reasoning_tokens": 330
+        },
+        "cost_usd": 0.00252,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "review@2",
+        "duration_ms": 2778,
+        "usage": {
+          "input_tokens": 588,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 350,
+          "reasoning_tokens": 330
+        },
+        "cost_usd": 0.002016,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Stripe\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Stripe\" stripe.com",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Stripe\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 15633
+  }
+}

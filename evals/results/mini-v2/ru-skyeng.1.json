@@ -1,0 +1,232 @@
+{
+  "case_id": "ru-skyeng",
+  "config": "mini",
+  "models": "Research gpt-5.4-mini/low, Strategy gpt-5.4-mini/medium, Writing gpt-5.4-mini/medium, Review gpt-5.4-mini/low",
+  "repeat": 1,
+  "snapshot_recorded_at": "2026-10-09T12:07:24+00:00",
+  "checks": {
+    "label": "draft",
+    "outcome_ok": true,
+    "facts": 5,
+    "dropped_facts": 1,
+    "attempts": 1,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 75,
+    "subject_words": 4,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "60c871c7e9374bb1a952179b38a67ecc",
+    "brief": {
+      "company": "Skyeng",
+      "website": "skyeng.ru",
+      "offer": "Озвучка учебных материалов профессиональными дикторами",
+      "recipient": "Руководитель контента",
+      "language": "Russian",
+      "tone": "Warm"
+    },
+    "status": "ready",
+    "reason": null,
+    "message": "The draft passed review.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "Skyeng says it provides a full learning ecosystem, not just lessons, including a teacher, a language coach, trainers, conversation clubs, and a chat bot for speaking practice.",
+          "excerpt": "Вы платите за один курс, а получаете целую экосистему продуктов: занятия с преподавателем и языковым тренером, тренажёры, разговорные клубы и чат‑бот для устной практики",
+          "source_url": "https://wwwskyeng.ru",
+          "source_title": "Школа иностранных языков онлайн - изучение иностранных языков"
+        },
+        {
+          "id": 2,
+          "claim": "Skyeng says its model uses AI to make learning more accessible, faster, and more effective for both students and teachers.",
+          "excerpt": "Мы не просто внедряем новые технологии, а делаем обучение доступнее, быстрее и эффективнее — как для ученика, так и для преподавателя",
+          "source_url": "https://skyeng.ru",
+          "source_title": "Школа иностранных языков онлайн - изучение иностранных языков"
+        },
+        {
+          "id": 3,
+          "claim": "Skyeng lets students schedule lessons flexibly, including mornings, lunchtime, evenings, or even midnight, and pause progress if needed.",
+          "excerpt": "Обучение можно запланировать в любое время, когда это удобно: утром, в обед, вечером после работы и даже в полночь. ... Если захотите отдохнуть, в личном кабинете можно заморозить прогресс",
+          "source_url": "https://skyeng.ru",
+          "source_title": "Школа иностранных языков онлайн - изучение иностранных языков"
+        },
+        {
+          "id": 4,
+          "claim": "Skyeng says individual lessons and group conversation clubs last 50 minutes, while some English courses include 15-minute speaking meetings with native-speaker teachers.",
+          "excerpt": "50 минут длятся индивидуальные занятия с преподавателем и в групповых разговорных клубах.   На некоторых курсах английского есть 15‑минутные разговорные встречи с преподавателями — носителями языка.",
+          "source_url": "https://skyeng.ru",
+          "source_title": "Школа иностранных языков онлайн - изучение иностранных языков"
+        },
+        {
+          "id": 5,
+          "claim": "Skyeng says it has more than 300,000 learners and is one of the leading players in online education across Russia and the CIS.",
+          "excerpt": "Skyeng is one of the leading players in online education across Russia and the CIS\\\n\n\\ According to Smart Ranking, 2025\n\nglobally approved\n\nUnique educational model\n\nBuilt to international standards, focused on practical language skills\n\nMore than  \n300,000 learners",
+          "source_url": "https://job.skyeng.ru/talks",
+          "source_title": "Remote work as an English teacher in Skyeng Talks"
+        }
+      ],
+      "website_owner": "Skyeng",
+      "website_matches": true,
+      "website_note": "The results tie skyeng.ru to Skyeng through its own official site, app pages, and Skyeng-branded company pages.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 1,
+      "dropped": [
+        {
+          "claim": "Skyeng is an online foreign-language school that offers English learning with teachers and self-study.",
+          "source_id": 6,
+          "excerpt": "Школа иностранных языков онлайн - изучение иностранных языков"
+        }
+      ]
+    },
+    "strategy": {
+      "observation": "Skyeng позиционирует обучение как многоканальный и доступный в любое время формат: у него есть целая экосистема вокруг уроков, а занятия можно планировать утром, днем, вечером или даже ночью.",
+      "fact_ids": [
+        1,
+        3
+      ],
+      "offer_link": "Профессиональная озвучка учебных материалов дала бы Skyeng еще один удобный формат потребления контента — аудио для самоподготовки, повторения и занятий на ходу, что хорошо ложится на модель обучения без привязки к конкретному времени.",
+      "hypotheses": [
+        "Возможно, у Skyeng есть self-study материалы, которые можно усилить аудиоверсией.",
+        "Возможно, контент-команде важно сделать часть учебных материалов удобной для прослушивания в дороге или вечером.",
+        "Возможно, сейчас часть материалов записывается без единообразного дикторского голоса, и это мешает консистентности.",
+        "Возможно, для некоторых курсов полезны не только текст и видео, но и профессионально озвученные объяснения, примеры и диалоги."
+      ],
+      "angle": "У Skyeng обучение уже завязано на формат «в любое время суток», поэтому озвучка материалов профессиональными дикторами может добавить удобный аудиоканал для уроков и самоподготовки.",
+      "offer_fit": "good",
+      "fit_reason": "Для языковой платформы с гибким, мультиформатным обучением профессиональная озвучка учебных материалов выглядит естественным способом усилить слушательский формат и поддержать контент для самоподготовки. При этом фактами не подтверждено, что у Skyeng уже есть конкретный дефицит в аудиоконтенте, поэтому это скорее хороший, но не безусловно очевидный fit."
+    },
+    "draft": {
+      "subject": "Аудио для материалов Skyeng",
+      "body": "Здравствуйте.\n\nУ Skyeng обучение уже выглядит как формат «в любое время суток»: уроки можно ставить утром, днем, вечером и даже ночью, а вокруг них есть целая экосистема. Если у вас есть материалы для самоподготовки, профессиональная озвучка могла бы добавить к ним удобный аудиоканал — для повторения в дороге или между делами.\n\nЯ занимаюсь озвучкой учебных материалов профессиональными дикторами. Подскажете, есть ли у вас сейчас модуль или курс, который было бы логично попробовать перевести в аудио?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Аудио для материалов Skyeng",
+          "body": "Здравствуйте.\n\nУ Skyeng обучение уже выглядит как формат «в любое время суток»: уроки можно ставить утром, днем, вечером и даже ночью, а вокруг них есть целая экосистема. Если у вас есть материалы для самоподготовки, профессиональная озвучка могла бы добавить к ним удобный аудиоканал — для повторения в дороге или между делами.\n\nЯ занимаюсь озвучкой учебных материалов профессиональными дикторами. Подскажете, есть ли у вас сейчас модуль или курс, который было бы логично попробовать перевести в аудио?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@2",
+      "strategy": "strategy@2",
+      "copywriter": "copywriter@2",
+      "review": "review@2"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "research@2",
+        "duration_ms": 3446,
+        "usage": {
+          "input_tokens": 4048,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 581,
+          "reasoning_tokens": 43
+        },
+        "cost_usd": 0.0056505,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "strategy@2",
+        "duration_ms": 7828,
+        "usage": {
+          "input_tokens": 714,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 1408,
+          "reasoning_tokens": 1018
+        },
+        "cost_usd": 0.0068715,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "copywriter@2",
+        "duration_ms": 3500,
+        "usage": {
+          "input_tokens": 893,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 565,
+          "reasoning_tokens": 415
+        },
+        "cost_usd": 0.00321225,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "review@2",
+        "duration_ms": 1425,
+        "usage": {
+          "input_tokens": 744,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 150,
+          "reasoning_tokens": 130
+        },
+        "cost_usd": 0.001233,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Skyeng\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Skyeng\" skyeng.ru",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Skyeng\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 16213
+  }
+}
