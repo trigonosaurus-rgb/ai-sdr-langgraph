@@ -1,4 +1,5 @@
 """HTTP API: start a run, follow its events over SSE, cancel it, restore it after a reload.
+With SDR_STATIC_DIR set, the same server also serves the built frontend.
 
 uvicorn server.app:app --port 8000
 """
@@ -26,6 +27,7 @@ from core.schemas import Brief
 from core.search import TavilySearch
 from server.runs import BudgetStatus, MonthlyBudget, RunLimitError, RunManager, VisitorQuota, VisitorStatus
 from server.store import TERMINAL_EVENTS, LLMCallCost, RunRecord, SearchCallCost, Store, UsageTotals
+from server.web import FrontendFiles, SecurityHeaders
 
 WAKE_TIMEOUT_S = 15  # re-check the store even without a wake-up
 PERIODS = {"24h": timedelta(hours=24), "30d": timedelta(days=30)}
@@ -86,7 +88,8 @@ class PeriodUsage(ApiModel):
 def default_manager() -> RunManager:
     """Production wiring from the environment; fails fast if a provider key is missing."""
     load_dotenv()
-    for key in ("OPENAI_API_KEY", "TAVILY_API_KEY"):
+    # Without a secret salt, a hashed IPv4 address can be recovered by trying all of them.
+    for key in ("OPENAI_API_KEY", "TAVILY_API_KEY", "SDR_CLIENT_SALT"):
         if not os.getenv(key):
             raise RuntimeError(f"{key} is not set")
     settings = Settings.from_env()
@@ -123,7 +126,9 @@ def is_developer(key: str | None) -> bool:
     return bool(expected and key) and hmac.compare_digest(key.encode(), expected.encode())
 
 
-def create_app(make_manager: Callable[[], RunManager] = default_manager) -> FastAPI:
+def create_app(make_manager: Callable[[], RunManager] = default_manager, static_dir: str | None = None) -> FastAPI:
+    """The API under /api; with `static_dir`, the built frontend at / (mounted last, so /api wins)."""
+
     @asynccontextmanager
     async def lifespan(app: FastAPI) -> AsyncIterator[None]:
         manager = make_manager()
@@ -133,6 +138,7 @@ def create_app(make_manager: Callable[[], RunManager] = default_manager) -> Fast
         await asyncio.to_thread(manager.shutdown)
 
     app = FastAPI(title="AI SDR", lifespan=lifespan)
+    app.add_middleware(SecurityHeaders)
 
     def get_manager(request: Request) -> RunManager:
         return request.app.state.manager
@@ -246,7 +252,9 @@ def create_app(make_manager: Callable[[], RunManager] = default_manager) -> Fast
                 except TimeoutError:
                     pass
 
+    if static_dir:
+        app.mount("/", FrontendFiles(directory=static_dir, html=True), name="frontend")
     return app
 
 
-app = create_app()
+app = create_app(static_dir=os.getenv("SDR_STATIC_DIR"))

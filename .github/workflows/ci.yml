@@ -1,0 +1,93 @@
+# Every check runs on fakes: no provider keys, no paid calls.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  python:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.14'
+          cache: pip
+          cache-dependency-path: requirements-dev.txt
+      - run: pip install -r requirements-dev.txt
+      - run: python -m pytest
+
+  frontend:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - run: npm ci
+      - run: npm run format:check
+      - run: npm test
+      - run: npm run build # tsc -b, then vite build
+
+  e2e:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.14'
+          cache: pip
+          cache-dependency-path: requirements-dev.txt
+      # playwright.config.ts starts the fake API with the project's .venv
+      - run: |
+          python -m venv .venv
+          .venv/bin/pip install -r requirements-dev.txt
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - run: npm ci
+        working-directory: frontend
+      - run: npx playwright install --with-deps msedge
+        working-directory: frontend
+      - run: npm run test:browser
+        working-directory: frontend
+      - if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-results
+          path: frontend/test-results/
+          retention-days: 7
+
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - run: docker build -t ai-sdr:ci .
+      # Starts with placeholder keys (no run is started), then checks the API and the page.
+      - name: Smoke test
+        run: |
+          docker run -d --name sdr -p 8000:8000 \
+            -e OPENAI_API_KEY=placeholder -e TAVILY_API_KEY=placeholder -e SDR_CLIENT_SALT=ci \
+            ai-sdr:ci
+          for i in $(seq 30); do curl -fs http://127.0.0.1:8000/api/health && break; sleep 1; done
+          curl -fs http://127.0.0.1:8000/api/status
+          curl -fs http://127.0.0.1:8000/ | grep -q '<div id="root">'
+          curl -fsI http://127.0.0.1:8000/ | grep -qi '^content-security-policy:'
+      - if: failure()
+        run: docker logs sdr

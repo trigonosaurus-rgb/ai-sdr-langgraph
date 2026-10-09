@@ -13,6 +13,8 @@
 - `core/cli.py` — ручной запуск из терминала.
 - `evals/` — оценка качества: случаи `cases.toml` (часть — holdout), снимки поиска `snapshots/`, прогон с конфигурацией моделей (`configs.py`), автопроверки, оценки `grades/<результаты>.<claude|human>.json`, слепая выборка для человека (`blind.py`), отчёт. Описание и шкала — [evals/README.md](evals/README.md). Итоги этапа 5 — в README и ROADMAP.
 - `server/app.py` — FastAPI: `POST /api/runs`, SSE `GET /api/runs/{id}/events` (повтор по `after` / `Last-Event-ID`), `POST /api/runs/{id}/cancel`, снимок `GET /api/runs/{id}`. `GET /api/runs/{id}/usage`, `GET /api/usage?period=24h|30d`, `GET /api/status` (пауза сервиса, режим разработчика и квота посетителя). Разработчик без лимитов — по `SDR_DEVELOPER_KEY` в заголовке `X-Developer-Key`. `server/runs.py` — граф в пуле потоков, отмена, пробуждение SSE, квота посетителя (`SDR_RUNS_PER_DAY` / `SDR_RUNS_PER_MONTH`) и месячный бюджет сервиса (`SDR_MONTHLY_MODEL_USD`, `SDR_MONTHLY_SEARCH_CREDITS`); `server/store.py` — SQLite (`runs`, `events`, `llm_calls`, `search_calls`; вызовы пишутся сразу по завершении), агрегаты usage, миграции через `PRAGMA user_version`, база по умолчанию `data/sdr.sqlite3` (`SDR_DB_PATH`).
+- `server/web.py` — отдача собранного фронтенда (`SDR_STATIC_DIR`; `assets/` кэшируются навсегда, остальное `no-cache`) и заголовки безопасности (CSP `'self'` без inline-скриптов — тема в `frontend/public/theme.js`). Без `SDR_CLIENT_SALT` API не стартует.
+- `Dockerfile` — один образ: сборка фронтенда + FastAPI, один воркер uvicorn, база на томе `/data`, порт из `PORT`, доверенный прокси — `FORWARDED_ALLOW_IPS`. Переменные — [.env.example](.env.example). `.github/workflows/ci.yml` — pytest, Vitest, сборка, e2e, smoke-тест образа; без ключей.
 - `tests/` — pytest на фейковых LLM и поиске (`tests/fakes.py`), без сети; `tests/test_api.py` — API на фейковом графе.
 - `frontend/` — React 19 + TypeScript + Vite, подключён к API через прокси `/api`. Данные в Examples пока вымышленные (Northstar). Детали — [frontend/README.md](frontend/README.md), контракт API — [frontend/INTEGRATION.md](frontend/INTEGRATION.md).
 - `frontend/src/run.ts` — контракт событий и reducer. Меняя событие, менять и `core/events.py`. `src/api.ts` — запросы, валидация брифа и событий, SSE; `src/useRun.ts` — запуск, отмена, восстановление после перезагрузки.
@@ -38,6 +40,10 @@ npm.cmd run format:check
 .venv\Scripts\python.exe -m evals.snapshot   # ПЛАТНО: кредиты Tavily для новых случаев
 .venv\Scripts\python.exe -m evals.run --config mini   # ПЛАТНО: OpenAI на снимках поиска
 .venv\Scripts\python.exe -m evals.report           # таблица по результатам, без сети
+
+# Docker (из корня): образ с фронтендом; Generate в контейнере — тоже ПЛАТНЫЕ вызовы
+docker build -t ai-sdr:local .
+docker run -d --name sdr-local -p 8080:8000 --env-file .env -v sdr-local-data:/data ai-sdr:local
 ```
 
 ## Зависимости Python

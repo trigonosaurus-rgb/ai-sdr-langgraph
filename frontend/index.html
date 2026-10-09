@@ -4,25 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#f6f6f3" />
-    <script>
-      // Apply the preference before the stylesheet to avoid a light flash.
-      ;(() => {
-        let theme = 'system'
-        try {
-          theme = localStorage.getItem('ai-sdr.theme') || 'system'
-        } catch {}
-        const resolved =
-          theme === 'light' || theme === 'dark'
-            ? theme
-            : matchMedia('(prefers-color-scheme: dark)').matches
-              ? 'dark'
-              : 'light'
-        document.documentElement.dataset.theme = resolved
-        document.documentElement.style.colorScheme = resolved
-        document.querySelector('meta[name="theme-color"]').content =
-          resolved === 'dark' ? '#191919' : '#f6f6f3'
-      })()
-    </script>
+    <script src="/theme.js"></script>
     <meta
       name="description"
       content="AI SDR researches a company and drafts a personalised cold email for you to review."

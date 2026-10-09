@@ -1,0 +1,17 @@
+# Only what the Dockerfile copies; never secrets or local data.
+*
+!requirements.txt
+!core/
+!agents/
+!prompts/
+!server/
+!frontend/
+frontend/node_modules/
+frontend/dist/
+frontend/test-results/
+frontend/playwright-report/
+frontend/.recordings/
+frontend/.env*
+frontend/*.tsbuildinfo
+**/__pycache__/
+**/*.pyc

@@ -26,22 +26,7 @@ python -m venv .venv
 
 `requirements.txt` and `requirements-dev.txt` are pinned lock files compiled with pip-tools from `requirements.in` and `requirements-dev.in`.
 
-Create `.env` in the repository root:
-
-```env
-OPENAI_API_KEY=...
-TAVILY_API_KEY=...
-OPENAI_MODEL_NAME=gpt-5.4-mini   # optional
-SDR_MAX_REWRITES=2               # optional
-SDR_DB_PATH=data/sdr.sqlite3     # optional, API storage
-SDR_RUNS_PER_DAY=3               # optional, per client address, rolling 24 hours
-SDR_RUNS_PER_MONTH=10            # optional, per client address, rolling 30 days
-SDR_MONTHLY_MODEL_USD=5          # optional, model spending per calendar month (UTC)
-SDR_MONTHLY_SEARCH_CREDITS=750   # optional, Tavily credits per calendar month (UTC)
-SDR_MAX_CONCURRENT_RUNS=4        # optional, for the whole server
-SDR_CLIENT_SALT=...              # optional, salt for hashed client addresses
-SDR_DEVELOPER_KEY=...            # optional, open /#developer=<key> once for runs without limits
-```
+Copy [`.env.example`](.env.example) to `.env` in the repository root and fill in the OpenAI and Tavily keys and a random `SDR_CLIENT_SALT` (the API refuses to start without it: an unsalted hash of an IPv4 address can be reversed by trying them all). Everything else is optional; the file lists the defaults.
 
 ## Run
 
@@ -63,11 +48,23 @@ From the terminal, also paid:
 
 Progress goes to stderr, the draft to stdout, and the full result with facts, attempts, prompt versions and usage to `runs/<run_id>.json`.
 
+In Docker: one image serves the API under `/api` and the built frontend at `/`. The database lives on the `/data` volume; configuration comes from the environment, the `.env` file is never copied into the image.
+
+```powershell
+docker build -t ai-sdr .
+docker run -p 8000:8000 --env-file .env -v ai-sdr-data:/data ai-sdr   # Generate is paid here too
+```
+
+Behind a reverse proxy, set `FORWARDED_ALLOW_IPS` to the proxy's address, or every visitor looks like the proxy and shares one quota. Run a single instance: runs in progress live in the server's memory.
+
 ## Tests
 
 ```powershell
 .venv\Scripts\python.exe -m pytest     # fake LLM and search, no network
+cd frontend; npm.cmd test; npm.cmd run test:browser   # Vitest; Playwright on a fake API
 ```
+
+GitHub Actions runs all of them, the build and a smoke test of the Docker image on every push, without provider keys.
 
 ## Quality and model choice
 
