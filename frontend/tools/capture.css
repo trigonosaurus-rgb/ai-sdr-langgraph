@@ -32,8 +32,6 @@ body {
 .capture-frame .email-editor textarea,
 .capture-frame .streaming-draft {
   min-height: 150px;
-  height: 150px;
-  resize: none;
 }
 .capture-frame .activity-feed details {
   display: none;
