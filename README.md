@@ -23,17 +23,18 @@ Generic AI outreach invents things: a funding round that did not happen, a produ
 ## How it works
 
 ```mermaid
-flowchart LR
-  UI["Browser<br/>React + TypeScript"] -- "POST /api/runs" --> API["FastAPI"]
-  API -- "SSE: stages, facts,<br/>email as it is written" --> UI
-  API --> DB[("SQLite<br/>runs, events, paid calls")]
-  subgraph G["LangGraph run (worker thread)"]
+flowchart TD
+  UI["Browser: React + TypeScript"] -->|"brief"| API["FastAPI"]
+  API -->|"SSE events"| UI
+  API <--> DB[("SQLite: runs, events, paid calls")]
+  API --> G
+  subgraph G["LangGraph run"]
+    direction LR
     R["Research"] --> S["Strategy"] --> W["Writing"] --> V["Review"]
-    V -- "issues, up to 2 rewrites" --> W
+    V -->|"rewrite"| W
   end
-  API --> R
-  R -- "3 searches" --> T[("Tavily")]
-  G -- "structured output" --> O[("OpenAI<br/>gpt-5.4-mini")]
+  R --> T[("Tavily search")]
+  G --> O[("OpenAI gpt-5.4-mini")]
 ```
 
 1. **Research** runs three Tavily searches (the official site, the open web, recent news), names the owner of the website, and keeps only quoted facts.
