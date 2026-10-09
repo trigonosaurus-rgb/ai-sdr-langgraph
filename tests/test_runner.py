@@ -3,6 +3,7 @@
 import threading
 
 from core.llm import LLMError
+from core.prompts import load_prompt
 from core.runner import run_sdr
 from core.schemas import Brief, ExtractedFact
 from core.search import SearchError
@@ -39,18 +40,9 @@ def test_ready_run_has_sourced_facts_strategy_and_reviewed_draft(brief, make_ctx
         "https://news.example.com/acme-warsaw",
     ]
     assert result.strategy.fact_ids == [2]  # unknown fact id 99 removed
-    assert result.prompt_versions == {
-        "research": "research@1",
-        "strategy": "strategy@1",
-        "copywriter": "copywriter@1",
-        "review": "review@1",
-    }
-    assert [c.prompt_version for c in result.llm_calls] == [
-        "research@1",
-        "strategy@1",
-        "copywriter@1",
-        "review@1",
-    ]
+    tags = [load_prompt(name).tag for name in ("research", "strategy", "copywriter", "review")]
+    assert list(result.prompt_versions.values()) == tags
+    assert [c.prompt_version for c in result.llm_calls] == tags
     assert len(result.search_calls) == 3
     assert types(events)[0] == "started" and types(events)[-1] == "completed"
     assert events[-1]["outcome"] == "ready"

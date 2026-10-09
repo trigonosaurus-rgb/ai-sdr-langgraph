@@ -23,7 +23,9 @@ def make_reviewer(ctx: RunContext):
             current.attempt,
             prompt,
             Review,
-            prompt.render("system", language=brief.language, tone_guide=TONE_GUIDES[brief.tone]),
+            prompt.render(
+                "system", company=brief.company, language=brief.language, tone_guide=TONE_GUIDES[brief.tone]
+            ),
             prompt.render(
                 "user",
                 company=brief.company,
