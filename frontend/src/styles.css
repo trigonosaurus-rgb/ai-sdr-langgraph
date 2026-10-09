@@ -686,11 +686,8 @@ select {
 }
 .email-editor,
 .fact,
-.strategy-content > .empty-copy {
+.approach {
   animation: rise 320ms ease-out both;
-}
-.strategy-content > .empty-copy + .empty-copy {
-  margin-top: 12px;
 }
 .editor-actions {
   animation: rise 320ms 120ms ease-out both;
@@ -805,6 +802,8 @@ select {
   padding-top: 0;
 }
 .fact-claim {
+  display: flex;
+  gap: var(--space-2);
   margin: 0;
   font-size: var(--text-md);
   font-weight: 550;
@@ -840,6 +839,137 @@ a.fact-source .fact-path {
 a.fact-source:hover span:first-child {
   text-decoration: underline;
   text-underline-offset: 3px;
+}
+.fact-number {
+  flex: none;
+  min-width: 20px;
+  margin-top: 2px;
+  padding: 0 5px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  color: var(--faint);
+  font-size: var(--text-xs);
+  font-weight: 550;
+  line-height: 18px;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+/* A fact opened from the approach is marked until another tab is chosen. */
+.fact.focused {
+  margin-inline: calc(-1 * var(--space-3));
+  padding-inline: var(--space-3);
+  border-radius: 10px;
+  background: var(--hover);
+}
+.fact:focus {
+  outline: none;
+}
+.approach {
+  display: grid;
+  gap: var(--space-6);
+}
+.fit {
+  display: grid;
+  gap: var(--space-1);
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--subtle);
+}
+.fit-good {
+  --fit-color: var(--accent);
+}
+.fit-weak {
+  --fit-color: var(--warning);
+}
+.fit-poor {
+  --fit-color: var(--danger);
+}
+.fit-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--fit-color);
+  font-size: var(--text-md);
+  font-weight: 600;
+}
+.fit-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+}
+.fit p,
+.approach-part > p {
+  margin: 0;
+  line-height: 1.6;
+}
+.fit p {
+  color: var(--muted);
+  font-size: var(--text-sm);
+}
+.approach-part {
+  display: grid;
+  gap: var(--space-2);
+}
+.approach-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-1) var(--space-3);
+}
+.approach h3 {
+  margin: 0;
+  color: var(--faint);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.fact-refs {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-1);
+  color: var(--faint);
+  font-size: var(--text-xs);
+}
+.fact-refs button {
+  min-width: 24px;
+  height: 24px;
+  padding: 0 6px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: none;
+  color: var(--accent);
+  font: inherit;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  cursor: pointer;
+}
+.fact-refs button:hover {
+  border-color: var(--accent);
+  background: var(--hover);
+}
+.hypotheses {
+  display: grid;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.hypotheses li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  color: var(--muted);
+  line-height: 1.6;
+}
+.hypotheses svg {
+  flex: none;
+  margin-top: 4px;
+  color: var(--warning);
 }
 .form-note {
   border-left: 2px solid var(--line);

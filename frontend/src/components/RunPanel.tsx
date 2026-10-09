@@ -3,6 +3,7 @@ import type { KeyboardEvent } from 'react'
 import {
   ArrowDownToLine,
   ArrowRight,
+  CircleHelp,
   Copy,
   ExternalLink,
   Mail,
@@ -11,7 +12,7 @@ import {
   Target,
 } from 'lucide-react'
 import type { RunState } from '../run'
-import type { Draft, ResultTab } from '../types'
+import type { Draft, ResultTab, Strategy } from '../types'
 
 // Source URLs come from web search: only http(s) becomes a link, never javascript: or data:.
 function safeHref(url: string): string | null {
@@ -83,6 +84,80 @@ function BodyField({
   )
 }
 
+const FIT: Record<Strategy['offerFit'], string> = {
+  good: 'Strong fit',
+  weak: 'Weak fit',
+  poor: 'Poor fit',
+}
+
+// The approach as the strategist built it: how well the offer fits, the observation and the facts
+// it rests on, how the offer connects, the email's angle, and the guesses left for the recipient.
+function Approach({
+  strategy,
+  factIds,
+  onFact,
+}: {
+  strategy: Strategy
+  factIds: number[] // the observation's facts that research kept
+  onFact: (id: number) => void
+}) {
+  return (
+    <div className="approach">
+      <div className={`fit fit-${strategy.offerFit}`}>
+        <span className="fit-badge">
+          <span className="fit-dot" aria-hidden="true" />
+          {FIT[strategy.offerFit]}
+        </span>
+        {strategy.fitReason && <p>{strategy.fitReason}</p>}
+      </div>
+      <section className="approach-part" aria-labelledby="approach-observation">
+        <div className="approach-heading">
+          <h3 id="approach-observation">Observation</h3>
+          {factIds.length > 0 && (
+            <span className="fact-refs">
+              based on facts
+              {factIds.map((id) => (
+                <button
+                  key={id}
+                  type="button"
+                  onClick={() => onFact(id)}
+                  aria-label={`Show fact ${id} in Research`}
+                >
+                  {id}
+                </button>
+              ))}
+            </span>
+          )}
+        </div>
+        <p>{strategy.observation}</p>
+      </section>
+      <section className="approach-part" aria-labelledby="approach-offer">
+        <h3 id="approach-offer">How your offer connects</h3>
+        <p>{strategy.offerLink}</p>
+      </section>
+      {strategy.angle && (
+        <section className="approach-part" aria-labelledby="approach-angle">
+          <h3 id="approach-angle">Angle of the email</h3>
+          <p>{strategy.angle}</p>
+        </section>
+      )}
+      {strategy.hypotheses.length > 0 && (
+        <section className="approach-part" aria-labelledby="approach-guesses">
+          <h3 id="approach-guesses">To confirm, not to claim</h3>
+          <ul className="hypotheses">
+            {strategy.hypotheses.map((hypothesis) => (
+              <li key={hypothesis}>
+                <CircleHelp size={15} aria-hidden="true" />
+                <span>{hypothesis}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+    </div>
+  )
+}
+
 const tabs = [
   { id: 'email', label: 'Email draft', icon: Mail },
   { id: 'research', label: 'Research', icon: Search },
@@ -106,6 +181,28 @@ export function RunPanel({
     draft: Draft
   } | null>(null)
   const [notice, setNotice] = useState('')
+  // A fact opened from the approach: Research scrolls to it and marks it.
+  const [focusedFact, setFocusedFact] = useState<number | null>(null)
+  useEffect(() => {
+    if (tab !== 'research' || focusedFact == null) return
+    const item = document.getElementById(`fact-${focusedFact}`)
+    const reduced = window.matchMedia?.(
+      '(prefers-reduced-motion: reduce)',
+    ).matches
+    item?.scrollIntoView?.({
+      block: 'center',
+      behavior: reduced ? 'auto' : 'smooth',
+    })
+    item?.focus({ preventScroll: true })
+  }, [tab, focusedFact])
+  function showFact(id: number) {
+    setFocusedFact(id)
+    setTab('research')
+  }
+  function selectTab(next: ResultTab) {
+    setFocusedFact(null)
+    setTab(next)
+  }
   const draft = edited?.id === run.id ? edited.draft : run.draft
   const running = run.status === 'running',
     attention = run.status === 'needs_attention',
@@ -123,7 +220,7 @@ export function RunPanel({
               : -1
     if (next < 0) return
     event.preventDefault()
-    setTab(tabs[next].id)
+    selectTab(tabs[next].id)
     document.getElementById(`tab-${tabs[next].id}`)?.focus()
   }
   function edit(field: keyof Draft, value: string) {
@@ -169,7 +266,7 @@ export function RunPanel({
             aria-controls={`panel-${id}`}
             tabIndex={tab === id ? 0 : -1}
             className={tab === id ? 'selected' : ''}
-            onClick={() => setTab(id)}
+            onClick={() => selectTab(id)}
             onKeyDown={(event) => changeTab(event, index)}
           >
             <Icon size={15} />
@@ -332,8 +429,18 @@ export function RunPanel({
                 {run.sources.map((source) => {
                   const href = safeHref(source.url)
                   return (
-                    <li className="fact" key={source.id}>
-                      <p className="fact-claim">{source.claim}</p>
+                    <li
+                      className={
+                        focusedFact === source.id ? 'fact focused' : 'fact'
+                      }
+                      key={source.id}
+                      id={`fact-${source.id}`}
+                      tabIndex={-1}
+                    >
+                      <p className="fact-claim">
+                        <span className="fact-number">{source.id}</span>
+                        {source.claim}
+                      </p>
                       <blockquote>{unquote(source.excerpt)}</blockquote>
                       {href ? (
                         <a
@@ -371,15 +478,13 @@ export function RunPanel({
         ) : (
           <div className="strategy-content">
             {run.strategy ? (
-              <>
-                <p className="empty-copy">{run.strategy.observation}</p>
-                <p className="empty-copy">{run.strategy.offerLink}</p>
-                {run.strategy.hypotheses.map((hypothesis) => (
-                  <p className="empty-copy" key={hypothesis}>
-                    Hypothesis, not confirmed: {hypothesis}
-                  </p>
-                ))}
-              </>
+              <Approach
+                strategy={run.strategy}
+                factIds={run.strategy.factIds.filter((id) =>
+                  run.sources.some((source) => source.id === id),
+                )}
+                onFact={showFact}
+              />
             ) : (
               <div className="empty-state">
                 <h3>No approach yet</h3>

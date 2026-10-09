@@ -81,3 +81,64 @@ describe('email body', () => {
     expect(body).toHaveStyle({ height: '610px' })
   })
 })
+
+describe('approach', () => {
+  const strategy = {
+    observation: 'Acme is hiring 30 engineers for a new analytics team.',
+    factIds: [2, 9],
+    offerLink: 'Contract engineers can start while hiring continues.',
+    hypotheses: ['The team may need help before the hires land.'],
+    angle: 'Bridge the hiring gap.',
+    offerFit: 'weak' as const,
+    fitReason: 'Hiring is planned, so contractors may not be needed.',
+  }
+  async function openApproach() {
+    const run: RunState = {
+      ...emptyRun,
+      id: 'run-1',
+      status: 'needs_attention',
+      sources: [
+        source(1, 'https://acme.com'),
+        source(2, 'https://acme.com/jobs'),
+      ],
+      strategy,
+    }
+    render(<RunPanel run={run} />)
+    await userEvent.click(screen.getByRole('tab', { name: /Approach/ }))
+  }
+
+  it('shows the fit, its reason and each part of the approach', async () => {
+    await openApproach()
+    expect(screen.getByText('Weak fit')).toBeVisible()
+    expect(screen.getByText(strategy.fitReason)).toBeVisible()
+    for (const heading of [
+      'Observation',
+      'How your offer connects',
+      'Angle of the email',
+      'To confirm, not to claim',
+    ])
+      expect(screen.getByRole('heading', { name: heading })).toBeVisible()
+    // Guesses are listed under their heading, not prefixed one by one.
+    expect(screen.getByText(strategy.hypotheses[0])).toBeVisible()
+    expect(screen.queryByText(/Hypothesis, not confirmed/)).toBeNull()
+  })
+
+  it('links the observation to the facts it rests on', async () => {
+    await openApproach()
+    // Fact 9 was not kept by research, so it is not offered as a link.
+    expect(screen.queryByRole('button', { name: /fact 9/ })).toBeNull()
+    await userEvent.click(
+      screen.getByRole('button', { name: 'Show fact 2 in Research' }),
+    )
+    expect(screen.getByRole('tab', { name: /Research/ })).toHaveAttribute(
+      'aria-selected',
+      'true',
+    )
+    const fact = document.getElementById('fact-2')
+    expect(fact).toHaveClass('focused')
+    expect(fact).toHaveFocus()
+    await userEvent.click(screen.getByRole('tab', { name: /Email draft/ }))
+    await userEvent.click(screen.getByRole('tab', { name: /Research/ }))
+    expect(document.getElementById('fact-2')).not.toHaveClass('focused')
+  })
+})
