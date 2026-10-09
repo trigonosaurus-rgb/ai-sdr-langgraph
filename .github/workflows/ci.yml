@@ -89,5 +89,12 @@ jobs:
           curl -fs http://127.0.0.1:8000/api/status
           curl -fs http://127.0.0.1:8000/ | grep -q '<div id="root">'
           curl -fsI http://127.0.0.1:8000/ | grep -qi '^content-security-policy:'
-      - if: failure()
-        run: docker logs sdr
+      # No container exists when the build itself failed; the build step's log has the cause.
+      - name: Container logs
+        if: failure()
+        run: |
+          if docker container inspect sdr > /dev/null 2>&1; then
+            docker logs sdr
+          else
+            echo "No container: the image was not built or did not start."
+          fi
