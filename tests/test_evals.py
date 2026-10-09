@@ -7,7 +7,7 @@ from core.llm import LLMError
 from core.runner import run_sdr
 from core.schemas import Fact
 from evals.cases import Case, load_cases, outcome_label, parse_cases, select
-from evals.checks import check, language_ok, ungrounded_numbers
+from evals.checks import STOCK_PHRASES, check, foreign_words, language_ok, undeclined_company, ungrounded_numbers
 from evals.blind import agreement, import_grades
 from evals.grades import Grade, GradeFile, grades_path, load_grades
 from evals.report import summarize
@@ -97,6 +97,26 @@ def test_numbers_must_come_from_facts_or_the_brief(brief):
     assert ungrounded_numbers("B2B teams, 1-2 examples, 480k orders", facts, brief) == []
     with_offer = brief.model_copy(update={"offer": "WCAG 2.2 audits"})
     assert ungrounded_numbers("Audits against WCAG 2.2", [], with_offer) == []
+
+
+def test_stock_hedges_are_found_in_either_language():
+    text = "My guess is the team is busy. I’m assuming not. Предполагаю, что да."
+    assert STOCK_PHRASES.findall(text) == ["My guess is", "I’m assuming", "Предполагаю,"]
+    assert STOCK_PHRASES.findall("If the team is busy, does it help?") == []
+
+
+def test_foreign_words_allow_names_from_the_brief_and_facts(brief):
+    ru = brief.model_copy(update={"company": "Miro", "website": "miro.com", "language": "Russian"})
+    facts = [fact("Miro launched AI prompts and Miro Insights", "roadmaps, specs and AI prompts")]
+    text = "У Miro есть Miro Insights и AI, а ещё roadmaps, CTA и support-команда."
+    assert foreign_words(text, facts, ru) == ["roadmaps", "CTA", "support"]
+
+
+def test_company_names_must_decline_after_prepositions():
+    assert undeclined_company("Разбор обращений в Контур. У Контур 70 сервисов.", "Контур") == ["в Контур", "У Контур"]
+    assert undeclined_company("В Контуре и у компании «Контур» всё верно.", "Контур") == []
+    assert undeclined_company("У Авито много объявлений.", "Авито") == []  # does not decline
+    assert undeclined_company("У Skyeng много уроков.", "Skyeng") == []  # Latin names stay as written
 
 
 def test_checks_flag_placeholders_length_and_outcome(brief, make_ctx):

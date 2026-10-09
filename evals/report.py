@@ -37,6 +37,10 @@ class Row(BaseModel):
     relevance: float | None
     naturalness: float | None
     successes: int | None  # None until every draft that counts is graded
+    stock_phrases: int = 0  # drafts with a stock hedge such as "my guess is"
+    russian_drafts: int = 0
+    foreign_words: int = 0  # Russian drafts with English words that are not names
+    undeclined_company: int = 0  # Russian drafts with "у Контур" for "у Контура"
 
     @property
     def usd_per_success(self) -> float | None:
@@ -61,6 +65,7 @@ def summarize(name: str, runs: list[CaseRun], expected_draft: set[str], grades: 
     seconds = sorted(r.result.duration_ms / 1000 for r in runs)
     draft_runs = [r for r in runs if r.case_id in expected_draft]
     with_draft = [r for r in runs if r.checks.has_draft]
+    russian = [r for r in with_draft if r.result.brief.language == "Russian"]
     grades = grades or {}
     graded = [grades[key] for r in runs if (key := f"{r.case_id}.{r.repeat}") in grades]
     # a draft counts when a draft was the right outcome; poor-fit and wrong drafts are judged by outcome
@@ -86,6 +91,10 @@ def summarize(name: str, runs: list[CaseRun], expected_draft: set[str], grades: 
         relevance=mean([g.relevance for g in graded]),
         naturalness=mean([g.naturalness for g in graded]),
         successes=successes,
+        stock_phrases=sum(bool(r.checks.stock_phrases) for r in with_draft),
+        russian_drafts=len(russian),
+        foreign_words=sum(bool(r.checks.foreign_words) for r in russian),
+        undeclined_company=sum(bool(r.checks.undeclined_company) for r in russian),
     )
 
 
@@ -115,6 +124,20 @@ def table(rows: list[Row]) -> str:
     return "\n".join(lines)
 
 
+def tics_table(rows: list[Row]) -> str:
+    lines = [
+        "| Config | Drafts with stock hedges | Russian drafts with English words"
+        " | Russian drafts with an undeclined company |",
+        "| --- | --- | --- | --- |",
+    ]
+    for row in rows:
+        lines.append(
+            f"| {row.name} | {row.stock_phrases}/{row.drafts} | {row.foreign_words}/{row.russian_drafts}"
+            f" | {row.undeclined_company}/{row.russian_drafts} |"
+        )
+    return "\n".join(lines)
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Summarize evaluation results.")
     parser.add_argument("names", nargs="*", help="results folders; all by default")
@@ -136,6 +159,7 @@ def main() -> int:
         print("No results yet: python -m evals.run --config <name>", file=sys.stderr)
         return 1
     print(table(rows))
+    print("\nStyle tics (automatic, apart from the draft checks):\n" + tics_table(rows))
     print("\nModels per config:\n" + "\n".join(f"- {row.name}: {row.models}" for row in rows))
     print(f"\nScores: mean 0-2 by {args.grader} over graded drafts (evals/README.md).")
     print("Costs are estimates from list prices; searches are replayed from snapshots and not counted here.")
