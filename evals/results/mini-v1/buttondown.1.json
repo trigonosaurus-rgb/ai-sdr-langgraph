@@ -1,0 +1,210 @@
+{
+  "case_id": "buttondown",
+  "config": "mini",
+  "models": "Research gpt-5.4-mini/low, Strategy gpt-5.4-mini/medium, Writing gpt-5.4-mini/medium, Review gpt-5.4-mini/low",
+  "repeat": 1,
+  "snapshot_recorded_at": "2026-10-09T12:05:45+00:00",
+  "checks": {
+    "label": "draft",
+    "outcome_ok": true,
+    "facts": 3,
+    "dropped_facts": 5,
+    "attempts": 1,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 75,
+    "subject_words": 4,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "d2d329da0fdd4a259adf78f2c65d24ef",
+    "brief": {
+      "company": "Buttondown",
+      "website": "buttondown.com",
+      "offer": "Migration help for newsletter writers moving from Substack",
+      "recipient": "Founder",
+      "language": "English",
+      "tone": "Warm"
+    },
+    "status": "ready",
+    "reason": null,
+    "message": "The draft passed review.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "Buttondown is a newsletter platform that helps users start, grow, and monetize newsletters.",
+          "excerpt": "“Buttondown is a newsletter platform that makes it easy to start, grow, and monetize your newsletter.”",
+          "source_url": "https://docs.buttondown.com/llms.txt",
+          "source_title": "Buttondown"
+        },
+        {
+          "id": 2,
+          "claim": "Buttondown says it is a small, independent business and plans to stay around for the long haul.",
+          "excerpt": "“As a small, independent business, we want Buttondown to be our life’s work.”",
+          "source_url": "https://buttondown.com",
+          "source_title": "Buttondown — Newsletter software for people like you"
+        },
+        {
+          "id": 3,
+          "claim": "Buttondown says its deliverability is among the highest in the industry and its spam protection is best-in-class.",
+          "excerpt": "“Buttondown’s deliverability is among the highest in the industry, and our spam protection is best-in-class.”",
+          "source_url": "https://buttondown.com",
+          "source_title": "Buttondown — Newsletter software for people like you"
+        }
+      ],
+      "website_matches": true,
+      "website_note": "The results consistently describe Buttondown at buttondown.com as its own newsletter platform and related official pages.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 5
+    },
+    "strategy": {
+      "observation": "Buttondown positions itself as a small, independent newsletter platform that is built to last and emphasizes industry-leading deliverability and spam protection, which are strong signals for writers comparing platforms.",
+      "fact_ids": [
+        1,
+        2,
+        3
+      ],
+      "offer_link": "Migration help for newsletter writers moving from Substack could support Buttondown’s acquisition of creators who are likely evaluating stability and inbox performance when they switch platforms, by making the move easier and reducing switching friction.",
+      "hypotheses": [
+        "Buttondown may want to attract more writers who are unhappy with Substack or want a more independent platform.",
+        "The founder may care about reducing migration friction because it can directly affect signup conversion.",
+        "Writers considering a move may be especially sensitive to deliverability and spam handling, so a migration service could help turn that interest into completed moves."
+      ],
+      "angle": "I noticed Buttondown already leans hard on independence and deliverability, which makes it a natural destination for Substack writers who are thinking about switching.",
+      "offer_fit": "good",
+      "fit_reason": "The offer matches Buttondown’s core positioning and could help them capture a relevant segment of newsletter writers. Migration assistance is plausibly useful because it lowers the barrier for Substack users to adopt a platform that already advertises strong deliverability and long-term independence."
+    },
+    "draft": {
+      "subject": "Helping Substack writers switch",
+      "body": "I noticed Buttondown already leans hard on independence and deliverability, which feels like a natural fit for writers thinking about moving off Substack.\n\nYou also say Buttondown is small, independent, and built for the long haul, with deliverability and spam protection that are among the best in the industry. If the goal is to make switching feel easier, migration help for those writers could remove a lot of friction. Would that be useful to explore?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Helping Substack writers switch",
+          "body": "I noticed Buttondown already leans hard on independence and deliverability, which feels like a natural fit for writers thinking about moving off Substack.\n\nYou also say Buttondown is small, independent, and built for the long haul, with deliverability and spam protection that are among the best in the industry. If the goal is to make switching feel easier, migration help for those writers could remove a lot of friction. Would that be useful to explore?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@1",
+      "strategy": "strategy@1",
+      "copywriter": "copywriter@1",
+      "review": "review@1"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "research@1",
+        "duration_ms": 3341,
+        "usage": {
+          "input_tokens": 4264,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 490,
+          "reasoning_tokens": 53
+        },
+        "cost_usd": 0.005403,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "strategy@1",
+        "duration_ms": 3239,
+        "usage": {
+          "input_tokens": 496,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 403,
+          "reasoning_tokens": 136
+        },
+        "cost_usd": 0.0021855,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "copywriter@1",
+        "duration_ms": 2968,
+        "usage": {
+          "input_tokens": 559,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 409,
+          "reasoning_tokens": 293
+        },
+        "cost_usd": 0.00225975,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "review@1",
+        "duration_ms": 2238,
+        "usage": {
+          "input_tokens": 495,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 271,
+          "reasoning_tokens": 251
+        },
+        "cost_usd": 0.00159075,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Buttondown\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Buttondown\" buttondown.com",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Buttondown\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 11800
+  }
+}

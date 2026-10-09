@@ -1,0 +1,242 @@
+{
+  "case_id": "mercury",
+  "config": "mini",
+  "models": "Research gpt-5.4-mini/low, Strategy gpt-5.4-mini/medium, Writing gpt-5.4-mini/medium, Review gpt-5.4-mini/low",
+  "repeat": 2,
+  "snapshot_recorded_at": "2026-10-09T12:06:22+00:00",
+  "checks": {
+    "label": "draft",
+    "outcome_ok": true,
+    "facts": 7,
+    "dropped_facts": 1,
+    "attempts": 1,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 78,
+    "subject_words": 5,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "40ae828989fd4e4d863e88ec486055e4",
+    "brief": {
+      "company": "Mercury",
+      "website": "mercury.com",
+      "offer": "Onboarding email sequences for startup founders",
+      "recipient": "Lifecycle Marketing Lead",
+      "language": "English",
+      "tone": "Warm"
+    },
+    "status": "ready",
+    "reason": null,
+    "message": "The draft passed review.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "Mercury says more than 300,000 customers use its product.",
+          "excerpt": "“Today, more than 300,000 customers use Mercury.”",
+          "source_url": "https://mercury.com/blog/annual-letter-2025",
+          "source_title": "Mercury Annual Letter 2025 | Mercury"
+        },
+        {
+          "id": 2,
+          "claim": "Mercury says 1 in 3 U.S. startups use its service.",
+          "excerpt": "“Today, 1 in 3 U.S. startups use Mercury”",
+          "source_url": "https://mercury.com/blog/annual-letter-2025",
+          "source_title": "Mercury Annual Letter 2025 | Mercury"
+        },
+        {
+          "id": 3,
+          "claim": "Mercury offers invoicing, including a free version and paid plans for advanced features.",
+          "excerpt": "“Customers can create, send, track, and receive payment on as many invoices as they’d like in the free version of Mercury.”",
+          "source_url": "https://app.mercury.com/help/mercury-invoicing-overview",
+          "source_title": "Mercury invoicing overview – Mercury"
+        },
+        {
+          "id": 4,
+          "claim": "Mercury Bill Pay is an automated accounts payable solution for managing and paying company bills from a Mercury account.",
+          "excerpt": "“Mercury Bill Pay is an automated accounts payable solution that helps you manage and pay company bills from your Mercury account.”",
+          "source_url": "https://support.mercury.com/hc/en-us/articles/28768945847316-Bill-Pay-overview",
+          "source_title": "Bill Pay overview – Mercury"
+        },
+        {
+          "id": 5,
+          "claim": "Mercury now promotes AI-powered accounting software called Mercury Books, built into the product.",
+          "excerpt": "“Introducing Mercury Books, AI-powered accounting software, built into Mercury”",
+          "source_url": "https://mercury.com",
+          "source_title": "Online Business Banking For Startups, Small Businesses & Scaling Companies"
+        },
+        {
+          "id": 6,
+          "claim": "Mercury offers personal finance features including a 3.50% APY savings account, joint accounts, and unlimited free USD wires.",
+          "excerpt": "“Level up your personal finances with 3.50% APY on your savings account, joint accounts, unlimited free USD wires, and more.”",
+          "source_url": "https://mercury.com",
+          "source_title": "Online Business Banking For Startups, Small Businesses & Scaling Companies"
+        },
+        {
+          "id": 7,
+          "claim": "Mercury says it launched personal banking in April 2024 and financial software for bills, invoices, and reimbursements in May 2024.",
+          "excerpt": "“In April 2024, Mercury launched personal banking for consumers. In May 2024, Mercury launched financial software to help businesses pay bills, send invoices and reimburse employees.”",
+          "source_url": "https://en.wikipedia.org/wiki/Mercury_Technologies",
+          "source_title": "Mercury Technologies - Wikipedia"
+        }
+      ],
+      "website_matches": true,
+      "website_note": "The results consistently describe Mercury at mercury.com as a fintech company offering banking and financial operations tools.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 1
+    },
+    "strategy": {
+      "observation": "Mercury is no longer just a startup bank: it serves more than 300,000 customers, says 1 in 3 U.S. startups use it, and it has added multiple adjacent products in the last year—personal banking, invoicing, Bill Pay, reimbursements, and AI-powered Books—so the onboarding experience has to introduce a broader product set to startup founders.",
+      "fact_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "offer_link": "Onboarding email sequences for startup founders could help Mercury guide new users from the core account into the newer workflows it now offers—like invoicing, bill pay, reimbursements, and Books—while also supporting cross-sell into features such as savings and wires.",
+      "hypotheses": [
+        "Mercury may need lifecycle messaging that segments founders by company stage or first-use case.",
+        "Mercury may be trying to improve activation across several newly launched products rather than only initial account setup.",
+        "Mercury may benefit from more educational onboarding that explains how its product suite fits a founder's day-to-day finance tasks."
+      ],
+      "angle": "Mercury now has founders moving from banking into bill pay, invoicing, reimbursements, and Books, so the first-week onboarding flow has to teach more than one product path.",
+      "offer_fit": "good",
+      "fit_reason": "The offer matches Mercury’s audience and product breadth: startup founders are a clear onboarding target, and Mercury’s expanding suite creates a plausible need for lifecycle sequences that help users activate, adopt, and cross-use those features."
+    },
+    "draft": {
+      "subject": "Onboarding across the product suite",
+      "body": "Mercury now serves more than 300,000 customers, and says 1 in 3 U.S. startups use it.\n\nWith personal banking, invoicing, Bill Pay, reimbursements, and Mercury Books now in the mix, the first-week onboarding flow probably has to do more than explain account setup. I work on onboarding email sequences for startup founders, and could help map messages around the first use case, then guide users into the newer workflows. Would it be useful to see a quick outline?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Onboarding across the product suite",
+          "body": "Mercury now serves more than 300,000 customers, and says 1 in 3 U.S. startups use it.\n\nWith personal banking, invoicing, Bill Pay, reimbursements, and Mercury Books now in the mix, the first-week onboarding flow probably has to do more than explain account setup. I work on onboarding email sequences for startup founders, and could help map messages around the first use case, then guide users into the newer workflows. Would it be useful to see a quick outline?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@1",
+      "strategy": "strategy@1",
+      "copywriter": "copywriter@1",
+      "review": "review@1"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "research@1",
+        "duration_ms": 3074,
+        "usage": {
+          "input_tokens": 4135,
+          "cached_input_tokens": 3840,
+          "cache_write_tokens": null,
+          "output_tokens": 512,
+          "reasoning_tokens": 28
+        },
+        "cost_usd": 0.00281325,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "strategy@1",
+        "duration_ms": 5302,
+        "usage": {
+          "input_tokens": 634,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 670,
+          "reasoning_tokens": 349
+        },
+        "cost_usd": 0.0034905,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "copywriter@1",
+        "duration_ms": 3379,
+        "usage": {
+          "input_tokens": 747,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 531,
+          "reasoning_tokens": 403
+        },
+        "cost_usd": 0.00294975,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "review@1",
+        "duration_ms": 2748,
+        "usage": {
+          "input_tokens": 644,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 314,
+          "reasoning_tokens": 294
+        },
+        "cost_usd": 0.001896,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Mercury\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Mercury\" mercury.com",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Mercury\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 14515
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "case_id": "tuple",
+  "brief": {
+    "company": "Tuple",
+    "website": "tuple.app",
+    "offer": "Video case studies with engineering teams that use your product",
+    "recipient": "Head of Marketing",
+    "language": "English",
+    "tone": "Direct"
+  },
+  "recorded_at": "2026-10-09T12:05:52+00:00",
+  "searches": [
+    {
+      "query": "\"Tuple\" company overview products customers",
+      "topic": "general",
+      "include_domains": [
+        "tuple.app"
+      ],
+      "max_results": 5,
+      "credits": 1.0,
+      "results": []
+    },
+    {
+      "query": "\"Tuple\" tuple.app",
+      "topic": "general",
+      "include_domains": null,
+      "max_results": 5,
+      "credits": 1.0,
+      "results": [
+        {
+          "url": "https://www.linkedin.com/company/tupleapp",
+          "title": "Tuple",
+          "content": "# Tuple\n\nDescription: Tuple is an app for remote pair programming, optimized for everything that developers care about: Seamless collaboration with full-time mouse and keyboard support for both parties, snappy interactions, command-line integration and pluginability.\nLinkedIn:  · 1,178 followers\nIndustry: Software Development\nType: Partnership\nHeadquarters: Somerville, MA, United States\nSocial Profiles:   \n\n## Employees\n- Now: 13",
+          "query": "\"Tuple\" tuple.app"
+        },
+        {
+          "url": "https://github.com/tupleapp",
+          "title": "Tuple · GitHub",
+          "content": "70 followers\n \n @tuple-app\n @tuple\n support@tuple.app\n\nREADME.md\n\n# Tuple\n\n### The best remote pair programming app on macOS and Windows\n\nWebsite YouTube X\n\nDevelopers deserve purpose-built tools.\n\nLook, it's not terrible pairing with Zoom.\n\nBut it wasn't built for the highly interactive process of remote pairing; a world where you want mouse cursors for all participants and high-fidelity remote control (like Command+Tab support). [...] Skip to content   \n \n \n\n## Navigation Menu\n\nSign in\n\nAppearance settings\n\nSign in\n\nSign up\n\nAppearance settings\n\nYou signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert\n\n{{ message }}\n\n@tupleapp\n\n# Tuple\n\nThe best remote pair programming app on macOS and Windows [...] The official Go SDK for Model Context Protocol servers and clients. Maintained in collaboration with Google.\n\n  ### Uh oh!\n\n  There was an error while loading. Please reload this page.  tupleapp/go-sdk's past year of commit activity\n\n  Go   0  579  0  0  Updated Sep 18, 2026\n raycast-extension  Public \n\n  Raycast extension for Tuple\n\n  ### Uh oh!\n\n  There was an error while loading. Please reload this page.  tupleapp/raycast-extension's past year of commit activity",
+          "query": "\"Tuple\" tuple.app"
+        },
+        {
+          "url": "https://tuple.app/love",
+          "title": "Tuple Love · Tuple",
+          "content": "— Steven Anthony\n\nTuple is the BEST pair-programming app out there. I force all my colleagues to download it and I don't want to do pair-programming without it anymore. Things I love about it: - It's fast - Call quality is good - It really feels like we are working on the same computer Previously I used: - VS code liveshare but it is laggy - Zoom or Google meets but the image definition is bad so I can never read the other person's code.\n\n— Alexandre Ruban [...] — Oliver Eisenhut\n\nGreat piece of software. Best screen sharing app I've used in a while for development purposes. Keep up the good work!\n\n— Matthew Knapp\n\nTuple is so much better for working together remotely than the alternatives we've used over the last few years (Slack, Teams, Google Meet, tried them all, all had issues). Thanks for that, really a joy to use.\n\n— Jaco van den Bergh [...] — Scott Bellware\n\nThe app is great!\n\n— Alcides Jorges\n\nI've been using Tuple to pair with my onboarding buddy and my experience has been excellent. The screen share is always fast and clear. So far, I'm loving it.\n\n— Steven Anthony",
+          "query": "\"Tuple\" tuple.app"
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=29641907",
+          "title": "Tuple: Pair Programming Tool for macOS | Hacker News",
+          "content": "| |  |  |  |  ---  |  |  | Tuple: Pair Programming Tool for macOS (tuple.app) | |  | | 276 points by gk1 on Dec 21, 2021  | hide | past | favorite | 144 comments | |  | |  |     |  |  |  |  |  ---  --- | | |  |  |  |  ---  |  |  | Svetlitski on Dec 21, 2021  | next (javascript:void(0))   I have nothing but the highest praise for Tuple, it blows all the other tools in this space out of the water. Used it for several months while working on a compilers project back in college, and over many many [...] |  |  |  |\n --- \n|  | Hacker Newsnew | past | comments | <ask> | <show> | <jobs> | <submit> | login |\n\n|  |  |  |\n --- \n|  |  | Tuple: Pair Programming Tool for macOS (tuple.app) |\n|  | | 276 points by gk1 on Dec 21, 2021  | hide | past | favorite | 144 comments |\n|  | |  | [...] |  |  |  |\n --- \n|  |  | jonsen on Dec 21, 2021  | root | parent | prev | next (javascript:void(0))   For private mentoring/tutoring programming learners, $1 per session. |\n\n|  |  |  |\n --- \n|  |  | r00k on Dec 22, 2021  | root | parent | next (javascript:void(0))   I'd rather just make this free. In fact, if you email support@tuple.app and say you want to use Tuple for educational purposes, we'll make you a free-forever account. |",
+          "query": "\"Tuple\" tuple.app"
+        },
+        {
+          "url": "https://slack.com/marketplace/A04B287N6P2-tuple",
+          "title": "Tuple & Slack Integration | Slack Marketplace",
+          "content": "Tuple's integration for Slack adds a `/tuple` command, which will start a pairing session directly from a channel or DMs. Anyone can then join your call with a single click—couldn't be simpler! Participants will also have their Slack status changed, so that your coworkers know you're busy.Tuple is the best remote pair programming app, for macOS and Windows. Experience ridiculously crisp audio and video with crazy-low CPU usage, and no UI in your way. All participants get seamless keyboard and [...] Tuple will retain application data indefinitely unless otherwise requested by a customer writing in to support@tuple.app. Server and application logs are retained for 30 days, after which they are permanently deleted. Application analytics will be permanently deleted on request.\n\nData archiving and removal policy\n\nTuple will remove a user's data at their written request to support@tuple.app, and otherwise do not delete or archive any data.\n\nData storage policy [...] yes\n\nHas a dedicated security team\n\nyes\n\nContact for security issues\n\nsecurity@tuple.app\n\nHas a vulnerability disclosure program\n\nyes\n\nVulnerability disclosure program URL\n\nVulnerability disclosure program covers Slack app\n\nyes\n\nHas a bug bounty program\n\nyes\n\nBug bounty program URL\n\nRequires third party authorization/connections\n\nno\n\nUses token rotation\n\nno",
+          "query": "\"Tuple\" tuple.app"
+        }
+      ]
+    },
+    {
+      "query": "\"Tuple\" news",
+      "topic": "news",
+      "include_domains": null,
+      "max_results": 5,
+      "credits": 1.0,
+      "results": [
+        {
+          "url": "https://cybersecuritynews.com/ghostcommit-attack-hides-prompts",
+          "title": "New Ghostcommit Attack Hides Malicious Prompts in Images to Exploit AI Agents",
+          "content": "A novel supply-chain attack called \"Ghostcommit\" that conceals prompt injection instructions inside PNG images to bypass AI code reviewers and trick coding",
+          "query": "\"Tuple\" news"
+        },
+        {
+          "url": "https://www.adweek.com/programmatic/index-exchange-welcomes-dsps-into-new-cloud-infra-bringing-bidders-closer-to-ad-inventory",
+          "title": "Index Exchange Welcomes DSPs into New Cloud Infra, Bringing Bidders Closer to Ad Inventory",
+          "content": "Recommended videos\n\n## Programmatic\n\n[](\n\n#### Scope3’s Rebrand to Apostra Solidifies Shift from Sustainability to AI\n\nBy Kendra Barnett\n\n[](\n\n#### Former Magnite Exec Adam Soroca Named PebblePost CEO\n\nBy Trishla Ostwal\n\n[](\n\n#### Is The Trade Desk Running Out of Room to Turn Around?\n\nBy Trishla Ostwal\n\na hand holding a phone with the chatgpt logo\n\n#### Advertisers Want More Brand Safety, Prompt-Matching, Incrementality Tracking From ChatGPT Ads\n\nBy Trishla Ostwal\n\n[]( [...] [](\n\n#### The Trade Desk Sheds 15% of Staff on Heels of Lackluster Q2 Showing\n\nBy Kendra Barnett\n\n[](\n\n#### Apostra Wants to Be the Agentic Ad Layer. Does the Industry Need One?\n\nThe firm's agentic ads business has managed $1.2 million in media spend over the last three months\n\nBy Kendra Barnett\n\n[](\n\n#### ChatGPT Surpasses $1 Billion in Annualized Ads Revenue\n\nThe milestone underscores how important the business has become to parent company OpenAI\n\nBy Mark Stenberg\n\n[]( [...] Subscribe Sign In\n\n Agencies\n Brands\n Creativity\n Media\n TV\n Commerce\n Tech\n Healthcare\n\nSUBSCRIPTION ONLY\n\n### Ad Tech Industry News\n\n# Index Exchange Welcomes DSPs into New Cloud Infra, Bringing Bidders Closer to Ad Inventory\n\n## The supply-side platform believes that its containerized approach will improve the latency of programmatic auctions while creating a more fair and competitive buy-side market",
+          "query": "\"Tuple\" news"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,234 @@
+{
+  "case_id": "wrong-site-linear",
+  "config": "mini",
+  "models": "Research gpt-5.4-mini/low, Strategy gpt-5.4-mini/medium, Writing gpt-5.4-mini/medium, Review gpt-5.4-mini/low",
+  "repeat": 1,
+  "snapshot_recorded_at": "2026-10-09T12:06:59+00:00",
+  "checks": {
+    "label": "draft",
+    "outcome_ok": false,
+    "facts": 6,
+    "dropped_facts": 2,
+    "attempts": 1,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 72,
+    "subject_words": 4,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "f2ef30ce9b14446d961183d7fc884076",
+    "brief": {
+      "company": "Linear",
+      "website": "notion.so",
+      "offer": "Recruiting and scheduling customer interview participants for product teams",
+      "recipient": "Head of Product",
+      "language": "English",
+      "tone": "Direct"
+    },
+    "status": "ready",
+    "reason": null,
+    "message": "The draft passed review.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "Linear is for software teams building products and focuses on issue tracking, project planning, and product roadmaps.",
+          "excerpt": "\"Linear empowers software teams to build better products. It streamlines issue tracking, project planning, and product roadmaps.\"",
+          "source_url": "https://www.notion.so/integrations/linear-9fa29a25-5ec1-479c-9979-f0425675e8f9",
+          "source_title": "Linear Integrations | Connect Your Apps with Notion"
+        },
+        {
+          "id": 2,
+          "claim": "Linear's Notion integration supports pasting Linear links as previews and using the /linear command in Notion.",
+          "excerpt": "\"Paste any Linear link into Notion, then select `Paste as preview`. You can also type `/linear` in any Notion page\"",
+          "source_url": "https://www.notion.so/integrations/linear-9fa29a25-5ec1-479c-9979-f0425675e8f9",
+          "source_title": "Linear Integrations | Connect Your Apps with Notion"
+        },
+        {
+          "id": 3,
+          "claim": "Linear's AI Connector lets Notion users search Linear projects, issues, and comments from Notion.",
+          "excerpt": "\"Search Linear projects, issues, and comments from Notion.\"",
+          "source_url": "https://www.notion.so/integrations/notion-ai-connector-for-linear",
+          "source_title": "Notion AI Connector for Linear"
+        },
+        {
+          "id": 4,
+          "claim": "The AI Connector is available for all Linear organizations.",
+          "excerpt": "\"Available for all Linear organizations.\"",
+          "source_url": "https://www.notion.so/integrations/notion-ai-connector-for-linear",
+          "source_title": "Notion AI Connector for Linear"
+        },
+        {
+          "id": 5,
+          "claim": "Linear's Notion integration includes live previews for issues, projects, and views, and those previews update when properties change.",
+          "excerpt": "\"For issues, the preview shows issue title, description, status, issue ID, team, assignee, and the date of the last update.\"",
+          "source_url": "https://linear.app/integrations/notion",
+          "source_title": "Notion Integration – Linear"
+        },
+        {
+          "id": 6,
+          "claim": "Linear's issue previews can show title, description, status, issue ID, team, assignee, and last update date.",
+          "excerpt": "\"For issues, the preview shows issue title, description, status, issue ID, team, assignee, and the date of the last update.\"",
+          "source_url": "https://linear.app/integrations/notion",
+          "source_title": "Notion Integration – Linear"
+        }
+      ],
+      "website_matches": true,
+      "website_note": "The results are pages on Notion's site about Linear integrations, so they describe the Linear company/product rather than a different organization.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 2
+    },
+    "strategy": {
+      "observation": "Linear’s product work is already deeply embedded in Notion: its integration supports pasting Linear links as live previews, /linear commands, and an AI connector that lets Notion users search Linear projects, issues, and comments, with previews that update as issue properties change.",
+      "fact_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "offer_link": "Because Linear already uses Notion as a working layer for product information, a service that recruits and schedules customer interview participants could fit as an operational add-on for the product team—freeing them to turn that centralized workflow into a steadier stream of customer feedback without handling the logistics themselves.",
+      "hypotheses": [
+        "The Head of Product at Linear may be responsible for customer discovery or for ensuring product teams get regular user feedback.",
+        "Linear may use Notion as a coordination hub beyond issue tracking, including research notes or interview planning.",
+        "The team may care about reducing the operational burden of sourcing and scheduling interview participants."
+      ],
+      "angle": "Notion already carries a lot of Linear’s product context; if your team is also using it to coordinate customer interviews, we could handle recruiting and scheduling the participants.",
+      "offer_fit": "weak",
+      "fit_reason": "The facts show a strong Notion/Linear workflow, but they do not show any current customer-research process or interview program. Recruiting and scheduling interview participants could help a product team, but the link to this specific company and recipient is indirect, so the fit is plausible but not strong."
+    },
+    "draft": {
+      "subject": "Linear interviews in Notion",
+      "body": "Linear’s Notion integration supports live previews for issues, projects, and views, and those previews update when properties change. It also supports the /linear command in Notion, and the AI Connector lets Notion users search Linear projects, issues, and comments.\n\nIf Notion is also where your team plans customer interviews, we could handle recruiting and scheduling the participants. That would keep the logistics out of the product team’s hands.\n\nWorth a quick look?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Linear interviews in Notion",
+          "body": "Linear’s Notion integration supports live previews for issues, projects, and views, and those previews update when properties change. It also supports the /linear command in Notion, and the AI Connector lets Notion users search Linear projects, issues, and comments.\n\nIf Notion is also where your team plans customer interviews, we could handle recruiting and scheduling the participants. That would keep the logistics out of the product team’s hands.\n\nWorth a quick look?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@1",
+      "strategy": "strategy@1",
+      "copywriter": "copywriter@1",
+      "review": "review@1"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "research@1",
+        "duration_ms": 3645,
+        "usage": {
+          "input_tokens": 4900,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 536,
+          "reasoning_tokens": 49
+        },
+        "cost_usd": 0.006087,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "strategy@1",
+        "duration_ms": 5830,
+        "usage": {
+          "input_tokens": 603,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 822,
+          "reasoning_tokens": 512
+        },
+        "cost_usd": 0.00415125,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "copywriter@1",
+        "duration_ms": 4715,
+        "usage": {
+          "input_tokens": 699,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 631,
+          "reasoning_tokens": 512
+        },
+        "cost_usd": 0.00336375,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "review@1",
+        "duration_ms": 2262,
+        "usage": {
+          "input_tokens": 604,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 177,
+          "reasoning_tokens": 157
+        },
+        "cost_usd": 0.0012495,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Linear\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Linear\" notion.so",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Linear\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 16468
+  }
+}

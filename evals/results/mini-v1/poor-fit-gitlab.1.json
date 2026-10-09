@@ -1,0 +1,326 @@
+{
+  "case_id": "poor-fit-gitlab",
+  "config": "mini",
+  "models": "Research gpt-5.4-mini/low, Strategy gpt-5.4-mini/medium, Writing gpt-5.4-mini/medium, Review gpt-5.4-mini/low",
+  "repeat": 1,
+  "snapshot_recorded_at": "2026-10-09T12:07:08+00:00",
+  "checks": {
+    "label": "poor_fit",
+    "outcome_ok": true,
+    "facts": 5,
+    "dropped_facts": 3,
+    "attempts": 3,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 55,
+    "subject_words": 3,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "ae5ca4bb7b054054a1cf65d4ff38f1df",
+    "brief": {
+      "company": "GitLab",
+      "website": "about.gitlab.com",
+      "offer": "Wedding photography packages for couples",
+      "recipient": "CFO",
+      "language": "English",
+      "tone": "Direct"
+    },
+    "status": "needs_attention",
+    "reason": null,
+    "message": "The draft did not pass review after 3 attempts.",
+    "issues": [
+      "The offer does not match the recipient or company. GitLab is a software company, and the email pitches wedding photography packages for couples with no clear business link. Change it to a service relevant to GitLab or explain the connection in one sentence.",
+      "The last sentence is a soft sales CTA: “would a one-page overview be useful?” Replace it with a single direct question about whether they want to discuss the topic, or remove the pitch if there is no real fit."
+    ],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "GitLab offers an intelligent orchestration platform for DevSecOps that covers the full software development lifecycle, including planning, code, security scans, compliance checks, and deployment configurations.",
+          "excerpt": "“provides GitLab, an intelligent orchestration platform for DevSecOps, which is a single application offering the entire software development lifecycle, including software, project plans, code, security scans, compliance checks, and deployment configurations.”",
+          "source_url": "https://sg.finance.yahoo.com/quote/GTLB",
+          "source_title": "GitLab Inc. (GTLB) stock price, news, quote and history - Yahoo Finance"
+        },
+        {
+          "id": 2,
+          "claim": "GitLab says it has more than 100,000 organizations using its platform.",
+          "excerpt": "“used by more than 100,000 organizations to plan, build, secure, and deploy software at machine scale”",
+          "source_url": "https://about.gitlab.com/jobs",
+          "source_title": "Join GitLab"
+        },
+        {
+          "id": 3,
+          "claim": "GitLab’s public site says it serves technology leaders and platform owners modernizing software delivery, including CIOs, CTOs, and DevOps leaders.",
+          "excerpt": "“GitLab serves technology leaders and platform owners responsible for modernizing their software delivery lifecycle. This includes CIOs, CTOs, and DevOps leaders”",
+          "source_url": "https://about.gitlab.com/platform",
+          "source_title": "GitLab Platform - Speed with control"
+        },
+        {
+          "id": 4,
+          "claim": "GitLab says it has 2,500+ team members and 5,500+ contributors.",
+          "excerpt": "“contributors\n\n5,500+\n\nTeam members\n\n2,500+”",
+          "source_url": "https://about.gitlab.com/jobs",
+          "source_title": "Join GitLab"
+        },
+        {
+          "id": 5,
+          "claim": "GitLab has a global partner announcement with Capgemini, a GitLab Select Partner, using the GitLab portfolio for clients globally.",
+          "excerpt": "“GitLab and Capgemini have signed a global alliance partnership agreement. As a GitLab Select Partner, Capgemini will leverage the GitLab portfolio for clients globally”",
+          "source_url": "https://about.gitlab.com/blog/gitlab-and-capgemini-global-alliance-partnership",
+          "source_title": "GitLab and Capgemini accelerate DevSecOps transformation"
+        }
+      ],
+      "website_matches": true,
+      "website_note": "The results describe GitLab and its official about.gitlab.com site.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "No major gaps from these results for a specific outreach email; pricing and recent customer-specific case studies are not provided.",
+      "dropped_facts": 3
+    },
+    "strategy": {
+      "observation": "GitLab is a large, global DevSecOps software company: its platform spans the full development lifecycle, it says more than 100,000 organizations use it, and it has global partner activity such as Capgemini using the portfolio for clients worldwide.",
+      "fact_ids": [
+        1,
+        2,
+        5
+      ],
+      "offer_link": "The only concrete way wedding photography packages could matter here is if the recipient were sourcing photography for a personal wedding or an internal company event; there is no direct business connection between GitLab’s software platform and wedding photography.",
+      "hypotheses": [
+        "The CFO may oversee a broad mix of corporate spending, including employee or event-related vendors, not just software procurement.",
+        "GitLab may run customer, partner, or employee events where photography services are occasionally purchased.",
+        "The recipient could be open to non-core vendor offers if they relate to a personal milestone or internal celebration, but that is an assumption."
+      ],
+      "angle": "GitLab’s business is global DevSecOps at scale, so I realize wedding photography is probably outside your normal vendor list.",
+      "offer_fit": "poor",
+      "fit_reason": "Wedding photography packages for couples have no plausible business use for GitLab as a software company, and there is no factual link to the CFO’s likely responsibilities beyond speculative event or personal use."
+    },
+    "draft": {
+      "subject": "Wedding photo packages",
+      "body": "GitLab says its platform covers the full software lifecycle and is used by 100,000+ organizations. I may be off base: is wedding photography outside your normal vendor list?\n\nIf photography ever comes up for a personal wedding, we offer straightforward wedding photography packages for couples. If that is relevant, would a one-page overview be useful?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Wedding photography packages",
+          "body": "GitLab runs DevSecOps at global scale, so wedding photography is probably outside your normal vendor list.\n\nI’m reaching out anyway in case you ever need a simple package for a couple’s wedding, or for an employee or event booking where photos matter. We offer wedding photography packages for couples, with straightforward pricing and delivery. Would it make sense to send a one-page overview?"
+        },
+        "review": {
+          "passed": false,
+          "issues": [
+            "“GitLab runs DevSecOps at global scale” is not supported by the facts as written. Change it to a fact-backed description, or make it clearly an assumption/question.",
+            "The offer is for wedding photography, which is unrelated to a CFO at GitLab. If you keep this, make the relevance explicit with a factual reason; otherwise, change the offer to something aligned with the recipient."
+          ]
+        }
+      },
+      {
+        "attempt": 2,
+        "draft": {
+          "subject": "Simple wedding photo packages",
+          "body": "GitLab says more than 100,000 organizations use its platform, and it has 2,500+ team members. So wedding photography is probably outside your normal vendor list.\n\nI’m asking only in case you ever handle a personal wedding or a small event where photo coverage matters. We offer wedding photography packages for couples, with straightforward pricing and delivery. Would it be worth sending a one-page overview?"
+        },
+        "review": {
+          "passed": false,
+          "issues": [
+            "“So wedding photography is probably outside your normal vendor list.” is an unsupported assumption about GitLab’s procurement habits. Change it to a question or remove it, for example: “Is this outside your normal vendor list?”",
+            "“I’m asking only in case you ever handle a personal wedding or a small event...” shifts to an unverified personal assumption about the recipient. Rewrite it as a neutral, factual line or remove it entirely."
+          ]
+        }
+      },
+      {
+        "attempt": 3,
+        "draft": {
+          "subject": "Wedding photo packages",
+          "body": "GitLab says its platform covers the full software lifecycle and is used by 100,000+ organizations. I may be off base: is wedding photography outside your normal vendor list?\n\nIf photography ever comes up for a personal wedding, we offer straightforward wedding photography packages for couples. If that is relevant, would a one-page overview be useful?"
+        },
+        "review": {
+          "passed": false,
+          "issues": [
+            "The offer does not match the recipient or company. GitLab is a software company, and the email pitches wedding photography packages for couples with no clear business link. Change it to a service relevant to GitLab or explain the connection in one sentence.",
+            "The last sentence is a soft sales CTA: “would a one-page overview be useful?” Replace it with a single direct question about whether they want to discuss the topic, or remove the pitch if there is no real fit."
+          ]
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@1",
+      "strategy": "strategy@1",
+      "copywriter": "copywriter@1",
+      "review": "review@1"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "research@1",
+        "duration_ms": 3535,
+        "usage": {
+          "input_tokens": 4717,
+          "cached_input_tokens": 4352,
+          "cache_write_tokens": null,
+          "output_tokens": 602,
+          "reasoning_tokens": 37
+        },
+        "cost_usd": 0.0033091500000000003,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "strategy@1",
+        "duration_ms": 5508,
+        "usage": {
+          "input_tokens": 600,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 739,
+          "reasoning_tokens": 471
+        },
+        "cost_usd": 0.0037755,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "copywriter@1",
+        "duration_ms": 3825,
+        "usage": {
+          "input_tokens": 680,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 612,
+          "reasoning_tokens": 512
+        },
+        "cost_usd": 0.003264,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "review@1",
+        "duration_ms": 4087,
+        "usage": {
+          "input_tokens": 583,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 453,
+          "reasoning_tokens": 353
+        },
+        "cost_usd": 0.00247575,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 2,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "copywriter@1",
+        "duration_ms": 5636,
+        "usage": {
+          "input_tokens": 871,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 847,
+          "reasoning_tokens": 736
+        },
+        "cost_usd": 0.00446475,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 2,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "review@1",
+        "duration_ms": 3029,
+        "usage": {
+          "input_tokens": 589,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 363,
+          "reasoning_tokens": 255
+        },
+        "cost_usd": 0.00207525,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 3,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "copywriter@1",
+        "duration_ms": 4214,
+        "usage": {
+          "input_tokens": 884,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 519,
+          "reasoning_tokens": 427
+        },
+        "cost_usd": 0.0029985,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 3,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "review@1",
+        "duration_ms": 2901,
+        "usage": {
+          "input_tokens": 575,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 354,
+          "reasoning_tokens": 239
+        },
+        "cost_usd": 0.00202425,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"GitLab\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"GitLab\" about.gitlab.com",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"GitLab\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 32759
+  }
+}

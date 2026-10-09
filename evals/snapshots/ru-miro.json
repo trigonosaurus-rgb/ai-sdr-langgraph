@@ -1,0 +1,133 @@
+{
+  "case_id": "ru-miro",
+  "brief": {
+    "company": "Miro",
+    "website": "miro.com",
+    "offer": "Найм и проведение интервью с пользователями из Европы",
+    "recipient": "Head of Research",
+    "language": "Russian",
+    "tone": "Warm"
+  },
+  "recorded_at": "2026-10-09T12:07:39+00:00",
+  "searches": [
+    {
+      "query": "\"Miro\" company overview products customers",
+      "topic": "general",
+      "include_domains": [
+        "miro.com"
+      ],
+      "max_results": 5,
+      "credits": 1.0,
+      "results": [
+        {
+          "url": "https://miro.com/customers",
+          "title": "Customers - Miro | The Innovation Workspace",
+          "content": "Learn more\n\n\"Miro is one of the most delightful products I’ve ever used. Every time I have a need for a new feature, Miro has already released it. Miro thinks beyond the obvious, whereas other tools feel limited, buggy, and clunky.\"\n\nMatthias Kentzia\n\nSenior Product Manager\n\nLearn more\n\n\"I love the flexibility of the infinite canvas in Miro. It has great templates, and I use the wireframing components to quickly communicate low-fidelity design ideas.\"\n\nMeredith Maines\n\nSenior UX Designer [...] \"...Through the power of the canvas, only Miro allows you to place all your inputs -- data files, transcripts, docs, APIs -- and engage Miro AI sidekicks to superpower your personal productivity and enterprise transformation with incredible ideation, insights, data extraction, designs, diagrams, reports, presentations and mind maps for next gen processes, products, programs, and enterprise plans, strategy, and roadmaps. I've used Miro to ideate a new product idea and was thrilled at its [...] Learn more\n\n\"There is a rich portfolio of functionalities which are intuitive to use even for users new to the software...Miro is my go-to tool I use daily to facilitate complex workflows between colleagues from different company areas, especially when we are connecting remotely from various locations. It allows me to co-create and collaborate on key deliverables of my daily work: product roadmaps, value streams, planning workshops, Objectives and Key Results etc...\"\n\nMarian Draganov",
+          "query": "\"Miro\" company overview products customers"
+        },
+        {
+          "url": "https://miro.com/careers/our-story",
+          "title": "Miro Careers | Our Company Story",
+          "content": "Miro launches The Innovation Workspace, a generational leap in collaboration technology and our most significant product launch since 2012.\n\n  Exceeds 80M users and more than 250,000 customers worldwide.\n #### 2025\n\n  Miro becomes the AI Innovation Workspace, bringing teams and AI together to plan, co-create, and build faster.\n\n  Exceeds 100M users and continues to lead the next era of AI-driven collaboration worldwide. [...] “You don’t build a product customers will love by accident. You have to plan for it and set goals around it, starting at the end and working backwards.”\n\nAndrey Khusid\n\nCEO\n\nAndrey\n\nMake something people love\n\n## Make something people love\n\nTogether we can achieve great things. While writing  Miro’s story in real-time, it’s important to celebrate  our milestones and achievements along the way.\n\nTop 5 fastest growing app\n\nMake something people love\n\nRated #1 on G2\n\nMake something people love [...] Our Story\n\n# Our story\n\nMiro is a visual workspace for innovation that enables distributed teams of any size to dream, design, and build the future together. The platform's infinite canvas enables teams to lead engaging workshops and meetings, design products, brainstorm ideas, and more.\n\nOur mission is to empower teams to create the next big thing.\n\nOur story we shook\n\n### We shook the world.  Now let’s co-create the future.",
+          "query": "\"Miro\" company overview products customers"
+        },
+        {
+          "url": "https://miro.com/about",
+          "title": "About Miro | Meet the team | Our mission - Miro | The Innovation Workspace",
+          "content": "Product\n  + Featured\n    - Intelligent Canvas™\n    - Flows\n    - Prototypes & Wireframes\n    - Mermaid Diagrams\n    - Engage\n  + Platform\n    - AI Overview\n       AI Workflows\n       Connectors\n       MCP Server\n       Explore AI Playbooks\n    - MCP Server\n    - Blueprints\n    - Integrations\n    - Security\n    - Enterprise Guard\n    - Developer Platform\n    - Download Apps\n  + Formats\n    - Whiteboard\n    - Diagrams\n    - Kanban\n    - Timelines\n    - TalkTrack\n    - Tables\n    - Docs [...] and services deliver on customer needs. Miro's visual workspace enables teams to come together with AI to develop strategy, design products and services, and manage processes throughout the entire innovation lifecycle. [...] and services deliver on customer needs. Miro's visual workspace enables teams to come together with AI to develop strategy, design products and services, and manage processes throughout the entire innovation lifecycle.",
+          "query": "\"Miro\" company overview products customers"
+        },
+        {
+          "url": "https://miro.com/careers/vacancy/8654691002",
+          "title": "Vice President Customer Success - New York, San Francisco | Miro Careers",
+          "content": "Miro is a visual workspace for innovation that enables distributed teams of any size to build the next big thing. The platform's infinite canvas enables teams to lead engaging workshops and meetings, design products, brainstorm ideas, and more. Miro, co-headquartered in San Francisco and Amsterdam, serves more than 100M users and 250,000 companies collaborate in the Innovation Workspace. Miro was founded in 2011 and currently has more than 1,600 employees in 13 hubs around the world.",
+          "query": "\"Miro\" company overview products customers"
+        },
+        {
+          "url": "https://miro.com/ai/product-development/ai-product-strategy",
+          "title": "AI Product Strategy Guide: Build Winning Plans with Miro AI",
+          "content": "Today's product teams face an unprecedented challenge: customers expect rapid innovation while business complexity continues to skyrocket. Traditional strategy development—with its lengthy research phases, disconnected workshops, and static documents—simply can't keep pace. [...] Stronger Customer-Product Alignment: By keeping customer insights visually connected to product strategy, Xero teams maintained stronger empathy for their small business customers throughout the development process. This led to features that more directly addressed real customer pain points. [...] Xero implemented Miro's innovation workspace as their central hub for product strategy development. Here's how they transformed their approach:\n\nCustomer Journey Mapping at Scale: Instead of static PowerPoint presentations, Xero teams created dynamic, visual customer journey maps on Miro boards. They could map customer pain points, opportunities, and product touchpoints across their entire ecosystem, making it easier to spot strategic gaps and innovation opportunities.",
+          "query": "\"Miro\" company overview products customers"
+        }
+      ]
+    },
+    {
+      "query": "\"Miro\" miro.com",
+      "topic": "general",
+      "include_domains": null,
+      "max_results": 5,
+      "credits": 1.0,
+      "results": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Miro_(collaboration_platform)",
+          "title": "Miro (collaboration platform) - Wikipedia",
+          "content": "Miro is a collaborative online platform designed to support teams in planning and execution across different locations and time zones. It is used for a variety of purposes, including brainstorming, agile planning, customer journey mapping, product design, and remote workshops. As of 2025, the platform is utilized by over 90 million users and more than 250,000 organizations worldwide.\n\n## History\n\n[edit&action=edit&section=1 \"Edit section: History\")]\n\n### Founding and early years (2011–2020) [...] | Trade name | Miro |\n| Formerly | RealtimeBoard |\n| Type | Private |\n| Industry | Software as a service |\n| Founded | 2011 |\n| Founder |  Andrey Khusid  Oleg Shardin |\n| Headquarters | Amsterdam, Netherlands San Francisco, California, United States |\n| Number of employees | 1,864 |\n| Website | miro.com | [...] [edit&action=edit&section=2 \"Edit section: Founding and early years (2011–2020)\")]\n\nMiro was founded in 2011 under the name RealtimeBoard by Russian entrepreneurs Andrey Khusid and Oleg Shardin. Originally designed as a simple visual whiteboarding tool, the product attracted global remote teams because its real-time collaboration features differentiated it from traditional diagramming software.",
+          "query": "\"Miro\" miro.com"
+        },
+        {
+          "url": "https://www.trustpilot.com/review/www.miro.com",
+          "title": "Miro is rated \"Poor\" with 2.1 / 5 on Trustpilot",
+          "content": "Miro is the AI-powered Innovation Workspace that accelerates time to market. It's a platform that redefines how Product, Design, Engineering, Research, Marketing, and other key stakeholders work together and get to outcomes faster by removing friction between teams and tools. The magic of Miro is that unstructured ideas can quickly take shape as structured, organized workflows, from brainstorming and journey mapping to building roadmaps, briefs, diagrams, prototypes, and more — all in one [...] ## Contact info\n\n   Spear Street 201, 94105, San Francisco, United States\n\n   www.miro.com\n\n2.1\n\n### Poor\n\nImage 9: Rated 2 out of 5 stars\n157 reviews\n\n5-star\n\n4-star\n\n3-star\n\n2-star\n\n1-star\n\n  \n\nHow is the TrustScore calculated?\n\nNo recent history of asking for reviews\n\nThis company hasn't invited customers recently, so reviews may not be representative\n\nReplied to 2% of negative reviews\n\nTypically replies within 24 hours [...] more — all in one collaborative workspace. AI is embedded into every workflow in Miro, helping teams to boost productivity and collapse multiple steps into one-click actions. Miro’s Intelligent Canvas™ and Spaces help teams to boost collaboration and creativity, break down silos, and create a single view for any project. AI Sidekicks allow individuals and teams to expand their thinking and significantly shorten time to value. The platform is fully customizable — featuring SDKs, APIs, two-way",
+          "query": "\"Miro\" miro.com"
+        },
+        {
+          "url": "https://projectmiro.com",
+          "title": "MiRO",
+          "content": "Skip to Content \n\nMiRO\n\nMiRO\n\n# PROJECT: TRADE PLACES\n\nWATCH NOW\n\n# The first platform of its kind to combine live music performances with VFX.\n\nMiRO pushes the boundaries of artistic experimentation by blending several art forms.\n\n# The playground for all artists.\n\nMiRO is a program that pushes, amplifies and connects various creatives including:\n\nMusic Artists  \n•  \nPrevis / Concept Artists  \n•  \nDirectors  \n•  \nProducers  \n•  \nDPs / Cinematographers",
+          "query": "\"Miro\" miro.com"
+        },
+        {
+          "url": "https://www.linkedin.com/company/mirohq",
+          "title": "Miro",
+          "content": "Description: Miro is the collaborative workspace where agents and teams converge to think, decide, and build together. As AI accelerates work, the challenge for organizations isn't doing more; it's turning individual output into scaled impact. Serving more than 100 million users across 250,000 customers, Miro’s shared, secure canvas surfaces the context that empowers teams to solve harder problems, make better decisions, and move work forward faster. Founded in 2011, Miro currently employs [...] ## Products and services\nKeywords: technology/software, computers_electronics_and_technology/programming_and_developer_software, product development, ai-powered, visual platform, innovation workspace, ai, technology, artificial-intelligence, enterprise-software, platform [...] # Miro",
+          "query": "\"Miro\" miro.com"
+        },
+        {
+          "url": "https://miro.com",
+          "title": "AI Innovation Workspace | Miro",
+          "content": "Pull outputs from Claude, NotebookLM, or any research tool into one canvas. Your team reviews the findings together, surfaces what matters, and commits to a direction — then flow the insights back out to your roadmap, specs, or next AI prompt.\n\nExplore research\n\n## The only thing more important than moving fast is moving the needle\n\nSee how over 250,000 companies are getting great done in Miro\n\nAida\n\nMiro AI\n\n3.6x\n\nfaster time to market\n\n50%\n\nshorter planning process\n\n2x\n\nfaster time to market [...] ### Blueprints\n\nAutomate key processes and ensure your workflows are scalable, repeatable, and efficient\n\nLearn more\n\n### Enterprise Security & Scale\n\nSecure and scalable collaboration on an enterprise-grade platform you can trust\n\nLearn more\n\n### Integrations\n\nConnects with 250+ apps so teams stay aligned and productive in one scalable, secure workspace.\n\nLearn more\n\nBrie\n\n## The AI platform for teamwork\n\nMove beyond individual AI productivity to team and cross-team collaboration with AI. [...] Pull outputs from Claude, NotebookLM, or any research tool into one canvas. Your team reviews the findings together, surfaces what matters, and commits to a direction — then flow the insights back out to your roadmap, specs, or next AI prompt.\n\nExplore research\n\n# Research\n\n# Roadmaps\n\n# Diagrams\n\n# Workshops\n\n### Turn research into a shared direction",
+          "query": "\"Miro\" miro.com"
+        }
+      ]
+    },
+    {
+      "query": "\"Miro\" news",
+      "topic": "news",
+      "include_domains": null,
+      "max_results": 5,
+      "credits": 1.0,
+      "results": [
+        {
+          "url": "https://www.businesswire.com/news/home/20260910065427/en/Bending-Spoons-enters-into-a-definitive-agreement-to-acquire-Miro-for-%241.355-billion",
+          "title": "Bending Spoons enters into a definitive agreement to acquire Miro for $1.355 billion",
+          "content": "Release Summary\n\nBending Spoons S.p.A. (NASDAQ: BSP) has entered into a definitive agreement to acquire Miro at an enterprise value of $1.355 billion.\n\nRelease Versions\n\nEnglishItalian\n\n### Contacts\n\nMedia Contacts   \nBending Spoons: press@bendingspoons.com   \nMiro: press@miro.com\n\nMore News From Bending Spoons\n\n## Bending Spoons successfully syndicates upsized term loan B add-ons [...] MILAN--(BUSINESS WIRE)--Bending Spoons S.p.A. (NASDAQ: BSP) has entered into a definitive agreement to acquire Miro at an enterprise value of $1.355 billion. Together with Miro’s net cash, this implies an equity value of approximately $1.79 billion. In connection with the all-cash transaction, certain Miro shareholders have agreed to invest $295 million of their proceeds into newly issued Bending Spoons equity. The acquisition, including the investment, is subject to customary closing [...] Contact Us\n\nContact Us\n\nNewsroom\n\n#### Services & Solutions\n\n### ServicesPress Release DistributionIncluded FeaturesMultimedia & EnhancementsSEO & AI VisibilityInvestor CommunicationsReporting & Analytics\n\n### Solutions ForPR ProfessionalsIR ProfessionalsAgenciesPublic CompaniesExplore by Industry\n\nTake Your News Global\n\nExpand your reach across countries, regions and languages\n\n#### Resources\n\n### EducationBlogResearch & ReportsWebinars & EventsVideos",
+          "query": "\"Miro\" news"
+        },
+        {
+          "url": "https://techcrunch.com/2026/09/10/bending-spoons-to-buy-collaboration-tools-maker-miro-for-1-36b-90-less-than-its-2022-valuation",
+          "title": "Bending Spoons to buy collaboration tools maker Miro for $1.36B, 90% less than its 2022 valuation | TechCrunch",
+          "content": "Miro quickly capitalized on that momentum by building a platform that could integrate with more than 250 apps and struck partnerships with Atlassian, Cisco, Microsoft, and Zoom. The company also started letting its users build integrations with common tools and customize the base product to meet their needs. Today, it calls itself an “AI innovation workspace” that offers AI assistants for its whiteboard tools, AI workflows, prototyping tools, and AI connectors that pull context from various [...] Bending Spoons is continuing its trend of buying once-sought-after software companies for pennies on the dollar. This time, the Italian company is buying Miro for $1.36 billion in cash (equity value of $1.79 billion), a mighty dip in valuation for the once-hot workplace collaboration startup that was awarded a price tag of $17.5 billion in late 2021. [...] By all indications, the company has continued growing, though not at that blistering pace. Today, Miro has more than 4 million paying users and 100 million total users. Bending Spoons said Miro now has about $600 million in annual recurring revenue, of which 90% comes from businesses and enterprises. The company also has about $435 million in net cash and is profitable.",
+          "query": "\"Miro\" news"
+        },
+        {
+          "url": "https://www.dallasnews.com/sports/stars/article/miro-heiskanen-roope-hintz-injury-return-22199779.php",
+          "title": "Dallas Stars offer injury updates on Miro Heiskanen, other top players",
+          "content": "Nill told The News that Hintz, who has played in just one game since the Olympic break due to a lower-body injury, is still considered week-to-week and out for the remainder of the regular season. The Stars previously thought he would make his return late in the regular season.\n\nAdvertisement\n\nArticle continues below this ad\n\n“We’ll get a better read here,” Nill said. “We’re kind of just going week by week with him and seeing where he’s at.” [...] Heiskanen had an MRI exam for a lower-body injury Friday, Stars GM Jim Nill told The Dallas Morning News on Friday morning. Head coach Glen Gulutzan told Sportsradio 96.7 FM/1310 The Ticket (KTCK-AM) Friday afternoon that they expect the defenseman to miss the last three games of the regular season and are “certainly hoping” to get him back in the first round of the playoffs. [...] Subscribe\n\nSports//Stars\n\n# Dallas Stars GM, head coach offer injury updates on Miro Heiskanen, other top players\n\n## Heiskanen was injured Thursday night in a playoff preview against the Minnesota Wild.\n\nBy Lia Assimakopoulos, Staff Writer\n\nDallas Stars defenseman Miro Heiskanen controls the puck during an NHL hockey game against the Vegas Golden Knights in Dallas, Tuesday, March 10, 2026. (AP Photo/Tony Gutierrez)\n\nTony Gutierrez/AP",
+          "query": "\"Miro\" news"
+        },
+        {
+          "url": "https://www.thenewstribune.com/entertainment/restaurants/tnt-diner/article316752970.html",
+          "title": "Downtown Tacoma restaurant in prime location has closed after just nine months",
+          "content": "Miró Tapas, a Spanish-inspired restaurant that opened barely nine months ago in a storied location in downtown Tacoma, has closed.",
+          "query": "\"Miro\" news"
+        },
+        {
+          "url": "https://www.intermiamicf.com/news/inter-miami-cf-signs-five-time-uefa-champions-league-winning-midfielder-casemiro",
+          "title": "Inter Miami CF Signs Five-Time UEFA Champions League-Winning Midfielder Casemiro | Inter Miami CF",
+          "content": "Inter Miami CF announced today that it has signed Brazilian international midfielder Casemiro. The five-time UEFA Champions League-winning midfielder joins the Club as a free agent and will remain under contract through the conclusion of the 2027 MLS Sprint Season, with an extension option until June 2029. The midfielder bolsters the team’s roster pending receipt of his P-1 Visa. [...] Across eight seasons with Real Madrid's first team, Casemiro made 336 appearances, recording 31 goals and 29 assists while helping the club capture 18 major trophies.\n\nIn 2022, Casemiro joined Manchester United, where he continued to perform at an elite level. During his three seasons with the Red Devils, he made 160 appearances, tallying 26 goals and 14 assists while helping the club secure an English League Cup and an FA Cup title. [...] TRANSACTION: Inter Miami CF signs Brazilian international midfielder Casemiro as a free agent through the conclusion of the 2027 MLS Sprint Season, with an extension option until June 2029. Inter Miami CF acquired Casemiro’s Discover Priority from the LA Galaxy.\n\nInter Miami CF Communications Department\n\n MLS\n Press Release\n\n Share on Facebook\n Share on X\n\n## Related Stories",
+          "query": "\"Miro\" news"
+        }
+      ]
+    }
+  ]
+}

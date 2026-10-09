@@ -1,0 +1,133 @@
+{
+  "case_id": "ru-vkusvill",
+  "brief": {
+    "company": "ВкусВилл",
+    "website": "vkusvill.ru",
+    "offer": "Аудит карточек товаров в мобильном приложении",
+    "recipient": "Директор по продукту",
+    "language": "Russian",
+    "tone": "Direct"
+  },
+  "recorded_at": "2026-10-09T12:07:34+00:00",
+  "searches": [
+    {
+      "query": "\"ВкусВилл\" company overview products customers",
+      "topic": "general",
+      "include_domains": [
+        "vkusvill.ru"
+      ],
+      "max_results": 5,
+      "credits": 1.0,
+      "results": [
+        {
+          "url": "https://vkusvill.ru/about",
+          "title": "О нас | ВкусВилл",
+          "content": "Мы всегда в открытом диалоге с покупателями, производителями и партнёрами. Это позволяет нам развивать компанию от обратной связи и постоянно улучшаться для вас.\n\nВкусные, уникальные и натуральные продукты\n\nНаши технологи находят уникальные продукты с лучшими составами. А вкус это ещё один важный критерий оценки качества, в котором главные критики — покупатели.\n\nЗабота о себе  \n и о будущем [...] 9\n\nшагов проверки делают продукты ВкусВилл не только вкусными, но и качественными\n\n1 900+\n\nпроизводителей стали нашими партнёрами и создают продукты для вас\n\n \n\nРазвиваем вкусные сервисы и проекты для покупателей\n\n  Сокоматы\n\n  Мясные витрины\n\n  Рыбные витрины\n\n  Пекарня\n\n  Цветы\n\n  Сгоряча\n\n  Аптека\n\n  ВкусМил\n\n  ВкусВилл Праздник\n\n  Торты на заказ\n\n  Микромаркеты\n\n  Вендинги\n\n  «Без упаковки»\n\n  Кафе\n\n  Кофе с собой\n\n  Партнерская программа\n\n  B2B\n\nИстория компании\n\n Узнать больше [...] |  |  |\n --- |\n| 4 200+ | продуктов под брендом ВкусВилл |\n| 85% | ассортимента отечественного производства |\n| 11 200+ | товаров доступны с нашей бесплатной доставкой |\n\n \n\n|  |  |\n --- |\n| 1 537+ | магазинов |\n| 264+ | даркстора  Что такое даркстор? |\n| 155+ | городов  Карта магазинов |\n\n \n\nЛидеры в доставке продуктов\n\n9 из 10\n\nпокупателей оценивают доставку на отлично\n\n480+ тыс.\n\nзаказов в день доставляют наши курьеры\n\nГордимся системой качества\n\n9",
+          "query": "\"ВкусВилл\" company overview products customers"
+        },
+        {
+          "url": "https://vkusvill.ru/history",
+          "title": "История компаний «ВкусВилл» и «Избёнка»",
+          "content": "Карта лояльности\n\nКарта лояльности\n\nРецепты\n\nРецепты\n\nКаталог\n\nАкции\n\nДоставка и оплата\n\nКарта лояльности\n\nРецепты\n\nСладости, десерты\n\nГотовая еда\n\nБизнесу\n\nПодарочные карты\n\n# Путь от «Избёнки» до «ВкусВилл»\n\n«ВкусВилл» — бренд полезных продуктов для здорового питания, сеть магазинов и сервис бесплатной доставки. Мы работаем для тех, кто выбирает для себя и близких безопасные продукты, качественные и с честным составом. И верим, что в России можно и нужно вести честный бизнес\n\n    \n\n2009 [...] Мы развиваем экосистему проектов, за которыми стоит ВкусВилл, чтобы продукты и сервисы, созвучные ценностям бренда, как можно чаще присутствовали в повседневной жизни наших покупателей и закрывали самые разные потребности, связанные с полезной едой. В связи с этим мы купили «АндерСон» — это уникальный бренд с собственной кондитерской фабрикой и сетью семейных кафе. [...] ВкусВилл — уже не просто магазин у дома, это целая экосистема проектов и сервисов. Помимо бесплатной доставки, в неё входят микромаркеты, вендинги, B2B-направление, готовые рационы, кейтеринг и многое другое. Мы расширяем доступность дополнительных сервисов для покупателей. К концу года уже работают 300+ отделов с товарами без упаковки, 100+ мясных и рыбных витрин, 800+ магазинов с сокоматами и кофемашинами и 22 — с винными отделами. А полюбившийся всем формат Кафе есть уже в каждом пятом",
+          "query": "\"ВкусВилл\" company overview products customers"
+        },
+        {
+          "url": "https://vkusvill.ru/b2b",
+          "title": "ВкусВилл Бизнес",
+          "content": "Очень удобно! Можно заказать через мобильное приложение ВкусВилл питание деткам либо вечером, либо день в день. Заказываем питание для двух садиков. Продукция ВкусВилл нравится по качеству. Ценим ваш сервис.\n\nОЧУ «Вальдорфская школа-сад «Семейный лад»\n\nБлагодарим ВкусВилл за плодотворное сотрудничество. Нам нравится ответственный подход к своему делу, оперативность в поставке свежих продуктов и гибкость в решении всех важных для нас вопросов.\n\nБлаготворительный Фонд Котодетки [...] Сервис от ВкусВилл стал оптимальным решением для нас: на каждую неделю у нас есть бюджет, в рамках которого мы можем заказывать продукты с отсрочкой платежа. ВкусВилл предоставляет действительно широкий ассортимент качественных продуктов с бесплатной доставкой за 1-2 часа. А особую благодарность хочется написать команде, любые вопросы решаются легко и быстро, отчеты предоставляются вовремя. По любому вопросу всегда сориентируют. ВкусВилл радует качеством продуктов, отлаженностью процессов и [...] Отдельно хотим подчеркнуть качество продукции: ассортимент всегда соответствует заявленным стандартам, свежесть и стабильность поставок позволяют нам уверенно предлагать покупателям товары, отвечающие их ожиданиям.   \n  \n С уважением, Магазин «Семеновский»",
+          "query": "\"ВкусВилл\" company overview products customers"
+        },
+        {
+          "url": "https://vkusvill.ru/goods",
+          "title": "Каталог товаров ВкусВилл | Продукты и цены на официальном сайте",
+          "content": "Особое питание  Особое питание\n\nКрупы, макароны, мука  Крупы, макароны, мука\n\nАлкоголь  Алкоголь\n\nКонсервы, мёд и варенье  Консервы, мёд и варенье\n\nЧай и кофе  Чай и кофе\n\nМасла, соусы, специи, сахар и соль  Масла, соусы, специи, сахар и соль\n\nКосметика, средства гигиены  Косметика, средства гигиены\n\nТовары для дома и кухни  Товары для дома и кухни\n\nСад и огород  Сад и огород\n\nТовары для животных  Товары для животных\n\nИндилавка: вкусы мира  Индилавка: вкусы мира [...] Новинки\n Хиты\n Готовая еда\n Сладости и десерты\n Овощи, фрукты, ягоды, зелень\n Хлеб и выпечка\n Выпекаем сами\n Мясо, птица\n Молочные продукты, яйцо\n Рыба, икра и морепродукты\n Колбаса, сосиски, деликатесы\n Напитки\n Мороженое\n Замороженные продукты\n ШефВилл. Запечь — и готово\n Торты на заказ\n Доставка рационов «ВкусМил»\n Детский праздник\n ВкусВилл Кейтеринг\n Сыры\n Кафе\n Кухня ВкусВилл\n Орехи, чипсы и снеки\n Супермаркет\n Товары для детей\n Вегетарианское и постное\n Особое питание [...] Особое питание\n Крупы, макароны, мука\n Алкоголь\n Консервы, мёд и варенье\n Чай и кофе\n Масла, соусы, специи, сахар и соль\n Косметика, средства гигиены\n Товары для дома и кухни\n Сад и огород\n Товары для животных\n Индилавка: вкусы мира\n Идеи для подарков\n Свежие цветы\n Здоровье\n Добрая полка\n Подарочные карты",
+          "query": "\"ВкусВилл\" company overview products customers"
+        },
+        {
+          "url": "https://vkusvill.ru/faq/kakaya-missiya-i-tsennosti-u-vkusvilla-",
+          "title": "Какая миссия и ценности у ВкусВилла?",
+          "content": "На пути к этой цели нам помогают три принципа: вкусная, натуральная и полезная еда; включённые отношения с покупателями, партнёрами и коллегами; забота о себе и будущем. Мы внимательно относимся к составу, качеству, безопасности и упаковке продуктов, учитываем обратную связь и поддерживаем экологические и благотворительные инициативы [...] Источники:\n\nБренд ВкусВилл\n\nСоздано: 9 июля 2026 г.\n\nЧасто спрашивают:\n\nЧто такое ВкусВилл?\n\nКак раньше назывался ВкусВилл?\n\nКогда появился ВкусВилл и сколько ему лет?\n\nПопулярные категории во ВкусВилле\n\nГотовая еда   Сладости и десерты   Овощи, фрукты, ягоды, зелень   Хлеб и выпечка   Мясо, птица   Молочные продукты, яйцо   Рыба, икра и морепродукты   Замороженные продукты   Колбаса, сосиски, деликатесы   Напитки   Сыры   Постное и вегетарианское\n\nПопулярные товары во ВкусВилле",
+          "query": "\"ВкусВилл\" company overview products customers"
+        }
+      ]
+    },
+    {
+      "query": "\"ВкусВилл\" vkusvill.ru",
+      "topic": "general",
+      "include_domains": null,
+      "max_results": 5,
+      "credits": 1.0,
+      "results": [
+        {
+          "url": "https://ru.wikipedia.org/wiki/%D0%92%D0%BA%D1%83%D1%81%D0%B2%D0%B8%D0%BB%D0%BB",
+          "title": "Вкусвилл — Википедия",
+          "content": "{{#parsoid\\u0000fragment:10}}[ H][ G][ Я][ O]\"}}\" id=\"mwBQ\" about=\"#mwt3\" typeof=\"mw:Extension/indicator\">\n\n«Вкусви́лл» — российская розничная сеть супермаркетов и собственная торговая марка продуктов, позиционируемых как «продукты для здорового питания». В 2025 году сеть насчитывает более 2 тысяч магазинов и более 240 дарксторов в 157 городах России.\n\n## История\n\n[править | править код] [...] Основана в 2009 году в Москве предпринимателем Андреем Кривенко как сеть магазинов под названием «Избёнка». Первый магазин открылся в районе Строгино \"Строгино (район Москвы)\") 12 мая 2009 года. С 2012 года помимо (а позднее и вместо) «Избёнок», торговавших исключительно молочной продукцией, начали открываться магазины «Вкусвилл» с более широким ассортиментом, с фокусом на скоропортящуюся продукцию без консервантов и усилителей вкуса от небольших производителей. [...] | Оборот | ▲ 329 млрд ₽ (2024) |\n| Чистая прибыль | ▲ 6,08 млрд ₽ (2024) |\n| Активы | ▲ 104,8 млрд ₽ (2024) |\n| Число сотрудников |  10 000 чел. |\n| Сайт | vkusvill.ru |\n| Логотип Викисклада Медиафайлы на Викискладе |",
+          "query": "\"ВкусВилл\" vkusvill.ru"
+        },
+        {
+          "url": "https://vkusvill.ru",
+          "title": "ВкусВилл — интернет-магазин продуктов для здорового питания с доставкой на дом | Москва и вся Россия",
+          "content": "Покупайте готовую еду  \n и выигрывайте призы\n\nУчаствовать\n\nСкидкинедели\n\nСкидки  \n недели\n\nВкусные и полезные  \n товары по выгодным ценам\n\nВ подборку\n\nФруктовый заряд\n\nФруктовый заряд\n\nНовые смузи с клетчаткой  \n — в кафе и с доставкой\n\nПопробовать\n\nВкусГрузии\n\nВкус  \n Грузии\n\nБлюда, приготовленные  \n по традиционным рецептам\n\nПопробовать\n\nCезон «Сумерек»\n\nCезон «Сумерек»\n\nПора зажечь свечи, завернуться в плед и позвать друзей на пижамную вечеринку\n\nХочу!\n\nСпециально для вас\n\nНовинки [...] Мы используем cookies, чтобы сайт был лучше. Что это?\n\nС картой выгоднее\n\nАвторизуйтесь по номеру телефона, и мы найдём вашу карту лояльности или создадим новую. С картой вы сможете:\n\n назначать скидку 20% на любимый продукт\n получать 6 персональных скидок каждый день\n пользоваться скидками программы лояльности\n оформлять возврат онлайн\n\nА ещё у нас есть приложение\n\n  App Store     Google Play     AppGallery     RuStore\n\nДоставка и оплата\n\nДоставка и оплата\n\nКарта лояльности\n\nКарта лояльности [...] 1,03k\n Генератор дынно-арбузного и почти никаких косточек\n\n  # ВкусВилл\n\n  Генератор дынно-арбузного и почти никаких косточек\n\n  19,51k\n\n  12\n\nПопулярное\n\nТовары и продукты с честным и чистым составом в интернет-магазине ВкусВилл с бесплатной доставкой\n\n  \n\nГотовая еда\n\n  \n\nСладости и десерты\n\n  \n\nОвощи, фрукты, ягоды и зелень\n\n  \n\nХлеб и выпечка\n\n  \n\nМолочные продукты, яйцо\n\n  \n\nМясо, птица\n\n  \n\nКаталог\n\nПриглашаем в команду\n\nХочу во ВкусВилл",
+          "query": "\"ВкусВилл\" vkusvill.ru"
+        },
+        {
+          "url": "https://apps.apple.com/ru/app/%D0%B2%D0%BA%D1%83%D1%81%D0%B2%D0%B8%D0%BB%D0%BB-%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BA%D0%B0-%D0%BF%D1%80%D0%BE%D0%B4%D1%83%D0%BA%D1%82%D0%BE%D0%B2/id1399903464",
+          "title": "‎Приложение «ВкусВилл: доставка продуктов» — App Store",
+          "content": "ВкусВилл — приложение для заказа продуктов и готовой еды с доставкой на дом, в офис или на дачу. В каталоге собраны продукты питания, напитки и готовые блюда; доступные для вашего адреса способы получения, стоимость и сроки приложение покажет при оформлении.\nВ одном приложении можно заказать продукты питания, готовую еду, напитки, товары собственной марки ВкусВилл и других брендов. Выбирайте доставку, экспресс-доставку или самовывоз и получайте покупки удобным способом. [...] • самовывоз из удобного магазина.\nКАТАЛОГ ДЛЯ ПОКУПОК НА КАЖДЫЙ ДЕНЬ\nВ приложении ВкусВилл удобно искать и заказывать:\n• продукты питания и напитки;\n• готовую еду и блюда на каждый день;\n• полезные продукты, ПП-блюда и позиции без сахара;\n• товары собственной торговой марки ВкусВилл и других брендов.\nКАЧЕСТВО ПРОДУКТОВ\nВкусВилл тщательно отбирает производителей и проверяет качество продуктов от партии к партии: [...] • проводит дегустации продуктов, собирает обратную связь и передаёт рекомендации поставщикам;\n• проверяет состав товаров в независимых лабораториях;\n• ежедневно проверяет качество каждой партии;\n• улучшает качество продуктов на основе отзывов покупателей.\nСКИДКИ И ПРОГРАММА ЛОЯЛЬНОСТИ\nВиртуальная карта ВкусВилл оформляется автоматически после ввода номера телефона. Гибкая программа лояльности подстраивается под пользователя:\n• скидка 20% на Любимый продукт в течение недели;",
+          "query": "\"ВкусВилл\" vkusvill.ru"
+        },
+        {
+          "url": "https://play.google.com/store/apps/details?id=ru.vkusvill&hl=ru",
+          "title": "Приложения в Google Play – ВкусВилл: доставка продуктов",
+          "content": "ВкусВилл — современная онлайн доставка продуктов и готовой еды. Мы сделали заказ продуктов на дом, в офис или на дачу максимально удобным: бесплатная доставка продуктов без минимальной суммы, понятная навигация и удобные способы оплаты. ВкусВилл объединяет три составляющих комфорта: продукты, еда, доставка!\n\n### Почему выбирают ВкусВилл:\n\n### 🛍️ Экономьте время — заказывайте продукты онлайн [...] ## Описание\n\nДоставка продуктов и готовая еда от ВкусВилл — это натуральные продукты, надежные поставщики и удобный сервис для покупок на каждый день. Наш продуктовый магазин предлагает полезные продукты питания, ПП-еду на дом и быструю доставку из магазина. [...] Доставка доступна в Москве и МО, Санкт-Петербурге и других городах (полный список в приложении).\n\n### 🚴 Заказывайте продукты на дом\n\nКупить продукты к ужину, оформить доставку продуктов питания или заказать продукты впрок — просто. ВкусВилл помогает быстро собрать регулярные покупки: в ассортименте всегда свежие позиции, полезные продукты и еда на дом.",
+          "query": "\"ВкусВилл\" vkusvill.ru"
+        },
+        {
+          "url": "https://www.instagram.com/vkusvill_ru?hl=en",
+          "title": "ВкусВилл — бесплатная доставка (@vkusvill_ru) • Instagram photos and videos",
+          "content": "Log In\n\nSign Up\n\n 494K followers\n 6 following\n\nВкусВилл — бесплатная доставка\n\nvkusvill\\_ru\n\n🥑 Делаем полезные продукты вкусными (и наоборот)  \n🚛 Бесплатная доставка даже на дачу\n\ntaplink.cc/vkusvill\n\n vkusvill_ru's highlight story picture\n\n  Наши письма\n vkusvill_ru's highlight story picture\n\n  Работа с ВВ\n vkusvill_ru's highlight story picture\n\n  НИИ\n vkusvill_ru's highlight story picture\n\n  Подкаст\n vkusvill_ru's highlight story picture\n\n  Получить %\n vkusvill_ru's highlight story picture [...] На дачу\n vkusvill_ru's highlight story picture\n\n  Поставщики\n vkusvill_ru's highlight story picture\n\n  ФОНДЫ\n vkusvill_ru's highlight story picture\n\n  Новичок\n vkusvill_ru's highlight story picture\n\n  Доставка\n\nVideo by ВкусВилл — бесплатная доставка on October 05, 2026. May be an image of coconut macaroon, truffle, caramel and text.\n\nVideo by ВкусВилл — бесплатная доставка on October 04, 2026. May be an image of text.\n\nPhoto by ВкусВилл — бесплатная доставка on October 03, 2026. [...] Video by ВкусВилл — бесплатная доставка on September 29, 2026. May be an image of kitten, Persian cat and text.\n\nVideo by ВкусВилл — бесплатная доставка on September 28, 2026. May be an image of medicine, algae, juice and text.\n\nVideo by ВкусВилл — бесплатная доставка on September 27, 2026. May be an image of cooker, apron and text.\n\nVideo by ВкусВилл — бесплатная доставка on September 26, 2026. May be an image of one or more people, beard, hair, poster and text.",
+          "query": "\"ВкусВилл\" vkusvill.ru"
+        }
+      ]
+    },
+    {
+      "query": "\"ВкусВилл\" news",
+      "topic": "news",
+      "include_domains": null,
+      "max_results": 5,
+      "credits": 1.0,
+      "results": [
+        {
+          "url": "https://www.foodbusinessnews.net/media/photos/4758-new-on-the-menu",
+          "title": "New on the menu - Food Business News",
+          "content": "Home » Multimedia » Slideshows » New on the menu. # New on the menu. Introductions center on protein and seasonal beverages. ## Current Issues & Directories. # Popular Articles. * # Conagra Brands incurs impairment charge of nearly $1 billion. * # Flavors to move beyond taste in 2026. * # PepsiCo realigns senior executive team. # Popular Galleries. * ## The innovations that made us go ‘wait … what?’ in 2025. Unusual offerings included soup-flavored cough drops, a ketchup smoothie and chili-flavored ice cream. * ## Kellanova innovation heats up in 2025. The company expanded its presence with co-branded launches and on-trend introductions. Design, CMS, Hosting & Web Development :: ePublishing.",
+          "query": "\"ВкусВилл\" news"
+        },
+        {
+          "url": "https://www.jpost.com/consumerism/article-881980",
+          "title": "Happy comebacks, decadent landings: Israel’s tasty news - The Jerusalem Post",
+          "content": "This time, a collaboration has been woven between Gerti Doner and the Lechem Bait restaurant in Or Yehuda, resulting in no less than a full week (Sunday–Friday, December 28 to January 02, from 10:30) of a huge, kosher, rotating lamb sirloin skewer. **Late-night meal, Beit Goldberg**. A joyful nostalgic homage, and a much-needed answer to an urban shortage, came together to create a tasty — and late — comeback. All of this comes together in four decadent — or very decadent — versions: “Strawberry Corruption” (meringue cream, fresh strawberries, and lychee-cassis syrup), choco-banana (Nutella cream, bananas, and salted caramel syrup), “Green Gold” (pistachio cream, kataifi strands, freshly ground pistachio, and pistachio sauce), and “Lemon Kiss” (lemon cream, torched meringue, and vanilla sauce). **Flavors of the East ice cream, Vaniglia and Arkia**. The Flavors of the East ice cream by Vaniglia and Arkia was created to mark the opening of the air route to Thailand and Vietnam, and is inspired by it.",
+          "query": "\"ВкусВилл\" news"
+        },
+        {
+          "url": "https://www.axios.com/local/nw-arkansas/2026/03/23/monday-munchies-afghan-food-rogers-bek",
+          "title": "Monday Munchies: Afghan food in Rogers - Axios",
+          "content": "# Monday Munchies: Afghan food in Rogers. It was a wonderful experience, and it wasn't in Northwest Arkansas. **🇦🇫 The latest:** We now have BEK Restaurant & European Gourmet Market in Rogers, where diners order off the Turkish or Afghan menus. **The vibe:** BEK has both a food truck outside and an indoor restaurant that shares a building with a market carrying foods from Eastern Europe. The indoor restaurant feels casual and café-style, but the food does not. Sure, it's two red meats at one meal, but the flavors are varied enough that you won't mind. **💰 By the numbers:** My husband and I split both dishes, and it was just the right amount of food. ## More NW Arkansas stories. ### Bentoville Food Theater to spotlight diverse cuisine. ### Voters elect Democratic challengers, pass local issues. ### Arkansas may partner with Turning Point USA. Get a free daily digest of the most important news in your backyard with Axios NW Arkansas.",
+          "query": "\"ВкусВилл\" news"
+        },
+        {
+          "url": "https://www.beveragedaily.com/Article/2026/10/02/new-drinks-launches-vodka-wellness-and-premium-wine/",
+          "title": "New beverage launches: Grey Goose, MOMO and more... - beveragedaily.com",
+          "content": "News & Analysis for the Beverage Industry. # New beverage launches: Grey Goose, MOMO and more... MOMO Kombucha continues to build its seasonal collaboration strategy within the premium soft drinks category.(MOMO). ## From premium spirits and craft soft drinks to wine and rum, brands are using flavour innovation, provenance and limited editions to drive interest across multiple beverage categories. The latest wave of beverage launches highlights how producers are responding to demand for more distinctive flavours, premium experiences and stronger brand storytelling. DropWorks Rum is expanding its limited-edition Distiller’s Drop series with the launch of Distiller’s Drop #003 – American Oak Smoked Cask, a British rum finished in Scotch whisky casks. MOMO Kombucha has partnered with produce specialist Natoora to launch a limited-edition Passion Fruit Kombucha, adding to its portfolio of seasonal collaborative releases. GREY GOOSE has expanded its flavoured vodka portfolio in the UK with the launch of Berry Rouge, its biggest flavour extension in more than a decade.",
+          "query": "\"ВкусВилл\" news"
+        },
+        {
+          "url": "https://www.cbsnews.com/baltimore/video/goetze-candy-company-is-gearing-up-for-fall-with-their-new-pumpkin-and-apple-caramel-flavors/",
+          "title": "Goetze Candy Company is gearing up for fall with their new pumpkin and apple caramel flavors - CBS News",
+          "content": "* WJZ and the Baltimore Banner. # Goetze Candy Company is gearing up for fall with their new pumpkin and apple caramel flavors. Emily Goetze, Manager, joins us with some new and returning Cow Tales and Caramel Creams flavors for the fall.",
+          "query": "\"ВкусВилл\" news"
+        }
+      ]
+    }
+  ]
+}

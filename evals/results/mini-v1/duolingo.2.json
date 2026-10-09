@@ -1,0 +1,287 @@
+{
+  "case_id": "duolingo",
+  "config": "mini",
+  "models": "Research gpt-5.4-mini/low, Strategy gpt-5.4-mini/medium, Writing gpt-5.4-mini/medium, Review gpt-5.4-mini/low",
+  "repeat": 2,
+  "snapshot_recorded_at": "2026-10-09T12:05:18+00:00",
+  "checks": {
+    "label": "draft",
+    "outcome_ok": true,
+    "facts": 7,
+    "dropped_facts": 1,
+    "attempts": 2,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 65,
+    "subject_words": 4,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": [
+      "133"
+    ]
+  },
+  "result": {
+    "run_id": "97549246462942a392c7257363186934",
+    "brief": {
+      "company": "Duolingo",
+      "website": "duolingo.com",
+      "offer": "Voice actors and audio production for language-learning content",
+      "recipient": "Director of Learning Content",
+      "language": "English",
+      "tone": "Direct"
+    },
+    "status": "ready",
+    "reason": null,
+    "message": "The draft passed review.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "Duolingo says it uses a freemium model, offering free learning while monetizing through paid subscriptions.",
+          "excerpt": "\"The freemium business model is good for our mission and our business.\"",
+          "source_url": "http://investors.duolingo.com/company-strategy-overview-0",
+          "source_title": "Company Strategy Overview - Duolingo, Inc."
+        },
+        {
+          "id": 2,
+          "claim": "Duolingo reported 52.7M daily active users, 133.1M monthly active users, and 12.2M paid subscribers as of Q4 2025.",
+          "excerpt": "\"As of Q4 2025, we have 52.7M DAUs, 133.1M MAUs, and 12.2M paid subscribers.\"",
+          "source_url": "http://investors.duolingo.com/company-strategy-overview-0",
+          "source_title": "Company Strategy Overview - Duolingo, Inc."
+        },
+        {
+          "id": 3,
+          "claim": "Duolingo says it runs more than 1,000 A/B tests per quarter to improve product quality.",
+          "excerpt": "\"running 1,000+ A/B tests per quarter\"",
+          "source_url": "http://investors.duolingo.com/company-strategy-overview-0",
+          "source_title": "Company Strategy Overview - Duolingo, Inc."
+        },
+        {
+          "id": 4,
+          "claim": "Duolingo says it focuses growth investment almost entirely on product R&D, with marketing used strategically.",
+          "excerpt": "\"our investment in growth is almost all in product R&D, with marketing used to strategically accelerate growth.\"",
+          "source_url": "https://blog.duolingo.com/duolingo-company-strategy",
+          "source_title": "Duolingo Company Strategy: How Duolingo Builds Lasting Success"
+        },
+        {
+          "id": 5,
+          "claim": "Duolingo says it had grown to 40M daily active users from 2019 and sees a large opportunity in English learners.",
+          "excerpt": "\"we’ve 10X’d the number of DAUs from 2019 to 40M today\"",
+          "source_url": "https://blog.duolingo.com/duolingo-company-strategy",
+          "source_title": "Duolingo Company Strategy: How Duolingo Builds Lasting Success"
+        },
+        {
+          "id": 6,
+          "claim": "Duolingo offers paid Super Duolingo subscriptions and says those subscriptions help fund free access for millions of learners.",
+          "excerpt": "\"Your Super Duolingo subscription helps you be a superlearner — and helps us provide a free learning experience to millions of Duolingo learners worldwide.\"",
+          "source_url": "https://www.duolingo.com/super",
+          "source_title": "Learn a language for free"
+        },
+        {
+          "id": 7,
+          "claim": "Duolingo says its product is built on play and gamification to make learning fun.",
+          "excerpt": "\"Our product is built on play, using gamification and design to make learning fun.\"",
+          "source_url": "https://handbook.duolingo.com",
+          "source_title": "The Duolingo Handbook"
+        }
+      ],
+      "website_matches": true,
+      "website_note": "The results describe Duolingo, the company behind duolingo.com, including its products, business model, and learner scale.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 1
+    },
+    "strategy": {
+      "observation": "Duolingo operates at very high scale, with 52.7M daily active users and 133.1M monthly active users, while also running more than 1,000 A/B tests per quarter and concentrating growth investment almost entirely in product R&D; that suggests learning-content changes need to be scalable and measurable.",
+      "fact_ids": [
+        2,
+        3,
+        4
+      ],
+      "offer_link": "Voice actors and audio production could help the learning content team create or refresh large volumes of lesson audio in a way that stays consistent, testable, and easy to iterate on across a massive user base.",
+      "hypotheses": [
+        "The team may be looking for faster ways to produce or refresh course audio across many languages.",
+        "Audio quality and voice consistency may matter in internal experiments on lesson completion or engagement.",
+        "There may be a need to localize or expand content without increasing production bottlenecks."
+      ],
+      "angle": "With 133M monthly users and 1,000+ A/B tests a quarter, lesson audio has to be built to scale and iterate quickly.",
+      "offer_fit": "good",
+      "fit_reason": "A Director of Learning Content at a language-learning company is a plausible buyer for voice actors and audio production, and Duolingo’s scale makes efficient, measurable audio workflows potentially valuable."
+    },
+    "draft": {
+      "subject": "Lesson audio at scale",
+      "body": "With 133M monthly users and 1,000+ A/B tests a quarter, I assume lesson audio needs to scale and change quickly.\n\nWe help language teams with voice casting and audio production for large course libraries, so new or updated lessons stay consistent and easy to test. Given Duolingo says growth investment goes almost entirely into product R&D, is faster audio refresh part of your current work?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Lesson audio at scale",
+          "body": "With 133M monthly users and 1,000+ A/B tests a quarter, lesson audio has to scale and change quickly.\n\nWe help language teams handle voice casting and audio production for large course libraries, so new or updated lessons stay consistent and easy to iterate. Since Duolingo says growth investment goes almost entirely into product R&D, I wondered if faster audio refreshes are a current need.\n\nOpen to a brief chat?"
+        },
+        "review": {
+          "passed": false,
+          "issues": [
+            "The first sentence makes an unsupported conclusion: “lesson audio has to scale and change quickly.” Rewrite it as an assumption or question, for example “I assume lesson audio needs to scale and change quickly.”"
+          ]
+        }
+      },
+      {
+        "attempt": 2,
+        "draft": {
+          "subject": "Lesson audio at scale",
+          "body": "With 133M monthly users and 1,000+ A/B tests a quarter, I assume lesson audio needs to scale and change quickly.\n\nWe help language teams with voice casting and audio production for large course libraries, so new or updated lessons stay consistent and easy to test. Given Duolingo says growth investment goes almost entirely into product R&D, is faster audio refresh part of your current work?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@1",
+      "strategy": "strategy@1",
+      "copywriter": "copywriter@1",
+      "review": "review@1"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "research@1",
+        "duration_ms": 3572,
+        "usage": {
+          "input_tokens": 4745,
+          "cached_input_tokens": 4352,
+          "cache_write_tokens": null,
+          "output_tokens": 544,
+          "reasoning_tokens": 45
+        },
+        "cost_usd": 0.00306915,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "strategy@1",
+        "duration_ms": 5707,
+        "usage": {
+          "input_tokens": 685,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 779,
+          "reasoning_tokens": 512
+        },
+        "cost_usd": 0.00401925,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "copywriter@1",
+        "duration_ms": 3895,
+        "usage": {
+          "input_tokens": 765,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 568,
+          "reasoning_tokens": 454
+        },
+        "cost_usd": 0.00312975,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "review@1",
+        "duration_ms": 3018,
+        "usage": {
+          "input_tokens": 680,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 409,
+          "reasoning_tokens": 348
+        },
+        "cost_usd": 0.0023505,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 2,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "copywriter@1",
+        "duration_ms": 2268,
+        "usage": {
+          "input_tokens": 928,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 338,
+          "reasoning_tokens": 232
+        },
+        "cost_usd": 0.002217,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 2,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "review@1",
+        "duration_ms": 2426,
+        "usage": {
+          "input_tokens": 674,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 316,
+          "reasoning_tokens": 296
+        },
+        "cost_usd": 0.0019275,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Duolingo\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Duolingo\" duolingo.com",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Duolingo\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 20901
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "case_id": "fictional-bakery",
+  "brief": {
+    "company": "Hollowmere Bakehouse",
+    "website": "hollowmere-bakehouse.com",
+    "offer": "Online ordering setup for local bakeries",
+    "recipient": "Owner",
+    "language": "English",
+    "tone": "Direct"
+  },
+  "recorded_at": "2026-10-09T12:06:42+00:00",
+  "searches": [
+    {
+      "query": "\"Hollowmere Bakehouse\" company overview products customers",
+      "topic": "general",
+      "include_domains": [
+        "hollowmere-bakehouse.com"
+      ],
+      "max_results": 5,
+      "credits": 1.0,
+      "results": []
+    },
+    {
+      "query": "\"Hollowmere Bakehouse\" hollowmere-bakehouse.com",
+      "topic": "general",
+      "include_domains": null,
+      "max_results": 5,
+      "credits": 1.0,
+      "results": [
+        {
+          "url": "https://onwardsdigital.com/example-cafe.html",
+          "title": "Hollowmere Coffee & Bakehouse — East End, Portland, Maine",
+          "content": "Coffee, sourdough and laminated pastries baked on-site from 5am in Portland's East End. Weekend brunch until 2. Open daily 7–3. Walk-in only; order ahead",
+          "query": "\"Hollowmere Bakehouse\" hollowmere-bakehouse.com"
+        },
+        {
+          "url": "https://www.hearthhollowbakehouse.com",
+          "title": "Hearth & Hollow Bakehouse",
+          "content": "Discover the heart of artisan baking. At Hearth & Hollow Bakehouse, we craft every item by hand, using traditional methods, simple ingredients, and intentional",
+          "query": "\"Hollowmere Bakehouse\" hollowmere-bakehouse.com"
+        },
+        {
+          "url": "https://open.spotify.com/episode/2WkMsuyqQf1AvuMPCteGzw",
+          "title": "Letter 3 — The Bakehouse · Cozy Sleep Story for Adults",
+          "content": "Listen to this episode from Letters from Hollowmere on Spotify. Letter 3 — The BakehouseThe reply Edwin has been waiting for arrives from his sister",
+          "query": "\"Hollowmere Bakehouse\" hollowmere-bakehouse.com"
+        },
+        {
+          "url": "https://www.facebook.com/HollowayBakehouse",
+          "title": "Holloway Bakehouse (@HollowayBakehouse)",
+          "content": "All available as gluten free brownie half trays also available baked fresh to order #bakedinbadsey #homemade #tastytreat #HomemadeGoodness.",
+          "query": "\"Hollowmere Bakehouse\" hollowmere-bakehouse.com"
+        },
+        {
+          "url": "https://fullmoonbakehouse.com/about",
+          "title": "About - Full Moon Bakehouse",
+          "content": "Full Moon Bakehouse is a cottage bakery, run out of my home kitchen in Eau Claire, Wisconsin. My home happens to be one my grandparents owned for 60 years,",
+          "query": "\"Hollowmere Bakehouse\" hollowmere-bakehouse.com"
+        }
+      ]
+    },
+    {
+      "query": "\"Hollowmere Bakehouse\" news",
+      "topic": "news",
+      "include_domains": null,
+      "max_results": 5,
+      "credits": 1.0,
+      "results": [
+        {
+          "url": "https://news.artnet.com/art-world/miami-bakehouse-art-complex-celebrates-40-years-2715414",
+          "title": "A Miami Art Hub Turns 40—With a Bold New Plan for Its Next Generation of Artists - Artnet News",
+          "content": "Artists from the Bakehouse studios are showing all over the region during Miami Art Week. A rendering of the Bakehouse Art Complex campus and new artist housing by architect Michael Maltzan. “I’ve tried to craft with our board a program that not only meets the needs of 21st-century art-making and addresses the idea of affordability for artists and others, but also creates the type of income stream that will make Bakehouse sustainable into the future,” Leff said. ## A Miami Arts Organization Wants to Build Hundreds of Affordable Housing Units for Artists in an Art Deco Former Bakery ## A Miami Arts Organization Wants to Build Hundreds of Affordable Housing Units for Artists in an Art Deco Former Bakery",
+          "query": "\"Hollowmere Bakehouse\" news"
+        },
+        {
+          "url": "https://www.foodbusinessnews.net/articles/30707-starco-brands-buys-custom-bakehouse",
+          "title": "Starco Brands buys Custom Bakehouse - Food Business News",
+          "content": "Home » Starco Brands buys Custom Bakehouse. # Starco Brands buys Custom Bakehouse. LOS ANGELES — Starco Brands, Inc., a collection of food and beverage, household and personal care businesses, has acquired Custom Bakehouse. Founded in California in 1994, Custom Bakehouse began as a private label co-packer for multiple retail and specialty brands under the name Custom Foods. “Custom Bakehouse has spent more than three decades earning a reputation for deep formulation and manufacturing excellence, and that is exactly the kind of scale and capability we look for,” said Ross Sklar, chairman and chief executive officer of Starco. Bringing Custom Bakehouse into Starco gives us direct control of more of the value chain, IP creation, manufacturing and distribution, and allows the company to move fast across our portfolio. Starco said Custom Bakehouse will serve as the foundation of Starco Manufacturing, a new subsidiary that is expected to become one of the company’s two primary operating pillars alongside Starco Brands, Inc. Starco Manufacturing is expected to eventually include the company’s manufacturing assets, including The Starco Group.",
+          "query": "\"Hollowmere Bakehouse\" news"
+        },
+        {
+          "url": "https://www.just-food.com/news/irelands-east-coast-bakehouse-acquired-by-danish-biscuit-maker-bisca/",
+          "title": "Ireland’s East Coast Bakehouse acquired by Danish biscuit maker Bisca - Global Food Industry News",
+          "content": "# Ireland’s East Coast Bakehouse acquired by Danish biscuit maker Bisca. Private equity-owned Bisca will operate East Coast Bakehouse as a standalone subsidiary. Ireland’s East Coast Bakehouse has been snapped up by Danish cakes and biscuit manufacturer Bisca. East Coast Bakehouse, which is based in Drogheda, County Louth, will become a “standalone” subsidiary of Bisca’s international business, according to a statement. Exporting to 15 markets, East Coast Bakehouse is also a co-manufacturer operating out of its single factory in Drogheda near Dublin. Kristian Walsøe, the CEO of Bisca, said: “East Coast Bakehouse’s products are an excellent fit with our portfolio and complement what we already offer. “We are delighted to team up with Bisca, who were from the early stages identified as an ideal new strategic partner to help maintain and accelerate the exciting growth momentum behind East Coast Bakehouse,” David Carey, the company’s chief commercial officer, said in the statement. East Coast Bakehouse will retain the facility in Drogheda, with Bisca-Erhvervsinvest to provide “new investment to fund and accelerate future growth”.",
+          "query": "\"Hollowmere Bakehouse\" news"
+        },
+        {
+          "url": "https://www.just-food.com/news/good-guys-bakehouse-attracts-industry-veteran-as-investor/",
+          "title": "Good Guys Bakehouse attracts industry veteran as investor - Global Food Industry News",
+          "content": "# Good Guys Bakehouse attracts industry veteran as investor. The fledgling UK savoury-biscuits business has closed its latest fundraising round. Ex-St Pierre Groupe CEO David Wagstaff has invested in fledgling UK firm Good Guys Bakehouse. Wagstaff took part in a £300,000 ($407,000) funding round at the savoury-biscuits business, which was set up in 2021 by former Pladis executive Steve Monk. “I am delighted to have the opportunity to take up an NED/board and investor position with Good Guys Bakehouse,” Wagstaff said on LinkedIn. Monk, who remains the firm’s majority shareholder, declined to disclose the company’s annual sales but said: “I can say that where listed, our rate of sale is in the top 30% of the savoury biscuits category.”. He told *Just Food* Good Guys Bakehouse has more contracts on the horizon in the UK and in overseas markets. “We are scaling our business firstly by driving the distribution of our successful Good Guys Bakehouse Biscuit Melts with new listings in the pipeline in the UK, Europe, and the Middle East.",
+          "query": "\"Hollowmere Bakehouse\" news"
+        },
+        {
+          "url": "https://www.just-food.com/news/new-ceo-at-legacy-bakehouse/",
+          "title": "Ex-Crofter’s Organic CEO takes Legacy Bakehouse helm - Global Food Industry News",
+          "content": "# Ex-Crofter’s Organic CEO takes Legacy Bakehouse helm. Jax has also had roles at Pretzels, TreeHouse Foods and Conagra Brands. US baked-snacks producer Legacy Bakehouse has appointed former Crofter’s Organic chief executive Tim Jax as CEO. Legacy Bakehouse said Jax has “deep familiarity” with the company, having been on its board since 2023. Legacy Bakehouse said Jax’s appointment comes as the business tries to build on its recent move to add capacity at its site in Waukesha, the addition of a second bakery in Wisconsin and the 2025 acquisition of cookie maker Classic Cookie. Jax said he is taking the top job at Legacy Bakehouse as the business has “real momentum”. In a LinkedIn post published last month, Jax said he was leaving Crofter’s Organic after “two and a half great years”, adding: “I am proud of what our team accomplished: significantly growing the Crofter’s Organic brand, nearly doubling the total business, and scaling the organisation for the next phase of growth”.",
+          "query": "\"Hollowmere Bakehouse\" news"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,250 @@
+{
+  "case_id": "stripe",
+  "config": "mini",
+  "models": "Research gpt-5.4-mini/low, Strategy gpt-5.4-mini/medium, Writing gpt-5.4-mini/medium, Review gpt-5.4-mini/low",
+  "repeat": 1,
+  "snapshot_recorded_at": "2026-10-09T12:05:11+00:00",
+  "checks": {
+    "label": "draft",
+    "outcome_ok": true,
+    "facts": 8,
+    "dropped_facts": 0,
+    "attempts": 1,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 82,
+    "subject_words": 3,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "2608d39cb1da46d5bd8a3f34426256cb",
+    "brief": {
+      "company": "Stripe",
+      "website": "stripe.com",
+      "offer": "Localizing developer documentation into Japanese, German and Brazilian Portuguese",
+      "recipient": "Head of Documentation",
+      "language": "English",
+      "tone": "Warm"
+    },
+    "status": "ready",
+    "reason": null,
+    "message": "The draft passed review.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "Stripe offers products and prices tools for modeling a business, including creating, editing, archiving, and deleting products and prices.",
+          "excerpt": "\"Model your business on Stripe with products and prices.\"",
+          "source_url": "https://docs.stripe.com/products-prices/overview?locale=en-GB",
+          "source_title": "Overview | Stripe Documentation"
+        },
+        {
+          "id": 2,
+          "claim": "Stripe supports several pricing models, including flat rate, per-seat or per-license billing, and usage-based billing.",
+          "excerpt": "\"Offer your customers a choice of escalating options\"",
+          "source_url": "https://docs.stripe.com/products-prices/overview?locale=en-GB",
+          "source_title": "Overview | Stripe Documentation"
+        },
+        {
+          "id": 3,
+          "claim": "Stripe’s documentation says it supports common SaaS and startup use cases such as selling subscriptions, accepting payments in person, and sending invoices.",
+          "excerpt": "\"Sell subscriptions as a SaaS startup\"",
+          "source_url": "https://docs.stripe.com/products-prices/overview",
+          "source_title": "Overview | Stripe Documentation"
+        },
+        {
+          "id": 4,
+          "claim": "Stripe has a data migration guide for moving customer and payments data to Stripe.",
+          "excerpt": "\"Successfully migrate your customers and their payments data to Stripe.\"",
+          "source_url": "https://docs.stripe.com/get-started/data-migrations/overview",
+          "source_title": "Overview | Stripe Documentation"
+        },
+        {
+          "id": 5,
+          "claim": "Stripe says it can help businesses process payments outside the iOS and Android app stores.",
+          "excerpt": "\"process payments outside of the iOS and Android app stores\"",
+          "source_url": "https://stripe.com",
+          "source_title": "Stripe | Financial Infrastructure to Grow Your Revenue"
+        },
+        {
+          "id": 6,
+          "claim": "Stripe says it partnered with Crypto.com to enable crypto payments and help reach a new global customer base.",
+          "excerpt": "\"Crypto.com partners with Stripe to enable better crypto payments.\"",
+          "source_url": "https://stripe.com",
+          "source_title": "Stripe | Financial Infrastructure to Grow Your Revenue"
+        },
+        {
+          "id": 7,
+          "claim": "Stripe’s X profile says it is building programmable financial services.",
+          "excerpt": "\"Building programmable financial services.\"",
+          "source_url": "https://x.com/stripe",
+          "source_title": "Stripe (@stripe) / X"
+        },
+        {
+          "id": 8,
+          "claim": "Stripe says it acquired Parafin and will use it to expand revenue opportunities for platforms and help small businesses grow.",
+          "excerpt": "\"We’re welcoming @ParafinHQ to Stripe. Together, we’ll expand revenue opportunities for platforms and help small businesses grow\"",
+          "source_url": "https://x.com/stripe",
+          "source_title": "Stripe (@stripe) / X"
+        }
+      ],
+      "website_matches": true,
+      "website_note": "The results describe Stripe at stripe.com and its official documentation and homepage.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 0
+    },
+    "strategy": {
+      "observation": "Stripe’s documentation covers a wide mix of developer workflows—product and pricing setup, several billing models, subscriptions, invoices, migrations, and payment flows beyond app stores—while Stripe is also pushing into international/global use cases.",
+      "fact_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "offer_link": "Because Stripe’s docs have to explain a broad set of technical workflows to developers in multiple markets, localizing them into Japanese, German, and Brazilian Portuguese could make those guides easier to use for teams adopting Stripe outside English-speaking regions and support global product rollout.",
+      "hypotheses": [
+        "I’m assuming the documentation team is trying to improve self-serve adoption for non-English-speaking developers.",
+        "I’m assuming Stripe sees value in reducing friction for international implementation and migration workflows through localized docs.",
+        "I’m assuming Japanese, German, and Brazilian Portuguese are strategically relevant markets for Stripe’s developer audience."
+      ],
+      "angle": "Stripe’s docs now have to explain product pricing, migrations, and cross-border payment setups to developers in multiple markets, not just English-speaking ones.",
+      "offer_fit": "good",
+      "fit_reason": "Stripe has clearly documented, technical product flows and explicit global expansion themes, so localized developer documentation could plausibly help adoption and implementation in key non-English markets. The fit is still an inference because the facts don’t confirm an existing localization gap, but the connection is strong."
+    },
+    "draft": {
+      "subject": "Localizing Stripe docs",
+      "body": "Stripe’s docs now have to explain product pricing, billing models, subscriptions, invoices, migrations, and payment flows beyond app stores to developers in multiple markets.\n\nI’m assuming your team is looking for ways to make those guides easier to use for non-English-speaking developers as Stripe keeps moving into more global use cases. Localizing the developer docs into Japanese, German, and Brazilian Portuguese could help reduce friction for teams adopting or migrating to Stripe outside English-speaking regions.\n\nWould it be worth a quick look?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Localizing Stripe docs",
+          "body": "Stripe’s docs now have to explain product pricing, billing models, subscriptions, invoices, migrations, and payment flows beyond app stores to developers in multiple markets.\n\nI’m assuming your team is looking for ways to make those guides easier to use for non-English-speaking developers as Stripe keeps moving into more global use cases. Localizing the developer docs into Japanese, German, and Brazilian Portuguese could help reduce friction for teams adopting or migrating to Stripe outside English-speaking regions.\n\nWould it be worth a quick look?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@1",
+      "strategy": "strategy@1",
+      "copywriter": "copywriter@1",
+      "review": "review@1"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "research@1",
+        "duration_ms": 4255,
+        "usage": {
+          "input_tokens": 4708,
+          "cached_input_tokens": 4352,
+          "cache_write_tokens": null,
+          "output_tokens": 406,
+          "reasoning_tokens": 17
+        },
+        "cost_usd": 0.0024204,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "strategy@1",
+        "duration_ms": 5548,
+        "usage": {
+          "input_tokens": 658,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 721,
+          "reasoning_tokens": 430
+        },
+        "cost_usd": 0.003738,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "copywriter@1",
+        "duration_ms": 4642,
+        "usage": {
+          "input_tokens": 735,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 546,
+          "reasoning_tokens": 420
+        },
+        "cost_usd": 0.00300825,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "review@1",
+        "duration_ms": 5395,
+        "usage": {
+          "input_tokens": 666,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 458,
+          "reasoning_tokens": 438
+        },
+        "cost_usd": 0.0025605,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Stripe\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Stripe\" stripe.com",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Stripe\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 19943
+  }
+}

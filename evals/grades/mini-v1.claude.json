@@ -1,0 +1,152 @@
+{
+  "grader": "claude-opus-5-5",
+  "graded_at": "2026-10-09",
+  "scale": "evals/README.md: grounding, relevance, naturalness, 0-2 each",
+  "scope": "drafts of runs whose case accepts a draft and whose outcome was a draft",
+  "grades": {
+    "apollo.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "Grounded; logical audit pitch for a data vendor. 'I'm reaching out because' and the CTA read templated."
+    },
+    "apollo.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "Grounded and specific. 'I'm assuming that kind of review is useful for your team' is awkward."
+    },
+    "buttondown.1": {
+      "grounding": 2,
+      "relevance": 1,
+      "naturalness": 1,
+      "note": "Recites Buttondown's own marketing back to the founder; unclear what the founder gains."
+    },
+    "buttondown.2": {
+      "grounding": 2,
+      "relevance": 1,
+      "naturalness": 1,
+      "note": "Grounded but thin; 'can keep it light for them' is awkward; benefit to Buttondown left implicit."
+    },
+    "duolingo.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "Good B2 angle, but 'help language teams produce voice actors' is broken and the body is a fact dump."
+    },
+    "duolingo.2": {
+      "grounding": 2,
+      "relevance": 1,
+      "naturalness": 1,
+      "note": "133M is a faithful rounding of 133.1M. The R&D sentence before the question is a non sequitur."
+    },
+    "gitlab.1": {
+      "grounding": 2,
+      "relevance": 1,
+      "naturalness": 1,
+      "note": "Generic 'at your scale' observation; mechanical 'I'm assuming that means'."
+    },
+    "gitlab.2": {
+      "grounding": 2,
+      "relevance": 1,
+      "naturalness": 2,
+      "note": "Generic scale observation, but reads naturally and the closing question is concrete."
+    },
+    "linear.1": {
+      "grounding": 2,
+      "relevance": 1,
+      "naturalness": 1,
+      "note": "'Serves 40,000+ teams, so is recruiting still manual?' is a non sequitur; the question repeats the offer."
+    },
+    "linear.2": {
+      "grounding": 2,
+      "relevance": 1,
+      "naturalness": 1,
+      "note": "Grounded; link to the offer is a guess; 'Would that be worth a look?' is stock."
+    },
+    "mercury.1": {
+      "grounding": 2,
+      "relevance": 1,
+      "naturalness": 1,
+      "note": "Uses growth outside startups to pitch founder onboarding, which cuts against the offer; jargon ('next best action by segment')."
+    },
+    "mercury.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "Product-suite expansion to onboarding emails is a logical, specific link; natural ask for an outline."
+    },
+    "plausible.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "Concrete keyword angle from the white-label and self-hosted offers; natural."
+    },
+    "plausible.2": {
+      "grounding": 2,
+      "relevance": 1,
+      "naturalness": 1,
+      "note": "Tells the co-founder what their product does; clunky closing question."
+    },
+    "ramp.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "Logical content-asset angle; 'Worth a look?' and the pitchy middle sentence."
+    },
+    "ramp.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "Logical; the same product list appears twice in a short email."
+    },
+    "ru-vkusvill.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "Grounded numbers; the closing question is a calque from English and ungrammatical in Russian."
+    },
+    "ru-vkusvill.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "Opens with a dump of four numbers; otherwise clear."
+    },
+    "stripe.1": {
+      "grounding": 1,
+      "relevance": 1,
+      "naturalness": 1,
+      "note": "'Docs explain ... to developers in multiple markets' and 'moving into more global use cases' stretch the facts."
+    },
+    "stripe.2": {
+      "grounding": 1,
+      "relevance": 1,
+      "naturalness": 1,
+      "note": "'Docs have to cover ... lending for smaller firms' stretches product news into a documentation claim."
+    },
+    "transistor.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "Sensible referral-partner angle; generic closing."
+    },
+    "transistor.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "Five-person team serving 30,000 podcasts leads naturally to a partner service."
+    },
+    "tuple.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "Relevant, but opens by listing Tuple's own features to its Head of Marketing."
+    },
+    "tuple.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "Relevant; a feature dump in the first sentence."
+    }
+  }
+}

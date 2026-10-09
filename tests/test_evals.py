@@ -8,6 +8,7 @@ from core.runner import run_sdr
 from core.schemas import Fact
 from evals.cases import Case, load_cases, outcome_label, parse_cases, select
 from evals.checks import check, language_ok, ungrounded_numbers
+from evals.grades import Grade
 from evals.report import summarize
 from evals.run import run_case
 from evals.snapshot import SnapshotMissing, load, record, save
@@ -135,14 +136,28 @@ def test_a_changed_brief_needs_a_new_snapshot(tmp_path, case, search):
         load(case.model_copy(update={"id": "other"}), tmp_path)
 
 
-def test_report_counts_outcomes_and_cost_per_ready_result(tmp_path, case, search):
+def test_report_counts_successes_only_once_every_draft_is_graded(tmp_path, case, search):
     save(record(case, search, Settings()), tmp_path)
-    ready = replay(case, tmp_path, happy_script())
-    refused = replay(case, tmp_path, happy_script(Research=[research_output(sufficient=False)]), repeat=2)
+    thin = happy_script(Research=[research_output(sufficient=False)])
+    runs = [
+        replay(case, tmp_path, happy_script(), repeat=1),
+        replay(case, tmp_path, happy_script(), repeat=2),
+        replay(case, tmp_path, thin, repeat=3),  # refused although a draft was expected
+    ]
+    lenient = case.model_copy(update={"id": "thin", "expect": ["draft", "insufficient_data"]})
+    save(record(lenient, search, Settings()), tmp_path)
+    runs.append(replay(lenient, tmp_path, thin))  # an accepted refusal succeeds without a grade
 
-    row = summarize("fake", [ready, refused], expected_draft={"acme"})
+    ungraded = summarize("fake", runs, expected_draft={"acme"})
+    assert (ungraded.runs, ungraded.outcome_ok, ungraded.ready, ungraded.drafts_expected) == (4, 3, 2, 3)
+    assert ungraded.successes is None and ungraded.grounding is None
 
-    assert (row.runs, row.outcome_ok, row.ready, row.drafts_expected, row.drafts) == (2, 1, 1, 2, 1)
-    assert row.model_usd is None  # fake-model has no price: unknown, never zero
-    assert row.usd_per_ready is None
+    grades = {
+        "acme.1": Grade(grounding=2, relevance=2, naturalness=1),
+        "acme.2": Grade(grounding=1, relevance=2, naturalness=2),
+    }
+    row = summarize("fake", runs, expected_draft={"acme"}, grades=grades)
+    assert row.successes == 2 and row.graded == 2  # the second draft is not fully grounded
+    assert row.grounding == 1.5 and row.naturalness == 1.5
+    assert row.model_usd is None and row.usd_per_success is None  # fake-model has no price: unknown, never zero
 

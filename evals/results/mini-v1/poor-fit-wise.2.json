@@ -1,0 +1,243 @@
+{
+  "case_id": "poor-fit-wise",
+  "config": "mini",
+  "models": "Research gpt-5.4-mini/low, Strategy gpt-5.4-mini/medium, Writing gpt-5.4-mini/medium, Review gpt-5.4-mini/low",
+  "repeat": 2,
+  "snapshot_recorded_at": "2026-10-09T12:07:09+00:00",
+  "checks": {
+    "label": "poor_fit",
+    "outcome_ok": true,
+    "facts": 7,
+    "dropped_facts": 1,
+    "attempts": 1,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 59,
+    "subject_words": 4,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "bcffeb03720e469da89e810d2f216dca",
+    "brief": {
+      "company": "Wise",
+      "website": "wise.com",
+      "offer": "Forklift maintenance contracts for warehouses",
+      "recipient": "Head of Product",
+      "language": "English",
+      "tone": "Direct"
+    },
+    "status": "needs_attention",
+    "reason": null,
+    "message": "The draft passed review, but the offer looks like a poor fit.",
+    "issues": [
+      "The offer may not fit this company: Forklift maintenance contracts are for warehouses, and none of the facts indicate Wise runs warehouses or has a need for forklift services. Wise’s stated scale and infrastructure investment are about financial/product infrastructure, so the offer has no plausible fit for a Head of Product."
+    ],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "Wise serves three customer groups through three products: personal customers, small and medium-sized businesses, and banks/enterprises.",
+          "excerpt": "“We serve each of these customer groups through our three products: the Wise Account for personal customers, Wise Business for small and medium-sized businesses and Wise Platform for banks and other enterprises.”",
+          "source_url": "https://wise.com/imaginary-v2/images/ad736416f90791dbb49c7e59f1f45d8d-WiseFY2025AnnualReportAccounts.pdf",
+          "source_title": "Wise – 2025 Annual Report and Accounts"
+        },
+        {
+          "id": 2,
+          "claim": "Wise supported over 15.6 million customers using Wise for cross-border transactions in FY2025.",
+          "excerpt": "“During FY2025 over 15.6 million customers used Wise for cross-border transactions”",
+          "source_url": "https://wise.com/imaginary-v2/images/ad736416f90791dbb49c7e59f1f45d8d-WiseFY2025AnnualReportAccounts.pdf",
+          "source_title": "Wise – 2025 Annual Report and Accounts"
+        },
+        {
+          "id": 3,
+          "claim": "Wise says it reduced prices and kept investing in infrastructure to help people move and manage money around the world.",
+          "excerpt": "“reducing our prices and building the infrastructure they need to move and manage money around the world”",
+          "source_url": "https://wise.com/imaginary-v2/images/ad736416f90791dbb49c7e59f1f45d8d-WiseFY2025AnnualReportAccounts.pdf",
+          "source_title": "Wise – 2025 Annual Report and Accounts"
+        },
+        {
+          "id": 4,
+          "claim": "Wise Account and Wise Business let people and businesses hold 40+ currencies, move money between countries, and spend money abroad.",
+          "excerpt": "“With Wise Account and Wise Business, people and businesses can hold 40+ currencies, move money between countries and spend money abroad.”",
+          "source_url": "https://newsroom.wise.com/en-NAM/about",
+          "source_title": "About Wise | Wise Newsroom"
+        },
+        {
+          "id": 5,
+          "claim": "Wise was launched in 2011.",
+          "excerpt": "“Launched in 2011”",
+          "source_url": "https://newsroom.wise.com/en-NAM/about",
+          "source_title": "About Wise | Wise Newsroom"
+        },
+        {
+          "id": 6,
+          "claim": "Wise positions itself as a profitable tech company.",
+          "excerpt": "“Wise is one of the world’s fastest growing, profitable tech companies.”",
+          "source_url": "https://newsroom.wise.com/en-NAM/about",
+          "source_title": "About Wise | Wise Newsroom"
+        },
+        {
+          "id": 7,
+          "claim": "Wise’s website lists products including international money transfer, Wise account, international debit card, large amount transfer, receive money, Assets, Wise Platform, Wise Business, business debit card, mass payments, and accept card payments.",
+          "excerpt": "“Wise Products International money transfer Wise account International debit card Large amount transfer Receive money Assets Wise Platform Wise Business Business debit card Mass payments Accept card payments”",
+          "source_url": "https://wise.com/en/legal/terms-and-conditions",
+          "source_title": "Wise Customer Agreements<!-- --> - Wise"
+        }
+      ],
+      "website_matches": true,
+      "website_note": "The results describe Wise at wise.com, the financial technology company building international money movement and management products.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 1
+    },
+    "strategy": {
+      "observation": "Wise is a scaled global money-movement platform: it serves three customer groups across three product lines, supports over 15.6 million cross-border customers, and keeps investing in infrastructure while expanding products that hold 40+ currencies and move money internationally.",
+      "fact_ids": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7
+      ],
+      "offer_link": "Forklift maintenance contracts are only relevant if Wise operates warehouses or other physical storage sites supporting hardware, materials, or logistics. The only concrete connection here is that Wise invests in infrastructure at scale, but that is digital/financial infrastructure rather than warehouse equipment, so the link is very weak.",
+      "hypotheses": [
+        "Wise may have physical operational sites, office facilities, or storage areas that need equipment maintenance, but that is not confirmed by the facts.",
+        "The Head of Product may care about uptime and operational reliability broadly, though forklift maintenance is not a product-related need.",
+        "Wise may value predictable maintenance contracts if it has any internal logistics or facilities assets, but this is speculative."
+      ],
+      "angle": "Wise is operating a global, multi-product platform for 15.6 million cross-border customers while still investing in infrastructure.",
+      "offer_fit": "poor",
+      "fit_reason": "Forklift maintenance contracts are for warehouses, and none of the facts indicate Wise runs warehouses or has a need for forklift services. Wise’s stated scale and infrastructure investment are about financial/product infrastructure, so the offer has no plausible fit for a Head of Product."
+    },
+    "draft": {
+      "subject": "Forklift maintenance at Wise?",
+      "body": "Wise is a scaled, multi-product platform serving three customer groups and 15.6M+ cross-border customers, while still investing in infrastructure.\n\nIf Wise also runs any warehouses, depots, or storage sites behind the scenes, we help with forklift maintenance contracts to reduce downtime and keep equipment compliant. If that is part of your world, would it make sense to compare notes?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Forklift maintenance at Wise?",
+          "body": "Wise is a scaled, multi-product platform serving three customer groups and 15.6M+ cross-border customers, while still investing in infrastructure.\n\nIf Wise also runs any warehouses, depots, or storage sites behind the scenes, we help with forklift maintenance contracts to reduce downtime and keep equipment compliant. If that is part of your world, would it make sense to compare notes?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@1",
+      "strategy": "strategy@1",
+      "copywriter": "copywriter@1",
+      "review": "review@1"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "research@1",
+        "duration_ms": 3202,
+        "usage": {
+          "input_tokens": 4534,
+          "cached_input_tokens": 4352,
+          "cache_write_tokens": null,
+          "output_tokens": 512,
+          "reasoning_tokens": 26
+        },
+        "cost_usd": 0.0027669,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "strategy@1",
+        "duration_ms": 7858,
+        "usage": {
+          "input_tokens": 645,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 815,
+          "reasoning_tokens": 512
+        },
+        "cost_usd": 0.00415125,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "copywriter@1",
+        "duration_ms": 3262,
+        "usage": {
+          "input_tokens": 742,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 438,
+          "reasoning_tokens": 335
+        },
+        "cost_usd": 0.0025275,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "review@1",
+        "duration_ms": 2333,
+        "usage": {
+          "input_tokens": 632,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 228,
+          "reasoning_tokens": 208
+        },
+        "cost_usd": 0.0015,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Wise\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Wise\" wise.com",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Wise\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 16673
+  }
+}

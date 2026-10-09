@@ -1,0 +1,281 @@
+{
+  "case_id": "linear",
+  "config": "mini",
+  "models": "Research gpt-5.4-mini/low, Strategy gpt-5.4-mini/medium, Writing gpt-5.4-mini/medium, Review gpt-5.4-mini/low",
+  "repeat": 1,
+  "snapshot_recorded_at": "2026-10-09T12:05:06+00:00",
+  "checks": {
+    "label": "draft",
+    "outcome_ok": true,
+    "facts": 6,
+    "dropped_facts": 2,
+    "attempts": 2,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 68,
+    "subject_words": 3,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "be0bac1b98254830a1aa92d1752c6473",
+    "brief": {
+      "company": "Linear",
+      "website": "linear.app",
+      "offer": "Recruiting and scheduling customer interview participants for product teams",
+      "recipient": "Head of Product",
+      "language": "English",
+      "tone": "Direct"
+    },
+    "status": "ready",
+    "reason": null,
+    "message": "The draft passed review.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "Linear says it powers over 40,000 product teams.",
+          "excerpt": "\"Linear powers over40,000 product teams.\"",
+          "source_url": "https://linear.app",
+          "source_title": "Linear – The system for product development"
+        },
+        {
+          "id": 2,
+          "claim": "Linear says it is designed for workflows shared by humans and agents, including drafting PRDs and pushing PRs.",
+          "excerpt": "\"Designed for workflows shared by humans and agents. From drafting PRDs to pushing PRs.\"",
+          "source_url": "https://linear.app",
+          "source_title": "Linear – The system for product development"
+        },
+        {
+          "id": 3,
+          "claim": "Linear is available on web, macOS, Windows, iOS, and Android.",
+          "excerpt": "\"Available for web,  macOS, Windows, iOS, and Android.\"",
+          "source_url": "https://linear.app/download",
+          "source_title": "Download Linear"
+        },
+        {
+          "id": 4,
+          "claim": "Linear Mobile is a companion app for away-from-keyboard workflows, including filing issues and receiving notifications.",
+          "excerpt": "\"Linear Mobile is a companion to the Linear desktop app, designed for on-demand workflows when you are away from your keyboard: • File issues on-the-go\"",
+          "source_url": "https://apps.apple.com/us/app/linear-mobile/id1645587184",
+          "source_title": "‎Linear Mobile App - App Store"
+        },
+        {
+          "id": 5,
+          "claim": "Linear is an issue tracking and project management tool focused on product teams.",
+          "excerpt": "\"we are building an issue tracking and project management tool\"",
+          "source_url": "https://www.linkedin.com/company/linearapp",
+          "source_title": "Linear"
+        },
+        {
+          "id": 6,
+          "claim": "Linear says it is used by thousands of high-impact companies.",
+          "excerpt": "\"has become the tool of choice for thousands of high-impact companies\"",
+          "source_url": "https://www.linkedin.com/company/linearapp",
+          "source_title": "Linear"
+        }
+      ],
+      "website_matches": true,
+      "website_note": "The results describe Linear, the product development tool at linear.app.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 2
+    },
+    "strategy": {
+      "observation": "Linear serves a very large base of product teams and positions itself as the system those teams use for product development, across issue tracking/project management and newer human-plus-agent workflows.",
+      "fact_ids": [
+        1,
+        2,
+        5,
+        6
+      ],
+      "offer_link": "A service that recruits and schedules customer interview participants could help Linear’s product organization run more user research with its own product-team audience, especially if they want to validate workflows like PRDs, issue tracking, and agent-assisted collaboration without spending time on logistics.",
+      "hypotheses": [
+        "Linear’s product team may regularly conduct customer interviews as part of product discovery and roadmap validation.",
+        "They may want a faster way to source participants from a large customer base of product teams.",
+        "The Head of Product may care about reducing the operational overhead of scheduling interviews across multiple stakeholders and time zones."
+      ],
+      "angle": "Linear already serves 40,000+ product teams, so I wondered if your team is still handling customer interview recruiting and scheduling manually.",
+      "offer_fit": "good",
+      "fit_reason": "The fit is plausible because Linear is itself a product-team platform with a large user base, so a participant recruiting/scheduling service could support its own product research. The connection is indirect, though, since the facts don’t confirm an active research-ops bottleneck."
+    },
+    "draft": {
+      "subject": "Customer interview logistics",
+      "body": "Linear already serves 40,000+ product teams, so I wondered if customer interview recruiting and scheduling is still manual on your side.\n\nLinear is built for issue tracking, PRDs, and shared human-plus-agent workflows. If your product team is validating those areas with customers, I can recruit participants and schedule the sessions.\n\nThat would keep the logistics off your team.\n\nWould you want help with recruiting and scheduling customer interviews?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Customer interviews at scale",
+          "body": "Linear already serves 40,000+ product teams, so I wondered if your team is still handling customer interview recruiting and scheduling manually.\n\nYou work across issue tracking, PRDs, and human-plus-agent workflows. If product research is part of how you validate those areas, I could help by recruiting participants and lining up sessions for your team.\n\nThe goal would be simple: less logistics, more time with users.\n\nWould it be worth a brief look?"
+        },
+        "review": {
+          "passed": false,
+          "issues": [
+            "The line “You work across issue tracking, PRDs, and human-plus-agent workflows” attributes those workflows to the recipient. Change it to a company fact, e.g. “Linear supports issue tracking, PRDs, and human-plus-agent workflows.”",
+            "“The goal would be simple: less logistics, more time with users.” reads like a slogan. Replace it with plain language that states the offer directly.",
+            "“Would it be worth a brief look?” is vague and salesy. End with one specific question about whether they want help with recruiting and scheduling customer interviews."
+          ]
+        }
+      },
+      {
+        "attempt": 2,
+        "draft": {
+          "subject": "Customer interview logistics",
+          "body": "Linear already serves 40,000+ product teams, so I wondered if customer interview recruiting and scheduling is still manual on your side.\n\nLinear is built for issue tracking, PRDs, and shared human-plus-agent workflows. If your product team is validating those areas with customers, I can recruit participants and schedule the sessions.\n\nThat would keep the logistics off your team.\n\nWould you want help with recruiting and scheduling customer interviews?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@1",
+      "strategy": "strategy@1",
+      "copywriter": "copywriter@1",
+      "review": "review@1"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "research@1",
+        "duration_ms": 4323,
+        "usage": {
+          "input_tokens": 3646,
+          "cached_input_tokens": 3328,
+          "cache_write_tokens": null,
+          "output_tokens": 395,
+          "reasoning_tokens": 16
+        },
+        "cost_usd": 0.0022656,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "strategy@1",
+        "duration_ms": 5286,
+        "usage": {
+          "input_tokens": 560,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 741,
+          "reasoning_tokens": 474
+        },
+        "cost_usd": 0.0037545,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "copywriter@1",
+        "duration_ms": 2537,
+        "usage": {
+          "input_tokens": 623,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 113,
+          "reasoning_tokens": 0
+        },
+        "cost_usd": 0.00097575,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "review@1",
+        "duration_ms": 3306,
+        "usage": {
+          "input_tokens": 560,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 433,
+          "reasoning_tokens": 298
+        },
+        "cost_usd": 0.0023685,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 2,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "copywriter@1",
+        "duration_ms": 3091,
+        "usage": {
+          "input_tokens": 864,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 467,
+          "reasoning_tokens": 355
+        },
+        "cost_usd": 0.0027495,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 2,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "review@1",
+        "duration_ms": 2326,
+        "usage": {
+          "input_tokens": 553,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 316,
+          "reasoning_tokens": 296
+        },
+        "cost_usd": 0.00183675,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Linear\" company overview products customers",
+        "topic": "general",
+        "results": 2,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Linear\" linear.app",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Linear\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 20964
+  }
+}

@@ -1,0 +1,210 @@
+{
+  "case_id": "ru-vkusvill",
+  "config": "mini",
+  "models": "Research gpt-5.4-mini/low, Strategy gpt-5.4-mini/medium, Writing gpt-5.4-mini/medium, Review gpt-5.4-mini/low",
+  "repeat": 1,
+  "snapshot_recorded_at": "2026-10-09T12:07:34+00:00",
+  "checks": {
+    "label": "draft",
+    "outcome_ok": true,
+    "facts": 3,
+    "dropped_facts": 5,
+    "attempts": 1,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 74,
+    "subject_words": 4,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "addf650d032b4038b08c12f0f5521598",
+    "brief": {
+      "company": "ВкусВилл",
+      "website": "vkusvill.ru",
+      "offer": "Аудит карточек товаров в мобильном приложении",
+      "recipient": "Директор по продукту",
+      "language": "Russian",
+      "tone": "Direct"
+    },
+    "status": "ready",
+    "reason": null,
+    "message": "The draft passed review.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "ВкусВилл is a brand of healthy food and a retail chain with free delivery.",
+          "excerpt": "«ВкусВилл» — бренд полезных продуктов для здорового питания, сеть магазинов и сервис бесплатной доставки.",
+          "source_url": "https://vkusvill.ru/history",
+          "source_title": "История компаний «ВкусВилл» и «Избёнка»"
+        },
+        {
+          "id": 2,
+          "claim": "The company says it works with over 1,900 partner producers.",
+          "excerpt": "1 900+ производителей стали нашими партнёрами",
+          "source_url": "https://vkusvill.ru/about",
+          "source_title": "О нас | ВкусВилл"
+        },
+        {
+          "id": 3,
+          "claim": "The company says couriers deliver more than 480,000 orders per day.",
+          "excerpt": "480+ тыс. заказов в день доставляют наши курьеры",
+          "source_url": "https://vkusvill.ru/about",
+          "source_title": "О нас | ВкусВилл"
+        }
+      ],
+      "website_matches": true,
+      "website_note": "The results describe ВкусВилл and its official site vkusvill.ru.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 5
+    },
+    "strategy": {
+      "observation": "ВкусВилл — это ритейл с очень большим потоком заказов и широкой сетью партнерских производителей, поэтому качество карточек товаров в мобильном приложении может заметно влиять на выбор и оформление покупки.",
+      "fact_ids": [
+        1,
+        2,
+        3
+      ],
+      "offer_link": "Аудит карточек товаров в мобильном приложении поможет проверить, насколько полно и понятно представлены товары из ассортимента с 1,900+ партнёрских производителей, и где карточка может терять внимание или мешать оформлению заказа при масштабе в 480,000+ доставок в день.",
+      "hypotheses": [
+        "Предполагаю, что мобильное приложение для вас является важным каналом выбора и повторных покупок.",
+        "Предполагаю, что из-за большого числа партнёрских производителей карточки товаров могут отличаться по структуре, полноте описаний и визуальной подаче.",
+        "Предполагаю, что даже небольшие улучшения карточек могут дать заметный эффект на конверсию или средний чек при вашем объёме заказов."
+      ],
+      "angle": "При 1 900+ партнёрах и 480 000+ заказах в день карточка товара в приложении у вас, вероятно, уже влияет не только на UX, но и на конверсию.",
+      "offer_fit": "good",
+      "fit_reason": "Аудит карточек товаров логично связан с масштабным ассортиментом и высоким объёмом заказов: у такого ритейла даже небольшие проблемы в карточках могут влиять на выбор, доверие и оформление покупки в приложении."
+    },
+    "draft": {
+      "subject": "Карточки товаров в приложении",
+      "body": "При 1 900+ партнёрах и 480 000+ заказах в день карточка товара в приложении у вас, вероятно, уже влияет на конверсию.\n\nПредполагаю, что при таком масштабе часть карточек может отличаться по полноте, структуре и визуальной подаче. А это иногда мешает выбору и оформлению заказа.\n\nДелаю аудит карточек товаров в мобильном приложении: смотрю, где теряется внимание, чего не хватает для решения и что можно упростить без переделки всего интерфейса.\n\nИнтересно, если пришлю короткий пример проверки?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Карточки товаров в приложении",
+          "body": "При 1 900+ партнёрах и 480 000+ заказах в день карточка товара в приложении у вас, вероятно, уже влияет на конверсию.\n\nПредполагаю, что при таком масштабе часть карточек может отличаться по полноте, структуре и визуальной подаче. А это иногда мешает выбору и оформлению заказа.\n\nДелаю аудит карточек товаров в мобильном приложении: смотрю, где теряется внимание, чего не хватает для решения и что можно упростить без переделки всего интерфейса.\n\nИнтересно, если пришлю короткий пример проверки?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@1",
+      "strategy": "strategy@1",
+      "copywriter": "copywriter@1",
+      "review": "review@1"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "research@1",
+        "duration_ms": 3489,
+        "usage": {
+          "input_tokens": 5751,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 513,
+          "reasoning_tokens": 19
+        },
+        "cost_usd": 0.00662175,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "strategy@1",
+        "duration_ms": 5173,
+        "usage": {
+          "input_tokens": 504,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 690,
+          "reasoning_tokens": 346
+        },
+        "cost_usd": 0.003483,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "copywriter@1",
+        "duration_ms": 3955,
+        "usage": {
+          "input_tokens": 647,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 628,
+          "reasoning_tokens": 464
+        },
+        "cost_usd": 0.00331125,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "review@1",
+        "duration_ms": 2478,
+        "usage": {
+          "input_tokens": 547,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 281,
+          "reasoning_tokens": 261
+        },
+        "cost_usd": 0.00167475,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"ВкусВилл\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"ВкусВилл\" vkusvill.ru",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"ВкусВилл\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 15108
+  }
+}

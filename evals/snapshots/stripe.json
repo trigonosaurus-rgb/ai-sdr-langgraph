@@ -1,0 +1,133 @@
+{
+  "case_id": "stripe",
+  "brief": {
+    "company": "Stripe",
+    "website": "stripe.com",
+    "offer": "Localizing developer documentation into Japanese, German and Brazilian Portuguese",
+    "recipient": "Head of Documentation",
+    "language": "English",
+    "tone": "Warm"
+  },
+  "recorded_at": "2026-10-09T12:05:11+00:00",
+  "searches": [
+    {
+      "query": "\"Stripe\" company overview products customers",
+      "topic": "general",
+      "include_domains": [
+        "stripe.com"
+      ],
+      "max_results": 5,
+      "credits": 1.0,
+      "results": [
+        {
+          "url": "https://docs.stripe.com/products-prices/overview?locale=en-GB",
+          "title": "Overview | Stripe Documentation",
+          "content": "Title: Overview | Stripe Documentation\n# Overview. ## Model your business on Stripe with products and prices. ## Get started. Learn what products and prices are and how to use them in Stripe. Create, edit, archive, and delete products and prices. ## Pricing models. Offer your customers a choice of escalating options, like basic, starter, and Enterprise service levels. Let your customers pick how many seats or licenses they’ll use and bill them for each. Charge your customers based on how much of your service they use during the billing period.",
+          "query": "\"Stripe\" company overview products customers"
+        },
+        {
+          "url": "https://docs.stripe.com/products-prices/overview",
+          "title": "Overview | Stripe Documentation",
+          "content": "Manage products and prices\n\nCreate, edit, archive, and delete products and prices.\n\n## Pricing models\n\nFlat rate (good-better-best)\n\nOffer your customers a choice of escalating options, like basic, starter, and Enterprise service levels\")\n\nLet your customers pick how many seats or licenses they’ll use and bill them for each.\n\nCharge your customers based on how much of your service they use during the billing period.\n\nView all pricing models [...] Create an account\n\nQuickstarts\n\nStart developing\n\nBuild with agents\n\nUse Stripe without code\n\nMigrate to Stripe\n\nCommon use cases\n\nOverviewAccept simple payments as a startupSell subscriptions as a SaaS startupAccept payments in personSend invoices to collect payments\n\nBrazilEnglish (United States)\n\n# Overview\n\n## Model your business on Stripe with products and prices.\n\n## Get started\n\nHow products and prices work\n\nLearn what products and prices are and how to use them in Stripe. [...] Skip to content\n\nCreate account or Sign in\n\n`/`Ask AI\n\nCreate accountSign in\n\nGet started\n\nPayments\n\nRevenue\n\nData\n\nPlatforms and marketplaces\n\nMoney management\n\nDeveloper resources\n\nAPIs & SDKsHelp\n\nOverviewSee all products\n\nAbout the APIs\n\nAPI tour\n\nHow PaymentIntents and SetupIntents work\n\nCheckout Sessions API\n\nPayment Methods API\n\nPayment Records API\n\nProducts and prices\n\nHow products and prices work\n\nManage products and prices\n\nOlder APIs\n\nStripe glossary\n\nStart building\n\nCreate an account",
+          "query": "\"Stripe\" company overview products customers"
+        },
+        {
+          "url": "https://docs.stripe.com/products-prices/getting-started",
+          "title": "Overview | Stripe Documentation",
+          "content": "Manage products and prices\n\nCreate, edit, archive, and delete products and prices.\n\n## Pricing models\n\nFlat rate (good-better-best)\n\nOffer your customers a choice of escalating options, like basic, starter, and Enterprise service levels\")\n\nLet your customers pick how many seats or licenses they’ll use and bill them for each.\n\nCharge your customers based on how much of your service they use during the billing period.\n\nView all pricing models [...] Create an account\n\nQuickstarts\n\nStart developing\n\nBuild with agents\n\nUse Stripe without code\n\nMigrate to Stripe\n\nCommon use cases\n\nOverviewAccept simple payments as a startupSell subscriptions as a SaaS startupAccept payments in personSend invoices to collect payments\n\nIndiaEnglish (United States)\n\n# Overview\n\n## Model your business on Stripe with products and prices.\n\n## Get started\n\nHow products and prices work\n\nLearn what products and prices are and how to use them in Stripe. [...] Skip to content\n\nCreate account or Sign in\n\n`/`Ask AI\n\nCreate accountSign in\n\nGet started\n\nPayments\n\nRevenue\n\nData\n\nPlatforms and marketplaces\n\nMoney management\n\nDeveloper resources\n\nAPIs & SDKsHelp\n\nOverviewSee all products\n\nAbout the APIs\n\nAPI tour\n\nHow PaymentIntents and SetupIntents work\n\nCheckout Sessions API\n\nPayment Methods API\n\nPayment Records API\n\nProducts and prices\n\nHow products and prices work\n\nManage products and prices\n\nOlder APIs\n\nStripe glossary\n\nStart building\n\nCreate an account",
+          "query": "\"Stripe\" company overview products customers"
+        },
+        {
+          "url": "https://docs.stripe.com/billing/subscriptions/tiers",
+          "title": "Overview | Stripe Documentation",
+          "content": "Manage products and prices\n\nCreate, edit, archive, and delete products and prices.\n\n## Pricing models\n\nFlat rate (good-better-best)\n\nOffer your customers a choice of escalating options, like basic, starter, and Enterprise service levels\")\n\nLet your customers pick how many seats or licenses they’ll use and bill them for each.\n\nCharge your customers based on how much of your service they use during the billing period.\n\nView all pricing models [...] Create an account\n\nQuickstarts\n\nStart developing\n\nBuild with agents\n\nUse Stripe without code\n\nMigrate to Stripe\n\nCommon use cases\n\nOverviewAccept simple payments as a startupSell subscriptions as a SaaS startupAccept payments in personSend invoices to collect payments\n\nBrazilEnglish (United States)\n\n# Overview\n\n## Model your business on Stripe with products and prices.\n\n## Get started\n\nHow products and prices work\n\nLearn what products and prices are and how to use them in Stripe. [...] Skip to content\n\nCreate account or Sign in\n\n`/`Ask AI\n\nCreate accountSign in\n\nGet started\n\nPayments\n\nRevenue\n\nPlatforms and marketplaces\n\nMoney management\n\nDeveloper resources\n\nAPIs & SDKsHelp\n\nOverviewSee all products\n\nAbout the APIs\n\nAPI tour\n\nHow PaymentIntents and SetupIntents work\n\nCheckout Sessions API\n\nPayment Methods API\n\nPayment Records API\n\nProducts and prices\n\nHow products and prices work\n\nManage products and prices\n\nOlder APIs\n\nStripe glossary\n\nStart building\n\nCreate an account",
+          "query": "\"Stripe\" company overview products customers"
+        },
+        {
+          "url": "https://docs.stripe.com/get-started/data-migrations/overview",
+          "title": "Overview | Stripe Documentation",
+          "content": "Common use cases\n\nOverviewAccept simple payments as a startupSell subscriptions as a SaaS startupAccept payments in personSend invoices to collect payments\n\nUnited StatesEnglish (United States)\n\n# Overview\n\n## Successfully migrate your customers and their payments data to Stripe.\n\nMigrating your customer and payments data to Stripe is a multi-step process. After you read through this guide, you’ll: [...] For each type of data migration, we can only assist you if your request includes both customer records and the associated payment data. Use Stripe’s Customer API to create, update, or retrieve customer data that doesn’t include payment information.\n\n#### Note\n\nYou can perform PAN data migrations without using Stripe’s Sigma or Data Pipeline products.\n\n## See also\n\n The Customer object\n The Subscription object\n Default payment source\n Products and prices\n Billing cycle anchor\n\nOn this page [...] Skip to content\n\nCreate account or Sign in\n\n`/`Ask AI\n\nCreate accountSign in\n\nGet started\n\nPayments\n\nRevenue\n\nPlatforms and marketplaces\n\nMoney management\n\nDeveloper resources\n\nAPIs & SDKsHelp\n\nOverviewSee all products\n\nAbout the APIs\n\nStripe glossary\n\nStart building\n\nCreate an account\n\nQuickstarts\n\nStart developing\n\nBuild with agents\n\nUse Stripe without code\n\nMigrate to Stripe\n\nOverview\n\nMigrate payment data\n\nCommon use cases",
+          "query": "\"Stripe\" company overview products customers"
+        }
+      ]
+    },
+    {
+      "query": "\"Stripe\" stripe.com",
+      "topic": "general",
+      "include_domains": null,
+      "max_results": 5,
+      "credits": 1.0,
+      "results": [
+        {
+          "url": "https://www.youtube.com/watch?v=IyuYsK809v4",
+          "title": "What is Stripe? Or Stripe.com - A Comprehensive Overview",
+          "content": "\"Stripe.com or Stripe is a merchant payment processor and payment gateway all in one. In simple terms, it allows you to take credit cards directly from your website. I highly recommend them because they do not have monthly fees or a set up fee; only a 2.99% + 30 cent transaction fee, which is standard and comparable to PayPal. The difference between Stripe and PayPal is you can take credit cards directly versus having your customers redirected to PayPal's website to make payment, which can be a [...] ### Transcript\n[0:01] [Music]\n[0:05] so what is strip.com well stripe uh.com or just stripe is a payment Gateway plus\n[0:14] a merchant processor um and basically what that means in simple terms is that you can take credit cards directly\n[0:23] online on your you know from your website and the amazing thing about it is it's free\n[0:31] um PayPal definition of free meaning that you don't have to pay a monthly fee but you would still have to pay the [...] which can be a turn off for some prospective customers. Stripe can be integrated with almost all major e-commerce platforms including WooCommerce, WP-eCommerce, Shopify, Magento, ZenCart, etc. as well as WHMCS and Curdbee.\"",
+          "query": "\"Stripe\" stripe.com"
+        },
+        {
+          "url": "https://x.com/stripe",
+          "title": "Stripe (@stripe) / X",
+          "content": "Log inSign up\n\nLog inSign up\n\nStripe profile banner\n\n@stripe\n\n# Stripe\n\n@stripe\n\nBuilding programmable financial services. Incorporate: @atlas. Help: @stripesupport. Read: @stripepress @WorksInProgMag. Status: @stripestatus.\n\nSan Francisco, US + Dublin, IE\n\nstripe.com\n\nJoined January 2010\n\n558 Following292.9K Followers\n\nRepliesRepliesRepostsRepostsMediaMediaArticlesArticles\n\n Pinned\n\n  @stripe\n\n  Stripe@stripe\n\n  May 1\n\n  Our Stripe Sessions 2026 keynote in 12 minutes.\n\n  \n\n  00:00 [...] Sep 30\n\n  We’re welcoming @ParafinHQ to Stripe. Together, we’ll expand revenue opportunities for platforms and help small businesses grow: stripe.com/newsroom/news/….\n\n  @NeetikaBansal\n\n  Neetika Bansal\n\n  Stripe\n\n  @NeetikaBansal\n\n  Sep 30 [...] Sep 30\n\n  Excited to share that @stripe has agreed to acquire @ParafinHQ! We launched Stripe Capital in 2019 to help internet businesses get the funds they need when they need them. Parafin supports some of the largest platforms like DoorDash, Gusto, Jobber, and Mindbody, by offering\n\n  10\n @stripe\n\n  Stripe@stripe\n\n  Sep 30\n\n  You can now hold, send, spend, and build with OUSD on Stripe. Read the blog: stripe.com/blog/ousd-now-….\n\n  @openstandard\n\n  Open Standard@openstandard\n\n  Sep 30",
+          "query": "\"Stripe\" stripe.com"
+        },
+        {
+          "url": "https://stripe.com",
+          "title": "Stripe | Financial Infrastructure to Grow Your Revenue",
+          "content": "Watch video\n New tools to process payments outside app stores.New regulations mean new opportunities. Read how Stripe can help you process payments outside of the iOS and Android app stores, giving you more control and helping grow your revenue.\n\n  Learn how\n Crypto.com partners with Stripe to enable better crypto payments.Learn how the partnership can help you tap into a new global customer base by letting customers pay with their crypto balance directly at checkout. [...] New regulations mean new opportunities. Read how Stripe can help you process payments outside of the iOS and Android app stores, giving you more control and helping grow your revenue.\n\nLearn how\n\n### Crypto.com partners with Stripe to enable better crypto payments.\n\nLearn how the partnership can help you tap into a new global customer base by letting customers pay with their crypto balance directly at checkout.\n\nView announcement\n\n### Make your products shoppable through AI platforms. [...] Read the story\n\nStripe makes the subscriptions and payment piece really easy for everyone involved. And that helps us make it easy for writers and other creators to do the work they want to do on Substack and get paid for it.\n\nSeth McMillan, Engineering Manager, Substack\n\nRead the story\n\nStripe offers an enterprise-grade infrastructure that puts our customers on the cutting edge of modern payments technology. The combination of Terminal and Connect is a powerful integrated solution.",
+          "query": "\"Stripe\" stripe.com"
+        },
+        {
+          "url": "https://www.nerdwallet.com/business/software/learn/what-is-stripe",
+          "title": "What Is Stripe, and How Does It Work to Accept Payments? - NerdWallet",
+          "content": "However, these factors do not influence our editors' opinions or ratings, which are based on independent research and analysis. Our partners cannot pay us to guarantee favorable reviews. Here is a list of our partners.\n\n# What Is Stripe, and How Does It Work to Accept Payments?\n\nStripe is a payment service provider that accepts credit cards, digital wallets and many other payment methods.\n\nWritten by [...] Stripe has a PCI compliance Level 1 certification. That means it undergoes an annual compliance report and routine security scans. Stripe encrypts all customers’ credit card numbers. And it stores decryption information separately. In other words, it can’t see credit card numbers without taking extra steps. All online transactions also need to happen over the more secure HTTPS network.\n\n» MORE: Best payment processors for small businesses\n\nMethodology [...] 1. The customer provides their card information, either online or in person.\n2. Those card details enter Stripe’s payment gateway, which encrypts the data.\n3. Stripe sends that data to the acquiring bank. It will process the transaction on the merchant’s behalf. In this step, Stripe serves as the merchant (with the business owner as a sub-merchant). This means Stripe users don’t have to set up a merchant account, which can be cumbersome.",
+          "query": "\"Stripe\" stripe.com"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=XSMfwiZBOvs",
+          "title": "What Is Stripe and How Does It Work? Quick Guide for Small Businesses",
+          "content": "[4:09] If your business needs a payment solution  that can be tailored to your exact locations,   Stripe is one of the best platforms on the market.\n[4:15] It's also a great choice for businesses that  operate internationally as Stripe makes it easy   to accept payments in multiple currencies  without any additional work on your part.\n[4:24] If you're a business that uses  subscriptions or recurring billing,   Stripe's tools are built to handle that easily. [...] [0:24] Stripe isn't just your average payment processor. It's a technology company  that's been around since 2,010.\n[0:29] Founded by two brothers, Patrick and John  Collison, from the start, they had one mission,   to simplify how businesses accept  payments online, and they've done   exactly that by building a platform that's  flexible, developer friendly, and scalable. [...] [2:47] Stripe is available in over 40 countries  and supports more than a 135 currencies.\n[2:52] So if your business operates internationally,   Stripe makes it easy to accept payments from  customers around the world without having to   worry about currency conversions  or international payment methods.\n[3:01] And finally, Stripe is known  for its advanced features.",
+          "query": "\"Stripe\" stripe.com"
+        }
+      ]
+    },
+    {
+      "query": "\"Stripe\" news",
+      "topic": "news",
+      "include_domains": null,
+      "max_results": 5,
+      "credits": 1.0,
+      "results": [
+        {
+          "url": "https://www.rydercup.com/news-media/stripe-becomes-a-worldwide-partner-of-the-ryder-cup",
+          "title": "Stripe becomes a Worldwide Partner of the Ryder Cup",
+          "content": "Ryder Cup Europe and the PGA of America today announced that Stripe has signed a new agreement to become a Worldwide Partner and the Official Financial and Payments Infrastructure Partner to golf’s greatest team contest—the Ryder Cup. [...] Terry Clark, Chief Executive Officer at the PGA of America, added: “We are proud to welcome Stripe as a Worldwide Partner of golf’s greatest team event. By leveraging Stripe’s advanced payments infrastructure, we are excited to offer spectators at the 47th Ryder Cup at Hazeltine a seamless payment experience at every touchpoint.”\n\n## Share Article\n\n Facebook\n X\n\n## Latest News\n\n thumbnail image\n\n  News [...] September 13-19, 2027Adare Manor, Limerick, Ireland\n\nhome\n\nWorldwide Partner 2027 Ryder Cupsponsor logo\n\nWorldwide Partner 2027 Ryder Cupsponsor logo\n\nWorldwide Partner 2027 Ryder Cupsponsor logo\n\nWorldwide Partner 2027 Ryder Cupsponsor logo\n\nWorldwide Partner 2027 Ryder Cupsponsor logo\n\nWorldwide Partner 2027 Ryder Cupsponsor logo\n\nArticle Hero\n\n# Stripe becomes a Worldwide Partner of the Ryder Cup\n\nBy Ryder Cup On July 22, 2026 10:30 UTC",
+          "query": "\"Stripe\" news"
+        },
+        {
+          "url": "https://www.paymentsdive.com/news/stripe-fedex-team-on-smb-lending-business-capital-logistics/832368",
+          "title": "Stripe, FedEx team on SMB lending",
+          "content": "The FedEx effort follows Stripe’s purchase last week of embedded financing company Parafin, which also arranges loans for small businesses. Stripe plans to use the San Francisco-based startup to expand its lending for smaller firms. In the Sept. 30 news release about the Parafin acquisition, Stripe argued that small businesses are finding it difficult to access capital, citing a decreasing percentage of approved loans last year compared to 2015. [...] Stripe is partnering with global shipping giant FedEx to combine their data insights from logistics and financial infrastructure to create financing options for small businesses, the companies said Tuesday in a joint press release. [...] “Stripe will be better positioned to evaluate, approve, and deploy tailored funding more quickly than traditional lending processes, eliminating the friction for SMBs,” the release said. Stripe makes business loans through two partner banks.",
+          "query": "\"Stripe\" news"
+        },
+        {
+          "url": "https://news.crunchbase.com/ma/stripe-acquisition-pace-accelerates-paypal",
+          "title": "Stripe's Acquisition Pace Has Accelerated In The Past Five Years, But Nothing Comes Close To Its Reported $53B PayPal Bet",
+          "content": "Stripe’s M&A pace has also accelerated sharply since 2020, Crunchbase data shows, with 13 of its 21 acquisitions announced since then.\n\nIts recent strategy appears to be focused on stablecoins and crypto infrastructure — Bridge, Privy, Valora and PartyDAO — as well as on billing and money movement through Metronome, payment processing startup Lemon Squeezy and Orum. [...] With substantial private capital — it has raised some $10.4 billion since inception, per Crunchbase — Stripe has long been one of the most acquisitive venture-backed startups. It has made 21 known acquisitions since its 2010 inception, according to Crunchbase data. Only three have disclosed prices: stablecoin platform Bridge at $1.1 billion (2025), usage-based billing software startup Metronome at $1 billion (2026), and Nigerian payments startup Paystack at $200 million (2020). [...] Payments giant Stripe and private equity firm Advent International have teamed up to make an offer to buy troubled PayPal in a deal valued at more than $53 billion, Reuters reported Wednesday.",
+          "query": "\"Stripe\" news"
+        },
+        {
+          "url": "https://www.fool.com/investing/2026/08/27/stripes-75-billion-bet-on-the-ai-model-routing-lay",
+          "title": "Stripe's $7.5 Billion Bet on the AI Model Routing Layer | The Motley Fool",
+          "content": "Fintech giant Stripe is acquiring OpenRouter, a leading artificial intelligence (AI) model gateway, in a deal reportedly worth $7.5 billion. That's nearly six times the $1.3 billion valuation estimated by The New York Times following its latest funding round in May. The premium is due in part to Stripe having outbid other tech players, including Databricks, for the company. [...] Stripe is adding another toll collector to its operation with its acquisition of OpenRouter, but it's paying a steep premium for the company.\n\nByBryan White – Aug 27, 2026 at 6:51PM EST\n\n+Fool.comon\n\n## Key Points [...] Both companies are toll collectors, and this acquisition will expand Stripe's currency base. Where it typically spends to grow its transaction volume, these tolls will rise on their own as AI adoption spreads. Stripe's fraud screening also helps prevent the stolen-card purchases and token reselling that plague small AI marketplaces.",
+          "query": "\"Stripe\" news"
+        },
+        {
+          "url": "https://finance.yahoo.com/markets/crypto/articles/xrp-news-ai-payments-integration-133000794.html",
+          "title": "XRP News: AI Payments Integration With Stripe Driving Ripple Toward $1.50",
+          "content": "A clean break above $1.55 would be the first higher high since May and could quickly bring volume back. ETF flows are still in good shape, with this week closing around +$9M in positive flows.\n\nXRP news highlights the Ripple-Stripe deal, showing big money is building in crypto right now. That kind of news lifts every coin with live tools behind it. A move above $1.55 would be the first higher high since May and could quickly bring volume back. [...] 1. Crypto\n\n   Crypto\n2. AI\n\n   AI\n\nCryptonews\n\n# XRP News: AI Payments Integration With Stripe Driving Ripple Toward $1.50\n\nAhmed Barakat\n\n2 min read\n\n XRP-USD\n\n  -6.07%\n STRI.PVT\n\nIn XRP news, the asset is moving faster than it has since August. The token passed $1.38 on CoinGecko after a +2% gain over the past week. Ripple linked XRP to Stripe's payment tools on September 17, and the coin still trades -54% below its 2021 peak.",
+          "query": "\"Stripe\" news"
+        }
+      ]
+    }
+  ]
+}

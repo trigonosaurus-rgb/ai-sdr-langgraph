@@ -45,6 +45,11 @@ def result_path(directory: Path, case_id: str, repeat: int) -> Path:
     return directory / f"{case_id}.{repeat}.json"
 
 
+def save_run(run: CaseRun, path: Path) -> None:
+    # the brief's domain is computed and rejected on read, as in server/store.py
+    path.write_text(run.model_dump_json(indent=2, exclude={"result": {"brief": {"domain"}}}) + "\n", encoding="utf-8")
+
+
 def run_case(
     case: Case,
     config_name: str,
@@ -117,7 +122,7 @@ def main() -> int:
     def work(job: tuple[Case, int]) -> CaseRun:
         case, repeat = job
         run = run_case(case, args.config, config, repeat)
-        result_path(directory, case.id, repeat).write_text(run.model_dump_json(indent=2) + "\n", encoding="utf-8")
+        save_run(run, result_path(directory, case.id, repeat))
         print(summary_line(run), file=sys.stderr, flush=True)
         return run
 

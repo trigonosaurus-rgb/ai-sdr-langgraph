@@ -117,6 +117,7 @@ class Research(BaseModel):
     sufficient: bool
     gaps: str
     dropped_facts: int  # extracted facts discarded because their quote was not in the source
+    dropped: list[ExtractedFact] = []  # those facts as extracted, to diagnose the quote check
 
 
 class Usage(BaseModel):

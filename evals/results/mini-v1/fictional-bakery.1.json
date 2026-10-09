@@ -1,0 +1,103 @@
+{
+  "case_id": "fictional-bakery",
+  "config": "mini",
+  "models": "Research gpt-5.4-mini/low, Strategy gpt-5.4-mini/medium, Writing gpt-5.4-mini/medium, Review gpt-5.4-mini/low",
+  "repeat": 1,
+  "snapshot_recorded_at": "2026-10-09T12:06:42+00:00",
+  "checks": {
+    "label": "website_mismatch",
+    "outcome_ok": true,
+    "facts": 0,
+    "dropped_facts": 0,
+    "attempts": 0,
+    "has_draft": false,
+    "language_ok": null,
+    "body_words": null,
+    "subject_words": null,
+    "length_ok": null,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "731177b54c49477e8c216aa690500a76",
+    "brief": {
+      "company": "Hollowmere Bakehouse",
+      "website": "hollowmere-bakehouse.com",
+      "offer": "Online ordering setup for local bakeries",
+      "recipient": "Owner",
+      "language": "English",
+      "tone": "Direct"
+    },
+    "status": "failed",
+    "reason": "website_mismatch",
+    "message": "Search results do not match hollowmere-bakehouse.com. The results do not describe hollowmere-bakehouse.com; the only Hollowmere-related result is an example page on a different domain, not the company’s website.",
+    "issues": [],
+    "research": {
+      "facts": [],
+      "website_matches": false,
+      "website_note": "The results do not describe hollowmere-bakehouse.com; the only Hollowmere-related result is an example page on a different domain, not the company’s website.",
+      "site_indexed": false,
+      "sufficient": false,
+      "gaps": "No search result from hollowmere-bakehouse.com or any clearly attributable source describing this company’s products, location, customers, scale, or priorities.",
+      "dropped_facts": 0
+    },
+    "strategy": null,
+    "draft": null,
+    "attempts": [],
+    "prompt_versions": {
+      "research": "research@1"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "research@1",
+        "duration_ms": 2565,
+        "usage": {
+          "input_tokens": 2104,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 283,
+          "reasoning_tokens": 186
+        },
+        "cost_usd": 0.0028515,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Hollowmere Bakehouse\" company overview products customers",
+        "topic": "general",
+        "results": 0,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Hollowmere Bakehouse\" hollowmere-bakehouse.com",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Hollowmere Bakehouse\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 2576
+  }
+}

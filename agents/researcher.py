@@ -6,7 +6,7 @@ from urllib.parse import urlsplit
 from core.context import RunContext
 from core.events import Activity, Evidence, EvidenceItem, StageStarted, emit
 from core.prompts import load_prompt
-from core.schemas import Brief, Fact, Research, ResearchOutput, SearchResult, domain_of
+from core.schemas import Brief, ExtractedFact, Fact, Research, ResearchOutput, SearchResult, domain_of
 from core.state import SDRState
 
 MAX_FACTS = 8
@@ -101,11 +101,11 @@ def make_researcher(ctx: RunContext):
         )
 
         facts: list[Fact] = []
-        dropped = 0
+        dropped: list[ExtractedFact] = []
         for extracted in output.facts:
             index = extracted.source_id - 1
             if not 0 <= index < len(sources) or not quote_in_source(extracted.excerpt, texts[index]):
-                dropped += 1
+                dropped.append(extracted)
                 continue
             facts.append(
                 Fact(
@@ -126,7 +126,8 @@ def make_researcher(ctx: RunContext):
             site_indexed=official > 0,
             sufficient=output.sufficient and len(facts) >= ctx.settings.min_facts,
             gaps=output.gaps,
-            dropped_facts=dropped,
+            dropped_facts=len(dropped),
+            dropped=dropped,
         )
         emit(Activity(message=f"Kept {len(facts)} facts with verified quotes"))
         if facts:

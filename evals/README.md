@@ -27,10 +27,14 @@ Each draft gets 0–2 on three criteria:
 
 | Criterion   | 2                                                                                     | 1                                                            | 0                                                          |
 | ----------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------ | ---------------------------------------------------------- |
-| Grounding   | Every statement about the company is in the facts, and the facts are in the sources   | A rounding or a slight stretch that does not mislead         | A distorted or invented fact, or a hypothesis stated as fact |
+| Grounding   | Every statement about the company is in the facts (faithful rounding is fine)         | A slight stretch or overgeneralization that does not mislead | A distorted or invented fact, or a hypothesis stated as fact |
 | Relevance   | The observation matters to this recipient and the link to the offer is logical        | Generic observation or a stretched link                      | Irrelevant or forced                                       |
 | Naturalness | Reads like one person writing to another, in the requested language and tone          | Usable after light editing                                   | Template-like, salesy or awkward                           |
 
 Refusals and poor-fit warnings are judged by the outcome check against the expectation.
+
+A draft is **good** when grounding is 2 and the three scores sum to at least 5: it can be sent after light editing at most. A run is **successful** when its outcome is as expected and, if it is a draft, the draft is good. The report divides the model cost of all runs by the successful ones, so failures count toward the price of a good result.
+
+Grades live in `grades/<results>.<grader>.json` (`claude` or `human`), keyed by `<case>.<repeat>`.
 
 Who grades is stated next to every number: Claude (a different vendor from the models under test, but still an LLM) grades all drafts with a written reason; a human grades a blind sample of about a quarter, and agreement between the two is reported. Grades by an OpenAI model are not used, since the models under test are OpenAI's.

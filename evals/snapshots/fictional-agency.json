@@ -1,0 +1,84 @@
+{
+  "case_id": "fictional-agency",
+  "brief": {
+    "company": "Brightlane Studio",
+    "website": "brightlane-studio-design.com",
+    "offer": "White-label web development for design agencies",
+    "recipient": "Creative Director",
+    "language": "English",
+    "tone": "Warm"
+  },
+  "recorded_at": "2026-10-09T12:06:55+00:00",
+  "searches": [
+    {
+      "query": "\"Brightlane Studio\" company overview products customers",
+      "topic": "general",
+      "include_domains": [
+        "brightlane-studio-design.com"
+      ],
+      "max_results": 5,
+      "credits": 1.0,
+      "results": []
+    },
+    {
+      "query": "\"Brightlane Studio\" brightlane-studio-design.com",
+      "topic": "general",
+      "include_domains": null,
+      "max_results": 5,
+      "credits": 1.0,
+      "results": [
+        {
+          "url": "https://www.facebook.com/BrightlaneStudio",
+          "title": "Brightlane Studio (@BrightlaneStudio)",
+          "content": "Elevated and Feminine Design, Photography, Social Strategy, and Copywriting for female entrepreneurs. is in Fairfield, CT.",
+          "query": "\"Brightlane Studio\" brightlane-studio-design.com"
+        },
+        {
+          "url": "https://www.pinterest.com/brightlanestudio",
+          "title": "Brightlane Studio | Creative Branding and Web Design ...",
+          "content": "Brightlane Studio | Creative Branding and Web Design Agency ... Empowering + Elevating Woman-Owned Brands through Brand Design, Web Design, Photography, and more.",
+          "query": "\"Brightlane Studio\" brightlane-studio-design.com"
+        },
+        {
+          "url": "https://in.linkedin.com/company/brightline-studio",
+          "title": "Brightline Studio",
+          "content": "# Brightline Studio\n\nDescription: Say hello to Brightline Studio where creativity meets strategy. Brand Strategy, Design & Print, Social Media Design & Marketing, Web Development\nLinkedIn:  · 9 followers\nIndustry: Advertising Services\nType: Partnership\nHeadquarters: Ahmedabad, Gujarat, India\n\n## Employees\n- Now: 4 [...] - 2025-11-07: At Bright Line Studio, we believe great food deserves great design. Our Creative Food Packaging solutions go beyond aesthetics — we create packaging that tells your brand’s story, evokes emotion, and connects with your audience the moment they see it. We blend strategy, creativity, and functionality to design packaging... [...] - 2025-11-06: we build brands that speak, connect, and inspire. We blend strategy, creativity, and storytelling to craft unique brand experiences that leave a lasting impression. #CreativeBrandingStudio#DesignThatSpeaks#BrandingWithPurpose#BuildYourBrandStory#VisualIdentityExperts#CreativeByDesign#BrandsThatInspire #DesignDrivenBran...",
+          "query": "\"Brightlane Studio\" brightlane-studio-design.com"
+        },
+        {
+          "url": "https://www.instagram.com/p/DHyIeWeIQwl",
+          "title": "Say hello to Brightline Studio – where creativity meets ...",
+          "content": "Say hello to Brightline Studio – where creativity meets strategy, and bold ideas turn into reality. From branding to design, we craft",
+          "query": "\"Brightlane Studio\" brightlane-studio-design.com"
+        },
+        {
+          "url": "http://www.brightlane.studio",
+          "title": "Brightlane Studio",
+          "content": "No information is available for this page.",
+          "query": "\"Brightlane Studio\" brightlane-studio-design.com"
+        }
+      ]
+    },
+    {
+      "query": "\"Brightlane Studio\" news",
+      "topic": "news",
+      "include_domains": null,
+      "max_results": 5,
+      "credits": 1.0,
+      "results": [
+        {
+          "url": "https://www.wrtv.com/news/local-news/brightlane-learning-housing-insecurity-talks",
+          "title": "Learn how to support students facing housing insecurity",
+          "content": "Brightlane Learning announces new community talks on student homelessness and mental health in Indianapolis. Learn how to help local youth.",
+          "query": "\"Brightlane Studio\" news"
+        },
+        {
+          "url": "https://www.wishtv.com/news/education/brightlane-learning-homeless-students",
+          "title": "The Morning Bell: Brightlane Learning supports students facing homelessness",
+          "content": "Brightlane Learning supports students facing homelessness in Indianapolis, providing tutoring and academic support to improve educational success.",
+          "query": "\"Brightlane Studio\" news"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,335 @@
+{
+  "case_id": "wrong-site-duolingo",
+  "config": "mini",
+  "models": "Research gpt-5.4-mini/low, Strategy gpt-5.4-mini/medium, Writing gpt-5.4-mini/medium, Review gpt-5.4-mini/low",
+  "repeat": 2,
+  "snapshot_recorded_at": "2026-10-09T12:07:08+00:00",
+  "checks": {
+    "label": "draft",
+    "outcome_ok": false,
+    "facts": 7,
+    "dropped_facts": 1,
+    "attempts": 3,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 72,
+    "subject_words": 3,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "1bb1373bfed44886b94dc34f7bab5e5f",
+    "brief": {
+      "company": "Duolingo",
+      "website": "babbel.com",
+      "offer": "Voice actors and audio production for language-learning content",
+      "recipient": "Director of Learning Content",
+      "language": "English",
+      "tone": "Direct"
+    },
+    "status": "ready",
+    "reason": null,
+    "message": "The draft passed review.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "Babbel sells language-learning courses as a paid subscription product.",
+          "excerpt": "\"Babbel is a paid SaaS product (recurring subscription).\"",
+          "source_url": "https://www.mezzoguild.com/babbel-vs-duolingo",
+          "source_title": "Babbel vs Duolingo: I Honestly Wouldn't Use Either Of Them"
+        },
+        {
+          "id": 2,
+          "claim": "Babbel offers 14 languages, fewer than Duolingo.",
+          "excerpt": "\"It covers fewer languages than Duolingo (14 at the time of this writing).\"",
+          "source_url": "https://www.mezzoguild.com/babbel-vs-duolingo",
+          "source_title": "Babbel vs Duolingo: I Honestly Wouldn't Use Either Of Them"
+        },
+        {
+          "id": 3,
+          "claim": "Babbel is positioned around structured lessons and professionally designed learning paths.",
+          "excerpt": "\"Babbel has a professionally designed learning path\"",
+          "source_url": "https://www.mezzoguild.com/babbel-vs-duolingo",
+          "source_title": "Babbel vs Duolingo: I Honestly Wouldn't Use Either Of Them"
+        },
+        {
+          "id": 4,
+          "claim": "Babbel emphasizes grammar and more thorough lessons than Duolingo.",
+          "excerpt": "\"Babbel offers more thorough lessons, better grammar explanations\"",
+          "source_url": "https://guide2fluency.com/comparisons/babbel-vs-duolingo",
+          "source_title": "Babbel vs Duolingo | (Which Language App Is Better) | Guide2Fluency"
+        },
+        {
+          "id": 5,
+          "claim": "Babbel’s lessons are longer and more in-depth than Duolingo’s.",
+          "excerpt": "\"their lessons are longer and more in-depth.\"",
+          "source_url": "https://guide2fluency.com/comparisons/babbel-vs-duolingo",
+          "source_title": "Babbel vs Duolingo | (Which Language App Is Better) | Guide2Fluency"
+        },
+        {
+          "id": 6,
+          "claim": "Babbel’s exercises are designed to cover vocabulary, sentences, and everyday topics.",
+          "excerpt": "\"Balanced practice across vocabulary, sentences, and everyday topics\"",
+          "source_url": "https://www.babbel.com/praktika-alternatives",
+          "source_title": "Top AI Speaking Practice Apps: Alternatives to Praktika"
+        },
+        {
+          "id": 7,
+          "claim": "Babbel provides AI-powered speaking practice to build conversation confidence.",
+          "excerpt": "\"AI-powered speaking practice to build your confidence in conversations\"",
+          "source_url": "https://www.babbel.com/praktika-alternatives",
+          "source_title": "Top AI Speaking Practice Apps: Alternatives to Praktika"
+        }
+      ],
+      "website_matches": true,
+      "website_note": "The results are from babbel.com and describe Babbel’s own language-learning app and comparisons with Duolingo.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 1
+    },
+    "strategy": {
+      "observation": "Babbel’s product is built around structured, longer, more in-depth lessons that cover grammar, vocabulary, sentences, everyday topics, and AI speaking practice, so the learning experience depends heavily on high-quality spoken audio.",
+      "fact_ids": [
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "offer_link": "Voice actors and audio production could directly strengthen those lesson formats by making dialogue, pronunciation models, and speaking prompts clearer, more consistent, and more engaging across Babbel’s course content.",
+      "hypotheses": [
+        "Babbel may be looking to refresh or expand its lesson library and would need scalable audio production support.",
+        "Babbel may want more consistent voice quality across languages, lesson types, or new content releases.",
+        "Babbel may be trying to improve the perceived polish of its speaking practice and audio-led exercises."
+      ],
+      "angle": "Babbel’s longer, more structured lessons probably depend on audio quality more than a quick-hit language app does.",
+      "offer_fit": "good",
+      "fit_reason": "Babbel is a language-learning subscription product with speaking practice and lesson formats where professional voice talent and audio production are naturally relevant. The fit is strong because audio is core to the learning experience, not an add-on."
+    },
+    "draft": {
+      "subject": "Lesson audio consistency",
+      "body": "Babbel’s paid courses lean on structured, longer lessons, with grammar, vocabulary, everyday topics, and AI speaking practice. If that style of content is close to what you’re building, audio quality probably matters more than in a quick-hit app.\n\nVoice actors and audio production could help keep dialogue, pronunciation models, and speaking prompts clear and consistent across modules and refreshes.\n\nWould it be worth a quick comparison on where audio slows lesson production?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Audio for lesson content",
+          "body": "Babbel’s longer, more structured lessons probably depend on audio quality more than a quick-hit language app does.\n\nIf you’re building or refreshing lesson content at Duolingo, voice actors and audio production can help keep dialogue, pronunciation models, and speaking prompts clear and consistent across modules.\n\nWe work with language-learning teams on scalable recording and cleanup for new content or refreshes.\n\nWould it make sense to compare notes on where audio tends to slow production?"
+        },
+        "review": {
+          "passed": false,
+          "issues": [
+            "The first sentence makes an unsupported claim about Babbel and a “quick-hit language app.” The facts you provided only support that Babbel has longer, more structured lessons and more thorough content. Remove the comparison, or rewrite it as a question/assumption tied to Duolingo instead."
+          ]
+        }
+      },
+      {
+        "attempt": 2,
+        "draft": {
+          "subject": "Audio for lessons",
+          "body": "Babbel’s longer, more in-depth lessons seem to put a lot of weight on spoken audio.\n\nIf Duolingo is planning more structured lessons or more speaking practice, voice actors and audio production could help keep dialogue, pronunciation models, and prompts consistent across content.\n\nWe work with language-learning teams on recording and cleanup for new modules and refreshes.\n\nWould it be worth comparing notes on where audio slows lesson production?"
+        },
+        "review": {
+          "passed": false,
+          "issues": [
+            "The first line talks about Babbel, not Duolingo. Open with the recipient’s situation or the audio problem you want to solve.",
+            "“Babbel’s longer, more in-depth lessons seem to put a lot of weight on spoken audio” makes an unsupported inference. Change it to a question or qualify it more clearly as an assumption."
+          ]
+        }
+      },
+      {
+        "attempt": 3,
+        "draft": {
+          "subject": "Lesson audio consistency",
+          "body": "Babbel’s paid courses lean on structured, longer lessons, with grammar, vocabulary, everyday topics, and AI speaking practice. If that style of content is close to what you’re building, audio quality probably matters more than in a quick-hit app.\n\nVoice actors and audio production could help keep dialogue, pronunciation models, and speaking prompts clear and consistent across modules and refreshes.\n\nWould it be worth a quick comparison on where audio slows lesson production?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@1",
+      "strategy": "strategy@1",
+      "copywriter": "copywriter@1",
+      "review": "review@1"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "research@1",
+        "duration_ms": 3670,
+        "usage": {
+          "input_tokens": 4504,
+          "cached_input_tokens": 4352,
+          "cache_write_tokens": null,
+          "output_tokens": 512,
+          "reasoning_tokens": 158
+        },
+        "cost_usd": 0.0027444,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "strategy@1",
+        "duration_ms": 4997,
+        "usage": {
+          "input_tokens": 649,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 610,
+          "reasoning_tokens": 359
+        },
+        "cost_usd": 0.00323175,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "copywriter@1",
+        "duration_ms": 4076,
+        "usage": {
+          "input_tokens": 702,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 631,
+          "reasoning_tokens": 512
+        },
+        "cost_usd": 0.003366,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "review@1",
+        "duration_ms": 2908,
+        "usage": {
+          "input_tokens": 648,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 310,
+          "reasoning_tokens": 231
+        },
+        "cost_usd": 0.001881,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 2,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "copywriter@1",
+        "duration_ms": 4001,
+        "usage": {
+          "input_tokens": 886,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 623,
+          "reasoning_tokens": 512
+        },
+        "cost_usd": 0.003468,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 2,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "review@1",
+        "duration_ms": 3540,
+        "usage": {
+          "input_tokens": 640,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 438,
+          "reasoning_tokens": 349
+        },
+        "cost_usd": 0.002451,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 3,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "copywriter@1",
+        "duration_ms": 4209,
+        "usage": {
+          "input_tokens": 889,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 627,
+          "reasoning_tokens": 512
+        },
+        "cost_usd": 0.00348825,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 3,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "review@1",
+        "duration_ms": 4604,
+        "usage": {
+          "input_tokens": 646,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 499,
+          "reasoning_tokens": 479
+        },
+        "cost_usd": 0.00273,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Duolingo\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Duolingo\" babbel.com",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Duolingo\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 32024
+  }
+}

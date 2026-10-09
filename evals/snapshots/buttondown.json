@@ -1,0 +1,133 @@
+{
+  "case_id": "buttondown",
+  "brief": {
+    "company": "Buttondown",
+    "website": "buttondown.com",
+    "offer": "Migration help for newsletter writers moving from Substack",
+    "recipient": "Founder",
+    "language": "English",
+    "tone": "Warm"
+  },
+  "recorded_at": "2026-10-09T12:05:45+00:00",
+  "searches": [
+    {
+      "query": "\"Buttondown\" company overview products customers",
+      "topic": "general",
+      "include_domains": [
+        "buttondown.com"
+      ],
+      "max_results": 5,
+      "credits": 1.0,
+      "results": [
+        {
+          "url": "https://buttondown.com/testimonials",
+          "title": "Customer Stories — Buttondown",
+          "content": "Rachel — 2030 Camp\n I love how personal Buttondown feels, especially compared to Mailchimp, Convertkit, and services like that.\n\n  Simen Strøm Braaten — Designer\n This product has been exactly what I've needed!\n\n  Nathan Bird — Podcast host, Chattanooga Civics\n It's already so refreshing compared to the mega companies.\n\n  Casey Watts — Author, Debugging Your Brain\n Definitely will be using for the foreseeable future. It's a great service and I feel well cared for. Thank you! [...] Cassidy Williams — CTO, Contenda\n I switched over to Buttondown from Mailchimp because of the difficulty I had with Mailchimp's campaigns, so Buttondown's easy and user-friendly system has been a genuine breath of fresh air.\n\n  Jessi Eoin — Illustrator + Comic Artist\n You've truly built a great product that I feel good about using (vs a monopoly from our tech overlords). [...] Andy Magnusson — Customer Engineering Leader\n Wanna know how good Buttondown as a product experience is? I upgraded to Basic before sending the first email, and then upgraded again two days later.\n\n  Zak El Fassi — Founder, Zaigood Labs\n Mailchimp lost me due to their inferior product and the nightmarish merry-go-around experience with their overseas support team. Buttondown won me over with their superior product and second to none customer service.",
+          "query": "\"Buttondown\" company overview products customers"
+        },
+        {
+          "url": "https://buttondown.com/features/for/businesses",
+          "title": "Buttondown for businesses",
+          "content": "Buttondown is widely known for having the best RESTfulAPI in the industry. Not only can you do essentially anything through it, but we've documented it extensively, too.\n\n## You're safe with us.\n\nWe've structured our business to be around for the long haul – and it's run by a real person. We're also widely beloved by our customers: [...] Mailchimp lost me due to their inferior product and the nightmarish merry-go-around experience with their overseas support team. Buttondown won me over with theirsuperior product and second to none customer service.\n\nSav Tripodi\n\n### Priority support. [...] Anton Sotkov, IA\n\nDoesn't matter if you're sending out irregular updates to a few dozen friends, or marketing your business to a thousand recipients. It is absolutely a joy to use. The documentation is great. And Justin provides the best support I have ever encountered. Amazon isn't the world's most customer-centric company, Buttondown is.\n\nTilde Lowengrimm, Red Queen Dynamics\n\n## What we don't do:",
+          "query": "\"Buttondown\" company overview products customers"
+        },
+        {
+          "url": "https://buttondown.com/blog/onboarding",
+          "title": "How we welcome new customers at Buttondown",
+          "content": "In order to make this all work, we also had to build a brand-new home screen for all customers in Buttondown. Doing so gives us a place to ask these questions and get people acclimated to the product, and it also helps existing customers better understand the health & progress of their lists at a glance.\n\n## Launch, adapt, repeat [...] # How we welcome new customers at Buttondown\n\n## A look at Buttondown's new onboarding process and how we help diverse customers get started.\n\nnickd\n\nLet’s say you sign up for Buttondown as a new customer. Hi! Welcome! Okay, now what?\n\nI’ve been tasked with answering this question. It’s a surprisingly hard question! That’s because Buttondown customers have a wide diversity of:\n\nLooking at some examples, you can see how this would break down: [...] Yes, there’s some overlap, but it all comes down to one thing: our customer base is diverse, and their needs will vary. We can’t really figure out what to do with a new customer by guessing. We have to ask them.\n\nWe’ve historically done a lousy job of this. We know roughly who our customers are, because we pay attention and talk to them a lot. We don’t know this with any degree of precision. We’re guessing as to what they do next.",
+          "query": "\"Buttondown\" company overview products customers"
+        },
+        {
+          "url": "https://docs.buttondown.com/llms.txt",
+          "title": "Buttondown",
+          "content": "## Docs\n- Introduction: Overview of Buttondown and getting started\n- Quickstart: Get from nothing to a functional newsletter fast\n- API Introduction: RESTful API for programmatic access to subscribers, emails, and more\n- API Authentication: How to authenticate API requests\n- Importing Your Data: Migrate from other newsletter providers\n## API Reference\n- Subscribers API: Create, list, update, and delete subscribers\n- Emails API: Draft, schedule, send, and manage emails [...] # Buttondown\n> Buttondown is a newsletter platform that makes it easy to start, grow, and monetize your newsletter. It offers subscriber management, email composition, paid subscriptions, automations, and a comprehensive API.\nButtondown is designed for simplicity and power. It supports Markdown and rich text editing, custom domains, paid subscriptions via Stripe, automations, webhooks, and deep integrations with tools like Zapier, Discord, and RSS feeds.\n## Docs [...] - Tags API: Organize subscribers with tags\n- Webhooks API: Receive real-time notifications for events\n- Automations API: Create automated email sequences\n- Surveys API: Collect feedback from subscribers\n- Newsletters API: Manage multiple newsletters\n- Exports API: Export your data\n- Bulk Actions API: Perform operations on many records at once\n## Features\n- Paid Subscriptions: Monetize your newsletter with Stripe\n- Automations: Set up welcome sequences and triggered emails",
+          "query": "\"Buttondown\" company overview products customers"
+        },
+        {
+          "url": "https://buttondown.com/thespacemechanic/archive/the-overview-starship-goes-for-orbit",
+          "title": "The Overview · Starship goes for orbit • Buttondown",
+          "content": "| Ticker | Sector | 7-day |\n --- \n| SATL — Satellogic | Satellites & data | ▲ +13.1% |\n| FLY — Firefly Aerospace | Launch | ▲ +5.0% |\n| RKLB — Rocket Lab | Launch | ▲ +4.7% |\n| PL — Planet Labs | Satellites & data | ▲ +4.0% |\n| SPIR — Spire Global | Satellites & data | ▲ +2.8% |\n| KTOS — Kratos Defense & Security Solutions | Ground & comms | ▼ -4.8% |\n| GD — General Dynamics | Defense | ▼ -4.6% |\n| LDOS — Leidos | Defense | ▼ -3.4% |\n| SPCX — SpaceX | Launch | ▼ -3.4% | [...] | LHX — L3Harris Technologies | Spacecraft & components | ▼ -3.4% | [...] ## ⚡ Quick hits\n\n### Space stocks — 7-day movers",
+          "query": "\"Buttondown\" company overview products customers"
+        }
+      ]
+    },
+    {
+      "query": "\"Buttondown\" buttondown.com",
+      "topic": "general",
+      "include_domains": null,
+      "max_results": 5,
+      "credits": 1.0,
+      "results": [
+        {
+          "url": "https://www.linkedin.com/company/buttondown",
+          "title": "Buttondown",
+          "content": "Description: Buttondown is a small, elegant tool for producing newsletters. The minimalist interface makes it easy for you to write great emails; the automation acts like the editorial assistant you wish you had, by checking for typos, broken links, or malformed images; the portable subscription widget makes it really easy to grow your audience from wherever you host your site.\nLinkedIn:  · 823 followers\nIndustry: Technology, Information and Internet\nType: Privately Held [...] # Buttondown [...] ## Products and services\nKeywords: technology/software, cms tools, buttondown, owned media, computers_electronics_and_technology/graphics_multimedia_and_web_design, publishing, python, javascript, media, newsletters, membership, subscriptions",
+          "query": "\"Buttondown\" buttondown.com"
+        },
+        {
+          "url": "https://www.producthunt.com/products/buttondown",
+          "title": "Buttondown: A small, elegant tool for producing newsletters. | Product Hunt",
+          "content": "Reviewers describe Buttondown as a clean, markdown-first newsletter tool that feels easier to use than bloated email platforms while offering more capability than stripped-down alternatives. They repeatedly praise the simple UI, fast setup, and smooth handling of drafts, subscribers, and sending. Several highlight responsive, helpful support and steady product updates. Specific features users value include a programmable API, custom domains, opt-out analytics, and signup categories. The [...] Report\n\nJustin Duke\n\nButtondown [...] Subscribe\n\nButtondown\n\n## A small, elegant tool for producing newsletters.\n\n5.0•10 reviews•\n\n28 followers\n\n## A small, elegant tool for producing newsletters.\n\n5.0•10 reviews•\n\n28 followers\n\nVisit website\n\nNewsletter platforms\n\nButtondown is the best way to start and run your newsletter\n\n Overview\n Reviews10\n Alternatives\n Team\n Awards\n\nLaunch tags:Email•Newsletters•Email Marketing\n\nLaunch Team\n\nSubscribe\n\nSocialX\n\n5.0\n\nBased on 10 reviews\n\nReview Buttondown?",
+          "query": "\"Buttondown\" buttondown.com"
+        },
+        {
+          "url": "https://news.ycombinator.com/item?id=41364783",
+          "title": "Notes on Buttondown.com | Hacker News",
+          "content": "|  |  |  |\n --- \n|  |  | nine\\_k on Aug 27, 2024  | prev | next (javascript:void(0))   So, switching the domain to buttondown.com brought an uptick of traffic quickly. People apparently still hear a word, type it, and press Ctrl+Enter, or a mobile equivalent. Whoever has been parking the domain likely had made a wise investment, and now received $85k for it. Not millions, but still a new car. |\n\nPeople apparently still hear a word, type it, and press Ctrl+Enter, or a mobile equivalent. [...] | |  |  |  |  ---  |  |  | nine\\_k on Aug 27, 2024  | prev | next (javascript:void(0))   So, switching the domain to buttondown.com brought an uptick of traffic quickly. People apparently still hear a word, type it, and press Ctrl+Enter, or a mobile equivalent. Whoever has been parking the domain likely had made a wise investment, and now received $85k for it. Not millions, but still a new car. | | [...] |  |  |  |\n --- \n|  |  | hk1337 on Aug 27, 2024  | prev | next (javascript:void(0))   Buttondown is intended for marketing emails, like Mailchimp, right? It's not necessarily for business email like O365, Google Apps, Fastmail, etc? |\n\n|  |  |  |\n --- \n|  |  | flippyhead on Aug 27, 2024  | parent | next (javascript:void(0))   I am sure it's me, but I couldn't figure this out by looking at their website. I wanted to think they have a web UI like gmail, but don't see screenshots. |",
+          "query": "\"Buttondown\" buttondown.com"
+        },
+        {
+          "url": "https://buttondown.com",
+          "title": "Buttondown — Newsletter software for people like you",
+          "content": "That’s why we offerone-click concierge migration for your whole list, no matter how large it may be. Just create your account for free, contact us, and we’ll get you migrated within one business day.\n\nButtondown is the last email platform you’ll switch to.\n\nJoin your last newsletter platform\n\nAboutBlogTestimonialsDocsFeaturesIntegrations\n\nThe Newsletter BookAlternativesGuidesClimateBrand guidelinesKudosTerms of serviceUse casesPrivacy policyCustomer supportStatusOpen source [...] We prioritize our product roadmap from our customer feedback, not our own agenda. We use Buttondown for our own mailing lists. And we don’t take fees from yourpaid subscribers.\n\nThe power you need.\n\nOurautomations, personalizations, and editor help you send the right message to the right people. And if you want to try your hand at building your own tools, our API is feature-complete & beloved in the industry.\n\nIn it for the long haul. [...] As a small, independent business, we want Buttondown to be our life’s work. We have plans in place for the really long term. No, longer than that. Longer.\n\n## And we're here to help.\n\nPowerful for businesses.\n\nYou need your email to work. Fortunately, Buttondown’s deliverability is among the highest in the industry, and our spam protection is best-in-class. Our robust personalization &automation  features allow your email to work for you. Our analytics show you what’s working and how.",
+          "query": "\"Buttondown\" buttondown.com"
+        },
+        {
+          "url": "https://michaelsoolee.com/buttondown-newsletter-5-reasons",
+          "title": "5 reasons why I use Buttondown for my newsletter / Michael Lee",
+          "content": "If you’re looking for a place to start or transfer a newsletter, I definitely recommend checking out Buttondown.\n\nI’ve been with Buttondown since April 2020—for 6 months at the time writing this article—and have been delighted each time I send out a new email.\n\nI’ve found Buttondown to be a great fit for my workflow and have been delighted by all of Justin’s thoughtful features and improvements to the product.\n\n### Stay in touch [...] While I’m not sure how big Buttondown’s user base is, what is impressive is that it is run by a single person—Justin Duke.\n\nJustin runs everything from development, design, documentation, business tasks and support.\n\nThat is a lot for a single person who runs this on the side on top of their full time career.\n\nWhich is why I’m so thankful that for every support email I have sent Justin, I’ve gotten a reply back. [...] Which is why Buttondown’s documentation is quite impressive. Everything from the FAQ, changelog to the API documentation gives you enough—in a language that you can understand—to accomplish what you’d like to do.\n\n## Reason 4: Metadata\n\nOne of the reasons why I first hesitated when signing up for Buttondown was a lack—or so I thought—of capturing additional information from readers.",
+          "query": "\"Buttondown\" buttondown.com"
+        }
+      ]
+    },
+    {
+      "query": "\"Buttondown\" news",
+      "topic": "news",
+      "include_domains": null,
+      "max_results": 5,
+      "credits": 1.0,
+      "results": [
+        {
+          "url": "https://buttondown.com/warhogy/archive/arc-raiders-free-weekend-gaming-news-58",
+          "title": "ARC Raiders Free Weekend | Gaming News #58 • Buttondown",
+          "content": "Facepunch's October 1 Rust update adds cows and sheep that players can capture, fence in, breed for better genes, and sell at a new stable vendor. Cows give milk that can be refrigerated and skimmed into stronger cream, sheep give wool worth up to 400 per trade-in, and a hand-stirred Biofuel Generator turns raw or spoiled meat into power. The new navmesh also lets NPCs walk into player bases and respect doors. [...] Micron CEO Sanjay Mehrotra said this week that the company has already sold most of its 2027 memory output, that supply will be tighter in 2027 and 2028 than in 2026, and that customers face \"much higher prices\" next year, VGC reported on October 2. AI data centres are locking in long-term deals. New Micron factories come online in 2028, and Mehrotra said he has no line of sight to supply and demand balancing. [...] Respawn's October 1 patch nerfs Axle's passive slide lateral control by 50 percent, disables aim assist for anyone boosted by her Nitro Gate, and cuts her Kickstart drone chase from 10 to 8 seconds. The same day, the anti-cheat team said a player used a modified client to duplicate optics through Ballistic's Sling passive, overloading servers until matches crashed, then rejoined to farm disconnected squads. That account is permanently banned and the exploit is patched.",
+          "query": "\"Buttondown\" news"
+        },
+        {
+          "url": "https://buttondown.com/goodnewsasheville/archive/good-news-asheville-september-3-2026-issue-119",
+          "title": "Good News Asheville - September 3, 2026 - Issue #119 • Buttondown",
+          "content": "- Dylan\n\nIf this brightened your day, forward it to someone who needs good news.\n\n## ✨ Today's Good News\n\n## Swannanoa Nonprofit Lands Life-Changing Lowe's Grant\n\n📰 Black Mountain News\n\nA Swannanoa nonprofit received a Lowe's grant it called a 'once in a lifetime' opportunity.\n\n## ☀️ More Bright Spots\n\n### Black Mountain Market Chases National Top-3 Spot\n\n📰 Black Mountain News\n\nBlack Mountain Tailgate Market is pursuing a top-3 national ranking, showcasing local farmers and vendors. [...] ### East Henderson Football Turns Losing Streak Into Hope\n\n📰 Citizen Times\n\nEast Henderson football is rebuilding team spirit after a 17-game losing streak.\n\n### Black Mountain Arts Center Reveals New Theater Season\n\n📰 Black Mountain News\n\nBlack Mountain Center for the Arts unveiled its upcoming theater season for the community.\n\n## 🌸 Micromoments\n\nSmall joys we noticed\n\nAsheville's Fall Guide: Rooftops, Oktoberfest and Farm Fun\n\nCitizen Times\n\nFrench Broad Chocolates Debuts Ice Cream Macarons [...] Good News Asheville logo\n\n# Good News Asheville\n\n# Good News Asheville - September 3, 2026 - Issue #119\n\nGood News Asheville - Daily newsletter celebrating positive community stories from Asheville, NC\n\nThursday, September 3, 2026\n\nGrant showed up for the Swannanoa nonprofit, Black Mountain Market's got its eyes on top three nationally, and East Henderson's still losing on the scoreboard but not much else. Rebuild season, but a few things are actually clicking.\n\n- Dylan",
+          "query": "\"Buttondown\" news"
+        },
+        {
+          "url": "https://buttondown.com/jectives/archive/typography-news-no-65",
+          "title": "Typography News No. 65",
+          "content": "Typography News No. 65 · LDN Poplar by London Type Foundry · Art Mod by Typofonderie · Six new Alphas from Zetafonts · ZT Moven by Zelow Type · Postcards",
+          "query": "\"Buttondown\" news"
+        },
+        {
+          "url": "https://buttondown.com/downstream/archive/u1f4ca-what-traffic-loss-reveals-about-news-pivots",
+          "title": "📊 What traffic loss reveals about news pivots",
+          "content": "Publishers now build direct reader relationships to survive. Local outlets like SFGate and the Boston Globe are launching ad-free apps and niche games to",
+          "query": "\"Buttondown\" news"
+        },
+        {
+          "url": "https://buttondown.com/samtalksvolleyball/archive/nebraska-volleyball-news-august-22nd-2026",
+          "title": "Nebraska volleyball news, August 22nd 2026",
+          "content": "Previously, this was only a fault if this caused interference or was a safety hazard, which in practice meant “if there was an opponent nearby”, but this was",
+          "query": "\"Buttondown\" news"
+        }
+      ]
+    }
+  ]
+}

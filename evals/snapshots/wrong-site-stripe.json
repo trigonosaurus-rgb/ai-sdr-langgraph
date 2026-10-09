@@ -1,0 +1,133 @@
+{
+  "case_id": "wrong-site-stripe",
+  "brief": {
+    "company": "Stripe",
+    "website": "adyen.com",
+    "offer": "Localizing developer documentation into Japanese, German and Brazilian Portuguese",
+    "recipient": "Head of Documentation",
+    "language": "English",
+    "tone": "Direct"
+  },
+  "recorded_at": "2026-10-09T12:07:03+00:00",
+  "searches": [
+    {
+      "query": "\"Stripe\" company overview products customers",
+      "topic": "general",
+      "include_domains": [
+        "adyen.com"
+      ],
+      "max_results": 5,
+      "credits": 1.0,
+      "results": [
+        {
+          "url": "https://www.adyen.com/en_GB/knowledge-hub/best-platforms-for-managing-global-collections-payouts-and-liquidity-across-subsidiaries",
+          "title": "Best platforms for managing global collections, payouts, and liquidity across subsidiaries - Adyen",
+          "content": "Stripe Organisations centralises operations and reporting across business lines and geographies.\n Stripe Connect routes funds between parties within a platform and tracks payouts per connected entity.\n Stripe Treasury provides a global business account with currency conversion and payout capability, also available as Treasury for Platforms for embedding into other products.\n\nNote: Stripe doesn't hold its own banking licences and works with bank partners to deliver these services. [...] For enterprises managing money across multiple entities and markets, the leading platforms for global collections, payouts, and liquidity are Adyen, Stripe, Checkout.com, Airwallex, and Wise. This article provides an overview of each platform and explains key considerations to help you make an informed choice. [...] ### Stripe\n\nStripe accepts payments in 195 countries across 135+ currencies, processing transactions locally where possible before converting and settling in the home currency.\n\nFor multi-entity businesses:",
+          "query": "\"Stripe\" company overview products customers"
+        },
+        {
+          "url": "https://www.adyen.com/en_GB/knowledge-hub/stripe-alternatives",
+          "title": "Best Stripe alternatives for UK enterprise businesses - Adyen",
+          "content": "Financial products: Checkout.com's core offering is payments and checkout infrastructure rather than financial products such as issuing, capital, or treasury.\n\nSupport model: Checkout.com offers enterprise-focused support for its larger customers.\n\n## Worldpay [...] When products are built on the provider's own infrastructure, they typically share one ledger and one data model, so a transaction or customer record looks the same whether you're viewing it from the payments side or the issuing side. You can also easily move money between products since they’re all built on the same system. [...] Financial products: Treasury, foreign exchange, and billing are core to Airwallex's offering, including a dedicated billing platform for invoicing, subscriptions, and usage-based revenue models.\n\nSupport model: Airwallex serves businesses from startups to enterprises, with an API-first platform and enterprise-focused support available for larger customers.\n\n## Choosing the right Stripe alternative for your business",
+          "query": "\"Stripe\" company overview products customers"
+        },
+        {
+          "url": "https://www.adyen.com/en_GB/knowledge-hub/best-payments-liquidity-management-platforms-for-enterprises",
+          "title": "Best payments liquidity management platforms for enterprises - Adyen",
+          "content": "For platforms, Stripe Treasury for Platforms is an API-based embedded finance product that lets you offer financial accounts, ACH and wire transfers, and card issuance to connected merchants. FDIC pass-through insurance eligibility covers balances up to $250k per account (US; funds held at Fifth Third Bank N.A.).\n\nNote: Stripe doesn't hold its own banking licences and relies on bank partners to provide these services.\n\n### Airwallex [...] ·  8 minutes\n\nIf you’re an enterprise managing payments, liquidity, and payouts across multiple markets, the leading platforms are Adyen, Stripe, Airwallex, Modern Treasury, and J.P. Morgan Payments. This article will provide an overview of each and explain key considerations to help you make an informed choice. [...] Key Takeaway: Adyen is the most integrated option for enterprises that want payments, liquidity, and payouts to function as a single system. The owned banking infrastructure and in-house stack are the differentiating factors versus assembled or bank-led solutions.\n\n### Stripe\n\nStripe Treasury provides a business financial account with access to multi-currency storage, local accounts, and FX conversion. Key capabilities include:",
+          "query": "\"Stripe\" company overview products customers"
+        },
+        {
+          "url": "https://www.adyen.com/en_GB/knowledge-hub/which-payment-providers-support-endless-aisle",
+          "title": "Which payment providers support endless aisle? - Adyen",
+          "content": "Endless aisle documentation\n\n### Adyen\n\nDedicated technical docs covering four setups, including a terminal-free option with Pay by Link\n\n### Stripe\n\nEducational guide covering endless aisles\n\n### Worldpay\n\nArticle on the benefits of endless aisles\n\nCross-channel returns\n\n### Adyen\n\nUnique payment reference lets stores refund orders from any channel\n\n### Stripe\n\nOnline and in-person payments managed in one place, with refunds issued against the original payment\n\n### Worldpay [...] Stripe Terminal extends Stripe Payments to in-person hardware, and Stripe says businesses can manage online and in-person payments together in its Dashboard. Stripe publishes guidance on endless aisle alongside buy online, pick up in store (BOPIS) and buy online, return in store (BORIS).\n\n### What does Worldpay offer for endless aisle? [...] Quick answer: Adyen, Stripe, and Worldpay all support endless aisle, since each processes both in-store and online payments. The biggest consideration is whether online and in-store payments feed into the same backend system. If they do, the endless aisle order, any refund, and the shopper's purchase history sit in one place. However, if they run on separate systems, cross-channel journeys require more manual work behind the scenes. Adyen, a global financial technology company, runs online and",
+          "query": "\"Stripe\" company overview products customers"
+        },
+        {
+          "url": "https://www.adyen.com",
+          "title": "Adyen: Fintech platform for enterprises - Adyen",
+          "content": "Backed by US, UK, and EU banking licenses.\n Enterprise-grade reliability\n\n  99.999% historical platform uptime.\n One platform\n\n  Payments, data insights, and financial products in one place.\n Built-in optimizations\n\n  Improve conversion, reduce fraud, and lower payment costs.\n Easy to integrate\n\n  One API that supports multiple use cases and channels.\n\n## Control every aspect of your money. Offer financial products to your customers. All from the same, centralized stack. [...] Drive revenue with optimized payments and automated payouts. Accept, settle, and move funds on one platform.\n\nExplore Intelligent Money Movement\n\nUse cases\n\nAccept paymentsSend payouts globallyIn person payments\n\nIntelligent Money MovementAdyen for Platforms\n\n12\n\n## Different industries. One standard. Businesses across sectors trust Adyen to keep money moving.\n\n Offer faster checkouts, stronger security, and better customer experiences across channels.\n\n  See more [...] ## Move money across your entire business\n\nDrive revenue with optimized payments and automated payouts. Accept, settle, and move funds on one platform.\n\nExplore Intelligent Money Movement\n\n## Launch payments and financial products under your brand\n\nUnlock new revenue streams. Embed payments, accounts, card issuing, and capital with a single integration.\n\nExplore Embedded Finance\n\n### Move money across your entire business",
+          "query": "\"Stripe\" company overview products customers"
+        }
+      ]
+    },
+    {
+      "query": "\"Stripe\" adyen.com",
+      "topic": "general",
+      "include_domains": null,
+      "max_results": 5,
+      "credits": 1.0,
+      "results": [
+        {
+          "url": "https://samboboev.medium.com/deep-dive-stripe-vs-adyen-comparing-product-stacks-and-pricing-6436029a184b",
+          "title": "Medium",
+          "content": "On core payment processing capabilities, both Stripe and Adyen offer a full-spectrum, global solution. Stripe wins praise for ease and developer tooling; Adyen wins praise for technical robustness and global unified infrastructure. For most standard online payments use cases (accepting card payments on a website or app), either will get the job done with high standards. The differences emerge more clearly when we expand into other aspects: in-person payments, platform payments, and value-added [...] Stripe and Adyen each support an extensive array of payment methods: global credit/debit cards (Visa, Mastercard, Amex, etc.), digital wallets (Apple Pay, Google Pay, etc.), bank transfers, and region-specific options (from \\\\SEPA Direct Debit in Europe to ACH in the US, Alipay and WeChat Pay in Asia, Klarna/Affirm for BNPL, and many more). Stripe advertises access to 100+ payment methods out-of-the-box with a single integration. Adyen similarly prides itself on being a one-stop solution to [...] Stripe launched in 2010, targeting developers and small online businesses with easy-to-use APIs. Its strategy was bottom-up: win the hearts of startups and SMBs, then gradually move upmarket. Adyen, founded in 2006, took almost the opposite approach — a top-down focus on large enterprises and global retailers. Adyen built a single unified platform for “unified commerce” (online, in-app, and in-store payments all in one), directly connecting to card networks and local payment methods. This made",
+          "query": "\"Stripe\" adyen.com"
+        },
+        {
+          "url": "https://www.chargeflow.io/blog/stripe-vs-adyen",
+          "title": "Stripe vs Adyen: Fees, Features & Dispute Workflows",
+          "content": "Loading the Elevenlabs Text to Speech AudioNative Player...\n\nStripe and Adyen are payment platforms for accepting, managing, and reconciling transactions across digital and physical channels. Stripe combines configurable payments with a broad suite of developer and revenue tools; Adyen connects payments, acquiring, and omnichannel operations on a unified platform. Both support growing businesses and enterprise use cases. [...] Adyen supports unified commerce for businesses connecting online, in-app, and store payments. Its acquiring and payment-method infrastructure gives payment teams a way to coordinate acceptance and reporting across supported markets. Local availability, contracting entities, and the implementation determine your actual coverage. [...] ## TL;DR:\n\n Stripe and Adyen both support digital and in-person payment operations; compare the implementation for your countries and channels.\n Stripe offers a broad configurable product suite; Adyen offers a unified approach to commerce and acquiring.\n Both providers offer dispute automation for eligible cases. Connect the additional order and customer records your workflow requires.\n Compare complete commercial scope and use the same transactions for cost and workflow evaluation.",
+          "query": "\"Stripe\" adyen.com"
+        },
+        {
+          "url": "https://www.hubifi.com/blog/adyen-vs-stripe-revenue",
+          "title": "Adyen vs. Stripe: Which Is Right for Your Business? | Hubifi Blog",
+          "content": "Stripe is for flexible growth, Adyen is for unified scale: Stripe's developer-first APIs are perfect for startups and online businesses that need to build custom payment solutions quickly. Adyen’s all-in-one platform is designed for large enterprises that require a single, consistent system to manage payments across global online and in-store channels. [...] Both Adyen and Stripe are global powerhouses, but they have distinct strengths when it comes to international markets. Adyen has built a strong reputation for handling complex international payments, making it a go-to for large, multinational enterprises. Stripe, on the other hand, excels at accessibility for businesses of all sizes looking to expand globally. It processes transactions in over 135 currencies and supports a wide array of local payment methods, which is a major advantage for [...] While both are payment processors, their product suites are tailored to their ideal customers. Stripe offers a broad range of tools perfect for online businesses, including features for subscription billing, invoicing, and managing marketplaces with Stripe Connect. It’s a comprehensive toolkit for internet-first companies. Adyen’s focus is squarely on providing robust payment services that support omnichannel retail. They excel at helping merchants process payments from anywhere in the world,",
+          "query": "\"Stripe\" adyen.com"
+        },
+        {
+          "url": "https://www.fintechwrapup.com/p/deep-dive-stripe-vs-adyen-comparing-586",
+          "title": "Deep Dive: Stripe vs. Adyen – Comparing Product Stacks and Pricing",
+          "content": "Stripe and Adyen each support an extensive array of payment methods: global credit/debit cards (Visa, Mastercard, Amex, etc.), digital wallets (Apple Pay, Google Pay, etc.), bank transfers, and region-specific options (from \\\\SEPA Direct Debit in Europe to ACH in the US, Alipay and WeChat Pay in Asia, Klarna/Affirm for BNPL, and many more). Stripe advertises access to 100+ payment methods out-of-the-box with a single integration. Adyen similarly prides itself on being a one-stop solution to [...] for growth but finally achieved full-year profitability in 2024. In other words, Adyen is the rare fintech operating at bank-like profit levels, while Stripe proved its business model can scale financially. Both are now plowing resources into R&D and expansion, setting the stage for an intense rivalry. [...] Both Stripe and Adyen invest heavily in optimizing payment success rates. Adyen’s advantage of direct network connections means it can sometimes get slightly better authorization rates, especially in regions where local processing matters (for instance, processing European cards with a European acquiring license to avoid cross-border inefficiencies). Stripe has countered by developing its own smart routing and “adaptive acceptance” algorithms, and by working with card issuers. Stripe even",
+          "query": "\"Stripe\" adyen.com"
+        },
+        {
+          "url": "https://www.6sense.com/tech/payment-management/stripe-vs-adyen",
+          "title": "Stripe vs Adyen: Payment Management Comparison",
+          "content": "### Comparing the customer bases of Stripe and Adyen\n\nComparing the customer bases of Stripe and Adyen, we can see that Stripe has 646,304 customer(s), while Adyen has 160,852 customer(s). In the Payment Management category, with 646,304 customer(s) Stripe stands at 1st place by ranking, while Adyen with 160,852 customer(s), is at the 4th place.\n\nAll\n\nAll\n\n| customers | count |\n --- |\n| Stripe | 646,304 |\n| Adyen | 160,852 |\n\nStripe\n\nImage 26: star\n1st\n\n646,304 Customer\n\nAdyen [...] Stripe has 646,304 customers and Adyen has 160,852 customers in the Payment Management segment. Stripe has 485452 more customers than Adyen in this category.\n\nImage 30: faq icon\n\nWhat are the countries in which Stripe and Adyen has more customers?\n\nStripe has more customers in United States, United Kingdom and France.   \n Adyen has more customers in United States, United Kingdom and Brazil.\n\nImage 31: faq icon\n\n### Choose Technologies to compare\n\nImage 32: image\n\nImage 33: vs-image [...] Adyen\n\nImage 27: star\n4th\n\n160,852 Customer\n\n### Comparing the market share of Stripe and Adyen\n\nStripe has a 34.51% market share in the Payment Management category, while Adyen has a 8.59% market share in the same space.\n\nAll\n\nAll\n\n| Technology | Marketshare |\n --- |\n| Stripe | 34.51 |\n| Adyen | 8.59 |\n\n8.59%\n\n### Compare Stripe vs Adyen customers by geography",
+          "query": "\"Stripe\" adyen.com"
+        }
+      ]
+    },
+    {
+      "query": "\"Stripe\" news",
+      "topic": "news",
+      "include_domains": null,
+      "max_results": 5,
+      "credits": 1.0,
+      "results": [
+        {
+          "url": "https://www.rydercup.com/news-media/stripe-becomes-a-worldwide-partner-of-the-ryder-cup",
+          "title": "Stripe becomes a Worldwide Partner of the Ryder Cup",
+          "content": "Ryder Cup Europe and the PGA of America today announced that Stripe has signed a new agreement to become a Worldwide Partner and the Official Financial and Payments Infrastructure Partner to golf’s greatest team contest—the Ryder Cup. [...] Terry Clark, Chief Executive Officer at the PGA of America, added: “We are proud to welcome Stripe as a Worldwide Partner of golf’s greatest team event. By leveraging Stripe’s advanced payments infrastructure, we are excited to offer spectators at the 47th Ryder Cup at Hazeltine a seamless payment experience at every touchpoint.”\n\n## Share Article\n\n Facebook\n X\n\n## Latest News\n\n thumbnail image\n\n  News [...] September 13-19, 2027Adare Manor, Limerick, Ireland\n\nhome\n\nWorldwide Partner 2027 Ryder Cupsponsor logo\n\nWorldwide Partner 2027 Ryder Cupsponsor logo\n\nWorldwide Partner 2027 Ryder Cupsponsor logo\n\nWorldwide Partner 2027 Ryder Cupsponsor logo\n\nWorldwide Partner 2027 Ryder Cupsponsor logo\n\nWorldwide Partner 2027 Ryder Cupsponsor logo\n\nArticle Hero\n\n# Stripe becomes a Worldwide Partner of the Ryder Cup\n\nBy Ryder Cup On July 22, 2026 10:30 UTC",
+          "query": "\"Stripe\" news"
+        },
+        {
+          "url": "https://www.paymentsdive.com/news/stripe-fedex-team-on-smb-lending-business-capital-logistics/832368",
+          "title": "Stripe, FedEx team on SMB lending",
+          "content": "The FedEx effort follows Stripe’s purchase last week of embedded financing company Parafin, which also arranges loans for small businesses. Stripe plans to use the San Francisco-based startup to expand its lending for smaller firms. In the Sept. 30 news release about the Parafin acquisition, Stripe argued that small businesses are finding it difficult to access capital, citing a decreasing percentage of approved loans last year compared to 2015. [...] Stripe is partnering with global shipping giant FedEx to combine their data insights from logistics and financial infrastructure to create financing options for small businesses, the companies said Tuesday in a joint press release. [...] “Stripe will be better positioned to evaluate, approve, and deploy tailored funding more quickly than traditional lending processes, eliminating the friction for SMBs,” the release said. Stripe makes business loans through two partner banks.",
+          "query": "\"Stripe\" news"
+        },
+        {
+          "url": "https://news.crunchbase.com/ma/stripe-acquisition-pace-accelerates-paypal",
+          "title": "Stripe's Acquisition Pace Has Accelerated In The Past Five Years, But Nothing Comes Close To Its Reported $53B PayPal Bet",
+          "content": "Stripe’s M&A pace has also accelerated sharply since 2020, Crunchbase data shows, with 13 of its 21 acquisitions announced since then.\n\nIts recent strategy appears to be focused on stablecoins and crypto infrastructure — Bridge, Privy, Valora and PartyDAO — as well as on billing and money movement through Metronome, payment processing startup Lemon Squeezy and Orum. [...] With substantial private capital — it has raised some $10.4 billion since inception, per Crunchbase — Stripe has long been one of the most acquisitive venture-backed startups. It has made 21 known acquisitions since its 2010 inception, according to Crunchbase data. Only three have disclosed prices: stablecoin platform Bridge at $1.1 billion (2025), usage-based billing software startup Metronome at $1 billion (2026), and Nigerian payments startup Paystack at $200 million (2020). [...] Payments giant Stripe and private equity firm Advent International have teamed up to make an offer to buy troubled PayPal in a deal valued at more than $53 billion, Reuters reported Wednesday.",
+          "query": "\"Stripe\" news"
+        },
+        {
+          "url": "https://www.fool.com/investing/2026/08/27/stripes-75-billion-bet-on-the-ai-model-routing-lay",
+          "title": "Stripe's $7.5 Billion Bet on the AI Model Routing Layer | The Motley Fool",
+          "content": "Fintech giant Stripe is acquiring OpenRouter, a leading artificial intelligence (AI) model gateway, in a deal reportedly worth $7.5 billion. That's nearly six times the $1.3 billion valuation estimated by The New York Times following its latest funding round in May. The premium is due in part to Stripe having outbid other tech players, including Databricks, for the company. [...] Stripe is adding another toll collector to its operation with its acquisition of OpenRouter, but it's paying a steep premium for the company.\n\nByBryan White – Aug 27, 2026 at 6:51PM EST\n\n+Fool.comon\n\n## Key Points [...] Both companies are toll collectors, and this acquisition will expand Stripe's currency base. Where it typically spends to grow its transaction volume, these tolls will rise on their own as AI adoption spreads. Stripe's fraud screening also helps prevent the stolen-card purchases and token reselling that plague small AI marketplaces.",
+          "query": "\"Stripe\" news"
+        },
+        {
+          "url": "https://finance.yahoo.com/markets/crypto/articles/xrp-news-ai-payments-integration-133000794.html",
+          "title": "XRP News: AI Payments Integration With Stripe Driving Ripple Toward $1.50",
+          "content": "A clean break above $1.55 would be the first higher high since May and could quickly bring volume back. ETF flows are still in good shape, with this week closing around +$9M in positive flows.\n\nXRP news highlights the Ripple-Stripe deal, showing big money is building in crypto right now. That kind of news lifts every coin with live tools behind it. A move above $1.55 would be the first higher high since May and could quickly bring volume back. [...] 1. Crypto\n\n   Crypto\n2. AI\n\n   AI\n\nCryptonews\n\n# XRP News: AI Payments Integration With Stripe Driving Ripple Toward $1.50\n\nAhmed Barakat\n\n2 min read\n\n XRP-USD\n\n  -6.07%\n STRI.PVT\n\nIn XRP news, the asset is moving faster than it has since August. The token passed $1.38 on CoinGecko after a +2% gain over the past week. Ripple linked XRP to Stripe's payment tools on September 17, and the coin still trades -54% below its 2021 peak.",
+          "query": "\"Stripe\" news"
+        }
+      ]
+    }
+  ]
+}

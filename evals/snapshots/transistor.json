@@ -1,0 +1,133 @@
+{
+  "case_id": "transistor",
+  "brief": {
+    "company": "Transistor",
+    "website": "transistor.fm",
+    "offer": "Podcast audio editing and show notes for B2B brands",
+    "recipient": "Partnerships Lead",
+    "language": "English",
+    "tone": "Warm"
+  },
+  "recorded_at": "2026-10-09T12:05:59+00:00",
+  "searches": [
+    {
+      "query": "\"Transistor\" company overview products customers",
+      "topic": "general",
+      "include_domains": [
+        "transistor.fm"
+      ],
+      "max_results": 5,
+      "credits": 1.0,
+      "results": [
+        {
+          "url": "https://transistor.fm/brand",
+          "title": "Transistor Podcasting – download logo PNG and SVG, press information",
+          "content": "Our customers include indie podcasters, small businesses, and enterprise companies. Our customers include Kickstarter, ProfitWell, Ali Abdaal, and Laravel.\n\n## Frequently Asked Questions\n\nHere are some answers to questions that we are commonly asked.\n\n:   Transistor gives you everything you need to get your podcast on Spotify, Apple Podcasts, and Google: [...] Transistor Logo \n\n### Menu\n\n#### Pricing\n\nTry us free for 14 days. #### Blog\n\nRead our latest podcasting articles and guides #### About Us\n\nTransistor's story so far #### Our Customers\n\nWho is using Transistor for their podcast? #### Reviews\n\nWhat people are saying about Transistor\n\n### Features\n\n View all\n\n#### Customer Service\n\nSupported by real humans #### Podcast Hosting\n\nHost unlimited shows on one account #### Video Podcast Hosting\n\nHost & distribute video podcasts #### Private Podcasts",
+          "query": "\"Transistor\" company overview products customers"
+        },
+        {
+          "url": "https://transistor.fm/anniversary",
+          "title": "Transistor podcast hosting celebrates 4th anniversary",
+          "content": "We had an amazing response to our launch. We were the top-rated product on Product Hunt that day and received tons of support on Twitter, Slack groups, and Reddit.\n\nThat first month after launch we had 46 paying customers sign up; Transistor was earning about $1,400 a month. [...] Over the next four years, we’ll focus on the things that got us here: understanding our customers better than anyone else, building high-quality software, offering exceptional customer support, and having a calm work environment.\n\nWe want to thank everyone that helped get us here: our customers, the podcast community, the indie SaaS community, our founder friends, and our families. Thank you. ❤️\n\nCheers,  \nJustin Jackson  \nCo-founder, [...] What kept us going? Two things: hearing from customers who loved using Transistor for their podcasts and encouragement from other startup founders:\n\nRuben Gamez: \n\nWhile it felt like we were a long way off from our goal (working on Transistor full-time), we kept shipping new features, helping customers with their podcasts, and spreading the word.",
+          "query": "\"Transistor\" company overview products customers"
+        },
+        {
+          "url": "https://transistor.fm/transistor-growth",
+          "title": "Transistor Surpasses Simplecast on the List of Top Hosting Platforms",
+          "content": "When Jon and I teamed up to build Transistor, our vision was to develop a polished product in a category that hadn't had a fresh entrant in years. Our initial offering was focused on:\n\n Improving the overall user experience for podcast creators\n A simple, elegant experience built for managing multiple shows\n World-class customer support (we've offered human-powered live chat and email support from the beginning) [...] Today, Transistor powers podcasts like Acquired, Diggnation, and Think Fast Talk Smart and branded shows from Kit.com (ConvertKit), The U.S. Government, and Magic: The Gathering.\n\nIn an era when many large podcasting companies are closing down or laying off employees, our \"small but mighty\" company continues to accelerate (last month, new customers grew 24% over the previous year).\n\n## Transistor's growth\n\nIn the beginning, we started with just one RSS feed on Transistor. [...] Transistor Logo \n\n### Menu\n\n#### Pricing\n\nTry us free for 14 days. #### Blog\n\nRead our latest podcasting articles and guides #### About Us\n\nTransistor's story so far #### Our Customers\n\nWho is using Transistor for their podcast? #### Reviews\n\nWhat people are saying about Transistor\n\n### Features\n\n View all\n\n#### Customer Service\n\nSupported by real humans #### Podcast Hosting\n\nHost unlimited shows on one account #### Video Podcast Hosting\n\nHost & distribute video podcasts #### Private Podcasts",
+          "query": "\"Transistor\" company overview products customers"
+        },
+        {
+          "url": "https://transistor.fm/about",
+          "title": "About Transistor.fm – a simple, powerful podcast hosting platform",
+          "content": "Justin Jackson and Jon Buda – founders of Transistor.fm\n\nThey podcasted publicly about their startup story: every week, they recorded a new episode and shared their experience building a company from the ground up.\n\nIn 2021, we hired Helen and Jason. In 2024, we hired Michael.\n\nToday, we're a small (but mighty) team of five people.\n\nToday, we serve over 30,000 podcasts of all types. Our customers include indie podcasters, small businesses, and enterprise companies. [...] Transistor.fm team - Justin Jackson (CEO), Jon Buda (President), Helen Ryles (Customer Success), Jason Pearl (Engineering), Michael Green (Customer Success)\n\nHere's our team:\n\n Jon Buda, Co-founder, President\n Justin Jackson, Co-founder, CEO\n Helen Ryles, Customer Success\n Jason Pearl, Engineering\n Michael Green, Customer Success\n\n## The Transistor story so far\n\nJon Buda and Justin Jackson met in Portland in 2014 at the XOXO Festival.\n\nJon and Justin met at XOXO in Portland, 2014 [...] Transistor Logo \n\n### Menu\n\n#### Pricing\n\nTry us free for 14 days. #### Blog\n\nRead our latest podcasting articles and guides #### About Us\n\nTransistor's story so far #### Our Customers\n\nWho is using Transistor for their podcast? #### Reviews\n\nWhat people are saying about Transistor\n\n### Features\n\n View all\n\n#### Customer Service\n\nSupported by real humans #### Podcast Hosting\n\nHost unlimited shows on one account #### Video Podcast Hosting\n\nHost & distribute video podcasts #### Private Podcasts",
+          "query": "\"Transistor\" company overview products customers"
+        },
+        {
+          "url": "https://justin.transistor.fm/episodes/an-update-on-what-were-building-at-transistor",
+          "title": "Justin's brain | An update on what we're building at Transistor",
+          "content": "We also just shipped a Ghost integration that connects Transistor to one of the most popular platforms for independent publishers. The integration was born out of a real overlap in customers (like 404 Media and The Lever), and the partnership was sparked by a lunch conversation with Ghost's John O'Nolan at Laracon.  \n  \nLinks: [...] Hey friends, wanted to give you an update on what we're building over at Transistor.fm. The big thing I'm really excited about is video podcasting.  \n  \nTransistor customers will soon be able to publish video podcast episodes on YouTube, Spotify, Apple Podcasts, and any other apps that support HLS video.  \n  \nWe have a waiting list here if you're interested -->",
+          "query": "\"Transistor\" company overview products customers"
+        }
+      ]
+    },
+    {
+      "query": "\"Transistor\" transistor.fm",
+      "topic": "general",
+      "include_domains": null,
+      "max_results": 5,
+      "credits": 1.0,
+      "results": [
+        {
+          "url": "https://www.thepodcasthost.com/websites-hosting/transistor-fm-review",
+          "title": "Transistor.fm Review: A Simple Yet Powerful Podcast Host",
+          "content": "Transistor. fm is one of our favorite podcast hosting platforms.\n It lets you pay one price and manage one or many podcast feeds.\n The drag-and-drop interface is clear and easy to use.\n Private podcast feeds are now available for all pricing levels.\n You can automatically post your audio podcast to YouTube, with a static image.\n There are no limits on the number of team members you can add to your podcasting account.\n Responsive embedded players make sharing your podcast even easier. [...] ## Transistor.fm Is Easy to Start and Use\n\nTransistor has a clear interface where all the steps are nice, big, and welcoming. You can drag and drop your audio and cover art files. The only confusing part about this media host is when you’re thinking, “It can’t be that simple.”\n\nAdditionally, there’s plenty of opportunity to try all aspects of hosting with Transistor and see how it works, before you commit financially. The 14-day free trial gives you time to test it thoroughly. [...] We all know that once you launch a podcast, you start thinking of other ones you can make. Transistor.fm will let you set up as many podcasts as you want for one membership fee. This is great if you want to make podcasts for your business and personal interests. It’s also excellent if you want to have one public podcast and a second private podcast with bonus content. Transistor now has private podcasting for all price tiers. At the Starter level, they’re simply unlisted and can have up to 50",
+          "query": "\"Transistor\" transistor.fm"
+        },
+        {
+          "url": "https://transistor.fm",
+          "title": "Host Unlimited Shows • Best Audio and Video Podcast Hosting • Transistor",
+          "content": "Blogmaker\n\n  Transistor.fm is the best podcast hosting platform I've tried. I started using them 6 years ago and love that it handles the nitty-gritty of publishing to Spotify, Apple Podcasts, and YouTube. I can create multiple podcasts on one plan. The dashboard is super intuitive, the analytics are robust, and they're a small team with a huge heart and incredible customer care.\n\nWinner of Best Podcast Hosting\n\n## Pricing\n\nTry us free for 14 days. [...] Geocodio\n\n  Transistor is a fantastic podcasting platform — it just works out of the box and includes lots of other useful things, like a professional-looking podcast website.\n Andy Baldacci\n\n  #### Andy Baldacci\n\n  Pod Avenue [...] #### Bret Fisher\n\n  DevOps and Docker Talk\n\n  We love Transistor.fm and they never let us down; the team is awesome!\n \n\n  #### Gray MacKenzie\n\n  ZenPilot\n\n  I'm a big fan of recording with Riverside and then hosting on Transistor. Transistor has been amazing; you'll especially appreciate the UI, and it's very affordable.\n \n\n  #### Lindsay Harris Friel\n\n  The Podcast Host",
+          "query": "\"Transistor\" transistor.fm"
+        },
+        {
+          "url": "https://www.trustpilot.com/review/transistor.fm",
+          "title": "Transistor Podcast Hosting is rated \"Excellent\" with 4.6 / 5 on Trustpilot",
+          "content": "July 16, 2026\n\nUnprompted review\n\nUseful\n\nShare\n\nBC\n\nBrian Casel US•1 review\n\nJul 16, 2026\n\nImage 36: Rated 5 out of 5 stars\n\n## Transistor.fm is a no-brainer.\nTransistor has been my go-to for podcast hosting (audio and video!) for years. It's the best product, the most reliable, modern, and optimized for actually growing your audience. Plus, the team and support Transistor provides is unmatched. Stop looking. Go with Transistor.\n\nJuly 16, 2026\n\nUnprompted review\n\nUseful\n\nShare\n\nImage 37 [...] I've been using Transistor.fm to host my podcast for about two years, and I love them. I now have 3 total podcasts hosted by Transistor and I've never had any problems. They have excellent custom service, their embed players are beautiful, the free website that comes with each podcast is so easy to use and customize, and they have so many options and settings that allow you to totally automate tedious things like submitting your podcast to each player and different things for your notes. [...] ## Innovative and Reliable\nI’ve used Transistor.fm for 4+ years after trying many other podcast hosts, and it is simply the best. I host 5 shows with Transistor and the features they build into the platform, incredible customer service, and quick adoption of new standards set them apart.",
+          "query": "\"Transistor\" transistor.fm"
+        },
+        {
+          "url": "https://www.linkedin.com/company/transistor-fm",
+          "title": "Transistor.fm",
+          "content": "- 2025-09-25: Transistor is a remote team, so we get together once a year to spend time in person. This year we went to Banff and Canmore in Alberta! We are a small (but mighty) team of six people: Justin Jackson, Jon Buda, Helen, Jason, Michael, and Joshua. Together, we serve over 34,000 podcasts on the platform! [...] Description: Instead of spending money on podcast ads, businesses like Basecamp, eBay, and Code Pen are using branded podcasts to reach their audience. Our goal? Make Transistor the best way for a business to create a podcast. Currently, we offer podcast hosting. The user uploads their MP3, adds show notes and artwork, and we generate a podcast episode. This is syndicated via RSS, iTunes, and on their podcast website.\nLinkedIn:  · 811 followers [...] # Transistor.fm",
+          "query": "\"Transistor\" transistor.fm"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=vNLknqyymIE",
+          "title": "Transistor.fm Review - What You Need to Know",
+          "content": "### Transcript\n[0:00] transistor is a great podcast hosting option that's been in the market for a long time but is it the right option for you and your show we're going to find out when it comes to picking the right\n[0:07] podcast host it really comes down to three things features support and price so we're going to run through each of those categories for transistor to help [...] # Transistor.fm Review - What You Need to Know\n## Channel: Podcast Nut\n5.87K subscribers\n20 likes\n\n### Description\n801 views\nPosted: 2024-04-10\nTransistor is a great podcast hosting option but is it the right choice for you and your show? In this Transistor review in 2024, we will help you find out. We walk through the podcast hosts features, types of support, and pricing to help in your decision. If you want to give Transistor a try, it's linked below. \n\nTransistor (FREE TRIAL): [...] [0:31] the features that you're looking for transistor might be the perfect fit for you and those features are AI transcriptions for your episodes to make it as easy as possible to make it more\n[0:39] accessible you can have unlimited shows on one plan so basically if you pay for one plan you can have as many podcasts as you want on that plan at no",
+          "query": "\"Transistor\" transistor.fm"
+        }
+      ]
+    },
+    {
+      "query": "\"Transistor\" news",
+      "topic": "news",
+      "include_domains": null,
+      "max_results": 5,
+      "credits": 1.0,
+      "results": [
+        {
+          "url": "https://news.uchicago.edu/story/uchicago-scientists-create-novel-ultrathin-material-make-transistors",
+          "title": "UChicago scientists create novel, ultrathin material to make transistors | University of Chicago News",
+          "content": "A team of scientists at the University of Chicago and Argonne National Laboratory have created an ultrathin transistor unlike any current design. Instead of larger 3-D layers of semiconductors, as in a traditional version, the new transistor is made from a layer of atomically thin semiconductor topped by a sheet of molecular crystal. [...] The new transistor also shows an entirely novel behavior in a material that can be reliably made and integrated at large scales—scientists are always looking for different fundamental properties that could unlock new abilities in technology.\n\nLastly, but significantly, all of this can take place at room temperatures. This is helpful when designing practical applications, but the scientists see another plus. [...] Electrons normally move briskly through a semiconductor, carrying current that drives the transistor. In a typical transistor, the current is controlled by a voltage gate, which works like a gate in a water dam that controls the water level. Lowering the gate turns the transistor off, while higher gate voltage turns the transistor on. These “on” and “off” states, translated as 1 and 0, form the basis of binary computer language.",
+          "query": "\"Transistor\" news"
+        },
+        {
+          "url": "https://news.mit.edu/2026/mit-engineers-connect-bacteria-to-create-living-transistors-0817",
+          "title": "MIT engineers connect bacteria to create living transistors | MIT News | Massachusetts Institute of Technology",
+          "content": "In this paper, the researchers demonstrated a transistor that can perform several types of logic operations depending on its location in the circuit layout, including “multi-input,” “or,” and “imply” gates. They also combined the transistors to create more complex circuits that can add up two signals, process more signals simultaneously, or function as a demultiplexer — a circuit that takes one incoming signal and sends it to one of several possible destinations, depending on a control signal. [...] The research team designed two different transistors, along with three bacterial strains that relay information between the transistors, giving them the building blocks they need to design nearly any type of circuit. In a new study, they used these cells to create circuits that can add two or three inputs, or send one input to a specific location in the circuit. [...] In the new paper, the researchers took a different approach: Instead of building an entire circuit into one cell, they designed cells that could act as transistors. These transistors can then be combined in different ways to create a variety of circuits.",
+          "query": "\"Transistor\" news"
+        },
+        {
+          "url": "https://neurosciencenews.com/organic-synaptic-transistors-neuromorphic-ai-30653",
+          "title": "Organic Synaptic Transistors for Sustainable AI Developed - Neuroscience News",
+          "content": "By utilizing organic transistors, the team is laying the groundwork for AI that performs complex tasks using a fraction of the power required by conventional chips.\n\nKey Research Findings [...] Researchers are developing organic synaptic transistors that process and store information in a single location, mimicking the 20-watt efficiency of the human brain to create sustainable neuromorphic AI. Credit: Neuroscience News\n\nThe solution may lie in neuromorphic computing, an approach that reimagines computer hardware to process information more like biological neural networks rather than conventional chips. [...] By tailoring the linking unit between the pyridyl triazole (PyTr) acceptors and thiophene donors, three copolymers are synthesized incorporating selenium-substituted thiophene, benzothiadiazole, and fluorine-substituted thiophene linkers.\n\nUsing the hexafluoropropylene copolymer of PVDF (PVDF-HFP) as the dielectric layer, the three PyTr semiconductors show p-type transport in transistor architectures with carrier mobilities between 0.1 and 0.2 cm2 V–1 s–1.",
+          "query": "\"Transistor\" news"
+        },
+        {
+          "url": "https://www.cbsnews.com/news/ibm-unveils-technology-for-chips-it-says-pack-performance-leap-and-use-much-less-power",
+          "title": "IBM unveils technology for chips that promise higher performance, use much less power - CBS News",
+          "content": "More transistors mean faster and more powerful computing and can help drive advances like faster smartphones and laptops, more efficient data centers, better self-driving cars, and more capable artificial intelligence tools like ChatGPT.\n\nIBM's new chip is projected to offer \"up to 50 percent more performance, or 70 percent greater energy efficiency than IBM's 2-nanometer node chips,\" the company said. [...] \"IBM's latest chip breakthrough marks a landmark moment in computing, pushing technology beyond the nanometer era to the scale of atoms,\" said Jay Gambetta, director of IBM Research.\n\n\"We're not just making smaller transistors, we're reinventing how chips are built to deliver dramatically more power and energy efficiency.\" [...] The nanometer, an atomic-scale unit of measurement, doesn't refer to the literal size of chips or their components, but to how densely transistors -- the tiny electronic switches that make up processors -- can be packed together.\n\nThe smaller the number, the more transistors can fit on a chip the size of a fingernail.\n\nIBM's apparent breakthrough packs nearly 100 billion transistors onto a chip that size -- nearly twice the density of the 2-nanometer chip.",
+          "query": "\"Transistor\" news"
+        },
+        {
+          "url": "https://semiconductor.samsung.com/news-events/tech-blog/from-gaa-to-3d-stacked-fet-expanding-the-transistor-into-the-third-dimension",
+          "title": "From GAA to 3D Stacked FET: Expanding the Transistor into the Third Dimension | Samsung Semiconductor Global",
+          "content": "Transistor architectures have continuously evolved—from planar transistors to FinFETs, and later to Gate-All-Around (GAA) structures—with each generation improving the ability to control electrical current more precisely. However, achieving further scaling in logic devices requires more than simply improving the control of individual transistors. Equally important is determining how n-type and p-type transistors can be arranged more efficiently. [...] Logic technology is now moving beyond the challenge of simply making individual transistors smaller. Engineers must also determine how to arrange n-type and p-type transistors more efficiently, how to form multiple channel layers with high uniformity, and how to isolate vertically stacked devices with precision.",
+          "query": "\"Transistor\" news"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "case_id": "linear",
+  "brief": {
+    "company": "Linear",
+    "website": "linear.app",
+    "offer": "Recruiting and scheduling customer interview participants for product teams",
+    "recipient": "Head of Product",
+    "language": "English",
+    "tone": "Direct"
+  },
+  "recorded_at": "2026-10-09T12:05:06+00:00",
+  "searches": [
+    {
+      "query": "\"Linear\" company overview products customers",
+      "topic": "general",
+      "include_domains": [
+        "linear.app"
+      ],
+      "max_results": 5,
+      "credits": 1.0,
+      "results": [
+        {
+          "url": "https://linear.app",
+          "title": "Linear – The system for product development",
+          "content": "Gabriel PealStaff Software Engineer, OpenAIOur speed is intense and Linear helps us be action biased.\n\nNik KoblovHead of Engineering, Ramp\n\nLinear powers over40,000 product teams. From ambitious startups to major enterprises.\n\nCustomer stories→\n\n## Built for the future. Available today.\n\nGet startedContact salesOpen appDownload [...] In Progress\n\nLinearLinear\n\nCycle 144\n\nLabels\n\nReleases\n\nLinear App1.6881...⋅Jun 25\n\nPowering the companies building the future\n\n## A new species of product tool. Purpose-built for modern teams with AI workflows at its core, Linear sets a new standard for planning and building products.\n\nPurpose-built\n\nLinear is shaped by the practices and principles of world-class product teams.\n\nPowered by agents\n\nDesigned for workflows shared by humans and agents. From drafting PRDs to pushing PRs. [...] Build and deploy AI agents that work alongside you as teammates. Work on complex tasks together or delegate entire issues end-to-end.\n\nLearn more→\n\nLinearLinearOpus 5\n\nwhat are the three most important customer requests around permissions? add them to the Access Controls project\n\nWorked for 8 sec\n\nThree issues ranked by customer impact:\n\nENG-2298Add granular project permissions\n\nENG-2647Let guests access multiple teams\n\nENG-2352Create custom roles with scoped access",
+          "query": "\"Linear\" company overview products customers"
+        },
+        {
+          "url": "https://linear.app/download",
+          "title": "Download Linear",
+          "content": "Skip to content →\n\nLinear desktop app icon\n\n# Download Linear\n\nAvailable for web,  macOS, Windows, iOS, and Android.\n\nDownload for Windows `D`\n\nVersion 1.32.4\n\nDownload on the App StoreGet it on Google Play\n\nLinear Desktop. A fast and focused experience to plan and build your product.\n\nmacOS\n\nDownload\n\nWeb app\n\nOpen\n\nLinear Mobile. Designed for “away from keyboard” workflows that complement the desktop experience.\n\niOS\n\nOpen store\n\nAndroid\n\nOpen store\n\nWeb app\n\nOpen\n\nDownload Linear",
+          "query": "\"Linear\" company overview products customers"
+        }
+      ]
+    },
+    {
+      "query": "\"Linear\" linear.app",
+      "topic": "general",
+      "include_domains": null,
+      "max_results": 5,
+      "credits": 1.0,
+      "results": [
+        {
+          "url": "https://apps.apple.com/us/app/linear-mobile/id1645587184",
+          "title": "‎Linear Mobile App - App Store",
+          "content": "Linear is a purpose-built tool for planning and building products. Streamline issues, projects, and product roadmaps. Linear Mobile is a companion to the Linear desktop app, designed for on-demand workflows when you are away from your keyboard: • File issues on-the-go • Stay up-to-date on your most important streams of work • Get instant notifications about important updates • Update issues, projects, and documents from anywhere Please note: This app requires an existing Linear account. [...] Colhoop\n\n  Linear is by far the best issue tracker I’ve ever used as a software engineer and product manager. The mobile app is also solid, especially as an initial version. They seem to be committed to continuous improvement across all platforms including mobile. As I understand it, they are planning to add widgets for iOS too which I am particularly excited for. Keep up the good work!\n ### Linear is good. The app is mid.\n\n  False Aster [...] I like linear itself, but the app just kind of falls flat. I can’t imagine just using the app, but I guess most people don’t have to, and I don’t have to, but I guess people use the app probably for notifications or something. I don’t even prefer just using the browser version of linear than the actual app. It just lacks so many of the features of the actual version which is like a little weird on the iPad because it seems like at least on the iPad Pro. It could have most if not all of the",
+          "query": "\"Linear\" linear.app"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=qaR4jRrc1Iw",
+          "title": "Linear App Tutorial For Beginners (2025) | How To Use Linear App",
+          "content": "[6:51] where you can provide more detailed information about the project you can outline the scope add initial thoughts or note down any specific requirements\n[7:00] once youve filled in all the necessary details click the create project button to save it your new project will now appear on the project page ready for\n[7:08] tracking and collaboration linear is a purpose-built tool for Planning and Building Products it's widely used by [...] [0:23] to sign up for linear give you a quick overview of the workspace and guide you through creating your first project let's Dive In and get started if you're\n[0:31] not already familiar with linear let me give you a brief overview linear is a purpose-built tool for Planning and Building Products it's widely used by\n[0:40] modern software teams to streamline project management and issue tracking what makes linear Stand Out is its Sleek [...] [2:22] provides a personalized view of all the tasks or issues you're currently responsible for involved in making it easy to track your progress next in the\n[2:30] workspace section there are tabs like projects views and more the projects tab shows all the ongoing projects helping\n[2:38] you stay on top of what's being worked on the views tab allows you to create custom filters for tasks so you can focus on what matters most the more tab",
+          "query": "\"Linear\" linear.app"
+        },
+        {
+          "url": "https://linear.app",
+          "title": "Linear – The system for product development",
+          "content": "In Progress\n\nLinearLinear\n\nCycle 144\n\nLabels\n\nReleases\n\nLinear App1.6881...⋅Jun 25\n\nPowering the companies building the future\n\n## A new species of product tool. Purpose-built for modern teams with AI workflows at its core, Linear sets a new standard for planning and building products.\n\nPurpose-built\n\nLinear is shaped by the practices and principles of world-class product teams.\n\nPowered by agents\n\nDesigned for workflows shared by humans and agents. From drafting PRDs to pushing PRs. [...] import React from 'react'import { View, ActivityIndicator } from 'react-native'import { useVehicleState, SyncStatus } from '@hooks/useVehicleState'import { Dashboard } from '@components/Dashboard'export const HomeScreen = () => { const { vehicleState, syncStatus } = useVehicleState() if (syncStatus === SyncStatus.PENDING) { return <ActivityIndicator size=\"large\" /> } return ( <View> <Dashboard state={vehicleState} syncStatus={syncStatus} /> View> )}import React from 'react' import { View, [...] import React from 'react' import  React  from  ' react 'import { View, ActivityIndicator } from 'react-native' import { View, ActivityIndicator } from  'react-native 'import { useVehicleState } from '@hooks/useVehicleState' import { useVehicleState } from  '@hooks/useVehicleState 'import { Dashboard } from '@components/Dashboard' import { Dashboard } from  '@components/Dashboard ' export const HomeScreen = () => {export  const  HomeScreen  = () => { const { vehicleState, isFullySynced } =",
+          "query": "\"Linear\" linear.app"
+        },
+        {
+          "url": "https://everhour.com/blog/what-is-linear-app",
+          "title": "What Is Linear App? Features, Benefits & Use Cases Explained",
+          "content": "Linear is not for everyone. If you require in-depth compliance workflows, numerous custom fields, or extended planning cycles, tools like Jira or ClickUp may be a better fit.\n\nBut if you want a snappy, streamlined tool that respects your time, Linear delivers. It’s quickly becoming the go-to project management platform for engineering-first teams.\n\nTrack time, stay on budget, analyze reports and automate payroll. [...] The approach: Instead of trying to serve everyone, Linear focused on small, developer-led startups, prioritizing performance, simplicity, and design.\n Growth model: Linear spread through bottom-up adoption. Teams invited colleagues, creating network effects without heavy ad spend.\n Brand identity: More than a tool, Linear positions itself as an opinionated alternative—championing craft, speed, and clarity over complexity and “fail fast” culture. [...] ✍️ Summarize issues in one click\n 📌 Prioritize your backlog automatically\n 📊 Generate sprint reports without lifting a finger\n\nThese tools save product and engineering teams hours of manual work. Instead of dragging tasks around or writing summaries, Linear’s AI does it for you — helping you focus on strategy, not setup.\n\n## 💬 Who Should Use Linear?\n\nLinear shines with teams that value speed and clarity:",
+          "query": "\"Linear\" linear.app"
+        },
+        {
+          "url": "https://www.linkedin.com/company/linearapp",
+          "title": "Linear",
+          "content": "Description: At Linear, we are on a mission to bring magic back to software. To empower product teams to do their best work, we are building an issue tracking and project management tool that combines UI elegance with world-class performance. Founded in 2019, Linear has become the tool of choice for thousands of high-impact companies to build their products better. Linear was set up as a fully remote company from the start. Today, our small but mighty team is distributed across North America",
+          "query": "\"Linear\" linear.app"
+        }
+      ]
+    },
+    {
+      "query": "\"Linear\" news",
+      "topic": "news",
+      "include_domains": null,
+      "max_results": 5,
+      "credits": 1.0,
+      "results": [
+        {
+          "url": "https://www.exchangewire.com/blog/2026/10/07/digest-walmart-connect-brings-shopper-data-to-linear-tv",
+          "title": "Digest: Walmart Bringing Shopper Data to Linear TV - ExchangeWire.com",
+          "content": "Zeta Global has agreed to acquire Digital Audience, a data infrastructure company specialising in identity and activation, in a move designed to push the Zeta Data Cloud further across the digital ecosystem. Digital Audience is already integrated with Zeta, and the deal will extend Zeta's identity and activation capabilities across all channels while bringing in a team of data and AI engineers. Financial terms were not disclosed in the announcement. [...] Ofcom has opened a formal investigation into whether Meta breached the UK's Online Safety Act when it launched Instants, a new Instagram feature, in May. The regulator is examining whether Meta failed to carry out fresh, suitable and sufficient illegal content and children's risk assessments before rolling it out, as required under sections 9(4) and 11(4) of the Act whenever a platform makes a significant change to a service's design or operation. [...] Zeta CEO David A. Steinberg framed the acquisition around return on spend, saying it will help clients activate what they know more efficiently and measure the impact across channels. The deal also strengthens Zeta's European presence, adding established enterprise relationships in the region.\n\n## Ofcom opens investigation into Meta over Instagram Instants",
+          "query": "\"Linear\" news"
+        },
+        {
+          "url": "https://tvnewscheck.com/business/article/linear-tvs-performance-renaissance-from-mass-reach-to-verified-results",
+          "title": "Linear TV’s Performance Renaissance: From Mass Reach To Verified Results",
+          "content": "Exclusives\n\nSLOUCHING TOWARD AGILITY\n\n### How Broadcasters And Vendors Fall Into The Bespoke Trap\n\nOct 1, 2026\n\nTHE REVENUE SIGNAL\n\n### Local TV Must Be The Podcast Authority In Its Markets\n\nSep 29, 2026\n\nTV’S MULTIPLATFORM TRANSFORMATION\n\n### The Big Secret About NextGen TV\n\nSep 28, 2026\n\nTHE TALENT SIGNAL\n\n### Local TV Inherited Its Audience. Now It Has To Build One\n\nSep 24, 2026\n\nSpecial Reports\n\nSPECIAL REPORT\n\n### Nexstar/Tegna Leads Top 25 Station Groups\n\nAug 24, 2026 [...] Quick Links\n\n   About TVNewsCheck\n   Contact\n   Member Help\n   Privacy Policy\n   Terms and Conditions\n   Help\n\nEvents\n\n   Women in Technology\n   OTT News Summit\n   NewsTECHFutures Retreat\n   Cybersecurity for Broadcasters\n   Disrupt the News Challenge\n\nReaders\n\n   Log in/Subscribe\n   My Account\n   Update password\n   Update Email\n   Newsletters & Alerts\n   RSS\n\nArticles\n\n   Programming\n   Technology\n   Business\n   AI\n   Journalism\n\nArticles [...] Skip to main content\n   Skip to header right navigation\n   Skip to site footer\n\n   Members\n   Jobs\n   Events\n   Login\n\nMenu\n\nImage 1: TV News CheckImage 2\nTV News Check\n\nBroadcast Industry News - Television, Cable, On-demand\n\nSearch...Search site Submit search\n\n   Programming\n   Tech\n   Business\n   AI\n   Journalism\n   Digital\n   Regulation\n   People\n   TVN+\n   search Search site Submit search",
+          "query": "\"Linear\" news"
+        },
+        {
+          "url": "https://news.mit.edu/2026/3d-printing-platform-rapidly-produces-complex-electric-machines-0218",
+          "title": "3D-printing platform rapidly produces complex electric machines | MIT News | Massachusetts Institute of Technology",
+          "content": "Making a motor\n\nAfter perfecting the printing platform, the researchers fabricated a linear motor, which generates straight-line motion (as opposed to a rotating motor, like the one in a car). Linear motors are used in applications like pick-and-place robotics, optical systems, and baggage conveyers. [...] The researchers used this system to produce a fully 3D-printed electric linear motor in a matter of hours using five materials. They only needed to perform one post-processing step for the motor to be fully functional.\n\nThe assembled device performed as well or better than similar motors that require more complex fabrication methods or additional post-processing steps. [...] ### Gizmodo\n\nResearchers at MIT have developed a new 3D printing platform that can “produce a fully functioning linear motor in about three hours,” reports Justin Caffier for Gizmodo. The research team “explained how by retrofitting a printer with enough extruders to handle the various materials needed to make a working motor, they decimated the usual production time for such a device and brought the material costs down to around $0.50,” writes Caffier.\n\nFull story via Gizmodo →",
+          "query": "\"Linear\" news"
+        },
+        {
+          "url": "https://abc7news.com/post/san-francisco-bay-area-job-opening-kgo-media-manager-linear-editor-temp/19693390",
+          "title": "San Francisco Bay Area Job opening: KGO - Media Manager / Non-Linear Editor (Temp) - ABC7 San Francisco",
+          "content": "## Trump suggests letting Iran ‘take out’ Los Angeles and San Diego\n\n 1 hour ago\n\n## Former 'American Idol' contestant sentenced to life without parole for wife's murder\n\n## Father arrested, teen rescued by Mexican authorities in incest case\n\n### Fashion designers ID'd as couple fatally shot in Oakland Hills home\n\n### When's the best time to get gas? New report debunks morning myth\n\n### 'This is our summer': Bay Area heat draws crowds to beaches [...] SAN FRANCISCO (KGO) -- Disney Entertainment's eight owned ABC stations are multiplatform leaders in local news and information. ABC7 KGO-TV is the Bay Area's news leader, delivering breaking news, weather and live video on-air and 24/7 wherever you stream. Producing more than 45 hours of live newscasts every week, ABC7 Eyewitness News is widely recognized for its solution-based journalism and advocacy with legacy franchises Seven on Your Side, I-Team, and Building a Better Bay Area. ABC7 is a [...] ABC7 KGO-TV is seeking a Media Manager & non-linear editor eager to work in a fast-paced news environment. The role calls for preparing and managing video assets on a deadline for use in multiple newscasts. The ideal candidate will be able to edit and transfer video elements between systems and platforms in an efficient and high-quality manner. This employee will be technically astute in addition to being organized, calm under pressure, and detail-oriented. We are looking for a highly",
+          "query": "\"Linear\" news"
+        },
+        {
+          "url": "https://www.chemistryworld.com/news/explainer-what-are-autocatalysis-and-non-linear-effects-and-why-have-they-won-the-2026-nobel-prize-in-chemistry/4024328.article",
+          "title": "Explainer: what are autocatalysis and non-linear effects and why have they won the 2026 Nobel prize in chemistry? | News | Chemistry World",
+          "content": "In 1986, Kagan and his colleagues at Université Paris-Sud reported three experiments that demonstrated non-linear effects for the first time: two titanium-catalysed reactions – oxidation of methyl p-tolyl sulfide and a Sharpless epoxidation of geraniol – and a proline-catalysed Hajos–Parrish reaction.\n\nSource: © Johan Jamestad/The Royal Swedish Academy of Sciences [...] Other researchers have also helped to expand chemists’ understanding of the mechanisms of non-linear effects and asymmetric autocatalysis. For example, Donna Blackmond from the Scripps Research Institute in California, US, has built on Kagan’s early work, revealing important mathematical relationships between reaction rates and non-linear effects. In 2006, her team also demonstrated an interesting reaction in which a non-linear effect is influenced by differences in solubility of the catalytic [...] Kagan’s discovery of non-linear effects here refers to his observation of asymmetric catalytic reactions that favour the formation of one particular chiral product over the other to an unexpected degree. Previously, scientists had assumed that the enantiomeric excess (the left–right balance of enantiomers) in the catalyst was directly proportional to the enantiomeric excess in the products. Kagan showed these reactions can actually make products with an enantiomeric excess that surpasses that",
+          "query": "\"Linear\" news"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,288 @@
+{
+  "case_id": "tuple",
+  "config": "mini",
+  "models": "Research gpt-5.4-mini/low, Strategy gpt-5.4-mini/medium, Writing gpt-5.4-mini/medium, Review gpt-5.4-mini/low",
+  "repeat": 2,
+  "snapshot_recorded_at": "2026-10-09T12:05:52+00:00",
+  "checks": {
+    "label": "draft",
+    "outcome_ok": true,
+    "facts": 7,
+    "dropped_facts": 1,
+    "attempts": 2,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 79,
+    "subject_words": 4,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "fb770b68b3594771a1fd1865a0012807",
+    "brief": {
+      "company": "Tuple",
+      "website": "tuple.app",
+      "offer": "Video case studies with engineering teams that use your product",
+      "recipient": "Head of Marketing",
+      "language": "English",
+      "tone": "Direct"
+    },
+    "status": "ready",
+    "reason": null,
+    "message": "The draft passed review.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "Tuple is a remote pair programming app for developers.",
+          "excerpt": "\"Tuple is an app for remote pair programming\"",
+          "source_url": "https://www.linkedin.com/company/tupleapp",
+          "source_title": "Tuple"
+        },
+        {
+          "id": 2,
+          "claim": "Tuple is optimized for features developers care about, including full-time mouse and keyboard support, snappy interactions, command-line integration, and pluginability.",
+          "excerpt": "\"optimized for everything that developers care about: Seamless collaboration with full-time mouse and keyboard support for both parties, snappy interactions, command-line integration and pluginability.\"",
+          "source_url": "https://www.linkedin.com/company/tupleapp",
+          "source_title": "Tuple"
+        },
+        {
+          "id": 3,
+          "claim": "Tuple describes itself as the best remote pair programming app on macOS and Windows.",
+          "excerpt": "\"The best remote pair programming app on macOS and Windows\"",
+          "source_url": "https://github.com/tupleapp",
+          "source_title": "Tuple · GitHub"
+        },
+        {
+          "id": 4,
+          "claim": "Tuple’s app emphasizes high-fidelity remote control and mouse cursors for all participants.",
+          "excerpt": "\"you want mouse cursors for all participants and high-fidelity remote control (like Command+Tab support).\"",
+          "source_url": "https://github.com/tupleapp",
+          "source_title": "Tuple · GitHub"
+        },
+        {
+          "id": 5,
+          "claim": "Tuple has a Slack integration that starts a pairing session from a channel or DM using a /tuple command.",
+          "excerpt": "\"adds a `/tuple` command, which will start a pairing session directly from a channel or DMs\"",
+          "source_url": "https://slack.com/marketplace/A04B287N6P2-tuple",
+          "source_title": "Tuple & Slack Integration | Slack Marketplace"
+        },
+        {
+          "id": 6,
+          "claim": "Tuple offers a free-forever account for educational purposes if users email support.",
+          "excerpt": "\"if you email support@tuple.app and say you want to use Tuple for educational purposes, we'll make you a free-forever account.\"",
+          "source_url": "https://news.ycombinator.com/item?id=29641907",
+          "source_title": "Tuple: Pair Programming Tool for macOS | Hacker News"
+        },
+        {
+          "id": 7,
+          "claim": "Tuple is headquartered in Somerville, MA, United States.",
+          "excerpt": "\"Headquarters: Somerville, MA, United States\"",
+          "source_url": "https://www.linkedin.com/company/tupleapp",
+          "source_title": "Tuple"
+        }
+      ],
+      "website_matches": true,
+      "website_note": "The results consistently describe Tuple at tuple.app as a remote pair-programming app for developers.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 1
+    },
+    "strategy": {
+      "observation": "Tuple markets a developer-first remote pair programming app, with messaging centered on the engineering workflow details developers care about most: full-time mouse and keyboard support, snappy interactions, CLI integration, pluginability, high-fidelity remote control, and even Slack-based session start. ",
+      "fact_ids": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "offer_link": "Video case studies featuring engineering teams that use Tuple could turn those workflow claims into proof from real users, showing how teams actually pair, hand off control, and start sessions inside their existing tools. That gives marketing concrete customer stories to support acquisition content, product pages, social proof, and sales enablement for a technical audience.",
+      "hypotheses": [
+        "The marketing team may be looking for more customer proof to make a developer tool easier to evaluate.",
+        "Engineering-led case studies may perform better for Tuple than generic brand stories because the product is aimed at developers.",
+        "Video format may help show the app’s interaction quality and remote-control experience in a way screenshots and copy cannot."
+      ],
+      "angle": "I noticed Tuple’s positioning is built around very specific developer workflow features, so a few engineering-team video case studies could make those claims much more credible.",
+      "offer_fit": "good",
+      "fit_reason": "This offer matches a developer-tool company whose messaging depends on technical credibility and real-world workflow proof. Video case studies from engineering teams are a plausible way for marketing to demonstrate usage and differentiate Tuple, especially for a product sold to developers."
+    },
+    "draft": {
+      "subject": "Video proof for Tuple",
+      "body": "It looks like Tuple speaks to developer workflow in a very specific way: full-time mouse and keyboard support, snappy interactions, command-line integration, pluginability, high-fidelity remote control, and Slack session start.\n\nA few video case studies with engineering teams could turn those details into proof from real users. They could show how teams pair, hand off control, and start sessions in the tools they already use. If you’re looking for more customer proof for marketing, would that be worth exploring?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Engineering proof for Tuple",
+          "body": "Tuple’s messaging is very specific to developer workflow: full-time mouse and keyboard support, snappy interactions, CLI integration, pluginability, high-fidelity remote control, and even starting a pairing session from Slack.\n\nWould a few video case studies with engineering teams help turn those claims into proof from real users? I’m thinking short videos that show how teams pair, hand off control, and start sessions inside the tools they already use. Could that be useful for your marketing team?"
+        },
+        "review": {
+          "passed": false,
+          "issues": [
+            "The sentence \"Tuple’s messaging is very specific to developer workflow\" is an interpretation, not a sourced fact. Change it to a question or assumption, such as \"It looks like Tuple speaks to developer workflow...\"",
+            "The email ends with two questions. Keep only one clear question at the end by removing either \"Would a few video case studies...\" or \"Could that be useful for your marketing team?\""
+          ]
+        }
+      },
+      {
+        "attempt": 2,
+        "draft": {
+          "subject": "Video proof for Tuple",
+          "body": "It looks like Tuple speaks to developer workflow in a very specific way: full-time mouse and keyboard support, snappy interactions, command-line integration, pluginability, high-fidelity remote control, and Slack session start.\n\nA few video case studies with engineering teams could turn those details into proof from real users. They could show how teams pair, hand off control, and start sessions in the tools they already use. If you’re looking for more customer proof for marketing, would that be worth exploring?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@1",
+      "strategy": "strategy@1",
+      "copywriter": "copywriter@1",
+      "review": "review@1"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "research@1",
+        "duration_ms": 2651,
+        "usage": {
+          "input_tokens": 2347,
+          "cached_input_tokens": 1792,
+          "cache_write_tokens": null,
+          "output_tokens": 448,
+          "reasoning_tokens": 22
+        },
+        "cost_usd": 0.00256665,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "strategy@1",
+        "duration_ms": 4590,
+        "usage": {
+          "input_tokens": 596,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 491,
+          "reasoning_tokens": 187
+        },
+        "cost_usd": 0.0026565,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "copywriter@1",
+        "duration_ms": 3329,
+        "usage": {
+          "input_tokens": 701,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 511,
+          "reasoning_tokens": 391
+        },
+        "cost_usd": 0.00282525,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "review@1",
+        "duration_ms": 3028,
+        "usage": {
+          "input_tokens": 601,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 380,
+          "reasoning_tokens": 276
+        },
+        "cost_usd": 0.00216075,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 2,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "copywriter@1",
+        "duration_ms": 2928,
+        "usage": {
+          "input_tokens": 912,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 464,
+          "reasoning_tokens": 340
+        },
+        "cost_usd": 0.002772,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 2,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "review@1",
+        "duration_ms": 2310,
+        "usage": {
+          "input_tokens": 605,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 273,
+          "reasoning_tokens": 253
+        },
+        "cost_usd": 0.00168225,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Tuple\" company overview products customers",
+        "topic": "general",
+        "results": 0,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Tuple\" tuple.app",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Tuple\" news",
+        "topic": "news",
+        "results": 2,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 18853
+  }
+}

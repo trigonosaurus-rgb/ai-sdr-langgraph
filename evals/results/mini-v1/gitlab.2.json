@@ -1,0 +1,246 @@
+{
+  "case_id": "gitlab",
+  "config": "mini",
+  "models": "Research gpt-5.4-mini/low, Strategy gpt-5.4-mini/medium, Writing gpt-5.4-mini/medium, Review gpt-5.4-mini/low",
+  "repeat": 2,
+  "snapshot_recorded_at": "2026-10-09T12:05:24+00:00",
+  "checks": {
+    "label": "draft",
+    "outcome_ok": true,
+    "facts": 8,
+    "dropped_facts": 0,
+    "attempts": 1,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 92,
+    "subject_words": 3,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "2de99ed00df04f3897399b11e2e7ac24",
+    "brief": {
+      "company": "GitLab",
+      "website": "about.gitlab.com",
+      "offer": "Contract technical writers for release notes and migration guides",
+      "recipient": "Engineering Manager, Documentation",
+      "language": "English",
+      "tone": "Direct"
+    },
+    "status": "ready",
+    "reason": null,
+    "message": "The draft passed review.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "GitLab positions itself as an intelligent orchestration platform for DevSecOps that helps teams ship secure software faster.",
+          "excerpt": "\"We're the company behind GitLab, the intelligent orchestration platform where teams and their AI agents ship secure software faster.\"",
+          "source_url": "https://about.gitlab.com/company",
+          "source_title": "About GitLab - The Intelligent Orchestration Platform"
+        },
+        {
+          "id": 2,
+          "claim": "GitLab says it is used by more than 100,000 organizations to plan, build, secure, and deploy software at machine scale.",
+          "excerpt": "\"used by more than 100,000 organizations to plan, build, secure, and deploy software at machine scale\"",
+          "source_url": "https://about.gitlab.com/jobs",
+          "source_title": "Join GitLab"
+        },
+        {
+          "id": 3,
+          "claim": "GitLab serves technology leaders and platform owners modernizing the software delivery lifecycle, including CIOs, CTOs, and DevOps leaders.",
+          "excerpt": "\"GitLab serves technology leaders and platform owners responsible for modernizing their software delivery lifecycle. This includes CIOs, CTOs, and DevOps leaders\"",
+          "source_url": "https://about.gitlab.com/platform",
+          "source_title": "GitLab Platform - Speed with control"
+        },
+        {
+          "id": 4,
+          "claim": "GitLab says it supports everyone involved in software delivery across the complete software lifecycle, including developers, business analysts, product owners, testers, solution architects, security teams, and operations teams.",
+          "excerpt": "\"GitLab supports everyone involved in software delivery: developers, business analysts, product owners, testers, solution architects, security teams, and operations teams\"",
+          "source_url": "https://about.gitlab.com/platform",
+          "source_title": "GitLab Platform - Speed with control"
+        },
+        {
+          "id": 5,
+          "claim": "GitLab’s customer stories mention enterprises using it for CI/CD and DevSecOps, including Carrefour, Thales, Kingfisher, and Southwest.",
+          "excerpt": "\"How Carrefour and Thales are evolving their CI/CD platforms\"",
+          "source_url": "https://about.gitlab.com/blog/tags/customers",
+          "source_title": "Customers articles - GitLab Blog"
+        },
+        {
+          "id": 6,
+          "claim": "GitLab says it provides dashboarding and analytics for project and portfolio management, including tracking work in-flight, team capacity, and overall efficiency.",
+          "excerpt": "\"Provide dashboarding and analytics for project and portfolio management\"",
+          "source_url": "https://about.gitlab.com/blog/dev-strategy-review",
+          "source_title": "Tell us what you think about our Dev strategy"
+        },
+        {
+          "id": 7,
+          "claim": "GitLab’s subprocessors page shows it uses AI-powered product features with providers including Google, AWS, Anthropic, Fireworks.ai, and OpenAI.",
+          "excerpt": "\"AI-Powered Product Features\"",
+          "source_url": "https://about.gitlab.com/privacy/subprocessors",
+          "source_title": "GitLab Legal"
+        },
+        {
+          "id": 8,
+          "claim": "GitLab says it has over 50 million estimated registered users.",
+          "excerpt": "\"Over 50 million\"",
+          "source_url": "https://about.gitlab.com/company",
+          "source_title": "About GitLab - The Intelligent Orchestration Platform"
+        }
+      ],
+      "website_matches": true,
+      "website_note": "The results describe GitLab on about.gitlab.com, including its company page, platform page, blog, and legal pages.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 0
+    },
+    "strategy": {
+      "observation": "GitLab serves a very large, mixed audience across the full software delivery lifecycle, so its documentation has to stay clear and current for many different roles and enterprise users at scale.",
+      "fact_ids": [
+        2,
+        4,
+        5,
+        8
+      ],
+      "offer_link": "If release notes and migration guides are being produced for a platform used by 100,000+ organizations and many different personas, contract technical writers could help the documentation team keep that content timely, consistent, and easy to follow as the product evolves.",
+      "hypotheses": [
+        "The documentation team may be under recurring pressure to publish accurate release notes on a tight cadence.",
+        "Migration guides may require extra capacity because product changes and enterprise adoption patterns create frequent update work.",
+        "The team may benefit from temporary writing support during release peaks or major version transitions."
+      ],
+      "angle": "Given GitLab’s scale and broad user base, I thought you might occasionally need extra writing capacity for release notes and migration guides as releases stack up.",
+      "offer_fit": "good",
+      "fit_reason": "Contract technical writers are a plausible fit for an engineering manager in documentation at a large platform with many users and personas, especially where release notes and migration guides need to stay current across frequent product changes."
+    },
+    "draft": {
+      "subject": "Release notes support",
+      "body": "Given GitLab’s scale and broad user base, documentation has to stay clear for a lot of roles at once.\n\nYou support more than 100,000 organizations and over 50 million registered users across the full software delivery lifecycle. I’m assuming that makes release notes and migration guides a recurring update load, especially when product changes stack up.\n\nWe provide contract technical writers for that work. They can help keep those docs timely, consistent, and easy to follow without adding permanent headcount.\n\nWould a few extra hands be useful for the next release cycle?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Release notes support",
+          "body": "Given GitLab’s scale and broad user base, documentation has to stay clear for a lot of roles at once.\n\nYou support more than 100,000 organizations and over 50 million registered users across the full software delivery lifecycle. I’m assuming that makes release notes and migration guides a recurring update load, especially when product changes stack up.\n\nWe provide contract technical writers for that work. They can help keep those docs timely, consistent, and easy to follow without adding permanent headcount.\n\nWould a few extra hands be useful for the next release cycle?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@1",
+      "strategy": "strategy@1",
+      "copywriter": "copywriter@1",
+      "review": "review@1"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "research@1",
+        "duration_ms": 3660,
+        "usage": {
+          "input_tokens": 4717,
+          "cached_input_tokens": 4352,
+          "cache_write_tokens": null,
+          "output_tokens": 536,
+          "reasoning_tokens": 32
+        },
+        "cost_usd": 0.00301215,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "strategy@1",
+        "duration_ms": 5197,
+        "usage": {
+          "input_tokens": 727,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 461,
+          "reasoning_tokens": 210
+        },
+        "cost_usd": 0.00261975,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "copywriter@1",
+        "duration_ms": 3328,
+        "usage": {
+          "input_tokens": 786,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 525,
+          "reasoning_tokens": 387
+        },
+        "cost_usd": 0.002952,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "review@1",
+        "duration_ms": 3220,
+        "usage": {
+          "input_tokens": 744,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 309,
+          "reasoning_tokens": 289
+        },
+        "cost_usd": 0.0019485,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"GitLab\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"GitLab\" about.gitlab.com",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"GitLab\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 15417
+  }
+}

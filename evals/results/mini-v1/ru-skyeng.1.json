@@ -1,0 +1,103 @@
+{
+  "case_id": "ru-skyeng",
+  "config": "mini",
+  "models": "Research gpt-5.4-mini/low, Strategy gpt-5.4-mini/medium, Writing gpt-5.4-mini/medium, Review gpt-5.4-mini/low",
+  "repeat": 1,
+  "snapshot_recorded_at": "2026-10-09T12:07:24+00:00",
+  "checks": {
+    "label": "insufficient_data",
+    "outcome_ok": false,
+    "facts": 0,
+    "dropped_facts": 8,
+    "attempts": 0,
+    "has_draft": false,
+    "language_ok": null,
+    "body_words": null,
+    "subject_words": null,
+    "length_ok": null,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "555064225f7247a8bf06f2a220ee5b6a",
+    "brief": {
+      "company": "Skyeng",
+      "website": "skyeng.ru",
+      "offer": "Озвучка учебных материалов профессиональными дикторами",
+      "recipient": "Руководитель контента",
+      "language": "Russian",
+      "tone": "Warm"
+    },
+    "status": "failed",
+    "reason": "insufficient_data",
+    "message": "Not enough reliable information about Skyeng to write a specific email.",
+    "issues": [],
+    "research": {
+      "facts": [],
+      "website_matches": true,
+      "website_note": "The results describe Skyeng at skyeng.ru, an online language school with official pages, app listings, and company materials.",
+      "site_indexed": true,
+      "sufficient": false,
+      "gaps": "",
+      "dropped_facts": 8
+    },
+    "strategy": null,
+    "draft": null,
+    "attempts": [],
+    "prompt_versions": {
+      "research": "research@1"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "research@1",
+        "duration_ms": 3628,
+        "usage": {
+          "input_tokens": 3928,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 577,
+          "reasoning_tokens": 45
+        },
+        "cost_usd": 0.0055425,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Skyeng\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Skyeng\" skyeng.ru",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Skyeng\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 3638
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "case_id": "wrong-site-linear",
+  "config": "mini",
+  "models": "Research gpt-5.4-mini/low, Strategy gpt-5.4-mini/medium, Writing gpt-5.4-mini/medium, Review gpt-5.4-mini/low",
+  "repeat": 2,
+  "snapshot_recorded_at": "2026-10-09T12:06:59+00:00",
+  "checks": {
+    "label": "website_mismatch",
+    "outcome_ok": true,
+    "facts": 6,
+    "dropped_facts": 0,
+    "attempts": 0,
+    "has_draft": false,
+    "language_ok": null,
+    "body_words": null,
+    "subject_words": null,
+    "length_ok": null,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "b5011b7c2e6047d1b7961dffe8680aed",
+    "brief": {
+      "company": "Linear",
+      "website": "notion.so",
+      "offer": "Recruiting and scheduling customer interview participants for product teams",
+      "recipient": "Head of Product",
+      "language": "English",
+      "tone": "Direct"
+    },
+    "status": "failed",
+    "reason": "website_mismatch",
+    "message": "Search results do not match notion.so. The results are about Notion’s pages and integrations, not the company Linear, so the website does not match the named company.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "Notion offers a Linear link preview integration that lets users bring Linear content into Notion.",
+          "excerpt": "“you can bring the magic of Linear to Notion”",
+          "source_url": "https://www.notion.so/integrations/linear-9fa29a25-5ec1-479c-9979-f0425675e8f9",
+          "source_title": "Linear Integrations | Connect Your Apps with Notion"
+        },
+        {
+          "id": 2,
+          "claim": "In Notion, pasting a Linear link can show real-time previews of issues, views, and projects.",
+          "excerpt": "“see real-time previews of your issues, views, and projects directly in Notion”",
+          "source_url": "https://www.notion.so/integrations/linear-9fa29a25-5ec1-479c-9979-f0425675e8f9",
+          "source_title": "Linear Integrations | Connect Your Apps with Notion"
+        },
+        {
+          "id": 3,
+          "claim": "Notion has a Linear AI Connector that can search Linear projects, issues, and comments from Notion.",
+          "excerpt": "“Search Linear projects, issues, and comments from Notion.”",
+          "source_url": "https://www.notion.so/integrations/notion-ai-connector-for-linear",
+          "source_title": "Notion AI Connector for Linear"
+        },
+        {
+          "id": 4,
+          "claim": "The Linear AI Connector is available for all Linear organizations.",
+          "excerpt": "“Available for all Linear organizations.”",
+          "source_url": "https://www.notion.so/integrations/notion-ai-connector-for-linear",
+          "source_title": "Notion AI Connector for Linear"
+        },
+        {
+          "id": 5,
+          "claim": "Using the Linear AI Connector requires a Notion workspace owner on a Business or Enterprise plan and a Linear Admin.",
+          "excerpt": "“Must be a Notion workspace owner on a Business or Enterprise plan and a Linear Admin to connect.”",
+          "source_url": "https://www.notion.so/integrations/notion-ai-connector-for-linear",
+          "source_title": "Notion AI Connector for Linear"
+        },
+        {
+          "id": 6,
+          "claim": "Notion’s Linear connection page says it is for viewing Linear issues and projects in Notion.",
+          "excerpt": "“View Linear issues and projects in Notion”",
+          "source_url": "https://www.notion.com/connections/linear",
+          "source_title": "Linear"
+        }
+      ],
+      "website_matches": false,
+      "website_note": "The results are about Notion’s pages and integrations, not the company Linear, so the website does not match the named company.",
+      "site_indexed": true,
+      "sufficient": false,
+      "gaps": "The results do not identify Linear’s own website or describe Linear as a company in a way that supports outreach; they mainly describe Notion’s integrations with Linear.",
+      "dropped_facts": 0
+    },
+    "strategy": null,
+    "draft": null,
+    "attempts": [],
+    "prompt_versions": {
+      "research": "research@1"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "research@1",
+        "duration_ms": 4240,
+        "usage": {
+          "input_tokens": 4900,
+          "cached_input_tokens": 4352,
+          "cache_write_tokens": null,
+          "output_tokens": 580,
+          "reasoning_tokens": 233
+        },
+        "cost_usd": 0.0033474,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Linear\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Linear\" notion.so",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Linear\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 4250
+  }
+}

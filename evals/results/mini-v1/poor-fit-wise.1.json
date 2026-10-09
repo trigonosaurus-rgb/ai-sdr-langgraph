@@ -1,0 +1,282 @@
+{
+  "case_id": "poor-fit-wise",
+  "config": "mini",
+  "models": "Research gpt-5.4-mini/low, Strategy gpt-5.4-mini/medium, Writing gpt-5.4-mini/medium, Review gpt-5.4-mini/low",
+  "repeat": 1,
+  "snapshot_recorded_at": "2026-10-09T12:07:09+00:00",
+  "checks": {
+    "label": "poor_fit",
+    "outcome_ok": true,
+    "facts": 6,
+    "dropped_facts": 2,
+    "attempts": 2,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 75,
+    "subject_words": 3,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "e2b9cbcc3ff24636804f9782b775356c",
+    "brief": {
+      "company": "Wise",
+      "website": "wise.com",
+      "offer": "Forklift maintenance contracts for warehouses",
+      "recipient": "Head of Product",
+      "language": "English",
+      "tone": "Direct"
+    },
+    "status": "needs_attention",
+    "reason": null,
+    "message": "The draft passed review, but the offer looks like a poor fit.",
+    "issues": [
+      "The offer may not fit this company: The offer is tied to warehouse equipment, while the facts describe a fintech platform for cross-border money movement and account services. There is no plausible direct use case for forklift maintenance contracts in the described business or for a Head of Product recipient."
+    ],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "Wise serves personal customers, small and medium-sized businesses, and banks/other enterprises through three products: Wise Account, Wise Business, and Wise Platform.",
+          "excerpt": "\"We serve each of these customer groups through our three products: the Wise Account for personal customers, Wise Business for small and medium-sized businesses and Wise Platform for banks and other enterprises.\"",
+          "source_url": "https://wise.com/imaginary-v2/images/ad736416f90791dbb49c7e59f1f45d8d-WiseFY2025AnnualReportAccounts.pdf",
+          "source_title": "Wise – 2025 Annual Report and Accounts"
+        },
+        {
+          "id": 2,
+          "claim": "Wise says it is building the best way to move and manage the world's money.",
+          "excerpt": "\"We are building the best way to move and manage the world's money.\"",
+          "source_url": "https://owners.wise.com",
+          "source_title": "Overview | Wise Plc."
+        },
+        {
+          "id": 3,
+          "claim": "Wise had nearly 19 million customers in FY26.",
+          "excerpt": "\"we served nearly 19 million customers in FY26\"",
+          "source_url": "https://owners.wise.com",
+          "source_title": "Overview | Wise Plc."
+        },
+        {
+          "id": 4,
+          "claim": "Wise’s products let people and businesses hold 40+ currencies, move money between countries, and spend money abroad.",
+          "excerpt": "\"people and businesses can hold 40+ currencies, move money between countries and spend money abroad.\"",
+          "source_url": "https://newsroom.wise.com/en-NAM/about",
+          "source_title": "About Wise | Wise Newsroom"
+        },
+        {
+          "id": 5,
+          "claim": "Wise was launched in 2011.",
+          "excerpt": "\"Launched in 2011\"",
+          "source_url": "https://newsroom.wise.com/en-NAM/about",
+          "source_title": "About Wise | Wise Newsroom"
+        },
+        {
+          "id": 6,
+          "claim": "Wise says it is profitable and supported nearly 19 million people and businesses in financial year 2026.",
+          "excerpt": "\"one of the world’s fastest growing, profitable tech companies. In the financial year 2026, Wise supported nearly 19 million people and ...\"",
+          "source_url": "https://newsroom.wise.com/en-NAM/about",
+          "source_title": "About Wise | Wise Newsroom"
+        }
+      ],
+      "website_matches": true,
+      "website_note": "The results describe Wise at wise.com, including its products, customer base, and company mission.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 2
+    },
+    "strategy": {
+      "observation": "Wise is a digital financial platform focused on moving and managing money across borders, serving personal customers, SMBs, and banks/enterprises through Wise Account, Wise Business, and Wise Platform at nearly 19 million customers.",
+      "fact_ids": [
+        1,
+        2,
+        3,
+        4,
+        6
+      ],
+      "offer_link": "Forklift maintenance contracts are designed for warehouse operations; based on the facts, Wise’s core business is financial software/services rather than warehouse-heavy operations, so there’s no clear product or operational reason this offer would matter to the Head of Product.",
+      "hypotheses": [
+        "Wise may have some physical offices or operational facilities that need vendor management, but that is not shown in the facts.",
+        "The Head of Product may care about reliability and cost control, but that does not create a natural need for forklift maintenance contracts.",
+        "If Wise operates any warehousing through partners or a separate function, this could be relevant, but that would be outside the evidence provided."
+      ],
+      "angle": "Wise is scaling a global money-movement platform for millions of customers, so I’m guessing forklift maintenance for warehouses isn’t on your product radar.",
+      "offer_fit": "poor",
+      "fit_reason": "The offer is tied to warehouse equipment, while the facts describe a fintech platform for cross-border money movement and account services. There is no plausible direct use case for forklift maintenance contracts in the described business or for a Head of Product recipient."
+    },
+    "draft": {
+      "subject": "Forklift maintenance question",
+      "body": "Wise serves nearly 19 million customers, and its products let people and businesses hold 40+ currencies and move money across borders, so I’m guessing forklift maintenance for warehouses isn’t on your product radar.\n\nI work on maintenance contracts for warehouse operators. If Wise has any warehouse or facilities operation that needs this kind of vendor support, I can send a simple outline. If not, please ignore it.\n\nShould I speak with someone else on operations?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Warehouse maintenance question",
+          "body": "Wise is scaling a global money-movement platform for nearly 19 million customers, so I’m guessing forklift maintenance for warehouses is not on your product radar.\n\nI work on maintenance contracts for warehouse operators. If Wise has any warehousing or facilities teams that manage forklifts, this could be relevant; if not, please ignore it.\n\nWould it make sense to point me to whoever owns that side of operations?"
+        },
+        "review": {
+          "passed": false,
+          "issues": [
+            "The opening line states that Wise is \"scaling a global money-movement platform,\" which is not stated in the facts. Change it to a supported fact, such as Wise serving nearly 19 million customers and offering money-movement products, or phrase it as a question/assumption."
+          ]
+        }
+      },
+      {
+        "attempt": 2,
+        "draft": {
+          "subject": "Forklift maintenance question",
+          "body": "Wise serves nearly 19 million customers, and its products let people and businesses hold 40+ currencies and move money across borders, so I’m guessing forklift maintenance for warehouses isn’t on your product radar.\n\nI work on maintenance contracts for warehouse operators. If Wise has any warehouse or facilities operation that needs this kind of vendor support, I can send a simple outline. If not, please ignore it.\n\nShould I speak with someone else on operations?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@1",
+      "strategy": "strategy@1",
+      "copywriter": "copywriter@1",
+      "review": "review@1"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "research@1",
+        "duration_ms": 3099,
+        "usage": {
+          "input_tokens": 4534,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 505,
+          "reasoning_tokens": 25
+        },
+        "cost_usd": 0.005673,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "strategy@1",
+        "duration_ms": 5902,
+        "usage": {
+          "input_tokens": 579,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 783,
+          "reasoning_tokens": 492
+        },
+        "cost_usd": 0.00395775,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "copywriter@1",
+        "duration_ms": 3077,
+        "usage": {
+          "input_tokens": 670,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 426,
+          "reasoning_tokens": 319
+        },
+        "cost_usd": 0.0024195,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "review@1",
+        "duration_ms": 3592,
+        "usage": {
+          "input_tokens": 569,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 407,
+          "reasoning_tokens": 328
+        },
+        "cost_usd": 0.00225825,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 2,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "copywriter@1",
+        "duration_ms": 4995,
+        "usage": {
+          "input_tokens": 844,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 428,
+          "reasoning_tokens": 312
+        },
+        "cost_usd": 0.002559,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 2,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "review@1",
+        "duration_ms": 2716,
+        "usage": {
+          "input_tokens": 578,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 320,
+          "reasoning_tokens": 300
+        },
+        "cost_usd": 0.0018735,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Wise\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Wise\" wise.com",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Wise\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 23401
+  }
+}

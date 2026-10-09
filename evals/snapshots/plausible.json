@@ -1,0 +1,133 @@
+{
+  "case_id": "plausible",
+  "brief": {
+    "company": "Plausible Analytics",
+    "website": "plausible.io",
+    "offer": "Paid search campaigns for privacy-focused software products",
+    "recipient": "Co-founder",
+    "language": "English",
+    "tone": "Direct"
+  },
+  "recorded_at": "2026-10-09T12:05:40+00:00",
+  "searches": [
+    {
+      "query": "\"Plausible Analytics\" company overview products customers",
+      "topic": "general",
+      "include_domains": [
+        "plausible.io"
+      ],
+      "max_results": 5,
+      "credits": 1.0,
+      "results": [
+        {
+          "url": "https://plausible.io/about",
+          "title": "About | Plausible Analytics",
+          "content": "# About\n\nPlausible Analytics is an independent, open source analytics company based in the EU. We built it because web analytics had drifted far from its purpose: a simple way for site owners to understand their traffic without surveilling their visitors.\n\nWe do not use cookies and we do not collect personal data. No surveillance model, no data brokerage, no conflict of interest between what we sell and what our customers need. [...] In 2020, when it was still just Uku building and a few hundred paying customers, Marko Saric joined to handle marketing and communications. No outside funding, no growth team. The company has grown through product improvement and transparent communication ever since.\n\nPlausible crossed $1 million in annual recurring revenue in 2022 and has continued to grow as a profitable, independently operated company. [...] Our primary obligation is to our customers. They fund the company and guide its direction, because no one else does.\n\n## How we grow\n\nWe have never spent a cent on advertising, affiliates or paid endorsements. Plausible grows because people recommend it when they have no reason to other than that it works. That kind of trust cannot be bought, and it says more about the product than anything we could claim about ourselves.\n\n## Open source as accountability",
+          "query": "\"Plausible Analytics\" company overview products customers"
+        },
+        {
+          "url": "https://plausible.io/white-label-web-analytics",
+          "title": "White label web analytics for SaaS platforms and website builders | Plausible Analytics",
+          "content": "SaaS platforms can add analytics as a maintained product feature without building a separate collection and reporting system. Customers stay inside your interface and see a dashboard that already feels familiar.\n\nMarketplaces can give each seller a dashboard for their own storefront or listings. Each embedded view contains only that seller’s site data. [...] 1. Built for products where every customer needs analytics\n2. Operate one integration instead of an analytics product\n3. How Prezly uses Plausible in production\n4. How a multi-tenant integration works\n   1. Provision one site for each customer\n   2. Send each customer’s events to the matching site\n   3. Show the analytics inside your product\n5. Embed our dashboard or build your own\n   1. Embed dashboard for the quickest path\n   2. Stats API for a custom interface [...] ## Built for products where every customer needs analytics\n\nThis model works especially well for platforms where each customer has a site, storefront or campaign of their own.\n\nWebsite builders and hosting services can include analytics with every customer site. Your backend provisions the dashboard when a site goes live, so customers have useful traffic data from day one. The same setup works for AI site builders.",
+          "query": "\"Plausible Analytics\" company overview products customers"
+        },
+        {
+          "url": "https://plausible.io/blog/scaling-customer-support",
+          "title": "How we scaled support for 4,000+ subscribers and 1,000+ monthly trials (without dedicated support personnel) | Plausible Analytics",
+          "content": "A fast and personal customer support experience can make people share positive stories about your brand on social media. Plausible rejects to pay Google and Facebook to do the marketing for us so we rely on word of mouth from people who enjoy our product to help us spread the message.\n\nThese are the people who pay our bills and people without whom Plausible wouldn’t exist. Being able to interact with them, accommodate them and make their experience better is very crucial to us. [...] The product itself being minimal and easy to use makes it possible for us to serve thousands of customers and new trials without being overwhelmed with messages.\n\n## An up-to-date and detailed documentation is a must\n\nHaving a documentation has helped us dramatically reduce the number of questions. [...] People that answer customer support questions understand your business the best. They hear from prospects and customers all the time. That’s their job after all.\n\nThey know what the frequently requested features are. They are familiar with the annoying bugs people complain about. They understand what competing brands people compare the product against.",
+          "query": "\"Plausible Analytics\" company overview products customers"
+        },
+        {
+          "url": "https://plausible.io",
+          "title": "Plausible Analytics | Simple, privacy-friendly Google Analytics alternative",
+          "content": "Been a very happy customer of Plausible at Basecamp. Wonderful to see domains like web stats that were once a wasteland due to monopoly weight spring new, better options ❤️\n\nJohn O'Nolan\n\nFounder and CEO at Ghost\n\nCheck out Plausible if you haven't yet - fantastic product. We switched over everything from GA.\n\nCyrus Shepard\n\nSEO consultant and former Moz lead [...] Plausible is privacy-friendly web analytics that doesn't process personal data or track individual users. No cookies, no persistent identifiers, no cross-site or cross-device tracking. Your site data is not used for any other purposes. All visitor data is exclusively processed on servers owned and operated by European companies and never leaves the EU.\n\nWe invite you to take a look around, explore our live demo and try Plausible for free. We'd be honored to have you as a customer. Thank you. [...] Here's what makes Plausible a great Google Analytics alternative and why over 21,000 paying customers trust us with their website and business insights:\n\n### Simple analytics at a glance",
+          "query": "\"Plausible Analytics\" company overview products customers"
+        },
+        {
+          "url": "https://plausible.io/changelog",
+          "title": "What’s New | Plausible Analytics",
+          "content": "You can now find two brand new metrics in your dashboard: “Total visits” (Sessions) and “Views per visit” (Pages/Session).\n\n  We’ve made several less prominent enhancements too. A more accurate cities report, a more accurate screen size report, a more mobile-friendly top graph and improvements to the speed, consistency and stability of our service. For a comprehensive overview of all the changes we make daily, check out our GitHub. [...] Overview: W﻿e take security very seriously, here’s a reminder of everything you can do to keep your account secure: [...] If you have multiple websites/dashboards in your Plausible account, you will find a brand new consolidated view on your All Sites page.\n\n  T﻿his gives you an overview of traffic across all your websites, allows you to quickly see the total number of visitors and other key metrics across all your properties in one place and works like any other dashboard that you can access and change the settings of. Find full info here.",
+          "query": "\"Plausible Analytics\" company overview products customers"
+        }
+      ]
+    },
+    {
+      "query": "\"Plausible Analytics\" plausible.io",
+      "topic": "general",
+      "include_domains": null,
+      "max_results": 5,
+      "credits": 1.0,
+      "results": [
+        {
+          "url": "https://www.youtube.com/watch?v=NoBp7bqAHUI",
+          "title": "Plausible.io - Google Analytics Lightweight Alternative",
+          "content": "### Description\n529 views\nPosted: 2023-03-20\nPlausible.io is an open-source analytics tool that provides website owners with detailed metrics about their visitors. It's designed to be simple, lightweight, and privacy-first; plus it offers a suite of features that make it an attractive alternative to the big players in the industry, such as Google Analytics. \nPlausible can be self-hosted on your own server so no one but you to have access to your traffic data.\n\nArticle:",
+          "query": "\"Plausible Analytics\" plausible.io"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Plausible_Analytics",
+          "title": "Plausible Analytics - Wikipedia",
+          "content": "Plausible Analytics is an open-sourced web analytics software as a service (SaaS) platform, developed and hosted in the EU. It tracks visits to websites and shows website performance reports for their analysis and improvement of websites.\n\n## Overview\n\n[edit] [...] Plausible Analytics offers a cloud solution as well as the ability to self-host \"Self-hosting (web services)\"). It has been open-sourced. The platform is developed in the Elixir programming language \"Elixir (programming language)\"). It is licensed under the GNU Affero General Public License v3 (AGPLv3). [...] In other projects\n\n Wikidata item\n\nAppearance\n\nFrom Wikipedia, the free encyclopedia\n\nOpen-source web analytics software\n\n| Plausible Analytics |\n\n| Developer | Plausible Analytics |\n| Written in | Elixir \"Elixir (programming language)\") |\n| Available in | English |\n| Type | Web analytics |\n| License | AGPLv3 |\n| Website | plausible.io |\n| Repository \"Repository (version control)\") |  github.com/plausible/analytics Edit this at Wikidata |",
+          "query": "\"Plausible Analytics\" plausible.io"
+        },
+        {
+          "url": "https://hub.docker.com/r/plausible/analytics",
+          "title": "plausible/analytics - Docker Image",
+          "content": "Plausible Analytics⁠ is a simple, lightweight (< 1 KB), open-source and privacy-friendly alternative to Google Analytics. It doesn’t use cookies and is fully compliant with GDPR, CCPA and PECR. You can self-host Plausible or have us run it for you in the Cloud. Here's the live demo of our own website stats⁠. Made and hosted in the EU 🇪🇺 [...] Clutter Free: Plausible Analytics provides simple web analytics⁠ and it cuts through the noise. No layers of menus, no need for custom reports. Get all the important insights on one single page. No training necessary.\n GDPR/CCPA/PECR compliant: Measure traffic, not individuals. No personal data or IP addresses are ever stored in our database. We don't use cookies or any other persistent idenfitiers. Read more about our data policy⁠ [...] ##### ⁠Technology\n\nPlausible Analytics is a standard Elixir/Phoenix application backed by a PostgreSQL database for general data and a Clickhouse database for stats. On the frontend we use TailwindCSS⁠ for styling and React to make the dashboard interactive.\n\n##### ⁠Feedback & Roadmap",
+          "query": "\"Plausible Analytics\" plausible.io"
+        },
+        {
+          "url": "https://www.marketingnerd.co.uk/review/plausible-analytics-review",
+          "title": "Plausible Analytics Review - The Best Google Analytics Alternative?",
+          "content": "Plausible Analytics is a viable solution for individuals, small businesses, startups, and enterprises seeking a privacy-conscious web analytics platform. Its strengths lie in delivering essential analytics data, respecting user privacy, and offering a user-friendly experience.\n\nProspective users should assess how Plausible aligns with their analytics needs, considering factors like required features, scalability, and preferences for privacy-focused analytics. [...] Plausible Analytics, founded on the principles of transparency and user privacy, redefines the conventional concept of website analytics. Unlike traditional analytics tools that often inundate users with complex data and compromise user privacy through extensive tracking, Plausible takes a minimalist approach. It offers essential, relevant insights without collecting personal data or utilizing cookies, making it a beacon of user-centric analytics. [...] Plausible Analytics distinguishes itself by offering a comprehensive suite of visitor analytics tools that provide website owners with valuable insights into user behavior without compromising individual privacy. The platform employs a minimalist approach to data collection, focusing on essential metrics that deliver actionable information without invasive tracking methods. Key features include:",
+          "query": "\"Plausible Analytics\" plausible.io"
+        },
+        {
+          "url": "https://plausible.io",
+          "title": "Plausible Analytics | Simple, privacy-friendly Google Analytics alternative",
+          "content": "Plausible is privacy-friendly web analytics that doesn't process personal data or track individual users. No cookies, no persistent identifiers, no cross-site or cross-device tracking. Your site data is not used for any other purposes. All visitor data is exclusively processed on servers owned and operated by European companies and never leaves the EU.\n\nWe invite you to take a look around, explore our live demo and try Plausible for free. We'd be honored to have you as a customer. Thank you. [...] Plausible is lightweight web analytics. Our script is 54 times smaller than Google Analytics. Every visitor that loads your site downloads 135KB less JavaScript. Less data transferred means less energy used and less carbon emitted, for every visitor, every day. A site with 100,000 monthly visitors saves around 4 kg of CO2 per year by switching.\n\n### No need for cookie banners or GDPR consent [...] Plausible is simple web analytics. It is easy to understand and cuts through the noise. Check your site traffic and get the essential insights on one page in one minute. Get an aggregated view of all your sites in a consolidated dashboard. There are no layers of menus and no need to build custom reports, custom dashboards or PowerPoint documents. You can even import your Google Analytics stats.\n\n### Lightweight script that keeps your site speed fast",
+          "query": "\"Plausible Analytics\" plausible.io"
+        }
+      ]
+    },
+    {
+      "query": "\"Plausible Analytics\" news",
+      "topic": "news",
+      "include_domains": null,
+      "max_results": 5,
+      "credits": 1.0,
+      "results": [
+        {
+          "url": "https://www.hhs.gov/press-room/fda-launches-framework-accelerating-development-individualized-therapies-ultra-rare-diseases.html",
+          "title": "FDA Launches Framework for Accelerating Development of Individualized Therapies for Ultra-Rare Diseases | HHS.gov",
+          "content": "“The Plausible Mechanism draft guidance creates a novel framework through which cutting-edge treatments tailor-made for patients with ultra-rare diseases can be used as a basis for FDA approval,” said Center for Drug Evaluation and Research Acting Director Tracy Beth Høeg, MD, PhD. “We anticipate our Plausible Mechanism draft guidance will inspire industry to place increased focus on individualized therapies, thereby driving innovation, improving safety, lowering costs and offering more [...] “Designing treatments unique to individual patients has always been the promised goal of personalized medicine,” said Center for Biologics Evaluation and Research Director Vinay Prasad, MD, MPH. “After 25 years the FDA has, for the first time, outlined a framework to facilitate these approvals. The Plausible Mechanism framework is a revolutionary advance in regulatory science.” [...] Because genome editing technologies are designed to be highly specific to unique DNA sequences, a product targeting different mutations in a single gene could be included in a single product application and potentially evaluated through the use of master protocols that evaluate these product variations in a single trial. A highly supported “plausible” mechanism of action may then be used to support the addition of other such genome editing product variants, intended to treat patients with",
+          "query": "\"Plausible Analytics\" news"
+        },
+        {
+          "url": "https://fortune.com/2026/03/13/trump-powell-pressure-oil-no-cut-plausible",
+          "title": "EY-Parthenon's Gregory Daco says its plausible the Fed won't cut at all this year | Fortune",
+          "content": "The president also signalled that increasing oil prices are less of a concern to him than dismantling the Iranian regime. On Truth Social last night, he noted that the U.S. “makes a lot of money” when oil prices go up, but said, “of far greater importance … is stopping an evil empire, Iran, from having nuclear weapons, and destroying the Middle East and, indeed, the world.” [...] Goldman Sach’s David Mericle wrote to clients last night that his expectations for the Fed’s path remains more dovish than the bank’s baseline forecase and market pricing, he explains that while above-target inflation makes it harder to cut soon, “by September, we expect both some further labor market softening and progress on underlying inflation to contribute to the case for a cut.” [...] Recommended Video\n\nTrump seems to be appealing to Powell for intervention as oil prices spiralled higher yesterday, once again hitting $100 a barrel. Inflation expectations are rising as a result, as consumers and businesses prepare for the rates to be passed through into their gas and energy prices.",
+          "query": "\"Plausible Analytics\" news"
+        },
+        {
+          "url": "https://www.spglobal.com/energy/en/news-research/latest-news/metals/080726-rosatom-rare-earth-phytomining-plausible-but-commercially-premature-expert",
+          "title": "Rosatom rare earth phytomining plausible but commercially premature: expert",
+          "content": "Russian state-owned atomic company Rosatom has claimed a 65%-85% rare earth element recovery rate with lab-scale phytomining, but an REE expert cautions the",
+          "query": "\"Plausible Analytics\" news"
+        },
+        {
+          "url": "https://news.ubisoft.com/en-us/article/3jsMF7A3sNwJQIZnAR3zkA/games-as-historical-immersion-and-preservation-creating-fun-and-plausible-worlds-for-players",
+          "title": "Games as Historical Immersion and Preservation: Creating Fun and Plausible Worlds for Players",
+          "content": "78 / 2546Back\n\nApril 29, 2026\n\n10 Min Read\n\nassassins creed discovery tourcorporate updatestransmedia\n\n# Games as Historical Immersion and Preservation: Creating Fun and Plausible Worlds for Players\n\nBrittany Spurlin [...] Most recently, Papiernik and her team worked with the Assassin’s Creed Mirage team to develop the free app Discovery Tour: Medieval Baghdad showcasing historical artefacts found in the games Codex, in a way that pays tribute to the production values of the game, and that is both fun and educational for anyone to access. And soon, Echoes of Revolution, two augmented reality apps for the Boston Freedom Trail and the New York Revolutionary Trail will overlay in-game renderings from Assassin’s [...] innovate quickly at an affordable cost.",
+          "query": "\"Plausible Analytics\" news"
+        },
+        {
+          "url": "https://apnews.com/article/holiday-travel-2025-airports-home-alone-7aa1a4737aa32cd97365846fe5d50568",
+          "title": "‘Home Alone 2’ nailed holiday travel chaos, but flight rules make movie's plot less plausible today",
+          "content": "The “Home Alone” movies turned holiday travel chaos into comedy. Scenes of the McCallister family sprinting through a crowded terminal still resonate as the",
+          "query": "\"Plausible Analytics\" news"
+        }
+      ]
+    }
+  ]
+}

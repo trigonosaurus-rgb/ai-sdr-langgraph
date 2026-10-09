@@ -1,0 +1,133 @@
+{
+  "case_id": "gitlab",
+  "brief": {
+    "company": "GitLab",
+    "website": "about.gitlab.com",
+    "offer": "Contract technical writers for release notes and migration guides",
+    "recipient": "Engineering Manager, Documentation",
+    "language": "English",
+    "tone": "Direct"
+  },
+  "recorded_at": "2026-10-09T12:05:24+00:00",
+  "searches": [
+    {
+      "query": "\"GitLab\" company overview products customers",
+      "topic": "general",
+      "include_domains": [
+        "about.gitlab.com"
+      ],
+      "max_results": 5,
+      "credits": 1.0,
+      "results": [
+        {
+          "url": "https://about.gitlab.com/privacy/subprocessors",
+          "title": "GitLab Legal",
+          "content": "| Third Party Entity | Location | Service Provided | GitLab Product |\n ---  --- |\n| Google LLC | United States | Cloud Hosting, Customer Support, and AI-Powered Product Features | GitLab.com, Dedicated, and Self-Managed |\n| Amazon Web Services Inc. | United States\\  \\For GitLab Dedicated Customers the hosting location is your choice from our available AWS regions | Cloud Hosting and AI-Powered Product Features | GitLab.com, Dedicated, and Self-Managed | [...] | Anthropic, PBC | United States | AI-Powered Product Features and Customer Support | GitLab.com, Dedicated, and Self-Managed |\n| ClickHouse, Inc. | United States | Database Hosting | GitLab.com and Dedicated |\n| IntouchCX Disrupt Inc. | India | Outsourced Customer Support Business Processes | GitLab.com, Dedicated, and Self-Managed |\n| Fireworks.ai, Inc. | United States and European Union | AI-Powered Product Features | GitLab.com, Dedicated, and Self-Managed | [...] | Snowflake Inc. | United States | Data Warehouse and Analytics Services for Customer Support Ticketing | GitLab.com, Dedicated, and Self-Managed |\n| Fivetran, Inc. | United States | ELT Pipeline for Customer Support Ticketing | GitLab.com, Dedicated, and Self-Managed |\n| OpenAI, LLC | United States | AI-Powered Product Features | GitLab.com, Dedicated, and Self-Managed |",
+          "query": "\"GitLab\" company overview products customers"
+        },
+        {
+          "url": "https://about.gitlab.com/blog/tags/customers",
+          "title": "Customers articles - GitLab Blog",
+          "content": "Find out why this change is occurring and what you need to do.\n\nCustomer Stories\n\n### How Carrefour and Thales are evolving their CI/CD platforms\n\nLearn how a large retailer and an aerospace and defense company are using GitLab to evolve their CI/CD platforms to increase developer productivity.\n\nSecurity\n\n### GitLab drives automotive industry information security with TISAX certification\n\nLearn why we pursued this certification and how it will help GitLab customers in the automotive industry. [...] Learn how organizations like Thales, Scania, and Kitware are partnering with GitLab engineers to contribute meaningful features that benefit the entire community.\n\nAuthor: Fatima Sarah KhalidRead Post\n\n## Recent posts\n\nCustomer Stories\n\n### Kingfisher transforming the developer experience with GitLab\n\nLearn how the international company focuses on DevSecOps, including automation, to reduce complexity in workflows for better efficiency.\n\nEngineering [...] Customer Stories\n\n### Southwest looking to help developers take flight\n\nLearn how the airline's DevOps teams are dramatically increasing their ability to detect and resolve problems with GitLab.\n\nSecurity\n\n### GitLab Trust Center: Welcome to self-service customer assurance\n\nThe single, unified trust center provides access to security and privacy collateral, streamlined questionnaire submissions, an interactive knowledge base, and GitLab updates.",
+          "query": "\"GitLab\" company overview products customers"
+        },
+        {
+          "url": "https://about.gitlab.com/press/releases/2017-09-22-v10-press-release",
+          "title": "GitLab Releases 10.0, Offering Enterprises the Leading Integrated Application Development Product on the Market",
+          "content": "\"We've partnered with GitLab as part of a joint effort to simplify and fortify the developer experience,\" said William Freiberg, COO at Mesosphere. \"Mesosphere DC/OS lets IT operations teams give their developers one-click deployment and elastic scaling of containers and data services on any infrastructure, and GitLab 10 adds unique capabilities to extend our platform. Our customers are excited to use GitLab’s Auto DevOps to quickly adopt industry best practices in an easy and optimized way, [...] More than 100,000 organizations have chosen GitLab for their software development lifecycle, making GitLab the preferred Git-based application with two-thirds of the self-managed market share. Enterprises including Ticketmaster, ING, NASDAQ, Alibaba, Sony, and Intel, faced with an increasing need for modern, collaborative solutions, have adopted GitLab to maintain pace with the demands of today’s work environment. [...] Built for the enterprise, GitLab 10.0 delivers on input from enterprise customers, as well as joint development from the growing community of over 1,800 global contributors. With a comprehensive slate of new feature options across both Enterprise and Community Editions of GitLab 10.0, users will gain:",
+          "query": "\"GitLab\" company overview products customers"
+        },
+        {
+          "url": "https://about.gitlab.com/blog/dev-strategy-review",
+          "title": "Tell us what you think about our Dev strategy",
+          "content": "Reporting and analytics: Provide dashboarding and analytics for project and portfolio management, allowing business to track and communicate progress on work in-flight, capacity of teams and projects, and overall efficiency across their full portfolio.\n\nRequirements management: Many regulated customers want to use GitLab for requirements mapping, dependencies, and process management. GitLab will provide these capabilites in a modern-first way.\n\n### Create [...] Emerge as the leader in VSM and be recognized in the industry by customers and analysts as such. Our goal in three years should be to provide the best insights into the product development process that no other tool can come close to, as we have a unified data model due to GitLab being a single platform.\n Develop an industry-leading product management platform where multiple features and products can be measured and managed easily. [...] Investing in our Wiki product: Many customers currently use Wikis for knowledge bases and project management activities. Our first step in making the GitLab Wiki more competitive is making wikis available at the group level and enhancing markdown support.",
+          "query": "\"GitLab\" company overview products customers"
+        },
+        {
+          "url": "https://about.gitlab.com/platform",
+          "title": "GitLab Platform - Speed with control",
+          "content": "GitLab serves technology leaders and platform owners responsible for modernizing their software delivery lifecycle. This includes CIOs, CTOs, and DevOps leaders who need to create unified experiences for engineering, design, and product teams. GitLab supports everyone involved in software delivery: developers, business analysts, product owners, testers, solution architects, security teams, and operations teams working together across the complete software lifecycle.",
+          "query": "\"GitLab\" company overview products customers"
+        }
+      ]
+    },
+    {
+      "query": "\"GitLab\" about.gitlab.com",
+      "topic": "general",
+      "include_domains": null,
+      "max_results": 5,
+      "credits": 1.0,
+      "results": [
+        {
+          "url": "https://en.wikipedia.org/wiki/GitLab_Inc.",
+          "title": "GitLab Inc. - Wikipedia",
+          "content": "GitLab Inc. is an American company that operates and develops GitLab, an open-core DevOps software package that can develop, secure, and operate software. GitLab includes a distributed version control system based on Git, including features such as access control, bug tracking, software feature requests, task management, and wikis for every project, as well as snippets \"Snippet (programming)\"). [...] 15. ↑ Goled, Shraddha (September 22, 2021). \"GitLab To Go Public: Tracing The Company's Highs & Lows\". Analytics India Magazine. Archived from the original on November 10, 2021. Retrieved November 10, 2021.\n16. ↑ \"About GitLab\". about.gitlab.com. Retrieved May 5, 2024.\n17. 1 2 \"GitLab now operating as US corporation\". GitLab. Retrieved July 4, 2026. [...] | Operating income | Negative increase US$−143 million (2025) |\n| Net income | Decrease US$−6.33 million (2025) |\n| Total assets | Increase US$1.399 billion (2025) |\n| Total equity \"Equity (finance)\") | Increase US$821.3 million (2025) |\n| Number of employees | 2,375 (2025) |\n| Website | about.gitlab.com/company/ Edit this at Wikidata |\n| Footnotes  |",
+          "query": "\"GitLab\" about.gitlab.com"
+        },
+        {
+          "url": "https://about.gitlab.com/company",
+          "title": "About GitLab - The Intelligent Orchestration Platform",
+          "content": "To search repositories and projects, login to gitlab.com.\n\nSuggestions\n\nGitLab Duo Agent PlatformCode Suggestions (AI)CI/CDGitLab on AWSGitLab on Google CloudWhy GitLab?\n\nShip at agent speed. Prove every step. Transcend returns on October 6.Register now\n\n# About GitLab\n\nBehind the scenes of the intelligent orchestration platform\n\n## What we do\n\nWe're the company behind GitLab, the intelligent orchestration platform where teams and their AI agents ship secure software faster. [...] We strive to create an all-remote environment where all team members around the world can show up as their full selves, contribute their best, feel their voices are heard and welcomed, and truly prioritize work-life balance.\n\nIf you're interested in being a part of the team, we invite you to learn more about working at GitLab and apply to any open positions that look like a good fit.\n\nView all open roles\n\n## Learn more\n\nBlog\n\n### See what's new with GitLab, DevOps, security, and more. [...] 177\n\nEstimated registered users\n\nOver 50 million\n\nFrom planning to production,\n\nbring teams and their AI agents together\n\nGet free trial\n\n## GitLab's mission\n\n### Our mission is to unlock every team to ship trusted software at the speed of imagination.\n\nLearn more\n\n## GitLab over the years\n\n### 2011\n\nThe GitLab project began with a commit\n\nWe started releasing a new version of GitLab on the 22nd of every month\n\n### 2012\n\nThe first version of GitLab CI is created\n\n### 2014",
+          "query": "\"GitLab\" about.gitlab.com"
+        },
+        {
+          "url": "https://www.linkedin.com/company/gitlab-com",
+          "title": "GitLab",
+          "content": "Description: GitLab is the Intelligent Orchestration Platform where software teams and their AI agents stay in flow to amplify their capacity for innovation. Together, they automate repetitive tasks to plan, build, secure, test, deploy and maintain software. With GitLab, software teams spend less time on coordination overhead and more time on the next big idea. GitLab Duo Agent Platform provides AI agents that automate tasks across the software lifecycle. Agents handle code generation, security [...] ## Products and services\nKeywords: software development, devops software, version control hosting software, gitlab, bug tracking, devops platforms, continuous delivery, continuous integration, ai code generation, software composition analysis, cloud infrastructure automation, version control hosting",
+          "query": "\"GitLab\" about.gitlab.com"
+        },
+        {
+          "url": "https://about.gitlab.com/jobs",
+          "title": "Join GitLab",
+          "content": "GitLab is the trusted enterprise platform for software creation in the AI era, used by more than 100,000 organizations to plan, build, secure, and deploy software at machine scale, guided by humans. Our mission is to unlock every team to ship software at the speed of imagination, and we're building the next chapter of GitLab to make that possible at the pace the agentic era demands. [...] GitLab is the intelligent orchestration platform for DevSecOps\n Organizations use GitLab to ship secure software faster\n We run our company on GitLab\n\nLearn more\n\n### Learning & Development\n\n Annual Growth & Development benefit\n Industry-leading leadership development programs\n Learn in-demand skills with access to platforms like LinkedIn Learning and Level Up\n\nLearn more\n\n### Inclusion & Belonging [...] Creating inclusive environments is woven into our values and everything we do\n We create spaces where everyone belongs and deliver programs so that everyone can contribute\n GitLab is home to many dedicated Team Member Resource Groups\n GitLab is a global, multi-cultural organization with team members all over the world\n\nLearn more\n\n## GitLab by the numbers\n\nNumbers as of June 2026\n\nCode\n\ncontributors\n\n5,500+\n\nTeam members\n\n2,500+\n\nConsecutive monthly releases every month\n\n177",
+          "query": "\"GitLab\" about.gitlab.com"
+        },
+        {
+          "url": "https://www.datacamp.com/blog/what-is-gitlab",
+          "title": "What is GitLab? Features, Benefits, and How to Get Started | DataCamp",
+          "content": "## What is GitLab?\n\nGitLab is an all-in-one platform designed for software development and DevOps. Initially, it was a web-based Git repository manager that enabled teams to collaborate on code. However, it has since evolved into a fully integrated solution for managing the entire software development lifecycle (SDLC).\n\nIn essence, GitLab enables developers to:\n\n Handle version control\n Automate CI/CD pipelines\n Manage project tasks\n Monitor performance [...] | Criteria | GitLab | GitHub | Bitbucket |\n| Launch year | 2011 | 2008 | 2008 |\n| Founders | Dmitriy Zaporozhets, Valery Sizov | Tom Preston-Werner, Chris Wanstrath, PJ Hyett | Jesper Nøhr |\n| Parent company | Independent (private) | Microsoft (acquired in 2018) | Atlassian (acquired in 2010) |\n| Initial purpose | Git-based repository and integrated DevOps platform | Git repository hosting and collaboration | Initially supported Mercurial, later transitioned to Git | [...] GitLab was designed with collaboration at its core. It aimed to facilitate seamless communication and teamwork throughout the software development process. From the outset, GitLab sought to enable developers and teams to work together more effectively by providing tools that streamline collaboration and minimize potential bottlenecks.\n\n### Scalability and flexibility",
+          "query": "\"GitLab\" about.gitlab.com"
+        }
+      ]
+    },
+    {
+      "query": "\"GitLab\" news",
+      "topic": "news",
+      "include_domains": null,
+      "max_results": 5,
+      "credits": 1.0,
+      "results": [
+        {
+          "url": "https://about.gitlab.com/blog/gitlab-act-2",
+          "title": "GitLab Act 2",
+          "content": "news\n\nWe've been working through some significant changes inside GitLab over the past few days, and I want to share them with you directly. The email I sent the team is included below for full context.\n\nThe agentic era affords GitLab the largest opportunity in our history as a company, and we're making the structural and strategic decisions to meet it. [...] This morning we shared with team members that we're beginning a restructuring process at GitLab, and we're running it differently than most. The planning is happening openly, including a voluntary separation window. That creates real uncertainty for our team over the next few weeks, but we believe the outcome will be better for it. Where we can, we plan to finalize the new shape of the company on or before June 1. Where local requirements apply we will not make any changes until the local [...] This letter has three parts. First, the operational and structural news, which is hard. Second, the strategic thesis we're betting on. And finally, what this means specifically for you, our customers and investors.\n\n## The structural news",
+          "query": "\"GitLab\" news"
+        },
+        {
+          "url": "https://www.barchart.com/story/news/2342088/gitlab-shares-sink-after-layoff-news-why-analysts-still-see-massive-upside",
+          "title": "GitLab Shares Sink After Layoff News. Why Analysts Still See Massive Upside.",
+          "content": "## GitLab’s Fundamentals Remain Strong Despite Slower Growth\n\nThe latest quarterly results were mixed but not disastrous. For the fiscal first quarter ended April 30, 2026, revenue rose 18% year-over-year (YoY) to $282 million. That is still solid growth, even if it is a step down from the 30%-plus pace investors once expected. Subscription revenue remained the main driver at $255 million, while professional services constituted the rest. [...] GitLab is also leaning harder into AI. In 2026, the company hasbeen deepening its GitLab Duo offerings, which can help automate code reviews and vulnerability fixes. That is an important move because AI has become one of the strongest selling points in software. GitLab is also expanding its managed service footprint through a major cloud partnership, giving it another route to reach enterprise customers. These efforts show management is not just cutting costs. It is also trying to position the [...] www.barchart.com\n\n## AI and Efficiency Are Driving GitLab’s Next Chapter\n\nThe restructuring move is designed to help with exactly that. By trimming headcount and streamlining operations, GitLab expects to cut annual expenses by about $60 million. Management wants to redirect more resources toward the areas where customer demand is strongest while also improving its path to profitability. That makes sense on paper, even if the headlines sound harsh.",
+          "query": "\"GitLab\" news"
+        },
+        {
+          "url": "https://about.gitlab.com/blog/gitlab-and-capgemini-global-alliance-partnership",
+          "title": "GitLab and Capgemini accelerate DevSecOps transformation",
+          "content": "Alex PickerAlex Picker\n\npartnersnews\n\nWe're excited to share that GitLab and Capgemini have signed a global alliance partnership agreement. As a GitLab Select Partner, Capgemini will leverage the GitLab portfolio for clients globally, including GitLab Duo Agent Platform, which orchestrates AI across the entire software development lifecycle, along with specialized implementation services. [...] ### GitLab named a Leader in the 2026 Gartner® Magic Quadrant™ for DevSecOps PlatformsNews\n\n### Introducing the 2026 EMEA GitLab Partner Award winners\n\n## We want to hear from you\n\nEnjoyed reading this blog post or have questions or feedback? Share your thoughts by creating a new topic in the GitLab community forum.\n\nShare your feedback\n\n## Start building faster today\n\nSee what your team can do with the intelligent orchestration platform for DevSecOps.\n\nGet your free trial Contact sales [...] For more information about how GitLab and Capgemini can help your organization, please visit www.capgemini.com. If you are a GitLab or Capgemini customer, please contact your representative to get started.\n\nStart your free\n\n30-day GitLab trial\n\n GitLab Duo Agent Platform access\n Try our most advanced features\n Automate complex tasks with AI\n\nGet free trial\n\nNo credit card required.\n\n## More to explore\n\nView all blog posts\n\nNews\n\n### When code is abundantNews",
+          "query": "\"GitLab\" news"
+        },
+        {
+          "url": "https://thehackernews.com/2026/10/gitlab-patches-critical-self-hosted-ai.html",
+          "title": "GitLab Patches Critical 9.9 AI Gateway Flaw Allowing Command Execution on Self-Hosted Servers",
+          "content": "In February, GitLab fixed another gateway flaw, CVE-2026-1868, which it also rated 9.9. A logged-in user could reach that flaw through a crafted flow definition, and it could lead to denial of service or code execution on the gateway.\n\nBoth flaws are template engine weaknesses of the same class, CWE-1336. The new advisory does not mention the February flaw. [...] The Hacker News Logo\ncybersecurity\n\n# GitLab Patches Critical 9.9 AI Gateway Flaw Allowing Command Execution on Self-Hosted Servers\n\nA critical flaw in GitLab's AI Gateway could let a logged-in user with Duo Agent Platform access run commands on the gateway under certain conditions, GitLab said in an advisory. [...] The gateway is the service that connects a GitLab instance to AI models, and only organizations that host their own gateway need to act. The flaw is fixed in gateway versions 19.2.4, 19.3.2, and 19.4.1.\n\nThe flaw is tracked as CVE-2026-90970. GitLab disclosed it on October 2 and rated it critical, with a CVSS score of 9.9 out of 10.",
+          "query": "\"GitLab\" news"
+        },
+        {
+          "url": "https://sg.finance.yahoo.com/quote/GTLB",
+          "title": "GitLab Inc. (GTLB) stock price, news, quote and history - Yahoo Finance",
+          "content": "about.gitlab.com\n\n2,580\n\n### Full-time employees\n\n31 January\n\n### Fiscal year ends\n\nTechnology\n\n### Sector\n\nSoftware - Infrastructure\n\n### Industry\n\nMore about GitLab Inc.\n\n### Recent news\n\nView more \n\nView more\n\n### Performance overview\n\nTrailing total returns as of 08/10/2026, which may include dividends or other distributions. Benchmark is S&P 500 (^GSPC)\") .\n\n### YTD return\n\nGTLB\n\n42.71%\n\nS&P 500 (^GSPC)\n\n13.44%\n\n### 1-year return\n\nGTLB\n\n13.14%\n\nS&P 500 (^GSPC)\n\n14.98%\n\n### 3-year return [...] GitLab Inc., together with its subsidiaries, develops software for the software development lifecycle in the United States, Europe, and the Asia Pacific. The company provides GitLab, an intelligent orchestration platform for DevSecOps, which is a single application offering the entire software development lifecycle, including software, project plans, code, security scans, compliance checks, and deployment configurations. It also offers the GitLab Duo Agent Platform, which enables intelligent [...] enables intelligent orchestration of teams and AI agents to execute tasks autonomously across planning, development, security, and deployment. This platform combines conversational AI assistance, purpose-built agents for specialized tasks, workflow automation, and enterprise controls. In addition, it offers related training and professional services. The company was formerly known as GitLab B.V. and changed its name to GitLab Inc. in July 2015. GitLab Inc. was founded in 2011 and is based in",
+          "query": "\"GitLab\" news"
+        }
+      ]
+    }
+  ]
+}

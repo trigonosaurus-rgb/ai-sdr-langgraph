@@ -173,7 +173,7 @@ def test_too_few_verified_facts_is_insufficient(brief, make_ctx):
 
     assert result.reason == "insufficient_data"
     assert [f.claim for f in result.research.facts] == [good.claim]
-    assert result.research.dropped_facts == 2
+    assert result.research.dropped_facts == 2 == len(result.research.dropped)
 
 
 def test_no_search_results_skips_the_llm(brief, make_ctx):

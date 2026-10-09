@@ -1,0 +1,103 @@
+{
+  "case_id": "ru-kontur",
+  "config": "mini",
+  "models": "Research gpt-5.4-mini/low, Strategy gpt-5.4-mini/medium, Writing gpt-5.4-mini/medium, Review gpt-5.4-mini/low",
+  "repeat": 2,
+  "snapshot_recorded_at": "2026-10-09T12:07:15+00:00",
+  "checks": {
+    "label": "insufficient_data",
+    "outcome_ok": false,
+    "facts": 0,
+    "dropped_facts": 8,
+    "attempts": 0,
+    "has_draft": false,
+    "language_ok": null,
+    "body_words": null,
+    "subject_words": null,
+    "length_ok": null,
+    "placeholders": [],
+    "ungrounded_numbers": []
+  },
+  "result": {
+    "run_id": "7fa6d5897dae41df97d51d66e624af16",
+    "brief": {
+      "company": "Контур",
+      "website": "kontur.ru",
+      "offer": "Автоматизация разбора обращений в поддержку с помощью ИИ",
+      "recipient": "Руководитель службы поддержки",
+      "language": "Russian",
+      "tone": "Direct"
+    },
+    "status": "failed",
+    "reason": "insufficient_data",
+    "message": "Not enough reliable information about Контур to write a specific email.",
+    "issues": [],
+    "research": {
+      "facts": [],
+      "website_matches": true,
+      "website_note": "The results describe SKB Kontur / Kontur on kontur.ru, the business software ecosystem behind the given website.",
+      "site_indexed": true,
+      "sufficient": false,
+      "gaps": "",
+      "dropped_facts": 8
+    },
+    "strategy": null,
+    "draft": null,
+    "attempts": [],
+    "prompt_versions": {
+      "research": "research@1"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "research@1",
+        "duration_ms": 3332,
+        "usage": {
+          "input_tokens": 6404,
+          "cached_input_tokens": 5888,
+          "cache_write_tokens": null,
+          "output_tokens": 487,
+          "reasoning_tokens": 29
+        },
+        "cost_usd": 0.0030201,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Контур\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Контур\" kontur.ru",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Контур\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 3343
+  }
+}
