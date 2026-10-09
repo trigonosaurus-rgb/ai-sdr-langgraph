@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import type { KeyboardEvent } from 'react'
 import {
   ArrowDownToLine,
@@ -31,6 +31,57 @@ const unquote = (text: string) =>
     .trim()
     .replace(/^["“«„]([^]*)["”»“]$/, '$1')
     .trim()
+
+// The body grows with its text rather than scrolling inside a fixed box, so the draft keeps its
+// height when streaming ends and the editable field replaces it. Browsers with
+// `field-sizing: content` do this in CSS; elsewhere the height is measured on each change.
+const sizesInCss = () =>
+  typeof CSS !== 'undefined' && CSS.supports?.('field-sizing', 'content')
+
+function fitHeight(field: HTMLTextAreaElement) {
+  // Collapsing to measure can scroll the column; restore where the reader was.
+  const column = field.closest('.draft-column')
+  const top = column?.scrollTop ?? 0,
+    y = window.scrollY
+  field.style.height = 'auto'
+  field.style.height = `${field.scrollHeight}px`
+  if (column) column.scrollTop = top
+  if (window.scrollY !== y) window.scrollTo(window.scrollX, y)
+}
+
+function BodyField({
+  value,
+  onChange,
+}: {
+  value: string
+  onChange: (value: string) => void
+}) {
+  const ref = useRef<HTMLTextAreaElement>(null)
+  useLayoutEffect(() => {
+    if (!sizesInCss() && ref.current) fitHeight(ref.current)
+  }, [value])
+  useEffect(() => {
+    // Wrapping changes with the width: refit when the column is resized.
+    const field = ref.current
+    if (sizesInCss() || !field || typeof ResizeObserver === 'undefined') return
+    let width = field.clientWidth
+    const observer = new ResizeObserver(() => {
+      if (field.clientWidth === width) return
+      width = field.clientWidth
+      fitHeight(field)
+    })
+    observer.observe(field)
+    return () => observer.disconnect()
+  }, [])
+  return (
+    <textarea
+      ref={ref}
+      id="email-body"
+      value={value}
+      onChange={(e) => onChange(e.target.value)}
+    />
+  )
+}
 
 const tabs = [
   { id: 'email', label: 'Email draft', icon: Mail },
@@ -187,11 +238,9 @@ export function RunPanel({
                   Email body
                 </label>
                 {finished ? (
-                  <textarea
-                    id="email-body"
+                  <BodyField
                     value={draft.body}
-                    onChange={(e) => edit('body', e.target.value)}
-                    rows={7}
+                    onChange={(value) => edit('body', value)}
                   />
                 ) : (
                   <div className="streaming-draft" aria-label="Email body">

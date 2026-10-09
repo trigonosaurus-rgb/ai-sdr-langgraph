@@ -119,8 +119,8 @@ export function Examples() {
       <div className="page-heading">
         <h1>Examples</h1>
         <p>
-          Two recorded runs with a fictional company, Northstar. They show the
-          intended flow; live generation is not connected yet.
+          Two staged recordings with a fictional company, Northstar, showing the
+          flow of a run. Recordings of real runs will replace them.
         </p>
       </div>
       {examples.map((example) => (

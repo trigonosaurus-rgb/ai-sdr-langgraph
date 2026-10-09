@@ -769,9 +769,13 @@ select {
   font-size: 19px;
   line-height: 1.6;
   min-height: 240px;
-  resize: vertical;
+  resize: none;
   white-space: pre-wrap;
   overflow-wrap: anywhere;
+}
+.email-editor textarea {
+  field-sizing: content; /* grows with the text; RunPanel measures where unsupported */
+  overflow: hidden;
 }
 .writing-caret {
   display: inline-block;

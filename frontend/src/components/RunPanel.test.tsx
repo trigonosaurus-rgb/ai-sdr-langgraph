@@ -1,6 +1,6 @@
 import { render, screen, within } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { describe, expect, it } from 'vitest'
+import { afterEach, describe, expect, it, vi } from 'vitest'
 import { RunPanel } from './RunPanel'
 import { emptyRun } from '../run'
 import type { RunState } from '../run'
@@ -54,5 +54,30 @@ describe('research facts', () => {
       source(1, 'https://acme.com', { excerpt: 'Called “Flow” internally' }),
     ])
     expect(within(list).getByText('Called “Flow” internally')).toBeVisible()
+  })
+})
+
+describe('email body', () => {
+  afterEach(() => vi.restoreAllMocks())
+
+  it('grows with the text instead of scrolling inside the field', async () => {
+    // jsdom has no layout: test the measured fallback for browsers without field-sizing.
+    vi.spyOn(CSS, 'supports').mockReturnValue(false)
+    let contentHeight = 520
+    vi.spyOn(HTMLElement.prototype, 'scrollHeight', 'get').mockImplementation(
+      () => contentHeight,
+    )
+    const run: RunState = {
+      ...emptyRun,
+      id: 'run-1',
+      status: 'ready',
+      draft: { subject: 'Hello', body: 'A long draft' },
+    }
+    render(<RunPanel run={run} />)
+    const body = screen.getByLabelText('Email body')
+    expect(body).toHaveStyle({ height: '520px' })
+    contentHeight = 610
+    await userEvent.type(body, ' that keeps going')
+    expect(body).toHaveStyle({ height: '610px' })
   })
 })
