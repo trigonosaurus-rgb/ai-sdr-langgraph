@@ -4,6 +4,7 @@ import {
   ArrowDownToLine,
   ArrowRight,
   Copy,
+  ExternalLink,
   Mail,
   Search,
   ShieldCheck,
@@ -11,6 +12,25 @@ import {
 } from 'lucide-react'
 import type { RunState } from '../run'
 import type { Draft, ResultTab } from '../types'
+
+// Source URLs come from web search: only http(s) becomes a link, never javascript: or data:.
+function safeHref(url: string): string | null {
+  try {
+    const parsed = new URL(url)
+    return parsed.protocol === 'https:' || parsed.protocol === 'http:'
+      ? parsed.href
+      : null
+  } catch {
+    return null
+  }
+}
+
+// Excerpts are verbatim quotes, often wrapped in quote marks; the blockquote already shows that.
+const unquote = (text: string) =>
+  text
+    .trim()
+    .replace(/^["“«„]([^]*)["”»“]$/, '$1')
+    .trim()
 
 const tabs = [
   { id: 'email', label: 'Email draft', icon: Mail },
@@ -257,15 +277,36 @@ export function RunPanel({
         ) : tab === 'research' ? (
           <div className="research-content">
             {run.sources.length ? (
-              run.sources.map((source) => (
-                <details className="source-detail" key={source.id}>
-                  <summary>
-                    {source.title}
-                    <span>{source.path}</span>
-                  </summary>
-                  <blockquote>{source.excerpt}</blockquote>
-                </details>
-              ))
+              <ol className="fact-list" aria-label="Facts">
+                {run.sources.map((source) => {
+                  const href = safeHref(source.url)
+                  return (
+                    <li className="fact" key={source.id}>
+                      <p className="fact-claim">{source.claim}</p>
+                      <blockquote>{unquote(source.excerpt)}</blockquote>
+                      {href ? (
+                        <a
+                          className="fact-source"
+                          href={href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <span>{source.title}</span>
+                          <span className="fact-path">
+                            {source.path}
+                            <ExternalLink size={12} aria-hidden="true" />
+                          </span>
+                        </a>
+                      ) : (
+                        <span className="fact-source">
+                          <span>{source.title}</span>
+                          <span className="fact-path">{source.path}</span>
+                        </span>
+                      )}
+                    </li>
+                  )
+                })}
+              </ol>
             ) : (
               <div className="empty-state">
                 <h3>No sources yet</h3>
