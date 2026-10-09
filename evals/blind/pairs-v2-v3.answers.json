@@ -2,7 +2,26 @@
   "grader": "human (author)",
   "graded_at": "2026-10-09",
   "question": "Which email would you rather read to the end and answer? A, B or = (same).",
-  "answers": {"P1": "A", "P2": "B", "P3": "B", "P4": "A", "P5": "B", "P6": "B"},
-  "by_version": {"v3": ["P1", "P4", "P5", "P6"], "v2": ["P2", "P3"], "same": []},
-  "decision": "v3 rejected: the agreed rule required v3 to win at least 4 pairs and lose none."
+  "answers": {
+    "P1": "A",
+    "P2": "B",
+    "P3": "B",
+    "P4": "A",
+    "P5": "B",
+    "P6": "B"
+  },
+  "by_version": {
+    "v3": [
+      "P1",
+      "P4",
+      "P5",
+      "P6"
+    ],
+    "v2": [
+      "P2",
+      "P3"
+    ],
+    "same": []
+  },
+  "decision": "v3 adopted by the author: it won 4 of 6 pairs; the stricter agreed rule (no losses) was not met, and the author accepted the two losses, which came down to the opening and the angle rather than errors."
 }

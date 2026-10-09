@@ -3,7 +3,7 @@ The draft is streamed to the client as it is generated."""
 
 from typing import Any, Literal
 
-from agents.common import TONE_GUIDES, format_facts
+from agents.common import LANGUAGE_GUIDES, TONE_GUIDES, format_facts
 from agents.strategist import format_strategy
 from core.context import RunContext
 from core.events import DraftDelta, DraftReset, StageStarted, emit
@@ -76,7 +76,12 @@ def make_copywriter(ctx: RunContext):
                 previous_body=previous.draft.body,
                 issues="\n".join(f"- {issue}" for issue in issues),
             )
-        system = prompt.render("system", language=brief.language, tone_guide=TONE_GUIDES[brief.tone])
+        system = prompt.render(
+            "system",
+            language=brief.language,
+            language_guide=LANGUAGE_GUIDES[brief.language],
+            tone_guide=TONE_GUIDES[brief.tone],
+        )
         emit(DraftReset(attempt=number))  # a rewrite replaces the previous draft from its first token
         stream = DraftStream(number)
         draft = ctx.ask("Writing", number, prompt, Draft, system, user, on_partial=stream.update)

@@ -77,6 +77,8 @@ Measured on 28 briefs in [`evals/`](evals/README.md): well-known and small compa
 
 The biggest gain came from fixes, not from a bigger model: the quote check had rejected Russian quotes in guillemets, the website check asked an ambiguous question and accepted a competitor's site, and the review blocked drafts over style. `gpt-5.4-mini` stays on every stage: best results, fastest, one model.
 
+**Prompts v3** (current) target the stylistic tics left in v2: a repeated "my guess is" (13 of 32 drafts), English jargon and undeclined company names in Russian. On the same 40 runs these dropped to zero in automatic checks, with outcomes, grounding and checks unchanged and the median time down from 14 to 12 s. In six blind pairs the author preferred v3 four times and v2 twice; a stricter re-grade by Claude rates v3 more natural (1.39 vs 1.14) but slightly less relevant (1.61 vs 1.75). The new tics checks run on every evaluation.
+
 ## Run it yourself
 
 ### Setup

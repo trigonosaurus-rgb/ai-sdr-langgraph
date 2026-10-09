@@ -67,6 +67,7 @@ def test_every_prompt_has_a_version_and_renders():
         facts="f",
         strategy="s",
         language="English",
+        language_guide="g",
         tone_guide="t",
         subject="s",
         body="b",
