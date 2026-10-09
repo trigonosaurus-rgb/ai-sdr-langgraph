@@ -1,0 +1,248 @@
+{
+  "case_id": "ru-vkusvill",
+  "config": "mini",
+  "models": "Research gpt-5.4-mini/low, Strategy gpt-5.4-mini/medium, Writing gpt-5.4-mini/medium, Review gpt-5.4-mini/low",
+  "repeat": 1,
+  "snapshot_recorded_at": "2026-10-09T12:07:34+00:00",
+  "checks": {
+    "label": "draft",
+    "outcome_ok": true,
+    "facts": 7,
+    "dropped_facts": 1,
+    "attempts": 1,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 59,
+    "subject_words": 4,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": [],
+    "stock_phrases": [],
+    "foreign_words": [],
+    "undeclined_company": []
+  },
+  "result": {
+    "run_id": "e1b117d313e24a6c87287c652ed47504",
+    "brief": {
+      "company": "ВкусВилл",
+      "website": "vkusvill.ru",
+      "offer": "Аудит карточек товаров в мобильном приложении",
+      "recipient": "Директор по продукту",
+      "language": "Russian",
+      "tone": "Direct"
+    },
+    "status": "ready",
+    "reason": null,
+    "message": "The draft passed review.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "ВкусВилл is a brand of healthy products for healthy eating, operating as a store chain and a free delivery service.",
+          "excerpt": "«ВкусВилл» — бренд полезных продуктов для здорового питания, сеть магазинов и сервис бесплатной доставки.",
+          "source_url": "https://vkusvill.ru/history",
+          "source_title": "История компаний «ВкусВилл» и «Избёнка»"
+        },
+        {
+          "id": 2,
+          "claim": "The company says it works with customers, producers, and partners and improves based on feedback.",
+          "excerpt": "Мы всегда в открытом диалоге с покупателями, производителями и партнёрами. Это позволяет нам развивать компанию от обратной связи и постоянно улучшаться для вас.",
+          "source_url": "https://vkusvill.ru/about",
+          "source_title": "О нас | ВкусВилл"
+        },
+        {
+          "id": 3,
+          "claim": "ВкусВилл has more than 1,900 partner producers.",
+          "excerpt": "1 900+\n\nпроизводителей стали нашими партнёрами и создают продукты для вас",
+          "source_url": "https://vkusvill.ru/about",
+          "source_title": "О нас | ВкусВилл"
+        },
+        {
+          "id": 4,
+          "claim": "The company operates more than 1,537 stores, 264+ dark stores, and serves 155+ cities.",
+          "excerpt": "1 537+ | магазинов |\n| 264+ | даркстора  Что такое даркстор? |\n| 155+ | городов  Карта магазинов",
+          "source_url": "https://vkusvill.ru/about",
+          "source_title": "О нас | ВкусВилл"
+        },
+        {
+          "id": 5,
+          "claim": "VkusVill says it delivers more than 480,000 orders per day.",
+          "excerpt": "480+ тыс.\n\nзаказов в день доставляют наши курьеры",
+          "source_url": "https://vkusvill.ru/about",
+          "source_title": "О нас | ВкусВилл"
+        },
+        {
+          "id": 6,
+          "claim": "Its B2B page includes customer references that mention ordering food for two kindergartens and a school-kindergarten.",
+          "excerpt": "Заказываем питание для двух садиков.",
+          "source_url": "https://vkusvill.ru/b2b",
+          "source_title": "ВкусВилл Бизнес"
+        },
+        {
+          "id": 7,
+          "claim": "The app page says customers can order groceries, ready-made food, drinks, and VkusVill own-brand and other brands, with delivery, express delivery, or pickup.",
+          "excerpt": "В одном приложении можно заказать продукты питания, готовую еду, напитки, товары собственной марки ВкусВилл и других брендов. Выбирайте доставку, экспресс-доставку или самовывоз",
+          "source_url": "https://apps.apple.com/ru/app/%D0%B2%D0%BA%D1%83%D1%81%D0%B2%D0%B8%D0%BB%D0%BB-%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BA%D0%B0-%D0%BF%D1%80%D0%BE%D0%B4%D1%83%D0%BA%D1%82%D0%BE%D0%B2/id1399903464",
+          "source_title": "‎Приложение «ВкусВилл: доставка продуктов» — App Store"
+        }
+      ],
+      "website_owner": "ВкусВилл",
+      "website_matches": true,
+      "website_note": "The results repeatedly label vkusvill.ru as the official site of ВкусВилл, so the website belongs to the named company.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 1,
+      "dropped": [
+        {
+          "claim": "Its assortment includes over 4,200 products under the VkusVill brand and 85% domestically produced assortment.",
+          "source_id": 1,
+          "excerpt": "4 200+ | продуктов под брендом ВкусВилл\n| 85% | ассортимента отечественного производства"
+        }
+      ]
+    },
+    "strategy": {
+      "observation": "В приложении ВкусВилла карточка товара должна одновременно работать для разных типов ассортимента — продукты, готовая еда, напитки, собственные и другие бренды — и для трех сценариев получения: доставка, экспресс-доставка и самовывоз, при объеме более 480 000 заказов в день.",
+      "fact_ids": [
+        5,
+        7
+      ],
+      "offer_link": "Аудит карточек товаров в мобильном приложении может показать, не теряется ли конверсия на уровне карточки из-за слишком разных сценариев покупки, подачы цены/наличия/вариантов доставки и того, как карточка ведет пользователя к добавлению в корзину.",
+      "hypotheses": [
+        "Возможно, команда продукта сейчас смотрит на конверсию карточек и добавления в корзину в мобильном канале.",
+        "Возможно, у части ассортимента есть различия в наличии, весе, сроках годности или вариантах доставки, которые важно корректно показывать в карточке.",
+        "Возможно, у приложения есть приоритет снизить потери между просмотром товара и оформлением заказа."
+      ],
+      "angle": "При 480+ тыс. заказов в день и трех сценариях получения у одной карточки товара слишком много задач — ее стоит отдельно проверить на конверсию в приложении.",
+      "offer_fit": "good",
+      "fit_reason": "Для директора по продукту аудит карточек в мобильном приложении выглядит уместно: ВкусВилл продает через app широкий ассортимент и несколько сценариев получения, поэтому даже небольшие улучшения карточки могут влиять на конверсию и выручку. "
+    },
+    "draft": {
+      "subject": "Карточки товаров в приложении",
+      "body": "При 480+ тыс. заказов в день и трех сценариях получения одна карточка товара во ВкусВилле решает слишком много задач.\n\nЕсли в ней одновременно показываются цена, наличие и варианты получения, шаг до корзины легко теряется. Я делаю аудит карточек товаров в мобильных приложениях и смотрю, где именно это ломает конверсию.\n\nМогу прислать короткий список проверок для карточки товара в приложении?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Карточки товаров в приложении",
+          "body": "При 480+ тыс. заказов в день и трех сценариях получения одна карточка товара во ВкусВилле решает слишком много задач.\n\nЕсли в ней одновременно показываются цена, наличие и варианты получения, шаг до корзины легко теряется. Я делаю аудит карточек товаров в мобильных приложениях и смотрю, где именно это ломает конверсию.\n\nМогу прислать короткий список проверок для карточки товара в приложении?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@2",
+      "strategy": "strategy@2",
+      "copywriter": "copywriter@3",
+      "review": "review@3"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "research@2",
+        "duration_ms": 2841,
+        "usage": {
+          "input_tokens": 5871,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 597,
+          "reasoning_tokens": 49
+        },
+        "cost_usd": 0.00708975,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "strategy@2",
+        "duration_ms": 7036,
+        "usage": {
+          "input_tokens": 750,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 1422,
+          "reasoning_tokens": 1062
+        },
+        "cost_usd": 0.0069615,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "copywriter@3",
+        "duration_ms": 3141,
+        "usage": {
+          "input_tokens": 1032,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 637,
+          "reasoning_tokens": 512
+        },
+        "cost_usd": 0.0036405,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "review@3",
+        "duration_ms": 2110,
+        "usage": {
+          "input_tokens": 805,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 193,
+          "reasoning_tokens": 173
+        },
+        "cost_usd": 0.00147225,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"ВкусВилл\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"ВкусВилл\" vkusvill.ru",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"ВкусВилл\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 15156
+  }
+}

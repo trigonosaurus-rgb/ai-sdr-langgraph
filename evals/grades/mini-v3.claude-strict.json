@@ -1,0 +1,176 @@
+{
+  "grader": "claude-opus-5-5",
+  "graded_at": "2026-10-09",
+  "scale": "evals/README.md: grounding, relevance, naturalness, 0-2 each; stricter re-grade so v2 and v3 share one standard",
+  "scope": "drafts of runs whose case accepts a draft and whose outcome was a draft",
+  "grades": {
+    "apollo.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "Grounded link from enrichment and default auto-scores to drift; opens with a self-introduction."
+    },
+    "apollo.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "Precise fact about auto-scores and a concrete, low-commitment offer."
+    },
+    "buttondown.1": {
+      "grounding": 2,
+      "relevance": 1,
+      "naturalness": 1,
+      "note": "Offer overlaps their own concierge migration; closing question is a bit tangled."
+    },
+    "buttondown.2": {
+      "grounding": 2,
+      "relevance": 1,
+      "naturalness": 1,
+      "note": "Opens by restating their marketing back to them; weak fit."
+    },
+    "duolingo.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "Strong use of course sizes; the offer sentence restates the brief clumsily."
+    },
+    "duolingo.2": {
+      "grounding": 2,
+      "relevance": 1,
+      "naturalness": 2,
+      "note": "Natural question about casting in-house, but the 'built on play' angle is vague."
+    },
+    "gitlab.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "Relevant AI-roadmap angle, phrased as a guess; two 'if' sentences in a row, self-intro opener."
+    },
+    "gitlab.2": {
+      "grounding": 2,
+      "relevance": 1,
+      "naturalness": 1,
+      "note": "Headcount to doc coordination is a stretch; 'I contract technical writers' reads oddly."
+    },
+    "linear.1": {
+      "grounding": 2,
+      "relevance": 1,
+      "naturalness": 2,
+      "note": "Short and natural; the 40,000 teams fact does not really support the offer."
+    },
+    "linear.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "Turns the user base into an interview pool: a real angle, plainly said."
+    },
+    "mercury.1": {
+      "grounding": 2,
+      "relevance": 1,
+      "naturalness": 1,
+      "note": "Ties the offer to the Insights launch, but 'first-value actions, not just awareness' is jargon."
+    },
+    "mercury.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "Good angle: a broader audience calls for a separate founder track."
+    },
+    "plausible.1": {
+      "grounding": 2,
+      "relevance": 1,
+      "naturalness": 1,
+      "note": "Ignores that Plausible says it never spends on advertising; closing is close to stock."
+    },
+    "plausible.2": {
+      "grounding": 2,
+      "relevance": 1,
+      "naturalness": 1,
+      "note": "Awkward opener ('looks like a fit for search because...'); pitch reads generic."
+    },
+    "ramp.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "Sensible content-asset angle; double ask at the end."
+    },
+    "ramp.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "Relevant; 'I help with expense policy templates' is clunky."
+    },
+    "ru-kontur.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "Correct declension, concrete support-chat angle, natural Russian."
+    },
+    "ru-kontur.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "Grounded in the 24/7 chat and request flow; clear routing pitch."
+    },
+    "ru-skyeng.1": {
+      "grounding": 2,
+      "relevance": 1,
+      "naturalness": 1,
+      "note": "Leap from flexible schedule to 'a calm consistent voice'; slightly stiff."
+    },
+    "ru-skyeng.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "Good 'listened more than read' angle; 'было бы разумно начать' sounds off."
+    },
+    "ru-vkusvill.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "Concrete: order volume and three delivery modes on one product card; correct 'во ВкусВилле'."
+    },
+    "ru-vkusvill.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "Relevant; 'лишнее трение' is a calque of 'friction'."
+    },
+    "stripe.1": {
+      "grounding": 2,
+      "relevance": 1,
+      "naturalness": 1,
+      "note": "Narrow hook on one migration condition; self-intro opener."
+    },
+    "stripe.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "New developer-facing surface as a reason for localization; good ownership question."
+    },
+    "transistor.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "Referral partnership for a hosting company: fits the Partnerships role."
+    },
+    "transistor.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "Relevant to partner services; closing request is stiff."
+    },
+    "tuple.1": {
+      "grounding": 2,
+      "relevance": 1,
+      "naturalness": 1,
+      "note": "Restates the product back to them; generic 'peer proof' argument."
+    },
+    "tuple.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "Turns their testimonial themes into a video pilot; concise."
+    }
+  }
+}

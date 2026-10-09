@@ -1,0 +1,176 @@
+{
+  "grader": "claude-opus-5-5",
+  "graded_at": "2026-10-09",
+  "scale": "evals/README.md: grounding, relevance, naturalness, 0-2 each; stricter re-grade so v2 and v3 share one standard",
+  "scope": "drafts of runs whose case accepts a draft and whose outcome was a draft",
+  "grades": {
+    "apollo.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "Specific link from filters and auto-scores to record quality; natural closing question."
+    },
+    "apollo.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "Relevant sync-spread angle; the opening sentence is long and stacked."
+    },
+    "buttondown.1": {
+      "grounding": 2,
+      "relevance": 1,
+      "naturalness": 1,
+      "note": "Offer overlaps their concierge migration; 'I wondered if' and 'My guess is' in one email."
+    },
+    "buttondown.2": {
+      "grounding": 2,
+      "relevance": 1,
+      "naturalness": 1,
+      "note": "Weak fit; generic closing question."
+    },
+    "duolingo.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "Good B2 rollout angle; 'my guess is' carries the pitch."
+    },
+    "duolingo.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "Consistency across languages, plainly said."
+    },
+    "gitlab.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "177 monthly releases to recurring doc load: concrete and natural."
+    },
+    "gitlab.2": {
+      "grounding": 2,
+      "relevance": 1,
+      "naturalness": 1,
+      "note": "Vague lifecycle angle behind 'my guess is'."
+    },
+    "linear.1": {
+      "grounding": 2,
+      "relevance": 1,
+      "naturalness": 1,
+      "note": "User base as interview pool is asserted loosely; 'my guess is'."
+    },
+    "linear.2": {
+      "grounding": 2,
+      "relevance": 1,
+      "naturalness": 1,
+      "note": "Agent workflows only loosely tied to interview recruiting; 'my guess is'."
+    },
+    "mercury.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "Founder path is a good angle; opens with 'my guess is'."
+    },
+    "mercury.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "Same angle, again framed with 'my guess is'."
+    },
+    "plausible.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "Intent-based angle fits; 'makes paid search a clean fit' sounds like ad copy."
+    },
+    "plausible.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "Search-friendly category angle; 'The aim is simple' is stock."
+    },
+    "ramp.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "Natural content fit; closing 'worth testing' is close to stock."
+    },
+    "ramp.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "Launch volume as a reason for policy content; double ask at the end."
+    },
+    "ru-kontur.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "Relevant routing pitch; subject leaves the company name undeclined ('в Контур')."
+    },
+    "ru-kontur.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "Concrete product areas; 'У Контур' is a grammar error."
+    },
+    "ru-skyeng.1": {
+      "grounding": 2,
+      "relevance": 1,
+      "naturalness": 1,
+      "note": "Schedule-to-audio leap; long stacked sentence."
+    },
+    "ru-skyeng.2": {
+      "grounding": 2,
+      "relevance": 1,
+      "naturalness": 1,
+      "note": "'нативной частью' and 'speaking practice' are English carry-overs."
+    },
+    "ru-vkusvill.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "Catalog breadth fits the audit; 'похоже, должны' reads hesitant."
+    },
+    "ru-vkusvill.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "Relevant; 'CTA' and 'B2B' left in English."
+    },
+    "stripe.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "OUSD launch is a good hook; 'my guess is' sentence is long."
+    },
+    "stripe.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 2,
+      "note": "Billing docs and a clear roadmap question."
+    },
+    "transistor.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "Video expansion angle fits; one long closing question."
+    },
+    "transistor.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "Relevant; self-introduction opener and 'my guess is'."
+    },
+    "tuple.1": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "Concrete /tuple Slack story; 'My guess is' in the pitch."
+    },
+    "tuple.2": {
+      "grounding": 2,
+      "relevance": 2,
+      "naturalness": 1,
+      "note": "Concrete Slack-to-session story; 'My guess is' again."
+    }
+  }
+}

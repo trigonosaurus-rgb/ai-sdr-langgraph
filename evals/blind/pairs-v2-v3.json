@@ -1,0 +1,104 @@
+[
+ {
+  "id": "P1",
+  "company": "ВкусВилл",
+  "website": "vkusvill.ru",
+  "offer": "Аудит карточек товаров в мобильном приложении",
+  "recipient": "Директор по продукту",
+  "language": "Russian",
+  "tone": "Direct",
+  "A": {
+   "subject": "Карточки товаров в приложении",
+   "body": "При 480+ тыс. заказов в день и трех сценариях получения одна карточка товара во ВкусВилле решает слишком много задач.\n\nЕсли в ней одновременно показываются цена, наличие и варианты получения, шаг до корзины легко теряется. Я делаю аудит карточек товаров в мобильных приложениях и смотрю, где именно это ломает конверсию.\n\nМогу прислать короткий список проверок для карточки товара в приложении?"
+  },
+  "B": {
+   "subject": "Карточки в разных категориях",
+   "body": "У ВкусВилла в приложении очень широкий каталог: 4 200+ товаров под брендом и много категорий — от продуктов до аптеки и детских товаров.\n\nИз-за этого карточки, похоже, должны одинаково хорошо работать и для еды, и для смежных категорий. Я делаю аудит карточек товаров в мобильных приложениях и смотрю, где не хватает единообразия, полноты данных и понятной подачи.\n\nС какой категории вам было бы полезнее начать проверку карточек — с еды, готовой еды или аптечных товаров?"
+  }
+ },
+ {
+  "id": "P2",
+  "company": "Apollo",
+  "website": "apollo.io",
+  "offer": "Data enrichment quality audits for sales databases",
+  "recipient": "Head of Data",
+  "language": "English",
+  "tone": "Direct",
+  "A": {
+   "subject": "Search data quality",
+   "body": "I help teams audit enrichment quality in sales databases.\n\nAt Apollo, search depends on enriched firmographic and intent data, and auto-scores show up by default. If the records behind those fields drift, search results and prioritization can get noisy fast.\n\nA quality audit checks whether the key people and company fields feeding filters and scores are accurate, complete, and current.\n\nAre you already sampling those records for stale or inconsistent enrichment, or should I send a simple audit outline?"
+  },
+  "B": {
+   "subject": "Enrichment audit for Apollo",
+   "body": "Because Apollo’s filters and auto-scores depend on the underlying people and company records, I thought a quick independent enrichment audit could be relevant.\n\nI help teams check sales databases for coverage, freshness, duplicates, and field-level consistency. If small gaps are creeping into core records, they can affect search results and scoring downstream.\n\nDo you ever run sample audits against source fields to catch that drift, or is that already covered on your side?"
+  }
+ },
+ {
+  "id": "P3",
+  "company": "Transistor",
+  "website": "transistor.fm",
+  "offer": "Podcast audio editing and show notes for B2B brands",
+  "recipient": "Partnerships Lead",
+  "language": "English",
+  "tone": "Warm",
+  "A": {
+   "subject": "Podcast production partners",
+   "body": "Hi,\n\nWith 30,000+ podcasts on Transistor, I wanted to see whether you ever partner with outside teams that handle editing and show notes for B2B shows.\n\nI help B2B brands turn recordings into publish-ready episodes, which can take some of the recurring production work off their team. If Transistor customers are asking for that kind of support, it could sit nicely alongside hosting.\n\nDo you currently refer production help like that, or is it handled case by case?"
+  },
+  "B": {
+   "subject": "Video podcast workflow",
+   "body": "As Transistor expands into video podcast publishing, you may have customers who need help turning raw recordings into publish-ready episodes and show notes.\n\nI help B2B brands with podcast audio editing and show notes, so the production side doesn’t slow down publishing. If your partnerships team is looking at services that support that workflow, would it make sense to talk through where a production partner could fit for customers moving into video?"
+  }
+ },
+ {
+  "id": "P4",
+  "company": "Plausible Analytics",
+  "website": "plausible.io",
+  "offer": "Paid search campaigns for privacy-focused software products",
+  "recipient": "Co-founder",
+  "language": "English",
+  "tone": "Direct",
+  "A": {
+   "subject": "Cookie-free search demand",
+   "body": "Plausible’s product is built to avoid cookies and personal data collection.\n\nI run paid search campaigns for privacy-focused software. It can be a clean way to catch people already looking for cookie-free or GDPR-friendly analytics.\n\nIf you ever want to test that demand, would a small search campaign around those terms be worth setting up?"
+  },
+  "B": {
+   "subject": "Privacy-first search",
+   "body": "Plausible’s cookie-free, no-personal-data positioning makes paid search a clean fit.\n\nPeople searching for privacy-first analytics or cookie-free alternatives already have intent. I run paid search campaigns for privacy-focused software products, mostly where the privacy claim is the main reason to click.\n\nIf you ever test that channel, should I send a few keyword themes and ad angles built around that intent?"
+  }
+ },
+ {
+  "id": "P5",
+  "company": "Linear",
+  "website": "linear.app",
+  "offer": "Recruiting and scheduling customer interview participants for product teams",
+  "recipient": "Head of Product",
+  "language": "English",
+  "tone": "Direct",
+  "A": {
+   "subject": "Interview recruiting for Linear",
+   "body": "Hi,\n\nLinear’s 40,000+ product teams look like a strong pool for customer interviews.\n\nI help product teams recruit and schedule the right participants for interviews. If your team runs regular discovery or roadmap conversations, my guess is the time sink is still finding the right users and getting them on the calendar.\n\nDo you already have a standard process for turning that user base into interview participants, or is it still handled case by case?"
+  },
+  "B": {
+   "subject": "Interview logistics for product teams",
+   "body": "Linear powers over 40,000 product teams. If your product team runs customer interviews regularly, recruiting and scheduling participants can turn into busywork.\n\nI help product teams handle that part so researchers and PMs spend less time chasing calendars and more time in the interviews.\n\nWho usually owns interview logistics on your side?"
+  }
+ },
+ {
+  "id": "P6",
+  "company": "Контур",
+  "website": "kontur.ru",
+  "offer": "Автоматизация разбора обращений в поддержку с помощью ИИ",
+  "recipient": "Руководитель службы поддержки",
+  "language": "Russian",
+  "tone": "Direct",
+  "A": {
+   "subject": "Разбор обращений в Контур",
+   "body": "У вас 70+ сервисов и 2,2 млн компаний-клиентов, поэтому поток в поддержку, вероятно, очень разный по темам и продуктам.\n\nЯ занимаюсь автоматизацией разбора обращений с помощью ИИ: он помогает классифицировать, маршрутизировать и приоритизировать тикеты без ручной сортировки.\n\nЕсли у вас сейчас часть обращений разбирается вручную на первом этапе, кому лучше показать короткий сценарий автоклассификации по продуктам — вам или тому, кто отвечает за маршрутизацию?"
+  },
+  "B": {
+   "subject": "Разбор обращений в Контуре",
+   "body": "У Контура больше 70 сервисов, и есть чат поддержки для действующих пользователей. Если в одном потоке идут и вопросы по продуктам, и запросы на выбор сервиса, первичный разбор быстро съедает время.\n\nМы делаем автоматизацию разбора обращений с помощью ИИ: она определяет тему, приоритет и маршрут до нужной команды. Это снижает ручную сортировку и помогает быстрее отдавать обращение туда, где его могут решить.\n\nЕсть у вас сейчас отдельный ручной этап на классификацию чатов?"
+  }
+ }
+]

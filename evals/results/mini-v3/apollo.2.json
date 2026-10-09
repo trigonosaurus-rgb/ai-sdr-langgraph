@@ -1,0 +1,248 @@
+{
+  "case_id": "apollo",
+  "config": "mini",
+  "models": "Research gpt-5.4-mini/low, Strategy gpt-5.4-mini/medium, Writing gpt-5.4-mini/medium, Review gpt-5.4-mini/low",
+  "repeat": 2,
+  "snapshot_recorded_at": "2026-10-09T12:06:15+00:00",
+  "checks": {
+    "label": "draft",
+    "outcome_ok": true,
+    "facts": 7,
+    "dropped_facts": 1,
+    "attempts": 1,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 64,
+    "subject_words": 4,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": [],
+    "stock_phrases": [],
+    "foreign_words": [],
+    "undeclined_company": []
+  },
+  "result": {
+    "run_id": "9fe23da6ded54cb4b984473c3234190e",
+    "brief": {
+      "company": "Apollo",
+      "website": "apollo.io",
+      "offer": "Data enrichment quality audits for sales databases",
+      "recipient": "Head of Data",
+      "language": "English",
+      "tone": "Direct"
+    },
+    "status": "ready",
+    "reason": null,
+    "message": "The draft passed review.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "Apollo provides an AI GTM system that combines data, intelligence, and execution in one platform.",
+          "excerpt": "Apollo is the AI GTM System that uniquely combines data, intelligence, and execution in one loop, helping every business find and win their next customer.",
+          "source_url": "https://www.linkedin.com/company/apolloio",
+          "source_title": "Apollo.io"
+        },
+        {
+          "id": 2,
+          "claim": "Apollo is trusted by a very large customer base, including over 600,000 companies worldwide.",
+          "excerpt": "Trusted by millions of users and over 600,000 companies worldwide",
+          "source_url": "https://www.linkedin.com/company/apolloio",
+          "source_title": "Apollo.io"
+        },
+        {
+          "id": 3,
+          "claim": "Apollo’s product includes a large B2B contact database and execution tools for sales workflows.",
+          "excerpt": "Apollo pairs one of the industry's largest B2B contact databases with a purpose-built GTM intelligence engine and a full execution stack, all in one system.",
+          "source_url": "https://www.linkedin.com/company/apolloio",
+          "source_title": "Apollo.io"
+        },
+        {
+          "id": 4,
+          "claim": "Apollo’s help center says its scoring engine generates auto-scores from a company website and prospecting activity.",
+          "excerpt": "Apollo generates auto-scores based on your company website and prospecting activity.",
+          "source_url": "https://knowledge.apollo.io/hc/en-us/articles/4988048582285-Scoring-Engine-Overview",
+          "source_title": "Scores Overview – Apollo"
+        },
+        {
+          "id": 5,
+          "claim": "Apollo uses auto-scores by default when users search for people or companies.",
+          "excerpt": "Apollo uses auto-scores by default when you search for people or companies.",
+          "source_url": "https://knowledge.apollo.io/hc/en-us/articles/4988048582285-Scoring-Engine-Overview",
+          "source_title": "Scores Overview – Apollo"
+        },
+        {
+          "id": 6,
+          "claim": "Apollo’s Chrome extension works inside Gmail, Google Calendar, LinkedIn, company websites, Salesforce, and HubSpot.",
+          "excerpt": "Use the extension to access Apollo data and take action from Gmail, Google Calendar, LinkedIn, company websites, Salesforce, HubSpot, and other supported platforms without switching back and forth between tabs.",
+          "source_url": "https://knowledge.apollo.io/hc/en-us/articles/4409226637453-Apollo-Chrome-Extension-Overview",
+          "source_title": "Apollo Chrome Extension Overview – Apollo"
+        },
+        {
+          "id": 7,
+          "claim": "Apollo says the Chrome extension lets users save contacts and companies, add prospects to lists and sequences, and push records to their CRM.",
+          "excerpt": "With the Chrome extension, you can save contacts and companies, add prospects to lists and sequences, compose emails, log activities, push records to your CRM, review company and contact insights, and prepare for meetings",
+          "source_url": "https://knowledge.apollo.io/hc/en-us/articles/4409226637453-Apollo-Chrome-Extension-Overview",
+          "source_title": "Apollo Chrome Extension Overview – Apollo"
+        }
+      ],
+      "website_owner": "Apollo",
+      "website_matches": true,
+      "website_note": "The results tie apollo.io to Apollo’s own help center and company profile, so the website belongs to Apollo.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 1,
+      "dropped": [
+        {
+          "claim": "Apollo’s database is positioned for finding ideal customers at scale and supports company and people search filters.",
+          "source_id": 3,
+          "excerpt": "use our highly accurate database of people and companies to find and connect with your ideal customers at scale. Search filters allow you to include or exclude specific subsets of data when you search for people or companies in Apollo."
+        }
+      ]
+    },
+    "strategy": {
+      "observation": "Apollo’s help center says its scoring engine generates auto-scores from a company website and prospecting activity, and those auto-scores are used by default when users search for people or companies.",
+      "fact_ids": [
+        4,
+        5
+      ],
+      "offer_link": "Because Apollo’s search and scoring experience depends on underlying company and prospecting data, a data enrichment quality audit could help verify whether the records feeding those auto-scores are accurate and consistent enough to support sales database use.",
+      "hypotheses": [
+        "You may be responsible for the quality and consistency of the data feeding Apollo’s search and scoring surfaces.",
+        "There may be concern that enrichment drift or stale records could affect how trustworthy auto-scores feel to users.",
+        "Your team may want a lightweight way to validate contact and company data before it flows into CRM and sales workflows."
+      ],
+      "angle": "Apollo’s default auto-scores are only as good as the website and prospecting data underneath them, which is why I’m reaching out about an enrichment quality audit.",
+      "offer_fit": "good",
+      "fit_reason": "Apollo’s product is built around data, scoring, and sales workflows, so an audit of enrichment quality has a clear and practical connection to the systems a Head of Data would care about. The fit is credible because small data errors could affect both search results and score reliability, even if we can’t assume that is currently a known problem."
+    },
+    "draft": {
+      "subject": "Apollo scoring data check",
+      "body": "Apollo’s auto-scores are driven by company website and prospecting activity, and they’re used by default in search.\n\nI do data enrichment quality audits for sales databases. It helps catch stale or inconsistent company and contact records before they affect scoring and CRM workflows.\n\nIf you own that data, can I send a 1-page checklist for a sample audit of the records behind those auto-scores?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Apollo scoring data check",
+          "body": "Apollo’s auto-scores are driven by company website and prospecting activity, and they’re used by default in search.\n\nI do data enrichment quality audits for sales databases. It helps catch stale or inconsistent company and contact records before they affect scoring and CRM workflows.\n\nIf you own that data, can I send a 1-page checklist for a sample audit of the records behind those auto-scores?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@2",
+      "strategy": "strategy@2",
+      "copywriter": "copywriter@3",
+      "review": "review@3"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "research@2",
+        "duration_ms": 2930,
+        "usage": {
+          "input_tokens": 5053,
+          "cached_input_tokens": 4864,
+          "cache_write_tokens": null,
+          "output_tokens": 578,
+          "reasoning_tokens": 48
+        },
+        "cost_usd": 0.00310755,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "strategy@2",
+        "duration_ms": 5578,
+        "usage": {
+          "input_tokens": 682,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 1057,
+          "reasoning_tokens": 765
+        },
+        "cost_usd": 0.005268,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "copywriter@3",
+        "duration_ms": 3208,
+        "usage": {
+          "input_tokens": 816,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 561,
+          "reasoning_tokens": 455
+        },
+        "cost_usd": 0.0031365,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "review@3",
+        "duration_ms": 1280,
+        "usage": {
+          "input_tokens": 717,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 110,
+          "reasoning_tokens": 90
+        },
+        "cost_usd": 0.00103275,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Apollo\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Apollo\" apollo.io",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Apollo\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 13008
+  }
+}

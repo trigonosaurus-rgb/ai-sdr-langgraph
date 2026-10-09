@@ -1,0 +1,237 @@
+{
+  "case_id": "tuple",
+  "config": "mini",
+  "models": "Research gpt-5.4-mini/low, Strategy gpt-5.4-mini/medium, Writing gpt-5.4-mini/medium, Review gpt-5.4-mini/low",
+  "repeat": 1,
+  "snapshot_recorded_at": "2026-10-09T12:05:52+00:00",
+  "checks": {
+    "label": "draft",
+    "outcome_ok": true,
+    "facts": 6,
+    "dropped_facts": 0,
+    "attempts": 1,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 73,
+    "subject_words": 4,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": [],
+    "stock_phrases": [],
+    "foreign_words": [],
+    "undeclined_company": []
+  },
+  "result": {
+    "run_id": "802be6968d9c4b37bc33c51663b13bdd",
+    "brief": {
+      "company": "Tuple",
+      "website": "tuple.app",
+      "offer": "Video case studies with engineering teams that use your product",
+      "recipient": "Head of Marketing",
+      "language": "English",
+      "tone": "Direct"
+    },
+    "status": "ready",
+    "reason": null,
+    "message": "The draft passed review.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "Tuple is a remote pair programming app.",
+          "excerpt": "Tuple is an app for remote pair programming, optimized for everything that developers care about:",
+          "source_url": "https://www.linkedin.com/company/tupleapp",
+          "source_title": "Tuple"
+        },
+        {
+          "id": 2,
+          "claim": "Tuple is positioned for full-time mouse and keyboard support for both participants.",
+          "excerpt": "Seamless collaboration with full-time mouse and keyboard support for both parties",
+          "source_url": "https://www.linkedin.com/company/tupleapp",
+          "source_title": "Tuple"
+        },
+        {
+          "id": 3,
+          "claim": "Tuple is built for snappy interactions, command-line integration, and pluginability.",
+          "excerpt": "snappy interactions, command-line integration and pluginability.",
+          "source_url": "https://www.linkedin.com/company/tupleapp",
+          "source_title": "Tuple"
+        },
+        {
+          "id": 4,
+          "claim": "Tuple’s GitHub README describes it as the best remote pair programming app on macOS and Windows.",
+          "excerpt": "# Tuple\n\n### The best remote pair programming app on macOS and Windows",
+          "source_url": "https://github.com/tupleapp",
+          "source_title": "Tuple · GitHub"
+        },
+        {
+          "id": 5,
+          "claim": "Tuple has a Slack integration that starts a pairing session from a channel or DM with a /tuple command.",
+          "excerpt": "adds a `/tuple` command, which will start a pairing session directly from a channel or DMs.",
+          "source_url": "https://slack.com/marketplace/A04B287N6P2-tuple",
+          "source_title": "Tuple & Slack Integration | Slack Marketplace"
+        },
+        {
+          "id": 6,
+          "claim": "Tuple offers a free-forever account for educational use on request.",
+          "excerpt": "if you email support@tuple.app and say you want to use Tuple for educational purposes, we'll make you a free-forever account.",
+          "source_url": "https://news.ycombinator.com/item?id=29641907",
+          "source_title": "Tuple: Pair Programming Tool for macOS | Hacker News"
+        }
+      ],
+      "website_owner": "Tuple",
+      "website_matches": true,
+      "website_note": "The tuple.app site is identified in the results as Tuple’s official site and is also linked to Tuple’s own GitHub and LinkedIn presence.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 0,
+      "dropped": []
+    },
+    "strategy": {
+      "observation": "Tuple’s product and positioning are explicitly engineering-focused: it’s a remote pair programming app built for full-time mouse-and-keyboard control, snappy interactions, command-line integration, pluginability, and even Slack-based session start.",
+      "fact_ids": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "offer_link": "Because Tuple sells to technical teams with workflow-heavy use cases, video case studies featuring engineering teams using the product could give the marketing team credible proof of how it fits real developer workflows and help convert similar prospects.",
+      "hypotheses": [
+        "The marketing team may be looking for stronger proof points or customer stories for technical buyers.",
+        "Engineering-team users may respond better to peer examples than to generic product messaging.",
+        "Tuple may want content that can support website, paid, or sales-led demand generation."
+      ],
+      "angle": "Tuple’s messaging is already aimed at technical workflows, so a video case study with an engineering team could give you the kind of peer proof that resonates with the next buyer.",
+      "offer_fit": "good",
+      "fit_reason": "Tuple is a developer tool with technical, workflow-specific positioning, so customer video case studies are a plausible and relevant marketing asset. The fit is not guaranteed, but it is strong enough to justify outreach."
+    },
+    "draft": {
+      "subject": "Engineering proof for Tuple",
+      "body": "Tuple is clearly built for technical workflows: remote pair programming and full-time mouse-and-keyboard control.\n\nI make video case studies with engineering teams that use the product. For a tool like this, peer proof usually lands better than generic marketing copy, especially if you want to show how it fits real dev work.\n\nIf you’re looking to add stronger customer evidence for technical buyers, could we talk about one engineering team you’d want featured?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Engineering proof for Tuple",
+          "body": "Tuple is clearly built for technical workflows: remote pair programming and full-time mouse-and-keyboard control.\n\nI make video case studies with engineering teams that use the product. For a tool like this, peer proof usually lands better than generic marketing copy, especially if you want to show how it fits real dev work.\n\nIf you’re looking to add stronger customer evidence for technical buyers, could we talk about one engineering team you’d want featured?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@2",
+      "strategy": "strategy@2",
+      "copywriter": "copywriter@3",
+      "review": "review@3"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "research@2",
+        "duration_ms": 2584,
+        "usage": {
+          "input_tokens": 2467,
+          "cached_input_tokens": 2304,
+          "cache_write_tokens": null,
+          "output_tokens": 359,
+          "reasoning_tokens": 29
+        },
+        "cost_usd": 0.00191055,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "strategy@2",
+        "duration_ms": 4074,
+        "usage": {
+          "input_tokens": 629,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 767,
+          "reasoning_tokens": 512
+        },
+        "cost_usd": 0.00392325,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "copywriter@3",
+        "duration_ms": 3561,
+        "usage": {
+          "input_tokens": 755,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 626,
+          "reasoning_tokens": 512
+        },
+        "cost_usd": 0.00338325,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "review@3",
+        "duration_ms": 2277,
+        "usage": {
+          "input_tokens": 672,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 360,
+          "reasoning_tokens": 340
+        },
+        "cost_usd": 0.002124,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Tuple\" company overview products customers",
+        "topic": "general",
+        "results": 0,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Tuple\" tuple.app",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Tuple\" news",
+        "topic": "news",
+        "results": 2,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 12510
+  }
+}

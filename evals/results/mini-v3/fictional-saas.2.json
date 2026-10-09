@@ -1,0 +1,108 @@
+{
+  "case_id": "fictional-saas",
+  "config": "mini",
+  "models": "Research gpt-5.4-mini/low, Strategy gpt-5.4-mini/medium, Writing gpt-5.4-mini/medium, Review gpt-5.4-mini/low",
+  "repeat": 2,
+  "snapshot_recorded_at": "2026-10-09T12:06:49+00:00",
+  "checks": {
+    "label": "website_mismatch",
+    "outcome_ok": true,
+    "facts": 0,
+    "dropped_facts": 0,
+    "attempts": 0,
+    "has_draft": false,
+    "language_ok": null,
+    "body_words": null,
+    "subject_words": null,
+    "length_ok": null,
+    "placeholders": [],
+    "ungrounded_numbers": [],
+    "stock_phrases": [],
+    "foreign_words": [],
+    "undeclined_company": []
+  },
+  "result": {
+    "run_id": "f8a48fe4f5ac479dab90d38e118f3616",
+    "brief": {
+      "company": "Quillford Systems",
+      "website": "quillford-systems.io",
+      "offer": "SOC 2 readiness consulting for early-stage SaaS",
+      "recipient": "CTO",
+      "language": "English",
+      "tone": "Direct"
+    },
+    "status": "failed",
+    "reason": "website_mismatch",
+    "message": "Search results do not match quillford-systems.io. The search results do not show any page from quillford-systems.io or any evidence tying that website to Quillford Systems.",
+    "issues": [],
+    "research": {
+      "facts": [],
+      "website_owner": "unknown",
+      "website_matches": false,
+      "website_note": "The search results do not show any page from quillford-systems.io or any evidence tying that website to Quillford Systems.",
+      "site_indexed": false,
+      "sufficient": false,
+      "gaps": "No reliable information was found about what Quillford Systems does, its products or services, customers, market, scale, or any recent company-specific developments.",
+      "dropped_facts": 0,
+      "dropped": []
+    },
+    "strategy": null,
+    "draft": null,
+    "attempts": [],
+    "prompt_versions": {
+      "research": "research@2"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "research@2",
+        "duration_ms": 1493,
+        "usage": {
+          "input_tokens": 2905,
+          "cached_input_tokens": 2304,
+          "cache_write_tokens": null,
+          "output_tokens": 125,
+          "reasoning_tokens": 28
+        },
+        "cost_usd": 0.00118605,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Quillford Systems\" company overview products customers",
+        "topic": "general",
+        "results": 0,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Quillford Systems\" quillford-systems.io",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Quillford Systems\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 1502
+  }
+}

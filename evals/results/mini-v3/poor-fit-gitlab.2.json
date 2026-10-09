@@ -1,0 +1,297 @@
+{
+  "case_id": "poor-fit-gitlab",
+  "config": "mini",
+  "models": "Research gpt-5.4-mini/low, Strategy gpt-5.4-mini/medium, Writing gpt-5.4-mini/medium, Review gpt-5.4-mini/low",
+  "repeat": 2,
+  "snapshot_recorded_at": "2026-10-09T12:07:08+00:00",
+  "checks": {
+    "label": "poor_fit",
+    "outcome_ok": true,
+    "facts": 7,
+    "dropped_facts": 1,
+    "attempts": 2,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 62,
+    "subject_words": 3,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": [],
+    "stock_phrases": [],
+    "foreign_words": [],
+    "undeclined_company": []
+  },
+  "result": {
+    "run_id": "bed7483219334efe9849c0d6f76dd2f1",
+    "brief": {
+      "company": "GitLab",
+      "website": "about.gitlab.com",
+      "offer": "Wedding photography packages for couples",
+      "recipient": "CFO",
+      "language": "English",
+      "tone": "Direct"
+    },
+    "status": "needs_attention",
+    "reason": null,
+    "message": "The draft passed review, but the offer looks like a poor fit.",
+    "issues": [
+      "The offer may not fit this company: Wedding photography packages for couples do not have a plausible business use for GitLab or for a CFO in this context. The company facts point to software delivery, enterprise scale, and partnerships, none of which create a meaningful need for this offer."
+    ],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "GitLab says it is the company behind an intelligent orchestration platform where teams and AI agents ship secure software faster.",
+          "excerpt": "We're the company behind GitLab, the intelligent orchestration platform where teams and their AI agents ship secure software faster.",
+          "source_url": "https://about.gitlab.com/company",
+          "source_title": "About GitLab - The Intelligent Orchestration Platform"
+        },
+        {
+          "id": 2,
+          "claim": "GitLab reports over 50 million registered users and says it has 177 consecutive monthly releases.",
+          "excerpt": "Estimated registered users\n\nOver 50 million",
+          "source_url": "https://about.gitlab.com/company",
+          "source_title": "About GitLab - The Intelligent Orchestration Platform"
+        },
+        {
+          "id": 3,
+          "claim": "GitLab says more than 100,000 organizations use its platform.",
+          "excerpt": "GitLab is the trusted enterprise platform for software creation in the AI era, used by more than 100,000 organizations to plan, build, secure, and deploy software at machine scale, guided by humans.",
+          "source_url": "https://about.gitlab.com/jobs",
+          "source_title": "Join GitLab"
+        },
+        {
+          "id": 4,
+          "claim": "GitLab says its platform serves technology leaders and platform owners modernizing the software delivery lifecycle.",
+          "excerpt": "GitLab serves technology leaders and platform owners responsible for modernizing their software delivery lifecycle.",
+          "source_url": "https://about.gitlab.com/platform",
+          "source_title": "GitLab Platform - Speed with control"
+        },
+        {
+          "id": 5,
+          "claim": "GitLab says it supports everyone involved in software delivery, including developers, business analysts, product owners, testers, solution architects, security teams, and operations teams.",
+          "excerpt": "GitLab supports everyone involved in software delivery: developers, business analysts, product owners, testers, solution architects, security teams, and operations teams working together across the complete software lifecycle.",
+          "source_url": "https://about.gitlab.com/platform",
+          "source_title": "GitLab Platform - Speed with control"
+        },
+        {
+          "id": 6,
+          "claim": "GitLab says many regulated customers want to use GitLab for requirements mapping, dependencies, and process management.",
+          "excerpt": "Many regulated customers want to use GitLab for requirements mapping, dependencies, and process management.",
+          "source_url": "https://about.gitlab.com/blog/dev-strategy-review",
+          "source_title": "Tell us what you think about our Dev strategy"
+        },
+        {
+          "id": 7,
+          "claim": "GitLab says it has a global alliance partnership with Capgemini, a GitLab Select Partner, to leverage the GitLab portfolio for clients globally.",
+          "excerpt": "GitLab and Capgemini have signed a global alliance partnership agreement. As a GitLab Select Partner, Capgemini will leverage the GitLab portfolio for clients globally,",
+          "source_url": "https://about.gitlab.com/blog/gitlab-and-capgemini-global-alliance-partnership",
+          "source_title": "GitLab and Capgemini accelerate DevSecOps transformation"
+        }
+      ],
+      "website_owner": "GitLab",
+      "website_matches": true,
+      "website_note": "The domain about.gitlab.com is GitLab’s official site, and the results are all from GitLab pages describing the company and its products.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 1,
+      "dropped": [
+        {
+          "claim": "GitLab’s subprocessors list shows its products include GitLab.com, Dedicated, and Self-Managed.",
+          "source_id": 1,
+          "excerpt": "| GitLab Product |\n| GitLab.com, Dedicated, and Self-Managed |"
+        }
+      ]
+    },
+    "strategy": {
+      "observation": "GitLab emphasizes scale and consistency, saying it has 177 consecutive monthly releases and serves more than 100,000 organizations.",
+      "fact_ids": [
+        2,
+        3
+      ],
+      "offer_link": "There is no strong company-level connection between GitLab’s release cadence and wedding photography packages; the only plausible relevance would be a purely personal need if the CFO is planning a wedding, so this is a weak fit at best.",
+      "hypotheses": [
+        "The CFO may be personally shopping for wedding photography.",
+        "GitLab may have upcoming internal or executive events that require photography, although this offer is specifically for couples and not standard event coverage."
+      ],
+      "angle": "GitLab has kept a 177-month release streak while serving 100,000+ organizations, so I’m reaching out with an unusual offer that only makes sense if you happen to have a personal wedding need.",
+      "offer_fit": "poor",
+      "fit_reason": "Wedding photography packages for couples do not have a plausible business use for GitLab or for a CFO in this context. The company facts point to software delivery, enterprise scale, and partnerships, none of which create a meaningful need for this offer."
+    },
+    "draft": {
+      "subject": "Wedding photography packages",
+      "body": "GitLab has kept a 177-month release streak and serves 100,000+ organizations, so I’m reaching out with an unusual offer.\n\nI help couples choose wedding photography packages and keep the scope and price clear upfront. It’s a simple way to compare coverage without a lot of back-and-forth.\n\nIf you happen to be planning a wedding personally, should I send a few package examples?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Wedding photography packages",
+          "body": "GitLab has kept 177 straight monthly releases and serves 100,000+ organizations. That level of consistency is unusual, so I’m reaching out with a different kind of service.\n\nI help couples choose wedding photography packages and keep the scope, timing, and price clear upfront. If you’re personally planning a wedding, that can save a lot of back-and-forth.\n\nShould I send a few package options?"
+        },
+        "review": {
+          "passed": false,
+          "issues": [
+            "\"Should I send a few package options?\" is a pushy call to action. Change it to a softer, low-pressure close or remove it.",
+            "\"That level of consistency is unusual\" is subjective hype. Change it to a plain factual transition."
+          ]
+        }
+      },
+      {
+        "attempt": 2,
+        "draft": {
+          "subject": "Wedding photography packages",
+          "body": "GitLab has kept a 177-month release streak and serves 100,000+ organizations, so I’m reaching out with an unusual offer.\n\nI help couples choose wedding photography packages and keep the scope and price clear upfront. It’s a simple way to compare coverage without a lot of back-and-forth.\n\nIf you happen to be planning a wedding personally, should I send a few package examples?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@2",
+      "strategy": "strategy@2",
+      "copywriter": "copywriter@3",
+      "review": "review@3"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "research@2",
+        "duration_ms": 3450,
+        "usage": {
+          "input_tokens": 4837,
+          "cached_input_tokens": 4352,
+          "cache_write_tokens": null,
+          "output_tokens": 573,
+          "reasoning_tokens": 47
+        },
+        "cost_usd": 0.00326865,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "strategy@2",
+        "duration_ms": 6151,
+        "usage": {
+          "input_tokens": 728,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 1208,
+          "reasoning_tokens": 964
+        },
+        "cost_usd": 0.005982,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "copywriter@3",
+        "duration_ms": 3273,
+        "usage": {
+          "input_tokens": 830,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 621,
+          "reasoning_tokens": 512
+        },
+        "cost_usd": 0.003417,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "review@3",
+        "duration_ms": 1970,
+        "usage": {
+          "input_tokens": 765,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 289,
+          "reasoning_tokens": 218
+        },
+        "cost_usd": 0.00187425,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 2,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "copywriter@3",
+        "duration_ms": 2916,
+        "usage": {
+          "input_tokens": 999,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 618,
+          "reasoning_tokens": 512
+        },
+        "cost_usd": 0.00353025,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 2,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "review@3",
+        "duration_ms": 2290,
+        "usage": {
+          "input_tokens": 762,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 227,
+          "reasoning_tokens": 207
+        },
+        "cost_usd": 0.001593,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"GitLab\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"GitLab\" about.gitlab.com",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"GitLab\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 20066
+  }
+}

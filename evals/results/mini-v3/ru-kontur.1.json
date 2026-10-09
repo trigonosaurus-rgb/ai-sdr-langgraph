@@ -1,0 +1,247 @@
+{
+  "case_id": "ru-kontur",
+  "config": "mini",
+  "models": "Research gpt-5.4-mini/low, Strategy gpt-5.4-mini/medium, Writing gpt-5.4-mini/medium, Review gpt-5.4-mini/low",
+  "repeat": 1,
+  "snapshot_recorded_at": "2026-10-09T12:07:15+00:00",
+  "checks": {
+    "label": "draft",
+    "outcome_ok": true,
+    "facts": 6,
+    "dropped_facts": 2,
+    "attempts": 1,
+    "has_draft": true,
+    "language_ok": true,
+    "body_words": 72,
+    "subject_words": 4,
+    "length_ok": true,
+    "placeholders": [],
+    "ungrounded_numbers": [],
+    "stock_phrases": [],
+    "foreign_words": [],
+    "undeclined_company": []
+  },
+  "result": {
+    "run_id": "8add909844eb4bd8ba05be3be27d7457",
+    "brief": {
+      "company": "Контур",
+      "website": "kontur.ru",
+      "offer": "Автоматизация разбора обращений в поддержку с помощью ИИ",
+      "recipient": "Руководитель службы поддержки",
+      "language": "Russian",
+      "tone": "Direct"
+    },
+    "status": "ready",
+    "reason": null,
+    "message": "The draft passed review.",
+    "issues": [],
+    "research": {
+      "facts": [
+        {
+          "id": 1,
+          "claim": "Kontur is a business software ecosystem with more than 70 services.",
+          "excerpt": "Контур — это экосистема для бизнеса, в которой больше 70 сервисов.",
+          "source_url": "https://kontur.ru/press/news/company/2021/5/7600",
+          "source_title": "Контур перешел на новый фирменный стиль — СКБ Контур"
+        },
+        {
+          "id": 2,
+          "claim": "The company says it was founded in 1988 in Yekaterinburg.",
+          "excerpt": "Основана в 1988 году в Екатеринбурге.",
+          "source_url": "https://kontur.ru/press/news/company/2022/3/8230",
+          "source_title": "Гендиректором СКБ Контур назначен Михаил Сродных — СКБ Контур"
+        },
+        {
+          "id": 3,
+          "claim": "Kontur says it is used by every third business in Russia.",
+          "excerpt": "Контур — экосистема, которой пользуется каждый третий бизнес в России.",
+          "source_url": "https://kontur.ru/career",
+          "source_title": "Работа у нас — Контур"
+        },
+        {
+          "id": 4,
+          "claim": "Kontur says it has more than 11,000 employees across the country.",
+          "excerpt": "### 11 000+\n\nСотрудников   \nпо всей стране",
+          "source_url": "https://kontur.ru/career",
+          "source_title": "Работа у нас — Контур"
+        },
+        {
+          "id": 5,
+          "claim": "Kontur lists a support chat for existing users and offers help choosing services for new customers.",
+          "excerpt": "Оставьте заявку на подключение — менеджер свяжется с вами и поможет выбрать сервисы под ваши задачи.\n\nЕсли вы уже пользуетесь нашим продуктом и вам нужна помощь, обратитесь в наш круглосуточный чат поддержки",
+          "source_url": "https://kontur.ru/products",
+          "source_title": "Продукты — Контур"
+        },
+        {
+          "id": 6,
+          "claim": "The website lists product areas including electronic document exchange, counterparty checks, procurement, HR processes, logistics, retail, and information security.",
+          "excerpt": "Электронный документооборот\n\n  Учет и отчетность\n\n  Проверка контрагентов\n\n  Торговля и ритейл\n\n  Автоматизация бизнеса\n\n  Управление HR‑процессами\n\n  Участие в закупках",
+          "source_url": "https://kontur.ru/products",
+          "source_title": "Продукты — Контур"
+        }
+      ],
+      "website_owner": "СКБ Контур",
+      "website_matches": true,
+      "website_note": "The kontur.ru website is presented in the results as the official site of СКБ Контур and repeatedly identifies the company as Контур / СКБ Контур.",
+      "site_indexed": true,
+      "sufficient": true,
+      "gaps": "",
+      "dropped_facts": 2,
+      "dropped": [
+        {
+          "claim": "SKB Kontur develops a business product ecosystem and says its key business areas are EDI, accounting, e-signature, and online cash registers.",
+          "source_id": 2,
+          "excerpt": "СКБ Контур — группа компаний, которая разрабатывает экосистему продуктов для бизнеса [...] Ключевые направления бизнеса — ЭДО, бухгалтерия, электронная подпись и онлайн-кассы."
+        },
+        {
+          "claim": "The site’s product pages include specific offerings such as Extern, Diadoc, Elba, Tolk, Market, Focus, Certificate Center, Purchases, and OFD.",
+          "source_id": 8,
+          "excerpt": "Экстерн\n\n  Диадок\n\n  Эльба\n\n  Толк\n\n  Маркет\n\n  Фокус\n\n  Удостоверяющий центр\n\n  Закупки\n\n  ОФД"
+        }
+      ]
+    },
+    "strategy": {
+      "observation": "Kontur has a very broad product portfolio: more than 70 services across several business areas, and it explicitly runs a support chat for existing users while also helping new customers choose services.",
+      "fact_ids": [
+        1,
+        5,
+        6
+      ],
+      "offer_link": "An AI layer for support intake and triage could help sort and route the mix of questions that comes from a 70+ service ecosystem, especially when the same support function has to handle both existing-user issues and pre-sales service-selection requests.",
+      "hypotheses": [
+        "The support team likely handles a large volume of repetitive or similar requests across many products.",
+        "Agents may need to spend time classifying tickets before they can answer or route them.",
+        "There may be pressure to keep response times low while covering multiple product lines and inquiry types."
+      ],
+      "angle": "У Контур 70+ сервисов и отдельный чат поддержки для действующих пользователей, поэтому разбор обращений, вероятно, идет по очень разным продуктам и типам запросов.",
+      "offer_fit": "good",
+      "fit_reason": "The offer is a plausible fit because Kontur’s support appears to sit in front of a large, mixed product set and serves both current users and prospects; that makes AI-based intake, categorization, and routing a reasonable use case."
+    },
+    "draft": {
+      "subject": "Разбор обращений в Контуре",
+      "body": "У Контура больше 70 сервисов, и есть чат поддержки для действующих пользователей. Если в одном потоке идут и вопросы по продуктам, и запросы на выбор сервиса, первичный разбор быстро съедает время.\n\nМы делаем автоматизацию разбора обращений с помощью ИИ: она определяет тему, приоритет и маршрут до нужной команды. Это снижает ручную сортировку и помогает быстрее отдавать обращение туда, где его могут решить.\n\nЕсть у вас сейчас отдельный ручной этап на классификацию чатов?"
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "draft": {
+          "subject": "Разбор обращений в Контуре",
+          "body": "У Контура больше 70 сервисов, и есть чат поддержки для действующих пользователей. Если в одном потоке идут и вопросы по продуктам, и запросы на выбор сервиса, первичный разбор быстро съедает время.\n\nМы делаем автоматизацию разбора обращений с помощью ИИ: она определяет тему, приоритет и маршрут до нужной команды. Это снижает ручную сортировку и помогает быстрее отдавать обращение туда, где его могут решить.\n\nЕсть у вас сейчас отдельный ручной этап на классификацию чатов?"
+        },
+        "review": {
+          "passed": true,
+          "issues": []
+        }
+      }
+    ],
+    "prompt_versions": {
+      "research": "research@2",
+      "strategy": "strategy@2",
+      "copywriter": "copywriter@3",
+      "review": "review@3"
+    },
+    "llm_calls": [
+      {
+        "stage": "Research",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "research@2",
+        "duration_ms": 2797,
+        "usage": {
+          "input_tokens": 6524,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 627,
+          "reasoning_tokens": 26
+        },
+        "cost_usd": 0.0077145,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Strategy",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "strategy@2",
+        "duration_ms": 3495,
+        "usage": {
+          "input_tokens": 691,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 672,
+          "reasoning_tokens": 404
+        },
+        "cost_usd": 0.00354225,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Writing",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "copywriter@3",
+        "duration_ms": 3121,
+        "usage": {
+          "input_tokens": 902,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 655,
+          "reasoning_tokens": 512
+        },
+        "cost_usd": 0.003624,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "stage": "Review",
+        "attempt": 1,
+        "model": "gpt-5.4-mini-2026-03-17",
+        "prompt_version": "review@3",
+        "duration_ms": 1754,
+        "usage": {
+          "input_tokens": 763,
+          "cached_input_tokens": 0,
+          "cache_write_tokens": null,
+          "output_tokens": 176,
+          "reasoning_tokens": 156
+        },
+        "cost_usd": 0.00136425,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "search_calls": [
+      {
+        "query": "\"Контур\" company overview products customers",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Контур\" kontur.ru",
+        "topic": "general",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      },
+      {
+        "query": "\"Контур\" news",
+        "topic": "news",
+        "results": 5,
+        "credits": 1.0,
+        "duration_ms": 0,
+        "cost_usd": 0.008,
+        "price_version": "2026-10-09",
+        "error": null
+      }
+    ],
+    "duration_ms": 11185
+  }
+}
